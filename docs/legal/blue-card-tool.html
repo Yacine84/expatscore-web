@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EU Blue Card Eligibility Check 2026 — Free Tool · ExpatScore.de</title>
+  <meta name="description" content="Check your EU Blue Card eligibility for Germany in 2 minutes. Interactive 2026 tool: detects your track (standard, shortage, graduate, IT specialist), shows live salary feedback, and generates a personalised Eligibility Passport.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Yassine Chaikhi">
+  <link rel="canonical" href="https://expatscore.de/legal/blue-card-tool">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EU Blue Card Germany 2026 — Free Eligibility Check Tool">
+  <meta property="og:description" content="2-minute check. 4 eligibility tracks. 2026 thresholds. Shareable Eligibility Passport.">
+  <meta property="og:url" content="https://expatscore.de/legal/blue-card-tool">
+  <meta property="og:image" content="https://expatscore.de/og-image.jpg">
+  <meta property="og:site_name" content="ExpatScore.de">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EU Blue Card Germany 2026 — Free Eligibility Tool">
+  <meta name="twitter:description" content="Check your Blue Card eligibility in 2 minutes. Auto-detects your track. Shareable result passport.">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <meta name="theme-color" content="#080c10">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    /* ── WIZARD SHELL ── */
+    .wizard-page { min-height: 100vh; background: var(--bg-primary, #080c10); }
+
+    .wizard-hero {
+      background: linear-gradient(180deg, #0e1318 0%, #080c10 100%);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .wizard-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .wizard-hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+    .wizard-eyebrow {
+      display: inline-block;
+      font-family: 'DM Mono', monospace; font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: #c9a84c; border: 1px solid rgba(201,168,76,0.25);
+      background: rgba(201,168,76,0.06); border-radius: 20px;
+      padding: 0.3rem 1rem; margin-bottom: 1.25rem;
+    }
+    .wizard-h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700;
+      color: #e4c97a; line-height: 1.2; margin-bottom: 0.85rem;
+    }
+    .wizard-sub { font-size: 1rem; color: #8b949e; line-height: 1.7; max-width: 580px; margin: 0 auto 1.75rem; }
+
+    .trust-pills { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+    .trust-pill {
+      font-size: 0.78rem; font-weight: 600; color: #5c6b7a;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px; padding: 0.3rem 0.9rem; display: flex; align-items: center; gap: 0.4rem;
+    }
+    .trust-pill span { color: #00c4a7; }
+
+    /* ── PROGRESS ── */
+    .wizard-progress {
+      display: flex; justify-content: center; align-items: center;
+      gap: 0.5rem; padding: 1.5rem 1.5rem 0;
+    }
+    .progress-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+      transition: all 0.35s;
+    }
+    .progress-dot.active { background: #c9a84c; border-color: #c9a84c; transform: scale(1.3); }
+    .progress-dot.done   { background: #00c4a7; border-color: #00c4a7; }
+    .progress-line {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,0.08); transition: background 0.35s;
+    }
+    .progress-line.done { background: #00c4a7; }
+    .progress-label {
+      text-align: center; font-size: 0.75rem; color: #5c6b7a;
+      font-family: 'DM Mono', monospace; letter-spacing: 0.05em;
+      padding-bottom: 0.5rem;
+    }
+
+    /* ── WIZARD FRAME ── */
+    .wizard-frame {
+      max-width: 720px; margin: 0 auto;
+      padding: 1.5rem 1.5rem 4rem;
+      position: relative; overflow: hidden;
+    }
+
+    /* ── STEP PANELS ── */
+    .step-panel {
+      display: none;
+      animation: slideIn 0.38s cubic-bezier(.25,.46,.45,.94) forwards;
+    }
+    .step-panel.active { display: block; }
+    .step-panel.exit   { animation: slideOut 0.3s cubic-bezier(.55,0,1,.45) forwards; }
+
+    @keyframes slideIn  { from { opacity:0; transform:translateX(40px); } to { opacity:1; transform:translateX(0); } }
+    @keyframes slideOut { from { opacity:1; transform:translateX(0); }   to { opacity:0; transform:translateX(-40px); } }
+
+    .step-q {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem); font-weight: 600;
+      color: #e8edf3; margin-bottom: 0.4rem; margin-top: 0.5rem;
+    }
+    .step-context {
+      font-size: 0.9rem; color: #5c6b7a; line-height: 1.65;
+      margin-bottom: 1.75rem;
+    }
+    .step-context strong { color: #c9a84c; }
+
+    /* ── QUALIFICATION CARDS ── */
+    .qual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+    @media (max-width: 520px) { .qual-grid { grid-template-columns: 1fr; } }
+
+    .qual-card {
+      background: #131920; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px; padding: 1.4rem 1.25rem;
+      cursor: pointer; transition: all 0.22s;
+      display: flex; flex-direction: column; gap: 0.5rem;
+      position: relative; overflow: hidden;
+    }
+    .qual-card:hover { border-color: rgba(201,168,76,0.35); background: #171f28; transform: translateY(-2px); }
+    .qual-card.selected {
+      border-color: #00c4a7; background: rgba(0,196,167,0.06);
+      box-shadow: 0 0 0 1px rgba(0,196,167,0.15);
+    }
+    .qual-card.ineligible:hover { border-color: rgba(242,109,109,0.35); }
+    .qual-card.ineligible.selected { border-color: #f26d6d; background: rgba(242,109,109,0.06); }
+    .qual-icon { font-size: 1.6rem; margin-bottom: 0.15rem; }
+    .qual-title { font-weight: 700; font-size: 1rem; color: #e8edf3; line-height: 1.3; }
+    .qual-desc  { font-size: 0.82rem; color: #5c6b7a; line-height: 1.55; }
+    .qual-badge {
+      position: absolute; top: 0.65rem; right: 0.75rem;
+      font-size: 0.65rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.1em; padding: 0.2rem 0.55rem; border-radius: 20px;
+    }
+    .badge-shortage { background: rgba(0,196,167,0.1); color: #00c4a7; border: 1px solid rgba(0,196,167,0.2); }
+    .badge-standard { background: rgba(201,168,76,0.1); color: #c9a84c; border: 1px solid rgba(201,168,76,0.2); }
+    .badge-ineligible { background: rgba(242,109,109,0.1); color: #f26d6d; border: 1px solid rgba(242,109,109,0.2); }
+
+    /* ── OCCUPATION GRID ── */
+    .occ-section-label {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: #5c6b7a; margin: 1.25rem 0 0.6rem;
+    }
+    .occ-section-label:first-child { margin-top: 0; }
+    .occ-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+    @media (max-width: 500px) { .occ-grid { grid-template-columns: 1fr 1fr; } }
+    .occ-chip {
+      background: #131920; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px; padding: 0.6rem 0.75rem; cursor: pointer;
+      font-size: 0.83rem; color: #8b949e; line-height: 1.35; text-align: center;
+      transition: all 0.2s;
+    }
+    .occ-chip:hover { border-color: rgba(201,168,76,0.35); color: #e8edf3; }
+    .occ-chip.selected.shortage { border-color: #00c4a7; color: #00c4a7; background: rgba(0,196,167,0.06); }
+    .occ-chip.selected.standard { border-color: #c9a84c; color: #c9a84c; background: rgba(201,168,76,0.06); }
+
+    /* ── GRAD YEAR TOGGLE ── */
+    .grad-toggle-wrap {
+      background: #131920; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px; padding: 1.25rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      flex-wrap: wrap; margin-bottom: 1.25rem;
+    }
+    .grad-toggle-label { font-size: 0.9rem; color: #a8b3bf; }
+    .grad-toggle-label strong { color: #e8edf3; display: block; margin-bottom: 0.25rem; }
+    .toggle-btn-group { display: flex; gap: 0.5rem; }
+    .toggle-btn {
+      padding: 0.5rem 1.1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; border: 1px solid rgba(255,255,255,0.12);
+      background: transparent; color: #8b949e; transition: all 0.2s;
+    }
+    .toggle-btn.active-yes { border-color: #00c4a7; color: #00c4a7; background: rgba(0,196,167,0.08); }
+    .toggle-btn.active-no  { border-color: #c9a84c; color: #c9a84c; background: rgba(201,168,76,0.08); }
+    .toggle-btn:hover:not(.active-yes):not(.active-no) { border-color: rgba(255,255,255,0.25); color: #e8edf3; }
+
+    /* ── SALARY INPUT ── */
+    .salary-section { margin-top: 0.5rem; }
+
+    .salary-input-wrap {
+      display: flex; align-items: center;
+      background: #131920; border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px; overflow: hidden; margin-bottom: 1rem;
+      transition: border-color 0.2s;
+    }
+    .salary-input-wrap:focus-within { border-color: #c9a84c; }
+    .salary-currency {
+      padding: 0 1.1rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.8rem; font-weight: 700; color: #c9a84c;
+      border-right: 1px solid rgba(255,255,255,0.07);
+      background: rgba(201,168,76,0.04); white-space: nowrap;
+    }
+    #salaryInput {
+      flex: 1; background: transparent; border: none; outline: none;
+      font-family: 'DM Mono', monospace; font-size: 1.8rem; font-weight: 500;
+      color: #e8edf3; padding: 1rem 1.25rem;
+      width: 100%;
+    }
+    #salaryInput::placeholder { color: rgba(255,255,255,0.15); }
+
+    .salary-period-toggle { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .period-btn {
+      flex: 1; padding: 0.5rem; border-radius: 8px; font-size: 0.83rem; font-weight: 600;
+      cursor: pointer; border: 1px solid rgba(255,255,255,0.1);
+      background: transparent; color: #5c6b7a; transition: all 0.2s;
+    }
+    .period-btn.active { border-color: rgba(255,255,255,0.25); color: #e8edf3; background: rgba(255,255,255,0.05); }
+
+    /* ── SALARY GAUGE ── */
+    .gauge-wrapper {
+      display: flex; flex-direction: column; align-items: center;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .gauge-svg { width: 220px; height: 130px; overflow: visible; }
+    .gauge-track { fill: none; stroke: rgba(255,255,255,0.06); stroke-width: 14; stroke-linecap: round; }
+    .gauge-fill  {
+      fill: none; stroke-width: 14; stroke-linecap: round;
+      stroke-dasharray: 0 314;
+      transition: stroke-dashoffset 0, stroke-dasharray 0.7s cubic-bezier(.17,.67,.35,1), stroke 0.4s;
+    }
+    .gauge-threshold { fill: none; stroke: rgba(255,255,255,0.18); stroke-width: 2; stroke-linecap: round; }
+    .gauge-val { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; transition: fill 0.4s; }
+    .gauge-label-text { font-size: 0.72rem; letter-spacing: 0.08em; fill: #5c6b7a; }
+
+    .salary-feedback {
+      text-align: center; padding: 0.9rem 1.25rem; border-radius: 10px;
+      font-size: 0.9rem; line-height: 1.6; transition: all 0.35s;
+      margin-top: 0.5rem;
+    }
+    .salary-feedback.below {
+      background: rgba(91,107,122,0.1); border: 1px solid rgba(91,107,122,0.2);
+      color: #8b949e;
+    }
+    .salary-feedback.borderline {
+      background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2);
+      color: #c9a84c;
+    }
+    .salary-feedback.above {
+      background: rgba(0,196,167,0.08); border: 1px solid rgba(0,196,167,0.2);
+      color: #00c4a7;
+    }
+    .threshold-callout {
+      display: flex; justify-content: center; align-items: baseline; gap: 0.4rem;
+      margin: 0.5rem 0;
+    }
+    .threshold-label { font-size: 0.78rem; color: #5c6b7a; }
+    .threshold-value { font-family: 'DM Mono', monospace; font-size: 0.9rem; font-weight: 600; color: #e8edf3; }
+
+    /* ── CTA BUTTON ── */
+    .wizard-btn {
+      width: 100%; margin-top: 1.75rem; padding: 0.95rem;
+      background: linear-gradient(135deg, #8a6e2e, #c9a84c);
+      color: #080c10; font-weight: 700; font-size: 1rem;
+      border: none; border-radius: 10px; cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s; font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.04em; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    }
+    .wizard-btn:hover  { opacity: 0.88; transform: translateY(-1px); }
+    .wizard-btn:active { transform: translateY(0); }
+    .wizard-btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
+
+    .wizard-back {
+      background: none; border: none; color: #5c6b7a; font-size: 0.85rem;
+      cursor: pointer; padding: 0.5rem 0; display: flex; align-items: center; gap: 0.35rem;
+      margin-top: 0.75rem; font-family: 'DM Sans', sans-serif;
+      transition: color 0.2s;
+    }
+    .wizard-back:hover { color: #c9a84c; }
+
+    /* ── NOT ELIGIBLE PANEL ── */
+    .ineligible-panel {
+      background: rgba(242,109,109,0.05); border: 1px solid rgba(242,109,109,0.18);
+      border-radius: 14px; padding: 1.75rem; text-align: center; margin-top: 0.5rem;
+    }
+    .ineligible-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .ineligible-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #f26d6d; margin-bottom: 0.6rem; }
+    .ineligible-body  { font-size: 0.9rem; color: #8b949e; line-height: 1.7; margin-bottom: 1.25rem; }
+    .alt-options { display: grid; gap: 0.6rem; }
+    .alt-option {
+      background: #131920; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px; padding: 1rem 1.25rem; text-align: left;
+      cursor: pointer; transition: border-color 0.2s;
+      display: flex; flex-direction: column; gap: 0.25rem;
+    }
+    .alt-option:hover { border-color: rgba(201,168,76,0.3); }
+    .alt-option-title { font-weight: 700; font-size: 0.95rem; color: #e8edf3; }
+    .alt-option-desc  { font-size: 0.82rem; color: #5c6b7a; }
+
+    /* ── RESULT PASSPORT ── */
+    .result-wrapper {
+      animation: passportReveal 0.6s cubic-bezier(.17,.67,.35,1) forwards;
+    }
+    @keyframes passportReveal {
+      from { opacity: 0; transform: scale(0.96) translateY(12px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .passport {
+      background: linear-gradient(145deg, #0e1318, #131920);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 18px; overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    }
+    .passport::before {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 18px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.4), rgba(0,196,167,0.15), rgba(201,168,76,0.1));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .passport-header {
+      padding: 1.5rem 1.75rem 1.25rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .eu-stars {
+      width: 44px; height: 44px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #003399; border-radius: 50%; font-size: 1rem;
+      position: relative;
+    }
+    .passport-brand { flex: 1; }
+    .passport-brand-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: #5c6b7a; font-family: 'DM Mono', monospace; }
+    .passport-brand-site  { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; color: #c9a84c; }
+    .passport-date { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: #5c6b7a; text-align: right; }
+
+    .passport-status {
+      padding: 1.5rem 1.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
+    }
+    .status-icon-wrap {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; flex-shrink: 0;
+    }
+    .status-icon-wrap.eligible   { background: rgba(0,196,167,0.12); border: 2px solid rgba(0,196,167,0.3); }
+    .status-icon-wrap.borderline { background: rgba(201,168,76,0.12); border: 2px solid rgba(201,168,76,0.3); }
+    .status-icon-wrap.ineligible { background: rgba(242,109,109,0.1); border: 2px solid rgba(242,109,109,0.25); }
+
+    .status-text { flex: 1; }
+    .status-verdict { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
+    .status-verdict.eligible   { color: #33d4bb; }
+    .status-verdict.borderline { color: #e4c97a; }
+    .status-verdict.ineligible { color: #f26d6d; }
+    .status-track {
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      margin-top: 0.3rem; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .track-pill {
+      padding: 0.2rem 0.65rem; border-radius: 20px; font-size: 0.68rem;
+    }
+    .track-pill.shortage  { background: rgba(0,196,167,0.1); color: #00c4a7; border: 1px solid rgba(0,196,167,0.2); }
+    .track-pill.standard  { background: rgba(201,168,76,0.1); color: #c9a84c; border: 1px solid rgba(201,168,76,0.2); }
+    .track-pill.graduate  { background: rgba(74,158,255,0.1); color: #4a9eff; border: 1px solid rgba(74,158,255,0.2); }
+    .track-pill.it        { background: rgba(62,207,142,0.1); color: #3ecf8e; border: 1px solid rgba(62,207,142,0.2); }
+
+    /* ── SALARY COMPARISON BAR ── */
+    .salary-bar-section {
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .salary-bar-label {
+      display: flex; justify-content: space-between; margin-bottom: 0.6rem;
+      font-size: 0.78rem; color: #5c6b7a; font-family: 'DM Mono', monospace;
+    }
+    .salary-bar-track { height: 10px; background: rgba(255,255,255,0.06); border-radius: 5px; overflow: hidden; margin-bottom: 0.5rem; }
+    .salary-bar-fill  { height: 100%; border-radius: 5px; transition: width 1.2s cubic-bezier(.17,.67,.35,1); }
+    .salary-bar-fill.above    { background: linear-gradient(90deg, #007a68, #00c4a7); }
+    .salary-bar-fill.borderline { background: linear-gradient(90deg, #8a6e2e, #c9a84c); }
+    .salary-bar-fill.below    { background: linear-gradient(90deg, #3a4550, #5c6b7a); }
+
+    .salary-numbers {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;
+    }
+    .sal-num { background: rgba(255,255,255,0.03); border-radius: 8px; padding: 0.75rem 0.9rem; }
+    .sal-num-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5c6b7a; margin-bottom: 0.3rem; }
+    .sal-num-val   { font-family: 'DM Mono', monospace; font-size: 1.05rem; font-weight: 700; }
+    .sal-num-val.offer    { color: #e8edf3; }
+    .sal-num-val.required { color: #8b949e; }
+    .sal-num-val.gap      { }
+    .sal-num-val.positive { color: #00c4a7; }
+    .sal-num-val.negative { color: #f26d6d; }
+
+    /* ── BENEFITS GRID ── */
+    .passport-section {
+      padding: 1.25rem 1.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .passport-section:last-of-type { border-bottom: none; }
+    .passport-section-label {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: #5c6b7a; font-weight: 700; margin-bottom: 0.85rem;
+      font-family: 'DM Mono', monospace;
+    }
+    .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    @media (max-width: 480px) { .benefits-grid { grid-template-columns: 1fr; } }
+    .benefit-item {
+      display: flex; align-items: flex-start; gap: 0.65rem;
+      background: rgba(255,255,255,0.025); border-radius: 8px; padding: 0.75rem 0.9rem;
+    }
+    .benefit-icon { font-size: 1rem; flex-shrink: 0; }
+    .benefit-text { flex: 1; }
+    .benefit-title { font-size: 0.85rem; font-weight: 600; color: #e8edf3; margin-bottom: 0.15rem; }
+    .benefit-desc  { font-size: 0.78rem; color: #5c6b7a; line-height: 1.5; }
+
+    /* ── PR TIMELINE ── */
+    .pr-timeline { display: flex; align-items: center; gap: 0; }
+    .pr-step {
+      flex: 1; text-align: center; position: relative;
+    }
+    .pr-step::after {
+      content: ''; position: absolute;
+      top: 18px; left: 50%; width: 100%;
+      height: 1px; background: rgba(255,255,255,0.08);
+    }
+    .pr-step:last-child::after { display: none; }
+    .pr-node {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; margin: 0 auto 0.5rem;
+      position: relative; z-index: 1;
+    }
+    .pr-node.highlight { border-color: #c9a84c; background: rgba(201,168,76,0.1); }
+    .pr-node.done-node { border-color: #00c4a7; background: rgba(0,196,167,0.1); }
+    .pr-months { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: #c9a84c; font-weight: 600; }
+    .pr-label  { font-size: 0.7rem; color: #5c6b7a; line-height: 1.35; }
+
+    /* ── NEXT STEPS ── */
+    .next-steps { display: grid; gap: 0.5rem; }
+    .next-step {
+      display: flex; align-items: center; gap: 0.75rem;
+      background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px; padding: 0.75rem 1rem; text-decoration: none;
+      transition: border-color 0.2s, background 0.2s; cursor: pointer;
+    }
+    .next-step:hover { border-color: rgba(201,168,76,0.3); background: rgba(201,168,76,0.04); }
+    .next-step-num {
+      width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2);
+      color: #c9a84c; font-size: 0.72rem; font-weight: 700; font-family: 'DM Mono', monospace;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .next-step-text { flex: 1; font-size: 0.85rem; color: #a8b3bf; }
+    .next-step-text strong { color: #e8edf3; display: block; margin-bottom: 0.1rem; }
+    .next-step-arrow { color: #5c6b7a; font-size: 0.85rem; }
+
+    /* ── SHARE BUTTONS ── */
+    .share-row {
+      display: flex; gap: 0.6rem; padding: 1.25rem 1.75rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+    }
+    .share-btn {
+      flex: 1; min-width: 120px; padding: 0.65rem 1rem;
+      border-radius: 8px; font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; border: 1px solid; transition: opacity 0.2s, transform 0.15s;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      font-family: 'DM Sans', sans-serif; text-decoration: none;
+    }
+    .share-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+    .share-btn.linkedin { background: #0A66C2; border-color: #0A66C2; color: #fff; }
+    .share-btn.twitter  { background: #000; border-color: #333; color: #fff; }
+    .share-btn.copy     { background: transparent; border-color: rgba(255,255,255,0.15); color: #a8b3bf; }
+    .share-btn.restart  { background: transparent; border-color: rgba(201,168,76,0.25); color: #c9a84c; }
+
+    /* ── BORDERLINE SPECIAL ── */
+    .borderline-boost {
+      background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 10px; padding: 1.1rem 1.25rem; margin-top: 0.75rem;
+    }
+    .borderline-boost-title { font-size: 0.82rem; font-weight: 700; color: #c9a84c; margin-bottom: 0.5rem; }
+    .borderline-boost ul { list-style: none; padding: 0; margin: 0; }
+    .borderline-boost ul li {
+      font-size: 0.83rem; color: #8b949e; padding: 0.3rem 0;
+      display: flex; align-items: flex-start; gap: 0.55rem;
+    }
+    .borderline-boost ul li::before { content: '→'; color: #c9a84c; flex-shrink: 0; font-weight: 700; }
+
+    /* ── CONFETTI ── */
+    .confetti-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; overflow: hidden; }
+    .confetti-piece { position: absolute; width: 8px; height: 8px; opacity: 0; animation: confettiFall 2.5s ease-in forwards; }
+    @keyframes confettiFall {
+      0%   { opacity: 1; transform: translateY(-10px) rotate(0deg); }
+      100% { opacity: 0; transform: translateY(100vh) rotate(720deg); }
+    }
+
+    /* ── IT EXPERIENCE CHECK ── */
+    .it-checks { display: grid; gap: 0.75rem; margin-bottom: 0.5rem; }
+    .it-check-item {
+      background: #131920; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px; padding: 1rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .it-check-q { font-size: 0.9rem; color: #a8b3bf; flex: 1; }
+    .it-check-toggle { display: flex; gap: 0.4rem; }
+    .it-yn-btn {
+      padding: 0.35rem 0.85rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+      cursor: pointer; border: 1px solid rgba(255,255,255,0.12);
+      background: transparent; color: #5c6b7a; transition: all 0.2s;
+    }
+    .it-yn-btn.yes-active { border-color: #00c4a7; color: #00c4a7; background: rgba(0,196,167,0.08); }
+    .it-yn-btn.no-active  { border-color: #f26d6d; color: #f26d6d; background: rgba(242,109,109,0.08); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .salary-numbers { grid-template-columns: 1fr; }
+      .passport-header { flex-wrap: wrap; }
+      .share-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body class="wizard-page">
+
+<!-- PROGRESS BAR (reading progress, hidden on this page) -->
+<div class="progress-bar" id="progressBar" style="display:none"></div>
+
+<!-- GLOBAL HEADER -->
+<header class="global-header">
+  <div class="header-inner">
+    <div class="logo"><a href="/">ExpatScore.de</a></div>
+    <button class="nav-toggle" onclick="this.closest('header').querySelector('.nav-links').classList.toggle('open')" aria-label="Open navigation">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/banking">Banking</a>
+      <a href="/guides/schufa-guide">SCHUFA</a>
+      <a href="/insurance/">Insurance</a>
+      <a href="/legal/" aria-current="page">Legal</a>
+      <a href="/about">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="wizard-hero">
+  <div class="wizard-hero-inner">
+    <div class="wizard-eyebrow">Free Tool · Updated January 2026</div>
+    <h1 class="wizard-h1">EU Blue Card<br>Eligibility Check</h1>
+    <p class="wizard-sub">Answer 4 questions. Get your personalised eligibility assessment with exact 2026 salary thresholds, your specific track, and a shareable result passport.</p>
+    <div class="trust-pills">
+      <div class="trust-pill"><span>✓</span> 2026 official thresholds</div>
+      <div class="trust-pill"><span>✓</span> 4 eligibility tracks</div>
+      <div class="trust-pill"><span>✓</span> Takes under 2 minutes</div>
+      <div class="trust-pill"><span>✓</span> Shareable result</div>
+    </div>
+  </div>
+</div>
+
+<!-- WIZARD PROGRESS -->
+<div style="max-width:720px; margin:0 auto;">
+  <div class="wizard-progress" id="progressRow">
+    <div class="progress-dot active" id="dot-1"></div>
+    <div class="progress-line" id="line-12"></div>
+    <div class="progress-dot" id="dot-2"></div>
+    <div class="progress-line" id="line-23"></div>
+    <div class="progress-dot" id="dot-3"></div>
+    <div class="progress-line" id="line-34"></div>
+    <div class="progress-dot" id="dot-4"></div>
+  </div>
+  <div class="progress-label" id="progressLabel">Step 1 of 4 — Qualification</div>
+</div>
+
+<!-- WIZARD FRAME -->
+<div class="wizard-frame">
+
+  <!-- ═══════════════════════════════════════════
+       STEP 1 — QUALIFICATION
+  ════════════════════════════════════════════ -->
+  <div class="step-panel active" id="step1">
+    <div class="step-q">What describes your qualification?</div>
+    <div class="step-context">The Blue Card has four distinct pathways. <strong>Your qualification type determines your track</strong> — and your salary threshold.</div>
+
+    <div class="qual-grid">
+
+      <div class="qual-card" id="q-degree" onclick="selectQual('degree')">
+        <div class="qual-badge badge-standard">Standard or Shortage</div>
+        <div class="qual-icon">🎓</div>
+        <div class="qual-title">University Degree</div>
+        <div class="qual-desc">Bachelor's, Master's, or PhD. Must be recognised or recognisable in Germany (EU degrees auto-qualify).</div>
+      </div>
+
+      <div class="qual-card" id="q-it" onclick="selectQual('it')">
+        <div class="qual-badge badge-shortage">IT Track — €45,934/yr</div>
+        <div class="qual-icon">💻</div>
+        <div class="qual-title">IT Professional (no degree)</div>
+        <div class="qual-desc">No formal degree, but 3+ years of professional IT experience within the last 7 years. Germany's special tech pathway.</div>
+      </div>
+
+      <div class="qual-card ineligible" id="q-vocational" onclick="selectQual('vocational')">
+        <div class="qual-badge badge-ineligible">Not Blue Card eligible</div>
+        <div class="qual-icon">🛠️</div>
+        <div class="qual-title">Vocational / Trade Qualification</div>
+        <div class="qual-desc">Completed apprenticeship or vocational training. Eligible for the Skilled Worker Visa instead — not the Blue Card.</div>
+      </div>
+
+      <div class="qual-card ineligible" id="q-none" onclick="selectQual('none')">
+        <div class="qual-badge badge-ineligible">Alternative routes exist</div>
+        <div class="qual-icon">🗺️</div>
+        <div class="qual-title">None of the above</div>
+        <div class="qual-desc">No formal qualification in your field. The Opportunity Card (Chancenkarte) may be a better starting point.</div>
+      </div>
+
+    </div>
+
+    <button class="wizard-btn" id="btn1" disabled onclick="goToStep2()">
+      Continue →
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       STEP 2A — UNIVERSITY: OCCUPATION + GRAD DATE
+  ════════════════════════════════════════════ -->
+  <div class="step-panel" id="step2a">
+    <div class="step-q">Your field and graduation year</div>
+    <div class="step-context" id="step2a-context">Let's determine your salary threshold. <strong>Shortage occupations and recent graduates get the reduced rate.</strong></div>
+
+    <div class="grad-toggle-wrap">
+      <div class="grad-toggle-label">
+        <strong>Did you complete your degree within the last 3 years?</strong>
+        Recent graduates (≤ 3 years) qualify for the lower threshold regardless of occupation.
+      </div>
+      <div class="toggle-btn-group">
+        <button class="toggle-btn" id="grad-yes" onclick="setGradRecent(true)">Yes</button>
+        <button class="toggle-btn" id="grad-no"  onclick="setGradRecent(false)">No / Unsure</button>
+      </div>
+    </div>
+
+    <div id="occ-section">
+      <div class="step-context" style="margin-bottom:0.85rem;">What field is your job offer in?</div>
+
+      <div class="occ-section-label">🔵 STEM & Technology — Shortage Track</div>
+      <div class="occ-grid">
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Software Engineer / Developer</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Data Scientist / AI Engineer</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Cybersecurity Specialist</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">IT Manager / ICT Manager</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Network / Systems Engineer</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Other IT Professional</div>
+      </div>
+
+      <div class="occ-section-label">⚙️ Engineering & Science — Shortage Track</div>
+      <div class="occ-grid">
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Mechanical Engineer</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Electrical Engineer</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Civil / Structural Engineer</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Chemical Engineer</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Natural Scientist / Mathematician</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Environmental / Energy Engineer</div>
+      </div>
+
+      <div class="occ-section-label">🏥 Healthcare & Management — Shortage Track</div>
+      <div class="occ-grid">
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Medical Doctor (Physician)</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Pharmacist</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Healthcare Manager</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Manufacturing / Production Manager</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Childcare / Education Manager</div>
+        <div class="occ-chip shortage" onclick="selectOcc(this,'shortage')">Construction / Mining Manager</div>
+      </div>
+
+      <div class="occ-section-label">📊 All Other Academic Professions — Standard Track</div>
+      <div class="occ-grid">
+        <div class="occ-chip standard" onclick="selectOcc(this,'standard')">Finance / Banking / Economics</div>
+        <div class="occ-chip standard" onclick="selectOcc(this,'standard')">Law / Legal / Compliance</div>
+        <div class="occ-chip standard" onclick="selectOcc(this,'standard')">Marketing / Communications</div>
+        <div class="occ-chip standard" onclick="selectOcc(this,'standard')">Architecture / Urban Planning</div>
+        <div class="occ-chip standard" onclick="selectOcc(this,'standard')">Human Resources / Business Mgmt</div>
+        <div class="occ-chip standard" onclick="selectOcc(this,'standard')">Other academic profession</div>
+      </div>
+    </div>
+
+    <button class="wizard-btn" id="btn2a" disabled onclick="goToStep3()">
+      Continue →
+    </button>
+    <button class="wizard-back" onclick="goBack(1)">← Back</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       STEP 2B — IT SPECIALIST CONFIRMATION
+  ════════════════════════════════════════════ -->
+  <div class="step-panel" id="step2b">
+    <div class="step-q">Let's confirm your IT specialist status</div>
+    <div class="step-context">Germany's Blue Card has a <strong>special pathway for experienced tech professionals</strong> without a university degree. Answer three quick questions.</div>
+
+    <div class="it-checks">
+      <div class="it-check-item">
+        <div class="it-check-q">Do you have <strong>at least 3 years</strong> of professional IT experience within the <strong>last 7 years</strong>?</div>
+        <div class="it-check-toggle">
+          <button class="it-yn-btn" id="it1-yes" onclick="setIT(1, true)">Yes</button>
+          <button class="it-yn-btn" id="it1-no"  onclick="setIT(1, false)">No</button>
+        </div>
+      </div>
+      <div class="it-check-item">
+        <div class="it-check-q">Is your job offer in the <strong>IT or technology sector</strong> in Germany?</div>
+        <div class="it-check-toggle">
+          <button class="it-yn-btn" id="it2-yes" onclick="setIT(2, true)">Yes</button>
+          <button class="it-yn-btn" id="it2-no"  onclick="setIT(2, false)">No</button>
+        </div>
+      </div>
+      <div class="it-check-item">
+        <div class="it-check-q">Can you provide <strong>proof of your IT skills</strong> — work references, portfolio, certificates, or verifiable employment history?</div>
+        <div class="it-check-toggle">
+          <button class="it-yn-btn" id="it3-yes" onclick="setIT(3, true)">Yes</button>
+          <button class="it-yn-btn" id="it3-no"  onclick="setIT(3, false)">No / Partial</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="it-warning" style="display:none" class="borderline-boost" style="border-color:rgba(242,109,109,0.2); background:rgba(242,109,109,0.06);">
+      <div class="borderline-boost-title" style="color:#f26d6d;">⚠ The IT pathway requires all three conditions</div>
+      <ul>
+        <li>Without proof of experience or an IT role, the Federal Employment Agency will not approve your application.</li>
+        <li>Consider building your documentation (references, LinkedIn, GitHub, certifications) before applying.</li>
+      </ul>
+    </div>
+
+    <button class="wizard-btn" id="btn2b" disabled onclick="goToStep3()">
+      Continue →
+    </button>
+    <button class="wizard-back" onclick="goBack(1)">← Back</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       STEP 2C — NOT ELIGIBLE
+  ════════════════════════════════════════════ -->
+  <div class="step-panel" id="step2c">
+    <div class="ineligible-panel">
+      <div class="ineligible-icon">🗺️</div>
+      <div class="ineligible-title">The Blue Card is not your route — but Germany has alternatives</div>
+      <div class="ineligible-body">
+        The EU Blue Card specifically requires either a university degree or documented IT expertise. Your profile doesn't match these criteria — but that doesn't mean Germany is closed to you. Here are the pathways that may apply.
+      </div>
+      <div class="alt-options">
+        <a class="alt-option" href="https://www.make-it-in-germany.com/en/visa-residence/types/skilled-workers-with-vocational-training" target="_blank" rel="noopener">
+          <div class="alt-option-title">🛠️ Skilled Worker Visa (§ 18a / 18b AufenthG)</div>
+          <div class="alt-option-desc">For vocational/trade qualifications. Requires recognition of your qualification in Germany. No minimum salary — but your qualification must be officially recognised.</div>
+        </a>
+        <a class="alt-option" href="https://www.make-it-in-germany.com/en/visa-residence/types/opportunity-card" target="_blank" rel="noopener">
+          <div class="alt-option-title">🌟 Opportunity Card (Chancenkarte)</div>
+          <div class="alt-option-desc">A 1-year job-seeker visa introduced in 2024. Points-based. Find a job in Germany first, then convert to a work visa. Good starting point without a fixed offer.</div>
+        </a>
+        <a class="alt-option" href="https://expatscore.de/legal/steuer-id-guide">
+          <div class="alt-option-title">📋 Already in Germany? Get your Steuer-ID first</div>
+          <div class="alt-option-desc">If you're already working in Germany on any permit, your Tax ID is the first administrative step. Our guide covers it in full.</div>
+        </a>
+      </div>
+    </div>
+    <button class="wizard-back" style="justify-content:center; width:100%; margin-top:1rem;" onclick="goBack(1)">← Try a different qualification</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       STEP 3 — SALARY
+  ════════════════════════════════════════════ -->
+  <div class="step-panel" id="step3">
+    <div class="step-q" id="step3-q">What is your job offer salary?</div>
+    <div class="step-context" id="step3-context">Loading threshold...</div>
+
+    <div class="salary-section">
+      <div class="salary-input-wrap">
+        <div class="salary-currency">€</div>
+        <input type="number" id="salaryInput" placeholder="48 000"
+               oninput="updateSalary()" min="0" step="1000" autocomplete="off">
+      </div>
+
+      <div class="salary-period-toggle">
+        <button class="period-btn active" id="btn-annual"  onclick="setPeriod('annual')">Annual (per year)</button>
+        <button class="period-btn"        id="btn-monthly" onclick="setPeriod('monthly')">Monthly</button>
+      </div>
+
+      <div class="gauge-wrapper">
+        <svg class="gauge-svg" viewBox="0 0 220 130">
+          <path class="gauge-track"
+                d="M 26 115 A 84 84 0 0 1 194 115"
+                stroke-dasharray="none"/>
+          <path class="gauge-fill" id="gaugeFill"
+                d="M 26 115 A 84 84 0 0 1 194 115"/>
+          <path class="gauge-threshold" id="gaugeThresholdMark"
+                d="M 110 31 L 110 42" stroke-width="3" stroke="#ffffff" opacity="0.3"/>
+          <text class="gauge-val" id="gaugeValText"
+                x="110" y="88" text-anchor="middle" dominant-baseline="middle"
+                fill="#5c6b7a" font-family="Cormorant Garamond, Georgia, serif"
+                font-size="22" font-weight="700">
+            —
+          </text>
+          <text class="gauge-label-text" x="110" y="108" text-anchor="middle"
+                font-family="DM Mono, monospace" font-size="10" fill="#5c6b7a">
+            gross / year
+          </text>
+          <text x="22" y="126" text-anchor="middle" font-size="9" fill="#5c6b7a"
+                font-family="DM Mono, monospace">€0</text>
+          <text id="gaugeMaxLabel" x="198" y="126" text-anchor="middle" font-size="9" fill="#5c6b7a"
+                font-family="DM Mono, monospace">€70k</text>
+        </svg>
+
+        <div class="threshold-callout">
+          <span class="threshold-label">Your threshold:</span>
+          <span class="threshold-value" id="thresholdDisplay">—</span>
+          <span class="threshold-label" id="thresholdTrackLabel"></span>
+        </div>
+      </div>
+
+      <div class="salary-feedback below" id="salaryFeedback">
+        Enter your salary above to see your eligibility.
+      </div>
+    </div>
+
+    <button class="wizard-btn" id="btn3" disabled onclick="goToResult()">
+      See my Eligibility Passport →
+    </button>
+    <button class="wizard-back" onclick="goBack(2)">← Back</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       STEP 4 — RESULT PASSPORT
+  ════════════════════════════════════════════ -->
+  <div class="step-panel" id="step4">
+    <div class="result-wrapper">
+
+      <div style="text-align:center; margin-bottom:1.25rem;">
+        <div style="font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:#c9a84c; margin-bottom:0.25rem;">Your Eligibility Assessment</div>
+        <div style="font-size:0.82rem; color:#5c6b7a;">Based on 2026 official thresholds · ExpatScore.de</div>
+      </div>
+
+      <div class="passport" id="passportCard">
+
+        <!-- Passport header -->
+        <div class="passport-header">
+          <div class="eu-stars">🇪🇺</div>
+          <div class="passport-brand">
+            <div class="passport-brand-title">European Union · Blue Card Assessment</div>
+            <div class="passport-brand-site">ExpatScore.de</div>
+          </div>
+          <div class="passport-date" id="passportDate">—</div>
+        </div>
+
+        <!-- Status -->
+        <div class="passport-status">
+          <div class="status-icon-wrap" id="statusIcon">❓</div>
+          <div class="status-text">
+            <div class="status-verdict" id="statusVerdict">Calculating...</div>
+            <div class="status-track">
+              <span id="statusTrackLabel">Track:</span>
+              <span class="track-pill" id="statusTrackPill"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salary bar -->
+        <div class="salary-bar-section">
+          <div class="salary-bar-label">
+            <span>€0</span>
+            <span id="barThresholdLabel">Threshold</span>
+            <span id="barMaxLabel">€70k+</span>
+          </div>
+          <div class="salary-bar-track">
+            <div class="salary-bar-fill" id="salaryBarFill" style="width:0%"></div>
+          </div>
+          <div class="salary-numbers">
+            <div class="sal-num">
+              <div class="sal-num-label">Your offer</div>
+              <div class="sal-num-val offer" id="resOfferVal">—</div>
+            </div>
+            <div class="sal-num">
+              <div class="sal-num-label">Threshold</div>
+              <div class="sal-num-val required" id="resThresholdVal">—</div>
+            </div>
+            <div class="sal-num">
+              <div class="sal-num-label" id="resGapLabel">Gap</div>
+              <div class="sal-num-val gap" id="resGapVal">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Borderline boost (only shown if borderline) -->
+        <div class="passport-section" id="borderlineSection" style="display:none">
+          <div class="passport-section-label">How to Bridge the Gap</div>
+          <div class="borderline-boost">
+            <div class="borderline-boost-title">You are very close — these options can make you eligible:</div>
+            <ul id="borderlineItems">
+              <li>Ask your employer to include guaranteed bonuses in the contract (they count toward the threshold)</li>
+              <li>Christmas and holiday bonuses are included if contractually guaranteed</li>
+              <li>A modest salary adjustment to meet the threshold avoids months of delay</li>
+              <li>Check if your role qualifies as a shortage occupation — the lower threshold may already apply</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="passport-section" id="benefitsSection">
+          <div class="passport-section-label">Your Blue Card Benefits</div>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon">👨‍👩‍👧</div>
+              <div class="benefit-text">
+                <div class="benefit-title">Family Reunification</div>
+                <div class="benefit-desc">Spouse gets an unrestricted work permit. No German language requirement at entry.</div>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🏡</div>
+              <div class="benefit-text">
+                <div class="benefit-title">Permanent Residence</div>
+                <div class="benefit-desc" id="prDesc">After 33 months (or 21 months with B1 German).</div>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🌍</div>
+              <div class="benefit-text">
+                <div class="benefit-title">EU Mobility</div>
+                <div class="benefit-desc">Work in another EU state after 12 months. Simplified process — no second visa needed.</div>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">✈️</div>
+              <div class="benefit-text">
+                <div class="benefit-title">Schengen Travel</div>
+                <div class="benefit-desc">Visa-free travel across 27 Schengen countries. 90 days per 180-day period.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PR Timeline -->
+        <div class="passport-section" id="timelineSection">
+          <div class="passport-section-label">Path to Permanent Residence</div>
+          <div class="pr-timeline">
+            <div class="pr-step">
+              <div class="pr-node done-node">🛬</div>
+              <div class="pr-months">Day 1</div>
+              <div class="pr-label">Arrive in Germany</div>
+            </div>
+            <div class="pr-step">
+              <div class="pr-node highlight">📋</div>
+              <div class="pr-months">Month 1–2</div>
+              <div class="pr-label">Anmeldung & Tax ID</div>
+            </div>
+            <div class="pr-step">
+              <div class="pr-node highlight" id="prMidNode">💳</div>
+              <div class="pr-months" id="prMidMonths">Month 12</div>
+              <div class="pr-label" id="prMidLabel">EU Mobility unlocked</div>
+            </div>
+            <div class="pr-step">
+              <div class="pr-node highlight" id="prPRNode">🏡</div>
+              <div class="pr-months" id="prFinalMonths">21 months (B1)</div>
+              <div class="pr-label">Permanent Residence</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="passport-section">
+          <div class="passport-section-label">Your Personalised Next Steps</div>
+          <div class="next-steps" id="nextSteps"></div>
+        </div>
+
+        <!-- Share row -->
+        <div class="share-row">
+          <a class="share-btn linkedin" id="shareLinkedIn" href="#" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Share on LinkedIn
+          </a>
+          <a class="share-btn twitter" id="shareTwitter" href="#" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.763l7.733-8.835L1.254 2.25H8.08l4.259 5.629L18.243 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Share on X
+          </a>
+          <button class="share-btn copy" onclick="copyLink()">
+            🔗 Copy link
+          </button>
+          <button class="share-btn restart" onclick="restartWizard()">
+            ↺ Start again
+          </button>
+        </div>
+
+      </div><!-- /passport -->
+
+      <!-- Disclaimer -->
+      <div style="text-align:center; margin-top:1.25rem; font-size:0.78rem; color:#5c6b7a; line-height:1.65;">
+        This assessment is informational only — not legal advice. For complex cases or visa refusals,<br>
+        consult a licensed <a href="https://www.anwaltauskunft.de/" target="_blank" rel="noopener" style="color:#5c6b7a; text-decoration:underline;">immigration lawyer (Rechtsanwalt für Ausländerrecht)</a>.
+      </div>
+
+    </div><!-- /result-wrapper -->
+  </div>
+
+</div><!-- /wizard-frame -->
+
+<!-- CONFETTI CONTAINER -->
+<div class="confetti-container" id="confettiContainer"></div>
+
+<!-- CLUSTER LINKS -->
+<div style="background:#0e1318; border-top:1px solid rgba(255,255,255,0.05); padding:2.5rem 1.5rem; margin-top:1rem;">
+  <div style="max-width:720px; margin:0 auto;">
+    <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:#5c6b7a; font-family:'DM Mono',monospace; margin-bottom:0.85rem;">Complete your German financial setup</div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:0.6rem;">
+      <a href="/legal/steuer-id-guide" style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem 1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.06);border-radius:8px;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+        <span style="font-size:1rem;">📋</span>
+        <span style="font-size:0.83rem;color:#a8b3bf;">Steuer-ID Guide 2026 → Tax Class Finder</span>
+      </a>
+      <a href="/banking/n26-bank-erfahrungen" style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem 1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.06);border-radius:8px;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+        <span style="font-size:1rem;">🏦</span>
+        <span style="font-size:0.83rem;color:#a8b3bf;">N26 Review 2026 → Best expat bank</span>
+      </a>
+      <a href="/guides/schufa-guide" style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem 1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.06);border-radius:8px;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+        <span style="font-size:1rem;">📊</span>
+        <span style="font-size:0.83rem;color:#a8b3bf;">SCHUFA Guide 2026 → Score Estimator</span>
+      </a>
+      <a href="/insurance/tk-health-insurance" style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem 1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.06);border-radius:8px;text-decoration:none;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.06)'">
+        <span style="font-size:1rem;">💊</span>
+        <span style="font-size:0.83rem;color:#a8b3bf;">TK Insurance 2026 → Cost Calculator</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- GLOBAL FOOTER -->
+<footer class="global-footer">
+  <div class="inner">
+    <div class="footer-disclaimer"><strong>No Legal Advice</strong> — Informational tool only. Thresholds per official 2026 BMI figures.</div>
+    <nav class="footer-legal-links">
+      <a href="/about">About</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/affiliate-hinweis">Affiliate</a>
+    </nav>
+    <p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" role="dialog">
+  <p>This site uses cookies. <a href="/datenschutz">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
+    <button class="cookie-decline" onclick="declineCookies()">Essential only</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Accept all</button>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
+    <h2>Cookie Settings</h2>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Technically necessary</strong><span>Always active.</span></div>
+      <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Analytics</strong><span>Pseudonymised.</span></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
+    </div>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Save</button>
+  </div>
+</div>
+
+<script src="/assets/js/script.js"></script>
+<script>
+// ══════════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════════
+const state = {
+  qualType: null,     // 'degree' | 'it' | 'vocational' | 'none'
+  occType: null,      // 'shortage' | 'standard'
+  recentGrad: null,   // true | false
+  itChecks: [null, null, null],
+  salary: 0,
+  period: 'annual',
+  track: null,        // 'standard' | 'shortage' | 'graduate' | 'it'
+  threshold: 0,
+};
+
+const THRESHOLDS = {
+  standard: 50700,
+  shortage: 45934.20,
+  graduate: 45934.20,
+  it:       45934.20,
+};
+
+const TRACK_LABELS = {
+  standard: { label: 'Standard Track',  pill: 'standard',  css: 'standard'  },
+  shortage: { label: 'Shortage Track',  pill: 'shortage',  css: 'shortage'  },
+  graduate: { label: 'Graduate Track',  pill: 'graduate',  css: 'graduate'  },
+  it:       { label: 'IT Specialist',   pill: 'it',        css: 'it'        },
+};
+
+// ══════════════════════════════════════════════
+//  STEP NAVIGATION
+// ══════════════════════════════════════════════
+let currentStep = 1;
+
+function showStep(id) {
+  document.querySelectorAll('.step-panel').forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
+  const panel = document.getElementById(id);
+  panel.style.display = 'block';
+  panel.classList.add('active');
+  updateProgress();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateProgress() {
+  const stepNum = currentStep <= 4 ? currentStep : 4;
+  ['1','2','3','4'].forEach(n => {
+    const dot = document.getElementById(`dot-${n}`);
+    const num = parseInt(n);
+    dot.classList.remove('active','done');
+    if (num < stepNum)       dot.classList.add('done');
+    else if (num === stepNum) dot.classList.add('active');
+  });
+  ['12','23','34'].forEach(k => {
+    const line = document.getElementById(`line-${k}`);
+    if (!line) return;
+    const stepOf = parseInt(k[0]);
+    line.classList.toggle('done', stepOf < stepNum);
+  });
+  const labels = { 1:'Step 1 of 4 — Qualification', 2:'Step 2 of 4 — Occupation & Experience', 3:'Step 3 of 4 — Salary', 4:'Your Eligibility Passport' };
+  document.getElementById('progressLabel').textContent = labels[stepNum] || '';
+}
+
+// ══════════════════════════════════════════════
+//  STEP 1 — QUALIFICATION
+// ══════════════════════════════════════════════
+function selectQual(type) {
+  state.qualType = type;
+  document.querySelectorAll('.qual-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById(`q-${type}`).classList.add('selected');
+  document.getElementById('btn1').disabled = false;
+}
+
+function goToStep2() {
+  if (!state.qualType) return;
+  currentStep = 2;
+  if (state.qualType === 'degree') {
+    showStep('step2a');
+  } else if (state.qualType === 'it') {
+    showStep('step2b');
+  } else {
+    showStep('step2c');
+  }
+}
+
+// ══════════════════════════════════════════════
+//  STEP 2A — DEGREE: OCCUPATION + GRAD DATE
+// ══════════════════════════════════════════════
+function setGradRecent(val) {
+  state.recentGrad = val;
+  document.getElementById('grad-yes').classList.toggle('active-yes', val === true);
+  document.getElementById('grad-no').classList.toggle('active-no',  val === false);
+  if (val === true) {
+    state.occType = 'shortage'; // recent grads get reduced threshold on any occupation
+    document.getElementById('occ-section').style.opacity = '0.45';
+    document.getElementById('occ-section').style.pointerEvents = 'none';
+    document.getElementById('step2a-context').innerHTML =
+      'You are a <strong>recent graduate (≤ 3 years)</strong> — you automatically qualify for the reduced threshold of <strong>€45,934.20/year</strong>, regardless of your occupation.';
+  } else {
+    state.occType = null;
+    document.getElementById('occ-section').style.opacity = '1';
+    document.getElementById('occ-section').style.pointerEvents = 'auto';
+    document.getElementById('step2a-context').innerHTML =
+      'Let\'s determine your salary threshold. <strong>Shortage occupations get the reduced rate.</strong>';
+    // Unselect all chips
+    document.querySelectorAll('.occ-chip').forEach(c => c.classList.remove('selected'));
+  }
+  checkStep2aComplete();
+}
+
+function selectOcc(el, type) {
+  if (state.recentGrad === true) return;
+  document.querySelectorAll('.occ-chip').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected', type);
+  state.occType = type;
+  checkStep2aComplete();
+}
+
+function checkStep2aComplete() {
+  const ready = state.recentGrad === true || (state.recentGrad !== null && state.occType !== null);
+  document.getElementById('btn2a').disabled = !ready;
+}
+
+function goToStep3() {
+  currentStep = 3;
+  // Determine track
+  if (state.qualType === 'it') {
+    state.track = 'it';
+  } else if (state.recentGrad === true) {
+    state.track = 'graduate';
+  } else if (state.occType === 'shortage') {
+    state.track = 'shortage';
+  } else {
+    state.track = 'standard';
+  }
+  state.threshold = THRESHOLDS[state.track];
+  updateStep3UI();
+  showStep('step3');
+}
+
+// ══════════════════════════════════════════════
+//  STEP 2B — IT SPECIALIST
+// ══════════════════════════════════════════════
+function setIT(qNum, val) {
+  state.itChecks[qNum - 1] = val;
+  const yesBtn = document.getElementById(`it${qNum}-yes`);
+  const noBtn  = document.getElementById(`it${qNum}-no`);
+  yesBtn.classList.toggle('yes-active', val === true);
+  noBtn.classList.toggle('no-active',  val === false);
+
+  const allAnswered = state.itChecks.every(v => v !== null);
+  const allYes      = state.itChecks.every(v => v === true);
+  const hasNo       = state.itChecks.some(v => v === false);
+
+  document.getElementById('it-warning').style.display = (allAnswered && hasNo) ? 'block' : 'none';
+  document.getElementById('btn2b').disabled = !(allAnswered && allYes);
+}
+
+function goBack(toStep) {
+  currentStep = toStep;
+  if (toStep === 1) showStep('step1');
+  else if (toStep === 2) {
+    if (state.qualType === 'degree') showStep('step2a');
+    else showStep('step2b');
+  }
+}
+
+// ══════════════════════════════════════════════
+//  STEP 3 — SALARY
+// ══════════════════════════════════════════════
+function updateStep3UI() {
+  const trackInfo = TRACK_LABELS[state.track];
+  const threshold = state.threshold;
+  document.getElementById('step3-q').textContent =
+    state.qualType === 'it'
+      ? 'What is the gross annual salary in your IT job offer?'
+      : 'What is the gross annual salary in your offer?';
+
+  const contextMap = {
+    standard: `Your track: <strong>Standard Occupation</strong>. Salary must reach <strong>€50,700/year gross</strong> to qualify.`,
+    shortage: `Your track: <strong>Shortage Occupation</strong>. The reduced threshold applies: <strong>€45,934.20/year gross</strong>.`,
+    graduate: `Your track: <strong>Recent Graduate</strong>. You get the reduced threshold: <strong>€45,934.20/year gross</strong>, on any occupation.`,
+    it:       `Your track: <strong>IT Specialist</strong>. The shortage threshold applies: <strong>€45,934.20/year gross</strong>.`,
+  };
+  document.getElementById('step3-context').innerHTML = contextMap[state.track];
+  document.getElementById('thresholdDisplay').textContent = `€${threshold.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2})}`;
+  document.getElementById('thresholdTrackLabel').textContent = `(${trackInfo.label})`;
+
+  // Reset gauge
+  const fill = document.getElementById('gaugeFill');
+  fill.style.strokeDasharray = '0 314';
+  fill.style.stroke = '#3a4550';
+  document.getElementById('gaugeValText').textContent = '—';
+  document.getElementById('gaugeValText').setAttribute('fill', '#5c6b7a');
+  document.getElementById('salaryInput').value = '';
+  document.getElementById('btn3').disabled = true;
+}
+
+function setPeriod(p) {
+  state.period = p;
+  document.getElementById('btn-annual').classList.toggle('active', p === 'annual');
+  document.getElementById('btn-monthly').classList.toggle('active', p === 'monthly');
+  updateSalary();
+}
+
+// Full arc length of the 270° gauge path (radius 84, angle 270°)
+const GAUGE_ARC = 2 * Math.PI * 84 * (270/360); // ≈ 395
+
+function updateSalary() {
+  const raw = parseFloat(document.getElementById('salaryInput').value) || 0;
+  const annual = state.period === 'monthly' ? raw * 12 : raw;
+  state.salary = annual;
+
+  const thresh  = state.threshold;
+  const pct     = Math.min(annual / thresh, 1.15); // cap display at 115%
+  const arcFill = pct * GAUGE_ARC;
+
+  const fill = document.getElementById('gaugeFill');
+  fill.style.strokeDasharray = `${arcFill} ${GAUGE_ARC}`;
+
+  const gap = annual - thresh;
+  const borderline = gap >= -thresh * 0.10 && gap < 0; // within 10% below
+
+  let color, valFill;
+  if (annual <= 0) { color = '#3a4550'; valFill = '#5c6b7a'; }
+  else if (annual >= thresh) { color = '#00c4a7'; valFill = '#00c4a7'; }
+  else if (borderline)       { color = '#c9a84c'; valFill = '#c9a84c'; }
+  else                       { color = '#3a4550'; valFill = '#8b949e'; }
+
+  fill.style.stroke = color;
+
+  const valEl = document.getElementById('gaugeValText');
+  valEl.textContent = annual > 0 ? '€' + Math.round(annual/1000) + 'k' : '—';
+  valEl.setAttribute('fill', valFill);
+
+  // Feedback
+  const fb = document.getElementById('salaryFeedback');
+  fb.classList.remove('below','borderline','above');
+  if (annual <= 0) {
+    fb.classList.add('below');
+    fb.textContent = 'Enter your salary above to see your eligibility.';
+    document.getElementById('btn3').disabled = true;
+  } else if (annual >= thresh) {
+    fb.classList.add('above');
+    const surplus = (annual - thresh).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+    fb.innerHTML = `<strong>✓ Your offer exceeds the threshold by €${surplus}</strong> — you meet the salary requirement for the EU Blue Card.`;
+    document.getElementById('btn3').disabled = false;
+  } else if (borderline) {
+    fb.classList.add('borderline');
+    const shortfall = Math.abs(gap).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+    fb.innerHTML = `<strong>⚡ Very close — you are €${shortfall} below the threshold.</strong> Guaranteed bonuses in your contract may close the gap. See tips on the next screen.`;
+    document.getElementById('btn3').disabled = false;
+  } else {
+    fb.classList.add('below');
+    const shortfall = Math.abs(gap).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+    fb.innerHTML = `Your offer is €${shortfall} below the threshold. A salary increase or renegotiation would be needed.`;
+    document.getElementById('btn3').disabled = false;
+  }
+}
+
+// ══════════════════════════════════════════════
+//  STEP 4 — RESULT
+// ══════════════════════════════════════════════
+function goToResult() {
+  currentStep = 4;
+  buildPassport();
+  showStep('step4');
+  if (state.salary >= state.threshold) spawnConfetti();
+}
+
+function buildPassport() {
+  const thresh  = state.threshold;
+  const salary  = state.salary;
+  const gap     = salary - thresh;
+  const eligible   = gap >= 0;
+  const borderline = gap >= -thresh * 0.10 && gap < 0;
+  const ineligible = gap < -thresh * 0.10;
+
+  const trackInfo = TRACK_LABELS[state.track];
+
+  // Date
+  document.getElementById('passportDate').textContent =
+    new Date().toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'});
+
+  // Status
+  const icon    = document.getElementById('statusIcon');
+  const verdict = document.getElementById('statusVerdict');
+  const trackPill = document.getElementById('statusTrackPill');
+
+  icon.className = 'status-icon-wrap';
+  verdict.className = 'status-verdict';
+
+  if (eligible) {
+    icon.classList.add('eligible');
+    icon.textContent = '✓';
+    verdict.classList.add('eligible');
+    verdict.textContent = 'Eligible — You qualify for the EU Blue Card';
+  } else if (borderline) {
+    icon.classList.add('borderline');
+    icon.textContent = '⚡';
+    verdict.classList.add('borderline');
+    verdict.textContent = 'Borderline — Very close, see bridging options';
+  } else {
+    icon.classList.add('ineligible');
+    icon.textContent = '✗';
+    verdict.classList.add('ineligible');
+    verdict.textContent = 'Not yet eligible — Salary below threshold';
+  }
+
+  trackPill.textContent = trackInfo.label;
+  trackPill.className = `track-pill ${trackInfo.css}`;
+
+  // Salary bar
+  const barPct = Math.min((salary / thresh) * 100, 100);
+  const barFill = document.getElementById('salaryBarFill');
+  barFill.className = 'salary-bar-fill ' + (eligible ? 'above' : borderline ? 'borderline' : 'below');
+  setTimeout(() => { barFill.style.width = barPct + '%'; }, 200);
+
+  document.getElementById('barThresholdLabel').textContent = `← €${(thresh/1000).toFixed(1)}k threshold`;
+  document.getElementById('resOfferVal').textContent   = '€' + salary.toLocaleString('de-DE', {maximumFractionDigits:0}) + '/yr';
+  document.getElementById('resThresholdVal').textContent = '€' + thresh.toLocaleString('de-DE', {minimumFractionDigits:2}) + '/yr';
+
+  const gapEl    = document.getElementById('resGapVal');
+  const gapLabel = document.getElementById('resGapLabel');
+  if (eligible) {
+    gapLabel.textContent = 'Surplus';
+    gapEl.className = 'sal-num-val gap positive';
+    gapEl.textContent = '+€' + gap.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+  } else {
+    gapLabel.textContent = 'Shortfall';
+    gapEl.className = 'sal-num-val gap negative';
+    gapEl.textContent = '−€' + Math.abs(gap).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+
+  // Borderline section
+  document.getElementById('borderlineSection').style.display = borderline ? 'block' : 'none';
+
+  // Benefits (always shown for eligible/borderline)
+  document.getElementById('benefitsSection').style.display = ineligible ? 'none' : 'block';
+  document.getElementById('timelineSection').style.display = ineligible ? 'none' : 'block';
+
+  // PR timeline
+  document.getElementById('prFinalMonths').textContent =
+    state.track === 'shortage' ? '21 months (B1) / 33 without' : '21 months (B1) / 33 without';
+
+  // Next steps
+  buildNextSteps(eligible, borderline, ineligible);
+
+  // Share links
+  const shareUrl = encodeURIComponent('https://expatscore.de/legal/blue-card-tool');
+  const track    = trackInfo.label;
+  const shareText = eligible
+    ? encodeURIComponent(`I just checked my EU Blue Card eligibility for Germany 2026 — I qualify on the ${track}! Free tool by @ExpatScore:`)
+    : encodeURIComponent(`Just used this free EU Blue Card eligibility tool for Germany 2026. Takes 2 min — shows your exact threshold, track, and next steps:`)
+  document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+  document.getElementById('shareTwitter').href  = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+}
+
+function buildNextSteps(eligible, borderline, ineligible) {
+  const container = document.getElementById('nextSteps');
+  const steps = [];
+
+  if (eligible) {
+    steps.push({ title:'Apply for your German employment visa', desc:'Contact the German embassy in your country. Processing: 6–20 weeks.', link:'https://www.make-it-in-germany.com/en/visa-residence/types/eu-blue-card' });
+    steps.push({ title:'Get your Steuer-ID (Tax ID)', desc:'Register your address (Anmeldung) within 14 days of arriving. Your Tax ID is automatically sent.', link:'/legal/steuer-id-guide' });
+    steps.push({ title:'Open your German bank account', desc:'N26 is the fastest option — English app, BaFin-licensed, SCHUFA-building DE-IBAN.', link:'/banking/n26-bank-erfahrungen' });
+    steps.push({ title:'Enroll in TK health insurance', desc:'Apply before your employment start date. Employer pays half your contribution.', link:'/insurance/tk-health-insurance' });
+    steps.push({ title:'Start building your SCHUFA score', desc:'Your first bank account and mobile contract build your German credit history from day one.', link:'/guides/schufa-guide' });
+  } else if (borderline) {
+    steps.push({ title:'Negotiate guaranteed bonuses into your contract', desc:'Christmas or holiday bonuses count toward the threshold if contractually guaranteed — not discretionary.', link:'https://www.make-it-in-germany.com/en/visa-residence/types/eu-blue-card' });
+    steps.push({ title:'Check if your role qualifies as a shortage occupation', desc:'If your occupation is on Germany\'s shortage list, you may already qualify at the lower threshold.', link:'https://expatscore.de/legal/blue-card-tool' });
+    steps.push({ title:'Consider a part-time-to-full-time contract upgrade', desc:'If the offer is for reduced hours, a full-time contract may push you above the threshold.', link:'https://www.make-it-in-germany.com/en/visa-residence/types/eu-blue-card' });
+    steps.push({ title:'Prepare your documents now while negotiating', desc:'Qualification recognition, degree translations, and work references can take months. Start now.', link:'https://anabin.kmk.org/anabin' });
+  } else {
+    steps.push({ title:'Explore the Skilled Worker Visa (§18a AufenthG)', desc:'Lower salary requirements than the Blue Card. Requires recognised vocational or academic qualification.', link:'https://www.make-it-in-germany.com/en/visa-residence/types/skilled-workers-with-vocational-training' });
+    steps.push({ title:'Consider the Opportunity Card (Chancenkarte)', desc:'Job-seeker visa valid for 1 year. Find a suitable role in Germany, then convert to a work permit.', link:'https://www.make-it-in-germany.com/en/visa-residence/types/opportunity-card' });
+    steps.push({ title:'Build your qualifications portfolio', desc:'IT certifications, portfolio work, or a postgraduate degree may open new pathways.', link:'https://www.make-it-in-germany.com' });
+  }
+
+  container.innerHTML = steps.map((s, i) => `
+    <a class="next-step" href="${s.link}" ${s.link.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>
+      <div class="next-step-num">${i + 1}</div>
+      <div class="next-step-text"><strong>${s.title}</strong>${s.desc}</div>
+      <span class="next-step-arrow">→</span>
+    </a>
+  `).join('');
+}
+
+// ══════════════════════════════════════════════
+//  CONFETTI
+// ══════════════════════════════════════════════
+function spawnConfetti() {
+  const container = document.getElementById('confettiContainer');
+  const colors = ['#c9a84c','#00c4a7','#e4c97a','#33d4bb','#ffffff','#4a9eff','#3ecf8e'];
+  for (let i = 0; i < 80; i++) {
+    setTimeout(() => {
+      const el = document.createElement('div');
+      el.className = 'confetti-piece';
+      el.style.cssText = `
+        left: ${Math.random()*100}%;
+        top: -10px;
+        background: ${colors[Math.floor(Math.random()*colors.length)]};
+        animation-delay: ${Math.random()*1}s;
+        animation-duration: ${2 + Math.random()*1.5}s;
+        border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+        width: ${6 + Math.random()*6}px;
+        height: ${6 + Math.random()*6}px;
+        transform: rotate(${Math.random()*360}deg);
+      `;
+      container.appendChild(el);
+      setTimeout(() => el.remove(), 4000);
+    }, i * 25);
+  }
+}
+
+// ══════════════════════════════════════════════
+//  UTILITIES
+// ══════════════════════════════════════════════
+function copyLink() {
+  navigator.clipboard.writeText('https://expatscore.de/legal/blue-card-tool')
+    .then(() => { alert('Link copied to clipboard!'); })
+    .catch(() => { alert('Copy: https://expatscore.de/legal/blue-card-tool'); });
+}
+
+function restartWizard() {
+  Object.assign(state, { qualType:null, occType:null, recentGrad:null, itChecks:[null,null,null], salary:0, period:'annual', track:null, threshold:0 });
+  currentStep = 1;
+  document.querySelectorAll('.qual-card').forEach(c => c.classList.remove('selected'));
+  document.querySelectorAll('.occ-chip').forEach(c => c.classList.remove('selected','shortage','standard'));
+  document.getElementById('btn1').disabled = true;
+  document.getElementById('grad-yes').classList.remove('active-yes');
+  document.getElementById('grad-no').classList.remove('active-no');
+  document.getElementById('occ-section').style.opacity = '1';
+  document.getElementById('occ-section').style.pointerEvents = 'auto';
+  ['it1','it2','it3'].forEach(k => {
+    document.getElementById(`${k}-yes`).classList.remove('yes-active');
+    document.getElementById(`${k}-no`).classList.remove('no-active');
+  });
+  showStep('step1');
+}
+
+// ══════════════════════════════════════════════
+//  COOKIE
+// ══════════════════════════════════════════════
+function openModal(id)  { const m=document.getElementById('modal-'+id); if(m) m.classList.add('open'); }
+function closeModal(id) { const m=document.getElementById('modal-'+id); if(m) m.classList.remove('open'); }
+function acceptCookies()  { localStorage.setItem('cookieConsent','all');       document.getElementById('cookie-banner').style.display='none'; closeModal('cookie-settings'); }
+function declineCookies() { localStorage.setItem('cookieConsent','necessary'); document.getElementById('cookie-banner').style.display='none'; closeModal('cookie-settings'); }
+function saveGranularCookies() { localStorage.setItem('cookieConsent','necessary'); document.getElementById('cookie-banner').style.display='none'; closeModal('cookie-settings'); }
+(function(){ if(localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display='none'; })();
+
+// ══════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════
+updateProgress();
+</script>
+</body>
+</html>

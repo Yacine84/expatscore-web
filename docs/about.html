@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Über uns · ExpatScore.de</title>
+<meta name="description" content="Erfahren Sie mehr über die Mission und Geschichte von ExpatScore.de – wir helfen Expats in Deutschland, die unsichtbaren Regeln der SCHUFA zu verstehen.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Yassine Chaikhi">
+<link rel="canonical" href="https://expatscore.de/about">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Über uns – ExpatScore.de">
+<meta property="og:description" content="Erfahren Sie mehr über die Mission und Geschichte von ExpatScore.de – wir helfen Expats in Deutschland, die unsichtbaren Regeln der SCHUFA zu verstehen.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://expatscore.de/about">
+<meta property="og:site_name" content="ExpatScore.de">
+<meta property="og:image" content="https://expatscore.de/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Über ExpatScore.de – Mission und Team">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Über uns – ExpatScore.de">
+<meta name="twitter:description" content="Erfahren Sie mehr über die Mission und Geschichte von ExpatScore.de – wir helfen Expats in Deutschland, die unsichtbaren Regeln der SCHUFA zu verstehen.">
+<meta name="twitter:image" content="https://expatscore.de/og-image.jpg">
+<meta name="twitter:image:alt" content="Über ExpatScore.de – Mission und Team">
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<meta name="theme-color" content="#080c10">
+
+<!-- Fonts — identical to Impressum -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- ══════════════════════════════════════════════════════════
+     SELF-CONTAINED PREMIUM STYLES — about.html
+     Mirrors the Impressum page 1:1 in design language.
+     Zero external CSS dependencies.
+══════════════════════════════════════════════════════════ -->
+<style>
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── TOKENS — identical to Impressum ── */
+:root {
+  --bg:          #080c10;
+  --bg-2:        #0e1318;
+  --bg-3:        #131920;
+  --gold:        #c9a84c;
+  --gold-light:  #e4c97a;
+  --gold-glow:   rgba(201,168,76,0.1);
+  --gold-border: rgba(201,168,76,0.22);
+  --teal:        #00c4a7;
+  --teal-glow:   rgba(0,196,167,0.1);
+  --blue:        #4a9eff;
+  --blue-glow:   rgba(74,158,255,0.1);
+  --red:         #f26d6d;
+  --red-glow:    rgba(242,109,109,0.1);
+  --green:       #3ecf8e;
+  --white:       #e8edf3;
+  --muted:       #a8b3bf;
+  --subtle:      #5c6b7a;
+  --radius:      14px;
+  --font-body:   'DM Sans', system-ui, sans-serif;
+  --font-serif:  'Cormorant Garamond', Georgia, serif;
+  --font-mono:   'DM Mono', monospace;
+}
+
+/* ── BASE ── */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════════════════
+   GLOBAL HEADER — self-contained
+══════════════════════════════════════════ */
+.global-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+  background: rgba(8,12,16,0.92);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.logo a {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold-light) !important;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.nav-links {
+  display: flex;
+  gap: 0.15rem;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--subtle);
+  text-decoration: none;
+  padding: 0.38rem 0.8rem;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+.nav-links a[aria-current="page"] { color: var(--gold); background: var(--gold-glow); }
+.nav-toggle {
+  display: none;
+  background: none; border: none;
+  color: var(--subtle); font-size: 1.25rem; cursor: pointer;
+  padding: 0.3rem;
+}
+
+/* ── ANNOUNCEMENT BARS ── */
+.werbung-bar {
+  background: rgba(201,168,76,0.04);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  padding: 0.45rem 1.5rem;
+  font-size: 0.77rem;
+  color: var(--subtle);
+  text-align: center;
+  margin-top: 64px;
+}
+.werbung-bar strong { color: rgba(201,168,76,0.55); font-weight: 600; }
+
+.urgency-strip {
+  background: rgba(0,196,167,0.03);
+  border-bottom: 1px solid rgba(0,196,167,0.08);
+  padding: 0.42rem 1.5rem;
+  font-size: 0.77rem;
+  color: var(--subtle);
+  text-align: center;
+}
+.urgency-strip strong { color: var(--teal); }
+
+/* ══════════════════════════════════════════
+   PAGE HERO — mirrors Impressum exactly
+══════════════════════════════════════════ */
+.legal-hero {
+  background: linear-gradient(180deg, #0e1318 0%, #080c10 100%);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  padding: 3.5rem 1.5rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.legal-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+.legal-hero-inner {
+  position: relative; z-index: 1;
+  max-width: 860px; margin: 0 auto;
+  display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap;
+}
+.legal-hero-icon {
+  width: 64px; height: 64px; border-radius: 14px; flex-shrink: 0;
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.22);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.75rem;
+}
+.legal-hero-text { flex: 1; min-width: 200px; }
+.legal-hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--gold); margin-bottom: 0.6rem; display: block;
+}
+.legal-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 700;
+  color: var(--gold-light); line-height: 1.15; margin-bottom: 0.5rem;
+}
+.legal-hero-sub {
+  font-size: 0.92rem; color: var(--subtle); line-height: 1.65;
+}
+.legal-hero-sub strong { color: var(--muted); font-weight: 600; }
+.legal-hero-meta {
+  display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;
+}
+.legal-meta-pill {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-size: 0.76rem; font-weight: 600; color: var(--subtle);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 20px; padding: 0.3rem 0.85rem;
+}
+.legal-meta-pill .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.dot-green { background: var(--green); }
+.dot-gold  { background: var(--gold); }
+.dot-teal  { background: var(--teal); }
+.dot-white { background: rgba(255,255,255,0.4); }
+
+/* ── BREADCRUMBS ── */
+.breadcrumbs {
+  max-width: 860px; margin: 0 auto;
+  padding: 0.75rem 1.5rem 0;
+  font-size: 0.78rem; color: var(--subtle);
+}
+.breadcrumbs a { color: var(--subtle); text-decoration: none; transition: color 0.2s; }
+.breadcrumbs a:hover { color: var(--gold); }
+.breadcrumbs .current { color: var(--muted); }
+
+/* ══════════════════════════════════════════
+   MAIN GRID — identical to Impressum
+══════════════════════════════════════════ */
+.legal-grid {
+  max-width: 860px; margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+@media (max-width: 640px) { .legal-grid { grid-template-columns: 1fr; } }
+
+.legal-col-full  { grid-column: 1 / -1; }
+.legal-col-left  { grid-column: 1; }
+.legal-col-right { grid-column: 2; }
+@media (max-width: 640px) {
+  .legal-col-left, .legal-col-right { grid-column: 1; }
+}
+
+/* ── SECTION LABEL — identical ── */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem; text-transform: uppercase;
+  letter-spacing: 0.14em; font-weight: 700;
+  color: var(--subtle); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.section-label::after {
+  content: ''; flex: 1; height: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+/* ── LEGAL CARDS — identical ── */
+.legal-card {
+  background: var(--bg-3);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.5rem;
+  position: relative; overflow: hidden;
+  height: 100%;
+  transition: border-color 0.28s, transform 0.22s, box-shadow 0.28s;
+}
+.legal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+}
+.legal-card.accent-gold { border-color: rgba(201,168,76,0.2); }
+.legal-card.accent-teal { border-color: rgba(0,196,167,0.18); }
+.legal-card.accent-blue { border-color: rgba(74,158,255,0.18); }
+.legal-card.accent-red  { border-color: rgba(242,109,109,0.18); }
+
+.legal-card.accent-gold::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, var(--gold), rgba(201,168,76,0)); }
+.legal-card.accent-teal::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, var(--teal), rgba(0,196,167,0)); }
+.legal-card.accent-blue::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, var(--blue), rgba(74,158,255,0)); }
+.legal-card.accent-red::before  { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, var(--red),  rgba(242,109,109,0)); }
+
+.card-icon {
+  width: 38px; height: 38px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; margin-bottom: 1rem; flex-shrink: 0;
+}
+.icon-gold  { background: rgba(201,168,76,0.1);  border: 1px solid rgba(201,168,76,0.2);  }
+.icon-teal  { background: rgba(0,196,167,0.1);   border: 1px solid rgba(0,196,167,0.2);   }
+.icon-blue  { background: rgba(74,158,255,0.1);  border: 1px solid rgba(74,158,255,0.2);  }
+.icon-red   { background: rgba(242,109,109,0.1); border: 1px solid rgba(242,109,109,0.2); }
+.icon-green { background: rgba(62,207,142,0.1);  border: 1px solid rgba(62,207,142,0.2);  }
+.icon-gray  { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); }
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--white); margin-bottom: 0.5rem; line-height: 1.3;
+}
+.card-subtitle {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+  font-weight: 700; color: var(--subtle);
+  font-family: var(--font-mono); margin-bottom: 0.85rem;
+}
+
+/* ── BODY TEXT IN CARDS ── */
+.legal-para {
+  font-size: 0.9rem; color: #8b949e; line-height: 1.8; margin: 0;
+}
+.legal-para + .legal-para { margin-top: 0.85rem; }
+.legal-para strong { color: var(--gold); font-weight: 600; }
+.legal-para a { color: var(--teal); text-decoration: none; }
+.legal-para a:hover { color: var(--gold); }
+
+/* ── LEGAL ITEMS (bullet list style) ── */
+.legal-item {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex; align-items: flex-start; gap: 0.75rem;
+}
+.legal-item:last-child { border-bottom: none; padding-bottom: 0; }
+.legal-item-bullet {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(201,168,76,0.4); margin-top: 0.6rem; flex-shrink: 0;
+}
+.legal-item-text { flex: 1; font-size: 0.88rem; color: #8b949e; line-height: 1.75; }
+.legal-item-text strong { color: var(--gold); font-weight: 600; }
+
+/* ══════════════════════════════════════════
+   INTRO / STORY CARD — full width
+══════════════════════════════════════════ */
+.story-card {
+  background: linear-gradient(145deg, #0e1318, #131920);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: var(--radius);
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  transition: border-color 0.28s, box-shadow 0.28s;
+}
+.story-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--teal), var(--gold), var(--teal));
+}
+.story-card:hover {
+  border-color: rgba(201,168,76,0.35);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+}
+.story-card-body { padding: 2rem 2rem 1.75rem; }
+.story-intro-text {
+  font-size: 1rem;
+  color: #8b949e;
+  line-height: 1.85;
+}
+.story-intro-text + .story-intro-text { margin-top: 1rem; }
+.story-intro-text strong { color: var(--gold-light); font-weight: 600; }
+
+/* ══════════════════════════════════════════
+   FOUNDER QUOTE CARD — premium pull quote
+══════════════════════════════════════════ */
+.quote-card {
+  background: var(--bg-3);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.75rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.28s, box-shadow 0.28s;
+}
+.quote-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+.quote-mark {
+  position: absolute;
+  top: -0.75rem; left: 1.25rem;
+  font-family: Georgia, serif; font-size: 6rem;
+  color: rgba(201,168,76,0.07); line-height: 1;
+  pointer-events: none; user-select: none;
+}
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.2rem; font-style: italic;
+  color: var(--muted); line-height: 1.75;
+  position: relative; z-index: 1;
+  margin-bottom: 1rem;
+}
+.quote-attribution {
+  display: flex; align-items: center; gap: 0.75rem;
+  position: relative; z-index: 1;
+}
+.quote-avatar {
+  width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.2), rgba(0,196,167,0.1));
+  border: 2px solid rgba(201,168,76,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: 1rem; font-weight: 700;
+  color: var(--gold);
+}
+.quote-author-name {
+  font-size: 0.88rem; font-weight: 700; font-style: normal;
+  color: var(--gold); letter-spacing: 0.03em;
+}
+.quote-author-role {
+  font-size: 0.75rem; color: var(--subtle);
+  font-family: var(--font-mono); margin-top: 0.1rem;
+}
+
+/* ══════════════════════════════════════════
+   VALUES GRID — 2×2 identical to legal-card
+══════════════════════════════════════════ */
+.values-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0;
+}
+@media (max-width: 520px) { .values-subgrid { grid-template-columns: 1fr; } }
+
+.value-card {
+  background: var(--bg-3);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: relative; overflow: hidden;
+  transition: border-color 0.28s, transform 0.22s, box-shadow 0.28s;
+}
+.value-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  opacity: 0; transition: opacity 0.28s;
+}
+.value-card:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+.value-card:hover::before { opacity: 1; }
+
+.value-card.vc-blue  { border-color: rgba(74,158,255,0.15); }
+.value-card.vc-green { border-color: rgba(62,207,142,0.15); }
+.value-card.vc-gold  { border-color: rgba(201,168,76,0.18); }
+.value-card.vc-red   { border-color: rgba(242,109,109,0.15); }
+
+.value-card.vc-blue::before  { background: linear-gradient(90deg, var(--blue),  rgba(74,158,255,0)); }
+.value-card.vc-green::before { background: linear-gradient(90deg, var(--green), rgba(62,207,142,0)); }
+.value-card.vc-gold::before  { background: linear-gradient(90deg, var(--gold),  rgba(201,168,76,0)); }
+.value-card.vc-red::before   { background: linear-gradient(90deg, var(--red),   rgba(242,109,109,0)); }
+
+.value-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--white); margin-bottom: 0.45rem;
+  letter-spacing: -0.01em;
+}
+.value-card p {
+  font-size: 0.87rem; color: var(--subtle); line-height: 1.7; margin: 0;
+}
+
+/* ══════════════════════════════════════════
+   TOPIC TAGS — styled like compliance-badge
+══════════════════════════════════════════ */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+.topic-item {
+  display: flex; align-items: center; gap: 0.65rem;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px; padding: 0.8rem 1rem;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: default;
+}
+.topic-item:hover { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.12); }
+.topic-item.t-gold  { border-color: rgba(201,168,76,0.15); }
+.topic-item.t-gold:hover  { border-color: rgba(201,168,76,0.3);  background: var(--gold-glow); }
+.topic-item.t-teal  { border-color: rgba(0,196,167,0.15); }
+.topic-item.t-teal:hover  { border-color: rgba(0,196,167,0.3);  background: var(--teal-glow); }
+.topic-item.t-red   { border-color: rgba(242,109,109,0.12); }
+.topic-item.t-red:hover   { border-color: rgba(242,109,109,0.28); background: rgba(242,109,109,0.05); }
+.topic-item.t-blue  { border-color: rgba(74,158,255,0.12); }
+.topic-item.t-blue:hover  { border-color: rgba(74,158,255,0.28);  background: var(--blue-glow); }
+
+.topic-icon { font-size: 1.15rem; flex-shrink: 0; }
+.topic-body { flex: 1; }
+.topic-title { font-size: 0.85rem; font-weight: 600; color: var(--white); }
+.topic-sub   { font-size: 0.73rem; color: var(--subtle); margin-top: 0.1rem; }
+
+/* ══════════════════════════════════════════
+   CONTACT CARD — identical pattern to Impressum
+══════════════════════════════════════════ */
+.contact-card {
+  background: linear-gradient(145deg, #0e1318, #131920);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: var(--radius); padding: 0; overflow: hidden;
+  transition: border-color 0.28s, box-shadow 0.28s;
+}
+.contact-card:hover {
+  border-color: rgba(201,168,76,0.4);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.45);
+}
+.contact-card-header {
+  padding: 1.4rem 1.5rem 1.1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; gap: 0.85rem;
+}
+.contact-avatar {
+  width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.2), rgba(0,196,167,0.1));
+  border: 2px solid rgba(201,168,76,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: 1.2rem;
+  font-weight: 700; color: var(--gold);
+}
+.contact-name-block { flex: 1; }
+.contact-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem; font-weight: 700; color: var(--white);
+  margin-bottom: 0.15rem;
+}
+.contact-role {
+  font-size: 0.78rem; color: var(--subtle);
+  font-family: var(--font-mono); letter-spacing: 0.04em;
+}
+.contact-body { padding: 1.25rem 1.5rem; display: grid; gap: 0.85rem; }
+.contact-row { display: flex; align-items: flex-start; gap: 0.75rem; }
+.contact-row-icon {
+  width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+}
+.contact-row-content { flex: 1; }
+.contact-row-label {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--subtle); font-weight: 700; margin-bottom: 0.2rem;
+  font-family: var(--font-mono);
+}
+.contact-row-value { font-size: 0.92rem; color: var(--muted); line-height: 1.5; }
+.contact-row-value a { color: var(--teal); text-decoration: none; }
+.contact-row-value a:hover { color: var(--gold); }
+.contact-note {
+  padding: 0.85rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; gap: 0.6rem;
+  font-size: 0.8rem; color: var(--subtle);
+}
+.response-indicator {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green); flex-shrink: 0;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{ opacity:1; } 50%{ opacity:0.4; } }
+
+/* ── BACK LINK ── */
+.page-back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.83rem; color: var(--subtle);
+  text-decoration: none; transition: color 0.2s; font-weight: 500;
+}
+.page-back:hover { color: var(--gold); }
+
+/* ── DIVIDER ── */
+.legal-divider {
+  grid-column: 1 / -1;
+  height: 1px; background: rgba(255,255,255,0.05);
+  margin: 0.25rem 0;
+}
+
+/* ── RELATED PAGES LINKS ── */
+.related-link {
+  display: flex; align-items: center; gap: 0.7rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px; text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.related-link:hover { background: rgba(255,255,255,0.04); }
+.related-link-icon { font-size: 1.1rem; }
+.related-link-title { font-size: 0.88rem; font-weight: 600; color: var(--white); }
+.related-link-sub   { font-size: 0.75rem; color: var(--subtle); margin-top: 0.05rem; }
+
+/* ══════════════════════════════════════════
+   GLOBAL FOOTER
+══════════════════════════════════════════ */
+.global-footer {
+  background: var(--bg);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 2.5rem 1.5rem;
+  margin-top: 1rem;
+}
+.global-footer .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+.footer-disclaimer { font-size: 0.82rem; color: var(--subtle); }
+.footer-disclaimer strong { color: rgba(201,168,76,0.55); }
+.footer-legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.1rem; }
+.footer-legal-links a {
+  font-size: 0.8rem; color: var(--subtle); text-decoration: none;
+  padding: 0.25rem 0.6rem; border-radius: 6px; transition: color 0.2s;
+}
+.footer-legal-links a:hover { color: var(--gold); }
+.footer-disclosure {
+  font-size: 0.78rem; color: var(--subtle); opacity: 0.75;
+  max-width: 680px; margin: 0 auto; line-height: 1.65;
+}
+.footer-disclosure strong { color: rgba(201,168,76,0.5); }
+.footer-copy { font-size: 0.78rem; color: var(--subtle); opacity: 0.55; }
+.footer-copy a { color: inherit; text-decoration: none; }
+
+/* ══════════════════════════════════════════
+   COOKIE BANNER — premium floating
+══════════════════════════════════════════ */
+#cookie-banner {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  width: min(560px, calc(100vw - 2rem));
+  background: rgba(12,14,18,0.97);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.06);
+  padding: 1.4rem 1.5rem;
+  z-index: 10000;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(.17,.67,.35,1), opacity 0.38s ease;
+  overflow: hidden;
+}
+#cookie-banner::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--teal), var(--gold), var(--teal));
+}
+#cookie-banner.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+#cookie-banner > p {
+  font-size: 0.85rem; color: #9a9a9a; line-height: 1.6; margin-bottom: 1rem;
+}
+#cookie-banner > p a { color: var(--teal); text-decoration: none; }
+#cookie-banner > p a:hover { color: var(--gold); }
+
+.cookie-btns { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.cookie-accept {
+  flex: 1; min-width: 110px;
+  background: linear-gradient(135deg, #7a5e28, var(--gold));
+  color: #080c10; font-weight: 700; font-size: 0.84rem;
+  padding: 0.65rem 1.1rem; border-radius: 8px; border: none;
+  cursor: pointer; font-family: var(--font-body); letter-spacing: 0.04em;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.cookie-accept:hover { opacity: 0.87; transform: translateY(-1px); }
+.cookie-decline {
+  flex: 1; min-width: 100px;
+  background: transparent; border: 1px solid rgba(255,255,255,0.12);
+  color: #888; font-size: 0.84rem; padding: 0.65rem 1rem;
+  border-radius: 8px; cursor: pointer;
+  transition: border-color 0.2s, color 0.2s; font-family: var(--font-body);
+}
+.cookie-decline:hover { border-color: rgba(255,255,255,0.28); color: #f0f0f0; }
+.cookie-settings-btn {
+  background: transparent; border: none; color: #555;
+  font-size: 0.78rem; cursor: pointer; padding: 0.5rem;
+  transition: color 0.2s; font-family: var(--font-body);
+  text-decoration: underline; text-decoration-color: transparent;
+}
+.cookie-settings-btn:hover { color: var(--gold); text-decoration-color: rgba(201,168,76,0.45); }
+
+/* ── COOKIE MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.78);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  z-index: 10001;
+  align-items: center; justify-content: center; padding: 1.5rem;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: #111318;
+  border: 1px solid rgba(201,168,76,0.22);
+  border-radius: 18px; padding: 2rem;
+  width: min(440px, 100%);
+  position: relative; overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+.modal::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--teal));
+}
+.modal h2 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--gold-light); margin: 0 0 0.4rem;
+}
+.modal > p { font-size: 0.82rem; color: #666; margin-bottom: 1.35rem; line-height: 1.6; }
+.modal-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  color: #555; width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.82rem; transition: border-color 0.2s, color 0.2s;
+}
+.modal-close:hover { border-color: rgba(201,168,76,0.4); color: var(--gold); }
+
+.cookie-toggle-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); gap: 1rem;
+}
+.cookie-toggle-row:last-of-type { border-bottom: none; }
+.cookie-toggle-info { display: flex; flex-direction: column; gap: 0.15rem; }
+.cookie-toggle-info strong { font-size: 0.88rem; color: #e8e8e8; font-weight: 600; }
+.cookie-toggle-info span   { font-size: 0.76rem; color: #555; }
+.toggle-switch { position: relative; display: inline-block; width: 42px; height: 24px; flex-shrink: 0; }
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+.toggle-slider { position: absolute; cursor: pointer; inset: 0; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; transition: background 0.2s; }
+.toggle-slider:before { content: ''; position: absolute; height: 16px; width: 16px; left: 3px; bottom: 3px; background: #555; border-radius: 50%; transition: transform 0.2s, background 0.2s; }
+.toggle-switch input:checked + .toggle-slider { background: rgba(0,196,167,0.15); border-color: rgba(0,196,167,0.4); }
+.toggle-switch input:checked + .toggle-slider:before { transform: translateX(18px); background: var(--teal); }
+.toggle-switch input:disabled + .toggle-slider { opacity: 0.5; cursor: not-allowed; }
+
+.cookie-save-btn {
+  width: 100%; margin-top: 1.4rem;
+  background: linear-gradient(135deg, #7a5e28, var(--gold));
+  color: #080c10; font-weight: 700; font-size: 0.88rem; padding: 0.8rem;
+  border-radius: 8px; border: none; cursor: pointer;
+  transition: opacity 0.2s; font-family: var(--font-body); letter-spacing: 0.04em;
+}
+.cookie-save-btn:hover { opacity: 0.87; }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column; position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: rgba(8,12,16,0.98); border-bottom: 1px solid rgba(201,168,76,0.12);
+    padding: 1rem 1.5rem; gap: 0.15rem;
+  }
+  .nav-toggle { display: block; }
+  .legal-hero { padding: 2.5rem 1.25rem 2rem; }
+  .legal-hero-inner { gap: 1.25rem; }
+  .legal-hero-icon { width: 52px; height: 52px; font-size: 1.4rem; }
+  .legal-grid { padding: 2rem 1.25rem; }
+  #cookie-banner { bottom: 0; border-radius: 16px 16px 0 0; }
+  .cookie-btns { flex-direction: column; }
+  .cookie-accept, .cookie-decline { width: 100%; }
+}
+@media (max-width: 420px) {
+  .legal-hero-title { font-size: 1.75rem; }
+  .values-subgrid { grid-template-columns: 1fr; }
+  .topics-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ GLOBAL HEADER ══ -->
+<header class="global-header">
+  <div class="header-inner">
+    <div class="logo"><a href="/">ExpatScore.de</a></div>
+    <button class="nav-toggle"
+            onclick="this.closest('header').querySelector('.nav-links').classList.toggle('open')"
+            aria-label="Navigation öffnen">☰</button>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/banking">Bankkonten</a>
+      <a href="/konto-ohne-anmeldung">Online-Ident</a>
+      <a href="/guides/schufa-guide">SCHUFA Guide</a>
+      <a href="/insurance/">Versicherungen</a>
+      <a href="/about" aria-current="page">Über uns</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── ANNOUNCEMENT BARS ── -->
+<div class="werbung-bar" role="note">
+  <strong>⚑ Werbung / Anzeige:</strong>
+  Diese Seite enthält Affiliate-Links. Wenn du über unseren Link ein Konto eröffnest,
+  erhalten wir eine Provision — für dich entstehen keine Mehrkosten.
+</div>
+<div class="urgency-strip">
+  <strong>2026:</strong> Immer mehr Vermieter und Unternehmen nutzen digitale Bonitätsprüfungen — nicht nur beim Vertragsabschluss.
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<div class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-hero-icon">🧭</div>
+    <div class="legal-hero-text">
+      <span class="legal-hero-eyebrow">Unser Antrieb · Unsere Werte · Seit 2024</span>
+      <h1 class="legal-hero-title">Über ExpatScore.de</h1>
+      <p class="legal-hero-sub">
+        Wir helfen Expats, den Kreislauf von <strong>„Keine SCHUFA, keine Wohnung"</strong>
+        zu durchbrechen — mit unabhängiger Recherche, klarer Sprache und ehrlicher Transparenz.
+      </p>
+      <div class="legal-hero-meta">
+        <div class="legal-meta-pill"><span class="dot dot-green"></span>Unabhängige Recherche</div>
+        <div class="legal-meta-pill"><span class="dot dot-gold"></span>DSGVO-konform</div>
+        <div class="legal-meta-pill"><span class="dot dot-teal"></span>Kein Finanzberater</div>
+        <div class="legal-meta-pill"><span class="dot dot-white"></span>Seit 2024</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── BREADCRUMBS ── -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="/">Home</a> › <span class="current">Über uns</span>
+</nav>
+
+<!-- ══ MAIN CONTENT GRID ══ -->
+<div class="legal-grid">
+
+  <!-- BACK LINK -->
+  <div class="legal-col-full" style="padding-bottom: 0.25rem;">
+    <a href="/" class="page-back">← Zurück zur Startseite</a>
+  </div>
+
+  <!-- ══ ROW 1: OUR STORY ══ -->
+  <div class="legal-col-full">
+    <div class="section-label">Die Geschichte dahinter</div>
+  </div>
+
+  <div class="legal-col-full">
+    <div class="story-card">
+      <div class="story-card-body">
+        <p class="story-intro-text">
+          ExpatScore.de wurde aus einer <strong>persönlichen Notwendigkeit</strong> heraus gegründet.
+          Nach einer Wohnungsabsage trotz festem Job und regelmäßigem Einkommen wurde klar:
+          Das deutsche SCHUFA-System ist für Expats eine Blackbox. Wir machen sie transparent.
+        </p>
+        <p class="story-intro-text" style="margin-top:1rem;">
+          Heute unterstützen wir viele Expats dabei, ihre Bonität in Deutschland besser zu verstehen.
+          Unsere Inhalte basieren auf intensiven Recherchen, öffentlich zugänglichen Informationen
+          und persönlichen Erfahrungen — ohne Schnörkel, ohne Fachchinesisch.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ROW 2: FOUNDER QUOTE ══ -->
+  <div class="legal-col-full">
+    <div class="section-label">Gründerperspektive</div>
+  </div>
+
+  <div class="legal-col-full">
+    <div class="quote-card">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">
+        Ich hatte keine negativen Einträge, aber mein Score war unerwartet niedrig.
+        Das motivierte mich, die Mechanismen dahinter zu verstehen — und dieses Wissen
+        so aufzubereiten, dass andere Expats davon profitieren können.
+      </p>
+      <div class="quote-attribution">
+        <div class="quote-avatar">YC</div>
+        <div>
+          <div class="quote-author-name">Yassine Chaikhi</div>
+          <div class="quote-author-role">Gründer &amp; Inhaber · ExpatScore.de</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ROW 3: VALUES ══ -->
+  <div class="legal-col-full" style="margin-top: 0.5rem;">
+    <div class="section-label">Unsere Grundsätze</div>
+  </div>
+
+  <div class="legal-col-full">
+    <div class="values-subgrid">
+
+      <div class="value-card vc-blue">
+        <div class="card-icon icon-blue">🔍</div>
+        <div class="card-subtitle">Principle 01</div>
+        <h3>Genauigkeit</h3>
+        <p>Wir prüfen Fakten anhand offizieller Quellen und juristischer Texte. Keine Spekulation, keine Klickköder.</p>
+      </div>
+
+      <div class="value-card vc-green">
+        <div class="card-icon icon-green">💬</div>
+        <div class="card-subtitle">Principle 02</div>
+        <h3>Klarheit</h3>
+        <p>Komplexe Themen werden verständlich erklärt – ohne Fachchinesisch, ohne unnötige Umwege.</p>
+      </div>
+
+      <div class="value-card vc-gold">
+        <div class="card-icon icon-gold">🤝</div>
+        <div class="card-subtitle">Principle 03</div>
+        <h3>Transparenz</h3>
+        <p>Wir kennzeichnen Werbung deutlich und erklären offen, wie wir finanziert werden. Keine versteckten Interessen.</p>
+      </div>
+
+      <div class="value-card vc-red">
+        <div class="card-icon icon-red">🔒</div>
+        <div class="card-subtitle">Principle 04</div>
+        <h3>Datenschutz</h3>
+        <p>Deine Daten bleiben bei dir. Wir erheben nur das Nötigste und behandeln es nach DSGVO-Standard.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ ROW 4: TOPICS ══ -->
+  <div class="legal-col-full" style="margin-top: 0.5rem;">
+    <div class="section-label">Unsere Themen</div>
+  </div>
+
+  <div class="legal-col-full">
+    <div class="legal-card" style="height: auto;">
+      <div class="card-icon icon-gray">📚</div>
+      <div class="card-subtitle">Content Coverage</div>
+      <div class="card-title">Was wir abdecken</div>
+      <div class="topics-grid" style="margin-top: 1rem;">
+
+        <div class="topic-item t-gold">
+          <div class="topic-icon">📊</div>
+          <div class="topic-body">
+            <div class="topic-title">SCHUFA verstehen</div>
+            <div class="topic-sub">Score, Einträge, Selbstauskunft</div>
+          </div>
+        </div>
+
+        <div class="topic-item t-teal">
+          <div class="topic-icon">🏦</div>
+          <div class="topic-body">
+            <div class="topic-title">Bankkonten für Expats</div>
+            <div class="topic-sub">Ohne SCHUFA, Online-Ident</div>
+          </div>
+        </div>
+
+        <div class="topic-item t-red">
+          <div class="topic-icon">📈</div>
+          <div class="topic-body">
+            <div class="topic-title">Kreditaufbau</div>
+            <div class="topic-sub">Bonität aktiv verbessern</div>
+          </div>
+        </div>
+
+        <div class="topic-item t-blue">
+          <div class="topic-icon">🏠</div>
+          <div class="topic-body">
+            <div class="topic-title">Wohnungssuche</div>
+            <div class="topic-sub">Tipps für Expats ohne Historie</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ROW 5: CONTACT ══ -->
+  <div class="legal-col-full" style="margin-top: 0.5rem;">
+    <div class="section-label">Kontakt</div>
+  </div>
+
+  <div class="legal-col-full">
+    <div class="contact-card">
+      <div class="contact-card-header">
+        <div class="contact-avatar">YC</div>
+        <div class="contact-name-block">
+          <div class="contact-name">Yassine Chaikhi</div>
+          <div class="contact-role">Gründer &amp; Inhaber · ExpatScore.de</div>
+        </div>
+      </div>
+      <div class="contact-body">
+        <div class="contact-row">
+          <div class="contact-row-icon">✉️</div>
+          <div class="contact-row-content">
+            <div class="contact-row-label">E-Mail</div>
+            <div class="contact-row-value">
+              <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">🌐</div>
+          <div class="contact-row-content">
+            <div class="contact-row-label">Website</div>
+            <div class="contact-row-value">
+              <a href="https://expatscore.de" target="_blank" rel="noopener">expatscore.de</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">💬</div>
+          <div class="contact-row-content">
+            <div class="contact-row-label">Sprachen</div>
+            <div class="contact-row-value">Deutsch &amp; Englisch willkommen</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-note">
+        <div class="response-indicator"></div>
+        Antwortzeit in der Regel innerhalb von 48 Stunden
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ROW 6: RELATED LEGAL PAGES ══ -->
+  <div class="legal-col-full legal-divider"></div>
+
+  <div class="legal-col-full">
+    <div class="section-label">Weitere Seiten</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.6rem;">
+
+      <a href="/impressum" class="related-link"
+         onmouseover="this.style.borderColor='rgba(201,168,76,0.3)';this.style.background='rgba(201,168,76,0.04)'"
+         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.025)'">
+        <span class="related-link-icon">⚖️</span>
+        <div>
+          <div class="related-link-title">Impressum</div>
+          <div class="related-link-sub">§ 5 DDG · Rechtliche Angaben</div>
+        </div>
+      </a>
+
+      <a href="/datenschutz" class="related-link"
+         onmouseover="this.style.borderColor='rgba(0,196,167,0.3)';this.style.background='rgba(0,196,167,0.04)'"
+         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.025)'">
+        <span class="related-link-icon">🔒</span>
+        <div>
+          <div class="related-link-title">Datenschutzerklärung</div>
+          <div class="related-link-sub">DSGVO · Cookies · Hosting</div>
+        </div>
+      </a>
+
+      <a href="/affiliate-hinweis" class="related-link"
+         onmouseover="this.style.borderColor='rgba(74,158,255,0.3)';this.style.background='rgba(74,158,255,0.04)'"
+         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.025)'">
+        <span class="related-link-icon">⚑</span>
+        <div>
+          <div class="related-link-title">Affiliate-Hinweis</div>
+          <div class="related-link-sub">Transparenz · Partner</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</div><!-- /legal-grid -->
+
+<!-- ══ GLOBAL FOOTER ══ -->
+<footer class="global-footer">
+  <div class="inner">
+    <div class="footer-disclaimer">
+      <strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr
+    </div>
+    <nav class="footer-legal-links">
+      <a href="/about">Über uns</a>
+      <a href="/banking">Bankkonten</a>
+      <a href="/guides/schufa-guide">SCHUFA Guide</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutzerklärung</a>
+      <a href="/affiliate-hinweis">Affiliate-Hinweis</a>
+      <a href="#" onclick="openModal('cookie-settings'); return false;">Cookie-Einstellungen</a>
+    </nav>
+    <div class="footer-disclosure">
+      <strong>⚑ Affiliate-Hinweis (Werbung):</strong>
+      Diese Seite enthält Partnerlinks (Affiliate-Links), die als „Anzeige" oder „Werbung"
+      gekennzeichnet sind. Wenn du über einen dieser Links ein Konto eröffnest oder ein Produkt
+      nutzt, erhalten wir eine Provision vom Anbieter. Für dich entstehen dabei keine zusätzlichen
+      Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
+    </div>
+    <p class="footer-copy">
+      © 2026 Yassine Chaikhi · ExpatScore.de · Alle Angaben ohne Gewähr ·
+      Kein Ersatz für individuelle Rechts- oder Finanzberatung. ·
+      <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ══ COOKIE BANNER ══ -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+  <p>
+    Diese Seite verwendet technisch notwendige Cookies sowie — bei Zustimmung —
+    Analyse-Cookies zur Verbesserung des Angebots. Mehr Infos in unserer
+    <a href="/datenschutz">Datenschutzerklärung</a>.
+  </p>
+  <div class="cookie-btns">
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
+    <button class="cookie-decline"      onclick="declineCookies()">Nur notwendige</button>
+    <button class="cookie-accept"       onclick="acceptCookies()">Alle akzeptieren</button>
+  </div>
+</div>
+
+<!-- ══ COOKIE SETTINGS MODAL ══ -->
+<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">✕</button>
+    <h2>Cookie-Einstellungen</h2>
+    <p>Hier kannst du genau festlegen, welche Cookies du zulässt. Technisch notwendige Cookies können nicht deaktiviert werden.</p>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info">
+        <strong>Technisch notwendig</strong>
+        <span>Session-Verwaltung, Cookie-Einwilligungsspeicherung. Immer aktiv.</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" checked disabled>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info">
+        <strong>Analyse &amp; Statistik</strong>
+        <span>Pseudonymisierte Nutzungsdaten.</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle-analytics">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info">
+        <strong>Affiliate-Tracking</strong>
+        <span>Nur nach Zustimmung.</span>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle-affiliate">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
+  </div>
+</div>
+
+<!-- ══ SCRIPTS ══ -->
+<script>
+/* ── Cookie logic ── */
+(function initCookies() {
+  if (!localStorage.getItem('cookieConsent')) {
+    setTimeout(function () {
+      var b = document.getElementById('cookie-banner');
+      if (b) b.classList.add('visible');
+    }, 650);
+  }
+})();
+
+function openModal(id)  { var m = document.getElementById('modal-' + id); if (m) m.classList.add('open'); }
+function closeModal(id) { var m = document.getElementById('modal-' + id); if (m) m.classList.remove('open'); }
+function hideBanner()   { var b = document.getElementById('cookie-banner'); if (b) b.classList.remove('visible'); }
+
+function acceptCookies()  { localStorage.setItem('cookieConsent', 'all');       hideBanner(); closeModal('cookie-settings'); }
+function declineCookies() { localStorage.setItem('cookieConsent', 'necessary'); hideBanner(); closeModal('cookie-settings'); }
+function saveGranularCookies() {
+  var a  = document.getElementById('toggle-analytics');
+  var af = document.getElementById('toggle-affiliate');
+  localStorage.setItem('cookieConsent', JSON.stringify({
+    analytics: a  ? a.checked  : false,
+    affiliate: af ? af.checked : false
+  }));
+  hideBanner(); closeModal('cookie-settings');
+}
+
+/* ── Modal: close on overlay click ── */
+document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) overlay.classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
