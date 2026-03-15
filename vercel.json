@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/versicherung", "destination": "/insurance", "permanent": true },
+    { "source": "/konto-ohne-anmeldung", "destination": "/banking/konto-ohne-anmeldung", "permanent": true }
+  ]
 }
