@@ -1,91 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOMEPAGE — Priority 1.0 -->
+  <!-- HOMEPAGE -->
   <url>
-    <loc>https://expatscore.de/</loc>
+    <loc>https://www.expatscore.de/</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- TOOLS — Priority 0.9 -->
+  <!-- CATEGORY HUBS -->
   <url>
-    <loc>https://expatscore.de/schufa-simulator.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- CATEGORY HUBS — Priority 0.8 -->
-  <url>
-    <loc>https://expatscore.de/banking.html</loc>
+    <loc>https://www.expatscore.de/banking.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://expatscore.de/insurance.html</loc>
+    <loc>https://www.expatscore.de/insurance.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- PILLAR ARTICLES — Priority 0.7 -->
+  <!-- GUIDES -->
   <url>
-    <loc>https://expatscore.de/blocked-account-germany.html</loc>
+    <loc>https://www.expatscore.de/guides/schufa-guide.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://expatscore.de/n26-bank-erfahrungen.html</loc>
+    <loc>https://www.expatscore.de/guides/anmeldung-germany.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://expatscore.de/tk-health-insurance.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://expatscore.de/konto-ohne-anmeldung.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://expatscore.de/was-deinen-score-langfristig-aufbaut-problematisch.html</loc>
-    <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.85</priority>
   </url>
 
-  <!-- ABOUT & EDITORIAL — Priority 0.6 -->
   <url>
-    <loc>https://expatscore.de/about.html</loc>
+    <loc>https://www.expatscore.de/guides/steuer-id-guide.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- LEGAL PAGES — Priority 0.3 -->
+  <!-- BANKING ARTICLES -->
   <url>
-    <loc>https://expatscore.de/impressum.html</loc>
+    <loc>https://www.expatscore.de/konto-ohne-anmeldung.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.expatscore.de/banking/n26-bank-erfahrungen.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.expatscore.de/banking/blocked-account-germany.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- INSURANCE ARTICLES -->
+  <url>
+    <loc>https://www.expatscore.de/insurance/tk-health-insurance.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- TOOLS -->
+  <url>
+    <loc>https://www.expatscore.de/schufa-simulator.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- INFO / LEGAL -->
+  <url>
+    <loc>https://www.expatscore.de/about.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.expatscore.de/impressum.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://expatscore.de/datenschutz.html</loc>
+    <loc>https://www.expatscore.de/datenschutz.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://expatscore.de/affiliate-hinweis.html</loc>
+    <loc>https://www.expatscore.de/affiliate-hinweis.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

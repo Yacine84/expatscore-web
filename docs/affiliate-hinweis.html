@@ -3,915 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Affiliate-Hinweis & Transparenz · ExpatScore.de</title>
-  <meta name="description" content="Wie ExpatScore.de durch Affiliate-Partnerschaften finanziert wird — vollständige Transparenz über alle Partner, Kennzeichnungspflichten nach UWG §5a und unsere redaktionelle Unabhängigkeit.">
+  <title>Affiliate-Hinweis & Werbekennzeichnung · ExpatScore.de</title>
+  <meta name="description" content="Transparente Offenlegung unserer Affiliate-Partnerschaften. Wie ExpatScore.de finanziert wird und wie wir redaktionelle Unabhängigkeit sicherstellen.">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Yassine Chaikhi">
-  <link rel="canonical" href="https://expatscore.de/affiliate-hinweis">
+  <link rel="canonical" href="https://expatscore.de/affiliate-hinweis.html">
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-  <meta name="theme-color" content="#080c10">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Global CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <style>
-    /* ══════════════════════════════════════
-       AFFILIATE-HINWEIS — TRANSPARENCY PORTAL
-    ══════════════════════════════════════ */
-
-    /* ── HERO ── */
-    .aff-hero {
-      background: linear-gradient(180deg, #0e1318 0%, #080c10 100%);
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-      padding: 3.5rem 1.5rem 2.5rem;
-      position: relative; overflow: hidden;
-    }
-    .aff-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
-      background-size: 48px 48px;
-      pointer-events: none;
-    }
-    .aff-hero-inner {
-      position: relative; z-index: 1;
-      max-width: 900px; margin: 0 auto;
-      display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap;
-    }
-    .aff-hero-icon {
-      width: 64px; height: 64px; border-radius: 14px; flex-shrink: 0;
-      background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.22);
-      display: flex; align-items: center; justify-content: center; font-size: 1.75rem;
-    }
-    .aff-hero-text { flex: 1; min-width: 200px; }
-    .aff-hero-eyebrow {
-      font-family: 'DM Mono', monospace; font-size: 0.72rem;
-      text-transform: uppercase; letter-spacing: 0.14em;
-      color: #c9a84c; margin-bottom: 0.6rem; display: block;
-    }
-    .aff-hero-title {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 700;
-      color: #e4c97a; line-height: 1.15; margin-bottom: 0.5rem;
-    }
-    .aff-hero-sub {
-      font-size: 0.92rem; color: #5c6b7a; line-height: 1.7; max-width: 560px;
-    }
-    .aff-hero-meta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
-    .aff-meta-pill {
-      display: flex; align-items: center; gap: 0.4rem;
-      font-size: 0.76rem; font-weight: 600; color: #5c6b7a;
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 20px; padding: 0.3rem 0.85rem;
-    }
-    .amp-dot { width: 6px; height: 6px; border-radius: 50%; }
-    .d-gold  { background: #c9a84c; }
-    .d-teal  { background: #00c4a7; }
-    .d-green { background: #3ecf8e; }
-
-    /* ── LAYOUT ── */
-    .aff-body {
-      max-width: 900px; margin: 0 auto;
-      padding: 2.5rem 1.5rem 4rem;
-    }
-
-    /* ── SECTION HEADERS ── */
-    .aff-section { margin-bottom: 3rem; }
-    .aff-section-header {
-      display: flex; align-items: center; gap: 1rem;
-      margin-bottom: 1.5rem; padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .aff-icon {
-      width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
-    }
-    .ai-gold  { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.18); }
-    .ai-teal  { background: rgba(0,196,167,0.08);  border: 1px solid rgba(0,196,167,0.18); }
-    .ai-green { background: rgba(62,207,142,0.08); border: 1px solid rgba(62,207,142,0.18); }
-    .ai-blue  { background: rgba(74,158,255,0.08); border: 1px solid rgba(74,158,255,0.18); }
-    .ai-gray  { background: rgba(255,255,255,0.04);border: 1px solid rgba(255,255,255,0.09); }
-
-    .aff-section-label { flex: 1; }
-    .aff-section-eyebrow {
-      font-family: 'DM Mono', monospace; font-size: 0.68rem;
-      text-transform: uppercase; letter-spacing: 0.12em; color: #5c6b7a; margin-bottom: 0.2rem;
-    }
-    .aff-section-title {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.5rem; font-weight: 700; color: #e8edf3;
-    }
-
-    .aff-para {
-      font-size: 0.9rem; color: #8b949e; line-height: 1.8; margin-bottom: 1rem;
-    }
-    .aff-para a { color: #00c4a7; text-decoration: none; }
-    .aff-para a:hover { color: #c9a84c; }
-    .aff-para strong { color: #c9a84c; font-weight: 600; }
-
-    /* ── PLEDGE CARD ── */
-    .pledge-card {
-      background: linear-gradient(135deg, rgba(0,196,167,0.06), rgba(201,168,76,0.04));
-      border: 1px solid rgba(0,196,167,0.2);
-      border-radius: 14px; padding: 1.75rem;
-      position: relative; overflow: hidden; margin-bottom: 1.5rem;
-    }
-    .pledge-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, #00c4a7, #c9a84c);
-    }
-    .pledge-header {
-      display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem;
-    }
-    .pledge-icon {
-      width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
-      background: rgba(0,196,167,0.12); border: 2px solid rgba(0,196,167,0.25);
-      display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
-    }
-    .pledge-title {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.25rem; font-weight: 700; color: #e8edf3;
-    }
-    .pledge-sub { font-size: 0.78rem; color: #5c6b7a; margin-top: 0.15rem; }
-    .pledge-items { display: grid; gap: 0.5rem; }
-    .pledge-item {
-      display: flex; align-items: flex-start; gap: 0.7rem;
-      background: rgba(255,255,255,0.025); border-radius: 8px;
-      padding: 0.7rem 0.9rem;
-    }
-    .pledge-check { color: #00c4a7; font-weight: 700; flex-shrink: 0; font-size: 0.85rem; margin-top: 0.1rem; }
-    .pledge-text  { font-size: 0.87rem; color: #a8b3bf; line-height: 1.6; }
-    .pledge-text strong { color: #e8edf3; }
-
-    /* ── HOW IT WORKS FLOW ── */
-    .how-flow {
-      display: grid; gap: 0;
-      background: #131920; border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 14px; overflow: hidden; margin-bottom: 1.5rem;
-    }
-    .how-flow-header {
-      padding: 1rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);
-      font-family: 'DM Mono', monospace; font-size: 0.7rem; text-transform: uppercase;
-      letter-spacing: 0.12em; color: #5c6b7a; font-weight: 700;
-    }
-    .how-step {
-      display: flex; align-items: flex-start; gap: 1rem;
-      padding: 1.1rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);
-      position: relative;
-    }
-    .how-step:last-child { border-bottom: none; }
-    .how-num {
-      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 700;
-    }
-    .hn-gold { background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.25); color: #c9a84c; }
-    .hn-teal { background: rgba(0,196,167,0.1);   border: 1px solid rgba(0,196,167,0.2);   color: #00c4a7; }
-    .hn-green{ background: rgba(62,207,142,0.1);  border: 1px solid rgba(62,207,142,0.2);  color: #3ecf8e; }
-    .hn-gray { background: rgba(255,255,255,0.05);border: 1px solid rgba(255,255,255,0.1); color: #8b949e; }
-    .how-content { flex: 1; }
-    .how-step-title { font-size: 0.9rem; font-weight: 700; color: #e8edf3; margin-bottom: 0.2rem; }
-    .how-step-desc  { font-size: 0.82rem; color: #5c6b7a; line-height: 1.6; }
-    .how-connector {
-      position: absolute; left: 2.15rem; bottom: -0.6rem;
-      width: 1px; height: 0.6rem; background: rgba(255,255,255,0.06); z-index: 1;
-    }
-
-    /* ── PARTNER CARDS ── */
-    .partner-grid { display: grid; gap: 0.75rem; margin-top: 0.5rem; }
-    .partner-card {
-      background: #131920; border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 12px; overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .partner-card:hover { border-color: rgba(201,168,76,0.25); transform: translateY(-1px); }
-    .partner-card-header {
-      display: flex; align-items: center; gap: 1rem;
-      padding: 1.1rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .partner-logo {
-      width: 48px; height: 48px; border-radius: 10px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 700;
-      color: #a8b3bf; text-align: center; line-height: 1.2;
-    }
-    .pl-fintiba   { background: rgba(62,207,142,0.08);  border: 1px solid rgba(62,207,142,0.18); color: #3ecf8e; }
-    .pl-expatrio  { background: rgba(0,196,167,0.08);   border: 1px solid rgba(0,196,167,0.18);  color: #00c4a7; }
-    .pl-n26       { background: rgba(74,158,255,0.08);  border: 1px solid rgba(74,158,255,0.18); color: #4a9eff; }
-    .pl-bonify    { background: rgba(201,168,76,0.08);  border: 1px solid rgba(201,168,76,0.18); color: #c9a84c; }
-    .pl-mschufa   { background: rgba(245,158,11,0.08);  border: 1px solid rgba(245,158,11,0.18); color: #f59e0b; }
-    .pl-fincheck  { background: rgba(242,109,109,0.08); border: 1px solid rgba(242,109,109,0.18);color: #f26d6d; }
-
-    .partner-info { flex: 1; }
-    .partner-name { font-size: 1rem; font-weight: 700; color: #e8edf3; margin-bottom: 0.15rem; }
-    .partner-url  { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: #5c6b7a; }
-    .partner-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-    .partner-badge {
-      font-size: 0.68rem; font-weight: 800; text-transform: uppercase;
-      letter-spacing: 0.08em; padding: 0.2rem 0.6rem; border-radius: 20px;
-    }
-    .pb-banking    { background: rgba(74,158,255,0.1); color: #4a9eff; border: 1px solid rgba(74,158,255,0.2); }
-    .pb-insurance  { background: rgba(62,207,142,0.1); color: #3ecf8e; border: 1px solid rgba(62,207,142,0.2); }
-    .pb-credit     { background: rgba(201,168,76,0.1); color: #c9a84c; border: 1px solid rgba(201,168,76,0.2); }
-    .pb-student    { background: rgba(0,196,167,0.1);  color: #00c4a7; border: 1px solid rgba(0,196,167,0.2); }
-    .pb-schufa     { background: rgba(245,158,11,0.1); color: #f59e0b; border: 1px solid rgba(245,158,11,0.2); }
-
-    .partner-card-body { padding: 1rem 1.25rem; }
-    .partner-desc { font-size: 0.85rem; color: #5c6b7a; line-height: 1.65; margin-bottom: 0.75rem; }
-    .partner-meta {
-      display: flex; gap: 0.5rem; flex-wrap: wrap;
-    }
-    .partner-meta-item {
-      font-size: 0.75rem; color: #5c6b7a; font-family: 'DM Mono', monospace;
-      display: flex; align-items: center; gap: 0.35rem;
-    }
-    .partner-meta-item::before { content: '·'; }
-    .partner-meta-item:first-child::before { content: ''; }
-
-    /* ── MARKING SYSTEM ── */
-    .marking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 0.75rem 0; }
-    @media (max-width: 520px) { .marking-grid { grid-template-columns: 1fr; } }
-    .marking-item {
-      background: #131920; border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 10px; padding: 1rem 1.1rem;
-      display: flex; align-items: center; gap: 0.75rem;
-    }
-    .marking-symbol {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.35rem;
-      font-weight: 700; color: #c9a84c; flex-shrink: 0; width: 28px; text-align: center;
-    }
-    .marking-label { flex: 1; }
-    .marking-name  { font-size: 0.87rem; font-weight: 700; color: #e8edf3; margin-bottom: 0.15rem; }
-    .marking-desc  { font-size: 0.77rem; color: #5c6b7a; line-height: 1.5; }
-
-    /* ── COMPLIANCE STRIP ── */
-    .compliance-strip {
-      background: rgba(255,255,255,0.025);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 12px; padding: 1.25rem 1.5rem;
-      display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-    .compliance-strip-icon { font-size: 1.5rem; flex-shrink: 0; }
-    .compliance-strip-body { flex: 1; min-width: 200px; }
-    .compliance-strip-title { font-size: 0.9rem; font-weight: 700; color: #e8edf3; margin-bottom: 0.2rem; }
-    .compliance-strip-desc  { font-size: 0.82rem; color: #5c6b7a; line-height: 1.6; }
-    .compliance-laws { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
-    .law-tag {
-      font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 700;
-      padding: 0.2rem 0.6rem; border-radius: 20px;
-      background: rgba(74,158,255,0.08); color: #4a9eff; border: 1px solid rgba(74,158,255,0.18);
-    }
-
-    /* ── Q&A BLOCKS ── */
-    .qa-grid { display: grid; gap: 0.75rem; }
-    .qa-item {
-      background: #131920; border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 12px; overflow: hidden;
-    }
-    .qa-q {
-      padding: 1rem 1.25rem; font-size: 0.95rem; font-weight: 700;
-      color: #e8edf3; display: flex; align-items: flex-start; gap: 0.75rem;
-    }
-    .qa-q-icon {
-      width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
-      background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'DM Mono', monospace; font-size: 0.68rem; color: #c9a84c; font-weight: 700;
-    }
-    .qa-a {
-      padding: 0 1.25rem 1.1rem 3.2rem;
-      font-size: 0.87rem; color: #8b949e; line-height: 1.75;
-    }
-    .qa-a strong { color: #c9a84c; }
-    .qa-a a { color: #00c4a7; text-decoration: none; }
-    .qa-a a:hover { color: #c9a84c; }
-
-    /* ── CONTACT CTA ── */
-    .contact-block {
-      background: linear-gradient(135deg, rgba(201,168,76,0.06), rgba(0,196,167,0.04));
-      border: 1px solid rgba(201,168,76,0.18); border-radius: 12px;
-      padding: 1.5rem; margin-top: 2.5rem;
-      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
-    }
-    .contact-block-icon { font-size: 1.5rem; }
-    .contact-block-body { flex: 1; }
-    .contact-block-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: #e8edf3; font-weight: 700; margin-bottom: 0.25rem; }
-    .contact-block-sub   { font-size: 0.83rem; color: #5c6b7a; }
-    .contact-block-btn {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.65rem 1.35rem; border-radius: 20px; font-size: 0.83rem; font-weight: 700;
-      background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
-      color: #c9a84c; text-decoration: none; transition: all 0.2s;
-    }
-    .contact-block-btn:hover { background: rgba(201,168,76,0.2); }
-
-    /* ── DIVIDER ── */
-    .aff-divider { height: 1px; background: rgba(255,255,255,0.05); margin: 2.5rem 0; }
-
-    /* ── BACK LINK ── */
-    .page-back {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-size: 0.83rem; color: #5c6b7a; text-decoration: none;
-      transition: color 0.2s; font-weight: 500; margin-bottom: 0.5rem;
-    }
-    .page-back:hover { color: #c9a84c; }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Affiliate-Hinweis",
+    "url": "https://expatscore.de/affiliate-hinweis.html",
+    "isPartOf": { "@type": "WebSite", "url": "https://expatscore.de/" },
+    "inLanguage": "de"
+  }
+  </script>
 </head>
 <body>
 
-<!-- GLOBAL HEADER -->
-<header class="global-header">
-  <div class="header-inner">
-    <div class="logo"><a href="/">ExpatScore.de</a></div>
-    <button class="nav-toggle"
-            onclick="this.closest('header').querySelector('.nav-links').classList.toggle('open')"
-            aria-label="Navigation öffnen">☰</button>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/banking">Bankkonten</a>
-      <a href="/konto-ohne-anmeldung">Online-Ident</a>
-      <a href="/guides/schufa-guide">SCHUFA Guide</a>
-      <a href="/insurance/">Versicherungen</a>
-      <a href="/impressum">Impressum</a>
-    </nav>
-  </div>
-</header>
+  <header class="global-header" id="globalHeader">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="ExpatScore Home">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">Expat<span class="logo-accent">Score</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="/banking.html" class="nav-link">Banking</a>
+        <a href="/insurance.html" class="nav-link">Insurance</a>
+        <a href="/schufa-simulator.html" class="nav-link">SCHUFA Tool</a>
+        <a href="/about.html" class="nav-link">Über uns</a>
+      </nav>
+      <a href="/schufa-simulator.html" class="cta-btn cta-primary header-cta">Score prüfen</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">☰</button>
+    </div>
+  </header>
 
-<!-- HERO -->
-<div class="aff-hero">
-  <div class="aff-hero-inner">
-    <div class="aff-hero-icon">⚑</div>
-    <div class="aff-hero-text">
-      <span class="aff-hero-eyebrow">Transparenz · Werbung · UWG §5a</span>
-      <h1 class="aff-hero-title">Affiliate-Hinweis &<br>Transparenzbericht</h1>
-      <p class="aff-hero-sub">
-        Wir verdienen Geld durch Partnerlinks — aber nie auf Kosten unserer Unabhängigkeit.
-        Diese Seite erklärt genau wie, mit wem und unter welchen Regeln.
+  <section class="hero-article">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Affiliate-Hinweis</span>
+      </nav>
+      <span class="section-eyebrow">Transparenz</span>
+      <h1 class="hero-h1">Affiliate-Hinweis &amp; Werbekennzeichnung</h1>
+      <p class="hero-sub" style="max-width:600px;color:var(--text-secondary);margin-top:0.75rem;">
+        Wir legen offen, wie ExpatScore.de finanziert wird — und warum das keinen Einfluss auf unsere Empfehlungen hat.
       </p>
-      <div class="aff-hero-meta">
-        <div class="aff-meta-pill"><span class="amp-dot d-gold"></span>UWG §5a konform</div>
-        <div class="aff-meta-pill"><span class="amp-dot d-teal"></span>6 aktive Partner</div>
-        <div class="aff-meta-pill"><span class="amp-dot d-green"></span>Redaktionell unabhängig</div>
+    </div>
+  </section>
+
+  <article class="legal-content">
+    <div class="legal-inner">
+      <div class="legal-body">
+
+        <!-- The Key Statement — prominent -->
+        <div class="affiliate-statement">
+          <div class="affiliate-statement-icon">⚖️</div>
+          <div>
+            <strong>Unsere Grundhaltung</strong>
+            <p>ExpatScore.de verdient Geld durch Affiliate-Provisionen. Diese Tatsache beeinflusst unsere Empfehlungen <em>nicht</em>. Wir schreiben nur über Produkte, von denen wir überzeugt sind, dass sie für Expats sinnvoll sind — unabhängig davon, ob wir dafür eine Vergütung erhalten oder nicht.</p>
+          </div>
+        </div>
+
+        <section id="was-ist-affiliate">
+          <h2>Was ist Affiliate-Marketing?</h2>
+          <p>Wenn Sie auf bestimmte Links auf ExpatScore.de klicken und anschließend ein Produkt kaufen, ein Konto eröffnen oder sich für eine Dienstleistung registrieren, erhalten wir vom jeweiligen Anbieter eine Vermittlungsprovision. Diese Provision wird vom Anbieter gezahlt — <strong>Sie zahlen dadurch keinen Cent mehr</strong> als beim Direktbesuch der Anbieter-Website.</p>
+          <p>Affiliate-Marketing ist das Standard-Geschäftsmodell unabhängiger Finanzvergleichs- und Ratgeberportale. Es ermöglicht uns, Inhalte kostenlos bereitzustellen, ohne Abonnementgebühren zu erheben.</p>
+        </section>
+
+        <section id="kennzeichnung">
+          <h2>Wie kennzeichnen wir Affiliate-Links?</h2>
+          <p>Wir kennzeichnen Affiliate-Links und gesponserte Inhalte transparent. Folgende Hinweise finden Sie auf unserer Website:</p>
+          <div class="affiliate-labels-grid">
+            <div class="affiliate-label-item">
+              <span class="aff-badge">Werbung</span>
+              <p>Kennzeichnet bezahlte Kooperationen oder gesponserte Inhalte.</p>
+            </div>
+            <div class="affiliate-label-item">
+              <span class="aff-badge aff-badge-partner">Partnerlink</span>
+              <p>Kennzeichnet Links, über die wir eine Provision erhalten können.</p>
+            </div>
+            <div class="affiliate-label-item">
+              <span class="aff-badge aff-badge-info">Anzeige</span>
+              <p>Kennzeichnet Anzeigen oder werbliche Inhalte gemäß §7 UWG.</p>
+            </div>
+          </div>
+          <p>Unsere Artikelseiten enthalten am Ende oder in der Sidebar einen Hinweis, wenn Affiliate-Links enthalten sind. Vergleichstabellen mit Partnerlinks sind ebenfalls entsprechend markiert.</p>
+        </section>
+
+        <section id="partner">
+          <h2>Unsere Affiliate-Netzwerke &amp; Partner</h2>
+          <p>ExpatScore.de arbeitet mit folgenden Affiliate-Netzwerken und Programmen zusammen:</p>
+          <div class="partner-grid">
+            <div class="partner-item">
+              <div class="partner-logo">ADCELL</div>
+              <p>Affiliate-Netzwerk für Finanzprodukte, Konten und Versicherungen</p>
+            </div>
+            <div class="partner-item">
+              <div class="partner-logo">Direktprogramme</div>
+              <p>Einzelne Anbieter mit eigenen Partnerprogrammen (z. B. Neobanken)</p>
+            </div>
+          </div>
+          <p>Über diese Netzwerke können wir Produkte von Anbietern wie N26, Vivid Money, bunq, DKB, Fintiba, Expatrio, Techniker Krankenkasse und anderen verlinken. Die vollständige Liste unserer aktiven Partner wird bei Bedarf auf Anfrage offengelegt.</p>
+        </section>
+
+        <section id="editorial">
+          <h2>Unsere redaktionelle Unabhängigkeit</h2>
+          <p>Wir verpflichten uns zu folgenden Grundsätzen:</p>
+          <div class="editorial-principles">
+            <div class="principle-item">
+              <span class="principle-num">01</span>
+              <div>
+                <strong>Kein Pay-to-Play</strong>
+                <p>Anbieter können sich keine positive Bewertung erkaufen. Wir listen Produkte nur dann als empfehlenswert, wenn sie objektiv für Expats geeignet sind.</p>
+              </div>
+            </div>
+            <div class="principle-item">
+              <span class="principle-num">02</span>
+              <div>
+                <strong>Transparente Methodik</strong>
+                <p>Unsere Vergleiche basieren auf öffentlich zugänglichen Produktinformationen, eigener Recherche und — wo möglich — Nutzererfahrungen.</p>
+              </div>
+            </div>
+            <div class="principle-item">
+              <span class="principle-num">03</span>
+              <div>
+                <strong>Nachteile werden genannt</strong>
+                <p>Wir benennen Einschränkungen, Kosten und Nachteile von Produkten, auch wenn wir eine Provision für deren Empfehlung erhalten könnten.</p>
+              </div>
+            </div>
+            <div class="principle-item">
+              <span class="principle-num">04</span>
+              <div>
+                <strong>Kostenlose Alternativen</strong>
+                <p>Wenn es eine kostenlose oder bessere Alternative gibt, nennen wir sie — unabhängig davon, ob sie unser Partner ist.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="rechtliches">
+          <h2>Rechtliche Grundlage</h2>
+          <p>Diese Werbekennzeichnung erfolgt gemäß:</p>
+          <ul>
+            <li>§7 Abs. 1 des Gesetzes gegen den unlauteren Wettbewerb (UWG)</li>
+            <li>§6 Abs. 1 Nr. 1 des Telemediengesetzes (TMG)</li>
+            <li>Art. 6 der EU-Richtlinie 2005/29/EG über unlautere Geschäftspraktiken</li>
+            <li>Den Richtlinien der Landesmedienanstalten zur Kennzeichnung von Werbung</li>
+          </ul>
+          <p>ExpatScore.de ist ein unabhängiges redaktionelles Angebot und kein reguliertes Finanzinstitut. Die Inhalte dieser Website stellen keine Anlage-, Steuer- oder Rechtsberatung dar. Produktentscheidungen sollten stets auf Basis Ihrer persönlichen Situation und ggf. in Rücksprache mit einem zugelassenen Berater getroffen werden.</p>
+        </section>
+
+        <section id="kontakt-affiliate">
+          <h2>Fragen &amp; Kooperationsanfragen</h2>
+          <p>Wenn Sie Fragen zu unseren Affiliate-Beziehungen haben, als Anbieter eine Zusammenarbeit anfragen möchten oder einen Hinweis auf eine fehlende Kennzeichnung geben möchten, kontaktieren Sie uns:</p>
+          <div class="legal-address-box">
+            <strong>ExpatScore.de — Kooperationen & Transparenz</strong><br>
+            Yassine Chaikhi<br>
+            E-Mail: <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a><br>
+            Betreff: "Affiliate-Anfrage" oder "Transparenzhinweis"
+          </div>
+        </section>
+
       </div>
     </div>
-  </div>
-</div>
+  </article>
 
-<!-- BREADCRUMBS -->
-<nav class="breadcrumbs" aria-label="Breadcrumb"
-     style="max-width:900px; margin:0 auto; padding:0.75rem 1.5rem 0;">
-  <a href="/">Home</a> › <span class="current">Affiliate-Hinweis</span>
-</nav>
-
-<!-- MAIN CONTENT -->
-<div class="aff-body">
-
-  <a href="/" class="page-back">← Zurück zur Startseite</a>
-
-  <!-- ══════════════════════════════════
-       UNSERE VERPFLICHTUNG (PLEDGE)
-  ══════════════════════════════════ -->
-  <div class="aff-section" style="margin-top:1rem;">
-    <div class="pledge-card">
-      <div class="pledge-header">
-        <div class="pledge-icon">🤝</div>
-        <div>
-          <div class="pledge-title">Unsere Verpflichtung zur Unabhängigkeit</div>
-          <div class="pledge-sub">Gültig für alle Inhalte auf ExpatScore.de</div>
-        </div>
+  <footer class="global-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo"><span class="logo-icon">◈</span> Expat<span class="logo-accent">Score</span></a>
+        <p class="footer-tagline">Die #1 Finanzplattform für Expats in Deutschland.</p>
       </div>
-      <div class="pledge-items">
-        <div class="pledge-item">
-          <div class="pledge-check">✓</div>
-          <div class="pledge-text"><strong>Redaktionelle Unabhängigkeit:</strong> Bewertungen, Testergebnisse und Empfehlungen entstehen ohne Einfluss durch Partner. Kein Anbieter kann eine positive Berichterstattung kaufen.</div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">Legal</div>
+          <a href="/impressum.html">Impressum</a>
+          <a href="/datenschutz.html">Datenschutz</a>
+          <a href="/affiliate-hinweis.html">Affiliate-Hinweis</a>
         </div>
-        <div class="pledge-item">
-          <div class="pledge-check">✓</div>
-          <div class="pledge-text"><strong>Ehrliche Kritik:</strong> Wir benennen Nachteile von Partnerprodukten explizit — wie bei N26 (10 € Kartengebühr, 2× ATM-Limit) oder TK (Zusatzbeitrag gestiegen auf 2,69 %).</div>
-        </div>
-        <div class="pledge-item">
-          <div class="pledge-check">✓</div>
-          <div class="pledge-text"><strong>Keine versteckten Links:</strong> Jeder Affiliate-Link ist mit „⚑ Anzeige" gekennzeichnet — auch innerhalb von Artikeln und Vergleichstabellen.</div>
-        </div>
-        <div class="pledge-item">
-          <div class="pledge-check">✓</div>
-          <div class="pledge-text"><strong>Provision ≠ Platzierung:</strong> Die Reihenfolge von Anbietern in unseren Vergleichen richtet sich nach Nutzernutzen, nicht nach Provisionshöhe.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="aff-divider"></div>
-
-  <!-- ══════════════════════════════════
-       WIE AFFILIATE FUNKTIONIERT
-  ══════════════════════════════════ -->
-  <div class="aff-section">
-    <div class="aff-section-header">
-      <div class="aff-icon ai-gold">🔗</div>
-      <div class="aff-section-label">
-        <div class="aff-section-eyebrow">Mechanismus</div>
-        <div class="aff-section-title">Wie Affiliate-Links funktionieren</div>
-      </div>
-    </div>
-
-    <p class="aff-para">
-      Affiliate-Links sind spezielle Links mit einer eingebetteten Partnerkennung.
-      Wenn du über einen solchen Link ein Konto eröffnest oder ein Produkt nutzt,
-      erkennt der Anbieter, dass du über ExpatScore.de gekommen bist — und zahlt uns eine Provision.
-      <strong>Dein Preis bleibt identisch.</strong> Es entstehen keine Mehrkosten.
-    </p>
-
-    <div class="how-flow">
-      <div class="how-flow-header">Schritt-für-Schritt: Was passiert beim Klick</div>
-
-      <div class="how-step">
-        <div class="how-num hn-gold">1</div>
-        <div class="how-content">
-          <div class="how-step-title">Du klickst auf einen gekennzeichneten Partnerlink</div>
-          <div class="how-step-desc">Der Link ist mit „⚑ Anzeige" markiert. Dein Browser wird zur Website des Anbieters weitergeleitet.</div>
-        </div>
-        <div class="how-connector"></div>
-      </div>
-
-      <div class="how-step">
-        <div class="how-num hn-gold">2</div>
-        <div class="how-content">
-          <div class="how-step-title">Ein Tracking-Cookie wird gesetzt (nur mit Zustimmung)</div>
-          <div class="how-step-desc">Das Affiliate-Netzwerk (z.B. Adcell) setzt ein Cookie, das deinen Besuch der Anbieter-Website dem ExpatScore.de-Partnerlink zuordnet. Kein Name, keine E-Mail — nur eine anonyme Kennung.</div>
-        </div>
-        <div class="how-connector"></div>
-      </div>
-
-      <div class="how-step">
-        <div class="how-num hn-teal">3</div>
-        <div class="how-content">
-          <div class="how-step-title">Du entscheidest frei — ohne Zeitdruck</div>
-          <div class="how-step-desc">Du kannst das Angebot prüfen, vergleichen oder ablehnen. Es entsteht keinerlei Verpflichtung. Das Cookie läuft nach 30–90 Tagen ab.</div>
-        </div>
-        <div class="how-connector"></div>
-      </div>
-
-      <div class="how-step">
-        <div class="how-num hn-green">4</div>
-        <div class="how-content">
-          <div class="how-step-title">Bei Abschluss: Provision für ExpatScore.de</div>
-          <div class="how-step-desc">Wenn du ein Konto eröffnest, erhalten wir eine einmalige Provision vom Anbieter. <strong>Kein Unterschied für dich</strong> — gleiche Konditionen, gleicher Preis.</div>
-        </div>
-      </div>
-    </div>
-
-    <p class="aff-para">
-      Du kannst Affiliate-Tracking jederzeit über unsere
-      <a href="/datenschutz">Datenschutzerklärung</a> oder das Cookie-Banner widerrufen.
-      Alle anderen Inhalte auf ExpatScore.de bleiben uneingeschränkt zugänglich.
-    </p>
-  </div>
-
-  <div class="aff-divider"></div>
-
-  <!-- ══════════════════════════════════
-       PARTNER DIRECTORY
-  ══════════════════════════════════ -->
-  <div class="aff-section">
-    <div class="aff-section-header">
-      <div class="aff-icon ai-teal">🏢</div>
-      <div class="aff-section-label">
-        <div class="aff-section-eyebrow">Vollständige Liste · Stand März 2026</div>
-        <div class="aff-section-title">Unsere Affiliate-Partner</div>
-      </div>
-    </div>
-
-    <p class="aff-para">
-      Wir empfehlen nur Anbieter, die wir selbst getestet haben oder von denen wir durch
-      Community-Feedback und eigene Recherche überzeugt sind. Hier sind alle aktiven Partnerschaften:
-    </p>
-
-    <div class="partner-grid">
-
-      <!-- FINTIBA -->
-      <div class="partner-card">
-        <div class="partner-card-header">
-          <div class="partner-logo pl-fintiba">FIN<br>TIBA</div>
-          <div class="partner-info">
-            <div class="partner-name">Fintiba GmbH</div>
-            <div class="partner-url">fintiba.com</div>
-          </div>
-          <div class="partner-badges">
-            <span class="partner-badge pb-student">Student</span>
-            <span class="partner-badge pb-banking">Banking</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <div class="partner-desc">Blocked Account (Sperrkonto) für internationale Studentenvisa nach Deutschland. Gegründet 2016, Frankfurt. Nutzt die Frankfurt International Bank (BaFin) — <strong>deutsches Einlagenschutzsystem bis €100.000</strong>. Setup-Gebühr: €89.</div>
-          <div class="partner-meta">
-            <span class="partner-meta-item">Tracking via eigenes Partnerprogramm</span>
-            <span class="partner-meta-item">Keine Personaldaten an ExpatScore.de</span>
-            <span class="partner-meta-item">Cookie-Laufzeit: 30 Tage</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- EXPATRIO -->
-      <div class="partner-card">
-        <div class="partner-card-header">
-          <div class="partner-logo pl-expatrio">EXP<br>ATRIO</div>
-          <div class="partner-info">
-            <div class="partner-name">Expatrio GmbH</div>
-            <div class="partner-url">expatrio.com</div>
-          </div>
-          <div class="partner-badges">
-            <span class="partner-badge pb-student">Student</span>
-            <span class="partner-badge pb-insurance">Insurance</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <div class="partner-desc">Blocked Account + optionale Reiseversicherung und Krankenversicherungspaket für internationale Studierende. Gegründet 2017, Berlin. Setup-Gebühr: €49. Günstigste aktive Option in 2026.</div>
-          <div class="partner-meta">
-            <span class="partner-meta-item">Tracking via Adcell (Firstlead GmbH)</span>
-            <span class="partner-meta-item">Keine Personaldaten an ExpatScore.de</span>
-            <span class="partner-meta-item">Cookie-Laufzeit: 30 Tage</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- N26 -->
-      <div class="partner-card">
-        <div class="partner-card-header">
-          <div class="partner-logo pl-n26">N26</div>
-          <div class="partner-info">
-            <div class="partner-name">N26 Bank AG</div>
-            <div class="partner-url">n26.com</div>
-          </div>
-          <div class="partner-badges">
-            <span class="partner-badge pb-banking">Banking</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <div class="partner-desc">Neobank mit BaFin-Lizenz und deutschem IBAN. Englische App, VideoIdent-Kontoeröffnung. Meldet positiv an SCHUFA — Kernempfehlung für neue Expats. Standard-Konto kostenlos; physische Karte einmalig €10.</div>
-          <div class="partner-meta">
-            <span class="partner-meta-item">Tracking via Adcell / Partnerlink</span>
-            <span class="partner-meta-item">Keine Kontodaten an ExpatScore.de</span>
-            <span class="partner-meta-item">Cookie-Laufzeit: 30 Tage</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- BONIFY -->
-      <div class="partner-card">
-        <div class="partner-card-header">
-          <div class="partner-logo pl-bonify">BON<br>IFY</div>
-          <div class="partner-info">
-            <div class="partner-name">Bonify (Schufa-App)</div>
-            <div class="partner-url">bonify.de</div>
-          </div>
-          <div class="partner-badges">
-            <span class="partner-badge pb-schufa">SCHUFA</span>
-            <span class="partner-badge pb-credit">Kredit</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <div class="partner-desc">Kostenlose App zur täglichen SCHUFA-Score-Überwachung — empfohlen im SCHUFA Guide als Monitoring-Tool zwischen den jährlichen kostenlosen Datenkopien. Keine Mindestvertragslaufzeit.</div>
-          <div class="partner-meta">
-            <span class="partner-meta-item">Tracking via Partnerprogramm</span>
-            <span class="partner-meta-item">Kein SCHUFA-Score-Daten-Transfer</span>
-            <span class="partner-meta-item">Cookie-Laufzeit: 45 Tage</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- MEINESCHUFA -->
-      <div class="partner-card">
-        <div class="partner-card-header">
-          <div class="partner-logo pl-mschufa">MEINE<br>SCHUFA</div>
-          <div class="partner-info">
-            <div class="partner-name">meineSCHUFA</div>
-            <div class="partner-url">meineschufa.de</div>
-          </div>
-          <div class="partner-badges">
-            <span class="partner-badge pb-schufa">SCHUFA</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <div class="partner-desc">Offizielles SCHUFA-Portal für kostenpflichtige Bonitätsauskünfte (für Vermieter und Arbeitgeber). Hinweis: Die <strong>kostenlose</strong> Datenkopie nach Art. 15 DSGVO ist ebenfalls dort erhältlich — ohne Affiliate-Tracking.</div>
-          <div class="partner-meta">
-            <span class="partner-meta-item">Tracking nur für kostenpflichtige Produkte</span>
-            <span class="partner-meta-item">Cookie-Laufzeit: 30 Tage</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- FINANZCHECK -->
-      <div class="partner-card">
-        <div class="partner-card-header">
-          <div class="partner-logo pl-fincheck">FINANZ<br>CHECK</div>
-          <div class="partner-info">
-            <div class="partner-name">Finanzcheck.de</div>
-            <div class="partner-url">finanzcheck.de</div>
-          </div>
-          <div class="partner-badges">
-            <span class="partner-badge pb-credit">Kredit</span>
-          </div>
-        </div>
-        <div class="partner-card-body">
-          <div class="partner-desc">Kreditvergleichsportal für Verbraucherkredite in Deutschland. Nur für Expats relevant, die nach 12+ Monaten stabiler SCHUFA-Geschichte einen Kredit suchen. Konditionsanfrage ohne Score-Einfluss.</div>
-          <div class="partner-meta">
-            <span class="partner-meta-item">Tracking via Adcell</span>
-            <span class="partner-meta-item">Keine Kreditdaten an ExpatScore.de</span>
-            <span class="partner-meta-item">Cookie-Laufzeit: 30 Tage</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="aff-divider"></div>
-
-  <!-- ══════════════════════════════════
-       KENNZEICHNUNG
-  ══════════════════════════════════ -->
-  <div class="aff-section">
-    <div class="aff-section-header">
-      <div class="aff-icon ai-gold">🏷️</div>
-      <div class="aff-section-label">
-        <div class="aff-section-eyebrow">Pflichten nach UWG §5a Abs. 4</div>
-        <div class="aff-section-title">So kennzeichnen wir Werbung</div>
-      </div>
-    </div>
-
-    <p class="aff-para">
-      Werbung muss nach deutschem Recht klar und eindeutig erkennbar sein, bevor der Nutzer
-      mit ihr interagiert. Wir verwenden folgende Kennzeichnungen auf ExpatScore.de:
-    </p>
-
-    <div class="marking-grid">
-      <div class="marking-item">
-        <div class="marking-symbol">⚑</div>
-        <div class="marking-label">
-          <div class="marking-name">⚑ Anzeige / ⚑ Werbung</div>
-          <div class="marking-desc">Direkt am Link oder im Einleitungsband des Artikels. Standard-Kennzeichnung für alle Partnerlinks.</div>
-        </div>
-      </div>
-      <div class="marking-item">
-        <div class="marking-symbol" style="font-size:0.75rem; font-family:'DM Mono',monospace; color:#c9a84c;">AD</div>
-        <div class="marking-label">
-          <div class="marking-name">Anzeige-Label am CTA-Button</div>
-          <div class="marking-desc">Kleine Badge neben Affiliate-Buttons in Artikeln — sichtbar ohne Mouseover.</div>
-        </div>
-      </div>
-      <div class="marking-item">
-        <div class="marking-symbol" style="font-size:1rem;">📢</div>
-        <div class="marking-label">
-          <div class="marking-name">Werbung-Bar (auf Inhaltsseiten)</div>
-          <div class="marking-desc">Goldener Hinweisbalken oben auf allen Artikelseiten mit Affiliate-Links.</div>
-        </div>
-      </div>
-      <div class="marking-item">
-        <div class="marking-symbol" style="font-size:1rem;">📋</div>
-        <div class="marking-label">
-          <div class="marking-name">Footer-Disclosure (sitewide)</div>
-          <div class="marking-desc">Affiliate-Hinweis im Footer jeder Seite — auch auf Seiten ohne spezifische Links.</div>
+        <div class="footer-col">
+          <div class="footer-col-title">Tools</div>
+          <a href="/schufa-simulator.html">SCHUFA Simulator</a>
+          <a href="/blocked-account-germany.html">Blocked Account</a>
         </div>
       </div>
     </div>
-
-    <div class="compliance-strip">
-      <div class="compliance-strip-icon">✅</div>
-      <div class="compliance-strip-body">
-        <div class="compliance-strip-title">Gesetzliche Grundlagen unserer Kennzeichnungspflicht</div>
-        <div class="compliance-strip-desc">Alle Affiliate-Inhalte sind in Übereinstimmung mit folgenden Regelwerken gekennzeichnet:</div>
-        <div class="compliance-laws">
-          <span class="law-tag">UWG §5a Abs. 4</span>
-          <span class="law-tag">DSGVO Art. 6 lit. a</span>
-          <span class="law-tag">TMG §6</span>
-          <span class="law-tag">RStV §58</span>
-          <span class="law-tag">MStV §22</span>
-        </div>
-      </div>
+    <div class="footer-bottom">
+      <p>© 2026 Yassine Chaikhi · ExpatScore.de · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
     </div>
-  </div>
+  </footer>
 
-  <div class="aff-divider"></div>
-
-  <!-- ══════════════════════════════════
-       Q&A
-  ══════════════════════════════════ -->
-  <div class="aff-section">
-    <div class="aff-section-header">
-      <div class="aff-icon ai-blue">❓</div>
-      <div class="aff-section-label">
-        <div class="aff-section-eyebrow">Häufige Fragen</div>
-        <div class="aff-section-title">Was du wissen solltest</div>
-      </div>
-    </div>
-
-    <div class="qa-grid">
-
-      <div class="qa-item">
-        <div class="qa-q">
-          <div class="qa-q-icon">Q</div>
-          Beeinflussen Partnerprovisionen unsere Testberichte oder Rankings?
-        </div>
-        <div class="qa-a">
-          <strong>Nein — und das ist unser wichtigstes Versprechen.</strong> Unsere Bewertungen (wie der N26-Test oder der TK-Vergleich) entstehen auf Basis eigener Recherche, Community-Feedback und öffentlicher Daten. Ein Anbieter mit Partnerprogramm kann eine schlechte Bewertung erhalten — und ein Anbieter ohne Partnerprogramm kann unsere Top-Empfehlung sein. Die Partnerschaft folgt der Empfehlung, nie umgekehrt.
-        </div>
-      </div>
-
-      <div class="qa-item">
-        <div class="qa-q">
-          <div class="qa-q-icon">Q</div>
-          Zahle ich mehr, wenn ich über einen Partnerlink kaufe?
-        </div>
-        <div class="qa-a">
-          <strong>Niemals.</strong> Du erhältst exakt dieselben Konditionen, die du auch direkt beim Anbieter bekommen würdest. Die Provision wird vom Anbieter aus dessen Marketingbudget bezahlt — nicht von dir. Einige Anbieter bieten über Partnerprogramme sogar <strong>exklusive Konditionen</strong> (z.B. längere Testphasen), die direkt nicht verfügbar sind.
-        </div>
-      </div>
-
-      <div class="qa-item">
-        <div class="qa-q">
-          <div class="qa-q-icon">Q</div>
-          Wie kann ich Affiliate-Tracking deaktivieren?
-        </div>
-        <div class="qa-a">
-          Über unser <a href="#" onclick="openModal('cookie-settings'); return false;">Cookie-Einstellungs-Panel</a> kannst du Affiliate-Tracking jederzeit deaktivieren — ohne andere Funktionen der Website zu verlieren. Alternativ: Öffne unsere <a href="/datenschutz">Datenschutzerklärung</a> und klicke auf „Einstellungen öffnen". Die Deaktivierung gilt sofort für zukünftige Besuche.
-        </div>
-      </div>
-
-      <div class="qa-item">
-        <div class="qa-q">
-          <div class="qa-q-icon">Q</div>
-          Warum empfehlt ihr Expatrio und Fintiba, obwohl ihr Coracle nicht mehr listet?
-        </div>
-        <div class="qa-a">
-          Coracle hat im August 2025 die Annahme neuer Anträge für Blocked Accounts ausgesetzt. Wir haben Coracle sofort aus unseren Empfehlungen entfernt — obwohl das einen Verlust an Partnerprovision bedeutet. <strong>Nutzerschutz steht vor Einnahmen.</strong> Sobald Coracle wieder aktiv ist und wir die Qualität verifizieren können, werden wir das Angebot erneut bewerten.
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════
-       CONTACT CTA
-  ══════════════════════════════════ -->
-  <div class="contact-block">
-    <div class="contact-block-icon">✉️</div>
-    <div class="contact-block-body">
-      <div class="contact-block-title">Fragen oder Feedback zu unseren Partnerschaften?</div>
-      <div class="contact-block-sub">Wir antworten in der Regel innerhalb von 48 Stunden · Deutsch und Englisch willkommen</div>
-    </div>
-    <a href="mailto:kontakt@expatscore.de?subject=Affiliate-Anfrage%20ExpatScore.de"
-       class="contact-block-btn">Schreib uns →</a>
-  </div>
-
-  <!-- Related legal links -->
-  <div style="margin-top:2rem;">
-    <div style="font-family:'DM Mono',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.14em; color:#5c6b7a; margin-bottom:0.85rem;">Weitere rechtliche Dokumente</div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:0.6rem;">
-      <a href="/datenschutz"
-         style="display:flex;align-items:center;gap:0.7rem;padding:0.85rem 1.1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
-         onmouseover="this.style.borderColor='rgba(0,196,167,0.3)';this.style.background='rgba(0,196,167,0.04)'"
-         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.025)'">
-        <span style="font-size:1.1rem;">🔒</span>
-        <div>
-          <div style="font-size:0.88rem;font-weight:600;color:#e8edf3;">Datenschutzerklärung</div>
-          <div style="font-size:0.75rem;color:#5c6b7a;">DSGVO · Cookies · Ihre Rechte</div>
-        </div>
-      </a>
-      <a href="/impressum"
-         style="display:flex;align-items:center;gap:0.7rem;padding:0.85rem 1.1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
-         onmouseover="this.style.borderColor='rgba(201,168,76,0.3)';this.style.background='rgba(201,168,76,0.04)'"
-         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.025)'">
-        <span style="font-size:1.1rem;">⚖️</span>
-        <div>
-          <div style="font-size:0.88rem;font-weight:600;color:#e8edf3;">Impressum</div>
-          <div style="font-size:0.75rem;color:#5c6b7a;">§ 5 DDG · Anbieter</div>
-        </div>
-      </a>
-      <a href="/about"
-         style="display:flex;align-items:center;gap:0.7rem;padding:0.85rem 1.1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
-         onmouseover="this.style.borderColor='rgba(74,158,255,0.3)';this.style.background='rgba(74,158,255,0.04)'"
-         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.025)'">
-        <span style="font-size:1.1rem;">🧭</span>
-        <div>
-          <div style="font-size:0.88rem;font-weight:600;color:#e8edf3;">Über ExpatScore.de</div>
-          <div style="font-size:0.75rem;color:#5c6b7a;">Mission · Grundsätze</div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-</div><!-- /aff-body -->
-
-<!-- GLOBAL FOOTER -->
-<footer class="global-footer">
-  <div class="inner">
-    <div class="footer-disclaimer">
-      <strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr
-    </div>
-    <nav class="footer-legal-links">
-      <a href="/about">Über uns</a>
-      <a href="/banking">Bankkonten</a>
-      <a href="/guides/schufa-guide">SCHUFA Guide</a>
-      <a href="/impressum">Impressum</a>
-      <a href="/datenschutz">Datenschutzerklärung</a>
-      <a href="/affiliate-hinweis">Affiliate-Hinweis</a>
-      <a href="#" onclick="openModal('cookie-settings'); return false;">Cookie-Einstellungen</a>
-    </nav>
-    <div class="footer-disclosure">
-      <strong>⚑ Affiliate-Hinweis:</strong>
-      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Produkt nutzt,
-      erhalten wir eine Provision — für dich entstehen keine zusätzlichen Kosten.
-    </div>
-    <p class="footer-copy">
-      © 2026 Yassine Chaikhi · ExpatScore.de · Alle Angaben ohne Gewähr ·
-      <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a>
-    </p>
-  </div>
-</footer>
-
-<!-- JavaScript -->
-<script src="/assets/js/script.js"></script>
-
-<!-- COOKIE BANNER -->
-<div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
-  <p>Diese Seite verwendet Cookies. Mehr Infos in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</p>
-  <div class="cookie-btns">
-    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
-    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
-    <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
-  </div>
-</div>
-
-<!-- COOKIE SETTINGS MODAL -->
-<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">✕</button>
-    <h2>Cookie-Einstellungen</h2>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.6;">
-      Technisch notwendige Cookies können nicht deaktiviert werden.
-    </p>
-    <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info">
-        <strong>Technisch notwendig</strong>
-        <span>Einwilligungsspeicherung. Immer aktiv.</span>
-      </div>
-      <label class="toggle-switch">
-        <input type="checkbox" checked disabled>
-        <span class="toggle-slider"></span>
-      </label>
-    </div>
-    <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info">
-        <strong>Analyse &amp; Statistik</strong>
-        <span>Pseudonymisierte Nutzungsdaten.</span>
-      </div>
-      <label class="toggle-switch">
-        <input type="checkbox" id="toggle-analytics">
-        <span class="toggle-slider"></span>
-      </label>
-    </div>
-    <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info">
-        <strong>Affiliate-Tracking</strong>
-        <span>Nur nach Zustimmung.</span>
-      </div>
-      <label class="toggle-switch">
-        <input type="checkbox" id="toggle-affiliate">
-        <span class="toggle-slider"></span>
-      </label>
-    </div>
-    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
-  </div>
-</div>
-
-<script>
-function openModal(id)  { const m=document.getElementById('modal-'+id); if(m) m.classList.add('open'); }
-function closeModal(id) { const m=document.getElementById('modal-'+id); if(m) m.classList.remove('open'); }
-function acceptCookies()  { localStorage.setItem('cookieConsent','all');       document.getElementById('cookie-banner').style.display='none'; closeModal('cookie-settings'); }
-function declineCookies() { localStorage.setItem('cookieConsent','necessary'); document.getElementById('cookie-banner').style.display='none'; closeModal('cookie-settings'); }
-function saveGranularCookies() {
-  const a=document.getElementById('toggle-analytics')?.checked;
-  const af=document.getElementById('toggle-affiliate')?.checked;
-  localStorage.setItem('cookieConsent',JSON.stringify({analytics:a,affiliate:af}));
-  document.getElementById('cookie-banner').style.display='none';
-  closeModal('cookie-settings');
-}
-(function(){ if(localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display='none'; })();
-</script>
-
+  <script src="/script.js"></script>
+  <style>
+    .affiliate-statement{display:flex;gap:1.25rem;padding:1.5rem;background:rgba(0,196,167,0.06);border:1px solid rgba(0,196,167,0.2);border-radius:var(--radius-md);margin-bottom:2.5rem;}
+    .affiliate-statement-icon{font-size:2rem;flex-shrink:0;}
+    .affiliate-statement strong{font-size:1rem;color:var(--text-primary);display:block;margin-bottom:0.5rem;}
+    .affiliate-statement p{font-size:0.92rem;color:var(--text-secondary);margin:0;line-height:1.6;}
+    .affiliate-labels-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.25rem 0;}
+    .affiliate-label-item{padding:1rem;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-sm);}
+    .affiliate-label-item p{font-size:0.8rem;color:var(--text-muted);margin:0.5rem 0 0;line-height:1.5;}
+    .aff-badge{display:inline-block;font-size:0.72rem;font-family:var(--font-mono);padding:0.2rem 0.6rem;border-radius:4px;background:rgba(201,168,76,0.12);color:var(--gold);border:1px solid var(--gold-border);letter-spacing:0.06em;}
+    .aff-badge.aff-badge-partner{background:rgba(0,196,167,0.1);color:var(--teal);border-color:rgba(0,196,167,0.2);}
+    .aff-badge.aff-badge-info{background:rgba(96,165,250,0.1);color:#60a5fa;border-color:rgba(96,165,250,0.2);}
+    .partner-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.25rem 0;}
+    .partner-item{padding:1.25rem;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-sm);}
+    .partner-logo{font-family:var(--font-mono);font-size:0.85rem;font-weight:600;color:var(--gold);margin-bottom:0.5rem;}
+    .partner-item p{font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;}
+    .editorial-principles{display:flex;flex-direction:column;gap:0.85rem;margin:1.25rem 0;}
+    .principle-item{display:flex;gap:1rem;padding:1rem 1.25rem;background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-sm);}
+    .principle-num{font-family:var(--font-mono);font-size:1.1rem;font-weight:700;color:var(--teal);flex-shrink:0;width:28px;}
+    .principle-item strong{font-size:0.9rem;color:var(--text-primary);display:block;margin-bottom:0.3rem;}
+    .principle-item p{font-size:0.82rem;color:var(--text-muted);margin:0;line-height:1.5;}
+    .legal-address-box{background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.25rem 1.5rem;margin:1rem 0;font-size:0.9rem;color:var(--text-secondary);line-height:1.8;}
+    .legal-address-box strong{color:var(--text-primary);}
+    @media(max-width:600px){.affiliate-labels-grid,.partner-grid{grid-template-columns:1fr;}.affiliate-statement{flex-direction:column;gap:0.75rem;}}
+  </style>
 </body>
 </html>
