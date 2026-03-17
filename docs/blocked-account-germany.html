@@ -117,6 +117,118 @@
   <!-- Global CSS -->
   <link rel="stylesheet" href="style.css">
 
+  <style>
+    /* ═══ BLOCKED ACCOUNT — MASTERPIECE VISUAL OVERRIDE ═══ */
+    .hero-article{position:relative;overflow:hidden;border-bottom:1px solid rgba(201,168,76,0.15)}
+    .hero-article::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+    .hero-article .hero-inner{position:relative;z-index:1}
+    .hero-eyebrow{font-family:'DM Mono',monospace !important;font-size:.72rem !important;text-transform:uppercase;letter-spacing:.14em !important;color:#c9a84c !important}
+    .hero-h1{font-family:'Cormorant Garamond',Georgia,serif !important;color:#e4c97a !important}
+    .hero-sub{color:#a0aec0 !important}
+    .content-depth-bar{background:#131920;border-bottom:1px solid rgba(255,255,255,0.06);font-family:'DM Mono',monospace;font-size:.8rem;color:#5c6b7a}
+    .article-body h2{font-family:'Cormorant Garamond',Georgia,serif !important;color:#c9a84c !important;font-weight:700}
+    .article-body h3{color:#e8edf3 !important}
+    .article-body p{color:#a0aec0}.article-body strong{color:#e8edf3}
+    .article-body a:not(.cta-btn):not(.back-link):not(.calc-btn){color:#00c4a7}
+    .article-body a:not(.cta-btn):not(.back-link):not(.calc-btn):hover{color:#c9a84c}
+    .alert-banner{background:linear-gradient(135deg,rgba(242,109,109,0.06),rgba(201,168,76,0.04)) !important;border:1px solid rgba(242,109,109,0.25) !important;border-radius:14px !important;position:relative;overflow:hidden}
+    .alert-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#f26d6d,#c9a84c)}
+    .alert-label{font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:#f26d6d}
+    .alert-title{font-family:'Cormorant Garamond',Georgia,serif;color:#e8edf3;font-weight:700}
+    .alert-body p{color:#a0aec0}
+    .toc{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:12px !important}
+    .toc-title,.toc .toc-title{font-family:'DM Mono',monospace !important;font-size:.7rem !important;text-transform:uppercase;letter-spacing:.12em;color:#5c6b7a !important;font-weight:700}
+    .toc ol li a{color:#a8b3bf !important;font-size:.85rem}.toc ol li a:hover{color:#00c4a7 !important}
+    .toc ol li::marker{color:#c9a84c;font-family:'DM Mono',monospace;font-weight:700}
+    .compare-table-wrap{border-radius:12px !important;border:1px solid rgba(255,255,255,0.07) !important;overflow:hidden}
+    .compare-table thead,.compare-table th{background:#131920 !important;font-family:'DM Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#5c6b7a;font-weight:700;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .compare-table td{border-bottom:1px solid rgba(255,255,255,0.04);color:#a0aec0;font-size:.84rem}
+    .compare-table tr:hover td{background:rgba(255,255,255,0.015)}
+    .compare-table .highlight,.compare-table .col-expatrio{background:rgba(0,196,167,0.03) !important}
+    .calculator{background:#131920 !important;border:1px solid rgba(201,168,76,0.22) !important;border-radius:14px !important;position:relative;overflow:hidden;box-shadow:0 0 28px rgba(201,168,76,0.08)}
+    .calculator::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#c9a84c,#00c4a7);z-index:1}
+    .calc-title{font-family:'Cormorant Garamond',Georgia,serif !important;color:#e4c97a !important;font-weight:700;font-size:1.35rem !important}
+    .calc-sub{color:#5c6b7a !important;font-size:.85rem}
+    .calc-field label,.calc-field .calc-label{font-family:'DM Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#5c6b7a;font-weight:700}
+    .calc-field select,.calc-field input[type="number"]{background:#0e1318 !important;border:1px solid rgba(201,168,76,0.2) !important;border-radius:8px !important;color:#e8edf3 !important;font-family:'DM Sans',sans-serif;font-size:.9rem;padding:.65rem .85rem;outline:none;width:100%;-webkit-appearance:none;appearance:none;transition:border-color .2s}
+    .calc-field select:focus,.calc-field input:focus{border-color:rgba(201,168,76,0.5) !important;box-shadow:0 0 0 3px rgba(201,168,76,0.08)}
+    .calc-field select option{background:#131920;color:#e8edf3}
+    .calc-btn{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(0,196,167,0.1)) !important;border:1px solid rgba(201,168,76,0.3) !important;color:#c9a84c !important;font-family:'DM Mono',monospace !important;font-weight:700 !important;font-size:.85rem !important;border-radius:20px !important;padding:.75rem 1.5rem !important;cursor:pointer;transition:all .2s}
+    .calc-btn:hover{background:rgba(201,168,76,0.25) !important;border-color:rgba(201,168,76,0.5) !important;transform:translateY(-1px)}
+    .calc-results{background:rgba(0,196,167,0.04) !important;border:1px solid rgba(0,196,167,0.15) !important;border-radius:12px !important}
+    .calc-results-header{border-bottom:1px solid rgba(255,255,255,0.06) !important}
+    .calc-results-title{font-family:'Cormorant Garamond',Georgia,serif !important;color:#e8edf3 !important;font-weight:700}
+    .calc-col{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:10px !important}
+    .calc-col-header{border-bottom:1px solid rgba(255,255,255,0.06) !important}
+    .calc-col-name{font-family:'DM Mono',monospace;font-weight:700;color:#e8edf3}
+    .calc-total{background:rgba(201,168,76,0.06) !important;border-top:1px solid rgba(201,168,76,0.15) !important}
+    .calc-total-label{font-family:'DM Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#5c6b7a}
+    .calc-total-val{font-family:'Cormorant Garamond',Georgia,serif !important;color:#c9a84c !important;font-weight:700;font-size:1.4rem !important}
+    .calc-note{font-size:.78rem;color:#5c6b7a;font-style:italic}
+    .check-list li{color:#a0aec0}.check-list li::marker{color:#00c4a7}.check-list li strong{color:#e8edf3}
+    .check-list li a{color:#00c4a7}.check-list li a:hover{color:#c9a84c}
+    .check-list-negative li::marker{color:#f26d6d}
+    .deposit-bank{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:12px !important}
+    .deposit-bank:hover{border-color:rgba(201,168,76,0.25) !important}
+    .cta-box{background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(0,196,167,0.04)) !important;border:1px solid rgba(201,168,76,0.18) !important;border-radius:12px !important}
+    .cta-box-text{color:#a0aec0}.cta-box-text strong{color:#e8edf3}
+    .faq-item{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:12px !important;overflow:hidden;margin-bottom:.75rem}
+    .faq-q,.faq-question{color:#c9a84c !important;font-weight:700 !important;cursor:pointer}.faq-q:hover,.faq-question:hover{color:#e4c97a !important}
+    .faq-a,.faq-answer,.faq-answer-inner{color:#a0aec0 !important;font-size:.87rem !important;line-height:1.75 !important}
+    .faq-a strong{color:#e8edf3 !important}.faq-a a{color:#00c4a7 !important}
+    .faq-arrow,.faq-icon{color:#c9a84c !important}
+    .anzeige-label{font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#5c6b7a}
+    /* Provider cards */
+    .provider-grid{display:grid;gap:.75rem}
+    .provider-card{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:12px !important;overflow:hidden;transition:border-color .2s,transform .2s}
+    .provider-card:hover{border-color:rgba(201,168,76,0.25) !important;transform:translateY(-1px)}
+    .provider-card.recommended{border-color:rgba(0,196,167,0.25) !important}
+    .provider-card.recommended:hover{border-color:rgba(0,196,167,0.4) !important}
+    .provider-card.suspended{border-color:rgba(242,109,109,0.2) !important;opacity:.7}
+    .provider-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.15rem;font-weight:700;color:#e8edf3}
+    .provider-tagline{font-size:.82rem;color:#5c6b7a}
+    .provider-badge{font-family:'DM Mono',monospace;font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:.15rem .5rem;border-radius:20px;display:inline-block}
+    .badge-best{background:rgba(0,196,167,0.1);color:#00c4a7;border:1px solid rgba(0,196,167,0.2)}
+    .badge-premium{background:rgba(201,168,76,0.1);color:#c9a84c;border:1px solid rgba(201,168,76,0.2)}
+    .badge-dead{background:rgba(242,109,109,0.1);color:#f26d6d;border:1px solid rgba(242,109,109,0.2)}
+    .provider-features{color:#a0aec0;font-size:.85rem;line-height:1.7}
+    .provider-price-row{border-top:1px solid rgba(255,255,255,0.06);font-family:'DM Mono',monospace;font-size:.85rem;color:#a0aec0}
+    .provider-price-row strong{color:#c9a84c}
+    .price-value{font-family:'DM Mono',monospace;font-weight:700;color:#c9a84c}
+    .winner-tag{font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#00c4a7;background:rgba(0,196,167,0.08);border:1px solid rgba(0,196,167,0.2);padding:.2rem .6rem;border-radius:20px;display:inline-block}
+    /* Rejection grid */
+    .rejection-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}@media(max-width:600px){.rejection-grid{grid-template-columns:1fr}}
+    .rejection-item{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:12px !important;overflow:hidden;transition:border-color .2s}
+    .rejection-item:hover{border-color:rgba(242,109,109,0.2) !important}
+    .rejection-num{font-family:'DM Mono',monospace;font-size:.72rem;font-weight:700;color:#f26d6d;background:rgba(242,109,109,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+    .rejection-body{color:#a0aec0;font-size:.85rem;line-height:1.65}
+    .rejection-body strong{color:#e8edf3}
+    .rejection-fix{font-size:.82rem;color:#00c4a7;background:rgba(0,196,167,0.04);border-top:1px solid rgba(0,196,167,0.1);border-radius:0 0 12px 12px}
+    .rejection-fix strong{color:#00c4a7}
+    /* Steps timeline */
+    .steps-timeline{position:relative}
+    .step-item{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:12px !important;overflow:hidden;margin-bottom:.75rem;transition:border-color .2s}
+    .step-item:hover{border-color:rgba(0,196,167,0.2) !important}
+    .step-num{font-family:'DM Mono',monospace;font-size:.72rem;font-weight:700;color:#c9a84c;background:rgba(201,168,76,0.06)}
+    .step-body{color:#a0aec0;font-size:.87rem;line-height:1.7}
+    .step-body strong{color:#e8edf3}
+    /* Visa timeline */
+    .visa-timeline{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:14px !important;overflow:hidden}
+    .vt-item{border-bottom:1px solid rgba(255,255,255,0.05) !important}.vt-item:last-child{border-bottom:none !important}
+    .vt-week{font-family:'DM Mono',monospace;font-size:.72rem;font-weight:700;color:#c9a84c;min-width:80px}
+    .vt-body{color:#a0aec0;font-size:.85rem;line-height:1.6}
+    .vt-body strong{color:#e8edf3}
+    .vt-urgency{font-family:'DM Mono',monospace;font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:.15rem .5rem;border-radius:20px;display:inline-block}
+    .urg-critical{background:rgba(242,109,109,0.1);color:#f26d6d;border:1px solid rgba(242,109,109,0.2)}
+    .urg-important{background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2)}
+    .urg-normal{background:rgba(0,196,167,0.1);color:#00c4a7;border:1px solid rgba(0,196,167,0.2)}
+    /* Trap cards */
+    .trap-card{background:#131920 !important;border:1px solid rgba(255,255,255,0.07) !important;border-radius:12px !important;overflow:hidden;transition:border-color .2s}
+    .trap-card:hover{border-color:rgba(242,109,109,0.2) !important}
+    .trap-label{font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#f26d6d}
+    .trap-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;color:#e8edf3;font-size:1rem}
+    .trap-desc{font-size:.85rem;color:#a0aec0;line-height:1.65}
+  </style>
   
 </head>
 <body>
