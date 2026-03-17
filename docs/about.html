@@ -6,60 +6,86 @@
   <title>Über ExpatScore.de — Gegründet von einem Expat, für Expats</title>
   <meta name="description" content="ExpatScore.de wurde von Yassine Chaikhi gegründet — einem Expat, der die Frustration mit SCHUFA, deutschen Bankkonten und Bürokratie aus eigener Erfahrung kennt.">
   <meta name="robots" content="index, follow">
+  <meta name="author" content="Yassine Chaikhi">
   <link rel="canonical" href="https://www.expatscore.de/about">
-
   <meta property="og:title" content="Über ExpatScore.de — Gegründet von einem Expat, für Expats">
   <meta property="og:description" content="Die Geschichte hinter ExpatScore.de: Warum Yassine Chaikhi dieses Portal gebaut hat und was uns von anderen Finanzportalen unterscheidet.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.expatscore.de/about">
   <meta property="og:site_name" content="ExpatScore.de">
-
+  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
+  <meta name="theme-color" content="#080c10">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"Über ExpatScore.de","url":"https://www.expatscore.de/about","author":{"@type":"Person","name":"Yassine Chaikhi","email":"kontakt@expatscore.de"},"publisher":{"@type":"Organization","name":"ExpatScore.de","url":"https://www.expatscore.de"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.expatscore.de/"},{"@type":"ListItem","position":2,"name":"Über uns"}]}</script>
   <link rel="stylesheet" href="style.css">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "Über ExpatScore.de",
-    "url": "https://www.expatscore.de/about.html",
-    "description": "ExpatScore.de ist ein unabhängiges Finanzportal für Expats in Deutschland, gegründet von Yassine Chaikhi.",
-    "isPartOf": { "@type": "WebSite", "url": "https://www.expatscore.de/", "name": "ExpatScore.de" },
-    "author": {
-      "@type": "Person",
-      "name": "Yassine Chaikhi",
-      "email": "kontakt@expatscore.de",
-      "url": "https://www.expatscore.de/about.html"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExpatScore.de",
-      "url": "https://expatscore.de",
-      "logo": { "@type": "ImageObject", "url": "https://www.expatscore.de/assets/img/logo.png" }
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Yassine Chaikhi",
-    "jobTitle": "Founder & Lead Editor",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "ExpatScore.de",
-      "url": "https://expatscore.de"
-    },
-    "email": "kontakt@expatscore.de",
-    "knowsAbout": ["SCHUFA", "Expat Banking Germany", "German Health Insurance", "German Financial System", "Credit Scores"]
-  }
-  </script>
+  <style>
+    /* ══════════════════════════════════════
+       ABOUT PAGE — PREMIUM PORTAL DESIGN
+       (mirrors affiliate-hinweis.html system)
+    ══════════════════════════════════════ */
+    .abt-hero{background:linear-gradient(180deg,#0e1318 0%,#080c10 100%);border-bottom:1px solid rgba(201,168,76,0.15);padding:3.5rem 1.5rem 2.5rem;position:relative;overflow:hidden}
+    .abt-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+    .abt-hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;display:flex;align-items:flex-start;gap:2rem;flex-wrap:wrap}
+    .abt-hero-icon{width:64px;height:64px;border-radius:14px;flex-shrink:0;background:rgba(0,196,167,0.08);border:1px solid rgba(0,196,167,0.22);display:flex;align-items:center;justify-content:center;font-size:1.75rem}
+    .abt-hero-text{flex:1;min-width:200px}
+    .abt-hero-eyebrow{font-family:'DM Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:#c9a84c;margin-bottom:.6rem;display:block}
+    .abt-hero-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2rem,5vw,2.8rem);font-weight:700;color:#e4c97a;line-height:1.15;margin-bottom:.5rem}
+    .abt-hero-sub{font-size:.92rem;color:#5c6b7a;line-height:1.7;max-width:560px}
+    .abt-hero-meta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .abt-meta-pill{display:flex;align-items:center;gap:.4rem;font-size:.76rem;font-weight:600;color:#5c6b7a;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:.3rem .85rem}
+    .amp-dot{width:6px;height:6px;border-radius:50%}.d-gold{background:#c9a84c}.d-teal{background:#00c4a7}.d-green{background:#3ecf8e}.d-blue{background:#4a9eff}
+    .abt-stats{display:grid;grid-template-columns:repeat(4,1fr);background:#131920;border:1px solid rgba(255,255,255,0.07);border-radius:12px;overflow:hidden}
+    .abt-stat{padding:1rem;text-align:center;border-right:1px solid rgba(255,255,255,0.06)}.abt-stat:last-child{border-right:none}
+    .abt-stat-n{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:700;color:#c9a84c}
+    .abt-stat-l{font-size:.68rem;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:#5c6b7a}
+    @media(max-width:520px){.abt-stats{grid-template-columns:repeat(2,1fr)}.abt-stat{border-bottom:1px solid rgba(255,255,255,0.06)}}
+    .abt-body{max-width:900px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+    .abt-section{margin-bottom:3rem}
+    .abt-section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+    .abt-icon{width:42px;height:42px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .ai-gold{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.18)}.ai-teal{background:rgba(0,196,167,0.08);border:1px solid rgba(0,196,167,0.18)}.ai-green{background:rgba(62,207,142,0.08);border:1px solid rgba(62,207,142,0.18)}.ai-blue{background:rgba(74,158,255,0.08);border:1px solid rgba(74,158,255,0.18)}.ai-gray{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09)}
+    .abt-section-label{flex:1}.abt-section-eyebrow{font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:#5c6b7a;margin-bottom:.2rem}
+    .abt-section-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:700;color:#e8edf3}
+    .abt-para{font-size:.9rem;color:#8b949e;line-height:1.8;margin-bottom:1rem}.abt-para a{color:#00c4a7;text-decoration:none}.abt-para a:hover{color:#c9a84c}.abt-para strong{color:#c9a84c;font-weight:600}
+    .founder-card{background:linear-gradient(135deg,rgba(0,196,167,0.06),rgba(201,168,76,0.04));border:1px solid rgba(0,196,167,0.2);border-radius:14px;padding:1.75rem;position:relative;overflow:hidden;margin-bottom:1.5rem}
+    .founder-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#00c4a7,#c9a84c)}
+    .founder-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+    .founder-avatar{width:56px;height:56px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,#00c4a7,#c9a84c);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;font-weight:700;color:#080c10;border:2px solid rgba(201,168,76,0.3)}
+    .founder-info{flex:1}.founder-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:#e8edf3}.founder-role{font-size:.78rem;color:#5c6b7a;margin-top:.15rem}
+    .founder-loc{display:flex;align-items:center;gap:.35rem;font-size:.78rem;color:#5c6b7a;margin-top:.35rem}.founder-loc-dot{width:6px;height:6px;border-radius:50%;background:#00c4a7}
+    .founder-story{font-size:.87rem;color:#a8b3bf;line-height:1.75}.founder-story p{margin-bottom:.85rem}.founder-story strong{color:#e8edf3}
+    .founder-quote{border-left:3px solid #00c4a7;background:rgba(0,196,167,0.04);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:1.25rem 0;font-style:italic;font-size:.92rem;color:#a8b3bf;line-height:1.7}
+    .founder-quote cite{display:block;font-style:normal;font-size:.75rem;color:#5c6b7a;margin-top:.5rem;font-family:'DM Mono',monospace}
+    .pledge-items{display:grid;gap:.5rem}.pledge-item{display:flex;align-items:flex-start;gap:.7rem;background:rgba(255,255,255,0.025);border-radius:8px;padding:.7rem .9rem}
+    .pledge-check{color:#00c4a7;font-weight:700;flex-shrink:0;font-size:.85rem;margin-top:.1rem}.pledge-text{font-size:.87rem;color:#a8b3bf;line-height:1.6}.pledge-text strong{color:#e8edf3}
+    .standards-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}@media(max-width:600px){.standards-grid{grid-template-columns:1fr}}
+    .std-card{background:#131920;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:1.25rem;transition:border-color .2s,transform .2s}.std-card:hover{border-color:rgba(0,196,167,0.25);transform:translateY(-1px)}
+    .std-card-top{display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem}.std-card-icon{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .std-card-title{font-size:.92rem;font-weight:700;color:#e8edf3}.std-card-desc{font-size:.82rem;color:#5c6b7a;line-height:1.65}
+    .coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}@media(max-width:600px){.coverage-grid{grid-template-columns:1fr}}
+    .cov-card{display:block;text-decoration:none;background:#131920;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:1.25rem;transition:border-color .2s,transform .2s}.cov-card:hover{border-color:rgba(201,168,76,0.3);transform:translateY(-1px)}
+    .cov-card-icon{font-size:1.5rem;margin-bottom:.65rem}.cov-card-title{font-size:.95rem;font-weight:700;color:#e8edf3;margin-bottom:.35rem}.cov-card-desc{font-size:.82rem;color:#5c6b7a;line-height:1.6;margin-bottom:.75rem}
+    .cov-card-link{font-size:.78rem;font-family:'DM Mono',monospace;color:#00c4a7;display:flex;align-items:center;gap:.3rem}
+    .contact-block{background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(0,196,167,0.04));border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:1.5rem;margin-top:2.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+    .contact-block-icon{font-size:1.5rem}.contact-block-body{flex:1;min-width:200px}.contact-block-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:#e8edf3;font-weight:700;margin-bottom:.25rem}.contact-block-sub{font-size:.83rem;color:#5c6b7a}
+    .contact-block-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.35rem;border-radius:20px;font-size:.83rem;font-weight:700;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);color:#c9a84c;text-decoration:none;transition:all .2s}.contact-block-btn:hover{background:rgba(201,168,76,0.2)}
+    .abt-divider{height:1px;background:rgba(255,255,255,0.05);margin:2.5rem 0}
+    .page-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.83rem;color:#5c6b7a;text-decoration:none;transition:color .2s;font-weight:500;margin-bottom:.5rem}.page-back:hover{color:#c9a84c}
+    .related-links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.6rem}
+    .related-link{display:flex;align-items:center;gap:.7rem;padding:.85rem 1.1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;transition:border-color .2s,background .2s}.related-link:hover{border-color:rgba(201,168,76,0.3);background:rgba(201,168,76,0.04)}
+    .related-link-icon{font-size:1.1rem;flex-shrink:0}.related-link-title{font-size:.88rem;font-weight:600;color:#e8edf3}.related-link-sub{font-size:.75rem;color:#5c6b7a}
+  </style>
 </head>
 <body>
 
-  <div class="progress-bar" id="progressBar"></div>
+<div class="progress-bar" id="progressBar"></div>
 
 <header class="global-header">
   <div class="header-inner">
@@ -76,178 +102,145 @@
   </div>
 </header>
 
-<div class="werbung-bar">
-  <strong>&#9873; Anzeige:</strong> Diese Seite enthält Affiliate-Links. Bei Kontoeröffnung erhalten wir eine Provision &mdash; für dich keine Mehrkosten.
+<!-- HERO -->
+<div class="abt-hero">
+  <div class="abt-hero-inner">
+    <div class="abt-hero-icon">🧭</div>
+    <div class="abt-hero-text">
+      <span class="abt-hero-eyebrow">Über uns · Mission · Grundsätze</span>
+      <h1 class="abt-hero-title">Gebaut von einem Expat.<br>Für alle Expats.</h1>
+      <p class="abt-hero-sub">Deutschland hat hervorragende Finanzprodukte — und eines der undurchsichtigsten Bürokratiesysteme der Welt. ExpatScore.de existiert, um diesen Nachteil auszugleichen.</p>
+      <div class="abt-hero-meta">
+        <div class="abt-meta-pill"><span class="amp-dot d-teal"></span>Unabhängig</div>
+        <div class="abt-meta-pill"><span class="amp-dot d-gold"></span>12+ Expert Guides</div>
+        <div class="abt-meta-pill"><span class="amp-dot d-green"></span>180+ Nationalitäten</div>
+        <div class="abt-meta-pill"><span class="amp-dot d-blue"></span>100% kostenlos</div>
+      </div>
+    </div>
+  </div>
+  <div class="abt-stats" style="position:relative;z-index:1;max-width:900px;margin:1.5rem auto 0;">
+    <div class="abt-stat"><span class="abt-stat-n">2024</span><span class="abt-stat-l">Gegründet</span></div>
+    <div class="abt-stat"><span class="abt-stat-n">12+</span><span class="abt-stat-l">Guides</span></div>
+    <div class="abt-stat"><span class="abt-stat-n">180+</span><span class="abt-stat-l">Nationalitäten</span></div>
+    <div class="abt-stat"><span class="abt-stat-n">0 €</span><span class="abt-stat-l">Für Leser</span></div>
+  </div>
 </div>
 
-  <!-- Hero -->
-  <section class="about-hero">
-    <div class="about-hero-inner">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-sep">›</span>
-        <span>Über uns</span>
-      </nav>
-      <span class="section-eyebrow">Die Geschichte dahinter</span>
-      <h1 class="hero-h1">Gebaut von einem Expat.<br>Für alle Expats.</h1>
-      <p class="about-hero-sub">
-        Deutschland hat hervorragende Finanzprodukte. Es hat auch eines der undurchsichtigsten Bürokratiesysteme der Welt — besonders wenn man neu ist und kein SCHUFA-Profil hat. ExpatScore.de existiert, um diesen Nachteil auszugleichen.
-      </p>
-    </div>
-    <div class="about-hero-visual" aria-hidden="true">
-      <div class="about-orb-1"></div>
-      <div class="about-orb-2"></div>
-      <div class="about-stats-row">
-        <div class="about-stat"><span class="about-stat-n">2024</span><span class="about-stat-l">Gegründet</span></div>
-        <div class="about-stat"><span class="about-stat-n">12+</span><span class="about-stat-l">Guides</span></div>
-        <div class="about-stat"><span class="about-stat-n">180+</span><span class="about-stat-l">Nationalitäten</span></div>
-        <div class="about-stat"><span class="about-stat-n">0 €</span><span class="about-stat-l">Kosten für Leser</span></div>
-      </div>
-    </div>
-  </section>
+<nav class="breadcrumbs" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:.75rem 1.5rem 0;">
+  <a href="index.html">Home</a> › <span class="current">Über uns</span>
+</nav>
 
-  <!-- Founder Story -->
-  <section class="about-story-section">
-    <div class="about-story-inner">
-      <div class="founder-profile">
-        <div class="founder-avatar" aria-label="Yassine Chaikhi">YC</div>
-        <div class="founder-meta">
+<div class="abt-body">
+  <a href="index.html" class="page-back">← Zurück zur Startseite</a>
+
+  <!-- FOUNDER STORY -->
+  <div class="abt-section" style="margin-top:1rem;">
+    <div class="founder-card">
+      <div class="founder-header">
+        <div class="founder-avatar">YC</div>
+        <div class="founder-info">
           <div class="founder-name">Yassine Chaikhi</div>
-          <div class="founder-title">Founder &amp; Lead Editor, ExpatScore.de</div>
-          <div class="founder-location">
-            <span class="trust-dot teal"></span>
-            Agadir, Marokko → Deutschland-Experte
-          </div>
+          <div class="founder-role">Founder &amp; Lead Editor, ExpatScore.de</div>
+          <div class="founder-loc"><span class="founder-loc-dot"></span>Agadir, Marokko → Deutschland-Experte</div>
         </div>
       </div>
-
-      <div class="story-body">
-        <h2>Warum ich dieses Portal gebaut habe</h2>
-        <p>Als ich mich zum ersten Mal intensiv mit dem deutschen Finanzsystem auseinandersetzte, war ich ehrlich gesagt überwältigt. SCHUFA-Score, Anmeldung, Sperrkonto, Steuer-ID, GKV vs. PKV — jedes dieser Konzepte hat seinen eigenen Fachjargon, seine eigenen Regeln, und seine eigenen Fallen für Neuankömmlinge.</p>
-
-        <p>Die Informationen, die ich online fand, waren entweder auf Deutsch und für Deutsche geschrieben — oder auf Englisch, aber hoffnungslos oberflächlich. Niemand erklärte, was ein SCHUFA-Score für jemanden bedeutet, der gerade erst angekommen ist und noch keine deutschen Finanzdaten hat. Niemand sagte klar, welches Bankkonto man ohne Anmeldung eröffnen kann und warum das überhaupt relevant ist.</p>
-
-        <p>Also habe ich angefangen, es selbst herauszufinden. Für jede Frage, die ich beantworten konnte, schrieb ich eine Antwort auf. Aus diesen Antworten wurde ExpatScore.de.</p>
-
-        <blockquote class="story-quote">
+      <div class="founder-story">
+        <p>Als ich mich zum ersten Mal intensiv mit dem deutschen Finanzsystem auseinandersetzte, war ich überwältigt. SCHUFA-Score, Anmeldung, Sperrkonto, Steuer-ID, GKV vs. PKV — jedes dieser Konzepte hat seinen eigenen Fachjargon, seine eigenen Regeln und seine eigenen Fallen für Neuankömmlinge.</p>
+        <p>Die Informationen, die ich online fand, waren entweder auf Deutsch und für Deutsche geschrieben — oder auf Englisch, aber hoffnungslos oberflächlich. Niemand erklärte, was ein SCHUFA-Score für jemanden bedeutet, der gerade erst angekommen ist und noch keine deutschen Finanzdaten hat.</p>
+        <p>Also habe ich angefangen, es selbst herauszufinden. Für jede Frage, die ich beantworten konnte, schrieb ich eine Antwort auf. Aus diesen Antworten wurde <strong>ExpatScore.de</strong>.</p>
+        <div class="founder-quote">
           "Ich baue die Ressource, die ich gebraucht hätte — detailliert, ehrlich, und geschrieben von jemandem, der weiß, wie sich diese Informationslücke anfühlt."
           <cite>— Yassine Chaikhi</cite>
-        </blockquote>
-
-        <h2>Was ExpatScore.de ist — und was nicht</h2>
-        <p>ExpatScore.de ist kein Bank, kein Makler und kein Finanzberater. Wir sind ein <strong>unabhängiges redaktionelles Portal</strong>. Das bedeutet:</p>
-        <ul>
-          <li>Wir erstellen Vergleiche, Guides und Tools, um Expats bei der Orientierung zu helfen</li>
-          <li>Wir werden durch Affiliate-Provisionen finanziert — <a href="affiliate-hinweis.html">transparent offengelegt</a></li>
-          <li>Wir empfehlen kein Produkt, das wir nicht für seriös und expat-geeignet halten</li>
-          <li>Alle Inhalte spiegeln den Stand unserer Recherche wider — keine bezahlten Empfehlungen</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Editorial Standards -->
-  <section class="about-standards-section">
-    <div class="about-inner">
-      <div class="about-section-header">
-        <span class="section-eyebrow">Methodik</span>
-        <h2>Unsere redaktionellen Standards</h2>
-        <p>Wie wir Inhalte erstellen und was unsere Vergleiche unterscheidet.</p>
-      </div>
-      <div class="standards-grid">
-        <div class="standard-card">
-          <div class="standard-icon">🔬</div>
-          <h3>Eigene Recherche</h3>
-          <p>Jeder Vergleich basiert auf der Auswertung öffentlicher Produktinformationen, Preis- und Konditionslisten sowie — wo verfügbar — eigener Produkttests. Wir verlassen uns nicht auf Pressemitteilungen der Anbieter.</p>
-        </div>
-        <div class="standard-card">
-          <div class="standard-icon">🔄</div>
-          <h3>Regelmäßige Aktualisierung</h3>
-          <p>Konditionen ändern sich. Wir überprüfen unsere Inhalte regelmäßig und kennzeichnen jeden Artikel mit dem letzten Aktualisierungsdatum. Veraltete Informationen sind in der Finanzberatung gefährlich.</p>
-        </div>
-        <div class="standard-card">
-          <div class="standard-icon">🎯</div>
-          <h3>Expat-Fokus</h3>
-          <p>Im Gegensatz zu allgemeinen Finanzportalen betrachten wir jedes Produkt aus der Perspektive eines Neuankömmlings: Sprachbarrieren, fehlende SCHUFA-Historie, Visum-Einschränkungen — das sind unsere Bewertungskriterien.</p>
-        </div>
-        <div class="standard-card">
-          <div class="standard-icon">⚖️</div>
-          <h3>Unabhängige Redaktion</h3>
-          <p>Anbieter haben keinen Einfluss auf unsere Bewertungen. Wir benennen Nachteile klar — auch wenn der Anbieter unser Affiliate-Partner ist. Unsere Glaubwürdigkeit gegenüber Lesern ist langfristig wertvoller als jede Provision.</p>
-        </div>
-        <div class="standard-card">
-          <div class="standard-icon">📖</div>
-          <h3>Verständliche Sprache</h3>
-          <p>Deutsches Finanzjargon ist komplex. Wir erklären SCHUFA, GKV, Anmeldung und Sperrkonto so, dass sie auch für jemanden verständlich sind, der Deutschland noch nie besucht hat — ohne dabei an Tiefe zu verlieren.</p>
-        </div>
-        <div class="standard-card">
-          <div class="standard-icon">🌍</div>
-          <h3>Internationale Perspektive</h3>
-          <p>Expats kommen aus über 180 Ländern. Was für einen EU-Bürger gilt, gilt nicht automatisch für jemanden aus Nicht-EU-Ländern. Wir berücksichtigen Unterschiede bei Visa-Typen, Nationalitäten und Aufenthaltsstatus.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- What we cover -->
-  <section class="about-coverage-section">
-    <div class="about-inner">
-      <div class="about-section-header">
-        <span class="section-eyebrow">Themen</span>
-        <h2>Was wir abdecken</h2>
-        <p>Alle Finanzthemen, die für Expats in Deutschland relevant sind — an einem Ort.</p>
-      </div>
-      <div class="coverage-grid">
-        <a href="banking.html" class="coverage-card">
-          <div class="coverage-icon">🏦</div>
-          <h3>Banking &amp; Konten</h3>
-          <p>Welches Konto eignet sich für Expats ohne SCHUFA? Konto ohne Anmeldung, Neobanken, DKB, N26 und mehr.</p>
-          <span class="coverage-link">Alle Banking-Guides →</span>
-        </a>
-        <a href="schufa-simulator.html" class="coverage-card">
-          <div class="coverage-icon">📊</div>
-          <h3>SCHUFA &amp; Kreditwürdigkeit</h3>
-          <p>SCHUFA-Score verstehen, aufbauen und schützen. Mit kostenlosem Score-Simulator für Expats.</p>
-          <span class="coverage-link">SCHUFA Guide →</span>
-        </a>
-        <a href="insurance.html" class="coverage-card">
-          <div class="coverage-icon">🏥</div>
-          <h3>Krankenversicherung</h3>
-          <p>GKV vs. PKV, TK, AOK und andere Kassen — welche ist die richtige für Ihren Status?</p>
-          <span class="coverage-link">Versicherungs-Guides →</span>
-        </a>
-        <a href="blocked-account-germany.html" class="coverage-card">
-          <div class="coverage-icon">🔒</div>
-          <h3>Sperrkonto</h3>
-          <p>Fintiba vs. Expatrio vs. Deutsche Bank — welches Sperrkonto ist für Studenten und Nicht-EU-Bürger am besten?</p>
-          <span class="coverage-link">Sperrkonto-Vergleich →</span>
-        </a>
+  <div class="abt-divider"></div>
+
+  <!-- WAS IST EXPATSCORE.DE -->
+  <div class="abt-section">
+    <div class="abt-section-header">
+      <div class="abt-icon ai-gold">📋</div>
+      <div class="abt-section-label">
+        <div class="abt-section-eyebrow">Identität</div>
+        <div class="abt-section-title">Was ExpatScore.de ist — und was nicht</div>
       </div>
     </div>
-  </section>
-
-  <!-- Contact / Mission -->
-  <section class="about-contact-section">
-    <div class="about-inner" style="text-align:center;max-width:640px;">
-      <span class="section-eyebrow">Kontakt</span>
-      <h2>Haben Sie Fragen oder Feedback?</h2>
-      <p style="color:var(--text-secondary);margin:1rem 0 2rem;">Wir sind immer offen für Rückmeldungen, Korrekturen und Themenvorschläge. Als unabhängiges Portal leben wir davon, dass Leser uns helfen, besser zu werden.</p>
-      <div class="contact-options">
-        <a href="/cdn-cgi/l/email-protection#187377766c79736c587d6068796c6b7b776a7d367c7d" class="cta-btn cta-primary">
-          <span class="__cf_email__" data-cfemail="c9a2a6a7bda8a2bd89acb1b9a8bdbaaaa6bbace7adac">[email&#160;protected]</span>
-        </a>
-        <a href="schufa-simulator.html" class="cta-btn cta-secondary">
-          Score Simulator testen
-        </a>
-      </div>
-      <p style="font-size:0.82rem;color:var(--text-muted);margin-top:2rem;">
-        Antwortzeit: in der Regel innerhalb von 48 Stunden ·
-        Kooperationsanfragen: <a href="affiliate-hinweis.html">Affiliate-Hinweis lesen</a>
-      </p>
+    <p class="abt-para">ExpatScore.de ist kein Bank, kein Makler und kein Finanzberater. Wir sind ein <strong>unabhängiges redaktionelles Portal</strong>. Das bedeutet:</p>
+    <div class="pledge-items">
+      <div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Vergleiche, Guides &amp; Tools:</strong> Wir erstellen detaillierte Inhalte, um Expats bei der Orientierung im deutschen Finanzsystem zu helfen.</div></div>
+      <div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Transparente Finanzierung:</strong> Wir werden durch Affiliate-Provisionen finanziert — vollständig <a href="affiliate-hinweis.html" style="color:#00c4a7;">transparent offengelegt</a>.</div></div>
+      <div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Nur seriöse Empfehlungen:</strong> Wir empfehlen kein Produkt, das wir nicht für seriös und expat-geeignet halten.</div></div>
+      <div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Keine bezahlten Empfehlungen:</strong> Alle Inhalte spiegeln den Stand unserer eigenen Recherche wider. Kein Anbieter kann positive Bewertungen kaufen.</div></div>
     </div>
-  </section>
+  </div>
 
-  <footer class="global-footer">
+  <div class="abt-divider"></div>
+
+  <!-- REDAKTIONELLE STANDARDS -->
+  <div class="abt-section">
+    <div class="abt-section-header">
+      <div class="abt-icon ai-teal">🔬</div>
+      <div class="abt-section-label">
+        <div class="abt-section-eyebrow">Methodik</div>
+        <div class="abt-section-title">Unsere redaktionellen Standards</div>
+      </div>
+    </div>
+    <p class="abt-para">Wie wir Inhalte erstellen und was unsere Vergleiche von anderen Portalen unterscheidet.</p>
+    <div class="standards-grid">
+      <div class="std-card"><div class="std-card-top"><div class="std-card-icon ai-teal">🔬</div><div class="std-card-title">Eigene Recherche</div></div><div class="std-card-desc">Jeder Vergleich basiert auf öffentlichen Produktinformationen, Preis- und Konditionslisten sowie eigenen Produkttests. Keine Pressemitteilungen.</div></div>
+      <div class="std-card"><div class="std-card-top"><div class="std-card-icon ai-gold">🔄</div><div class="std-card-title">Regelmäßige Aktualisierung</div></div><div class="std-card-desc">Konditionen ändern sich. Wir überprüfen unsere Inhalte regelmäßig und kennzeichnen jeden Artikel mit dem letzten Aktualisierungsdatum.</div></div>
+      <div class="std-card"><div class="std-card-top"><div class="std-card-icon ai-green">🎯</div><div class="std-card-title">Expat-Fokus</div></div><div class="std-card-desc">Wir betrachten jedes Produkt aus der Perspektive eines Neuankömmlings: Sprachbarrieren, fehlende SCHUFA-Historie, Visum-Einschränkungen.</div></div>
+      <div class="std-card"><div class="std-card-top"><div class="std-card-icon ai-blue">⚖️</div><div class="std-card-title">Unabhängige Redaktion</div></div><div class="std-card-desc">Anbieter haben keinen Einfluss auf unsere Bewertungen. Wir benennen Nachteile klar — auch bei Affiliate-Partnern.</div></div>
+      <div class="std-card"><div class="std-card-top"><div class="std-card-icon ai-gray">📖</div><div class="std-card-title">Verständliche Sprache</div></div><div class="std-card-desc">SCHUFA, GKV, Anmeldung und Sperrkonto — erklärt für jemanden, der Deutschland noch nie besucht hat. Ohne Tiefenverlust.</div></div>
+      <div class="std-card"><div class="std-card-top"><div class="std-card-icon ai-teal">🌍</div><div class="std-card-title">Internationale Perspektive</div></div><div class="std-card-desc">Expats kommen aus 180+ Ländern. Wir berücksichtigen Unterschiede bei Visa-Typen, Nationalitäten und Aufenthaltsstatus.</div></div>
+    </div>
+  </div>
+
+  <div class="abt-divider"></div>
+
+  <!-- WAS WIR ABDECKEN -->
+  <div class="abt-section">
+    <div class="abt-section-header">
+      <div class="abt-icon ai-green">📚</div>
+      <div class="abt-section-label">
+        <div class="abt-section-eyebrow">Themen</div>
+        <div class="abt-section-title">Was wir abdecken</div>
+      </div>
+    </div>
+    <p class="abt-para">Alle Finanzthemen, die für Expats in Deutschland relevant sind — an einem Ort.</p>
+    <div class="coverage-grid">
+      <a href="banking.html" class="cov-card"><div class="cov-card-icon">🏦</div><div class="cov-card-title">Banking &amp; Konten</div><div class="cov-card-desc">Welches Konto eignet sich für Expats ohne SCHUFA? Konto ohne Anmeldung, Neobanken, DKB, N26 und mehr.</div><span class="cov-card-link">Alle Banking-Guides →</span></a>
+      <a href="schufa-simulator.html" class="cov-card"><div class="cov-card-icon">📊</div><div class="cov-card-title">SCHUFA &amp; Kreditwürdigkeit</div><div class="cov-card-desc">SCHUFA-Score verstehen, aufbauen und schützen. Mit kostenlosem Score-Simulator für Expats.</div><span class="cov-card-link">SCHUFA Guide →</span></a>
+      <a href="insurance.html" class="cov-card"><div class="cov-card-icon">🏥</div><div class="cov-card-title">Krankenversicherung</div><div class="cov-card-desc">GKV vs. PKV, TK, AOK und andere Kassen — welche ist die richtige für Ihren Aufenthaltsstatus?</div><span class="cov-card-link">Versicherungs-Guides →</span></a>
+      <a href="blocked-account-germany.html" class="cov-card"><div class="cov-card-icon">🔒</div><div class="cov-card-title">Sperrkonto</div><div class="cov-card-desc">Fintiba vs. Expatrio vs. Deutsche Bank — welches Sperrkonto ist für Studenten am besten?</div><span class="cov-card-link">Sperrkonto-Vergleich →</span></a>
+    </div>
+  </div>
+
+  <!-- CONTACT CTA -->
+  <div class="contact-block">
+    <div class="contact-block-icon">✉️</div>
+    <div class="contact-block-body">
+      <div class="contact-block-title">Fragen, Feedback oder Themenvorschläge?</div>
+      <div class="contact-block-sub">Antwortzeit: in der Regel innerhalb von 48 Stunden · Deutsch und Englisch willkommen</div>
+    </div>
+    <a href="mailto:kontakt@expatscore.de" class="contact-block-btn">Schreib uns →</a>
+  </div>
+
+  <!-- RELATED LEGAL LINKS -->
+  <div style="margin-top:2rem;">
+    <div style="font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:#5c6b7a;margin-bottom:.85rem;">Weitere Seiten</div>
+    <div class="related-links-grid">
+      <a href="affiliate-hinweis.html" class="related-link"><span class="related-link-icon">⚑</span><div><div class="related-link-title">Affiliate-Hinweis</div><div class="related-link-sub">Transparenz · Partner · UWG</div></div></a>
+      <a href="datenschutz.html" class="related-link"><span class="related-link-icon">🔒</span><div><div class="related-link-title">Datenschutzerklärung</div><div class="related-link-sub">DSGVO · Cookies · Ihre Rechte</div></div></a>
+      <a href="impressum.html" class="related-link"><span class="related-link-icon">⚖️</span><div><div class="related-link-title">Impressum</div><div class="related-link-sub">§ 5 DDG · Anbieter</div></div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="global-footer">
   <div class="inner">
     <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
     <nav class="footer-legal-links" aria-label="Legal-Links">
@@ -259,15 +252,11 @@
       <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
       <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
     </nav>
-    <div class="footer-disclosure">
-      <strong>&#9873; Affiliate-Hinweis (Werbung):</strong>
-      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
-    </div>
+    <div class="footer-disclosure"><strong>&#9873; Affiliate-Hinweis (Werbung):</strong> Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten.</div>
     <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Alle Angaben ohne Gewähr &middot; Kein Ersatz für individuelle Rechts- oder Finanzberatung. &middot; <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
   </div>
 </footer>
 
-<!-- COOKIE BANNER -->
 <div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
   <div class="cookie-banner-header">
     <div class="cookie-banner-icon" aria-hidden="true">&#127850;</div>
@@ -282,25 +271,14 @@
     <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
   </div>
 </div>
-
-<!-- COOKIE SETTINGS MODAL -->
 <div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">&#10005;</button>
     <h2>Cookie-Einstellungen</h2>
     <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
-    <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div>
-      <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
-    </div>
-    <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div>
-      <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
-    </div>
-    <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
-      <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
-    </div>
+    <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div><label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label></div>
+    <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div><label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label></div>
+    <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div><label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label></div>
     <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
   </div>
 </div>
