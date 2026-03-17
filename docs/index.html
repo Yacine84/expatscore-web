@@ -55,6 +55,235 @@
   }
   </script>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ══════════════════════════════════════════════════════════
+       INDEX.HTML — AFFILIATE MASTERPIECE VISUAL OVERRIDE
+       Pure CSS layer — ZERO HTML changes, ZERO script changes
+    ══════════════════════════════════════════════════════════ */
+
+    /* ── HERO: Add gold grid, refine orbs ── */
+    .hero.hero-home {
+      background: linear-gradient(180deg, #0e1318 0%, #080c10 100%);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+    }
+    .hero.hero-home::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; }
+    .hero-orb-1 { opacity: 0.4; }
+    .hero-orb-2 { opacity: 0.3; }
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace !important;
+      font-size: 0.72rem !important;
+      text-transform: uppercase;
+      letter-spacing: 0.14em !important;
+      color: #c9a84c !important;
+    }
+    .hero-h1 {
+      color: #e4c97a !important;
+    }
+    .hero-stats {
+      background: #131920;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 0;
+    }
+    .hero-stat { border-right: 1px solid rgba(255,255,255,0.06); padding: 1rem; }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: #c9a84c;
+      font-weight: 700;
+    }
+    .hero-stat-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5c6b7a;
+    }
+    .hero-stat-divider { display: none; }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: #131920;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .trust-dot-teal { background: #00c4a7; }
+    .trust-dot-gold { background: #c9a84c; }
+
+    /* ── SIMULATOR SECTION ── */
+    .sim-section {
+      position: relative;
+    }
+    .sim-section::before {
+      content: '';
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(0,196,167,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,196,167,0.015) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .sim-section .inner { position: relative; z-index: 1; }
+    .sim-section-header .section-eyebrow,
+    .section-eyebrow {
+      font-family: 'DM Mono', monospace !important;
+      font-size: 0.72rem !important;
+      text-transform: uppercase;
+      letter-spacing: 0.14em !important;
+      color: #c9a84c !important;
+    }
+    .sim-section-title, .section-title {
+      font-family: 'Cormorant Garamond', Georgia, serif !important;
+      color: #e8edf3 !important;
+    }
+
+    /* ── CONTENT HUB CARDS ── */
+    .card {
+      background: #131920 !important;
+      border: 1px solid rgba(255,255,255,0.07) !important;
+      border-radius: 12px !important;
+      transition: border-color 0.2s, transform 0.2s !important;
+    }
+    .card:hover {
+      border-color: rgba(201,168,76,0.25) !important;
+      transform: translateY(-2px) !important;
+    }
+    .card-featured {
+      border-color: rgba(0,196,167,0.2) !important;
+    }
+    .card-featured:hover {
+      border-color: rgba(0,196,167,0.4) !important;
+    }
+    .card-badge {
+      font-size: 0.68rem !important;
+      font-weight: 800 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.6rem !important;
+      border-radius: 20px !important;
+    }
+    .card-badge-banking { background: rgba(74,158,255,0.1) !important; color: #4a9eff !important; border: 1px solid rgba(74,158,255,0.2); }
+    .card-badge-schufa { background: rgba(201,168,76,0.1) !important; color: #c9a84c !important; border: 1px solid rgba(201,168,76,0.2); }
+    .card-badge-versicherung { background: rgba(62,207,142,0.1) !important; color: #3ecf8e !important; border: 1px solid rgba(62,207,142,0.2); }
+    .card-badge-legal { background: rgba(245,158,11,0.1) !important; color: #f59e0b !important; border: 1px solid rgba(245,158,11,0.2); }
+    .card-badge-teal { background: rgba(0,196,167,0.1) !important; color: #00c4a7 !important; border: 1px solid rgba(0,196,167,0.2); }
+    .card .card-desc, .card-featured .card-desc {
+      font-size: 0.82rem;
+      color: #5c6b7a;
+      line-height: 1.65;
+    }
+    .card h2 a, .card h2 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card .cta-btn, .cta-btn {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+    }
+
+    /* ── PROVIDER TABLE ── */
+    .provider-section {
+      position: relative;
+    }
+    .premium-table-wrap {
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.07);
+      overflow: hidden;
+    }
+    .premium-table {
+      border-collapse: collapse;
+    }
+    .premium-table thead {
+      background: #131920;
+    }
+    .premium-table th {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #5c6b7a;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .premium-table td {
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.84rem;
+    }
+    .premium-table tr:hover td {
+      background: rgba(255,255,255,0.015);
+    }
+    .col-highlight {
+      background: rgba(0,196,167,0.03) !important;
+    }
+    .pt-check { color: #00c4a7 !important; font-weight: 700; }
+    .pt-cross { color: #f26d6d !important; font-weight: 700; }
+    .pt-best-pick {
+      background: rgba(0,196,167,0.08) !important;
+      color: #00c4a7 !important;
+      font-weight: 800;
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      position: relative;
+    }
+    .faq-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .faq-item {
+      background: #131920 !important;
+      border: 1px solid rgba(255,255,255,0.07) !important;
+      border-radius: 12px !important;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 1rem 1.25rem !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      color: #e8edf3 !important;
+    }
+    .faq-icon {
+      color: #c9a84c !important;
+      font-weight: 700;
+    }
+    .faq-a {
+      padding: 0 1.25rem 1.1rem !important;
+      font-size: 0.87rem !important;
+      color: #8b949e !important;
+      line-height: 1.75 !important;
+    }
+
+    /* ── SECTION HEADERS (DM Mono eyebrow + Cormorant title) ── */
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .section-sub-line {
+      font-size: 0.88rem;
+      color: #5c6b7a;
+    }
+
+    /* ── STICKY CTA BAR refinement ── */
+    #sticky-cta-bar {
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .sticky-cta-btn {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      border-radius: 20px;
+    }
+  </style>
 </head>
 <body>
 
