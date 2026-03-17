@@ -177,18 +177,30 @@
     .card-badge-versicherung { background: rgba(62,207,142,0.1) !important; color: #3ecf8e !important; border: 1px solid rgba(62,207,142,0.2); }
     .card-badge-legal { background: rgba(245,158,11,0.1) !important; color: #f59e0b !important; border: 1px solid rgba(245,158,11,0.2); }
     .card-badge-teal { background: rgba(0,196,167,0.1) !important; color: #00c4a7 !important; border: 1px solid rgba(0,196,167,0.2); }
-    .card .card-desc, .card-featured .card-desc {
+    .card .card-desc, .card-featured .card-desc, .card-featured-meta {
       font-size: 0.82rem;
-      color: #5c6b7a;
+      color: #a0aec0 !important;
       line-height: 1.65;
     }
-    .card h2 a, .card h2 {
+    .card h2 a, .card h2, .card h3 a {
       font-size: 1rem;
       font-weight: 700;
+      color: #c9a84c !important;
+    }
+    .card h2 a:hover, .card h3 a:hover {
+      color: #e4c97a !important;
+    }
+    .card p, .card-desc {
+      color: #a0aec0 !important;
     }
     .card .cta-btn, .cta-btn {
       font-family: 'DM Mono', monospace;
       font-size: 0.78rem;
+    }
+    .card-featured .card-featured-text h2 a {
+      color: #e4c97a !important;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.15rem;
     }
 
     /* ── PROVIDER TABLE ── */
@@ -218,6 +230,10 @@
     .premium-table td {
       border-bottom: 1px solid rgba(255,255,255,0.04);
       font-size: 0.84rem;
+      color: #a0aec0;
+    }
+    .premium-table td strong, .premium-table td .table-badge {
+      color: #e8edf3;
     }
     .premium-table tr:hover td {
       background: rgba(255,255,255,0.015);
@@ -251,7 +267,13 @@
       padding: 1rem 1.25rem !important;
       font-size: 0.95rem !important;
       font-weight: 700 !important;
-      color: #e8edf3 !important;
+      color: #c9a84c !important;
+      background: transparent !important;
+      border: none !important;
+      cursor: pointer;
+    }
+    .faq-q:hover {
+      color: #e4c97a !important;
     }
     .faq-icon {
       color: #c9a84c !important;
@@ -260,8 +282,18 @@
     .faq-a {
       padding: 0 1.25rem 1.1rem !important;
       font-size: 0.87rem !important;
-      color: #8b949e !important;
+      color: #a0aec0 !important;
       line-height: 1.75 !important;
+    }
+    .faq-a strong {
+      color: #e8edf3 !important;
+    }
+    .faq-a a {
+      color: #00c4a7 !important;
+    }
+    .faq-item.open .faq-a,
+    .faq-a[style] {
+      color: #a0aec0 !important;
     }
 
     /* ── SECTION HEADERS (DM Mono eyebrow + Cormorant title) ── */
@@ -271,7 +303,13 @@
     }
     .section-sub-line {
       font-size: 0.88rem;
-      color: #5c6b7a;
+      color: #a0aec0;
+    }
+    .hero-sub {
+      color: #a0aec0 !important;
+    }
+    .sim-section-sub {
+      color: #a0aec0 !important;
     }
 
     /* ── STICKY CTA BAR refinement ── */
