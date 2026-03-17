@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <script type="application/ld+json">
   {
@@ -59,28 +59,32 @@
 </head>
 <body>
 
-  <header class="global-header" id="globalHeader">
-    <div class="header-inner">
-      <a href="/" class="logo" aria-label="ExpatScore Home">
-        <span class="logo-icon">◈</span>
-        <span class="logo-text">Expat<span class="logo-accent">Score</span></span>
-      </a>
-      <nav class="main-nav" aria-label="Hauptnavigation">
-        <a href="/banking.html" class="nav-link">Banking</a>
-        <a href="/insurance.html" class="nav-link">Insurance</a>
-        <a href="/schufa-simulator.html" class="nav-link">SCHUFA Tool</a>
-        <a href="/about.html" class="nav-link nav-active">Über uns</a>
-      </nav>
-      <a href="/schufa-simulator.html" class="cta-btn cta-primary header-cta">Score prüfen</a>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">☰</button>
-    </div>
-  </header>
+  <div class="progress-bar" id="progressBar"></div>
+
+<header class="global-header">
+  <div class="header-inner inner">
+    <div class="logo"><a href="index.html">ExpatScore.de</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">&#9776;</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="banking.html">Banking</a>
+      <a href="tools/schufa-simulator.html">SCHUFA Tool</a>
+      <a href="guides/schufa-guide.html">SCHUFA Guide</a>
+      <a href="insurance.html">Versicherung</a>
+      <a href="about.html" aria-current="page">Über uns</a>
+    </nav>
+  </div>
+</header>
+
+<div class="werbung-bar">
+  <strong>&#9873; Anzeige:</strong> Diese Seite enthält Affiliate-Links. Bei Kontoeröffnung erhalten wir eine Provision &mdash; für dich keine Mehrkosten.
+</div>
 
   <!-- Hero -->
   <section class="about-hero">
     <div class="about-hero-inner">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
+        <a href="index.html">Home</a>
         <span class="breadcrumb-sep">›</span>
         <span>Über uns</span>
       </nav>
@@ -134,7 +138,7 @@
         <p>ExpatScore.de ist kein Bank, kein Makler und kein Finanzberater. Wir sind ein <strong>unabhängiges redaktionelles Portal</strong>. Das bedeutet:</p>
         <ul>
           <li>Wir erstellen Vergleiche, Guides und Tools, um Expats bei der Orientierung zu helfen</li>
-          <li>Wir werden durch Affiliate-Provisionen finanziert — <a href="/affiliate-hinweis.html">transparent offengelegt</a></li>
+          <li>Wir werden durch Affiliate-Provisionen finanziert — <a href="affiliate-hinweis.html">transparent offengelegt</a></li>
           <li>Wir empfehlen kein Produkt, das wir nicht für seriös und expat-geeignet halten</li>
           <li>Alle Inhalte spiegeln den Stand unserer Recherche wider — keine bezahlten Empfehlungen</li>
         </ul>
@@ -194,25 +198,25 @@
         <p>Alle Finanzthemen, die für Expats in Deutschland relevant sind — an einem Ort.</p>
       </div>
       <div class="coverage-grid">
-        <a href="/banking.html" class="coverage-card">
+        <a href="banking.html" class="coverage-card">
           <div class="coverage-icon">🏦</div>
           <h3>Banking &amp; Konten</h3>
           <p>Welches Konto eignet sich für Expats ohne SCHUFA? Konto ohne Anmeldung, Neobanken, DKB, N26 und mehr.</p>
           <span class="coverage-link">Alle Banking-Guides →</span>
         </a>
-        <a href="/schufa-simulator.html" class="coverage-card">
+        <a href="tools/schufa-simulator.html" class="coverage-card">
           <div class="coverage-icon">📊</div>
           <h3>SCHUFA &amp; Kreditwürdigkeit</h3>
           <p>SCHUFA-Score verstehen, aufbauen und schützen. Mit kostenlosem Score-Simulator für Expats.</p>
           <span class="coverage-link">SCHUFA Guide →</span>
         </a>
-        <a href="/insurance.html" class="coverage-card">
+        <a href="insurance.html" class="coverage-card">
           <div class="coverage-icon">🏥</div>
           <h3>Krankenversicherung</h3>
           <p>GKV vs. PKV, TK, AOK und andere Kassen — welche ist die richtige für Ihren Status?</p>
           <span class="coverage-link">Versicherungs-Guides →</span>
         </a>
-        <a href="/blocked-account-germany.html" class="coverage-card">
+        <a href="banking/blocked-account-germany.html" class="coverage-card">
           <div class="coverage-icon">🔒</div>
           <h3>Sperrkonto</h3>
           <p>Fintiba vs. Expatrio vs. Deutsche Bank — welches Sperrkonto ist für Studenten und Nicht-EU-Bürger am besten?</p>
@@ -232,13 +236,13 @@
         <a href="mailto:kontakt@expatscore.de" class="cta-btn cta-primary">
           kontakt@expatscore.de
         </a>
-        <a href="/schufa-simulator.html" class="cta-btn cta-secondary">
+        <a href="tools/schufa-simulator.html" class="cta-btn cta-secondary">
           Score Simulator testen
         </a>
       </div>
       <p style="font-size:0.82rem;color:var(--text-muted);margin-top:2rem;">
         Antwortzeit: in der Regel innerhalb von 48 Stunden ·
-        Kooperationsanfragen: <a href="/affiliate-hinweis.html">Affiliate-Hinweis lesen</a>
+        Kooperationsanfragen: <a href="affiliate-hinweis.html">Affiliate-Hinweis lesen</a>
       </p>
     </div>
   </section>
@@ -246,25 +250,25 @@
   <footer class="global-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="/" class="logo"><span class="logo-icon">◈</span> Expat<span class="logo-accent">Score</span></a>
+        <a href="index.html" class="logo"><span class="logo-icon">◈</span> Expat<span class="logo-accent">Score</span></a>
         <p class="footer-tagline">Die #1 Finanzplattform für Expats in Deutschland.</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
           <div class="footer-col-title">Legal</div>
-          <a href="/impressum.html">Impressum</a>
-          <a href="/datenschutz.html">Datenschutz</a>
-          <a href="/affiliate-hinweis.html">Affiliate-Hinweis</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Über uns</div>
-          <a href="/about.html">Über ExpatScore</a>
+          <a href="about.html">Über ExpatScore</a>
           <a href="mailto:kontakt@expatscore.de">Kontakt</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Yassine Chaikhi · ExpatScore.de · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
+      <p>© 2026 Yassine Chaikhi · ExpatScore.de · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
     </div>
   </footer>
 
