@@ -8,12 +8,12 @@
   <meta name="description" content="Wie ExpatScore.de durch Affiliate-Partnerschaften finanziert wird — vollständige Transparenz über alle Partner, Kennzeichnungspflichten nach UWG §5a und unsere redaktionelle Unabhängigkeit.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
-  <link rel="canonical" href="https://expatscore.de/affiliate-hinweis.html">
+  <link rel="canonical" href="https://www.expatscore.de/affiliate-hinweis">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
   <meta name="theme-color" content="#080c10">
 
   <!-- Fonts -->
@@ -332,20 +332,21 @@
 </head>
 <body>
 
+<div class="progress-bar" id="progressBar"></div>
+
+
 <!-- GLOBAL HEADER -->
 <header class="global-header">
   <div class="header-inner">
-    <div class="logo"><a href="/">ExpatScore.de</a></div>
-    <button class="nav-toggle"
-            onclick="this.closest('header').querySelector('.nav-links').classList.toggle('open')"
-            aria-label="Navigation öffnen">☰</button>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/banking.html">Bankkonten</a>
-      <a href="/konto-ohne-anmeldung.html">Online-Ident</a>
+    <div class="logo"><a href="index.html">ExpatScore.de</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">&#9776;</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="banking.html">Banking</a>
+      <a href="schufa-simulator.html">SCHUFA Tool</a>
       <a href="schufa-guide.html">SCHUFA Guide</a>
-      <a href="">Versicherungen</a>
-      <a href="impressum.html">Impressum</a>
+      <a href="insurance.html">Versicherung</a>
+      <a href="about.html">Über uns</a>
     </nav>
   </div>
 </header>
@@ -373,13 +374,13 @@
 <!-- BREADCRUMBS -->
 <nav class="breadcrumbs" aria-label="Breadcrumb"
      style="max-width:900px; margin:0 auto; padding:0.75rem 1.5rem 0;">
-  <a href="/">Home</a> › <span class="current">Affiliate-Hinweis</span>
+  <a href="index.html">Home</a> › <span class="current">Affiliate-Hinweis</span>
 </nav>
 
 <!-- MAIN CONTENT -->
 <div class="aff-body">
 
-  <a href="/" class="page-back">← Zurück zur Startseite</a>
+  <a href="index.html" class="page-back">← Zurück zur Startseite</a>
 
   <!-- ══════════════════════════════════
        UNSERE VERPFLICHTUNG (PLEDGE)
@@ -476,7 +477,7 @@
 
     <p class="aff-para">
       Du kannst Affiliate-Tracking jederzeit über unsere
-      <a href="/datenschutz.html">Datenschutzerklärung</a> oder das Cookie-Banner widerrufen.
+      <a href="datenschutz.html">Datenschutzerklärung</a> oder das Cookie-Banner widerrufen.
       Alle anderen Inhalte auf ExpatScore.de bleiben uneingeschränkt zugänglich.
     </p>
   </div>
@@ -747,7 +748,7 @@
           Wie kann ich Affiliate-Tracking deaktivieren?
         </div>
         <div class="qa-a">
-          Über unser <a href="#" onclick="openModal('cookie-settings'); return false;">Cookie-Einstellungs-Panel</a> kannst du Affiliate-Tracking jederzeit deaktivieren — ohne andere Funktionen der Website zu verlieren. Alternativ: Öffne unsere <a href="/datenschutz.html">Datenschutzerklärung</a> und klicke auf „Einstellungen öffnen". Die Deaktivierung gilt sofort für zukünftige Besuche.
+          Über unser <a href="#" onclick="openModal('cookie-settings'); return false;">Cookie-Einstellungs-Panel</a> kannst du Affiliate-Tracking jederzeit deaktivieren — ohne andere Funktionen der Website zu verlieren. Alternativ: Öffne unsere <a href="datenschutz.html">Datenschutzerklärung</a> und klicke auf „Einstellungen öffnen". Die Deaktivierung gilt sofort für zukünftige Besuche.
         </div>
       </div>
 
@@ -773,15 +774,14 @@
       <div class="contact-block-title">Fragen oder Feedback zu unseren Partnerschaften?</div>
       <div class="contact-block-sub">Wir antworten in der Regel innerhalb von 48 Stunden · Deutsch und Englisch willkommen</div>
     </div>
-    <a href="mailto:kontakt@expatscore.de?subject=Affiliate-Anfrage%20ExpatScore.de"
-       class="contact-block-btn">Schreib uns →</a>
+    <a href="/cdn-cgi/l/email-protection#a4cfcbcad0c5cfd0e4c1dcd4c5d0d7c7cbd6c18ac0c19bd7d1c6cec1c7d099e5c2c2cdc8cdc5d0c189e5cac2d6c5c3c1819694e1dcd4c5d0f7c7cbd6c18ac0c1" class="contact-block-btn">Schreib uns →</a>
   </div>
 
   <!-- Related legal links -->
   <div style="margin-top:2rem;">
     <div style="font-family:'DM Mono',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.14em; color:#5c6b7a; margin-bottom:0.85rem;">Weitere rechtliche Dokumente</div>
     <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:0.6rem;">
-      <a href="/datenschutz.html"
+      <a href="datenschutz.html"
          style="display:flex;align-items:center;gap:0.7rem;padding:0.85rem 1.1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
          onmouseover="this.style.borderColor='rgba(0,196,167,0.3)';this.style.background='rgba(0,196,167,0.04)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.025)'">
@@ -801,7 +801,7 @@
           <div style="font-size:0.75rem;color:#5c6b7a;">§ 5 DDG · Anbieter</div>
         </div>
       </a>
-      <a href="/about.html"
+      <a href="about.html"
          style="display:flex;align-items:center;gap:0.7rem;padding:0.85rem 1.1rem;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:10px;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
          onmouseover="this.style.borderColor='rgba(74,158,255,0.3)';this.style.background='rgba(74,158,255,0.04)'"
          onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.025)'">
@@ -819,99 +819,62 @@
 <!-- GLOBAL FOOTER -->
 <footer class="global-footer">
   <div class="inner">
-    <div class="footer-disclaimer">
-      <strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr
-    </div>
-    <nav class="footer-legal-links">
-      <a href="/about.html">Über uns</a>
-      <a href="/banking.html">Bankkonten</a>
+    <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
+    <nav class="footer-legal-links" aria-label="Legal-Links">
+      <a href="about.html">Über uns</a>
+      <a href="banking.html">Banking</a>
       <a href="schufa-guide.html">SCHUFA Guide</a>
       <a href="impressum.html">Impressum</a>
-      <a href="/datenschutz.html">Datenschutzerklärung</a>
-      <a href="/affiliate-hinweis.html">Affiliate-Hinweis</a>
-      <a href="#" onclick="openModal('cookie-settings'); return false;">Cookie-Einstellungen</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
+      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
     </nav>
     <div class="footer-disclosure">
-      <strong>⚑ Affiliate-Hinweis:</strong>
-      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Produkt nutzt,
-      erhalten wir eine Provision — für dich entstehen keine zusätzlichen Kosten.
+      <strong>&#9873; Affiliate-Hinweis (Werbung):</strong>
+      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
     </div>
-    <p class="footer-copy">
-      © 2026 Yassine Chaikhi · ExpatScore.de · Alle Angaben ohne Gewähr ·
-      <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a>
-    </p>
+    <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Alle Angaben ohne Gewähr &middot; Kein Ersatz für individuelle Rechts- oder Finanzberatung. &middot; <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
   </div>
 </footer>
 
-<!-- JavaScript -->
-<script src="script.js"></script>
-
 <!-- COOKIE BANNER -->
-<div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
-  <p>Diese Seite verwendet Cookies. Mehr Infos in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+<div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
+  <div class="cookie-banner-header">
+    <div class="cookie-banner-icon" aria-hidden="true">&#127850;</div>
+    <div class="cookie-banner-body">
+      <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
+      <div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</div>
+    </div>
+  </div>
   <div class="cookie-btns">
-    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
-    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
     <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
+    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
   </div>
 </div>
 
 <!-- COOKIE SETTINGS MODAL -->
 <div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">✕</button>
+    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">&#10005;</button>
     <h2>Cookie-Einstellungen</h2>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.6;">
-      Technisch notwendige Cookies können nicht deaktiviert werden.
-    </p>
+    <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info">
-        <strong>Technisch notwendig</strong>
-        <span>Einwilligungsspeicherung. Immer aktiv.</span>
-      </div>
-      <label class="toggle-switch">
-        <input type="checkbox" checked disabled>
-        <span class="toggle-slider"></span>
-      </label>
+      <div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div>
+      <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info">
-        <strong>Analyse &amp; Statistik</strong>
-        <span>Pseudonymisierte Nutzungsdaten.</span>
-      </div>
-      <label class="toggle-switch">
-        <input type="checkbox" id="toggle-analytics">
-        <span class="toggle-slider"></span>
-      </label>
+      <div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info">
-        <strong>Affiliate-Tracking</strong>
-        <span>Nur nach Zustimmung.</span>
-      </div>
-      <label class="toggle-switch">
-        <input type="checkbox" id="toggle-affiliate">
-        <span class="toggle-slider"></span>
-      </label>
+      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
     </div>
     <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
   </div>
 </div>
 
-<script>
-function openModal(id)  { const m=document.getElementById('modal-'+id); if(m) m.classList.add('open'); }
-function closeModal(id) { const m=document.getElementById('modal-'+id); if(m) m.classList.remove('open'); }
-function acceptCookies()  { localStorage.setItem('cookieConsent','all');       document.getElementById('cookie-banner').style.display='none'; closeModal('cookie-settings'); }
-function declineCookies() { localStorage.setItem('cookieConsent','necessary'); document.getElementById('cookie-banner').style.display='none'; closeModal('cookie-settings'); }
-function saveGranularCookies() {
-  const a=document.getElementById('toggle-analytics')?.checked;
-  const af=document.getElementById('toggle-affiliate')?.checked;
-  localStorage.setItem('cookieConsent',JSON.stringify({analytics:a,affiliate:af}));
-  document.getElementById('cookie-banner').style.display='none';
-  closeModal('cookie-settings');
-}
-(function(){ if(localStorage.getItem('cookieConsent')) document.getElementById('cookie-banner').style.display='none'; })();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

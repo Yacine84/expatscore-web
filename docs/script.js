@@ -1,179 +1,127 @@
-// script.js – ExpatScore.de (Production Ready)
-
+// script.js – ExpatScore.de (Production v3.2 — Unified)
 'use strict';
 
-// ----------------------------------------------------------------------
-// 1. COOKIE CONSENT MANAGEMENT
-// ----------------------------------------------------------------------
+/* ============================================================
+   1. COOKIE CONSENT
+   ============================================================ */
+function openModal(id)  { var m = document.getElementById('modal-' + id); if (m) m.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeModal(id) { var m = document.getElementById('modal-' + id); if (m) m.classList.remove('open'); document.body.style.overflow = ''; }
+function hideBanner()   { var b = document.getElementById('cookie-banner'); if (b) b.classList.remove('visible'); }
+
 function acceptCookies() {
-  const prefs = { necessary: true, analytics: true, affiliate: true };
-  localStorage.setItem('cookieConsent', JSON.stringify(prefs));
-  const banner = document.getElementById('cookie-banner');
-  if (banner) {
-    banner.classList.add('hidden');
-    banner.style.display = 'none';
-  }
-  updateToggleSwitches(prefs);
+  localStorage.setItem('cookieConsent', 'all');
+  hideBanner(); closeModal('cookie-settings');
+  updateToggles({ analytics: true, affiliate: true });
 }
 
 function declineCookies() {
-  const prefs = { necessary: true, analytics: false, affiliate: false };
-  localStorage.setItem('cookieConsent', JSON.stringify(prefs));
-  const banner = document.getElementById('cookie-banner');
-  if (banner) {
-    banner.classList.add('hidden');
-    banner.style.display = 'none';
-  }
-  updateToggleSwitches(prefs);
+  localStorage.setItem('cookieConsent', 'necessary');
+  hideBanner(); closeModal('cookie-settings');
+  updateToggles({ analytics: false, affiliate: false });
 }
 
 function saveGranularCookies() {
-  const analytics = document.getElementById('toggle-analytics');
-  const affiliate = document.getElementById('toggle-affiliate');
-  const prefs = {
-    necessary: true,
-    analytics: analytics ? analytics.checked : false,
-    affiliate: affiliate ? affiliate.checked : false
-  };
+  var a = document.getElementById('toggle-analytics');
+  var f = document.getElementById('toggle-affiliate');
+  var prefs = { necessary: true, analytics: a ? a.checked : false, affiliate: f ? f.checked : false };
   localStorage.setItem('cookieConsent', JSON.stringify(prefs));
-  closeModal('cookie-settings');
-  const banner = document.getElementById('cookie-banner');
-  if (banner) {
-    banner.classList.add('hidden');
-    banner.style.display = 'none';
-  }
+  hideBanner(); closeModal('cookie-settings');
 }
 
-function updateToggleSwitches(prefs) {
-  const ta = document.getElementById('toggle-analytics');
-  const tf = document.getElementById('toggle-affiliate');
-  if (ta) ta.checked = !!prefs.analytics;
-  if (tf) tf.checked = !!prefs.affiliate;
+function updateToggles(prefs) {
+  var a = document.getElementById('toggle-analytics');
+  var f = document.getElementById('toggle-affiliate');
+  if (a) a.checked = !!prefs.analytics;
+  if (f) f.checked = !!prefs.affiliate;
 }
 
-// ----------------------------------------------------------------------
-// 2. MODAL SYSTEM
-// ----------------------------------------------------------------------
-function openModal(name) {
-  const el = document.getElementById('modal-' + name);
-  if (el) {
-    el.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-}
-
-function closeModal(name) {
-  const el = document.getElementById('modal-' + name);
-  if (el) {
-    el.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
-
-// ----------------------------------------------------------------------
-// 3. AFFILIATE CLICK TRACKING
-// ----------------------------------------------------------------------
+/* ============================================================
+   2. AFFILIATE CLICK TRACKING
+   ============================================================ */
 function trackClick(partner) {
-  const stored = localStorage.getItem('cookieConsent');
-  if (stored) {
-    try {
-      const prefs = JSON.parse(stored);
-      if (!prefs.affiliate) return;
-    } catch(e) { return; }
-  } else {
-    return;
+  var stored = localStorage.getItem('cookieConsent');
+  if (!stored) return;
+  var allowed = false;
+  if (stored === 'all') { allowed = true; }
+  else {
+    try { var p = JSON.parse(stored); allowed = !!p.affiliate; } catch(e) {}
   }
-
+  if (!allowed) return;
   try {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'affiliate_click', { event_category: 'affiliate', event_label: partner });
-    }
-    if (typeof dataLayer !== 'undefined') {
-      dataLayer.push({ event: 'affiliate_click', partner: partner });
-    }
+    if (typeof gtag !== 'undefined') gtag('event', 'affiliate_click', { event_category: 'affiliate', event_label: partner });
+    if (typeof dataLayer !== 'undefined') dataLayer.push({ event: 'affiliate_click', partner: partner });
   } catch(e) {}
 }
 
-// ----------------------------------------------------------------------
-// 4. INITIALISATIONS (DOMContentLoaded)
-// ----------------------------------------------------------------------
-window.addEventListener('DOMContentLoaded', function() {
-  // Cookie banner initialisation
-  const storedConsent = localStorage.getItem('cookieConsent');
-  if (storedConsent) {
-    const banner = document.getElementById('cookie-banner');
-    if (banner) banner.classList.add('hidden');
-    try {
-      const prefs = JSON.parse(storedConsent);
-      updateToggleSwitches(prefs);
-    } catch(e) {}
+/* ============================================================
+   3. INIT ON DOM READY
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Cookie banner: show if no consent stored
+  var consent = localStorage.getItem('cookieConsent');
+  if (!consent) {
+    setTimeout(function() { var b = document.getElementById('cookie-banner'); if (b) b.classList.add('visible'); }, 1200);
+  } else {
+    hideBanner();
+    // Restore toggle states
+    if (consent === 'all') {
+      updateToggles({ analytics: true, affiliate: true });
+    } else if (consent === 'necessary') {
+      updateToggles({ analytics: false, affiliate: false });
+    } else {
+      try { updateToggles(JSON.parse(consent)); } catch(e) {}
+    }
   }
 
-  // Set current month/year in #current-date
-  const dateEl = document.getElementById('current-date');
+  // Mobile nav toggle
+  var nt = document.getElementById('navToggle'), nl = document.getElementById('navLinks');
+  if (nt && nl) nt.addEventListener('click', function() { nl.classList.toggle('open'); });
+
+  // Sticky header
+  var header = document.querySelector('.global-header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('sticky', window.scrollY > 50);
+    });
+  }
+
+  // Progress bar
+  window.addEventListener('scroll', function() {
+    var el = document.getElementById('progressBar'); if (!el) return;
+    var h = document.body.scrollHeight - window.innerHeight;
+    if (h > 0) el.style.width = Math.min(window.scrollY / h * 100, 100) + '%';
+  });
+
+  // Current date
+  var dateEl = document.getElementById('current-date');
   if (dateEl) {
-    const now = new Date();
-    const months = ['Januar','Februar','März','April','Mai','Juni',
-                    'Juli','August','September','Oktober','November','Dezember'];
+    var now = new Date();
+    var months = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
     dateEl.textContent = months[now.getMonth()] + ' ' + now.getFullYear();
   }
 
-  // Sticky header on scroll
-  const header = document.querySelector('.global-header');
-  if (header) {
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        header.classList.add('sticky');
-      } else {
-        header.classList.remove('sticky');
-      }
-    });
-  }
-
-  // Affiliate links: force target="_blank" and noopener
-  const affiliateLinks = document.querySelectorAll('.cta-blue, .cta-green, .cta-gold, .card-cta');
-  affiliateLinks.forEach(function(link) {
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
-  });
-
-  // Modal event listeners
+  // Modal backdrop close
   document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
     overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
+      if (e.target === overlay) { overlay.classList.remove('open'); document.body.style.overflow = ''; }
     });
   });
-
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-      document.querySelectorAll('.modal-overlay.active').forEach(function(modal) {
-        modal.classList.remove('active');
-      });
+      document.querySelectorAll('.modal-overlay.open').forEach(function(m) { m.classList.remove('open'); });
       document.body.style.overflow = '';
     }
   });
 
-  // IntersectionObserver for reveal animations
+  // Reveal animations
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(function(entries) {
+    var obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
       });
     }, { threshold: 0.10 });
-
-    document.querySelectorAll('.reveal, .trap-card, .step-card').forEach(function(el) {
-      observer.observe(el);
-    });
+    document.querySelectorAll('.reveal, .trap-card, .step-card').forEach(function(el) { obs.observe(el); });
   } else {
-    // Fallback for browsers without IntersectionObserver
-    document.querySelectorAll('.reveal, .trap-card, .step-card').forEach(function(el) {
-      el.classList.add('visible');
-    });
+    document.querySelectorAll('.reveal, .trap-card, .step-card').forEach(function(el) { el.classList.add('visible'); });
   }
 });

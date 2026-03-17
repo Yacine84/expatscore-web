@@ -565,7 +565,7 @@ code, .mono {
   padding: var(--space-lg) var(--space-md);
 }
 
-.article-body p { font-size: 1.125rem; } /* 18px — required */
+.article-body p { font-size: 1.25rem; } /* 20px — required */
 
 .article-body h2 { margin-top: var(--space-lg); }
 
@@ -574,7 +574,7 @@ code, .mono {
 }
 
 .article-body ul li, .article-body ol li {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.75;
   color: var(--text-secondary);
   padding-left: 0.25rem;
@@ -1138,7 +1138,7 @@ code, .mono {
   h2 { font-size: 1.35rem; }
   .hero-h1 { font-size: 1.75rem; }
   p { font-size: 1rem; }
-  .article-body p { font-size: 1rem; }
+  .article-body p { font-size: 1.125rem; } /* 18px minimum on mobile */
 }
 
 

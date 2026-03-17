@@ -7,18 +7,18 @@
   <meta name="description" content="Find out your estimated SCHUFA score in 90 seconds. Free interactive simulator for expats in Germany — get personalised bank recommendations based on your profile.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
-  <link rel="canonical" href="https://www.expatscore.de/tools/schufa-simulator">
+  <link rel="canonical" href="https://www.expatscore.de/schufa-simulator">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Free SCHUFA Score Simulator for Expats in Germany 2026">
   <meta property="og:description" content="Answer 6 questions. Get your estimated SCHUFA range and personalised bank recommendations — free, instant, no registration.">
   <meta property="og:site_name" content="ExpatScore.de">
-  <meta property="og:image" content="https://www.expatscore.de/assets/img/og-image.jpg">
+  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free SCHUFA Score Simulator for Expats · ExpatScore.de">
   <meta name="twitter:description" content="6 questions. Instant SCHUFA estimate. Personalised bank recommendations.">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <meta name="theme-color" content="#080c10">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator","url":"https://www.expatscore.de/tools/schufa-simulator","description":"Interactive SCHUFA score estimator for expats in Germany","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator","url":"https://www.expatscore.de/schufa-simulator","description":"Interactive SCHUFA score estimator for expats in Germany","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -153,16 +153,16 @@
 <div class="progress-bar" id="progressBar"></div>
 
 <header class="global-header">
-  <div class="header-inner inner">
+  <div class="header-inner">
     <div class="logo"><a href="index.html">ExpatScore.de</a></div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">&#9776;</button>
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="banking.html">Banking</a>
+      <a href="schufa-simulator.html" aria-current="page">SCHUFA Tool</a>
       <a href="schufa-guide.html">SCHUFA Guide</a>
-      <a href="insurance.html">Insurance</a>
-      <a href="impressum.html">Legal</a>
-      <a href="about.html">About</a>
+      <a href="insurance.html">Versicherung</a>
+      <a href="about.html">Über uns</a>
     </nav>
   </div>
 </header>
@@ -277,47 +277,63 @@
 
 <footer class="global-footer">
   <div class="inner">
-    <div class="footer-disclaimer"><strong>No Financial Advice</strong> &mdash; All information without guarantee</div>
-    <nav class="footer-legal-links">
-      <a href="about.html">About</a>
+    <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
+    <nav class="footer-legal-links" aria-label="Legal-Links">
+      <a href="about.html">Über uns</a>
       <a href="banking.html">Banking</a>
       <a href="schufa-guide.html">SCHUFA Guide</a>
       <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="affiliate-hinweis.html">Affiliate</a>
-      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie Settings</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
+      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
     </nav>
     <div class="footer-disclosure">
-      <strong>&#9873; Affiliate Disclosure:</strong> This page contains partner links. If you open an account through our links, we may receive a commission from the provider — at no additional cost to you.
+      <strong>&#9873; Affiliate-Hinweis (Werbung):</strong>
+      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
     </div>
-    <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Not a substitute for individual financial advice.</p>
+    <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Alle Angaben ohne Gewähr &middot; Kein Ersatz für individuelle Rechts- oder Finanzberatung. &middot; <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
   </div>
 </footer>
 
-<div id="cookie-banner">
-  <p>We use cookies for technical functions and — with your consent — analytics and affiliate tracking. See our <a href="datenschutz.html">Privacy Policy</a>.</p>
-  <div class="cookie-btns">
-    <button class="cookie-accept" onclick="acceptCookies()">Accept all</button>
-    <button class="cookie-decline" onclick="declineCookies()">Essential only</button>
-    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
+  <div class="cookie-banner-header">
+    <div class="cookie-banner-icon" aria-hidden="true">&#127850;</div>
+    <div class="cookie-banner-body">
+      <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
+      <div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</div>
+    </div>
   </div>
-</div>
-<div class="modal-overlay" id="modal-cookie-settings">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Close">&#10005;</button>
-    <h2>Cookie Settings</h2>
-    <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:1.25rem;">Technically necessary cookies cannot be deactivated.</p>
-    <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Technically necessary</strong><span>Always active.</span></div><label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label></div>
-    <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Analytics &amp; Statistics</strong><span>Pseudonymised usage data.</span></div><label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label></div>
-    <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Affiliate Tracking</strong><span>Commission attribution only.</span></div><label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label></div>
-    <button class="cookie-save-btn" onclick="saveGranularCookies()">Save preferences</button>
+  <div class="cookie-btns">
+    <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
+    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
   </div>
 </div>
 
-<div id="sticky-cta-bar">
-  <span class="sticky-text"><strong id="stickyBankName">N26</strong> &mdash; Open your account in 8 minutes. No SCHUFA required.</span>
-  <a href="#" id="stickyCTALink" class="sticky-cta-btn" target="_blank" rel="noopener sponsored">Open account free &rarr;</a>
+<!-- COOKIE SETTINGS MODAL -->
+<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">&#10005;</button>
+    <h2>Cookie-Einstellungen</h2>
+    <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div>
+      <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
+    </div>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
+  </div>
 </div>
+
+<script src="script.js"></script>
 
 <script>
 /* ============================================================

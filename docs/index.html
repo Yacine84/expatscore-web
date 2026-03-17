@@ -16,13 +16,13 @@
   <meta property="og:locale" content="de_DE">
   <meta property="og:url" content="https://www.expatscore.de/">
   <meta property="og:site_name" content="ExpatScore.de">
-  <meta property="og:image" content="https://expatscore.de/og-image.jpg">
+  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ExpatScore.de – SCHUFA Simulator &amp; Banking für Expats">
   <meta name="twitter:description" content="Kostenloser SCHUFA Score Check + unabhängige Finanz-Ratgeber für Expats in Deutschland.">
-  <meta name="twitter:image" content="https://expatscore.de/og-image.jpg">
+  <meta name="twitter:image" content="https://www.expatscore.de/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -36,7 +36,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Schema: WebSite -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ExpatScore.de","url": "https://www.expatscore.de/","description":"SCHUFA Score Simulator und Experten-Ratgeber für Expats in Deutschland","publisher":{"@type":"Organization","name":"ExpatScore.de","logo":{"@type":"ImageObject","url": "https://www.expatscore.de/apple-touch-icon.png"}},"potentialAction":{"@type":"SearchAction","target":"https://expatscore.de/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ExpatScore.de","url": "https://www.expatscore.de/","description":"SCHUFA Score Simulator und Experten-Ratgeber für Expats in Deutschland","publisher":{"@type":"Organization","name":"ExpatScore.de","logo":{"@type":"ImageObject","url": "https://www.expatscore.de/apple-touch-icon.png"}},"potentialAction":{"@type":"SearchAction","target":"https://www.expatscore.de/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
 
   <!-- Schema: WebApplication (SCHUFA Simulator) -->
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator 2026","url": "https://www.expatscore.de/#schufa-simulator","description":"Kostenloser interaktiver SCHUFA Score Estimator für Expats in Deutschland — 6 Fragen, sofortiges Ergebnis, personalisierte Bankempfehlungen","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
@@ -453,7 +453,7 @@
     <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
     <nav class="footer-legal-links" aria-label="Legal-Links">
       <a href="about.html">Über uns</a>
-      <a href="banking.html">Bankkonten</a>
+      <a href="banking.html">Banking</a>
       <a href="schufa-guide.html">SCHUFA Guide</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutzerklärung</a>
@@ -464,15 +464,9 @@
       <strong>&#9873; Affiliate-Hinweis (Werbung):</strong>
       Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
     </div>
-    <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Alle Angaben ohne Gewähr &middot; Kein Ersatz für individuelle Rechts- oder Finanzberatung. &middot; <a href="/cdn-cgi/l/email-protection#92f9fdfce6f3f9e6d2f7eae2f3e6e1f1fde0f7bcf6f7"><span class="__cf_email__" data-cfemail="e58e8a8b91848e91a5809d95849196868a9780cb8180">[email&#160;protected]</span></a></p>
+    <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Alle Angaben ohne Gewähr &middot; Kein Ersatz für individuelle Rechts- oder Finanzberatung. &middot; <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
   </div>
 </footer>
-
-<!-- STICKY CTA BAR — shown after simulator completes -->
-<div id="sticky-cta-bar" aria-live="polite">
-  <span class="sticky-text"><strong id="stickyBankName">N26</strong> — Konto in 8 Minuten eröffnen. Kein SCHUFA-Check.</span>
-  <a href="#" id="stickyCTALink" class="sticky-cta-btn" target="_blank" rel="noopener sponsored">Konto kostenlos eröffnen &rarr;</a>
-</div>
 
 <!-- COOKIE BANNER -->
 <div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
@@ -490,7 +484,7 @@
   </div>
 </div>
 
-<!-- COOKIE MODAL -->
+<!-- COOKIE SETTINGS MODAL -->
 <div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">&#10005;</button>
@@ -505,14 +499,20 @@
       <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen. Keine Personaldaten an uns.</span></div>
+      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
       <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
     </div>
     <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
   </div>
 </div>
 
-<script data-cfasync="false" src="script.js"></script>
+<script src="script.js"></script>
+<!-- STICKY CTA BAR — shown after simulator completes -->
+<div id="sticky-cta-bar" aria-live="polite">
+  <span class="sticky-text"><strong id="stickyBankName">N26</strong> — Konto in 8 Minuten eröffnen. Kein SCHUFA-Check.</span>
+  <a href="#" id="stickyCTALink" class="sticky-cta-btn" target="_blank" rel="noopener sponsored">Konto kostenlos eröffnen &rarr;</a>
+</div>
+
 <script>
 /* ============================================================
    SIMULATOR — QUESTION DATA (DE)

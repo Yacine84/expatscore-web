@@ -1,401 +1,310 @@
 #!/usr/bin/env python3
 """
-generate_pages.py – Production static site generator for ExpatScore.de
-Reads data.csv from root, outputs into docs/ folder (for GitHub Pages / static hosting).
-Now generates homepage, static pages, and uses dynamic base_path for correct asset linking.
+generate_pages.py — ExpatScore.de V3.2 Gold Standard Generator
+═══════════════════════════════════════════════════════════════════
+
+Architecture:
+  - Reads article data from data.csv
+  - Optionally reads long-form Markdown content from raw_content/
+  - Outputs ALL pages to docs/ FLAT ROOT (no subfolders)
+  - NEVER overwrites handcrafted "gold" pages
+  - Generates sitemap.xml with clean URLs (no .html extensions)
+  - Copies style.css, script.js, vercel.json to docs/
+
+This is the ONLY generator. agent.py and consolidate.py are obsolete.
 """
 
 import csv
 import os
-import shutil
 import re
-import random
+import shutil
+import json
+import logging
 from datetime import datetime
+from pathlib import Path
+
 from jinja2 import Environment, FileSystemLoader
-import xml.etree.ElementTree as ET
 
-# ---------- Configuration ----------
-DATA_FILE = "data.csv"
-TEMPLATES_DIR = "templates"
-OUTPUT_DIR = "docs"                     # output root
+try:
+    import markdown
+    HAS_MARKDOWN = True
+except ImportError:
+    HAS_MARKDOWN = False
 
-# Static pages that are mentioned in the sitemap (not necessarily generated here)
-STATIC_PAGES = [
+# ──────────────────────────────────────────────────────────────────
+# Configuration
+# ──────────────────────────────────────────────────────────────────
+DATA_FILE       = "data.csv"
+TEMPLATES_DIR   = "templates"
+OUTPUT_DIR      = "docs"
+RAW_CONTENT_DIR = "raw_content"
+DOMAIN          = "https://www.expatscore.de"
+TODAY           = datetime.now().date().isoformat()
+
+# Category slug → display label + hub page filename (flat root)
+CATEGORY_MAP = {
+    "banking":   {"label": "Banking",      "hub": "banking"},
+    "insurance": {"label": "Versicherung", "hub": "insurance"},
+    "guides":    {"label": "SCHUFA Guide", "hub": "schufa-guide"},
+    "legal":     {"label": "Legal",        "hub": "about"},
+    "tools":     {"label": "Tools",        "hub": "schufa-simulator"},
+}
+
+# Handcrafted "gold" pages — NEVER overwrite these.
+# These are your manually polished pages with interactive tools, simulators, etc.
+PROTECTED_FILES = {
     "index.html",
     "banking.html",
+    "insurance.html",
     "schufa-guide.html",
+    "schufa-simulator.html",
+    "n26-bank-erfahrungen.html",
+    "blocked-account-germany.html",
+    "konto-ohne-anmeldung.html",
+    "blue-card-tool.html",
+    "about.html",
+    "datenschutz.html",
+    "affiliate-hinweis.html",
+    "impressum.html",
+    "tk-health-insurance.html",
+    "steuer-id-guide.html",
+    "anmeldung-germany.html",
+    "style.css",
+    "script.js",
+    "vercel.json",
+    "sitemap.xml",
+}
+
+# All pages for sitemap (handcrafted + generated).
+# Handcrafted pages are always included. Generated ones are added dynamically.
+SITEMAP_STATIC = [
+    ("/",                     "1.0",  "weekly"),
+    ("/banking",              "0.8",  "weekly"),
+    ("/insurance",            "0.8",  "weekly"),
+    ("/schufa-guide",         "0.85", "monthly"),
+    ("/schufa-simulator",     "0.85", "monthly"),
+    ("/n26-bank-erfahrungen", "0.8",  "monthly"),
+    ("/blocked-account-germany","0.8","monthly"),
+    ("/konto-ohne-anmeldung", "0.8",  "monthly"),
+    ("/blue-card-tool",       "0.75", "monthly"),
+    ("/tk-health-insurance",  "0.75", "monthly"),
+    ("/anmeldung-germany",    "0.75", "monthly"),
+    ("/steuer-id-guide",      "0.75", "monthly"),
+    ("/about",                "0.5",  "monthly"),
+    ("/impressum",            "0.3",  "yearly"),
+    ("/datenschutz",          "0.3",  "yearly"),
+    ("/affiliate-hinweis",    "0.3",  "yearly"),
 ]
 
-# Configuration for generating static pages from templates
-# Each entry: {'output': relative output path (inside OUTPUT_DIR), 'template': template name}
-STATIC_PAGES_CONFIG = [
-    {'output': 'index.html',                'template': 'index.html'},
-    {'output': 'impressum.html',             'template': 'impressum.html'},
-    {'output': 'datenschutz.html',           'template': 'datenschutz.html'},
-    {'output': 'affiliate-hinweis.html',     'template': 'affiliate-hinweis.html'},
-    {'output': 'ueber-uns.html',              'template': 'ueber-uns.html'},
-    {'output': 'guides/schufa-guide.html',   'template': 'schufa-guide.html'},   # in subfolder
-]
+# ──────────────────────────────────────────────────────────────────
+# Logging
+# ──────────────────────────────────────────────────────────────────
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%H:%M:%S"
+)
+log = logging.getLogger("generator")
 
-# ---------- Setup Jinja2 ----------
-env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
-article_template = env.get_template("article.html")
-hub_template = env.get_template("hub.html")
-index_template = env.get_template("index.html")   # for homepage
-# Static page templates will be loaded dynamically
 
-# ---------- Helper Functions ----------
+# ──────────────────────────────────────────────────────────────────
+# Helpers
+# ──────────────────────────────────────────────────────────────────
+def word_count(html: str) -> int:
+    """Count words in HTML (strips tags)."""
+    text = re.sub(r"<[^>]+>", "", html)
+    return len(text.split())
 
-def calculate_base_path(output_file_path, output_root=OUTPUT_DIR):
-    """
-    Return a relative path prefix (e.g. "", "../", "../../") that,
-    when prepended to asset paths, correctly points to the root
-    of the site (where 'assets/' lives).
 
-    :param output_file_path: full path to the generated HTML file
-    :param output_root: root directory of the site (default: 'docs')
-    :return: string like "", "../", "../../", etc.
-    """
-    # Get the directory of the output file relative to output_root
-    rel_dir = os.path.dirname(os.path.relpath(output_file_path, output_root))
-    if rel_dir == ".":
-        return ""                     # file is directly in output_root
-    # Count the number of directory levels to go up
-    depth = rel_dir.count(os.sep) + 1
-    return "../" * depth
+def reading_time(html: str) -> int:
+    """Estimate reading time in minutes (200 wpm)."""
+    return max(1, word_count(html) // 200)
 
-def read_data():
-    """Read CSV, return list of dicts and dict grouped by category."""
-    rows = []
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            # Basic validation
-            if not row.get("title") or not row.get("slug") or not row.get("category"):
-                print(f"Warning: Skipping row missing title/slug/category: {row}")
-                continue
-            rows.append(row)
-    # Group by category
-    grouped = {}
-    for row in rows:
-        cat = row["category"]
-        grouped.setdefault(cat, []).append(row)
-    return rows, grouped
 
-def clean_category_folders(categories):
-    """Remove all category folders for the given categories inside OUTPUT_DIR."""
-    for cat in categories:
-        folder = os.path.join(OUTPUT_DIR, cat)
-        if os.path.exists(folder):
-            shutil.rmtree(folder)
-            print(f"  Removed {folder}")
+def wrap_tables(html: str) -> str:
+    """Wrap <table> elements in responsive div."""
+    return re.sub(
+        r"(<table.*?</table>)",
+        r'<div class="table-responsive">\1</div>',
+        html, flags=re.DOTALL
+    )
 
-def ensure_dir(path):
-    os.makedirs(path, exist_ok=True)
 
-def write_html(filepath, content):
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(content)
+def load_markdown_content(slug: str) -> str | None:
+    """Search raw_content/ recursively for {slug}.md and return HTML."""
+    if not HAS_MARKDOWN:
+        return None
+    raw_dir = Path(RAW_CONTENT_DIR)
+    if not raw_dir.exists():
+        return None
+    matches = list(raw_dir.rglob(f"{slug}.md"))
+    if not matches:
+        return None
+    with open(matches[0], "r", encoding="utf-8") as f:
+        md = f.read()
+    return markdown.markdown(md, extensions=["tables", "fenced_code"])
 
-def generate_sitemap(articles, static_pages, categories):
-    """Write sitemap.xml to OUTPUT_DIR."""
-    root = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
-    today = datetime.now().date().isoformat()
 
-    for page in static_pages:
-        url = ET.SubElement(root, "url")
-        ET.SubElement(url, "loc").text = f"https://expatscore.de/{page}"
-        ET.SubElement(url, "lastmod").text = today
-        ET.SubElement(url, "changefreq").text = "monthly"
-        ET.SubElement(url, "priority").text = "0.8"
-
-    for art in articles:
-        url = ET.SubElement(root, "url")
-        loc = f"https://expatscore.de/{art['category']}/{art['slug']}.html"
-        ET.SubElement(url, "loc").text = loc
-        ET.SubElement(url, "lastmod").text = today
-        ET.SubElement(url, "changefreq").text = "monthly"
-        ET.SubElement(url, "priority").text = "0.6"
-
-    for cat in categories:
-        url = ET.SubElement(root, "url")
-        loc = f"https://expatscore.de/{cat}/index.html"
-        ET.SubElement(url, "loc").text = loc
-        ET.SubElement(url, "lastmod").text = today
-        ET.SubElement(url, "changefreq").text = "weekly"
-        ET.SubElement(url, "priority").text = "0.7"
-
-    tree = ET.ElementTree(root)
-    tree.write(os.path.join(OUTPUT_DIR, "sitemap.xml"), encoding="utf-8", xml_declaration=True)
-
-def copy_assets():
-    """
-    Copy static assets to OUTPUT_DIR.
-    Copies the entire assets/ folder and also individual root files if present.
-    Prints success message if assets folder copied, otherwise warns.
-    """
-    assets_dir_src = os.path.join(".", "assets")
-    assets_dir_dst = os.path.join(OUTPUT_DIR, "assets")
-
-    # Remove old assets folder if it exists
-    if os.path.exists(assets_dir_dst):
-        shutil.rmtree(assets_dir_dst)
-        print(f"  Removed old {assets_dir_dst}")
-
-    # Copy the entire assets/ folder
-    if os.path.isdir(assets_dir_src):
-        shutil.copytree(assets_dir_src, assets_dir_dst)
-        print(f"  ✅ Successfully copied assets/ folder to {assets_dir_dst}")
-    else:
-        print(f"  ⚠️ Warning: assets/ folder not found, skipping asset copy.")
-
-    # Copy individual root files (if they exist)
-    root_files = ["favicon.ico", "sitemap.xml", "og-image.jpg"]
-    for filename in root_files:
-        src = os.path.join(".", filename)
-        dst = os.path.join(OUTPUT_DIR, filename)
-        if os.path.isfile(src):
-            shutil.copy2(src, dst)
-            print(f"  Copied {filename}")
-        else:
-            print(f"  ⚠️ Warning: {filename} not found, skipping.")
-
-def reading_time_minutes(html_content):
-    """
-    Estimate reading time based on word count (200 words per minute).
-    Strips HTML tags first.
-    """
-    text = re.sub(r'<[^>]+>', '', html_content)
-    words = len(text.split())
-    minutes = max(1, round(words / 200))
-    return minutes
-
-def generate_breadcrumbs(category, title):
-    """Return list of breadcrumb dicts."""
+def get_related_posts(article: dict, all_articles: list, limit: int = 3) -> list:
+    """Get related articles from the same category."""
+    same_cat = [a for a in all_articles if a["category"] == article["category"] and a["slug"] != article["slug"]]
+    related = same_cat[:limit]
     return [
-        {"name": "Home", "url": "/"},
-        {"name": category.capitalize(), "url": f"/{category}/"},
-        {"name": title, "url": None}   # current page
+        {"title": r["title"], "url": f"{r['slug']}.html", "description": r["meta_description"]}
+        for r in related
     ]
 
-def generate_json_ld(article, filename, category):
-    """Return Article schema.org dictionary."""
-    return {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": article["title"],
-        "description": article["meta_description"],
-        "author": {
-            "@type": "Person",
-            "name": "Yassine Chaikhi",
-            "url": "https://expatscore.de/ueber-uns.html"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "ExpatScore.de",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://expatscore.de/assets/apple-touch-icon.png"
-            }
-        },
-        "datePublished": datetime.now().isoformat(),   # ideally from CSV, fallback to now
-        "dateModified": datetime.now().isoformat(),
-        "mainEntityOfPage": f"https://expatscore.de/{category}/{filename}"
-    }
 
-def deterministic_shuffle(items, seed):
-    """Shuffle a list deterministically based on a seed string."""
-    r = random.Random(seed)
-    shuffled = items[:]
-    r.shuffle(shuffled)
-    return shuffled
-
-def get_related_posts(article, all_in_category):
-    """
-    Return up to 3 related posts from the same category, excluding the current article.
-    Deterministic shuffle based on the current slug ensures variation across articles.
-    """
-    others = [a for a in all_in_category if a["slug"] != article["slug"]]
-    shuffled = deterministic_shuffle(others, article["slug"])
-    related = shuffled[:3]
-    related_posts = []
-    for r in related:
-        related_posts.append({
-            "title": r["title"],
-            "url": f"./{r['slug']}.html",          # relative to the current article
-            "description": r["meta_description"],
-        })
-    return related_posts
-
-def get_latest_articles(all_articles, count=5):
-    """
-    Return the first 'count' articles from the list as 'latest'.
-    (In a real scenario you might sort by date; here we simply take the first ones.)
-    """
-    return all_articles[:count]
-
-# ---------- Main Generation ----------
+# ──────────────────────────────────────────────────────────────────
+# Main Generator
+# ──────────────────────────────────────────────────────────────────
 def main():
-    print("Reading data.csv...")
-    articles, grouped = read_data()
-    categories = list(grouped.keys())
+    log.info("═══ ExpatScore.de V3.2 Generator ═══")
 
-    print("Cleaning old category folders...")
-    clean_category_folders(categories)
+    # ── 1. Setup ──
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
+    article_tpl = env.get_template("article.html")
 
-    # ------------------------------------------------------------------
-    # 1. Generate Articles
-    # ------------------------------------------------------------------
-    print("Generating articles...")
+    # ── 2. Read data ──
+    articles = []
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            if not row.get("slug") or not row.get("title"):
+                log.warning(f"Skipping row with missing slug/title: {row}")
+                continue
+            articles.append(row)
+    log.info(f"Loaded {len(articles)} articles from {DATA_FILE}")
+
+    generated_slugs = []
+
+    # ── 3. Generate articles ──
     for article in articles:
-        cat = article["category"]
         slug = article["slug"]
         filename = f"{slug}.html"
-        folder = os.path.join(OUTPUT_DIR, cat)
-        ensure_dir(folder)
+        output_path = os.path.join(OUTPUT_DIR, filename)
 
-        # Full output path for this article
-        output_path = os.path.join(folder, filename)
+        # NEVER overwrite handcrafted pages
+        if filename in PROTECTED_FILES:
+            if os.path.exists(output_path):
+                log.info(f"SKIP (protected): {filename} — handcrafted gold page exists")
+                continue
+            else:
+                log.info(f"GENERATE (protected but missing): {filename}")
 
-        # Compute enhancements
-        read_time = reading_time_minutes(article["content"])
-        breadcrumbs = generate_breadcrumbs(cat, article["title"])
-        json_ld = generate_json_ld(article, filename, cat)
-        related_posts = get_related_posts(article, grouped[cat])
+        # Content: try Markdown file first, then CSV content field, then meta_description fallback
+        content_html = load_markdown_content(slug)
+        if content_html:
+            log.info(f"  Content source: raw_content/{slug}.md")
+        elif article.get("content"):
+            content_html = article["content"]
+            log.info(f"  Content source: data.csv content column")
+        else:
+            content_html = f"<p>{article['meta_description']}</p>"
+            log.warning(f"  Content source: meta_description fallback (no .md or content)")
 
-        # Calculate base_path dynamically
-        base_path = calculate_base_path(output_path, output_root=OUTPUT_DIR)
+        # Process content
+        content_html = wrap_tables(content_html)
 
+        # Category mapping
+        cat_key = article.get("category", "guides")
+        cat_info = CATEGORY_MAP.get(cat_key, {"label": cat_key.capitalize(), "hub": "index"})
+
+        # Build template context
         context = {
-            "base_path": base_path,
             "title": article["title"],
             "meta_description": article["meta_description"],
-            "h1": article["h1"],
-            "subheadline": article["subheadline"],
-            "content": article["content"],
-            "category": cat,
-            "filename": filename,
-            "reading_time": read_time,
-            "breadcrumbs": breadcrumbs,
-            "json_ld": json_ld,
-            "related_posts": related_posts,
+            "slug": slug,
+            "h1": article.get("h1") or article["title"],
+            "subheadline": article.get("subheadline", ""),
+            "content": content_html,
+            "category": cat_key,
+            "category_label": cat_info["label"],
+            "category_hub": cat_info["hub"],
+            "reading_time": reading_time(content_html),
+            "related_posts": get_related_posts(article, articles),
+            "date_published": "2026-01-15",
+            "date_modified": TODAY,
         }
 
-        html = article_template.render(**context)
-        write_html(output_path, html)
-        print(f"  Generated {cat}/{filename}")
-
-    # ------------------------------------------------------------------
-    # 2. Generate Category Hubs
-    # ------------------------------------------------------------------
-    print("Generating category hubs...")
-    for cat, articles_in_cat in grouped.items():
-        folder = os.path.join(OUTPUT_DIR, cat)
-        ensure_dir(folder)
-
-        output_path = os.path.join(folder, "index.html")
-
-        hub_articles = []
-        for a in articles_in_cat:
-            hub_articles.append({
-                "title": a["title"],
-                "url": f"{a['slug']}.html",
-                "description": a["meta_description"],
-            })
-
-        # Calculate base_path for the hub page (same depth as articles in that category)
-        base_path = calculate_base_path(output_path, output_root=OUTPUT_DIR)
-
-        context = {
-            "base_path": base_path,
-            "category": cat,
-            "articles": hub_articles,
-            "title": f"{cat.capitalize()} · ExpatScore.de",
-            "meta_description": f"Alle Artikel zum Thema {cat} – Bankkonten, Versicherungen, Schufa-Guides.",
-        }
-
-        html = hub_template.render(**context)
-        write_html(output_path, html)
-        print(f"  Generated {cat}/index.html")
-
-    # ------------------------------------------------------------------
-    # 3. Generate Homepage (index.html)
-    # ------------------------------------------------------------------
-    print("Generating homepage...")
-    homepage_output = os.path.join(OUTPUT_DIR, "index.html")
-    base_path_home = calculate_base_path(homepage_output, output_root=OUTPUT_DIR)  # should be ""
-
-    # Prepare context for homepage
-    # Categories: list of dicts with name and url
-    category_list = [{"name": cat.capitalize(), "url": f"{cat}/index.html"} for cat in categories]
-    # Latest articles: get first 5 from overall articles list
-    latest_articles = get_latest_articles(articles, count=5)
-    latest_list = []
-    for a in latest_articles:
-        latest_list.append({
-            "title": a["title"],
-            "url": f"{a['category']}/{a['slug']}.html",
-            "description": a["meta_description"],
-        })
-
-    context_home = {
-        "base_path": base_path_home,
-        "categories": category_list,
-        "latest_articles": latest_list,
-        "title": "ExpatScore.de – Finanzwissen für Expats in Deutschland",
-        "meta_description": "Unabhängige Ratgeber zu Bankkonten, Versicherungen und Schufa für Expats in Deutschland."
-    }
-
-    html = index_template.render(**context_home)
-    write_html(homepage_output, html)
-    print("  Generated index.html")
-
-    # ------------------------------------------------------------------
-    # 4. Generate Static Pages (from templates)
-    # ------------------------------------------------------------------
-    print("Generating static pages...")
-    for page_config in STATIC_PAGES_CONFIG:
-        output_rel = page_config['output']
-        template_name = page_config['template']
-        output_path = os.path.join(OUTPUT_DIR, output_rel)
-
-        # Ensure subdirectories exist (e.g., for guides/)
-        ensure_dir(os.path.dirname(output_path))
-
-        # Load template
         try:
-            template = env.get_template(template_name)
+            html = article_tpl.render(**context)
+            with open(output_path, "w", encoding="utf-8") as f:
+                f.write(html)
+            generated_slugs.append(slug)
+            log.info(f"  ✓ GENERATED: {filename} ({word_count(content_html)} words)")
         except Exception as e:
-            print(f"  ⚠️ Warning: Could not load template '{template_name}': {e}")
-            continue
+            log.error(f"  ✗ Template error for {slug}: {e}")
 
-        # Calculate base_path for this static page
-        base_path = calculate_base_path(output_path, output_root=OUTPUT_DIR)
+    # ── 4. Generate sitemap.xml ──
+    log.info("Generating sitemap.xml...")
+    sitemap_entries = list(SITEMAP_STATIC)
 
-        # Basic context (can be extended if needed)
-        context = {
-            "base_path": base_path,
-            "title": f"{os.path.splitext(os.path.basename(output_rel))[0].replace('-', ' ').title()} · ExpatScore.de",
-            "meta_description": f"{os.path.splitext(os.path.basename(output_rel))[0].replace('-', ' ')} Seite auf ExpatScore.de",
-        }
+    # Add generated articles that aren't already in the static list
+    static_paths = {entry[0] for entry in SITEMAP_STATIC}
+    for slug in generated_slugs:
+        path = f"/{slug}"
+        if path not in static_paths:
+            sitemap_entries.append((path, "0.6", "monthly"))
 
-        html = template.render(**context)
-        write_html(output_path, html)
-        print(f"  Generated {output_rel}")
+    lines = [
+        '<?xml version="1.0" encoding="utf-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    ]
+    for path, priority, freq in sitemap_entries:
+        lines.append("  <url>")
+        lines.append(f"    <loc>{DOMAIN}{path}</loc>")
+        lines.append(f"    <lastmod>{TODAY}</lastmod>")
+        lines.append(f"    <changefreq>{freq}</changefreq>")
+        lines.append(f"    <priority>{priority}</priority>")
+        lines.append("  </url>")
+    lines.append("</urlset>")
 
-    # ------------------------------------------------------------------
-    # 5. Generate Sitemap
-    # ------------------------------------------------------------------
-    print("Generating sitemap.xml...")
-    generate_sitemap(articles, STATIC_PAGES, categories)
+    with open(os.path.join(OUTPUT_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+    log.info(f"  ✓ sitemap.xml — {len(sitemap_entries)} URLs")
 
-    # ------------------------------------------------------------------
-    # 6. Copy Assets (with improved feedback)
-    # ------------------------------------------------------------------
-    print("Copying asset files to docs/...")
-    copy_assets()
+    # ── 5. Copy root assets ──
+    log.info("Copying root assets...")
+    root_assets = ["style.css", "script.js", "vercel.json", "og-image.jpg", "favicon.ico"]
+    for asset in root_assets:
+        src = os.path.join(".", asset)
+        dst = os.path.join(OUTPUT_DIR, asset)
+        if os.path.isfile(src) and not os.path.exists(dst):
+            shutil.copy2(src, dst)
+            log.info(f"  Copied {asset}")
 
-    print("\n✅ All done. Site generated in 'docs/' folder.")
+    # Copy assets/img/ directory if it exists
+    assets_src = os.path.join(".", "assets", "img")
+    assets_dst = os.path.join(OUTPUT_DIR, "assets", "img")
+    if os.path.isdir(assets_src):
+        os.makedirs(assets_dst, exist_ok=True)
+        for f in os.listdir(assets_src):
+            src = os.path.join(assets_src, f)
+            dst_file = os.path.join(assets_dst, f)
+            if os.path.isfile(src) and not os.path.exists(dst_file):
+                shutil.copy2(src, dst_file)
+        log.info(f"  Copied assets/img/")
+
+    # ── 6. Clean up old subfolder artifacts ──
+    old_folders = ["banking", "insurance", "guides", "legal", "tools",
+                   "wenn-du-dauerhaft-ins-minus-rutschst-und-rückzahlungen-ausbleiben-wer-sein-konto-sauber-führt"]
+    for folder in old_folders:
+        path = os.path.join(OUTPUT_DIR, folder)
+        if os.path.isdir(path):
+            shutil.rmtree(path)
+            log.info(f"  🗑 Removed old subfolder: docs/{folder}/")
+
+    # ── Done ──
+    total = len(generated_slugs)
+    protected = len(PROTECTED_FILES) - 3  # minus css/js/json
+    log.info(f"")
+    log.info(f"═══ BUILD COMPLETE ═══")
+    log.info(f"  Generated:  {total} new article(s)")
+    log.info(f"  Protected:  {protected} handcrafted gold pages")
+    log.info(f"  Sitemap:    {len(sitemap_entries)} URLs")
+    log.info(f"  Output:     {OUTPUT_DIR}/")
+
 
 if __name__ == "__main__":
     main()

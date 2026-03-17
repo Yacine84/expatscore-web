@@ -8,21 +8,21 @@
   <meta name="description" content="Check your EU Blue Card eligibility for Germany in 2 minutes. Interactive 2026 tool: detects your track (standard, shortage, graduate, IT specialist), shows live salary feedback, and generates a personalised Eligibility Passport.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
-  <link rel="canonical" href="https://expatscore.de/legal/blue-card-tool">
+  <link rel="canonical" href="https://www.expatscore.de/blue-card-tool">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="EU Blue Card Germany 2026 — Free Eligibility Check Tool">
   <meta property="og:description" content="2-minute check. 4 eligibility tracks. 2026 thresholds. Shareable Eligibility Passport.">
-  <meta property="og:url" content="https://expatscore.de/legal/blue-card-tool">
-  <meta property="og:image" content="https://expatscore.de/og-image.jpg">
+  <meta property="og:url" content="https://www.expatscore.de/blue-card-tool">
+  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
   <meta property="og:site_name" content="ExpatScore.de">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="EU Blue Card Germany 2026 — Free Eligibility Tool">
   <meta name="twitter:description" content="Check your Blue Card eligibility in 2 minutes. Auto-detects your track. Shareable result passport.">
 
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
   <meta name="theme-color" content="#080c10">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -545,15 +545,15 @@
 <!-- GLOBAL HEADER -->
 <header class="global-header">
   <div class="header-inner">
-    <div class="logo"><a href="/">ExpatScore.de</a></div>
-    <button class="nav-toggle" onclick="this.closest('header').querySelector('.nav-links').classList.toggle('open')" aria-label="Open navigation">☰</button>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/banking">Banking</a>
-      <a href="schufa-guide.html">SCHUFA</a>
-      <a href="">Insurance</a>
-      <a href="" aria-current="page">Legal</a>
-      <a href="/about">About</a>
+    <div class="logo"><a href="index.html">ExpatScore.de</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">&#9776;</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="banking.html">Banking</a>
+      <a href="schufa-simulator.html">SCHUFA Tool</a>
+      <a href="schufa-guide.html">SCHUFA Guide</a>
+      <a href="insurance.html">Versicherung</a>
+      <a href="about.html">Über uns</a>
     </nav>
   </div>
 </header>
@@ -766,7 +766,7 @@
           <div class="alt-option-title">🌟 Opportunity Card (Chancenkarte)</div>
           <div class="alt-option-desc">A 1-year job-seeker visa introduced in 2024. Points-based. Find a job in Germany first, then convert to a work visa. Good starting point without a fixed offer.</div>
         </a>
-        <a class="alt-option" href="https://expatscore.de/legal/steuer-id-guide">
+        <a class="alt-option" href="https://www.expatscore.de/legal/steuer-id-guide">
           <div class="alt-option-title">📋 Already in Germany? Get your Steuer-ID first</div>
           <div class="alt-option-desc">If you're already working in Germany on any permit, your Tax ID is the first administrative step. Our guide covers it in full.</div>
         </a>
@@ -1042,43 +1042,64 @@
 <!-- GLOBAL FOOTER -->
 <footer class="global-footer">
   <div class="inner">
-    <div class="footer-disclaimer"><strong>No Legal Advice</strong> — Informational tool only. Thresholds per official 2026 BMI figures.</div>
-    <nav class="footer-legal-links">
-      <a href="/about">About</a>
+    <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
+    <nav class="footer-legal-links" aria-label="Legal-Links">
+      <a href="about.html">Über uns</a>
+      <a href="banking.html">Banking</a>
+      <a href="schufa-guide.html">SCHUFA Guide</a>
       <a href="impressum.html">Impressum</a>
-      <a href="/datenschutz">Datenschutz</a>
-      <a href="/affiliate-hinweis">Affiliate</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
+      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
     </nav>
-    <p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
+    <div class="footer-disclosure">
+      <strong>&#9873; Affiliate-Hinweis (Werbung):</strong>
+      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
+    </div>
+    <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Alle Angaben ohne Gewähr &middot; Kein Ersatz für individuelle Rechts- oder Finanzberatung. &middot; <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
   </div>
 </footer>
 
 <!-- COOKIE BANNER -->
-<div id="cookie-banner" role="dialog">
-  <p>This site uses cookies. <a href="/datenschutz">Privacy Policy</a>.</p>
+<div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
+  <div class="cookie-banner-header">
+    <div class="cookie-banner-icon" aria-hidden="true">&#127850;</div>
+    <div class="cookie-banner-body">
+      <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
+      <div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</div>
+    </div>
+  </div>
   <div class="cookie-btns">
-    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
-    <button class="cookie-decline" onclick="declineCookies()">Essential only</button>
-    <button class="cookie-accept" onclick="acceptCookies()">Accept all</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
+    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
   </div>
 </div>
-<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true">
+
+<!-- COOKIE SETTINGS MODAL -->
+<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
-    <h2>Cookie Settings</h2>
+    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">&#10005;</button>
+    <h2>Cookie-Einstellungen</h2>
+    <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Technically necessary</strong><span>Always active.</span></div>
+      <div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div>
       <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Analytics</strong><span>Pseudonymised.</span></div>
+      <div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div>
       <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
     </div>
-    <button class="cookie-save-btn" onclick="saveGranularCookies()">Save</button>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
+    </div>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
   </div>
 </div>
 
 <script src="script.js"></script>
+
 <script>
 // ══════════════════════════════════════════════
 //  STATE
@@ -1262,9 +1283,7 @@ function updateStep3UI() {
     graduate: `Your track: <strong>Recent Graduate</strong>. You get the reduced threshold: <strong>€45,934.20/year gross</strong>, on any occupation.`,
     it:       `Your track: <strong>IT Specialist</strong>. The shortage threshold applies: <strong>€45,934.20/year gross</strong>.`,
   };
-  document.getElementById('step3-context').innerHTML = contextMap[state.track];
-  document.getElementById('thresholdDisplay').textContent = `€${threshold.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2})}`;
-  document.getElementById('thresholdTrackLabel').textContent = `(${trackInfo.label})`;
+  document.getElementById('step3-conteextContent = `(${trackInfo.label})`;
 
   // Reset gauge
   const fill = document.getElementById('gaugeFill');
