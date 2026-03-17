@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="keywords" content="{{ category }}, expats Germany, ExpatScore.de">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Yassine Chaikhi">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:site_name" content="ExpatScore.de">
+  <meta property="og:image" content="https://expatscore.de/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  <meta name="twitter:image" content="https://expatscore.de/assets/img/og-image.jpg">
+  <link rel="icon" type="image/x-icon" href="{{ base_path }}assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="{{ base_path }}assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#080c10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title }}",
+    "description": "{{ meta_description }}",
+    "author": {
+      "@type": "Person",
+      "name": "Yassine Chaikhi",
+      "url": "https://www.expatscore.de/about.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExpatScore.de",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.expatscore.de/assets/img/og-image.jpg"
+      }
+    },
+    "dateModified": "2026-03-17",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ canonical_url }}"
+    },
+    "image": "https://www.expatscore.de/assets/img/og-image.jpg"
+  }
+  </script>
+  <link rel="stylesheet" href="{{ base_path }}assets/css/style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="global-header">
+  <div class="header-inner inner">
+    <div class="logo"><a href="{{ base_path }}index.html">ExpatScore.de</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="{{ base_path }}index.html">Home</a>
+      <a href="{{ base_path }}banking">Banking</a>
+      <a href="{{ base_path }}guides/schufa-guide">SCHUFA Guide</a>
+      <a href="{{ base_path }}insurance">Insurance</a>
+      <a href="{{ base_path }}legal">Legal</a>
+      <a href="{{ base_path }}about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="werbung-bar">
+  <strong>&#9873; Anzeige:</strong> This page contains affiliate links. We may earn a commission &mdash; no extra cost to you.
+</div>
+
+<div class="urgency-strip">
+  <strong>2026:</strong> Rules change fast &mdash; this guide is updated for current requirements.
+</div>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  {% for crumb in breadcrumbs %}
+    {% if crumb.url %}<a href="{{ crumb.url }}">{{ crumb.name }}</a> &rsaquo;
+    {% else %}<span class="current">{{ crumb.name }}</span>
+    {% endif %}
+  {% endfor %}
+</nav>
+
+<section class="hero-article">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">{{ category | capitalize }} &middot; ExpatScore.de</span>
+    <h1 class="hero-h1">{{ h1 }}</h1>
+    {% if subheadline %}<p class="hero-sub">{{ subheadline }}</p>{% endif %}
+  </div>
+</section>
+
+<div class="content-depth-bar">
+  Complete Guide &nbsp;&middot;&nbsp; {{ reading_time }} min read &nbsp;&middot;&nbsp;
+  Updated: <span id="currentDate"></span>
+</div>
+
+<main class="main-content">
+  <div class="article-body">
+
+    <a href="{{ base_path }}{{ category }}" class="back-link">&larr; Back to {{ category | capitalize }}</a>
+
+    {{ content }}
+
+    {% if related_posts %}
+    <hr style="border:none;border-top:1px solid var(--border);margin:3rem 0 2rem;">
+    <h2>Related Guides</h2>
+    <ul class="check-list">
+      {% for post in related_posts %}
+      <li><a href="{{ post.url }}">{{ post.title }} &rarr;</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+  </div>
+</main>
+
+<footer class="global-footer">
+  <div class="inner">
+    <div class="footer-disclaimer">
+      <strong>No Financial Advice</strong> &mdash; All information without guarantee
+    </div>
+    <nav class="footer-legal-links">
+      <a href="{{ base_path }}about.html">About</a>
+      <a href="{{ base_path }}banking">Banking</a>
+      <a href="{{ base_path }}guides/schufa-guide">SCHUFA Guide</a>
+      <a href="{{ base_path }}impressum.html">Impressum</a>
+      <a href="{{ base_path }}datenschutz.html">Datenschutz</a>
+      <a href="{{ base_path }}affiliate-hinweis.html">Affiliate</a>
+      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie Settings</a>
+    </nav>
+    <div class="footer-disclosure">
+      <strong>&#9873; Affiliate Disclosure:</strong>
+      This page contains partner links. If you open an account through one of these links,
+      we receive a commission from the provider &mdash; no additional costs for you.
+      Our editorial content is based on independent research.
+    </div>
+    <p class="footer-copy">
+      &copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot;
+      No substitute for individual financial or legal advice.
+    </p>
+  </div>
+</footer>
+
+<div id="cookie-banner">
+  <p>We use cookies for technical functions and &mdash; with your consent &mdash; analytics and
+  affiliate tracking. See our <a href="{{ base_path }}datenschutz.html">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-accept" onclick="acceptCookies()">Accept all</button>
+    <button class="cookie-decline" onclick="declineCookies()">Essential only</button>
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-cookie-settings">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Close">&#10005;</button>
+    <h2>Cookie Settings</h2>
+    <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:1.25rem;">Technically necessary cookies cannot be deactivated.</p>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Technically necessary</strong><span>Always active.</span></div>
+      <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Analytics &amp; Statistics</strong><span>Pseudonymised usage data.</span></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Affiliate Tracking</strong><span>Commission attribution only.</span></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
+    </div>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Save preferences</button>
+  </div>
+</div>
+
+<script src="{{ base_path }}assets/js/script.js"></script>
+<script>
+(function(){
+  var el=document.getElementById('currentDate');
+  if(el) el.textContent=new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'});
+})();
+window.addEventListener('scroll',function(){
+  var el=document.getElementById('progressBar');
+  if(!el)return;
+  el.style.width=Math.min(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100,100)+'%';
+});
+var nt=document.getElementById('navToggle'),nl=document.getElementById('navLinks');
+if(nt&&nl)nt.addEventListener('click',function(){nl.classList.toggle('open');});
+function openModal(id){var m=document.getElementById('modal-'+id);if(m)m.classList.add('open');}
+function closeModal(id){var m=document.getElementById('modal-'+id);if(m)m.classList.remove('open');}
+function hideBanner(){var b=document.getElementById('cookie-banner');if(b)b.classList.remove('visible');}
+function acceptCookies(){localStorage.setItem('cookieConsent','all');hideBanner();closeModal('cookie-settings');}
+function declineCookies(){localStorage.setItem('cookieConsent','necessary');hideBanner();closeModal('cookie-settings');}
+function saveGranularCookies(){
+  var a=document.getElementById('toggle-analytics'),f=document.getElementById('toggle-affiliate');
+  localStorage.setItem('cookieConsent',JSON.stringify({necessary:true,analytics:a?a.checked:false,affiliate:f?f.checked:false}));
+  hideBanner();closeModal('cookie-settings');
+}
+(function(){
+  if(!localStorage.getItem('cookieConsent')){
+    setTimeout(function(){var b=document.getElementById('cookie-banner');if(b)b.classList.add('visible');},600);
+  }
+})();
+</script>
+</body>
+</html>
