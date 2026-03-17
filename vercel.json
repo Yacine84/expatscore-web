@@ -1,4 +1,42 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { 
+      "source": "/guides/schufa-guide", 
+      "destination": "/schufa-guide.html" 
+    },
+    { 
+      "source": "/banking/n26-bank-erfahrungen", 
+      "destination": "/n26-bank-erfahrungen.html" 
+    },
+    { 
+      "source": "/banking/blocked-account-germany", 
+      "destination": "/blocked-account-germany.html" 
+    },
+    { 
+      "source": "/banking/konto-ohne-anmeldung", 
+      "destination": "/konto-ohne-anmeldung.html" 
+    },
+    { 
+      "source": "/insurance/tk-health-insurance", 
+      "destination": "/tk-health-insurance.html" 
+    },
+    { 
+      "source": "/schufa-long-term", 
+      "destination": "/schufa-long-term.html" 
+    },
+    { 
+      "source": "/schufa-factors-detailed", 
+      "destination": "/score-factors-detailed.html" 
+    },
+    { 
+      "source": "/legal", 
+      "destination": "/impressum.html" 
+    },
+    { 
+      "source": "/tools/schufa-simulator", 
+      "destination": "/schufa-simulator.html" 
+    }
+  ]
 }
