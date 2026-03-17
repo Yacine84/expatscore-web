@@ -2073,3 +2073,323 @@ code, .mono {
   padding: 1.5rem 2rem;
   border-top: 1px solid var(--border);
 }
+
+
+/* ============================================================
+   31. ARTICLE COMPONENTS — TOC, CALLOUTS, TABLES, ROADMAP
+   ============================================================ */
+
+/* Table of Contents */
+.toc-box {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+.toc-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+}
+.toc-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.toc-list li { font-size: 0.9rem; }
+.toc-list a { color: var(--text-secondary); transition: color 0.2s; }
+.toc-list a:hover { color: var(--teal); }
+
+/* Callout boxes */
+.callout-box {
+  display: flex;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+.callout-teal {
+  background: rgba(0,196,167,0.06);
+  border: 1px solid rgba(0,196,167,0.2);
+}
+.callout-gold {
+  background: rgba(201,168,76,0.06);
+  border: 1px solid var(--gold-border);
+}
+.callout-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+.callout-content { flex: 1; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
+.callout-content strong { color: var(--text-primary); }
+
+/* Factor weight table (SCHUFA guide) */
+.factor-table {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin: 1.75rem 0;
+}
+.factor-table-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 0;
+  padding: 0.8rem 1.1rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  align-items: center;
+}
+.factor-table-row:last-child { border-bottom: none; }
+.factor-header {
+  background: rgba(255,255,255,0.02);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.weight-high { color: var(--teal); font-weight: 600; font-family: var(--font-mono); }
+.weight-mid  { color: var(--gold); font-weight: 600; font-family: var(--font-mono); }
+.weight-low  { color: var(--text-muted); font-weight: 600; font-family: var(--font-mono); }
+
+/* Score tier grid */
+.score-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+}
+.score-tier-card {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.tier-range {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+.tier-label {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.tier-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
+
+.tier-excellent  { border-color: rgba(34,197,94,0.25); }
+.tier-excellent .tier-label { color: #22c55e; }
+.tier-very-good  { border-color: rgba(0,196,167,0.25); }
+.tier-very-good .tier-label { color: var(--teal); }
+.tier-good       { border-color: rgba(96,165,250,0.2); }
+.tier-good .tier-label { color: #60a5fa; }
+.tier-building   { border-color: rgba(251,191,36,0.2); }
+.tier-building .tier-label { color: #fbbf24; }
+.tier-limited    { border-color: rgba(251,146,60,0.2); }
+.tier-limited .tier-label { color: #fb923c; }
+.tier-none       { border-color: rgba(239,68,68,0.2); }
+.tier-none .tier-label { color: #ef4444; }
+
+@media (max-width: 640px) {
+  .score-tier-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 400px) {
+  .score-tier-grid { grid-template-columns: 1fr; }
+  .factor-table-row { grid-template-columns: 1fr 70px 1fr; font-size: 0.82rem; }
+}
+
+/* Roadmap steps */
+.roadmap-steps { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; }
+.roadmap-step {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+.roadmap-step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid var(--border);
+}
+.roadmap-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+.roadmap-phase {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+.roadmap-content {
+  padding: 1rem 1.25rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.roadmap-content p { margin-bottom: 0.65rem; }
+.roadmap-content p:last-child { margin-bottom: 0; }
+
+/* Article inline CTA block */
+.article-cta-block {
+  background: linear-gradient(135deg, rgba(0,196,167,0.06), rgba(201,168,76,0.04));
+  border: 1px solid rgba(0,196,167,0.2);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 2.5rem 0;
+}
+.article-cta-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.article-cta-icon { font-size: 1.75rem; flex-shrink: 0; }
+.article-cta-copy { flex: 1; min-width: 200px; }
+.article-cta-copy strong { color: var(--text-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem; }
+.article-cta-copy p { font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+
+/* Negative check list */
+.check-list-negative li::before { content: "✗"; color: #ef4444 !important; }
+
+/* Simple comparison table */
+.comparison-table-simple {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin: 1.75rem 0;
+}
+.ct-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.2fr;
+  gap: 0;
+  padding: 0.8rem 1.1rem;
+  font-size: 0.87rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  align-items: start;
+}
+.ct-row:last-child { border-bottom: none; }
+.ct-header {
+  background: rgba(255,255,255,0.02);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.ct-row span:first-child { color: var(--text-muted); font-size: 0.82rem; }
+
+@media (max-width: 560px) {
+  .ct-row { grid-template-columns: 1fr 1fr; font-size: 0.82rem; }
+  .ct-row span:first-child { grid-column: 1 / -1; font-weight: 600; color: var(--text-secondary); padding-bottom: 0.25rem; }
+  .article-cta-inner { flex-direction: column; text-align: center; }
+}
+
+
+/* ============================================================
+   31. MOBILE TOP-BAR FIX — werbung-bar / urgency-strip / header stack
+   ============================================================ */
+
+/*
+ * Root issue: .werbung-bar and .urgency-strip sit in document flow
+ * directly below the fixed header. On mobile they need adjusted
+ * padding/font and must not be obscured by the mobile nav overlay.
+ */
+
+@media (max-width: 768px) {
+
+  /* --- Werbung bar: compact on mobile, never obscured --- */
+  .werbung-bar {
+    padding: 0.5rem var(--space-sm);
+    font-size: 0.78rem;
+    line-height: 1.4;
+    text-align: center;
+    /* Ensure it clears the fixed header exactly */
+    margin-top: 0;
+  }
+
+  /* --- Urgency strip: same treatment --- */
+  .urgency-strip {
+    padding: 0.45rem var(--space-sm);
+    font-size: 0.78rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  /* --- Mobile nav overlay must clear BOTH bars when they exist --- */
+  /* The nav.open is already position:fixed top:var(--header-h).
+     We bump it down further on pages that show announcement bars
+     by using a JS-toggled class (see note below), OR we simply
+     ensure the bars are short enough not to cause visual clash.
+     Belt-and-suspenders: give the open nav a max-height + scroll
+     so it never bleeds into content below. */
+  .nav-links.open {
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* --- Score prüfen / CTA button in header area: center + full-width --- */
+  /* Targets any .cta-btn inside the werbung-bar or urgency-strip */
+  .werbung-bar .cta-btn,
+  .urgency-strip .cta-btn {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 0.5rem auto 0;
+    text-align: center;
+    padding: 0.55rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  /* --- Breadcrumbs: no overflow on narrow screens --- */
+  .breadcrumbs {
+    font-size: 0.78rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Extra-small: even tighter bars */
+  .werbung-bar,
+  .urgency-strip {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.74rem;
+  }
+
+  /* Score prüfen sticky bar: single column, centred text */
+  .sticky-cta-bar {
+    gap: 0.4rem;
+    padding: 0.75rem 0.85rem;
+    text-align: center;
+  }
+  .sticky-cta-label {
+    font-size: 0.8rem;
+    white-space: normal;
+    text-align: center;
+    width: 100%;
+  }
+  .sticky-cta-bar .cta-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.65rem 1rem;
+  }
+}
