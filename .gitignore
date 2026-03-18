@@ -1,0 +1,6 @@
+.vercel
+node_modules/
+.DS_Store
+.aider.input.history
+.aider.tags.cache.v4/
+.env
