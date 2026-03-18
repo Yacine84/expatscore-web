@@ -35,7 +35,6 @@
 </head>
 <body>
 
-
 <div class="progress-bar" id="progressBar"></div>
 
 <header class="global-header">
@@ -134,8 +133,8 @@
           <p class="sim-q-hint" id="qHint"></p>
           <div class="sim-options" id="optionsList"></div>
           <div class="sim-nav">
-            <button class="sim-back-btn" id="backBtn" onclick="goBack()" style="visibility:hidden">&#8592; Zurück</button>
-            <button class="sim-next-btn" id="nextBtn" onclick="goNext()">Weiter &#8594;</button>
+            <button class="sim-back-btn" id="backBtn" style="visibility:hidden">&#8592; Zurück</button>
+            <button class="sim-next-btn" id="nextBtn">Weiter &#8594;</button>
           </div>
         </div>
 
@@ -203,7 +202,7 @@
 
         <div class="next-steps-card" id="nextStepsCard"></div>
 
-        <button class="restart-btn" onclick="restartQuiz()">&#8635; Simulator neu starten</button>
+        <button class="restart-btn">&#8635; Simulator neu starten</button>
 
         <p class="sim-disclaimer">
           <strong>Hinweis:</strong> Dieser Simulator liefert eine geschätzte SCHUFA-Score-Spanne zu Informationszwecken. Keine offizielle SCHUFA-Bewertung — die tatsächliche Berechnung erfolgt ausschließlich durch die SCHUFA Holding AG. Kein Ersatz für individuelle Finanzberatung.
@@ -373,7 +372,7 @@
   <ul class="faq-list" style="max-width:760px;margin:0 auto;" role="list">
 
     <li class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" aria-expanded="false">
         Was ist die SCHUFA und warum ist sie für Expats so wichtig?
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
@@ -383,7 +382,7 @@
     </li>
 
     <li class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" aria-expanded="false">
         Wie lange dauert es, einen guten SCHUFA-Score aufzubauen?
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
@@ -393,7 +392,7 @@
     </li>
 
     <li class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" aria-expanded="false">
         Welche Bank empfiehlt sich für Newcomer ohne SCHUFA-Geschichte?
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
@@ -403,7 +402,7 @@
     </li>
 
     <li class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" aria-expanded="false">
         Kann ich ohne Anmeldung ein deutsches Bankkonto eröffnen?
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
@@ -413,7 +412,7 @@
     </li>
 
     <li class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+      <button class="faq-q" aria-expanded="false">
         Wie erhalte ich meinen offiziellen SCHUFA-Bericht kostenlos?
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
@@ -423,6 +422,29 @@
     </li>
 
   </ul>
+</section>
+
+<!-- ═══════════════════════ BLOCKED ACCOUNT CALCULATOR ═══════════════════════ -->
+<section class="section blocked-calc-section" id="blocked-account-calc">
+  <div class="section-header">
+    <span class="section-eyebrow">Blocked Account Calculator</span>
+    <h2 class="section-title">Berechne dein Sperrkonto</h2>
+    <p class="section-sub-line">Für Studium, Sprachkurs oder Arbeitsvisum – der aktuelle Mindestbetrag 2026.</p>
+  </div>
+  <div class="blocked-calc-card">
+    <div class="calc-row">
+      <label for="blocked-duration">Aufenthaltsdauer (Monate):</label>
+      <input type="number" id="blocked-duration" value="12" min="1" max="48" step="1">
+    </div>
+    <div class="calc-row">
+      <label for="blocked-amount">Monatlicher Bedarf (€):</label>
+      <input type="number" id="blocked-amount" value="934" min="1" step="1">
+    </div>
+    <button id="blocked-calc-btn">Jetzt berechnen</button>
+    <div id="blocked-results" class="blocked-result">
+      Gesamtbetrag: <strong>€11.208</strong>
+    </div>
+  </div>
 </section>
 
 <!-- ═══════════════════════════ FOOTER ═══════════════════════════════════════ -->
@@ -436,7 +458,7 @@
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutzerklärung</a>
       <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
-      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
+      <a href="#" id="cookieSettingsLink">Cookie-Einstellungen</a>
     </nav>
     <div class="footer-disclosure">
       <strong>&#9873; Affiliate-Hinweis (Werbung):</strong>
@@ -456,16 +478,16 @@
     </div>
   </div>
   <div class="cookie-btns">
-    <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
-    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
-    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
+    <button class="cookie-accept">Alle akzeptieren</button>
+    <button class="cookie-decline">Nur notwendige</button>
+    <button class="cookie-settings-btn">Einstellungen</button>
   </div>
 </div>
 
 <!-- COOKIE SETTINGS MODAL -->
 <div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">&#10005;</button>
+    <button class="modal-close" aria-label="Schließen">&#10005;</button>
     <h2>Cookie-Einstellungen</h2>
     <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
     <div class="cookie-toggle-row">
@@ -480,7 +502,7 @@
       <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
       <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
     </div>
-    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
+    <button class="cookie-save-btn">Auswahl speichern</button>
   </div>
 </div>
 
@@ -490,328 +512,7 @@
   <a href="#" id="stickyCTALink" class="sticky-cta-btn" target="_blank" rel="noopener sponsored">Konto kostenlos eröffnen &rarr;</a>
 </div>
 
+<!-- nur noch der Link zur externen script.js -->
 <script src="script.js"></script>
-
-/* ============================================================
-   SIMULATOR — QUESTION DATA (DE)
-   ============================================================ */
-var QUESTIONS = [
-  {
-    id: 'duration',
-    text: 'Wie lange lebst du bereits in Deutschland?',
-    hint: 'Die Aufenthaltsdauer ist einer der wichtigsten SCHUFA-Faktoren. Je länger du hier lebst, desto mehr Daten hat die SCHUFA über dich — auch wenn diese ausnahmslos positiv sind.',
-    options: [
-      { label: 'Gerade angekommen (unter 3 Monate)', sub: 'Noch keine SCHUFA-Daten vorhanden',         badge: null,      score: 0,   key: 'new'  },
-      { label: '3 bis 12 Monate',                    sub: 'Frühphase — History-Aufbau beginnt',        badge: 'building',score: 60,  key: 'mid'  },
-      { label: '1 bis 3 Jahre',                      sub: 'Etabliert — solide Datenspur',              badge: null,      score: 130, key: 'est'  },
-      { label: 'Mehr als 3 Jahre',                   sub: 'Langfristig — starkes Historienpotenzial',  badge: 'best',    score: 200, key: 'long' }
-    ]
-  },
-  {
-    id: 'employment',
-    text: 'Was ist dein aktueller Beschäftigungsstatus in Deutschland?',
-    hint: 'Beschäftigungsstabilität signalisiert finanzielle Zuverlässigkeit. Banken und SCHUFA gewichten dies stark — ein unbefristeter Vertrag ist der Goldstandard.',
-    options: [
-      { label: 'Vollzeitbeschäftigt (unbefristeter Vertrag)', sub: 'Stärkstes Beschäftigungssignal',      badge: 'best', score: 120, key: 'employed'  },
-      { label: 'Selbständig oder Freiberufler',               sub: 'Variables Einkommen — handhabbar',    badge: null,   score: 75,  key: 'freelance' },
-      { label: 'Student (immatrikuliert)',                    sub: 'Gültiger Aufenthaltszweck',           badge: null,   score: 55,  key: 'student'   },
-      { label: 'Aktuell auf Jobsuche',                       sub: 'Vorübergehend — blockiert keine Konten', badge: null, score: 25,  key: 'seeking'   }
-    ]
-  },
-  {
-    id: 'anmeldung',
-    text: 'Bist du offiziell an einer deutschen Adresse gemeldet? (Anmeldung)',
-    hint: 'Die Anmeldung ist deine offizielle Adressregistrierung beim Bürgeramt. Gesetzlich innerhalb von 14 Tagen nach Einzug erforderlich — nahezu alle deutschen Banken verlangen sie.',
-    options: [
-      { label: 'Ja — vollständig angemeldet',           sub: 'Von allen deutschen Banken gefordert',    badge: 'best', score: 80, key: 'yes'     },
-      { label: 'In Bearbeitung — Termin vorhanden',     sub: 'Manche Banken akzeptieren dies temporär', badge: null,   score: 30, key: 'process' },
-      { label: 'Noch nicht registriert',                sub: 'Dringend nachholen',                       badge: 'risk', score: 0,  key: 'no'      }
-    ]
-  },
-  {
-    id: 'accounts',
-    text: 'Hast du derzeit deutsche Bankkonten?',
-    hint: 'Ein aktives deutsches Bankkonto ist der schnellste Weg, SCHUFA-History aufzubauen. Selbst ein kostenloser N26-Account zählt — jeder offene Monat ist ein Monat positiver Historie.',
-    options: [
-      { label: 'Keine deutschen Bankkonten',                sub: 'SCHUFA hat keinerlei Banking-Daten zu dir', badge: null,   score: 0,   key: 'none'    },
-      { label: 'Ein Konto, kürzlich eröffnet (< 1 Jahr)',  sub: 'Aufbau hat begonnen',                       badge: null,   score: 60,  key: 'one_new' },
-      { label: 'Ein Konto, über 12 Monate alt',            sub: 'Solide Banking-History im Aufbau',          badge: null,   score: 100, key: 'one_old' },
-      { label: 'Zwei oder mehr deutsche Konten',           sub: 'Starker Banking-Fußabdruck',                badge: 'best', score: 130, key: 'multi'   }
-    ]
-  },
-  {
-    id: 'payments',
-    text: 'Hast du in Deutschland jemals eine Zahlung versäumt?',
-    hint: 'Versäumte Zahlungen — Miete, Strom, Handyvertrag, Streaming-Abos — sind die häufigste Ursache für SCHUFA-Schäden. Ein ungelöster Eintrag kann deinen Score bis zu 3 Jahre erheblich belasten.',
-    options: [
-      { label: 'Nie — alle Zahlungen pünktlich',           sub: 'Ideales Zahlungsverhalten',               badge: 'best', score: 120, key: 'perfect' },
-      { label: 'Einmal oder zweimal — aber nachgezahlt',   sub: 'Geringer Einfluss, wenn schnell geklärt',  badge: null,   score: 40,  key: 'minor'   },
-      { label: 'Ja — und noch ungelöst',                   sub: 'Erhebliche negative Auswirkung',           badge: 'risk', score: -80, key: 'bad'     },
-      { label: 'Nicht zutreffend — zu neu hier',           sub: 'Noch keine Zahlungshistorie',              badge: null,   score: 50,  key: 'na'      }
-    ]
-  },
-  {
-    id: 'credit',
-    text: 'Wie sieht deine Kreditgeschichte in Deutschland aus?',
-    hint: 'Verantwortungsvoll verwalteter Kredit — eine monatlich vollständig bezahlte Kreditkarte oder ein Ratenkredit — verbessert deinen SCHUFA-Score aktiv. Kein Kredit ist neutral, nicht positiv.',
-    options: [
-      { label: 'Kein Kredit — komplett neu',                     sub: 'Neutraler Ausgangspunkt',            badge: null,   score: 30,  key: 'none'      },
-      { label: 'Kreditkarte — immer pünktlich bezahlt',          sub: 'Exzellentes positives Signal',       badge: 'best', score: 110, key: 'cc_good'   },
-      { label: 'Ratenkredit — immer pünktlich bezahlt',          sub: 'Starkes positives Signal',           badge: 'best', score: 120, key: 'loan_good' },
-      { label: 'Kredit vorhanden — aber einige Verzögerungen',   sub: 'Negativer Einfluss auf Score',       badge: 'risk', score: -20, key: 'late'      }
-    ]
-  }
-];
-
-/* ============================================================
-   BANK DATABASE
-   ============================================================ */
-var BANKS = {
-  n26:         { name: 'N26 Standard',           tagline: 'Deutschlands expat-freundlichste Digitalbank',                          url: 'https://n26.com/r/expatscore', cta: 'N26 kostenlos eröffnen',        ctaStyle: 'teal-cta', fee: 'Kostenlos',              time: '8 Min Setup',         schufa: 'Kein SCHUFA-Check',           features: ['Kein SCHUFA-Check','VideoIdent — komplett online','Englische App','Kostenlose Mastercard','Sofortige Kontonummer'] },
-  vivid:       { name: 'Vivid Money',             tagline: 'Mehrwährungs-Konto für internationale Fachkräfte',                      url: '#vivid-affiliate',             cta: 'Vivid kostenlos eröffnen',       ctaStyle: '',         fee: 'Kostenloser Tarif',      time: '10 Min Setup',        schufa: 'Kein SCHUFA-Check',           features: ['Kein SCHUFA-Check','Mehrwährungs-Pockets','Cashback auf Einkäufe','Englischer Support','EU + Nicht-EU akzeptiert'] },
-  bunq:        { name: 'Bunq',                   tagline: 'International-first Bank für mobile Menschen',                          url: '#bunq-affiliate',              cta: 'Bunq kostenlos testen',          ctaStyle: '',         fee: '3 Monate gratis',        time: '5 Min Setup',         schufa: 'Kein SCHUFA erforderlich',    features: ['Kein SCHUFA-Check','100% online Eröffnung','Keine Anmeldung für Antrag','EU-Einlagensicherung','Mehrsprachige App'] },
-  dkb:         { name: 'DKB',                    tagline: 'Deutschlands vertrauenswürdigste Onlinebank für etablierte Expats',     url: '#dkb-affiliate',               cta: 'DKB beantragen',                 ctaStyle: 'teal-cta', fee: 'Kostenlos (Bedingungen)',time: '3–5 Tage',            schufa: 'Soft SCHUFA-Prüfung',         features: ['Kostenlos ab €700/Monat','VISA weltweit akzeptiert','Exzellenter Service','Deutsche IBAN sofort','VideoIdent oder PostIdent'] },
-  c24:         { name: 'C24 Bank',               tagline: 'Neue Generation — toleranter als traditionelle deutsche Banken',        url: '#c24-affiliate',               cta: 'C24 Konto eröffnen',             ctaStyle: '',         fee: 'Kostenloses Basiskonto', time: 'Tageszulassung',      schufa: 'Basis SCHUFA-Prüfung',        features: ['Tolerante SCHUFA-Anforderungen','Vollständig digital','Englische Oberfläche','Deutsche IBAN sofort','Kostenlose Visa-Debitkarte'] },
-  ing:         { name: 'ING Deutschland',        tagline: 'Top-bewertetes kostenloses deutsches Konto — für etablierte Expats',   url: '#ing-affiliate',               cta: 'ING beantragen',                 ctaStyle: 'teal-cta', fee: 'Kostenlos für immer',    time: '3–7 Tage',            schufa: 'Vollständige SCHUFA-Prüfung', features: ['Nie monatliche Gebühren','Höchste Kundenzufriedenheit','€1.500/Monat Einkommensanf.','Sofortiger Kreditkarten-Upgrade','Vollständiges Banking-Paket'] },
-  comdirect:   { name: 'Comdirect',              tagline: 'Vollservice-Bank für Expats beim langfristigen Vermögensaufbau',        url: '#comdirect-affiliate',         cta: 'Comdirect eröffnen',             ctaStyle: '',         fee: 'Kostenlos mit Aktivität',time: '5–7 Tage',            schufa: 'Vollständige SCHUFA-Prüfung', features: ['Kostenlos mit 2 Transaktionen/Mo.','Spar- und ETF-Integration','SCHUFA-aufbauend','Visa und Mastercard','Starke Mobile-App'] },
-  commerzbank: { name: 'Commerzbank',            tagline: 'Zweitgrößte deutsche Bank — vollständiger Premium-Service',             url: '#commerzbank-affiliate',       cta: 'Commerzbank eröffnen',           ctaStyle: 'teal-cta', fee: '€9,90/Mo (oder gratis)', time: '2–5 Tage',            schufa: 'Vollständige SCHUFA-Prüfung', features: ['Bundesweites Filialnetz','Premium-Kreditkarten','Hypothekenzugang','Geschäftskonto verfügbar','Vollständiges Banking-Paket'] }
-};
-
-/* ============================================================
-   STATE
-   ============================================================ */
-var currentStep = 0, answers = {}, selectedOptionIndex = -1, scoreResult = null;
-
-/* ============================================================
-   INIT & STEP TRACKER
-   ============================================================ */
-function init() { buildStepTracker(); renderQuestion(0); }
-
-function buildStepTracker() {
-  var t = document.getElementById('stepTracker'); if (!t) return; t.innerHTML = '';
-  QUESTIONS.forEach(function(q, i) {
-    if (i > 0) { var c = document.createElement('div'); c.className = 'step-connector'; c.id = 'conn-' + i; t.appendChild(c); }
-    var d = document.createElement('div'); d.className = 'step-dot' + (i === 0 ? ' active' : ''); d.id = 'dot-' + i; t.appendChild(d);
-  });
-}
-
-function updateStepTracker(step) {
-  QUESTIONS.forEach(function(q, i) {
-    var d = document.getElementById('dot-' + i); if (!d) return;
-    d.className = 'step-dot';
-    if (i < step) d.classList.add('done'); else if (i === step) d.classList.add('active');
-    if (i > 0) { var c = document.getElementById('conn-' + i); if (c) c.className = 'step-connector' + (i <= step ? ' done' : ''); }
-  });
-  var sl = document.getElementById('stepLabel'); if (sl) sl.textContent = 'Schritt ' + (step + 1) + ' von ' + QUESTIONS.length;
-  var f = document.getElementById('simProgressFill'); if (f) f.style.width = ((step + 1) / QUESTIONS.length * 100).toFixed(1) + '%';
-}
-
-function renderQuestion(step) {
-  var q = QUESTIONS[step]; currentStep = step; selectedOptionIndex = -1;
-  var qNum = document.getElementById('qNumber'); if (qNum) qNum.textContent = 'Frage ' + (step + 1) + ' / ' + QUESTIONS.length;
-  var qT = document.getElementById('qText'); if (qT) qT.textContent = q.text;
-  var qH = document.getElementById('qHint'); if (qH) qH.textContent = q.hint;
-  var list = document.getElementById('optionsList'); if (!list) return; list.innerHTML = '';
-  q.options.forEach(function(opt, i) {
-    var el = document.createElement('div');
-    el.className = 'sim-option' + (answers[q.id] === i ? ' selected' : '');
-    el.setAttribute('role','button'); el.setAttribute('tabindex','0');
-    var b = opt.badge === 'best' ? '<span class="opt-badge badge-best">Best</span>' : opt.badge === 'building' ? '<span class="opt-badge badge-neutral">Building</span>' : opt.badge === 'risk' ? '<span class="opt-badge badge-risk">Achtung</span>' : '';
-    el.innerHTML = '<div class="opt-radio"></div><div class="opt-content"><div class="opt-label">' + opt.label + '</div>' + (opt.sub ? '<div class="opt-sub">' + opt.sub + '</div>' : '') + '</div>' + b;
-    (function(idx) { el.onclick = function() { selectOption(idx); }; el.onkeydown = function(e) { if (e.key === 'Enter' || e.key === ' ') selectOption(idx); }; })(i);
-    if (answers[q.id] === i) selectedOptionIndex = i;
-    list.appendChild(el);
-  });
-  var bb = document.getElementById('backBtn'); if (bb) bb.style.visibility = step > 0 ? 'visible' : 'hidden';
-  updateNextBtn(); updateStepTracker(step);
-}
-
-function selectOption(idx) {
-  var q = QUESTIONS[currentStep]; answers[q.id] = idx; selectedOptionIndex = idx;
-  document.querySelectorAll('.sim-option').forEach(function(el, i) { el.classList.toggle('selected', i === idx); });
-  updateNextBtn();
-}
-
-function updateNextBtn() {
-  var btn = document.getElementById('nextBtn'); if (!btn) return;
-  btn.textContent = currentStep === QUESTIONS.length - 1 ? 'SCHUFA-Score berechnen \u2605' : 'Weiter \u2192';
-  btn.classList.toggle('enabled', selectedOptionIndex >= 0);
-}
-
-function goNext() {
-  if (selectedOptionIndex < 0) return;
-  if (currentStep < QUESTIONS.length - 1) { animateCardOut(function() { renderQuestion(currentStep + 1); animateCardIn(); }); }
-  else { startCalculation(); }
-}
-
-function goBack() {
-  if (currentStep > 0) { animateCardOut(function() { renderQuestion(currentStep - 1); animateCardIn(); }); }
-}
-
-function animateCardOut(cb) {
-  var card = document.getElementById('questionCard'); if (!card) { cb(); return; }
-  card.classList.add('leaving'); setTimeout(function() { card.classList.remove('leaving'); cb(); }, 280);
-}
-
-function animateCardIn() {
-  var card = document.getElementById('questionCard'); if (!card) return;
-  card.style.animation = 'none';
-  requestAnimationFrame(function() { requestAnimationFrame(function() { card.style.animation = 'cardIn .4s cubic-bezier(.4,0,.2,1)'; }); });
-}
-
-/* ============================================================
-   SCORING ENGINE
-   ============================================================ */
-function computeScore() {
-  var raw = 0, factors = {}, RAW_MIN = -150, RAW_MAX = 770;
-  QUESTIONS.forEach(function(q) {
-    var idx = answers[q.id]; if (idx === undefined) return;
-    var opt = q.options[idx], pts = opt.score, maxPts = Math.max.apply(null, q.options.map(function(o){return o.score;}));
-    raw += pts; factors[q.id] = { pts: pts, maxPts: maxPts, key: opt.key };
-  });
-  return { raw: raw, normalised: Math.max(0, Math.min(1000, Math.round((raw - RAW_MIN) / (RAW_MAX - RAW_MIN) * 1000))), factors: factors };
-}
-
-function getScoreProfile(n) {
-  if (n >= 880) return { level: 'Exzellent',      color: '#50C878', desc: 'Dein SCHUFA-Profil ist in der Spitzenklasse. Deutsche Banken werden aktiv um dein Geschäft konkurrieren. Du qualifizierst dich für Kredit, Hypotheken und Premium-Konten.',                                                             pills: ['Top 5% in Deutschland','Alle Konten verfügbar','Hypotheken-berechtigt'] };
-  if (n >= 720) return { level: 'Sehr Gut',       color: '#7DDFAA', desc: 'Starkes SCHUFA-Profil. Du qualifizierst dich für nahezu alle deutschen Bankkonten, die meisten Kreditkarten und viele Kredite.',                                                                                                               pills: ['Meiste Kredite zugänglich','Kreditkarten verfügbar','Weiter ausbauen'] };
-  if (n >= 560) return { level: 'Gut',             color: '#D4AF37', desc: 'Solides Fundament mit Wachstumspotenzial. Du kannst die meisten Konten eröffnen. Längere Banking-History und pünktliche Zahlungen bringen dich nach oben.',                                                                                   pills: ['Standardkonten offen','Etwas Kredit zugänglich','Wachstumsphase'] };
-  if (n >= 380) return { level: 'Aufbauphase',    color: '#FBBF24', desc: 'Deine SCHUFA ist im Aufbau — normal für Expats, die vor 6–18 Monaten angekommen sind. Digitalbanken sind jetzt deine beste Option. Mit konsequentem Verhalten wächst dein Score in 12 Monaten erheblich.',                                     pills: ['Digitalbanken bevorzugt','Noch kein Kredit','12-Monat-Wachstumsfenster'] };
-  if (n >= 180) return { level: 'Begrenzt',       color: '#F97316', desc: 'Dein Profil zeigt begrenzte SCHUFA-Daten — typisch für Newcomer. Mehrere ausgezeichnete Banken arbeiten ohne SCHUFA-Prüfung. Eröffne noch heute ein Konto; es zählt sofort.',                                                                  pills: ['Zuerst No-SCHUFA-Banken','Jetzt History aufbauen','Verbesserung in 6–12 Mo.'] };
-  return                 { level: 'Keine SCHUFA', color: '#EF4444', desc: 'Du hast noch keine SCHUFA-Geschichte — völlig normal. SCHUFA gibt es in den meisten Ländern außerhalb Deutschlands nicht. Mehrere Banken heißen Newcomer ohne Bonitätsprüfung ausdrücklich willkommen.',                                        pills: ['Noch kein Eintrag','Perfekter Startpunkt','Mehrere Banken für dich'] };
-}
-
-function getBankRecs(n, factors) {
-  var dur = factors.duration ? factors.duration.key : '', acc = factors.accounts ? factors.accounts.key : '';
-  if (n < 300 || dur === 'new' || acc === 'none') return [ Object.assign({}, BANKS.n26, {rank:1, why:'Kein SCHUFA-Check erforderlich. Eröffnet vollständig online mit VideoIdent in 8 Minuten — nur Reisepass benötigt. Jeder offene Monat baut deine SCHUFA-History auf.'}), Object.assign({}, BANKS.vivid, {rank:2, why:'Kein SCHUFA-Check, Mehrwährungs-Pockets und Cashback. Ideal als Alltagskonto, während du über N26 SCHUFA aufbaust.'}), Object.assign({}, BANKS.bunq, {rank:3, why:'3 Monate kostenlos und keine Anmeldung für den Antrag erforderlich. Tolle Backup-Option, wenn deine Anmeldung noch in Bearbeitung ist.'}) ];
-  if (n < 560) return [ Object.assign({}, BANKS.n26, {rank:1, why:'Immer noch die sicherste Genehmigung. N26 garantiert Zulassung und gibt dir eine verlässliche Basis.'}), Object.assign({}, BANKS.c24, {rank:2, why:'Neue deutsche Bank mit den tolerantesten SCHUFA-Anforderungen ihrer Klasse. Ideal für Expats mit 3–18 Monaten Geschichte.'}), Object.assign({}, BANKS.dkb, {rank:3, why:'Es lohnt sich, jetzt zu beantragen. DKB akzeptiert die meisten Newcomer mit Basishistorie.'}) ];
-  if (n < 750) return [ Object.assign({}, BANKS.dkb, {rank:1, why:'Dein Profil qualifiziert dich jetzt für DKB — die Lieblingsbank der Expat-Community für Verlässlichkeit, kostenlose VISA und exzellenten Kundenservice.'}), Object.assign({}, BANKS.c24, {rank:2, why:'Ergänzt DKB perfekt — sofortiger Cashback und Visa-Debitkarte.'}), Object.assign({}, BANKS.ing, {rank:3, why:'Jetzt beantragen — du könntest dich qualifizieren. Deutschlands bestbewertete Bank nach Kundenzufriedenheit.'}) ];
-  return [ Object.assign({}, BANKS.ing, {rank:1, why:'Dein Score erschließt Deutschlands bestbewertete kostenlose Bank. ING ist das Ziel-Konto für etablierte Expats.'}), Object.assign({}, BANKS.comdirect, {rank:2, why:'Der ideale Vermögensaufbau-Begleiter. Comdirets ETF- und Sparfunktionen sind unübertroffen.'}), Object.assign({}, BANKS.commerzbank, {rank:3, why:'Du qualifizierst dich jetzt für Premium-Commerzbank-Produkte. Ideal für Filialnetz, Geschäftskonto oder Hypothek.'}) ];
-}
-
-function getNextSteps(profile, factors) {
-  var steps = [], n = profile.normalised, anm = factors.anmeldung ? factors.anmeldung.key : '', acc = factors.accounts ? factors.accounts.key : '', pmts = factors.payments ? factors.payments.key : '', dur = factors.duration ? factors.duration.key : '';
-  if (anm === 'no' || anm === 'process') steps.push('<strong>Anmeldung sofort erledigen.</strong> Besuche dein lokales Bürgeramt innerhalb von 14 Tagen nach Einzug. Mitbringen: Reisepass, Mietvertrag, Wohnungsgeberbestätigung.');
-  if (acc === 'none') steps.push('<strong>Diese Woche ein SCHUFA-freies Konto eröffnen.</strong> N26 oder Vivid öffnen innerhalb von 24 Stunden, kein SCHUFA-Check. Jeder Monat ohne Konto ist verschenkte positive Historie.');
-  if (pmts === 'bad') steps.push('<strong>Offene Zahlungen dringend klären.</strong> Kontaktiere den Gläubiger — viele stimmen zu, den Eintrag gegen vollständige Zahlung zu löschen (Löschungsvereinbarung). Innerhalb von 30 Tagen handeln.');
-  if (dur === 'new' || dur === 'mid') steps.push('<strong>Kreditkarte 6 Monate verantwortungsvoll nutzen.</strong> Nach dem ersten Konto: gesicherte Kreditkarte beantragen. 2–3 kleine Käufe pro Monat, Saldo monatlich vollständig abbezahlen.');
-  if (n < 560) steps.push('<strong>Kostenlosen SCHUFA-Bericht anfordern.</strong> Besuche meineSCHUFA.de → Datenkopie (kostenlos). Alle Einträge auf Fehler prüfen.');
-  steps.push('<strong>Den vollständigen SCHUFA-Guide lesen.</strong> Unser Leitfaden deckt alle Faktoren ab — wie man Einträge anficht, die schnellsten Strategien, und was zu tun ist, wenn eine Bank ablehnt. Aktualisiert für 2026.');
-  return steps;
-}
-
-/* ============================================================
-   CALCULATION & RESULT
-   ============================================================ */
-function startCalculation() {
-  var qs = document.getElementById('quiz-screen'), cs = document.getElementById('calcScreen');
-  if (qs) qs.style.display = 'none'; if (cs) cs.style.display = 'block';
-  ['cs1','cs2','cs3','cs4','cs5','cs6'].forEach(function(id, i) { setTimeout(function() { var el = document.getElementById(id); if (el) el.classList.add('visible'); }, i * 400); });
-  setTimeout(function() { scoreResult = computeScore(); showResult(scoreResult); }, 3200);
-}
-
-function showResult(result) {
-  var cs = document.getElementById('calcScreen'), rs = document.getElementById('resultScreen');
-  if (cs) cs.style.display = 'none'; if (rs) rs.style.display = 'block';
-  var profile = getScoreProfile(result.normalised);
-  setTimeout(function() { animateGauge(result.normalised, profile); }, 300);
-  var sll = document.getElementById('scoreLevelLabel'); if (sll) { sll.textContent = profile.level; sll.style.color = profile.color; }
-  var sd = document.getElementById('scoreDesc'); if (sd) sd.textContent = profile.desc;
-  var pe = document.getElementById('scorePills'); if (pe) pe.innerHTML = profile.pills.map(function(p) { return '<span class="score-pill" style="background:' + profile.color + '18;color:' + profile.color + ';border:1px solid ' + profile.color + '40">' + p + '</span>'; }).join('');
-  renderFactorBars(result.factors, profile);
-  var banks = getBankRecs(result.normalised, result.factors);
-  renderBanks(banks, profile, result.normalised);
-  renderNextSteps(profile, result.factors);
-  var topBank = banks[0];
-  var sbn = document.getElementById('stickyBankName'), scl = document.getElementById('stickyCTALink');
-  if (sbn) sbn.textContent = topBank.name; if (scl) { scl.href = topBank.url; scl.textContent = topBank.cta + ' \u2192'; }
-  setTimeout(function() { var bar = document.getElementById('sticky-cta-bar'); if (bar) bar.classList.add('visible'); }, 2500);
-  var sim = document.getElementById('schufa-simulator'); if (sim) sim.scrollIntoView({ behavior: 'smooth' });
-}
-
-function animateGauge(score, profile) {
-  var ARC = 251.3, R = 80, cx = 100, cy = 110, pct = score / 1000;
-  var fill = document.getElementById('gaugeFill'); if (fill) fill.style.strokeDashoffset = ARC * (1 - pct);
-  var angle = Math.PI - pct * Math.PI, nx = cx + R * Math.cos(angle), ny = cy - R * Math.sin(angle);
-  var needle = document.getElementById('gaugeNeedle'); if (needle) { needle.setAttribute('cx', nx.toFixed(1)); needle.setAttribute('cy', ny.toFixed(1)); needle.style.fill = profile.color; }
-  var start = performance.now();
-  (function step(now) {
-    var p = Math.min((now - start) / 1800, 1), e = 1 - Math.pow(1 - p, 3);
-    var gn = document.getElementById('gaugeNum'); if (gn) gn.textContent = Math.round(e * score);
-    if (p < 1) requestAnimationFrame(step); else if (gn) gn.textContent = score;
-  })(start);
-}
-
-function renderFactorBars(factors, profile) {
-  var config = [{id:'duration',label:'Zeit in Deutschland',maxPts:200},{id:'employment',label:'Beschäftigungsstatus',maxPts:120},{id:'anmeldung',label:'Anmeldestatus',maxPts:80},{id:'accounts',label:'Banking-History',maxPts:130},{id:'payments',label:'Zahlungsverhalten',maxPts:120},{id:'credit',label:'Kreditgeschichte',maxPts:120}];
-  var cont = document.getElementById('factorBars'); if (!cont) return; cont.innerHTML = '';
-  config.forEach(function(fc) {
-    var f = factors[fc.id]; if (!f) return;
-    var pct = Math.round((Math.max(0, f.pts) / fc.maxPts) * 100), col = pct >= 70 ? '#50C878' : pct >= 40 ? '#D4AF37' : '#EF4444';
-    var div = document.createElement('div'); div.className = 'factor-item';
-    div.innerHTML = '<div class="factor-label">' + fc.label + '</div><div class="factor-bar-wrap"><div class="factor-bar" style="width:0%;background:' + col + '" data-target="' + pct + '"></div></div><div class="factor-val">' + pct + '%</div>';
-    cont.appendChild(div);
-  });
-  setTimeout(function() { document.querySelectorAll('.factor-bar[data-target]').forEach(function(b) { b.style.width = b.getAttribute('data-target') + '%'; }); }, 500);
-}
-
-function renderBanks(banks, profile, score) {
-  var rt = document.getElementById('recoTitle'), rs = document.getElementById('recoSub'), cont = document.getElementById('bankCards');
-  if (rt) rt.textContent = score < 300 ? 'Beste Konten für deine Situation — kein SCHUFA-Check' : 'Top-bewertete Konten für dein SCHUFA-Profil';
-  if (rs) rs.textContent = score < 300 ? 'Diese Banken prüfen keine SCHUFA und heißen Newcomer willkommen. Eröffne noch heute eins — es zählt sofort.' : 'Geordnet nach Übereinstimmung mit deinem SCHUFA-Profil. Alle Links sind Affiliate.';
-  if (!cont) return; cont.innerHTML = '';
-  banks.forEach(function(bank) {
-    var card = document.createElement('div'); card.className = 'bank-card' + (bank.rank === 1 ? ' featured' : '');
-    var feats = bank.features.map(function(f) { return '<span class="bank-feat"><span class="feat-check">\u2713</span>' + f + '</span>'; }).join('');
-    var rankLabel = bank.rank === 1 ? '\u2605 Beste Wahl' : bank.rank === 2 ? '#2 Empfehlung' : '#3 Option';
-    card.innerHTML = '<div class="bank-top"><div><div class="bank-name">' + bank.name + '</div><div class="bank-tagline">' + bank.tagline + '</div></div><span class="bank-rank-badge rank-' + bank.rank + '">' + rankLabel + '</span></div><div class="bank-features">' + feats + '</div><div class="bank-why-box">' + bank.why + '</div><div class="bank-bottom"><span style="font-size:.82rem;color:var(--text-muted)">' + bank.fee + ' &middot; ' + bank.schufa + ' &middot; ' + bank.time + '</span><a href="' + bank.url + '" target="_blank" rel="noopener sponsored" class="bank-cta ' + bank.ctaStyle + '">' + bank.cta + ' \u2192</a></div>';
-    cont.appendChild(card);
-  });
-}
-
-function renderNextSteps(profile, factors) {
-  var steps = getNextSteps(profile, factors), card = document.getElementById('nextStepsCard'); if (!card) return;
-  card.innerHTML = '<div class="next-steps-title">Dein persönlicher Aktionsplan</div>' + steps.map(function(s, i) { return '<div class="next-step-item"><div class="step-num-circle">' + (i + 1) + '</div><div class="next-step-text">' + s + '</div></div>'; }).join('') + '<a href="schufa-guide.html" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:1.25rem;font-size:.88rem;color:var(--emerald);">Den vollständigen SCHUFA-Guide lesen \u2192</a>';
-}
-
-function restartQuiz() {
-  answers = {}; selectedOptionIndex = -1; scoreResult = null; currentStep = 0;
-  var rs = document.getElementById('resultScreen'), cs = document.getElementById('calcScreen'), qs = document.getElementById('quiz-screen'), bar = document.getElementById('sticky-cta-bar');
-  if (rs) rs.style.display = 'none'; if (cs) cs.style.display = 'none'; if (qs) qs.style.display = 'block'; if (bar) bar.classList.remove('visible');
-  renderQuestion(0);
-  var sim = document.getElementById('schufa-simulator'); if (sim) sim.scrollIntoView({ behavior: 'smooth' });
-}
-
-/* ============================================================
-   FAQ
-   ============================================================ */
-function toggleFaq(btn) {
-  var item = btn.parentElement, isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); var b = el.querySelector('.faq-q'); if (b) b.setAttribute('aria-expanded','false'); });
-  if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
-}
-
-/* ============================================================
-   COOKIE CONSENT
-   ============================================================ */
-function openModal(id)  { var m = document.getElementById('modal-' + id); if (m) m.classList.add('open'); }
-function closeModal(id) { var m = document.getElementById('modal-' + id); if (m) m.classList.remove('open'); }
-function hideBanner()   { var b = document.getElementById('cookie-banner'); if (b) b.classList.remove('visible'); }
-function acceptCookies()  { localStorage.setItem('cookieConsent','all'); hideBanner(); closeModal('cookie-settings'); }
-function declineCookies() { localStorage.setItem('cookieConsent','necessary'); hideBanner(); closeModal('cookie-settings'); }
-function saveGranularCookies() {
-  var a = document.getElementById('toggle-analytics'), f = document.getElementById('toggle-affiliate');
-  localStorage.setItem('cookieConsent', JSON.stringify({ necessary:true, analytics: a ? a.checked : false, affiliate: f ? f.checked : false }));
-  hideBanner(); closeModal('cookie-settings');
-}
-(function() { if (!localStorage.getItem('cookieConsent')) { setTimeout(function() { var b = document.getElementById('cookie-banner'); if (b) b.classList.add('visible'); }, 1600); } })();
-
-/* ============================================================
-   UTILS
-   ============================================================ */
-var nt = document.getElementById('navToggle'), nl = document.getElementById('navLinks');
-if (nt && nl) nt.addEventListener('click', function() { nl.classList.toggle('open'); });
-window.addEventListener('scroll', function() {
-  var el = document.getElementById('progressBar'); i
 </body>
 </html>
