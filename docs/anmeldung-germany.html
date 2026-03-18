@@ -4,21 +4,135 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anmeldung Germany 2026 — Complete Expat Registration Guide | ExpatScore.de</title>
-  <meta name="description" content="Step-by-step Anmeldung guide for expats in Germany 2026. Documents, appointments, deadlines, Wohnungsgeberbestätigung — everything for week 1.">
+  <meta name="description" content="Complete Anmeldung guide for Germany 2026: documents, appointment booking, Wohnungsgeberbestätigung, digital registration options, fines, and what happens after.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
   <link rel="canonical" href="https://www.expatscore.de/anmeldung-germany">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
   <meta property="og:title" content="Anmeldung Germany 2026 — Complete Expat Registration Guide">
   <meta property="og:url" content="https://www.expatscore.de/anmeldung-germany">
   <meta property="og:site_name" content="ExpatScore.de">
-  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-  <meta name="theme-color" content="#080c10">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0a0e17">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .doc-checklist {
+      background: var(--bg-glass);
+      border: 1px solid var(--emerald-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .doc-checklist-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--emerald);
+      margin-bottom: 1rem;
+    }
+    .doc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .doc-item:last-child { border-bottom: none; }
+    .doc-check {
+      width: 22px; height: 22px;
+      border: 2px solid var(--emerald);
+      border-radius: 4px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .doc-check.checked { background: var(--emerald); }
+    .doc-check.checked::after { content: '✓'; color: #080c14; font-weight: 700; font-size: 0.75rem; }
+    .doc-name { font-weight: 600; font-size: 0.9rem; }
+    .doc-desc { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .doc-required { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700; color: #EF4444; margin-left: auto; flex-shrink: 0; }
+    .doc-optional { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700; color: var(--gold); margin-left: auto; flex-shrink: 0; }
+
+    .step-cards { display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0; }
+    .step-card {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      transition: border-color 0.2s;
+    }
+    .step-card:hover { border-color: var(--gold-border); }
+    .step-card-num {
+      width: 44px; height: 44px;
+      background: var(--gold-glow);
+      border: 2px solid var(--gold-border);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-card-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .step-card-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
+    .step-card-tip {
+      font-size: 0.78rem;
+      color: var(--gold);
+      margin-top: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      background: var(--gold-glow);
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .city-table { width: 100%; border-collapse: collapse; font-size: .83rem; margin: 1.5rem 0; }
+    .city-table th {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .city-table td {
+      padding: .75rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .city-table tr:hover td { background: rgba(255,255,255,.015); }
+
+    .after-anmeldung-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: .85rem;
+      margin: 1.5rem 0;
+    }
+    .aa-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      transition: border-color .2s;
+    }
+    .aa-card:hover { border-color: var(--gold-border); }
+    .aa-title { font-weight: 700; font-size: .88rem; margin-bottom: .3rem; }
+    .aa-desc { font-size: .78rem; color: var(--text-muted); line-height: 1.55; }
+    .aa-link { font-size: .75rem; color: var(--emerald); margin-top: .4rem; display: block; }
+  </style>
 </head>
 <body>
 
@@ -39,97 +153,379 @@
   </div>
 </header>
 
-<div class="werbung-bar" role="note" aria-label="Werbehinweis">
-  <strong>&#9873; Anzeige:</strong> Diese Seite enthält Affiliate-Links. Bei Kontoeröffnung erhalten wir eine Provision — für dich keine Mehrkosten. <a href="affiliate-hinweis.html">Details &rarr;</a>
+<div class="werbung-bar" role="note">
+  <strong>⚑ Anzeige:</strong> Diese Seite enthält Affiliate-Links. <a href="affiliate-hinweis.html">Details →</a>
 </div>
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a> &rsaquo;
-  <span class="current">Anmeldung Guide</span>
+  <a href="index.html">Home</a> › <span class="current">Anmeldung Guide 2026</span>
 </nav>
 
 <section class="hero-article">
   <div class="hero-inner">
-    <span class="hero-eyebrow">Guide &middot; ExpatScore.de</span>
-    <h1>Anmeldung Germany 2026<br><span style="font-size:.55em;color:var(--text-secondary);font-weight:400;">The Complete Expat Registration Guide</span></h1>
-    <p class="hero-sub">Step-by-step: documents, appointments, deadlines, Wohnungsgeberbestätigung. Essential reading for week 1.</p>
+    <span class="hero-eyebrow">Guide · Week 1 in Germany · 2026</span>
+    <h1>Anmeldung Germany 2026<br><span style="font-size:.55em;color:var(--text-secondary);font-weight:400;">The Complete Address Registration Guide for Expats</span></h1>
+    <p class="hero-sub">Step-by-step: documents checklist, appointment booking tips for every major city, Wohnungsgeberbestätigung explained, fines, digital options, and everything unlocked after registration.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
+      <span style="font-size:.8rem;color:#EF4444;">⚠ Legal Deadline: 14 days after moving in</span>
+      <span style="font-size:.8rem;color:var(--text-muted);">⏱ 8 Min Read</span>
+      <span style="font-size:.8rem;color:var(--emerald);">✓ 2026 Updated</span>
+    </div>
   </div>
 </section>
 
-<main class="article-body">
-  <a href="index.html" class="back-link">&larr; Zurück zur Startseite</a>
+<main class="article-body" style="max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;">
 
-  <p><strong>This guide is coming soon.</strong> We are writing the definitive Anmeldung (address registration) guide for expats arriving in Germany. It will include step-by-step instructions, document checklists, appointment booking tips, and everything you need to navigate the Bürgeramt.</p>
+  <a href="index.html" class="back-link">← Back to Home</a>
 
-  <div style="background:rgba(0,196,167,0.06);border-left:3px solid var(--teal);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:2rem 0;">
-    <strong style="color:var(--teal);">Legal requirement:</strong> You must register your address within 14 days of moving into your apartment. Failure to do so can result in a fine of up to €1,000.
+  <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;">
+    <strong style="color:#EF4444;">⚠ Legal Requirement:</strong> The Anmeldung (address registration) must be completed within <strong>14 days</strong> of moving into your apartment. Failure to register can result in a fine of <strong>up to €1,000</strong> (§54 BMG). No exceptions — even if you don't have all your documents yet.
   </div>
 
-  <h2>What this guide will cover</h2>
-  <p>The Anmeldung is the single most important bureaucratic step when arriving in Germany. It unlocks everything else: your Tax ID, bank accounts at traditional banks, health insurance enrollment, and more. Without it, you're effectively invisible to the German system. Our guide will walk you through the entire process, from booking an appointment to what happens after registration.</p>
+  <h2>What is the Anmeldung?</h2>
+  <p>The <strong>Anmeldung</strong> (Einwohnermeldeamt registration) is Germany's mandatory address registration system. When you move into any residence in Germany — whether it's a flat you rent, a shared apartment (WG), or temporary accommodation — you must register your address at the local <strong>Bürgeramt</strong> (Citizens' Office) within 14 days.</p>
 
-  <h2>Documents you'll need (preview)</h2>
-  <p>Passport or national ID card, completed Anmeldeformular (registration form — available at the Bürgeramt or online), Wohnungsgeberbestätigung (landlord confirmation — legally required since 2015), and your rental contract. Some Bürgerämter also ask for your marriage certificate if applicable.</p>
+  <p>The Anmeldung is not just bureaucratic red tape — it's the <strong>key that unlocks everything else</strong> in Germany. Without a Meldebescheinigung (registration certificate), you cannot open most bank accounts, get a German phone contract, receive your Steuer-ID (Tax ID), enroll in public health insurance, or apply for a residence permit. It's the single most important step in your first week.</p>
 
-  <p style="margin-top:2rem;"><a href="konto-ohne-anmeldung.html" class="cta-btn">Bank Account Without Anmeldung &rarr;</a></p>
+  <p>In 2026, some cities now offer partial <strong>digital Anmeldung</strong> via BundID (Germany's digital identity portal), but physical attendance at the Bürgeramt is still required in most municipalities. More on this below.</p>
+
+  <h2>Complete Documents Checklist</h2>
+
+  <div class="doc-checklist">
+    <div class="doc-checklist-title">📋 Documents You Must Bring</div>
+    <div class="doc-item">
+      <div class="doc-check checked"></div>
+      <div>
+        <div class="doc-name">Valid Passport or National ID Card</div>
+        <div class="doc-desc">Must be valid. EU citizens can use national ID. Non-EU citizens must use passport. Bring original — not a copy.</div>
+      </div>
+      <span class="doc-required">REQUIRED</span>
+    </div>
+    <div class="doc-item">
+      <div class="doc-check checked"></div>
+      <div>
+        <div class="doc-name">Anmeldeformular (Registration Form)</div>
+        <div class="doc-desc">Download from your Bürgeramt's website and fill out before your appointment. Available in German only — use the ExpatScore translation guide below.</div>
+      </div>
+      <span class="doc-required">REQUIRED</span>
+    </div>
+    <div class="doc-item">
+      <div class="doc-check checked"></div>
+      <div>
+        <div class="doc-name">Wohnungsgeberbestätigung (Landlord Confirmation)</div>
+        <div class="doc-desc">Legal requirement since 2015. Your landlord (or main tenant in a WG) must provide this signed document confirming your address and move-in date. Without this, registration is impossible.</div>
+      </div>
+      <span class="doc-required">REQUIRED</span>
+    </div>
+    <div class="doc-item">
+      <div class="doc-check"></div>
+      <div>
+        <div class="doc-name">Rental Contract (Mietvertrag)</div>
+        <div class="doc-desc">Not always required, but some Bürgerämter ask for it as additional proof of address. Bring it just in case.</div>
+      </div>
+      <span class="doc-optional">RECOMMENDED</span>
+    </div>
+    <div class="doc-item">
+      <div class="doc-check"></div>
+      <div>
+        <div class="doc-name">Marriage Certificate (if applicable)</div>
+        <div class="doc-desc">Required if registering a spouse/family together at the same address. Needs an apostille and often a certified German translation.</div>
+      </div>
+      <span class="doc-optional">IF APPLICABLE</span>
+    </div>
+    <div class="doc-item">
+      <div class="doc-check"></div>
+      <div>
+        <div class="doc-name">Residence Permit / Visa (non-EU citizens)</div>
+        <div class="doc-desc">Some Bürgerämter for non-EU citizens require a valid visa or entry stamp. Check your specific city's requirements.</div>
+      </div>
+      <span class="doc-optional">SOMETIMES REQUIRED</span>
+    </div>
+  </div>
+
+  <h2>The Wohnungsgeberbestätigung — The Most Misunderstood Document</h2>
+  <p>The <strong>Wohnungsgeberbestätigung</strong> (literally: landlord/housing-provider confirmation) is a legally mandated document introduced by the Bundesmeldegesetz in 2015. It must be signed by the person who is "providing" you with housing — either your landlord (Vermieter) or the primary tenant in a shared flat (WG).</p>
+
+  <p>Key facts about the Wohnungsgeberbestätigung:</p>
+  <ul style="padding-left:1.25rem;color:var(--text-secondary);font-size:.9rem;line-height:2.2;">
+    <li>The landlord is <strong>legally obligated</strong> to provide it — refusing is a punishable offense (§54 BMG, fine up to €1,000 for the landlord).</li>
+    <li>It must contain: name and address of the housing provider, address of the accommodation, move-in date, and signature.</li>
+    <li>Download the standard form from your Bürgeramt website — or use any format that contains the required information.</li>
+    <li>For <strong>hotel/Airbnb</strong>: the hotel can issue the Wohnungsgeberbestätigung if you're staying there long-term and wish to register. Most hotels know this.</li>
+    <li>For <strong>furnished sublets</strong> via Wunderflats, Spotahome etc.: request the Wohnungsgeberbestätigung from the platform or primary tenant before booking if you'll need to register.</li>
+  </ul>
+
+  <h2>Step-by-Step: How to Complete Your Anmeldung</h2>
+
+  <div class="step-cards">
+    <div class="step-card">
+      <div class="step-card-num">1</div>
+      <div>
+        <div class="step-card-title">Find Your Bürgeramt</div>
+        <div class="step-card-desc">In most cities, you must go to the Bürgeramt in your specific district (Bezirk), not just any office. Google "Bürgeramt [your city] online Termin" to find the right office. In Berlin, use service.berlin.de. In Munich, muenchen.de/rathaus. In Frankfurt, frankfurt.de/buergeramt.</div>
+        <span class="step-card-tip">💡 Tip: Book an appointment (Termin) online — walk-in queues in major cities can be 3+ hours.</span>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-num">2</div>
+      <div>
+        <div class="step-card-title">Book Your Appointment Online</div>
+        <div class="step-card-desc">Most major cities require or strongly recommend pre-booking. Select "Anmeldung einer Wohnung" from the service menu. Appointment slots often fill up 2–3 weeks in advance. Book immediately after moving in — don't wait. If no slots are available before your 14-day deadline, document your booking attempt (screenshot) as proof of good faith.</div>
+        <span class="step-card-tip">💡 Tip: Cancellations appear late at night and early morning — check daily for slots.</span>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-num">3</div>
+      <div>
+        <div class="step-card-title">Request Wohnungsgeberbestätigung</div>
+        <div class="step-card-desc">Ask your landlord or WG lead tenant to sign the Wohnungsgeberbestätigung form. Download the standard form from your Bürgeramt website (search: "[city] Wohnungsgeberbestätigung Formular"). Send via email if your landlord is remote — a photo of the signed form is typically accepted.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-num">4</div>
+      <div>
+        <div class="step-card-title">Fill Out the Anmeldeformular</div>
+        <div class="step-card-desc">Download the registration form from your specific Bürgeramt. Key fields: Name, date of birth, previous address (abroad is fine — write your home country address), new German address, move-in date. Religion field: you can write "keine" (none) or leave blank if unsure — this affects the Kirchensteuer (church tax).</div>
+        <span class="step-card-tip">⚠ Religion field: If you write a German state religion (katholisch, evangelisch), church tax (~8–9% of income tax) will be automatically deducted.</span>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-num">5</div>
+      <div>
+        <div class="step-card-title">Attend Your Bürgeramt Appointment</div>
+        <div class="step-card-desc">The appointment itself is usually 10–20 minutes. The officer checks your documents, asks a few questions, and processes the registration. In many cities, they speak some English. Bring all documents listed above. You receive a Meldebescheinigung (registration certificate) at the end — keep multiple copies.</div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-num">6</div>
+      <div>
+        <div class="step-card-title">Receive Your Steuer-ID by Post</div>
+        <div class="step-card-desc">Within 4–6 weeks of registration, the German tax authority (Bundeszentralamt für Steuern) automatically sends your <strong>Steueridentifikationsnummer (Steuer-ID)</strong> by post to your registered address. This 11-digit number is yours for life. Share it with your employer immediately — without it, you'll be taxed at the maximum Steuerklasse 6 rate.</div>
+        <span class="step-card-tip">💡 Tip: If your Steuer-ID doesn't arrive after 6 weeks, you can request it online at bzst.de.</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Appointment Booking Guide by City 2026</h2>
+
+  <div style="overflow-x:auto;">
+    <table class="city-table">
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Booking Portal</th>
+          <th>Avg. Wait for Appointment</th>
+          <th>Tips</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Berlin</strong></td>
+          <td>service.berlin.de</td>
+          <td>2–4 weeks</td>
+          <td>Cancellations appear at 6am daily. Try multiple districts.</td>
+        </tr>
+        <tr>
+          <td><strong>Munich</strong></td>
+          <td>muenchen.de/rathaus/KVR</td>
+          <td>1–3 weeks</td>
+          <td>English service available at Ruppertstraße office.</td>
+        </tr>
+        <tr>
+          <td><strong>Hamburg</strong></td>
+          <td>hamburg.de/buergeramt</td>
+          <td>1–2 weeks</td>
+          <td>Most efficient city — often same-week appointments available.</td>
+        </tr>
+        <tr>
+          <td><strong>Frankfurt</strong></td>
+          <td>frankfurt.de/buergeramt</td>
+          <td>1–2 weeks</td>
+          <td>Multiple offices — check all for earlier slots.</td>
+        </tr>
+        <tr>
+          <td><strong>Cologne</strong></td>
+          <td>koeln.de/buergerbuero</td>
+          <td>2–3 weeks</td>
+          <td>Walk-in often faster than online booking here.</td>
+        </tr>
+        <tr>
+          <td><strong>Stuttgart</strong></td>
+          <td>stuttgart.de/buergerbuero</td>
+          <td>1–2 weeks</td>
+          <td>Stadtbezirk system — go to your local district office.</td>
+        </tr>
+        <tr>
+          <td><strong>Düsseldorf</strong></td>
+          <td>duesseldorf.de/buergerbuero</td>
+          <td>1–2 weeks</td>
+          <td>Separate office for Ausländer (foreigners) with longer hours.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Digital Anmeldung 2026 — What's New</h2>
+  <p>Germany has been slowly rolling out digital government services via the <strong>BundID</strong> platform. In 2026, some cities allow preliminary registration steps digitally — but as of now, final in-person attendance at the Bürgeramt is still required in most locations.</p>
+
+  <p>What you can do online in some cities:</p>
+  <ul style="padding-left:1.25rem;color:var(--text-secondary);font-size:.9rem;line-height:2.2;">
+    <li><strong>Download and pre-fill</strong> the Anmeldeformular (most cities)</li>
+    <li><strong>Book appointments</strong> online (Berlin, Munich, Hamburg, Frankfurt)</li>
+    <li><strong>Full digital Anmeldung</strong> via BundID with eID (online German ID with NFC chip) — currently only in pilot cities (Erfurt, a few Hamburg districts)</li>
+    <li><strong>Post-registration Ummeldung</strong> (address change) is available digitally in more cities than initial registration</li>
+  </ul>
+
+  <div style="background:rgba(212,175,55,0.05);border:1px solid var(--gold-border);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin:1.5rem 0;font-size:.87rem;">
+    <strong style="color:var(--gold);">📌 2026 Update:</strong> The German federal government has committed to full digital Anmeldung rollout by 2027 as part of the OZG (Onlinezugangsgesetz) digital services act. For now (2026), check your specific city's BundID page to see if digital registration is available for your district.
+  </div>
+
+  <h2>What the Anmeldung Unlocks</h2>
+  <p>Once you have your Meldebescheinigung in hand, everything else falls into place. Here's what it unlocks:</p>
+
+  <div class="after-anmeldung-grid">
+    <div class="aa-card">
+      <div class="aa-title">🏦 Traditional Bank Accounts</div>
+      <div class="aa-desc">DKB, ING, Commerzbank, Sparkasse all require the Meldebescheinigung for account opening.</div>
+      <a href="banking.html" class="aa-link">Banking Guide →</a>
+    </div>
+    <div class="aa-card">
+      <div class="aa-title">🆔 Steuer-ID (Tax ID)</div>
+      <div class="aa-desc">Automatically sent by Bundeszentralamt within 4–6 weeks. Required before first payroll.</div>
+      <a href="steuer-id-guide.html" class="aa-link">Tax ID Guide →</a>
+    </div>
+    <div class="aa-card">
+      <div class="aa-title">📱 German Phone Contracts</div>
+      <div class="aa-desc">Postpaid phone contracts (Vertrag) require German address proof. Prepaid (Prepaid) works without Anmeldung.</div>
+    </div>
+    <div class="aa-card">
+      <div class="aa-title">🏥 Health Insurance</div>
+      <div class="aa-desc">Statutory GKV enrollment requires Anmeldung. TK, AOK, Barmer all need address registration.</div>
+      <a href="tk-health-insurance.html" class="aa-link">TK Insurance Guide →</a>
+    </div>
+    <div class="aa-card">
+      <div class="aa-title">📬 Residency Permit (Aufenthaltstitel)</div>
+      <div class="aa-desc">Non-EU citizens must register before applying for their Aufenthaltstitel at the Ausländerbehörde.</div>
+    </div>
+    <div class="aa-card">
+      <div class="aa-title">🗳️ Electoral Roll</div>
+      <div class="aa-desc">EU citizens are automatically registered for EU Parliament elections. Non-EU citizens are not eligible to vote.</div>
+    </div>
+    <div class="aa-card">
+      <div class="aa-title">🚗 Car Registration</div>
+      <div class="aa-desc">Vehicle Zulassung requires German address. If you import a car, you need Anmeldung first.</div>
+    </div>
+    <div class="aa-card">
+      <div class="aa-title">💳 SCHUFA History</div>
+      <div class="aa-desc">Your registered address is used by banks when reporting to SCHUFA. It activates your SCHUFA profile.</div>
+      <a href="schufa-guide.html" class="aa-link">SCHUFA Guide →</a>
+    </div>
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <ul class="faq-list" role="list" style="max-width:100%;">
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        What happens if I miss the 14-day deadline?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        You should still register as soon as possible — the Bürgeramt will process it regardless of when you show up. The 14-day deadline is when fines theoretically become possible (up to €1,000), but in practice, fines for first-time minor delays are rare. If you have a documented reason for delay (e.g., no appointment available, waiting for landlord signature), keep records. The most important thing: register as soon as you can, even if late.
+      </div>
+    </li>
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        Can I open a bank account before the Anmeldung?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Yes — but only with specific digital banks. N26, Vivid Money, Bunq, and Wise all accept a foreign address for account opening. Traditional banks (DKB, ING, Commerzbank, Sparkasse) require the Meldebescheinigung. Our recommendation: open N26 immediately upon arrival (foreign address accepted), complete Anmeldung within 14 days, then update your address in the N26 app and apply for additional accounts.
+      </div>
+    </li>
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        My landlord refuses to give me the Wohnungsgeberbestätigung. What can I do?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        This is illegal. The landlord is legally obligated to provide the Wohnungsgeberbestätigung within 2 weeks of your move-in (§19 BMG). Refusing is a Ordnungswidrigkeit (administrative offense) with a fine of up to €1,000 for the landlord. Send a written request (email + letter) demanding the document with reference to §19 BMG. If refused, contact the Mieterschutzverein (tenant protection association) in your city — they can intervene.
+      </div>
+    </li>
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        Do I need to deregister (Abmeldung) when I leave Germany?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Yes, if you are permanently leaving Germany, you must complete an Abmeldung at the Bürgeramt (or the German embassy in your destination country). This can be done up to 1 week before departure or within 2 weeks after leaving. Failure to deregister means you remain officially registered in Germany — which has tax and administrative implications.
+      </div>
+    </li>
+  </ul>
+
+  <div style="margin:2.5rem 0;display:grid;grid-template-columns:1fr 1fr;gap:1rem;flex-wrap:wrap;">
+    <div style="padding:1.5rem;border-radius:var(--radius-md);background:rgba(80,200,120,0.06);border:1px solid var(--emerald-border);">
+      <strong style="color:var(--emerald);">No Anmeldung Yet?</strong>
+      <p style="margin:.5rem 0 1rem;font-size:.85rem;color:var(--text-secondary);">Open a bank account without registration using these digital banks.</p>
+      <a href="konto-ohne-anmeldung.html" class="cta-btn cta-teal" style="display:block;text-align:center;">Bank Without Anmeldung →</a>
+    </div>
+    <div style="padding:1.5rem;border-radius:var(--radius-md);background:rgba(212,175,55,0.05);border:1px solid var(--gold-border);">
+      <strong style="color:var(--gold);">Registered? Next Step:</strong>
+      <p style="margin:.5rem 0 1rem;font-size:.85rem;color:var(--text-secondary);">Start building your SCHUFA score from day one with the right bank.</p>
+      <a href="schufa-simulator.html" class="cta-btn" style="display:block;text-align:center;">Check Your SCHUFA Score →</a>
+    </div>
+  </div>
 
 </main>
 
 <footer class="global-footer">
   <div class="inner">
-    <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
+    <div class="footer-disclaimer"><strong>No Legal Advice</strong> — All information without warranty</div>
     <nav class="footer-legal-links" aria-label="Legal-Links">
-      <a href="about.html">Über uns</a>
+      <a href="about.html">About</a>
       <a href="banking.html">Banking</a>
       <a href="schufa-guide.html">SCHUFA Guide</a>
       <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutzerklärung</a>
-      <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
-      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
+      <a href="datenschutz.html">Privacy</a>
+      <a href="affiliate-hinweis.html">Affiliate Disclosure</a>
+      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie Settings</a>
     </nav>
-    <div class="footer-disclosure">
-      <strong>&#9873; Affiliate-Hinweis (Werbung):</strong>
-      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
-    </div>
-    <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Alle Angaben ohne Gewähr &middot; Kein Ersatz für individuelle Rechts- oder Finanzberatung. &middot; <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
+    <p class="footer-copy">&copy; 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
   </div>
 </footer>
 
-<!-- COOKIE BANNER -->
-<div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
+<div id="cookie-banner" role="dialog" aria-live="polite">
   <div class="cookie-banner-header">
-    <div class="cookie-banner-icon" aria-hidden="true">&#127850;</div>
+    <div class="cookie-banner-icon">🍪</div>
     <div class="cookie-banner-body">
-      <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
-      <div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</div>
+      <div class="cookie-banner-title">Your Privacy Settings</div>
+      <div class="cookie-banner-text">We use cookies. <a href="datenschutz.html">Privacy Policy</a></div>
     </div>
   </div>
   <div class="cookie-btns">
-    <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
-    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
-    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+    <button class="cookie-decline" onclick="declineCookies()">Necessary Only</button>
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
   </div>
 </div>
 
-<!-- COOKIE SETTINGS MODAL -->
-<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">&#10005;</button>
-    <h2>Cookie-Einstellungen</h2>
-    <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
+    <button class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
+    <h2>Cookie Settings</h2>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div>
+      <div class="cookie-toggle-info"><strong>Technically Necessary</strong><span>Always active.</span></div>
       <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div>
+      <div class="cookie-toggle-info"><strong>Analytics</strong></div>
       <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
+      <div class="cookie-toggle-info"><strong>Affiliate Tracking</strong></div>
       <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
     </div>
-    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Save Selection</button>
   </div>
 </div>
 

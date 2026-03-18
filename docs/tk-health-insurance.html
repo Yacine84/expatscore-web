@@ -3,22 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TK Health Insurance Germany 2026 — Full Expat Review | ExpatScore.de</title>
-  <meta name="description" content="TK (Techniker Krankenkasse) review for expats in Germany 2026. Monthly cost calculator, TK vs AOK vs Barmer comparison, English support rating.">
+  <title>TK Health Insurance Germany 2026 — Full Expat Review &amp; Cost Calculator | ExpatScore.de</title>
+  <meta name="description" content="TK Techniker Krankenkasse 2026 review for expats: 17.29% rate, live monthly cost calculator, TK vs AOK vs Barmer comparison, English support rating, enrollment guide.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
   <link rel="canonical" href="https://www.expatscore.de/tk-health-insurance">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
   <meta property="og:title" content="TK Health Insurance Germany 2026 — Full Expat Review">
   <meta property="og:url" content="https://www.expatscore.de/tk-health-insurance">
   <meta property="og:site_name" content="ExpatScore.de">
-  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-  <meta name="theme-color" content="#080c10">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0a0e17">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .rate-hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .rate-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .rate-card:hover { border-color: var(--gold-border); }
+    .rate-card.highlight { border-color: var(--emerald-border); }
+    .rate-num {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .rate-label { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* Calculator */
+    .tk-calculator {
+      background: var(--bg-secondary);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+    }
+    .tk-calc-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+    .tk-calc-sub { font-size: .9rem; color: var(--text-muted); margin-bottom: 1.75rem; }
+    .tk-calc-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media(max-width:600px) { .tk-calc-inputs { grid-template-columns: 1fr; } }
+    .tk-input-group label {
+      display: block;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: .5rem;
+    }
+    .tk-input-group input, .tk-input-group select {
+      width: 100%;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: .75rem 1rem;
+      color: var(--text-primary);
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 600;
+      outline: none;
+      transition: border-color .2s;
+      -webkit-appearance: none;
+    }
+    .tk-input-group input:focus, .tk-input-group select:focus { border-color: var(--gold-border); }
+    .tk-result {
+      margin-top: 1.75rem;
+      padding: 1.5rem;
+      background: var(--bg-glass);
+      border: 1px solid var(--emerald-border);
+      border-radius: var(--radius-md);
+      display: none;
+    }
+    .tk-result.visible { display: block; animation: fadeInUp .4s ease; }
+    .tk-result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .tk-result-item {
+      text-align: center;
+      padding: .75rem;
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+    }
+    .tk-result-num {
+      font-family: var(--font-mono);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .tk-result-label { font-size: .72rem; color: var(--text-muted); margin-top: .25rem; }
+
+    /* Insurer Comparison */
+    .insurer-table { width: 100%; border-collapse: collapse; font-size: .84rem; margin: 1.75rem 0; }
+    .insurer-table th {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: .85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .insurer-table th.tk-col { color: var(--emerald); }
+    .insurer-table td {
+      padding: .85rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      vertical-align: middle;
+    }
+    .insurer-table tr:hover td { background: rgba(255,255,255,.015); }
+    .it-best { color: var(--emerald); font-weight: 700; }
+    .it-rate { font-family: var(--font-mono); font-weight: 700; color: var(--gold); }
+    .it-check { color: var(--emerald); }
+    .it-partial { color: var(--gold); }
+    .it-cross { color: #EF4444; }
+
+    /* Benefits list */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: .85rem;
+      margin: 1.5rem 0;
+    }
+    .benefit-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      font-size: .85rem;
+    }
+    .benefit-card-title {
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: .3rem;
+    }
+    .benefit-card-desc { color: var(--text-muted); font-size: .8rem; line-height: 1.5; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
@@ -33,106 +178,413 @@
       <a href="banking.html">Banking</a>
       <a href="schufa-simulator.html">SCHUFA Tool</a>
       <a href="schufa-guide.html">SCHUFA Guide</a>
-      <a href="insurance.html">Versicherung</a>
+      <a href="insurance.html" aria-current="page">Versicherung</a>
       <a href="about.html">Über uns</a>
     </nav>
   </div>
 </header>
 
-<div class="werbung-bar" role="note" aria-label="Werbehinweis">
-  <strong>&#9873; Anzeige:</strong> Diese Seite enthält Affiliate-Links. Bei Kontoeröffnung erhalten wir eine Provision — für dich keine Mehrkosten. <a href="affiliate-hinweis.html">Details &rarr;</a>
+<div class="werbung-bar" role="note">
+  <strong>⚑ Anzeige:</strong> Diese Seite enthält Affiliate-Links. <a href="affiliate-hinweis.html">Details →</a>
 </div>
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
-  <a href="index.html">Home</a> &rsaquo;
-  <span class="current">TK Health Insurance</span>
+  <a href="index.html">Home</a> › <a href="insurance.html">Insurance</a> › <span class="current">TK Health Insurance 2026</span>
 </nav>
 
 <section class="hero-article">
   <div class="hero-inner">
-    <span class="hero-eyebrow">Insurance &middot; ExpatScore.de</span>
-    <h1>TK Health Insurance Germany 2026<br><span style="font-size:.55em;color:var(--text-secondary);font-weight:400;">The Complete Expat Review</span></h1>
-    <p class="hero-sub">Live monthly cost calculator, TK vs AOK vs Barmer comparison. Rate 17.29% — below national average.</p>
+    <span class="hero-eyebrow">Health Insurance · Germany 2026</span>
+    <h1>TK Health Insurance Germany 2026<br><span style="font-size:.55em;color:var(--text-secondary);font-weight:400;">The Complete Expat Review — Rates, Benefits &amp; Enrollment</span></h1>
+    <p class="hero-sub">TK's 2026 total contribution rate: <strong>17.29%</strong> — below the market average of ~20%+. Live monthly cost calculator, TK vs AOK vs Barmer comparison, and English support rating.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
+      <span style="font-size:.8rem;color:var(--text-muted);">⏱ 10 Min Read</span>
+      <span style="font-size:.8rem;color:var(--emerald);">✓ Rate confirmed Dec 2025 by TK Supervisory Board</span>
+    </div>
   </div>
 </section>
 
-<main class="article-body">
-  <a href="index.html" class="back-link">&larr; Zurück zur Startseite</a>
+<main class="article-body" style="max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;">
 
-  <p><strong>This article is coming soon.</strong> We are currently writing the definitive TK Health Insurance guide for expats in Germany. It will include a live monthly cost calculator, a full TK vs AOK vs Barmer comparison, English-support ratings, and step-by-step enrollment instructions.</p>
+  <a href="insurance.html" class="back-link">← Back to Insurance Hub</a>
 
-  <div style="background:rgba(0,196,167,0.06);border-left:3px solid var(--teal);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin:2rem 0;">
-    <strong style="color:var(--teal);">In the meantime:</strong> Check out our <a href="insurance.html">full insurance comparison hub</a> for an overview of GKV vs PKV for expats.
+  <!-- RATE SNAPSHOT -->
+  <div class="rate-hero">
+    <div class="rate-card highlight">
+      <div class="rate-num" style="color:var(--emerald);">17.29%</div>
+      <div class="rate-label">TK Total Rate 2026</div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-num" style="color:var(--gold);">14.6%</div>
+      <div class="rate-label">Statutory Base Rate</div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-num" style="color:var(--gold);">2.69%</div>
+      <div class="rate-label">TK Zusatzbeitrag 2026</div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-num" style="color:var(--text-secondary);">~20%+</div>
+      <div class="rate-label">Market Average 2026</div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-num" style="color:var(--emerald);">12.3M</div>
+      <div class="rate-label">TK Members (Germany's Largest)</div>
+    </div>
   </div>
 
-  <h2>What this guide will cover</h2>
-  <p>TK (Techniker Krankenkasse) is Germany's largest public health insurer, covering over 11 million people. For expats, it stands out with partial English support, competitive contribution rates, and a smooth digital onboarding process. Our upcoming guide will provide a complete breakdown of costs, benefits, and how TK compares to AOK and Barmer specifically for expats.</p>
+  <h2>About TK — Why It Matters for Expats</h2>
+  <p><strong>Techniker Krankenkasse (TK)</strong> is Germany's largest statutory health insurer (gesetzliche Krankenversicherung / GKV), covering 12.3 million people. Founded in 1884 originally for technical workers, TK has evolved into one of Germany's most modern, digitally advanced insurers.</p>
 
-  <h2>Key facts (preview)</h2>
-  <p>Contribution rate: 14.6% (base) + 1.2% (TK supplement) = <strong>15.8% total</strong> split between employee and employer. Monthly cost for a gross salary of €4,000: approximately €316 (employee share). TK offers an English-language hotline and partial English digital services — a significant advantage over most German public insurers.</p>
+  <p>For expats, TK stands out for three key reasons: <strong>partial English support</strong> (the only major German public insurer to offer English-language phone service), a <strong>below-average contribution rate</strong> (17.29% vs. a market average exceeding 20% for many competitors), and an excellent <strong>digital app</strong> with English functionality for routine tasks.</p>
 
-  <p style="margin-top:2rem;"><a href="insurance.html" class="cta-btn">Browse Insurance Hub &rarr;</a></p>
+  <p>On 19 December 2025, TK's supervisory board set the 2026 Zusatzbeitrag at <strong>2.69%</strong>, up from 2.45% in 2025 but still well below the government-mandated average benchmark of 2.9%. The total rate of 17.29% makes TK one of the most affordable major public insurers in Germany for 2026.</p>
+
+  <!-- LIVE CALCULATOR -->
+  <div class="tk-calculator" id="tk-calculator">
+    <div class="tk-calc-title">💊 TK Monthly Cost Calculator 2026</div>
+    <p class="tk-calc-sub">Enter your gross salary to see exact employee contributions. Employer pays the other half.</p>
+
+    <div class="tk-calc-inputs">
+      <div class="tk-input-group">
+        <label>Gross Monthly Salary (€)</label>
+        <input type="number" id="tk-salary" value="4000" min="520" max="6450" step="100">
+      </div>
+      <div class="tk-input-group">
+        <label>Employment Type</label>
+        <select id="tk-employment">
+          <option value="employee">Employee (full-time)</option>
+          <option value="freelance">Self-Employed / Freelancer</option>
+          <option value="student">Student</option>
+          <option value="mini">Mini-Job (&lt;€556/mo)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="tk-result visible" id="tk-result">
+      <div style="font-size:.85rem;font-weight:700;color:var(--text-primary);margin-bottom:.75rem;">Your Estimated TK Costs 2026</div>
+      <div class="tk-result-grid" id="tk-result-grid">
+        <!-- Populated by JS -->
+      </div>
+      <p id="tk-result-note" style="font-size:.78rem;color:var(--text-muted);margin-top:.75rem;line-height:1.6;"></p>
+    </div>
+  </div>
+
+  <h2>TK vs AOK vs Barmer vs DAK — Full Comparison 2026</h2>
+  <p>All German statutory health insurers must provide the same legally mandated base coverage (hospital, doctor, prescriptions). The differences come in the Zusatzbeitrag (supplementary contribution rate) and optional extra benefits. Here's how the major players compare for expats:</p>
+
+  <div style="overflow-x:auto;">
+    <table class="insurer-table">
+      <thead>
+        <tr>
+          <th>Criterion</th>
+          <th class="tk-col">TK ★</th>
+          <th>AOK</th>
+          <th>Barmer</th>
+          <th>DAK</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Total Rate 2026</td>
+          <td><span class="it-rate it-best">17.29%</span></td>
+          <td><span class="it-rate">varies by region: 16.7–18.3%</span></td>
+          <td><span class="it-rate">17.10%</span></td>
+          <td><span class="it-rate">17.20%</span></td>
+        </tr>
+        <tr>
+          <td>Zusatzbeitrag 2026</td>
+          <td><span class="it-best">2.69%</span></td>
+          <td>varies by region</td>
+          <td>2.50%</td>
+          <td>2.60%</td>
+        </tr>
+        <tr>
+          <td>English Phone Support</td>
+          <td><span class="it-check">✓ Partial</span></td>
+          <td><span class="it-cross">✗</span></td>
+          <td><span class="it-cross">✗</span></td>
+          <td><span class="it-cross">✗</span></td>
+        </tr>
+        <tr>
+          <td>English App / Portal</td>
+          <td><span class="it-check">✓ Partial</span></td>
+          <td><span class="it-cross">✗</span></td>
+          <td><span class="it-partial">Partial</span></td>
+          <td><span class="it-cross">✗</span></td>
+        </tr>
+        <tr>
+          <td>Digital-First Experience</td>
+          <td><span class="it-best">★★★★★</span></td>
+          <td>★★★☆☆</td>
+          <td>★★★★☆</td>
+          <td>★★★☆☆</td>
+        </tr>
+        <tr>
+          <td>Bonus Programs</td>
+          <td>TK-Bonusprogramm (up to €150/year)</td>
+          <td>AOK-Bonus varies</td>
+          <td>Barmer Bonus</td>
+          <td>DAK Active</td>
+        </tr>
+        <tr>
+          <td>Telemedizin (Online Doctor)</td>
+          <td><span class="it-check">✓ TK-Doc</span></td>
+          <td><span class="it-check">✓</span></td>
+          <td><span class="it-check">✓</span></td>
+          <td><span class="it-check">✓</span></td>
+        </tr>
+        <tr>
+          <td>Blocked Account Partner</td>
+          <td><span class="it-check">✓ Expatrio &amp; Coracle</span></td>
+          <td><span class="it-cross">✗</span></td>
+          <td><span class="it-check">✓ Coracle &amp; Drop Money</span></td>
+          <td><span class="it-check">✓ Fintiba</span></td>
+        </tr>
+        <tr>
+          <td>Family Coverage</td>
+          <td>Free for children / non-earning spouse</td>
+          <td>Same</td>
+          <td>Same</td>
+          <td>Same</td>
+        </tr>
+        <tr>
+          <td>Expat Verdict</td>
+          <td><strong class="it-best">Best overall for expats</strong></td>
+          <td>Regional option if no TK available</td>
+          <td>Lowest Zusatzbeitrag 2026</td>
+          <td>Best with Fintiba bundle</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>What TK Covers — Key Benefits for Expats</h2>
+  <p>All German statutory insurers cover the same legally required services. Here's what that means in practice for expats:</p>
+
+  <div class="benefit-grid">
+    <div class="benefit-card">
+      <div class="benefit-card-title">🏥 Hospital Treatment</div>
+      <div class="benefit-card-desc">Fully covered in any contracted hospital in Germany. No referral needed for emergencies. €10/day co-pay for first 28 days per year.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-card-title">👨‍⚕️ Doctor Visits (Arzt)</div>
+      <div class="benefit-card-desc">Free at any Vertragsarzt (contracted GP or specialist). No co-pay for doctor visits since 2013 (Praxisgebühr was abolished).</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-card-title">💊 Prescriptions (Medikamente)</div>
+      <div class="benefit-card-desc">€5–€10 co-pay per prescription (Rezept). Covered: generic drugs, some brand drugs. Not covered: lifestyle drugs, some OTC medications.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-card-title">🦷 Dental (Zahn)</div>
+      <div class="benefit-card-desc">Basic dental covered: checkups, fillings (amalgam), extractions. Crowns and implants require additional Zusatzversicherung — GKV only pays a fixed subsidy.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-card-title">🤰 Maternity (Mutterschaft)</div>
+      <div class="benefit-card-desc">Full prenatal and postnatal care. Mutterschaftsgeld (maternity pay) via employer/TK. Midwife visits covered. Free prenatal checkups.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-card-title">🧠 Mental Health (Psyche)</div>
+      <div class="benefit-card-desc">Psychotherapy covered after Kostenübernahmeverfahren (approval process). TK has shorter waiting times than many competitors. Online therapy partially covered.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-card-title">✈️ EU Travel Coverage</div>
+      <div class="benefit-card-desc">European Health Insurance Card (EHIC) — treatment covered in all EU/EEA countries. Outside EU: limited coverage. Consider travel insurance supplement.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-card-title">📱 TK-Doc (Telemedizin)</div>
+      <div class="benefit-card-desc">Free video consultations with TK-contracted doctors via the TK app. Some services available in English. 7 days/week availability.</div>
+    </div>
+  </div>
+
+  <h2>GKV vs. PKV: Should You Consider Private Insurance?</h2>
+  <p>Germany's health insurance system has a fundamental split: <strong>GKV (gesetzliche Krankenversicherung)</strong> — statutory public insurance like TK — and <strong>PKV (private Krankenversicherung)</strong> — private insurance.</p>
+
+  <p>For most expats, especially those earning below the <strong>Versicherungspflichtgrenze of €73,800/year gross (2026)</strong>, GKV is mandatory. If you earn above this threshold, you can opt out of GKV and take PKV instead. Key considerations for expats:</p>
+
+  <ul style="padding-left:1.25rem;color:var(--text-secondary);font-size:.9rem;line-height:2;">
+    <li><strong style="color:var(--text-primary);">GKV (TK):</strong> Family members covered for free (non-earning spouse/children), rate-based contribution (scales with income), no age penalty, standardized coverage.</li>
+    <li><strong style="color:var(--text-primary);">PKV:</strong> Often better coverage and faster specialist appointments, but monthly premiums are based on age and health status — not income. Premiums rise with age. Family members are NOT covered for free.</li>
+    <li><strong style="color:var(--text-primary);">Expat recommendation:</strong> Unless you're a high earner planning to stay in Germany long-term, GKV with TK is the safer, more predictable choice.</li>
+  </ul>
+
+  <h2>How to Enroll with TK as an Expat</h2>
+
+  <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:.9rem;line-height:2.2;">
+    <li><strong style="color:var(--text-primary);">Apply online at tk.de</strong> — TK has an English enrollment path for employees. Select "Mitglied werden" → follow the online form.</li>
+    <li><strong style="color:var(--text-primary);">Submit documents:</strong> Work contract (Arbeitsvertrag), passport/ID, and in some cases visa/residence permit copy.</li>
+    <li><strong style="color:var(--text-primary);">Receive Mitgliedsbescheinigung</strong> — TK membership certificate. Give this to your employer immediately — they need it to register you with the system.</li>
+    <li><strong style="color:var(--text-primary);">Employer handles contributions</strong> — Your employer deducts your employee share (8.645%) from your salary and pays both their portion and yours directly to TK.</li>
+    <li><strong style="color:var(--text-primary);">Get your health card (Gesundheitskarte)</strong> — arrives by post within 2–3 weeks. Show it at every doctor visit. Lose it? Report via TK app for replacement.</li>
+  </ol>
+
+  <div style="background:rgba(80,200,120,0.06);border:1px solid var(--emerald-border);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin:1.5rem 0;font-size:.87rem;">
+    <strong style="color:var(--emerald);">💡 Student Tip:</strong> Students enrolling in TK via Expatrio or Coracle get a streamlined process — health insurance and blocked account can be set up simultaneously. TK student insurance has a special reduced rate for students under 30.
+  </div>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <ul class="faq-list" role="list" style="max-width:100%;">
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        Can I switch from AOK/Barmer to TK?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Yes — after a minimum membership period of 12 months with your current insurer. Since TK raised its Zusatzbeitrag in January 2026, existing TK members received a Sonderkündigungsrecht (special termination right) — they can switch without the 12-month lock-in. To switch to TK: apply on tk.de, TK handles the notice to your old insurer automatically.
+      </div>
+    </li>
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        What happens to TK coverage when I travel outside Germany?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Within the EU/EEA, your TK EHIC card covers emergency and medically necessary treatment. Outside the EU (USA, Asia, South America), TK has very limited coverage. For non-EU travel, always add a separate Auslandsreisekrankenversicherung (travel health insurance) — typically €50–100/year for annual coverage.
+      </div>
+    </li>
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        Is TK available as a freelancer (Selbstständiger)?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Yes, but the calculation is different. Freelancers pay both the employee and employer share — meaning the full 17.29% on your income. The minimum monthly contribution is based on an assumed income floor set by TK. Many freelancers opt for PKV due to the potentially lower premiums when healthy and younger.
+      </div>
+    </li>
+  </ul>
+
+  <div style="margin:2.5rem 0;padding:1.75rem;border-radius:var(--radius-md);background:rgba(212,175,55,0.05);border:1px solid var(--gold-border);">
+    <strong style="color:var(--gold);">Related Guide:</strong>
+    <p style="margin:.5rem 0 1rem;font-size:.87rem;color:var(--text-secondary);">Planning to study in Germany? TK partners with Expatrio for combined blocked account + health insurance enrollment.</p>
+    <a href="blocked-account-germany.html" class="cta-btn">Blocked Account Guide + TK Bundle →</a>
+  </div>
 
 </main>
 
 <footer class="global-footer">
   <div class="inner">
-    <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
+    <div class="footer-disclaimer"><strong>No Financial Advice</strong> — All information without warranty</div>
     <nav class="footer-legal-links" aria-label="Legal-Links">
-      <a href="about.html">Über uns</a>
+      <a href="about.html">About</a>
       <a href="banking.html">Banking</a>
       <a href="schufa-guide.html">SCHUFA Guide</a>
       <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutzerklärung</a>
-      <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
-      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
+      <a href="datenschutz.html">Privacy</a>
+      <a href="affiliate-hinweis.html">Affiliate Disclosure</a>
+      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie Settings</a>
     </nav>
-    <div class="footer-disclosure">
-      <strong>&#9873; Affiliate-Hinweis (Werbung):</strong>
-      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
-    </div>
-    <p class="footer-copy">&copy; 2026 Yassine Chaikhi &middot; ExpatScore.de &middot; Alle Angaben ohne Gewähr &middot; Kein Ersatz für individuelle Rechts- oder Finanzberatung. &middot; <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
+    <p class="footer-copy">&copy; 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
   </div>
 </footer>
 
-<!-- COOKIE BANNER -->
-<div id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
+<div id="cookie-banner" role="dialog" aria-live="polite">
   <div class="cookie-banner-header">
-    <div class="cookie-banner-icon" aria-hidden="true">&#127850;</div>
+    <div class="cookie-banner-icon">🍪</div>
     <div class="cookie-banner-body">
-      <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
-      <div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</div>
+      <div class="cookie-banner-title">Your Privacy Settings</div>
+      <div class="cookie-banner-text">We use cookies. <a href="datenschutz.html">Privacy Policy</a></div>
     </div>
   </div>
   <div class="cookie-btns">
-    <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
-    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
-    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+    <button class="cookie-decline" onclick="declineCookies()">Necessary Only</button>
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
   </div>
 </div>
 
-<!-- COOKIE SETTINGS MODAL -->
-<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('cookie-settings')" aria-label="Schließen">&#10005;</button>
-    <h2>Cookie-Einstellungen</h2>
-    <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
+    <button class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
+    <h2>Cookie Settings</h2>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div>
+      <div class="cookie-toggle-info"><strong>Technically Necessary</strong><span>Always active.</span></div>
       <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div>
+      <div class="cookie-toggle-info"><strong>Analytics</strong></div>
       <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
+      <div class="cookie-toggle-info"><strong>Affiliate Tracking</strong></div>
       <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
     </div>
-    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Save Selection</button>
   </div>
 </div>
 
 <script src="script.js"></script>
+<script>
+/* ── TK Calculator ── */
+(function() {
+  const TK_RATE = 0.1729;
+  const CONTRIB_CEILING_MONTHLY = 5512.50; // 2026 Beitragsbemessungsgrenze / 12
+
+  function calculate() {
+    const rawSalary = parseFloat(document.getElementById('tk-salary')?.value) || 4000;
+    const employment = document.getElementById('tk-employment')?.value || 'employee';
+    const grid = document.getElementById('tk-result-grid');
+    const note = document.getElementById('tk-result-note');
+    if (!grid) return;
+
+    const assessedSalary = Math.min(rawSalary, CONTRIB_CEILING_MONTHLY);
+    let employeeShare, employerShare, totalContrib, noteText;
+
+    if (employment === 'employee') {
+      totalContrib = assessedSalary * TK_RATE;
+      employeeShare = totalContrib / 2;
+      employerShare = totalContrib / 2;
+      noteText = `Your employer pays €${employerShare.toFixed(2)}/month in addition. The contribution ceiling is €5,512.50/month gross — above this, contributions do not increase. Annual total employee contribution: €${(employeeShare * 12).toFixed(0)}.`;
+    } else if (employment === 'freelance') {
+      totalContrib = assessedSalary * TK_RATE;
+      employeeShare = totalContrib; // pays full rate
+      employerShare = 0;
+      noteText = `As a freelancer, you pay the full contribution rate yourself (no employer share). Minimum monthly contribution applies regardless of actual income. The minimum income floor for 2026 is approximately €1,178/month.`;
+    } else if (employment === 'student') {
+      const studentRate = 0.0815; // student health insurance special rate 2026
+      totalContrib = 147.00; // approx flat rate for students (TK 2026 estimate)
+      employeeShare = totalContrib;
+      employerShare = 0;
+      noteText = `Student health insurance has a flat-rate contribution not based on salary. TK student rate for 2026 is approximately €147/month including Pflegeversicherung. Available for students under 30 (or up to 14 semesters).`;
+    } else {
+      // mini-job
+      totalContrib = 0;
+      employeeShare = 0;
+      employerShare = rawSalary * 0.13;
+      noteText = `Mini-job employees (under €556/month) pay no health insurance contributions themselves. Your employer pays a flat 13% Pauschalabgabe to the mini-job central office.`;
+    }
+
+    const netSalary = employment === 'employee' ? rawSalary - employeeShare - (rawSalary * 0.093) - (rawSalary * 0.018) - (rawSalary * 0.013) : rawSalary; // approx after all deductions
+
+    grid.innerHTML = `
+      <div class="tk-result-item">
+        <div class="tk-result-num">€${employeeShare.toFixed(0)}</div>
+        <div class="tk-result-label">Your TK Share / month</div>
+      </div>
+      ${employerShare > 0 ? `<div class="tk-result-item">
+        <div class="tk-result-num">€${employerShare.toFixed(0)}</div>
+        <div class="tk-result-label">Employer Share / month</div>
+      </div>` : ''}
+      <div class="tk-result-item">
+        <div class="tk-result-num">€${totalContrib.toFixed(0)}</div>
+        <div class="tk-result-label">Total TK Contribution</div>
+      </div>
+      ${employment === 'employee' ? `<div class="tk-result-item">
+        <div class="tk-result-num">€${(employeeShare * 12).toFixed(0)}</div>
+        <div class="tk-result-label">Your Share / Year</div>
+      </div>` : ''}
+    `;
+
+    if (note) note.textContent = noteText;
+    document.getElementById('tk-result')?.classList.add('visible');
+  }
+
+  ['tk-salary', 'tk-employment'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input', calculate);
+  });
+
+  calculate();
+})();
+</script>
+
 </body>
 </html>
