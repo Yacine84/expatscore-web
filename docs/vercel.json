@@ -142,5 +142,39 @@
       "destination": "/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/schufa-guide",
+      "destination": "/docs/schufa-guide.html"
+    },
+    {
+      "source": "/anmeldung-germany",
+      "destination": "/docs/anmeldung-germany.html"
+    },
+    {
+      "source": "/steuer-id-guide",
+      "destination": "/docs/steuer-id-guide.html"
+    },
+    {
+      "source": "/n26-bank-erfahrungen",
+      "destination": "/docs/n26-bank-erfahrungen.html"
+    },
+    {
+      "source": "/blocked-account-germany",
+      "destination": "/docs/blocked-account-germany.html"
+    },
+    {
+      "source": "/tk-health-insurance",
+      "destination": "/docs/tk-health-insurance.html"
+    },
+    {
+      "source": "/blue-card-tool",
+      "destination": "/docs/blue-card-tool.html"
+    },
+    {
+      "source": "/schufa-simulator",
+      "destination": "/docs/schufa-simulator.html"
+    }
   ]
 }
