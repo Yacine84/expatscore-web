@@ -235,13 +235,13 @@ function initCookieBanner() {
 function acceptCookies() {
   localStorage.setItem('cookieConsent', 'all');
   hideCookieBanner();
-  document.body.style.overflow = '';
+  document.body.style.overflow = 'auto';
 }
 
 function declineCookies() {
   localStorage.setItem('cookieConsent', 'necessary');
   hideCookieBanner();
-  document.body.style.overflow = '';
+  document.body.style.overflow = 'auto';
 }
 
 function saveGranularCookies() {
@@ -250,7 +250,7 @@ function saveGranularCookies() {
   localStorage.setItem('cookieConsent', JSON.stringify({ analytics, affiliate }));
   hideCookieBanner();
   closeModal('cookie-settings');
-  document.body.style.overflow = '';
+  document.body.style.overflow = 'auto';
 }
 
 function hideCookieBanner() {
@@ -258,7 +258,9 @@ function hideCookieBanner() {
   if (banner) {
     banner.classList.remove('visible');
     banner.style.display = 'none';
+    banner.style.pointerEvents = 'none';
   }
+  document.body.style.overflow = 'auto';
 }
 
 function openModal(id) {
