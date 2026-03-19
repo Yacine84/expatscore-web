@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "expatscore-docs-v3.2",
+			"path": "../../expatscore-docs-v3.2"
+		},
+		{
+			"name": "expat_web",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "expat_web"
+	}
+}
