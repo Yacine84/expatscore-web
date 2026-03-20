@@ -1444,24 +1444,39 @@ img { max-width: 100%; display: block; }
 }
 .cookie-accept {
   font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
-  padding: 0.6rem 1.25rem; border-radius: 50px; cursor: pointer;
+  padding: 0.75rem 1.4rem;           /* increased: was 0.6rem — meets 44px tap target */
+  min-height: 44px;                   /* explicit minimum for iOS/Android accessibility */
+  border-radius: 50px; cursor: pointer;
   background: linear-gradient(135deg, var(--emerald), var(--emerald-dim));
   color: #080c14; border: 1px solid rgba(80,200,120,0.3);
   transition: all 0.2s;
+  touch-action: manipulation;         /* fix: removes iOS 300ms tap delay */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 .cookie-accept:hover { box-shadow: 0 4px 16px rgba(80,200,120,0.25); }
 .cookie-decline {
   font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;
-  padding: 0.6rem 1.25rem; border-radius: 50px; cursor: pointer;
+  padding: 0.75rem 1.4rem;           /* increased: was 0.6rem */
+  min-height: 44px;
+  border-radius: 50px; cursor: pointer;
   background: transparent; color: var(--text-secondary);
   border: 1px solid var(--border-subtle);
+  touch-action: manipulation;         /* fix: removes iOS 300ms tap delay */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 .cookie-decline:hover { border-color: var(--gold-border); color: var(--gold); }
 .cookie-settings-btn {
   font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500;
-  padding: 0.6rem 1.25rem; border-radius: 50px; cursor: pointer;
+  padding: 0.75rem 1.25rem;          /* increased: was 0.6rem */
+  min-height: 44px;
+  border-radius: 50px; cursor: pointer;
   background: transparent; color: var(--text-muted);
   border: none;
+  touch-action: manipulation;         /* fix: removes iOS 300ms tap delay */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 .cookie-settings-btn:hover { color: var(--text-secondary); }
 
@@ -1525,10 +1540,14 @@ input:disabled + .toggle-slider { opacity: 0.5; cursor: default; }
 
 .cookie-save-btn {
   font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700;
-  padding: 0.7rem 1.5rem; border-radius: 50px; cursor: pointer;
+  padding: 0.75rem 1.5rem; border-radius: 50px; cursor: pointer;
+  min-height: 44px;
   background: linear-gradient(135deg, var(--emerald), var(--emerald-dim));
   color: #080c14; border: none; margin-top: 1.25rem;
   transition: all 0.2s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 .cookie-save-btn:hover { box-shadow: 0 4px 16px rgba(80,200,120,0.25); }
 
@@ -1601,6 +1620,13 @@ input:disabled + .toggle-slider { opacity: 0.5; cursor: default; }
   .article-body { padding: var(--space-md) var(--space-sm); }
   .factor-label { min-width: 100px; font-size: 0.75rem; }
   #cookie-banner { max-width: 100%; width: calc(100% - 1rem); bottom: 0.5rem; }
+  /* Stack cookie buttons vertically on mobile for full-width tap targets */
+  .cookie-btns { flex-direction: column; gap: 0.4rem; }
+  .cookie-accept, .cookie-decline, .cookie-settings-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 
   /* Simulator: reduce outer padding on tablet */
   .sim-embed-wrap {

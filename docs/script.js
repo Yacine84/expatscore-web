@@ -225,6 +225,41 @@ function toggleFaq(btn) {
    COOKIE BANNER
    ============================================================ */
 function initCookieBanner() {
+  // ── Wire up buttons (fix: event listeners were never attached) ──────────
+  const acceptBtn   = document.querySelector('.cookie-accept');
+  const declineBtn  = document.querySelector('.cookie-decline');
+  const settingsBtn = document.querySelector('.cookie-settings-btn');
+
+  // Helper: attach both 'click' and 'touchend' for cross-browser/iOS support
+  function addTapListener(el, handler) {
+    if (!el) return;
+    el.addEventListener('click', handler);
+    // touchend fires before click and avoids the iOS 300ms delay entirely
+    el.addEventListener('touchend', function(e) {
+      e.preventDefault(); // prevent the ghost click that follows
+      handler(e);
+    }, { passive: false });
+  }
+
+  addTapListener(acceptBtn,   acceptCookies);
+  addTapListener(declineBtn,  declineCookies);
+  addTapListener(settingsBtn, () => openModal('cookie-settings'));
+
+  // Also wire up the modal save button
+  const saveBtn = document.querySelector('.cookie-save-btn');
+  addTapListener(saveBtn, saveGranularCookies);
+
+  // Also wire up the modal close button
+  const closeBtn = document.querySelector('#modal-cookie-settings .modal-close');
+  addTapListener(closeBtn, () => closeModal('cookie-settings'));
+
+  // Also wire up footer cookie settings link
+  const settingsLink = document.getElementById('cookieSettingsLink');
+  if (settingsLink) {
+    addTapListener(settingsLink, (e) => { e.preventDefault(); openModal('cookie-settings'); });
+  }
+
+  // ── Show the banner if consent not yet recorded ──────────────────────────
   if (localStorage.getItem('cookieConsent')) return;
   const banner = document.getElementById('cookie-banner');
   if (banner) {
@@ -266,7 +301,7 @@ function hideCookieBanner() {
 function openModal(id) {
   const modal = document.getElementById(`modal-${id}`);
   if (modal) {
-    modal.classList.add('visible');
+    modal.classList.add('open');   // fix: CSS uses .modal-overlay.open not .visible
     document.body.style.overflow = 'hidden';
   }
 }
@@ -274,7 +309,7 @@ function openModal(id) {
 function closeModal(id) {
   const modal = document.getElementById(`modal-${id}`);
   if (modal) {
-    modal.classList.remove('visible');
+    modal.classList.remove('open'); // fix: match CSS class
     document.body.style.overflow = '';
   }
 }
@@ -1001,7 +1036,7 @@ function initModalOverlays() {
   // ESC key closes modals
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      document.querySelectorAll('.modal-overlay.visible').forEach(modal => {
+      document.querySelectorAll('.modal-overlay.open').forEach(modal => {  // fix: was .visible
         const id = modal.id.replace('modal-', '');
         closeModal(id);
       });
