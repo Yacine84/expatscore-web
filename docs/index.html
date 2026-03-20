@@ -443,20 +443,35 @@
     <h2 class="section-title">Berechne dein Sperrkonto</h2>
     <p class="section-sub-line">Für Studium, Sprachkurs oder Arbeitsvisum – der aktuelle Mindestbetrag 2026.</p>
   </div>
+
+  <!-- Form card -->
   <div class="blocked-calc-card">
-    <div class="calc-row">
-      <label for="blocked-duration">Aufenthaltsdauer (Monate):</label>
-      <input type="number" id="blocked-duration" value="12" min="1" max="48" step="1">
+    <div class="blocked-inputs-grid">
+      <div class="calc-row">
+        <label for="blocked-duration">Aufenthaltsdauer</label>
+        <div class="calc-input-wrap">
+          <input type="number" id="blocked-duration" value="12" min="1" max="48" step="1" placeholder="12">
+          <span class="calc-input-unit">Monate</span>
+        </div>
+      </div>
+      <div class="calc-row">
+        <label for="blocked-amount">Monatlicher Bedarf</label>
+        <div class="calc-input-wrap">
+          <span class="calc-input-prefix">€</span>
+          <input type="number" id="blocked-amount" value="934" min="1" step="1" placeholder="934">
+        </div>
+      </div>
     </div>
-    <div class="calc-row">
-      <label for="blocked-amount">Monatlicher Bedarf (€):</label>
-      <input type="number" id="blocked-amount" value="934" min="1" step="1">
-    </div>
-    <button id="blocked-calc-btn">Jetzt berechnen</button>
-    <div id="blocked-results" class="blocked-result">
-      Gesamtbetrag: <strong>€11.208</strong>
-    </div>
+    <button id="blocked-calc-btn">
+      Jetzt berechnen <span class="btn-arrow" aria-hidden="true">→</span>
+    </button>
   </div>
+
+  <!-- Summary bar (populated by JS) -->
+  <div id="blocked-summary" class="blocked-summary"></div>
+
+  <!-- Provider result cards (populated by JS) -->
+  <div id="blocked-results" class="blocked-result"></div>
 </section>
 
 <!-- ═══════════════════════════ FOOTER ═══════════════════════════════════════ -->
