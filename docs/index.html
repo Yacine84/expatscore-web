@@ -1,6 +1,3 @@
-Here is the updated `index.html` with the new meta tags and favicon links added right before the closing `</head>` tag, leaving all existing code intact.
-
-```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -14,21 +11,31 @@ Here is the updated `index.html` with the new meta tags and favicon links added 
   <meta name="author" content="Yassine Chaikhi">
   <link rel="canonical" href="https://www.expatscore.de/">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="ExpatScore.de – SCHUFA Simulator &amp; Expat Banking Guide Deutschland 2026">
-  <meta property="og:description" content="Kostenloser interaktiver SCHUFA Score Simulator + Experten-Ratgeber für Banking, Versicherungen und SCHUFA in Deutschland. Kein Login nötig.">
-  <meta property="og:locale" content="de_DE">
-  <meta property="og:url" content="https://www.expatscore.de/">
-  <meta property="og:site_name" content="ExpatScore.de">
-  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ExpatScore.de – SCHUFA Simulator &amp; Banking für Expats">
-  <meta name="twitter:image" content="https://www.expatscore.de/og-image.jpg">
+  <!-- BRANDING FAVICONS (PNG) -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <!-- BRANDING OPEN GRAPH (PNG) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://expatscore.de/">
+  <meta property="og:title" content="ExpatScore - Know Your SCHUFA & Financial Stand in Germany">
+  <meta property="og:description" content="Free tool for expats in Germany to check visa eligibility and financial readiness. Know where you stand in minutes.">
+  <meta property="og:image" content="https://expatscore.de/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+
+  <!-- BRANDING TWITTER (PNG) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ExpatScore - Know Your SCHUFA & Financial Stand">
+  <meta name="twitter:image" content="https://expatscore.de/og-image.png">
+
+  <!-- Additional OG (locale, site_name) – kept as they are not replaced -->
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="ExpatScore.de">
+
   <meta name="theme-color" content="#0a0e17">
 
   <!-- Schema -->
@@ -37,21 +44,6 @@ Here is the updated `index.html` with the new meta tags and favicon links added 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Was ist die SCHUFA?","acceptedAnswer":{"@type":"Answer","text":"Die SCHUFA ist Deutschlands führende Kreditauskunftei."}},{"@type":"Question","name":"Wie lange dauert der SCHUFA-Aufbau?","acceptedAnswer":{"@type":"Answer","text":"12–18 Monate mit der richtigen Strategie."}},{"@type":"Question","name":"Welche Bank für Newcomer?","acceptedAnswer":{"@type":"Answer","text":"N26, Vivid Money und Bunq."}},{"@type":"Question","name":"Konto ohne Anmeldung?","acceptedAnswer":{"@type":"Answer","text":"Bunq und N26 akzeptieren ausländische Adressen."}},{"@type":"Question","name":"SCHUFA kostenlos prüfen?","acceptedAnswer":{"@type":"Answer","text":"Datenkopie nach Art. 15 DSGVO auf meineSCHUFA.de."}}]}</script>
 
   <link rel="stylesheet" href="style.css">
-  
-  <!-- ADDED: Additional favicon and Open Graph / Twitter tags for branding -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://expatscore.de/">
-  <meta property="og:title" content="ExpatScore - Know Where You Stand">
-  <meta property="og:description" content="Calculate your Expat Score for Germany. Check your visa eligibility, financial readiness, and SCHUFA standing in minutes.">
-  <meta property="og:image" content="https://expatscore.de/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ExpatScore - Know Where You Stand">
-  <meta name="twitter:description" content="Free tool for expats in Germany to check their financial and visa readiness.">
-  <meta name="twitter:image" content="https://expatscore.de/og-image.jpg">
 </head>
 <body>
 
@@ -325,7 +317,7 @@ Here is the updated `index.html` with the new meta tags and favicon links added 
           <th scope="col">DKB</th>
           <th scope="col">Revolut</th>
           <th scope="col">Wise</th>
-        </tr>
+         </tr>
       </thead>
       <tbody>
         <tr>
@@ -536,4 +528,3 @@ Here is the updated `index.html` with the new meta tags and favicon links added 
 <script src="script.js"></script>
 </body>
 </html>
-```
