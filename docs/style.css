@@ -1605,22 +1605,43 @@ input:disabled + .toggle-slider { opacity: 0.5; cursor: default; }
 .sim-section-sub { color: var(--text-secondary); font-size: 0.92rem; margin-top: 0.5rem; }
 .cookie-banner-body { flex: 1; }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   BREAKPOINT ≤ 768px  (tablet + mobile)
+   Covers: nav collapse, hero, cards, cookie banner, simulator deep-audit fixes.
+   The former @media (max-width: 600px) block has been absorbed here to eliminate
+   conflicting overrides on .sim-option gap and .sim-embed-wrap padding.
+   ───────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .nav-links { display: none; position: absolute; top: var(--header-h); left: 0; right: 0; background: rgba(10,14,23,0.98); backdrop-filter: blur(20px); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border); }
+
+  /* ── Navigation ─────────────────────────────────────────────────────────── */
+  .nav-links {
+    display: none;
+    position: absolute; top: var(--header-h); left: 0; right: 0;
+    background: rgba(10,14,23,0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; margin-left: auto; }
+
+  /* ── Hero ───────────────────────────────────────────────────────────────── */
   .hero.hero-home { min-height: auto; padding: 3rem var(--space-sm) 3rem; }
   .hero-h1 { font-size: 2.2rem; }
   .hero-orb-1, .hero-orb-2 { animation: none; }
   .hero-stats { flex-direction: row; flex-wrap: wrap; }
   .hero-stat { flex: 1 1 45%; border-bottom: 1px solid rgba(212,175,55,0.06); }
+
+  /* ── Cards & tables ─────────────────────────────────────────────────────── */
   .card-grid { grid-template-columns: 1fr; }
   .card-featured-inner { flex-direction: column; }
   .premium-table-wrap { overflow-x: auto; }
   .article-body { padding: var(--space-md) var(--space-sm); }
   .factor-label { min-width: 100px; font-size: 0.75rem; }
+
+  /* ── Cookie banner ──────────────────────────────────────────────────────── */
   #cookie-banner { max-width: 100%; width: calc(100% - 1rem); bottom: 0.5rem; }
-  /* Stack cookie buttons vertically on mobile for full-width tap targets */
   .cookie-btns { flex-direction: column; gap: 0.4rem; }
   .cookie-accept, .cookie-decline, .cookie-settings-btn {
     width: 100%;
@@ -1628,41 +1649,93 @@ input:disabled + .toggle-slider { opacity: 0.5; cursor: default; }
     justify-content: center;
   }
 
-  /* Simulator: reduce outer padding on tablet */
-  .sim-embed-wrap {
-    padding: 1.5rem;
-  }
-}
+  /* ── Simulator — Deep Audit Fixes ───────────────────────────────────────
+     Fix ①  Section outer padding:  6rem → 2.5rem  saves ~112px
+     Fix ②  Section header gap:     3rem → 1.25rem  saves ~28px
+     Fix ③  Step-tracker spacing + connector width
+     Fix ④  Question typography + hint spacing
+     Fix ⑤  Option rows: padding, gap, opt-sub hidden, badge compact
+     Fix ⑥  Nav buttons: 44px min tap target + touch-action
+     Fix ⑦  Step connector: 28px → 18px  (saves ~50px total width)
+     ─────────────────────────────────────────────────────────────────────── */
 
-@media (max-width: 600px) {
-  /* Simulator: mobile‑friendly options */
-  .sim-embed-wrap {
-    padding: 1.25rem;
-  }
-  .sim-card {
-    padding: 1.25rem;
-  }
-  .sim-q-hint {
-    font-size: 0.78rem;
-  }
+  /* ① Section padding */
+  .sim-section { padding: 2.5rem var(--space-sm); }
+
+  /* ② Section header gap */
+  .sim-section .section-header,
+  .sim-section-header { margin-bottom: 1.25rem; }
+
+  /* ③ Step tracker */
+  .sim-progress-header { margin-bottom: 0.85rem; }
+  .step-label { margin-bottom: 0.3rem; font-size: 0.65rem; }
+  .step-connector { width: 18px; } /* ⑦ also resolves connector crowding */
+
+  /* Glass wrapper */
+  .sim-embed-wrap { padding: 1.25rem; }
+
+  /* ④ Question typography */
+  .sim-question { font-size: 1.05rem; margin-bottom: 0.35rem; }
+  .sim-q-number { margin-bottom: 0.45rem; }
+  .sim-q-hint { font-size: 0.78rem; margin-bottom: 0.75rem; line-height: 1.5; }
+
+  /* ⑤ Option rows */
+  .sim-options { gap: 0.35rem; }
   .sim-option {
+    padding: 0.6rem 0.75rem;
+    min-height: 44px;
     flex-wrap: wrap;
     gap: 0.5rem;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
+  .opt-content { min-width: 0; word-break: break-word; }
+  .opt-label { font-size: 0.85rem; }
+  .opt-sub { display: none; } /* hidden on mobile — saves ~18px × 4 options = ~72px */
   .opt-badge {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.4rem;
     margin-left: 0;
     align-self: flex-start;
     width: auto;
   }
-  .opt-content {
-    min-width: 0;
-    word-break: break-word;
+
+  /* ⑥ Nav buttons */
+  .sim-nav { margin-top: 0.85rem; }
+  .sim-back-btn,
+  .sim-next-btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
+
+  /* Trust strip below nav buttons */
+  .trust-mini { margin-top: 0.65rem; gap: 0.75rem; }
+  .trust-mini-item { font-size: 0.6rem; }
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   BREAKPOINT ≤ 480px  (small phones: iPhone SE, Galaxy A-series, etc.)
+   Fine-tunes the simulator for the narrowest screens.
+   opt-sub is restored here (smaller font) so context isn't lost on thin devices.
+   ───────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 480px) {
+  /* Hero */
   .hero-h1 { font-size: 1.9rem; }
   .hero-stats { max-width: 100%; }
   .hero-stat { padding: 0.85rem 0.35rem; }
   .hero-stat-num { font-size: 1.4rem; }
+
+  /* Simulator */
+  .sim-section { padding: 2rem var(--space-xs); }
+  .sim-embed-wrap { padding: 1rem; border-radius: var(--radius-md); }
+  .sim-card { padding: 1rem 0.85rem; }
+  .sim-question { font-size: 1rem; }
+
+  /* Restore opt-sub on very small screens — clamped size so it fits */
+  .opt-sub { display: block; font-size: 0.7rem; margin-top: 0.08rem; }
 }
