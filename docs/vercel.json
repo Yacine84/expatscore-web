@@ -1,0 +1,180 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/guides/schufa-guide",
+      "destination": "/schufa-guide",
+      "permanent": true
+    },
+    {
+      "source": "/guides/schufa-guide.html",
+      "destination": "/schufa-guide",
+      "permanent": true
+    },
+    {
+      "source": "/guides/anmeldung-germany",
+      "destination": "/anmeldung-germany",
+      "permanent": true
+    },
+    {
+      "source": "/guides/anmeldung-germany.html",
+      "destination": "/anmeldung-germany",
+      "permanent": true
+    },
+    {
+      "source": "/guides/steuer-id-guide",
+      "destination": "/steuer-id-guide",
+      "permanent": true
+    },
+    {
+      "source": "/guides/steuer-id-guide.html",
+      "destination": "/steuer-id-guide",
+      "permanent": true
+    },
+    {
+      "source": "/guides",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/banking/n26-bank-erfahrungen",
+      "destination": "/n26-bank-erfahrungen",
+      "permanent": true
+    },
+    {
+      "source": "/banking/n26-bank-erfahrungen.html",
+      "destination": "/n26-bank-erfahrungen",
+      "permanent": true
+    },
+    {
+      "source": "/banking/blocked-account-germany",
+      "destination": "/blocked-account-germany",
+      "permanent": true
+    },
+    {
+      "source": "/banking/blocked-account-germany.html",
+      "destination": "/blocked-account-germany",
+      "permanent": true
+    },
+    {
+      "source": "/banking/",
+      "destination": "/banking",
+      "permanent": true
+    },
+    {
+      "source": "/insurance/tk-health-insurance",
+      "destination": "/tk-health-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/insurance/tk-health-insurance.html",
+      "destination": "/tk-health-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/insurance/",
+      "destination": "/insurance",
+      "permanent": true
+    },
+    {
+      "source": "/legal/steuer-id-guide",
+      "destination": "/steuer-id-guide",
+      "permanent": true
+    },
+    {
+      "source": "/legal/steuer-id-guide.html",
+      "destination": "/steuer-id-guide",
+      "permanent": true
+    },
+    {
+      "source": "/legal/blue-card-tool",
+      "destination": "/blue-card-tool",
+      "permanent": true
+    },
+    {
+      "source": "/legal/blue-card-tool.html",
+      "destination": "/blue-card-tool",
+      "permanent": true
+    },
+    {
+      "source": "/legal",
+      "destination": "/impressum",
+      "permanent": true
+    },
+    {
+      "source": "/legal/",
+      "destination": "/impressum",
+      "permanent": true
+    },
+    {
+      "source": "/tools/schufa-simulator",
+      "destination": "/schufa-simulator",
+      "permanent": true
+    },
+    {
+      "source": "/tools/schufa-simulator.html",
+      "destination": "/schufa-simulator",
+      "permanent": true
+    },
+    {
+      "source": "/tools",
+      "destination": "/schufa-simulator",
+      "permanent": true
+    },
+    {
+      "source": "/tools/",
+      "destination": "/schufa-simulator",
+      "permanent": true
+    },
+    {
+      "source": "/wenn-du-dauerhaft-ins-minus-rutschst-und-ruckzahlungen-ausbleiben-wer-sein-konto-sauber-fuhrt/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/dauerhaft-score",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/schufa-guide",
+      "destination": "/docs/schufa-guide.html"
+    },
+    {
+      "source": "/anmeldung-germany",
+      "destination": "/docs/anmeldung-germany.html"
+    },
+    {
+      "source": "/steuer-id-guide",
+      "destination": "/docs/steuer-id-guide.html"
+    },
+    {
+      "source": "/n26-bank-erfahrungen",
+      "destination": "/docs/n26-bank-erfahrungen.html"
+    },
+    {
+      "source": "/blocked-account-germany",
+      "destination": "/docs/blocked-account-germany.html"
+    },
+    {
+      "source": "/tk-health-insurance",
+      "destination": "/docs/tk-health-insurance.html"
+    },
+    {
+      "source": "/blue-card-tool",
+      "destination": "/docs/blue-card-tool.html"
+    },
+    {
+      "source": "/schufa-simulator",
+      "destination": "/docs/schufa-simulator.html"
+    }
+  ]
+}
