@@ -175,6 +175,10 @@
     {
       "source": "/schufa-simulator",
       "destination": "/docs/schufa-simulator.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/docs/:path*"
     }
   ]
 }
