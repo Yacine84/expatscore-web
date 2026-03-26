@@ -93,6 +93,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Dark theme class (optional, but keeps HTML consistent) */
+body.dark-theme {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-secondary); }
@@ -406,7 +412,7 @@ img { max-width: 100%; display: block; }
   color: #080c14;
 }
 
-/* Hero Stats */
+/* Hero Stats (original) */
 .hero-stats {
   display: flex;
   width: 100%;
@@ -445,6 +451,68 @@ img { max-width: 100%; display: block; }
   margin-top: 0.3rem;
 }
 .hero-stat-divider { display: none; }
+
+/* Premium Stats Grid (new) – Dashboard Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 780px;
+  margin: 2.5rem auto 0;
+  width: 100%;
+}
+
+.stat-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 0.75rem;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card:hover {
+  border-color: var(--gold-border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--emerald);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* Responsive: Stats Grid */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .stat-value {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* --- 7. TRUST STRIP --- */
 .trust-strip {

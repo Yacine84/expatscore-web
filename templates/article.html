@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ seo.title }} | ExpatScore.de</title>
+  <meta name="description" content="{{ seo.meta_description }}">
+  <meta name="keywords" content="{{ seo.primary_keyword }}{% for kw in seo.secondary_keywords %}, {{ kw }}{% endfor %}">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="{{ seo.title }}">
+  <meta property="og:description" content="{{ seo.meta_description }}">
+  <meta property="og:type"        content="article">
+  <meta property="og:url"         content="https://expatscore.de/blog/{{ seo.slug }}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://expatscore.de/blog/{{ seo.slug }}">
+
+  <!-- Styles – CSS is in the same directory as generated HTML (docs folder) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Article schema markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ seo.title }}",
+    "description": "{{ seo.meta_description }}",
+    "author": { "@type": "Organization", "name": "ExpatScore.de" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExpatScore.de",
+      "url": "https://expatscore.de"
+    },
+    "datePublished": "{{ generated_at }}",
+    "mainEntityOfPage": "https://expatscore.de/blog/{{ seo.slug }}"
+  }
+  </script>
+</head>
+<body class="dark-theme">
+
+  <!-- Header (consistent with style.css) -->
+  <header class="global-header">
+    <div class="header-inner">
+      <div class="logo"><a href="/">ExpatScore.de</a></div>
+      <div class="nav-links">
+        <a href="/blog">Blog</a>
+        <a href="/#tool">SCHUFA Tool</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section with Stats Grid -->
+  <div class="hero hero-article">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">{{ partner_category | replace('_', ' ') }}</span>
+      <h1 class="hero-h1">{{ seo.title }}</h1>
+      <div class="hero-sub">
+        <p>{{ intro_paragraph | truncate(180) }}</p>
+      </div>
+
+      <!-- 4‑card stats grid (extracted by AI) – using premium stats classes -->
+      <div class="stats-grid">
+        {% for stat in key_stats %}
+        <div class="stat-card">
+          <div class="stat-value">{{ stat.number }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Article content -->
+  <div class="article-body">
+    {% for section in sections %}
+    <h2>{{ section.heading }}</h2>
+    <p>{{ section.body }}</p>
+    {% endfor %}
+
+    <div class="callout">
+      <p><strong>Quick tip:</strong> {{ quick_tip }}</p>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    {% for faq in faqs %}
+    <p><strong>{{ faq.question }}</strong><br>{{ faq.answer }}</p>
+    {% endfor %}
+
+    <div class="cta-box">
+      <h3>Stop guessing — check your ExpatScore now</h3>
+      <p>See exactly where you stand with SCHUFA, banking, and the German financial system.</p>
+      <a href="/#tool" class="cta-teal">Check my score — it's free</a>
+    </div>
+
+    <div class="tags">
+      <span>{{ seo.primary_keyword }}</span>
+      {% for kw in seo.secondary_keywords %}
+      <span>{{ kw }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <footer class="global-footer">
+    <div class="inner">
+      <div class="footer-disclaimer">
+        <strong>ExpatScore.de</strong> — Financial clarity for expats in Germany
+      </div>
+      <div class="footer-legal-links">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+      </div>
+      <div class="footer-copy">
+        &copy; {{ year }} <a href="/">ExpatScore.de</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav-links')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
