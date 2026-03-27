@@ -256,6 +256,58 @@ def render_page(env: Environment, db: sqlite3.Connection, signal: dict, content:
     return slug, html
 
 
+# ─── MARKETING ASSETS GENERATION ───────────────────────────────────────────
+
+def generate_marketing_assets(signal: dict, content: dict, slug: str):
+    """Create a .txt file with Reddit-friendly marketing text for the article."""
+    title = signal.get("content_angle", "Article")
+    topic = signal.get("keyword_hint", title)
+    quick_tip = content.get("quick_tip", "Check the full guide for details.")
+    
+    # Build the markdown table rows from key_stats
+    key_stats = content.get("key_stats", [])
+    table_rows = []
+    for stat in key_stats:
+        table_rows.append(f"| {stat['label']} | {stat['number']} |")
+    
+    table_header = "| **Aspect** | **Details** |\n|------------|-------------|\n"
+    table_body = "\n".join(table_rows) if table_rows else "| Key takeaway | See full article |"
+    
+    # Generate the file content
+    file_content = f"""### 🔍 Peer‑to‑Peer Hook
+
+I went through the exact same struggle with **{topic}** in Germany, and I know how frustrating it can be. After months of research and personal experience, I've put together everything you need to know — no fluff, just practical steps.
+
+---
+
+### 📊 Key Insights
+
+{table_header}{table_body}
+
+---
+
+### 💡 Quick Tip
+
+{quick_tip}
+
+---
+
+### 🔎 How to Find This Article
+
+Want the complete step‑by‑step guide? Just Google **"{title} ExpatScore.de"** — it'll be the first result. (Reddit doesn't love direct links, so that's the easiest way.)
+
+---
+
+### 🔗 Direct Link (for DMs)
+
+https://expatscore.de/blog/{slug}.html
+"""
+    # Write the file
+    output_path = OUTPUT_DIR / f"{slug}_marketing.txt"
+    output_path.write_text(file_content, encoding="utf-8")
+    return output_path
+
+
 # ─── BLOG INDEX GENERATION ───────────────────────────────────────────────────
 
 def update_blog_index(db: sqlite3.Connection):
@@ -360,10 +412,14 @@ def run(limit: int, min_score: int, dry_run: bool, force: bool):
         final_path = OUTPUT_DIR / f"{slug_final}.html"
         final_path.write_text(html, encoding="utf-8")
 
+        # Generate marketing assets
+        marketing_path = generate_marketing_assets(signal, content, slug_final)
+        print(f"           Written → {final_path}")
+        print(f"           Marketing → {marketing_path}")
+
         built.add(slug_final)
         save_built(built)
 
-        print(f"           Written → {final_path}")
         generated += 1
         time.sleep(REQUEST_DELAY)
 
