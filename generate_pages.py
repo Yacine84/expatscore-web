@@ -256,52 +256,24 @@ def render_page(env: Environment, db: sqlite3.Connection, signal: dict, content:
     return slug, html
 
 
-# ─── MARKETING ASSETS GENERATION ───────────────────────────────────────────
+# ─── MARKETING ASSETS GENERATION (HUMAN-LIKE VERSION) ─────────────────────────
 
 def generate_marketing_assets(signal: dict, content: dict, slug: str):
-    """Create a .txt file with Reddit-friendly marketing text for the article."""
+    """Create a .txt file with casual, human‑sounding text for Reddit comments."""
     title = signal.get("content_angle", "Article")
     topic = signal.get("keyword_hint", title)
     quick_tip = content.get("quick_tip", "Check the full guide for details.")
     
-    # Build the markdown table rows from key_stats
     key_stats = content.get("key_stats", [])
-    table_rows = []
-    for stat in key_stats:
-        table_rows.append(f"| {stat['label']} | {stat['number']} |")
-    
-    table_header = "| **Aspect** | **Details** |\n|------------|-------------|\n"
-    table_body = "\n".join(table_rows) if table_rows else "| Key takeaway | See full article |"
-    
-    # Generate the file content
-    file_content = f"""### 🔍 Peer‑to‑Peer Hook
+    # Build a natural sentence with stats
+    if key_stats and len(key_stats) >= 4:
+        stats_text = f"from what i found {key_stats[0]['label'].lower()} is around {key_stats[0]['number']} and {key_stats[1]['label'].lower()} takes about {key_stats[1]['number']} and {key_stats[2]['label'].lower()} usually {key_stats[2]['number']} and success rate is {key_stats[3]['number']}"
+    else:
+        stats_text = "from what i found the numbers are pretty crazy"
 
-I went through the exact same struggle with **{topic}** in Germany, and I know how frustrating it can be. After months of research and personal experience, I've put together everything you need to know — no fluff, just practical steps.
+    # Generate casual stream‑of‑consciousness text
+    file_content = f"""i feel you man went through the exact same struggle with {topic} in germany it's a total mess. anyway {stats_text}. also {quick_tip.lower()}. i actually documented the full 5 step checklist i used to fix this on a small project i'm building so i don't forget the details. if you want the full breakdown just google {title} expatscore it should be the first result i don't want to post the direct link here to avoid the spam filters. hope this helps you as much as it helped me!"""
 
----
-
-### 📊 Key Insights
-
-{table_header}{table_body}
-
----
-
-### 💡 Quick Tip
-
-{quick_tip}
-
----
-
-### 🔎 How to Find This Article
-
-Want the complete step‑by‑step guide? Just Google **"{title} ExpatScore.de"** — it'll be the first result. (Reddit doesn't love direct links, so that's the easiest way.)
-
----
-
-### 🔗 Direct Link (for DMs)
-
-https://expatscore.de/blog/{slug}.html
-"""
     # Write the file
     output_path = OUTPUT_DIR / f"{slug}_marketing.txt"
     output_path.write_text(file_content, encoding="utf-8")
