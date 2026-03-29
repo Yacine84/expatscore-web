@@ -177,6 +177,14 @@
       "destination": "/docs/schufa-simulator.html"
     },
     {
+      "source": "/blog/style.css",
+      "destination": "/docs/style.css"
+    },
+    {
+      "source": "/blog/script.js",
+      "destination": "/docs/script.js"
+    },
+    {
       "source": "/blog",
       "destination": "/docs/blog.html"
     },
