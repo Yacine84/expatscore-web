@@ -17,7 +17,7 @@
   <link rel="canonical" href="https://expatscore.de/blog/">
 
   <!-- Styles – CSS is in the same directory as generated HTML (docs folder) -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 
   <style>
     /* Additional styles for blog grid – these are not in the global CSS but safe to add */
@@ -154,13 +154,13 @@
     <div class="blog-card">
       <div class="blog-card-category">{{ post.category | default('Guide') }}</div>
       <h2 class="blog-card-title">
-        <a href="{{ post.slug }}.html">{{ post.title }}</a>
+        <a href="/blog/{{ post.slug }}">{{ post.title }}</a>
       </h2>
       <div class="blog-card-summary">{{ post.summary }}</div>
       <div class="blog-card-meta">
         <span>{{ post.date | default('') }}</span>
       </div>
-      <a href="{{ post.slug }}.html" class="blog-card-link">
+      <a href="/blog/{{ post.slug }}" class="blog-card-link">
         Read more →
       </a>
     </div>
