@@ -9,7 +9,7 @@
   <meta name="description" content="Kostenloser SCHUFA Score Simulator + unabhängige Ratgeber für Expats: Bankkonten ohne SCHUFA, Versicherungsvergleiche, SCHUFA-Score aufbauen. Sofortiges Ergebnis — keine Registrierung.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
-  <link rel="canonical" href="https://expatscore.de/">
+  <link rel="canonical" href="https://www.expatscore.de/">
 
   <!-- BRANDING FAVICONS (PNG) -->
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,8 +39,8 @@
   <meta name="theme-color" content="#0a0e17">
 
   <!-- Schema -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ExpatScore.de","url":"https://expatscore.de/","description":"SCHUFA Score Simulator und Experten-Ratgeber für Expats in Deutschland","publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator 2026","url":"https://expatscore.de/#schufa-simulator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ExpatScore.de","url":"https://www.expatscore.de/","description":"SCHUFA Score Simulator und Experten-Ratgeber für Expats in Deutschland","publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator 2026","url":"https://www.expatscore.de/#schufa-simulator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Was ist die SCHUFA?","acceptedAnswer":{"@type":"Answer","text":"Die SCHUFA ist Deutschlands führende Kreditauskunftei."}},{"@type":"Question","name":"Wie lange dauert der SCHUFA-Aufbau?","acceptedAnswer":{"@type":"Answer","text":"12–18 Monate mit der richtigen Strategie."}},{"@type":"Question","name":"Welche Bank für Newcomer?","acceptedAnswer":{"@type":"Answer","text":"N26, Vivid Money und Bunq."}},{"@type":"Question","name":"Konto ohne Anmeldung?","acceptedAnswer":{"@type":"Answer","text":"Bunq und N26 akzeptieren ausländische Adressen."}},{"@type":"Question","name":"SCHUFA kostenlos prüfen?","acceptedAnswer":{"@type":"Answer","text":"Datenkopie nach Art. 15 DSGVO auf meineSCHUFA.de."}}]}</script>
 
   <link rel="stylesheet" href="/style.css">

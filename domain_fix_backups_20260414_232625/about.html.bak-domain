@@ -7,13 +7,13 @@
   <meta name="description" content="ExpatScore.de wurde von Yassine Chaikhi gegründet — einem Expat, der die Frustration mit SCHUFA, deutschen Bankkonten und Bürokratie aus eigener Erfahrung kennt.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
-  <link rel="canonical" href="https://expatscore.de/about">
+  <link rel="canonical" href="https://www.expatscore.de/about">
   <meta property="og:title" content="Über ExpatScore.de — Gegründet von einem Expat, für Expats">
   <meta property="og:description" content="Die Geschichte hinter ExpatScore.de: Warum Yassine Chaikhi dieses Portal gebaut hat und was uns von anderen Finanzportalen unterscheidet.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://expatscore.de/about">
+  <meta property="og:url" content="https://www.expatscore.de/about">
   <meta property="og:site_name" content="ExpatScore.de">
-  <meta property="og:image" content="https://expatscore.de/og-image.jpg">
+  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
@@ -21,8 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"Über ExpatScore.de","url":"https://expatscore.de/about","author":{"@type":"Person","name":"Yassine Chaikhi","email":"kontakt@expatscore.de"},"publisher":{"@type":"Organization","name":"ExpatScore.de","url":"https://expatscore.de"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://expatscore.de/"},{"@type":"ListItem","position":2,"name":"Über uns"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"Über ExpatScore.de","url":"https://www.expatscore.de/about","author":{"@type":"Person","name":"Yassine Chaikhi","email":"kontakt@expatscore.de"},"publisher":{"@type":"Organization","name":"ExpatScore.de","url":"https://www.expatscore.de"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.expatscore.de/"},{"@type":"ListItem","position":2,"name":"Über uns"}]}</script>
   <link rel="stylesheet" href="/style.css">
 
   <style>

@@ -7,18 +7,18 @@
   <meta name="description" content="Find out your estimated SCHUFA score in 90 seconds. Free interactive simulator for expats in Germany — get personalised bank recommendations based on your profile.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
-  <link rel="canonical" href="https://expatscore.de/schufa-simulator">
+  <link rel="canonical" href="https://www.expatscore.de/schufa-simulator">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Free SCHUFA Score Simulator for Expats in Germany 2026">
   <meta property="og:description" content="Answer 6 questions. Get your estimated SCHUFA range and personalised bank recommendations — free, instant, no registration.">
   <meta property="og:site_name" content="ExpatScore.de">
-  <meta property="og:image" content="https://expatscore.de/og-image.jpg">
+  <meta property="og:image" content="https://www.expatscore.de/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free SCHUFA Score Simulator for Expats · ExpatScore.de">
   <meta name="twitter:description" content="6 questions. Instant SCHUFA estimate. Personalised bank recommendations.">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <meta name="theme-color" content="#080c10">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator","url":"https://expatscore.de/schufa-simulator","description":"Interactive SCHUFA score estimator for expats in Germany","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator","url":"https://www.expatscore.de/schufa-simulator","description":"Interactive SCHUFA score estimator for expats in Germany","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">

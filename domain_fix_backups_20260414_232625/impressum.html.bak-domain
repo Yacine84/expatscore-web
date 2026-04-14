@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutzerklärung — ExpatScore.de</title>
-  <meta name="description" content="Vollständige Datenschutzerklärung gemäß DSGVO für ExpatScore.de — Cookies, Tracking, Ihre Rechte, Speicherdauer.">
+  <title>Impressum — ExpatScore.de</title>
+  <meta name="description" content="Impressum gemäß § 5 DDG für ExpatScore.de — Angaben zum Betreiber, Kontaktinformationen und Haftungshinweise.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Yassine Chaikhi">
-  <link rel="canonical" href="https://expatscore.de/datenschutz">
+  <link rel="canonical" href="https://www.expatscore.de/impressum">
   
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
   <meta name="theme-color" content="#080c10">
@@ -114,185 +114,89 @@
 
 <div class="mp-hero">
   <div class="mp-hero-inner">
-    <div class="mp-hero-icon" style="background:rgba(0,196,167,0.08);border:1px solid rgba(0,196,167,0.22);">🔒</div>
+    <div class="mp-hero-icon" style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.22);">⚖️</div>
     <div class="mp-hero-text">
-      <span class="mp-hero-eyebrow">DSGVO · Cookies · Datenschutz</span>
-      <h1 class="mp-hero-title">Datenschutzerklärung</h1>
-      <p class="mp-hero-sub">Transparenz ist unser Grundsatz. Hier erfahren Sie genau, welche Daten wir erheben, wie wir sie verarbeiten und welche Rechte Sie haben.</p>
+      <span class="mp-hero-eyebrow">Legal · § 5 DDG · Anbieterkennzeichnung</span>
+      <h1 class="mp-hero-title">Impressum</h1>
+      <p class="mp-hero-sub">Angaben gemäß § 5 DDG (vormals TMG) — vollständige Anbieterkennzeichnung, Haftungshinweise und Streitschlichtung.</p>
       <div class="mp-hero-meta">
-        <div class="mp-meta-pill"><span class="amp-dot d-teal"></span>DSGVO-konform</div>
-        <div class="mp-meta-pill"><span class="amp-dot d-gold"></span>Stand März 2026</div>
-        <div class="mp-meta-pill"><span class="amp-dot d-green"></span>Client-Side Only</div>
+        <div class="mp-meta-pill"><span class="amp-dot d-gold"></span>§ 5 DDG konform</div>
+        <div class="mp-meta-pill"><span class="amp-dot d-teal"></span>Stand März 2026</div>
       </div>
     </div>
   </div>
 </div>
 
 <nav class="breadcrumbs" aria-label="Breadcrumb" style="max-width:900px;margin:0 auto;padding:.75rem 1.5rem 0;">
-  <a href="index.html">Home</a> › <span class="current">Datenschutzerklärung</span>
+  <a href="index.html">Home</a> › <span class="current">Impressum</span>
 </nav>
 
 <div class="mp-body">
   <a href="index.html" class="page-back">← Zurück zur Startseite</a>
 
-  <!-- TOC -->
-  <div class="toc-card" style="margin-top:1rem;">
-    <div class="toc-card-title">Inhaltsverzeichnis</div>
-    <ol>
-      <li><a href="#verantwortlicher">Verantwortlicher</a></li>
-      <li><a href="#erhobene-daten">Welche Daten wir erheben</a></li>
-      <li><a href="#zweck">Zweck der Datenverarbeitung</a></li>
-      <li><a href="#rechtsgrundlagen">Rechtsgrundlagen (DSGVO Art. 6)</a></li>
-      <li><a href="#cookies">Cookies &amp; Tracking</a></li>
-      <li><a href="#affiliate">Affiliate-Links &amp; externe Dienste</a></li>
-      <li><a href="#dritte">Weitergabe an Dritte</a></li>
-      <li><a href="#speicherdauer">Speicherdauer</a></li>
-      <li><a href="#rechte">Ihre Rechte (Art. 15–22 DSGVO)</a></li>
-      <li><a href="#sicherheit">Datensicherheit</a></li>
-      <li><a href="#kontakt">Kontakt &amp; Beschwerden</a></li>
-    </ol>
+  <div class="mp-section" style="margin-top:1rem;">
+    <div class="mp-section-header">
+      <div class="mp-icon ai-gold">👤</div>
+      <div class="mp-section-label">
+        <div class="mp-section-eyebrow">Betreiber</div>
+        <div class="mp-section-title">Angaben gemäß § 5 DDG</div>
+      </div>
+    </div>
+    <div class="legal-box">
+      <strong>Yassine Chaikhi</strong><br>
+      Haus-Nr. 284, Hay Al Amal<br>
+      Ait Melloul, 80000 Agadir<br>
+      Marokko<br><br>
+      E-Mail: <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a><br>
+      Web: <a href="https://expatscore.de">https://expatscore.de</a>
+    </div>
+    <p class="mp-para" style="margin-top:1rem;"><strong>Redaktionell verantwortlich:</strong> Yassine Chaikhi (Anschrift wie oben)</p>
   </div>
 
   <div class="mp-divider"></div>
 
-  <!-- 1. VERANTWORTLICHER -->
-  <div class="mp-section" id="verantwortlicher">
-    <div class="mp-section-header"><div class="mp-icon ai-gold">👤</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 1</div><div class="mp-section-title">Verantwortlicher</div></div></div>
-    <p class="mp-para">Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG) ist:</p>
-    <div class="legal-box"><strong>Yassine Chaikhi</strong><br>Haus-Nr. 284, Hay Al Amal<br>Ait Melloul, 80000 Agadir, Marokko<br><br>E-Mail: <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a><br>Web: <a href="https://expatscore.de">https://expatscore.de</a></div>
-    <p class="mp-para">Hinweis: Der Betreiber hat keinen EU-Sitz. Soweit die DSGVO Anwendung findet (Art. 3 Abs. 2 DSGVO), verpflichtet sich der Betreiber zur Einhaltung der darin enthaltenen Anforderungen.</p>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 2. DATEN -->
-  <div class="mp-section" id="erhobene-daten">
-    <div class="mp-section-header"><div class="mp-icon ai-teal">📊</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 2</div><div class="mp-section-title">Welche Daten wir erheben</div></div></div>
-    <p class="mp-para"><strong>2.1 Server-Logfiles</strong> — Bei jedem Aufruf unserer Website erfasst der Hosting-Anbieter automatisch Informationen: IP-Adresse (anonymisiert nach 7 Tagen), Datum und Uhrzeit, aufgerufene URL, übertragene Datenmenge, Referrer-URL, Browser und Betriebssystem. Diese Daten werden nicht mit anderen Quellen zusammengeführt und nach spätestens 30 Tagen automatisch gelöscht.</p>
-    <p class="mp-para"><strong>2.2 Kontaktaufnahme</strong> — Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir Ihre E-Mail-Adresse, Ihren Namen (sofern angegeben) und den Nachrichteninhalt. Diese Daten werden nicht an Dritte weitergegeben.</p>
-    <div class="mp-callout"><strong>2.3 Simulator-Eingaben:</strong> Der SCHUFA-Score-Simulator verarbeitet Ihre Antworten ausschließlich im Arbeitsspeicher Ihres Browsers (Client-Side). Es werden <strong>keine Eingaben an unsere Server übertragen</strong>. Sobald Sie die Seite verlassen, werden alle Daten gelöscht.</div>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 3. ZWECK -->
-  <div class="mp-section" id="zweck">
-    <div class="mp-section-header"><div class="mp-icon ai-blue">🎯</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 3</div><div class="mp-section-title">Zweck der Datenverarbeitung</div></div></div>
+  <div class="mp-section">
+    <div class="mp-section-header">
+      <div class="mp-icon ai-blue">📄</div>
+      <div class="mp-section-label">
+        <div class="mp-section-eyebrow">Rechtliches</div>
+        <div class="mp-section-title">Haftungsausschluss</div>
+      </div>
+    </div>
     <div class="pledge-items">
-      <div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Betrieb der Website:</strong> Bereitstellung und Stabilität des Angebots (Server-Logs)</div></div>
-      <div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Kommunikation:</strong> Beantwortung von Nutzeranfragen per E-Mail</div></div>
-      <div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Analyse:</strong> Anonymisierte Nutzungsstatistiken zur Verbesserung des Angebots</div></div>
-      <div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Affiliate-Marketing:</strong> Weiterleitung über Partnerlinks (keine Speicherung personenbezogener Daten durch uns)</div></div>
+      <div class="pledge-item"><div class="pledge-check">§</div><div class="pledge-text"><strong>Haftung für Inhalte:</strong> Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</div></div>
+      <div class="pledge-item"><div class="pledge-check">§</div><div class="pledge-text"><strong>Haftung für Links:</strong> Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</div></div>
+      <div class="pledge-item"><div class="pledge-check">§</div><div class="pledge-text"><strong>Urheberrecht:</strong> Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors.</div></div>
     </div>
   </div>
 
   <div class="mp-divider"></div>
 
-  <!-- 4. RECHTSGRUNDLAGEN -->
-  <div class="mp-section" id="rechtsgrundlagen">
-    <div class="mp-section-header"><div class="mp-icon ai-gold">⚖️</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 4</div><div class="mp-section-title">Rechtsgrundlagen (Art. 6 DSGVO)</div></div></div>
-    <div class="mp-table-wrap"><table class="mp-table"><thead><tr><th>Verarbeitungsvorgang</th><th>Rechtsgrundlage</th></tr></thead><tbody>
-      <tr><td>Server-Logfiles</td><td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</td></tr>
-      <tr><td>E-Mail-Kontakt</td><td>Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung)</td></tr>
-      <tr><td>Notwendige Cookies</td><td>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</td></tr>
-      <tr><td>Analytische Cookies</td><td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td></tr>
-    </tbody></table></div>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 5. COOKIES -->
-  <div class="mp-section" id="cookies">
-    <div class="mp-section-header"><div class="mp-icon ai-teal">🍪</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 5</div><div class="mp-section-title">Cookies &amp; Tracking</div></div></div>
-    <p class="mp-para">Cookies sind kleine Textdateien, die Ihr Browser auf Ihrem Gerät speichert. ExpatScore.de verwendet folgende Arten:</p>
-    <p class="mp-para"><strong>5.2 Notwendige Cookies</strong> — Diese sind für den Betrieb technisch erforderlich und können nicht deaktiviert werden.</p>
-    <div class="mp-table-wrap"><table class="mp-table"><thead><tr><th>Cookie-Name</th><th>Zweck</th><th>Lebensdauer</th></tr></thead><tbody>
-      <tr><td><code>es_cookie_consent</code></td><td>Speichert Ihre Cookie-Einwilligung</td><td>365 Tage</td></tr>
-    </tbody></table></div>
-    <p class="mp-para"><strong>5.3 Analytische Cookies</strong> — Nur mit Einwilligung. IP-Adresse wird vor Speicherung anonymisiert. Einwilligung jederzeit über Cookie-Einstellungen widerrufbar.</p>
-    <p class="mp-para"><strong>5.4 Cookies deaktivieren</strong> — Sie können Cookies in Ihrem Browser deaktivieren. Einige Funktionen funktionieren dann möglicherweise nicht korrekt.</p>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 6. AFFILIATE -->
-  <div class="mp-section" id="affiliate">
-    <div class="mp-section-header"><div class="mp-icon ai-green">🔗</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 6</div><div class="mp-section-title">Affiliate-Links &amp; externe Dienste</div></div></div>
-    <p class="mp-para">ExpatScore.de enthält Affiliate-Links zu Finanzprodukten. Bei Nutzung über diese Links erhalten wir möglicherweise eine Vergütung. Für Sie entstehen <strong>keine zusätzlichen Kosten</strong>.</p>
-    <p class="mp-para">Beim Klick auf Affiliate-Links werden Referrer-Informationen und ggf. ein Tracking-Cookie an den Anbieter übertragen. Unsere <strong>redaktionelle Unabhängigkeit</strong> bleibt davon unberührt. Weitere Informationen: <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>.</p>
-    <p class="mp-para"><strong>6.1 Eingebettete externe Inhalte:</strong> Diese Website bindet keine externen Medieninhalte ein, die ohne Zustimmung Daten übertragen.</p>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 7. DRITTE -->
-  <div class="mp-section" id="dritte">
-    <div class="mp-section-header"><div class="mp-icon ai-gray">🏢</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 7</div><div class="mp-section-title">Weitergabe an Dritte</div></div></div>
-    <p class="mp-para">Wir geben personenbezogene Daten grundsätzlich <strong>nicht an Dritte weiter</strong>, es sei denn: Sie haben eingewilligt (Art. 6 Abs. 1 lit. a), die Weitergabe ist vertraglich erforderlich (lit. b), eine gesetzliche Verpflichtung besteht (lit. c), oder unser Hosting-Anbieter als Auftragsverarbeiter (Art. 28).</p>
-    <div class="pledge-items"><div class="pledge-item"><div class="pledge-check">✓</div><div class="pledge-text"><strong>Hosting:</strong> Vercel Inc. (Irland/USA) — EU-US Data Privacy Framework angeschlossen.</div></div></div>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 8. SPEICHERDAUER -->
-  <div class="mp-section" id="speicherdauer">
-    <div class="mp-section-header"><div class="mp-icon ai-blue">⏱️</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 8</div><div class="mp-section-title">Speicherdauer</div></div></div>
-    <div class="pledge-items">
-      <div class="pledge-item"><div class="pledge-check">⏱</div><div class="pledge-text"><strong>Server-Logfiles:</strong> 30 Tage, danach automatische Löschung</div></div>
-      <div class="pledge-item"><div class="pledge-check">⏱</div><div class="pledge-text"><strong>E-Mail-Korrespondenz:</strong> 3 Jahre nach Abschluss des Vorgangs</div></div>
-      <div class="pledge-item"><div class="pledge-check">⏱</div><div class="pledge-text"><strong>Cookie-Einwilligung:</strong> 365 Tage</div></div>
-      <div class="pledge-item"><div class="pledge-check">⏱</div><div class="pledge-text"><strong>Simulator-Daten:</strong> Keine Speicherung — ausschließlich Browser-Session</div></div>
+  <div class="mp-section">
+    <div class="mp-section-header">
+      <div class="mp-icon ai-teal">🤝</div>
+      <div class="mp-section-label">
+        <div class="mp-section-eyebrow">EU-Recht</div>
+        <div class="mp-section-title">Streitschlichtung</div>
+      </div>
     </div>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 9. RECHTE -->
-  <div class="mp-section" id="rechte">
-    <div class="mp-section-header"><div class="mp-icon ai-teal">📋</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 9</div><div class="mp-section-title">Ihre Rechte (Art. 15–22 DSGVO)</div></div></div>
-    <div class="rights-grid">
-      <div class="right-card"><div class="right-card-icon">📋</div><div><strong>Auskunftsrecht (Art. 15)</strong><p>Recht auf Auskunft über gespeicherte Daten.</p></div></div>
-      <div class="right-card"><div class="right-card-icon">✏️</div><div><strong>Berichtigungsrecht (Art. 16)</strong><p>Berichtigung unrichtiger oder unvollständiger Daten.</p></div></div>
-      <div class="right-card"><div class="right-card-icon">🗑️</div><div><strong>Löschungsrecht (Art. 17)</strong><p>Löschung Ihrer Daten, sofern kein Aufbewahrungsgrund besteht.</p></div></div>
-      <div class="right-card"><div class="right-card-icon">⏸️</div><div><strong>Einschränkung (Art. 18)</strong><p>Einschränkung der Verarbeitung Ihrer Daten.</p></div></div>
-      <div class="right-card"><div class="right-card-icon">📦</div><div><strong>Datenübertragbarkeit (Art. 20)</strong><p>Recht auf maschinenlesbares Datenformat.</p></div></div>
-      <div class="right-card"><div class="right-card-icon">🚫</div><div><strong>Widerspruchsrecht (Art. 21)</strong><p>Widerspruch gegen Verarbeitung auf Basis berechtigter Interessen.</p></div></div>
-    </div>
-    <p class="mp-para" style="margin-top:1rem;">Zur Ausübung Ihrer Rechte: <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a>. Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 10. SICHERHEIT -->
-  <div class="mp-section" id="sicherheit">
-    <div class="mp-section-header"><div class="mp-icon ai-green">🛡️</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 10</div><div class="mp-section-title">Datensicherheit</div></div></div>
-    <p class="mp-para">ExpatScore.de nutzt SSL/TLS-Verschlüsselung (HTTPS) für alle Verbindungen. Wir setzen technische und organisatorische Maßnahmen (TOMs) gemäß Art. 32 DSGVO ein, um Ihre Daten vor unberechtigtem Zugriff, Verlust oder Missbrauch zu schützen.</p>
-  </div>
-
-  <div class="mp-divider"></div>
-
-  <!-- 11. KONTAKT -->
-  <div class="mp-section" id="kontakt">
-    <div class="mp-section-header"><div class="mp-icon ai-gold">✉️</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 11</div><div class="mp-section-title">Kontakt &amp; Beschwerden</div></div></div>
-    <div class="legal-box"><strong>Datenschutzanfragen — ExpatScore.de</strong><br>Yassine Chaikhi<br>E-Mail: <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a><br>Antwortzeit: in der Regel innerhalb von 72 Stunden</div>
-    <p class="mp-para">Wir sind gemäß Art. 77 DSGVO nicht verpflichtet, einen Datenschutzbeauftragten zu benennen. Für Beschwerden ist die für Sie zuständige nationale Datenschutzbehörde zuständig.</p>
-    <p class="mp-para" style="font-size:.82rem;color:#5c6b7a;margin-top:1.5rem;">Diese Datenschutzerklärung wurde zuletzt am <strong>März 2026</strong> aktualisiert. Die aktuelle Version ist stets unter <a href="https://expatscore.de/datenschutz">expatscore.de/datenschutz</a> abrufbar.</p>
+    <p class="mp-para">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
   </div>
 
   <div class="contact-block">
-    <div class="contact-block-icon">🔒</div>
+    <div class="contact-block-icon">✉️</div>
     <div class="contact-block-body">
-      <div class="contact-block-title">Datenschutz-Anfrage?</div>
-      <div class="contact-block-sub">Auskunfts-, Löschungs- oder Widerspruchsanfragen jederzeit willkommen</div>
+      <div class="contact-block-title">Rechtliche Fragen?</div>
+      <div class="contact-block-sub">Antwortzeit: in der Regel innerhalb von 48 Stunden · Deutsch und Englisch</div>
     </div>
-    <a href="mailto:kontakt@expatscore.de" class="contact-block-btn">Anfrage senden →</a>
+    <a href="mailto:kontakt@expatscore.de" class="contact-block-btn">Schreib uns →</a>
   </div>
 
   <div style="margin-top:2rem;">
     <div style="font-family:'DM Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;color:#5c6b7a;margin-bottom:.85rem;">Weitere rechtliche Dokumente</div>
     <div class="related-links-grid">
-      <a href="impressum.html" class="related-link"><span class="related-link-icon">⚖️</span><div><div class="related-link-title">Impressum</div><div class="related-link-sub">§ 5 DDG · Anbieter</div></div></a>
-      <a href="affiliate-hinweis.html" class="related-link"><span class="related-link-icon">⚑</span><div><div class="related-link-title">Affiliate-Hinweis</div><div class="related-link-sub">Transparenz · Partner</div></div></a>
+      <a href="datenschutz.html" class="related-link"><span class="related-link-icon">🔒</span><div><div class="related-link-title">Datenschutzerklärung</div><div class="related-link-sub">DSGVO · Cookies · Ihre Rechte</div></div></a>
+      <a href="affiliate-hinweis.html" class="related-link"><span class="related-link-icon">⚑</span><div><div class="related-link-title">Affiliate-Hinweis</div><div class="related-link-sub">Transparenz · Partner · UWG</div></div></a>
       <a href="about.html" class="related-link"><span class="related-link-icon">🧭</span><div><div class="related-link-title">Über ExpatScore.de</div><div class="related-link-sub">Mission · Grundsätze</div></div></a>
     </div>
   </div>

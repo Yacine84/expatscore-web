@@ -1,0 +1,17 @@
+# ExpatScore.de — robots.txt
+# Last reviewed: 2026-04
+
+User-agent: *
+Allow: /
+
+# Block direct access to the underlying /docs/ paths so Google
+# only ever indexes the clean public URLs (e.g. /schufa-guide,
+# not /docs/schufa-guide.html). Vercel's rewrites serve the same
+# content under both, but only the clean URL should be canonical.
+Disallow: /docs/
+
+# Block crawl of any old slug forms that 308-redirect (saves crawl budget)
+Disallow: /blog/bahnbonus-punkte-einlsen-fr-ice-tickets
+
+# Sitemap location
+Sitemap: https://expatscore.de/sitemap.xml
