@@ -1,0 +1,632 @@
+{
+  "paIiikWpnok": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-04-01T17:00:50Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-08T23:14:26.349511Z"
+  },
+  "6XgOCHsudPc": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-04-01T15:59:00Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-08T23:14:29.854183Z"
+  },
+  "cadEc3fmVUI": {
+    "tier1_density": 0.0,
+    "harvest_count": 7,
+    "is_priority": false,
+    "published_at": "2026-04-01T08:07:00Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-04T23:25:09.197161Z"
+  },
+  "3p5J3WT7xpI": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-31T18:31:14Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-08T23:14:35.838567Z"
+  },
+  "dJzMLdxJpdc": {
+    "tier1_density": 0.0,
+    "harvest_count": 7,
+    "is_priority": false,
+    "published_at": "2026-03-31T14:05:51Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-04T23:25:19.379095Z"
+  },
+  "6ahHDDmnYes": {
+    "tier1_density": 0.0,
+    "harvest_count": 7,
+    "is_priority": false,
+    "published_at": "2026-03-31T08:03:03Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-04T23:25:23.605868Z"
+  },
+  "Z95Ol6E9Ues": {
+    "tier1_density": 0.0,
+    "harvest_count": 5,
+    "is_priority": false,
+    "published_at": "2026-03-30T20:05:19Z",
+    "source": "search",
+    "channel_name": "Passport To Wealth\u2122 ",
+    "last_harvested": "2026-04-06T19:53:37.809871Z"
+  },
+  "EYWUzAvP8_E": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-30T16:21:37Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-08T23:14:42.440390Z"
+  },
+  "4WoHfXx58po": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-30T15:00:05Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:14:50.151142Z"
+  },
+  "gd4m_nTqRVs": {
+    "tier1_density": 0.0,
+    "harvest_count": 6,
+    "is_priority": false,
+    "published_at": "2026-03-30T12:43:24Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-03T23:45:51.360106Z"
+  },
+  "BXv8NUSOZko": {
+    "tier1_density": 0.0,
+    "harvest_count": 8,
+    "is_priority": false,
+    "published_at": "2026-03-29T17:22:57Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-06T19:53:52.909126Z"
+  },
+  "j-4S4Gllb2s": {
+    "tier1_density": 0.0,
+    "harvest_count": 6,
+    "is_priority": false,
+    "published_at": "2026-03-29T13:02:56Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-03T23:46:01.631803Z"
+  },
+  "-K664qAB4TM": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-29T10:33:37Z",
+    "source": "search",
+    "channel_name": "Waheed Sanghera",
+    "last_harvested": "2026-04-08T23:14:57.002413Z"
+  },
+  "Iv1Cyn1ZSqQ": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-29T09:30:06Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-08T23:15:02.195587Z"
+  },
+  "M1D8OPBHyrg": {
+    "tier1_density": 0.0,
+    "harvest_count": 5,
+    "is_priority": false,
+    "published_at": "2026-03-29T08:11:00Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-03T20:21:19.149789Z"
+  },
+  "o3mkCoR1QY0": {
+    "tier1_density": 0.0,
+    "harvest_count": 5,
+    "is_priority": false,
+    "published_at": "2026-03-29T08:00:00Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-03T20:21:23.344804Z"
+  },
+  "aAL9p-R2uwI": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-29T07:59:00Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-08T23:15:06.798595Z"
+  },
+  "i93zfC9lLTs": {
+    "tier1_density": 0.0,
+    "harvest_count": 8,
+    "is_priority": false,
+    "published_at": "2026-03-28T18:10:27Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-06T19:54:12.736744Z"
+  },
+  "5rIJTC11cUU": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-03-28T14:02:46Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-01T23:57:15.288437Z"
+  },
+  "rF-09TQfYr8": {
+    "tier1_density": 0.0,
+    "harvest_count": 7,
+    "is_priority": false,
+    "published_at": "2026-03-27T20:59:04Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-04T23:26:17.110257Z"
+  },
+  "wpcvDEfOulg": {
+    "tier1_density": 0.0,
+    "harvest_count": 6,
+    "is_priority": false,
+    "published_at": "2026-03-26T21:19:45Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-03T23:46:35.863491Z"
+  },
+  "cbbzRM6XSKE": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-26T16:00:51Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-08T23:15:17.175135Z"
+  },
+  "2axHWzwne34": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-03-25T18:00:02Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-01T23:57:36.907430Z"
+  },
+  "bwrb21VE9-M": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-23T16:00:58Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:15:20.497645Z"
+  },
+  "llyCdVy2ulg": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-22T10:30:35Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-08T23:15:24.650610Z"
+  },
+  "1zGFfH4T7UA": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-22T08:59:00Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-08T23:15:30.825416Z"
+  },
+  "wUlzzDtLC6k": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-18T16:59:00Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-08T23:15:37.378639Z"
+  },
+  "BiE8AJIID_U": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-16T16:00:17Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:15:41.964529Z"
+  },
+  "RyD4fWt6lUw": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-15T10:30:30Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-08T23:15:47.019926Z"
+  },
+  "pTOThNLGSCI": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-15T08:59:00Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-08T23:15:50.454750Z"
+  },
+  "AsU1HnUdkSQ": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-12T16:00:23Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-08T23:15:53.733786Z"
+  },
+  "FyNaUz4dqw8": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-09T16:00:23Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:15:57.701732Z"
+  },
+  "y9EpwAqI2uQ": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-08T10:30:41Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-08T23:16:03.980481Z"
+  },
+  "iuNyMu5dBKM": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-08T08:59:01Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-08T23:16:10.847484Z"
+  },
+  "aVlS2jul1ng": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-05T16:00:02Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-08T23:16:16.001483Z"
+  },
+  "QOK-jHTV2jE": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-02T16:00:36Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:16:23.111533Z"
+  },
+  "g49s4GEzdzw": {
+    "tier1_density": 0.0,
+    "harvest_count": 7,
+    "is_priority": false,
+    "published_at": "2026-03-01T10:30:24Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-04T23:27:45.621320Z"
+  },
+  "3M6_QDrEcqA": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-03-01T08:59:00Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-08T23:16:27.189378Z"
+  },
+  "g3qF9NvmQgc": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-02-23T16:01:05Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:16:34.910952Z"
+  },
+  "eTRK4ajj3l8": {
+    "tier1_density": 0.0,
+    "harvest_count": 7,
+    "is_priority": false,
+    "published_at": "2026-02-22T08:59:01Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-04T23:28:00.464744Z"
+  },
+  "4nCv17yEhpU": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-02-16T16:00:12Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:16:38.918855Z"
+  },
+  "jLv8pf6Ejrk": {
+    "tier1_density": 0.0,
+    "harvest_count": 7,
+    "is_priority": false,
+    "published_at": "2026-02-09T16:01:09Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-04T23:28:16.197959Z"
+  },
+  "aVISupCAS5s": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2026-02-02T16:00:02Z",
+    "source": "search",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:16:46.377162Z"
+  },
+  "51EkIL7NdFc": {
+    "tier1_density": 0.0,
+    "harvest_count": 1,
+    "is_priority": false,
+    "published_at": "2026-01-05T13:14:49Z",
+    "source": "search",
+    "channel_name": "Live in Germany ",
+    "last_harvested": "2026-04-01T22:41:15.637923Z"
+  },
+  "u0WsIEVLtnw": {
+    "tier1_density": 0.0,
+    "harvest_count": 8,
+    "is_priority": false,
+    "published_at": "2025-11-16T05:30:36Z",
+    "source": "search",
+    "channel_name": "Lovleen and Asim",
+    "last_harvested": "2026-04-06T19:56:00.830996Z"
+  },
+  "GJ9s7g7Qyh4": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2025-11-15T12:06:06Z",
+    "source": "channel",
+    "channel_name": "My Life in Germany",
+    "last_harvested": "2026-04-08T23:16:49.713044Z"
+  },
+  "aFApm52paiY": {
+    "tier1_density": 0.0,
+    "harvest_count": 10,
+    "is_priority": false,
+    "published_at": "2025-11-08T11:35:51Z",
+    "source": "channel",
+    "channel_name": "My Life in Germany",
+    "last_harvested": "2026-04-08T23:16:54.631223Z"
+  },
+  "anz1V_H0tcU": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-03-19T20:16:11Z",
+    "source": "search",
+    "channel_name": "Radio RFM",
+    "last_harvested": "2026-04-03T23:47:04.869599Z"
+  },
+  "65je1bOuY6Q": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-03-01T14:49:36Z",
+    "source": "search",
+    "channel_name": "THE PHOEBE WAY",
+    "last_harvested": "2026-04-03T23:48:03.653364Z"
+  },
+  "BMdD00No7Oo": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-02-22T10:00:12Z",
+    "source": "search",
+    "channel_name": "Himansha kumari",
+    "last_harvested": "2026-04-03T23:48:23.848311Z"
+  },
+  "X9J6x6bgsic": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-02-13T18:28:44Z",
+    "source": "search",
+    "channel_name": "LIVE IN GERMANY",
+    "last_harvested": "2026-04-03T23:48:43.219672Z"
+  },
+  "RYtTRsdHDO0": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-02-05T16:00:40Z",
+    "source": "search",
+    "channel_name": "Sen. Kelesi and You",
+    "last_harvested": "2026-04-03T23:48:51.774621Z"
+  },
+  "Gpa8QMUPwxo": {
+    "tier1_density": 0.0,
+    "harvest_count": 7,
+    "is_priority": false,
+    "published_at": "2026-04-02T22:20:23Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-08T23:14:23.054748Z"
+  },
+  "sjA7w5Q3jzY": {
+    "tier1_density": 0.0,
+    "harvest_count": 5,
+    "is_priority": false,
+    "published_at": "2026-04-02T08:05:00Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-06T19:53:10.161926Z"
+  },
+  "YPkQOUAf6ts": {
+    "tier1_density": 0.0,
+    "harvest_count": 5,
+    "is_priority": false,
+    "published_at": "2026-04-03T16:05:27Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-08T23:14:09.078387Z"
+  },
+  "jJb2LXmywVQ": {
+    "tier1_density": 0.0,
+    "harvest_count": 5,
+    "is_priority": false,
+    "published_at": "2026-04-03T10:03:12Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-08T23:14:18.359273Z"
+  },
+  "ijqE6U6q7i4": {
+    "tier1_density": 0.0,
+    "harvest_count": 4,
+    "is_priority": false,
+    "published_at": "2026-04-04T16:34:42Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-08T23:13:50.646852Z"
+  },
+  "5GP0CK7BfoQ": {
+    "tier1_density": 0.0,
+    "harvest_count": 4,
+    "is_priority": false,
+    "published_at": "2026-04-04T16:03:39Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-08T23:13:56.846120Z"
+  },
+  "ezOZkb6uNmU": {
+    "tier1_density": 0.0,
+    "harvest_count": 4,
+    "is_priority": false,
+    "published_at": "2026-04-04T08:03:37Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-08T23:14:04.567561Z"
+  },
+  "ZXKoNEF8uX8": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-04-06T15:00:52Z",
+    "source": "channel",
+    "channel_name": "Simple Germany",
+    "last_harvested": "2026-04-08T23:13:08.763054Z"
+  },
+  "K1Z8UdNsKoI": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-04-06T08:03:03Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-08T23:13:14.463002Z"
+  },
+  "SoZhk9FB0G8": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-04-05T17:00:36Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-08T23:13:21.785728Z"
+  },
+  "K6cF_8xZ3lE": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-04-05T09:30:10Z",
+    "source": "channel",
+    "channel_name": "Ahsan Finance",
+    "last_harvested": "2026-04-08T23:13:28.245117Z"
+  },
+  "JGTCFAGaU7I": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-04-05T08:02:48Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-08T23:13:33.453122Z"
+  },
+  "IbbGPvJx_bE": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-04-05T08:00:29Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-08T23:13:41.340093Z"
+  },
+  "pTME6vgcLoE": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-04-05T07:59:01Z",
+    "source": "channel",
+    "channel_name": "PerFinEx",
+    "last_harvested": "2026-04-08T23:13:46.260362Z"
+  },
+  "zZp6Az0_j6Q": {
+    "tier1_density": 0.0,
+    "harvest_count": 3,
+    "is_priority": false,
+    "published_at": "2026-03-28T14:45:04Z",
+    "source": "search",
+    "channel_name": "Sikho German",
+    "last_harvested": "2026-04-08T23:15:10.292003Z"
+  },
+  "bol0_tl5O5w": {
+    "tier1_density": 0.0,
+    "harvest_count": 2,
+    "is_priority": false,
+    "published_at": "2026-04-08T16:45:21Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-08T23:12:48.929566Z"
+  },
+  "bHDSCybaQbA": {
+    "tier1_density": 0.0,
+    "harvest_count": 2,
+    "is_priority": false,
+    "published_at": "2026-04-08T08:04:23Z",
+    "source": "channel",
+    "channel_name": "Finanzfluss",
+    "last_harvested": "2026-04-08T23:12:54.556875Z"
+  },
+  "TIPR1D44BOQ": {
+    "tier1_density": 0.0,
+    "harvest_count": 2,
+    "is_priority": false,
+    "published_at": "2026-04-07T17:00:38Z",
+    "source": "channel",
+    "channel_name": "Easy German",
+    "last_harvested": "2026-04-08T23:12:57.791402Z"
+  }
+}

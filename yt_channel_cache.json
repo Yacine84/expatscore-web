@@ -1,0 +1,74 @@
+{
+  "handle:@SimpleGermany": {
+    "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
+    "name": "Simple Germany",
+    "handle": "@SimpleGermany",
+    "resolved_at": "2026-04-01T22:36:34.704229Z"
+  },
+  "playlist:UCLZcxlLIOzCl4AUVV8ikCgQ": {
+    "uploads_playlist_id": "UULZcxlLIOzCl4AUVV8ikCgQ"
+  },
+  "handle:@MyLifeInGermany": {
+    "channel_id": "UCfGxA0NYGNwdoyB9M8T6jjA",
+    "name": "My life In Germany\ud83c\uddf1\ud83c\udde7",
+    "handle": "@MyLifeInGermany",
+    "resolved_at": "2026-04-01T22:36:36.229661Z"
+  },
+  "playlist:UCfGxA0NYGNwdoyB9M8T6jjA": {
+    "uploads_playlist_id": "UUfGxA0NYGNwdoyB9M8T6jjA"
+  },
+  "handle:@Finanzfluss": {
+    "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
+    "name": "Finanzfluss",
+    "handle": "@Finanzfluss",
+    "resolved_at": "2026-04-01T22:36:38.341233Z"
+  },
+  "playlist:UCeARcCUiZg79SQQ-2_XNlXQ": {
+    "uploads_playlist_id": "UUeARcCUiZg79SQQ-2_XNlXQ"
+  },
+  "handle:@PerFinEx": {
+    "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
+    "name": "PerFinEx",
+    "handle": "@PerFinEx",
+    "resolved_at": "2026-04-01T22:36:40.931038Z"
+  },
+  "playlist:UCyb3q2v3OvEQgBCN4eJ0GSw": {
+    "uploads_playlist_id": "UUyb3q2v3OvEQgBCN4eJ0GSw"
+  },
+  "handle:@EasyGerman": {
+    "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
+    "name": "Easy German",
+    "handle": "@EasyGerman",
+    "resolved_at": "2026-04-01T22:36:42.536267Z"
+  },
+  "playlist:UCbxb2fqe9oNgglAoYqsYOtQ": {
+    "uploads_playlist_id": "UUbxb2fqe9oNgglAoYqsYOtQ"
+  },
+  "handle:@AhsanFinance": {
+    "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
+    "name": "Ahsan Finance",
+    "handle": "@AhsanFinance",
+    "resolved_at": "2026-04-01T22:36:45.466281Z"
+  },
+  "playlist:UC8NOlkt22UCIAunNTZprE7g": {
+    "uploads_playlist_id": "UU8NOlkt22UCIAunNTZprE7g"
+  },
+  "handle:@HalloGermany": {
+    "channel_id": "UC3kkqGi7a2q6tQWOjQw2TuA",
+    "name": "HalloGermany",
+    "handle": "@HalloGermany",
+    "resolved_at": "2026-04-01T22:36:47.327806Z"
+  },
+  "playlist:UC3kkqGi7a2q6tQWOjQw2TuA": {
+    "uploads_playlist_id": "UU3kkqGi7a2q6tQWOjQw2TuA"
+  },
+  "handle:@WantedAdventure": {
+    "channel_id": "UCv5967rhojn0IaPxJusxy1A",
+    "name": "Wanted Adventure",
+    "handle": "@WantedAdventure",
+    "resolved_at": "2026-04-01T22:36:49.652592Z"
+  },
+  "playlist:UCv5967rhojn0IaPxJusxy1A": {
+    "uploads_playlist_id": "UUv5967rhojn0IaPxJusxy1A"
+  }
+}

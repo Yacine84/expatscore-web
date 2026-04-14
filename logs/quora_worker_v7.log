@@ -1,0 +1,1082 @@
+2026-04-05 21:32:22 | INFO     | 🚀 Quora Worker v7.0 'MONSTER STAGE: Wa7ch Protocol' initializing...
+2026-04-05 21:32:22 | DEBUG    | ✓ Tor SOCKS port 9050 reachable
+2026-04-05 21:32:22 | DEBUG    | ✓ Tor Control port 9051 reachable
+2026-04-05 21:32:22 | DEBUG    | ✓ Tor Control Port authenticated
+2026-04-05 21:32:23 | INFO     | 🛡️  Tor operational | Exit IP: 109.70.100.12
+2026-04-05 21:32:23 | INFO     | 📊 Session state: 0/50 keywords today
+2026-04-05 21:32:23 | INFO     | 🔥 Warming up session with benign requests...
+2026-04-05 21:32:24 | INFO     | ⏳ Warmup pause: 3.99s (Gaussian: 3-8s)
+2026-04-05 21:32:29 | INFO     | ⏳ Warmup pause: 5.43s (Gaussian: 3-8s)
+2026-04-05 21:32:34 | DEBUG    | ✓ Session warmup complete
+2026-04-05 21:32:34 | INFO     | 🔐 Stealth session active | Proxy: socks5://127.0.0.1:9050
+2026-04-05 21:32:34 | INFO     | 
+📦 Batch #1 | Keywords: 7
+2026-04-05 21:32:34 | INFO     | 🔄 [1/50] 'schufa widerspruch for expats'
+2026-04-05 21:32:34 | DEBUG    | 🔍 Searching: 'schufa widerspruch for expats'
+2026-04-05 21:32:34 | DEBUG    | → [1] GET https://www.google.com/search?q=schufa%20widerspruch%20for%2...
+2026-04-05 21:32:34 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating chrome115 is not supported
+2026-04-05 21:32:34 | WARNING  | ✗ Request failed (attempt 1)
+2026-04-05 21:32:34 | INFO     | ⏳ Retry backoff: 19.73s (Gaussian: 15-30s)
+2026-04-05 21:32:54 | DEBUG    | ⏳ Adaptive delay: 21.8s
+2026-04-05 21:33:16 | DEBUG    | → [2] GET https://www.google.com/search?q=schufa%20widerspruch%20for%2...
+2026-04-05 21:33:16 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:33:17 | INFO     | 🔄 NEWNYM sent | Previous IP: 45.141.215.238
+2026-04-05 21:33:17 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:33:28 | INFO     | ✓ Circuit verified | Old: 45.141.215.238 → New: 178.218.144.18 [CLEAN]
+2026-04-05 21:33:28 | INFO     | ⏳ Post-rotation cooldown: 39.79s (Gaussian: 30-60s)
+2026-04-05 21:34:08 | DEBUG    | → [3] GET https://www.google.com/search?q=schufa%20widerspruch%20for%2...
+2026-04-05 21:34:08 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating safari16_0 is not supported
+2026-04-05 21:34:08 | WARNING  | ✗ Request failed (attempt 3)
+2026-04-05 21:34:08 | INFO     | ⏳ Retry backoff: 28.04s (Gaussian: 15-30s)
+2026-04-05 21:34:36 | DEBUG    | → [4] GET https://www.google.com/search?q=schufa%20widerspruch%20for%2...
+2026-04-05 21:34:36 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating chrome115 is not supported
+2026-04-05 21:34:36 | WARNING  | ✗ Request failed (attempt 4)
+2026-04-05 21:34:36 | INFO     | ⏳ Retry backoff: 15.5s (Gaussian: 15-30s)
+2026-04-05 21:34:51 | DEBUG    | ⏳ Adaptive delay: 19.2s
+2026-04-05 21:35:11 | DEBUG    | → [5] GET https://www.google.com/search?q=schufa%20widerspruch%20for%2...
+2026-04-05 21:35:13 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:35:14 | INFO     | 🔄 NEWNYM sent | Previous IP: 178.218.144.18
+2026-04-05 21:35:14 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:35:25 | INFO     | ✓ Circuit verified | Old: 178.218.144.18 → New: 45.154.98.160 [CLEAN]
+2026-04-05 21:35:25 | INFO     | ⏳ Post-rotation cooldown: 45.38s (Gaussian: 30-60s)
+2026-04-05 21:36:10 | ERROR    | ✗ All retries exhausted for 'schufa widerspruch for expats'
+2026-04-05 21:36:10 | INFO     | ⏳ Inter-keyword: 51.18s (Gaussian: 20-45s)
+2026-04-05 21:37:01 | INFO     | 🔄 [2/50] 'revolut germany schufa for expats'
+2026-04-05 21:37:01 | DEBUG    | 🔍 Searching: 'revolut germany schufa for expats'
+2026-04-05 21:37:01 | DEBUG    | → [6] GET https://www.google.com/search?q=revolut%20germany%20schufa%2...
+2026-04-05 21:37:03 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:37:03 | INFO     | 🔄 NEWNYM sent | Previous IP: 185.220.101.153
+2026-04-05 21:37:03 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:37:14 | INFO     | ✓ Circuit verified | Old: 185.220.101.153 → New: 45.84.107.33 [CLEAN]
+2026-04-05 21:37:14 | INFO     | ⏳ Post-rotation cooldown: 42.43s (Gaussian: 30-60s)
+2026-04-05 21:37:56 | DEBUG    | → [7] GET https://www.google.com/search?q=revolut%20germany%20schufa%2...
+2026-04-05 21:37:58 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:37:58 | INFO     | 🔄 NEWNYM sent | Previous IP: 45.84.107.17
+2026-04-05 21:37:58 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:38:09 | INFO     | ✓ Circuit verified | Old: 45.84.107.17 → New: 109.70.100.11 [CLEAN]
+2026-04-05 21:38:09 | INFO     | ⏳ Post-rotation cooldown: 50.56s (Gaussian: 30-60s)
+2026-04-05 21:39:00 | DEBUG    | → [8] GET https://www.google.com/search?q=revolut%20germany%20schufa%2...
+2026-04-05 21:39:00 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating safari16_0 is not supported
+2026-04-05 21:39:00 | WARNING  | ✗ Request failed (attempt 3)
+2026-04-05 21:39:00 | INFO     | ⏳ Retry backoff: 18.38s (Gaussian: 15-30s)
+2026-04-05 21:39:18 | DEBUG    | ⏳ Adaptive delay: 11.6s
+2026-04-05 21:39:30 | DEBUG    | → [9] GET https://www.google.com/search?q=revolut%20germany%20schufa%2...
+2026-04-05 21:39:31 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:39:32 | INFO     | 🔄 NEWNYM sent | Previous IP: 185.220.101.22
+2026-04-05 21:39:32 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:39:43 | INFO     | ✓ Circuit verified | Old: 185.220.101.22 → New: 45.94.31.68 [CLEAN]
+2026-04-05 21:39:43 | INFO     | ⏳ Post-rotation cooldown: 42.37s (Gaussian: 30-60s)
+2026-04-05 21:40:25 | DEBUG    | → [10] GET https://www.google.com/search?q=revolut%20germany%20schufa%2...
+2026-04-05 21:40:25 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating safari16_0 is not supported
+2026-04-05 21:40:25 | WARNING  | ✗ Request failed (attempt 5)
+2026-04-05 21:40:25 | INFO     | ⏳ Retry backoff: 20.62s (Gaussian: 15-30s)
+2026-04-05 21:40:46 | ERROR    | ✗ All retries exhausted for 'revolut germany schufa for expats'
+2026-04-05 21:40:46 | INFO     | ⏳ Inter-keyword: 32.07s (Gaussian: 20-45s)
+2026-04-05 21:41:18 | INFO     | 🔄 [3/50] 'what is financial integration germany'
+2026-04-05 21:41:18 | DEBUG    | 🔍 Searching: 'what is financial integration germany'
+2026-04-05 21:41:18 | DEBUG    | → [11] GET https://www.google.com/search?q=what%20is%20financial%20inte...
+2026-04-05 21:41:18 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating safari16_0 is not supported
+2026-04-05 21:41:18 | WARNING  | ✗ Request failed (attempt 1)
+2026-04-05 21:41:18 | INFO     | ⏳ Retry backoff: 16.0s (Gaussian: 15-30s)
+2026-04-05 21:41:34 | DEBUG    | ⏳ Adaptive delay: 21.6s
+2026-04-05 21:41:55 | DEBUG    | → [12] GET https://www.google.com/search?q=what%20is%20financial%20inte...
+2026-04-05 21:41:57 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:41:58 | INFO     | 🔄 NEWNYM sent | Previous IP: 45.94.31.68
+2026-04-05 21:41:58 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:42:09 | INFO     | ✓ Circuit verified | Old: 45.94.31.68 → New: 23.191.200.8 [CLEAN]
+2026-04-05 21:42:09 | INFO     | ⏳ Post-rotation cooldown: 29.15s (Gaussian: 30-60s)
+2026-04-05 21:42:38 | DEBUG    | → [13] GET https://www.google.com/search?q=what%20is%20financial%20inte...
+2026-04-05 21:42:39 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:42:40 | INFO     | 🔄 NEWNYM sent | Previous IP: 109.70.100.3
+2026-04-05 21:42:40 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:42:51 | INFO     | ✓ Circuit verified | Old: 109.70.100.3 → New: 45.84.107.101 [CLEAN]
+2026-04-05 21:42:51 | INFO     | ⏳ Post-rotation cooldown: 60.66s (Gaussian: 30-60s)
+2026-04-05 21:43:52 | DEBUG    | → [14] GET https://www.google.com/search?q=what%20is%20financial%20inte...
+2026-04-05 21:43:52 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating safari16_0 is not supported
+2026-04-05 21:43:52 | WARNING  | ✗ Request failed (attempt 4)
+2026-04-05 21:43:52 | INFO     | ⏳ Retry backoff: 25.22s (Gaussian: 15-30s)
+2026-04-05 21:44:17 | DEBUG    | → [15] GET https://www.google.com/search?q=what%20is%20financial%20inte...
+2026-04-05 21:44:18 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:44:19 | INFO     | 🔄 NEWNYM sent | Previous IP: 203.55.81.2
+2026-04-05 21:44:19 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:44:30 | INFO     | ✓ Circuit verified | Old: 203.55.81.2 → New: 45.84.107.222 [CLEAN]
+2026-04-05 21:44:30 | INFO     | ⏳ Post-rotation cooldown: 36.21s (Gaussian: 30-60s)
+2026-04-05 21:45:06 | ERROR    | ✗ All retries exhausted for 'what is financial integration germany'
+2026-04-05 21:45:06 | INFO     | ⏳ Inter-keyword: 25.07s (Gaussian: 20-45s)
+2026-04-05 21:45:31 | INFO     | 🔄 [4/50] 'postbank expat for expats'
+2026-04-05 21:45:31 | DEBUG    | 🔍 Searching: 'postbank expat for expats'
+2026-04-05 21:45:31 | DEBUG    | → [16] GET https://www.google.com/search?q=postbank%20expat%20for%20exp...
+2026-04-05 21:45:31 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating safari16_0 is not supported
+2026-04-05 21:45:31 | WARNING  | ✗ Request failed (attempt 1)
+2026-04-05 21:45:31 | INFO     | ⏳ Retry backoff: 22.64s (Gaussian: 15-30s)
+2026-04-05 21:45:54 | DEBUG    | → [17] GET https://www.google.com/search?q=postbank%20expat%20for%20exp...
+2026-04-05 21:45:55 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:45:56 | INFO     | 🔄 NEWNYM sent | Previous IP: 45.84.107.222
+2026-04-05 21:45:56 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:46:06 | INFO     | ✓ Circuit verified | Old: 45.84.107.222 → New: 45.154.98.19 [CLEAN]
+2026-04-05 21:46:06 | INFO     | ⏳ Post-rotation cooldown: 39.16s (Gaussian: 30-60s)
+2026-04-05 21:46:45 | DEBUG    | → [18] GET https://www.google.com/search?q=postbank%20expat%20for%20exp...
+2026-04-05 21:46:45 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating chrome115 is not supported
+2026-04-05 21:46:45 | WARNING  | ✗ Request failed (attempt 3)
+2026-04-05 21:46:45 | INFO     | ⏳ Retry backoff: 27.51s (Gaussian: 15-30s)
+2026-04-05 21:47:13 | DEBUG    | → [19] GET https://www.google.com/search?q=postbank%20expat%20for%20exp...
+2026-04-05 21:47:14 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:47:14 | INFO     | 🔄 NEWNYM sent | Previous IP: 37.114.50.18
+2026-04-05 21:47:14 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:47:25 | INFO     | ✓ Circuit verified | Old: 37.114.50.18 → New: 109.70.100.1 [CLEAN]
+2026-04-05 21:47:25 | INFO     | ⏳ Post-rotation cooldown: 34.7s (Gaussian: 30-60s)
+2026-04-05 21:48:00 | DEBUG    | → [20] GET https://www.google.com/search?q=postbank%20expat%20for%20exp...
+2026-04-05 21:48:00 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:48:01 | INFO     | 🔄 NEWNYM sent | Previous IP: 109.70.100.1
+2026-04-05 21:48:01 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:48:12 | INFO     | ✓ Circuit verified | Old: 109.70.100.1 → New: 45.84.107.174 [CLEAN]
+2026-04-05 21:48:12 | INFO     | ⏳ Post-rotation cooldown: 38.51s (Gaussian: 30-60s)
+2026-04-05 21:48:51 | ERROR    | ✗ All retries exhausted for 'postbank expat for expats'
+2026-04-05 21:48:51 | INFO     | ⏳ Inter-keyword: 25.57s (Gaussian: 20-45s)
+2026-04-05 21:49:16 | INFO     | 🔄 [5/50] 'schufa bonität'
+2026-04-05 21:49:16 | DEBUG    | 🔍 Searching: 'schufa bonität'
+2026-04-05 21:49:16 | DEBUG    | → [21] GET https://www.google.com/search?q=schufa%20bonit%C3%A4t%20site...
+2026-04-05 21:49:18 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:49:19 | INFO     | 🔄 NEWNYM sent | Previous IP: 203.55.81.1
+2026-04-05 21:49:19 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:49:30 | INFO     | ✓ Circuit verified | Old: 203.55.81.1 → New: 109.70.100.9 [CLEAN]
+2026-04-05 21:49:30 | INFO     | ⏳ Post-rotation cooldown: 37.39s (Gaussian: 30-60s)
+2026-04-05 21:50:07 | DEBUG    | → [22] GET https://www.google.com/search?q=schufa%20bonit%C3%A4t%20site...
+2026-04-05 21:50:08 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:50:09 | INFO     | 🔄 NEWNYM sent | Previous IP: 88.80.26.3
+2026-04-05 21:50:09 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:50:20 | WARNING  | ⚠️  New IP 192.42.116.49 flagged by heuristic blacklist
+2026-04-05 21:50:20 | WARNING  | ⚠️  Circuit attempt 1/3 failed, retrying...
+2026-04-05 21:50:26 | WARNING  | ⚠️  New IP 192.42.116.49 flagged by heuristic blacklist
+2026-04-05 21:50:26 | WARNING  | ⚠️  Circuit attempt 2/3 failed, retrying...
+2026-04-05 21:50:32 | WARNING  | ⚠️  New IP 192.42.116.49 flagged by heuristic blacklist
+2026-04-05 21:50:32 | WARNING  | ⚠️  Circuit attempt 3/3 failed, retrying...
+2026-04-05 21:50:38 | ERROR    | ✗ Circuit verification failed after 3 attempts
+2026-04-05 21:50:38 | ERROR    | ✗ Circuit rotation failed
+2026-04-05 21:50:38 | ERROR    | ✗ All retries exhausted for 'schufa bonität'
+2026-04-05 21:50:38 | INFO     | ⏳ Inter-keyword: 38.2s (Gaussian: 20-45s)
+2026-04-05 21:51:17 | INFO     | 🔄 [6/50] 'postbank expat'
+2026-04-05 21:51:17 | DEBUG    | 🔍 Searching: 'postbank expat'
+2026-04-05 21:51:17 | DEBUG    | → [23] GET https://www.google.com/search?q=postbank%20expat%20site%3Aqu...
+2026-04-05 21:51:17 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating safari16_0 is not supported
+2026-04-05 21:51:17 | WARNING  | ✗ Request failed (attempt 1)
+2026-04-05 21:51:17 | INFO     | ⏳ Retry backoff: 18.69s (Gaussian: 15-30s)
+2026-04-05 21:51:35 | DEBUG    | ⏳ Adaptive delay: 34.0s
+2026-04-05 21:52:09 | DEBUG    | → [24] GET https://www.google.com/search?q=postbank%20expat%20site%3Aqu...
+2026-04-05 21:52:09 | WARNING  | ⚠️  Request failed: ImpersonateError: Impersonating chrome115 is not supported
+2026-04-05 21:52:09 | WARNING  | ✗ Request failed (attempt 2)
+2026-04-05 21:52:09 | INFO     | ⏳ Retry backoff: 23.0s (Gaussian: 15-30s)
+2026-04-05 21:52:32 | DEBUG    | → [25] GET https://www.google.com/search?q=postbank%20expat%20site%3Aqu...
+2026-04-05 21:52:34 | WARNING  | ⚠️  Block detected: HTTP 429 Rate Limit | Rotating circuit...
+2026-04-05 21:52:35 | INFO     | 🔄 NEWNYM sent | Previous IP: 192.42.116.49
+2026-04-05 21:52:35 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 21:52:46 | INFO     | ✓ Circuit verified | Old: 192.42.116.49 → New: 45.84.107.74 [CLEAN]
+2026-04-05 21:52:46 | INFO     | ⏳ Post-rotation cooldown: 41.45s (Gaussian: 30-60s)
+2026-04-05 21:52:54 | INFO     | ⚠️  Interrupt received
+2026-04-05 21:52:54 | INFO     | 😴 Batch complete | Resting 5.5min before next batch...
+2026-04-05 21:52:54 | INFO     | 🔄 Rotating IP between batches...
+2026-04-05 21:52:55 | INFO     | 🔄 NEWNYM sent | Previous IP: 45.84.107.74
+2026-04-05 21:52:55 | INFO     | ⏳ Rebuilding circuit (10s)...
+2026-04-05 22:14:02 | INFO     | 🚀 Quora Worker v7.3 'CurlError Patch' initializing...
+2026-04-05 22:14:02 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-05 22:14:02 | DEBUG    | ✓ Control:9051 reachable
+2026-04-05 22:14:03 | INFO     | 🛡️  Tor operational | Exit IP: 109.70.100.11
+2026-04-05 22:14:03 | INFO     | 📊 Session: 5/50 today
+2026-04-05 22:14:03 | INFO     | 🔥 Warming up session...
+2026-04-05 22:14:20 | DEBUG    | ✓ Session warmup complete
+2026-04-05 22:14:20 | INFO     | 🔐 Stealth session: chrome110 | Referer enforced | Accept-Language enforced
+2026-04-05 22:14:20 | CRITICAL | 💥 Unhandled exception: name 'Progress' is not defined
+2026-04-05 22:19:27 | INFO     | 🚀 Quora Worker v7.4 'Rich Import Fix' initializing...
+2026-04-05 22:19:27 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-05 22:19:27 | DEBUG    | ✓ Control:9051 reachable
+2026-04-05 22:19:28 | INFO     | 🛡️  Tor operational | Exit IP: 109.70.100.11
+2026-04-05 22:19:28 | INFO     | 📊 Session: 5/50 today
+2026-04-05 22:19:28 | INFO     | 🔥 Warming up session...
+2026-04-05 22:19:39 | DEBUG    | ✓ Session warmup complete
+2026-04-05 22:19:39 | INFO     | 🔐 Stealth session: chrome110 | Referer enforced | Accept-Language enforced
+2026-04-05 22:19:39 | INFO     | 
+📦 Batch #1 | 7 keywords
+2026-04-05 22:19:39 | INFO     | 🔄 [6/50] 'schufa kreditwürdigkeit for expats'
+2026-04-05 22:19:39 | DEBUG    | 🔍 Searching: 'schufa kreditwürdigkeit for expats'
+2026-04-05 22:19:39 | DEBUG    | → [1] GET https://www.google.com/search?q=schufa%20kreditw%C3%BCrdigke...
+2026-04-05 22:19:41 | WARNING  | ⚠️  Block: HTTP 429 Rate Limit | Rotating...
+2026-04-05 22:19:42 | INFO     | 🔄 NEWNYM sent | Previous: 109.70.100.11
+2026-04-05 22:19:42 | INFO     | ⏳ Post-rotation cooldown: 60.77s (Gaussian 45-90)
+2026-04-05 22:20:44 | INFO     | ✓ Circuit verified: 109.70.100.11 → 192.42.116.144 [CLEAN]
+2026-04-05 22:20:44 | INFO     | ⏳ Post-rotation cooldown: 82.96s
+2026-04-05 22:22:07 | DEBUG    | → [2] GET https://www.google.com/search?q=schufa%20kreditw%C3%BCrdigke...
+2026-04-05 22:22:08 | WARNING  | ⚠️  Block: HTTP 429 Rate Limit | Rotating...
+2026-04-05 22:22:09 | INFO     | 🔄 NEWNYM sent | Previous: 192.42.116.144
+2026-04-05 22:22:09 | INFO     | ⏳ Post-rotation cooldown: 87.31s (Gaussian 45-90)
+2026-04-05 22:23:37 | INFO     | ✓ Circuit verified: 192.42.116.144 → 109.70.100.11 [CLEAN]
+2026-04-05 22:23:37 | INFO     | ⏳ Post-rotation cooldown: 71.36s
+2026-04-05 22:24:49 | DEBUG    | → [3] GET https://www.google.com/search?q=schufa%20kreditw%C3%BCrdigke...
+2026-04-05 22:24:50 | WARNING  | ⚠️  Block: HTTP 429 Rate Limit | Rotating...
+2026-04-05 22:24:50 | INFO     | 🔄 NEWNYM sent | Previous: 109.70.100.11
+2026-04-05 22:24:50 | INFO     | ⏳ Post-rotation cooldown: 75.9s (Gaussian 45-90)
+2026-04-05 22:26:07 | INFO     | ✓ Circuit verified: 109.70.100.11 → 185.67.82.114 [CLEAN]
+2026-04-05 22:26:07 | INFO     | ⏳ Post-rotation cooldown: 47.36s
+2026-04-05 22:26:54 | DEBUG    | → [4] GET https://www.google.com/search?q=schufa%20kreditw%C3%BCrdigke...
+2026-04-05 22:26:56 | WARNING  | ⚠️  Block: HTTP 429 Rate Limit | Rotating...
+2026-04-05 22:26:57 | INFO     | 🔄 NEWNYM sent | Previous: 185.67.82.114
+2026-04-05 22:26:57 | INFO     | ⏳ Post-rotation cooldown: 81.81s (Gaussian 45-90)
+2026-04-05 22:28:20 | INFO     | ✓ Circuit verified: 185.67.82.114 → 192.42.116.52 [CLEAN]
+2026-04-05 22:28:20 | INFO     | ⏳ Post-rotation cooldown: 88.12s
+2026-04-05 22:29:48 | DEBUG    | → [5] GET https://www.google.com/search?q=schufa%20kreditw%C3%BCrdigke...
+2026-04-05 22:29:49 | WARNING  | ⚠️  Block: HTTP 429 Rate Limit | Rotating...
+2026-04-05 22:29:50 | INFO     | 🔄 NEWNYM sent | Previous: 107.189.8.16
+2026-04-05 22:29:50 | INFO     | ⏳ Post-rotation cooldown: 62.7s (Gaussian 45-90)
+2026-04-05 22:30:53 | WARNING  | ⚠️  New IP flagged: 185.220.101.10
+2026-04-05 22:30:53 | WARNING  | ⚠️  Circuit verify attempt 1/3 failed
+2026-04-05 22:30:58 | WARNING  | ⚠️  New IP flagged: 185.220.101.10
+2026-04-05 22:30:58 | WARNING  | ⚠️  Circuit verify attempt 2/3 failed
+2026-04-05 22:31:04 | WARNING  | ⚠️  New IP flagged: 185.220.101.10
+2026-04-05 22:31:04 | WARNING  | ⚠️  Circuit verify attempt 3/3 failed
+2026-04-05 22:31:09 | ERROR    | ✗ Circuit verification failed after 3 attempts
+2026-04-05 22:31:09 | ERROR    | ✗ Circuit rotation failed
+2026-04-05 22:31:09 | ERROR    | ✗ All retries exhausted for 'schufa kreditwürdigkeit for expats'
+2026-04-05 22:31:09 | INFO     | ⏳ Inter-keyword: 25.51s
+2026-04-05 22:31:35 | INFO     | 🔄 [7/50] 'ausländer konto for expats'
+2026-04-05 22:31:35 | DEBUG    | 🔍 Searching: 'ausländer konto for expats'
+2026-04-05 22:31:35 | DEBUG    | → [6] GET https://www.google.com/search?q=ausl%C3%A4nder%20konto%20for...
+2026-04-05 22:31:36 | WARNING  | ⚠️  Block: HTTP 429 Rate Limit | Rotating...
+2026-04-05 22:31:36 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.10
+2026-04-05 22:31:36 | INFO     | ⏳ Post-rotation cooldown: 38.17s (Gaussian 45-90)
+2026-04-05 22:32:16 | INFO     | ✓ Circuit verified: 185.220.101.10 → 107.189.8.16 [CLEAN]
+2026-04-05 22:32:16 | INFO     | ⏳ Post-rotation cooldown: 50.94s
+2026-04-05 22:33:07 | DEBUG    | → [7] GET https://www.google.com/search?q=ausl%C3%A4nder%20konto%20for...
+2026-04-05 22:33:07 | WARNING  | ⚠️  Block: HTTP 429 Rate Limit | Rotating...
+2026-04-05 22:33:08 | INFO     | 🔄 NEWNYM sent | Previous: 107.189.8.16
+2026-04-05 22:33:08 | INFO     | ⏳ Post-rotation cooldown: 51.69s (Gaussian 45-90)
+2026-04-05 22:34:00 | INFO     | ✓ Circuit verified: 107.189.8.16 → 192.42.116.97 [CLEAN]
+2026-04-05 22:34:00 | INFO     | ⏳ Post-rotation cooldown: 86.42s
+2026-04-05 22:34:43 | INFO     | ⚠️  Interrupt received
+2026-04-05 22:34:43 | INFO     | 😴 Batch complete | Rest 6.0min
+2026-04-05 22:34:43 | INFO     | 🔄 Rotating IP between batches...
+2026-04-05 22:34:44 | INFO     | 🔄 NEWNYM sent | Previous: unknown
+2026-04-05 22:34:44 | INFO     | ⏳ Post-rotation cooldown: 70.35s (Gaussian 45-90)
+2026-04-05 22:40:10 | INFO     | 🚀 Quora Worker v7.5 'DuckDuckGo Fallback' initializing...
+2026-04-05 22:40:10 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-05 22:40:10 | DEBUG    | ✓ Control:9051 reachable
+2026-04-05 22:40:11 | INFO     | 🛡️  Tor operational | Exit IP: 185.247.184.105
+2026-04-05 22:40:11 | INFO     | 📊 Session: 6/50 today
+2026-04-05 22:40:11 | INFO     | 🔥 Warming up session...
+2026-04-05 22:40:32 | DEBUG    | ✓ Session warmup complete
+2026-04-05 22:40:32 | INFO     | 🔐 Stealth session: chrome110 | Referer enforced | Random Accept-Language (German)
+2026-04-05 22:40:32 | INFO     | 
+📦 Batch #1 | 7 keywords
+2026-04-05 22:40:32 | INFO     | 🔄 [7/50] 'what is schufa eintrag'
+2026-04-05 22:40:32 | DEBUG    | 🔍 Google search: 'what is schufa eintrag'
+2026-04-05 22:40:32 | DEBUG    | → [1] GET https://www.google.com/search?q=what%20is%20schufa%20eintrag...
+2026-04-05 22:40:34 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa eintrag' → falling back to DuckDuckGo
+2026-04-05 22:40:34 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa eintrag'
+2026-04-05 22:41:39 | DEBUG    | → [2] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20ein...
+2026-04-05 22:41:41 | ERROR    | ✗ Error on 'what is schufa eintrag': name 'BeautifulSoup' is not defined
+2026-04-05 22:41:41 | INFO     | ⏳ Error recovery: 36.76s
+2026-04-05 22:42:18 | INFO     | 🔄 [7/50] 'expat banking germany for expats'
+2026-04-05 22:42:18 | DEBUG    | 🔍 Google search: 'expat banking germany for expats'
+2026-04-05 22:42:46 | DEBUG    | → [3] GET https://www.google.com/search?q=expat%20banking%20germany%20...
+2026-04-05 22:42:48 | WARNING  | ⚠️  Google 429 Rate Limit for 'expat banking germany for expats' → falling back to DuckDuckGo
+2026-04-05 22:42:48 | INFO     | 🦆 Switching to DuckDuckGo for 'expat banking germany for expats'
+2026-04-05 22:43:52 | INFO     | ⚠️  Interrupt received
+2026-04-05 22:43:52 | INFO     | 😴 Batch complete | Rest 4.0min
+2026-04-05 22:43:52 | INFO     | 🔄 Rotating IP between batches...
+2026-04-05 22:43:53 | INFO     | 🔄 NEWNYM sent | Previous: 185.247.184.105
+2026-04-05 22:43:53 | INFO     | ⏳ Post-rotation cooldown: 37.19s (Gaussian 45-90)
+2026-04-05 22:47:16 | INFO     | 🚀 Quora Worker v7.6 'BeautifulSoup Import Fix' initializing...
+2026-04-05 22:47:16 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-05 22:47:16 | DEBUG    | ✓ Control:9051 reachable
+2026-04-05 22:47:18 | INFO     | 🛡️  Tor operational | Exit IP: 185.241.208.115
+2026-04-05 22:47:18 | INFO     | 📊 Session: 6/50 today
+2026-04-05 22:47:18 | INFO     | 🔥 Warming up session...
+2026-04-05 22:47:33 | DEBUG    | ✓ Session warmup complete
+2026-04-05 22:47:33 | INFO     | 🔐 Stealth session: chrome110 | Referer enforced | Random Accept-Language (German)
+2026-04-05 22:47:33 | INFO     | 
+📦 Batch #1 | 7 keywords
+2026-04-05 22:47:33 | INFO     | 🔄 [7/50] 'schufa stuttgart'
+2026-04-05 22:47:33 | DEBUG    | 🔍 Google search: 'schufa stuttgart'
+2026-04-05 22:47:33 | DEBUG    | → [1] GET https://www.google.com/search?q=schufa%20stuttgart%20site%3A...
+2026-04-05 22:47:34 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa stuttgart' → falling back to DuckDuckGo
+2026-04-05 22:47:34 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa stuttgart'
+2026-04-05 22:49:06 | DEBUG    | → [2] GET https://html.duckduckgo.com/html/?q=schufa%20stuttgart%20sit...
+2026-04-05 22:49:08 | INFO     | ✓ DuckDuckGo found 10 results for 'schufa stuttgart'
+2026-04-05 22:49:08 | INFO     | ⏳ Inter-keyword: 104.51s
+2026-04-05 22:50:52 | INFO     | 🔄 [8/50] 'schufa international'
+2026-04-05 22:50:52 | DEBUG    | 🔍 Google search: 'schufa international'
+2026-04-05 22:50:52 | DEBUG    | → [3] GET https://www.google.com/search?q=schufa%20international%20sit...
+2026-04-05 22:50:53 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa international' → falling back to DuckDuckGo
+2026-04-05 22:50:53 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa international'
+2026-04-05 22:51:52 | DEBUG    | → [4] GET https://html.duckduckgo.com/html/?q=schufa%20international%2...
+2026-04-05 22:51:53 | INFO     | ✓ DuckDuckGo found 10 results for 'schufa international'
+2026-04-05 22:51:53 | INFO     | ⏳ Inter-keyword: 74.75s
+2026-04-05 22:53:08 | INFO     | 🔄 [9/50] 'schufa auskunft'
+2026-04-05 22:53:08 | DEBUG    | 🔍 Google search: 'schufa auskunft'
+2026-04-05 22:53:08 | DEBUG    | → [5] GET https://www.google.com/search?q=schufa%20auskunft%20site%3Aq...
+2026-04-05 22:53:09 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa auskunft' → falling back to DuckDuckGo
+2026-04-05 22:53:09 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa auskunft'
+2026-04-05 22:54:42 | DEBUG    | → [6] GET https://html.duckduckgo.com/html/?q=schufa%20auskunft%20site...
+2026-04-05 22:54:43 | INFO     | ✓ DuckDuckGo found 9 results for 'schufa auskunft'
+2026-04-05 22:54:43 | INFO     | ⏳ Inter-keyword: 88.53s
+2026-04-05 22:56:12 | INFO     | 🔄 [10/50] 'how to schufa löschen'
+2026-04-05 22:56:12 | DEBUG    | 🔍 Google search: 'how to schufa löschen'
+2026-04-05 22:56:12 | DEBUG    | → [7] GET https://www.google.com/search?q=how%20to%20schufa%20l%C3%B6s...
+2026-04-05 22:56:14 | WARNING  | ⚠️  Google 429 Rate Limit for 'how to schufa löschen' → falling back to DuckDuckGo
+2026-04-05 22:56:14 | INFO     | 🦆 Switching to DuckDuckGo for 'how to schufa löschen'
+2026-04-05 22:57:41 | DEBUG    | → [8] GET https://html.duckduckgo.com/html/?q=how%20to%20schufa%20l%C3...
+2026-04-05 22:57:43 | INFO     | ✓ DuckDuckGo found 10 results for 'how to schufa löschen'
+2026-04-05 22:57:43 | INFO     | ⏳ Inter-keyword: 74.01s
+2026-04-05 22:58:57 | INFO     | 🔄 [11/50] 'how to postbank expat'
+2026-04-05 22:58:57 | DEBUG    | 🔍 Google search: 'how to postbank expat'
+2026-04-05 22:58:57 | DEBUG    | → [9] GET https://www.google.com/search?q=how%20to%20postbank%20expat%...
+2026-04-05 22:58:58 | WARNING  | ⚠️  Google 429 Rate Limit for 'how to postbank expat' → falling back to DuckDuckGo
+2026-04-05 22:58:58 | INFO     | 🦆 Switching to DuckDuckGo for 'how to postbank expat'
+2026-04-05 23:00:01 | DEBUG    | → [10] GET https://html.duckduckgo.com/html/?q=how%20to%20postbank%20ex...
+2026-04-05 23:00:02 | INFO     | ✓ DuckDuckGo found 9 results for 'how to postbank expat'
+2026-04-05 23:00:02 | INFO     | ⏳ Inter-keyword: 112.11s
+2026-04-05 23:01:54 | INFO     | 🔄 [12/50] 'schufa for us citizens'
+2026-04-05 23:01:54 | DEBUG    | 🔍 Google search: 'schufa for us citizens'
+2026-04-05 23:01:54 | DEBUG    | → [11] GET https://www.google.com/search?q=schufa%20for%20us%20citizens...
+2026-04-05 23:01:55 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa for us citizens' → falling back to DuckDuckGo
+2026-04-05 23:01:55 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa for us citizens'
+2026-04-05 23:03:21 | DEBUG    | → [12] GET https://html.duckduckgo.com/html/?q=schufa%20for%20us%20citi...
+2026-04-05 23:03:22 | INFO     | ✓ DuckDuckGo found 1 results for 'schufa for us citizens'
+2026-04-05 23:03:22 | INFO     | ⏳ Inter-keyword: 62.39s
+2026-04-05 23:04:25 | INFO     | 🔄 [13/50] 'what is schufa leipzig'
+2026-04-05 23:04:25 | DEBUG    | 🔍 Google search: 'what is schufa leipzig'
+2026-04-05 23:04:25 | DEBUG    | → [13] GET https://www.google.com/search?q=what%20is%20schufa%20leipzig...
+2026-04-05 23:04:27 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa leipzig' → falling back to DuckDuckGo
+2026-04-05 23:04:27 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa leipzig'
+2026-04-05 23:05:38 | DEBUG    | → [14] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20lei...
+2026-04-05 23:05:39 | INFO     | ✓ DuckDuckGo found 9 results for 'what is schufa leipzig'
+2026-04-05 23:05:39 | INFO     | 😴 Batch complete | Rest 4.6min
+2026-04-05 23:10:16 | INFO     | 
+📦 Batch #2 | 7 keywords
+2026-04-05 23:10:16 | INFO     | 🔄 [14/50] 'schufa kreditwürdigkeit'
+2026-04-05 23:10:16 | DEBUG    | 🔍 Google search: 'schufa kreditwürdigkeit'
+2026-04-05 23:10:16 | DEBUG    | → [15] GET https://www.google.com/search?q=schufa%20kreditw%C3%BCrdigke...
+2026-04-05 23:10:17 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa kreditwürdigkeit' → falling back to DuckDuckGo
+2026-04-05 23:10:17 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa kreditwürdigkeit'
+2026-04-05 23:11:36 | DEBUG    | → [16] GET https://html.duckduckgo.com/html/?q=schufa%20kreditw%C3%BCrd...
+2026-04-05 23:11:38 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'schufa kreditwürdigkeit'
+2026-04-05 23:11:38 | INFO     | ⏳ Inter-keyword: 67.67s
+2026-04-05 23:12:45 | INFO     | 🔄 [15/50] 'postbank expat'
+2026-04-05 23:12:45 | DEBUG    | 🔍 Google search: 'postbank expat'
+2026-04-05 23:12:45 | DEBUG    | → [17] GET https://www.google.com/search?q=postbank%20expat%20site%3Aqu...
+2026-04-05 23:12:47 | WARNING  | ⚠️  Google 429 Rate Limit for 'postbank expat' → falling back to DuckDuckGo
+2026-04-05 23:12:47 | INFO     | 🦆 Switching to DuckDuckGo for 'postbank expat'
+2026-04-05 23:14:23 | DEBUG    | → [18] GET https://html.duckduckgo.com/html/?q=postbank%20expat%20site%...
+2026-04-05 23:14:25 | INFO     | ✓ DuckDuckGo found 10 results for 'postbank expat'
+2026-04-05 23:14:25 | INFO     | ⏳ Inter-keyword: 74.99s
+2026-04-05 23:15:40 | INFO     | 🔄 [16/50] 'schufa application process for expats'
+2026-04-05 23:15:40 | DEBUG    | 🔍 Google search: 'schufa application process for expats'
+2026-04-05 23:15:40 | DEBUG    | → [19] GET https://www.google.com/search?q=schufa%20application%20proce...
+2026-04-05 23:15:41 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa application process for expats' → falling back to DuckDuckGo
+2026-04-05 23:15:41 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa application process for expats'
+2026-04-05 23:17:01 | DEBUG    | → [20] GET https://html.duckduckgo.com/html/?q=schufa%20application%20p...
+2026-04-05 23:17:02 | INFO     | ✓ DuckDuckGo found 1 results for 'schufa application process for expats'
+2026-04-05 23:17:02 | INFO     | ⏳ Inter-keyword: 115.87s
+2026-04-05 23:18:58 | INFO     | 🔄 [17/50] 'what is schufa industry score'
+2026-04-05 23:18:58 | DEBUG    | 🔍 Google search: 'what is schufa industry score'
+2026-04-05 23:18:58 | DEBUG    | → [21] GET https://www.google.com/search?q=what%20is%20schufa%20industr...
+2026-04-05 23:18:59 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa industry score' → falling back to DuckDuckGo
+2026-04-05 23:18:59 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa industry score'
+2026-04-05 23:20:39 | DEBUG    | → [22] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20ind...
+2026-04-05 23:20:41 | INFO     | ✓ DuckDuckGo found 10 results for 'what is schufa industry score'
+2026-04-05 23:20:41 | INFO     | ⏳ Inter-keyword: 74.56s
+2026-04-05 23:21:55 | INFO     | 🔄 [18/50] 'n26 schufa check'
+2026-04-05 23:21:55 | DEBUG    | 🔍 Google search: 'n26 schufa check'
+2026-04-05 23:21:55 | DEBUG    | → [23] GET https://www.google.com/search?q=n26%20schufa%20check%20site%...
+2026-04-05 23:21:57 | WARNING  | ⚠️  Google 429 Rate Limit for 'n26 schufa check' → falling back to DuckDuckGo
+2026-04-05 23:21:57 | INFO     | 🦆 Switching to DuckDuckGo for 'n26 schufa check'
+2026-04-05 23:23:11 | DEBUG    | → [24] GET https://html.duckduckgo.com/html/?q=n26%20schufa%20check%20s...
+2026-04-05 23:23:13 | INFO     | ✓ DuckDuckGo found 9 results for 'n26 schufa check'
+2026-04-05 23:23:13 | INFO     | ⏳ Inter-keyword: 107.63s
+2026-04-05 23:25:01 | INFO     | 🔄 [19/50] 'revolut germany schufa for expats'
+2026-04-05 23:25:01 | DEBUG    | 🔍 Google search: 'revolut germany schufa for expats'
+2026-04-05 23:25:01 | DEBUG    | → [25] GET https://www.google.com/search?q=revolut%20germany%20schufa%2...
+2026-04-05 23:25:03 | WARNING  | ⚠️  Google 429 Rate Limit for 'revolut germany schufa for expats' → falling back to DuckDuckGo
+2026-04-05 23:25:03 | INFO     | 🦆 Switching to DuckDuckGo for 'revolut germany schufa for expats'
+2026-04-05 23:26:31 | DEBUG    | → [26] GET https://html.duckduckgo.com/html/?q=revolut%20germany%20schu...
+2026-04-05 23:26:32 | INFO     | ✓ DuckDuckGo found 3 results for 'revolut germany schufa for expats'
+2026-04-05 23:26:32 | INFO     | ⏳ Inter-keyword: 112.13s
+2026-04-05 23:28:24 | INFO     | 🔄 [20/50] 'how to schufa for british expats'
+2026-04-05 23:28:24 | DEBUG    | 🔍 Google search: 'how to schufa for british expats'
+2026-04-05 23:28:24 | DEBUG    | → [27] GET https://www.google.com/search?q=how%20to%20schufa%20for%20br...
+2026-04-05 23:28:26 | DEBUG    | ⚪ No Quora results from Google for 'how to schufa for british expats'
+2026-04-05 23:28:26 | INFO     | 😴 Batch complete | Rest 3.0min
+2026-04-05 23:28:26 | INFO     | 🔄 Rotating IP between batches...
+2026-04-05 23:28:29 | INFO     | 🔄 NEWNYM sent | Previous: 23.129.64.224
+2026-04-05 23:28:29 | INFO     | ⏳ Post-rotation cooldown: 65.84s (Gaussian 45-90)
+2026-04-05 23:29:36 | INFO     | ✓ Circuit verified: 23.129.64.224 → 80.94.92.99 [CLEAN]
+2026-04-05 23:32:34 | INFO     | 
+📦 Batch #3 | 7 keywords
+2026-04-05 23:32:34 | INFO     | 🔄 [21/50] 'schufa leipzig for expats'
+2026-04-05 23:32:34 | DEBUG    | 🔍 Google search: 'schufa leipzig for expats'
+2026-04-05 23:32:34 | DEBUG    | → [28] GET https://www.google.com/search?q=schufa%20leipzig%20for%20exp...
+2026-04-05 23:32:36 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa leipzig for expats' → falling back to DuckDuckGo
+2026-04-05 23:32:36 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa leipzig for expats'
+2026-04-05 23:33:38 | DEBUG    | → [29] GET https://html.duckduckgo.com/html/?q=schufa%20leipzig%20for%2...
+2026-04-05 23:33:40 | INFO     | ✓ DuckDuckGo found 3 results for 'schufa leipzig for expats'
+2026-04-05 23:33:40 | INFO     | ⏳ Inter-keyword: 77.07s
+2026-04-05 23:34:57 | INFO     | 🔄 [22/50] 'what is schufa löschen'
+2026-04-05 23:34:57 | DEBUG    | 🔍 Google search: 'what is schufa löschen'
+2026-04-05 23:34:57 | DEBUG    | → [30] GET https://www.google.com/search?q=what%20is%20schufa%20l%C3%B6...
+2026-04-05 23:34:59 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa löschen' → falling back to DuckDuckGo
+2026-04-05 23:34:59 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa löschen'
+2026-04-05 23:35:59 | DEBUG    | → [31] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20l%C...
+2026-04-05 23:36:01 | INFO     | ✓ DuckDuckGo found 10 results for 'what is schufa löschen'
+2026-04-05 23:36:01 | INFO     | ⏳ Inter-keyword: 100.81s
+2026-04-05 23:37:42 | INFO     | 🔄 [23/50] 'schufa kreditwürdigkeit for expats'
+2026-04-05 23:37:42 | DEBUG    | 🔍 Google search: 'schufa kreditwürdigkeit for expats'
+2026-04-05 23:37:42 | DEBUG    | → [32] GET https://www.google.com/search?q=schufa%20kreditw%C3%BCrdigke...
+2026-04-05 23:37:44 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa kreditwürdigkeit for expats' → falling back to DuckDuckGo
+2026-04-05 23:37:44 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa kreditwürdigkeit for expats'
+2026-04-05 23:39:25 | DEBUG    | → [33] GET https://html.duckduckgo.com/html/?q=schufa%20kreditw%C3%BCrd...
+2026-04-05 23:39:26 | INFO     | ✓ DuckDuckGo found 10 results for 'schufa kreditwürdigkeit for expats'
+2026-04-05 23:39:27 | INFO     | ⏳ Inter-keyword: 100.5s
+2026-04-05 23:41:07 | INFO     | 🔄 [24/50] 'financial integration germany for expats'
+2026-04-05 23:41:07 | DEBUG    | 🔍 Google search: 'financial integration germany for expats'
+2026-04-05 23:41:07 | DEBUG    | → [34] GET https://www.google.com/search?q=financial%20integration%20ge...
+2026-04-05 23:41:08 | WARNING  | ⚠️  Google 429 Rate Limit for 'financial integration germany for expats' → falling back to DuckDuckGo
+2026-04-05 23:41:08 | INFO     | 🦆 Switching to DuckDuckGo for 'financial integration germany for expats'
+2026-04-05 23:42:12 | DEBUG    | → [35] GET https://html.duckduckgo.com/html/?q=financial%20integration%...
+2026-04-05 23:42:13 | INFO     | ✓ DuckDuckGo found 2 results for 'financial integration germany for expats'
+2026-04-05 23:42:13 | INFO     | ⏳ Inter-keyword: 72.89s
+2026-04-05 23:43:26 | INFO     | 🔄 [25/50] 'schufa for foreigners'
+2026-04-05 23:43:26 | DEBUG    | 🔍 Google search: 'schufa for foreigners'
+2026-04-05 23:43:26 | DEBUG    | → [36] GET https://www.google.com/search?q=schufa%20for%20foreigners%20...
+2026-04-05 23:43:27 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa for foreigners' → falling back to DuckDuckGo
+2026-04-05 23:43:27 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa for foreigners'
+2026-04-05 23:44:51 | DEBUG    | → [37] GET https://html.duckduckgo.com/html/?q=schufa%20for%20foreigner...
+2026-04-05 23:44:52 | INFO     | ✓ DuckDuckGo found 10 results for 'schufa for foreigners'
+2026-04-05 23:44:52 | INFO     | ⏳ Inter-keyword: 77.35s
+2026-04-05 23:46:09 | INFO     | 🔄 [26/50] 'how to schufa vs credit karma'
+2026-04-05 23:46:09 | DEBUG    | 🔍 Google search: 'how to schufa vs credit karma'
+2026-04-05 23:46:09 | DEBUG    | → [38] GET https://www.google.com/search?q=how%20to%20schufa%20vs%20cre...
+2026-04-05 23:46:10 | WARNING  | ⚠️  Google 429 Rate Limit for 'how to schufa vs credit karma' → falling back to DuckDuckGo
+2026-04-05 23:46:10 | INFO     | 🦆 Switching to DuckDuckGo for 'how to schufa vs credit karma'
+2026-04-05 23:48:05 | DEBUG    | → [39] GET https://html.duckduckgo.com/html/?q=how%20to%20schufa%20vs%2...
+2026-04-05 23:48:07 | INFO     | ✓ DuckDuckGo found 10 results for 'how to schufa vs credit karma'
+2026-04-05 23:48:07 | INFO     | ⏳ Inter-keyword: 88.72s
+2026-04-05 23:49:36 | INFO     | 🔄 [27/50] 'konto eröffnen for expats'
+2026-04-05 23:49:36 | DEBUG    | 🔍 Google search: 'konto eröffnen for expats'
+2026-04-05 23:49:36 | DEBUG    | → [40] GET https://www.google.com/search?q=konto%20er%C3%B6ffnen%20for%...
+2026-04-05 23:49:37 | WARNING  | ⚠️  Google 429 Rate Limit for 'konto eröffnen for expats' → falling back to DuckDuckGo
+2026-04-05 23:49:37 | INFO     | 🦆 Switching to DuckDuckGo for 'konto eröffnen for expats'
+2026-04-05 23:51:31 | DEBUG    | → [41] GET https://html.duckduckgo.com/html/?q=konto%20er%C3%B6ffnen%20...
+2026-04-05 23:51:31 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'konto eröffnen for expats'
+2026-04-05 23:51:31 | INFO     | 😴 Batch complete | Rest 5.9min
+2026-04-05 23:51:31 | INFO     | 🔄 Rotating IP between batches...
+2026-04-05 23:51:32 | INFO     | 🔄 NEWNYM sent | Previous: 203.55.81.1
+2026-04-05 23:51:32 | INFO     | ⏳ Post-rotation cooldown: 58.16s (Gaussian 45-90)
+2026-04-05 23:52:31 | INFO     | ✓ Circuit verified: 203.55.81.1 → 45.138.16.69 [CLEAN]
+2026-04-05 23:58:28 | INFO     | 
+📦 Batch #4 | 7 keywords
+2026-04-05 23:58:28 | INFO     | 🔄 [28/50] 'schufa selbstauskunft'
+2026-04-05 23:58:28 | DEBUG    | 🔍 Google search: 'schufa selbstauskunft'
+2026-04-05 23:58:28 | DEBUG    | → [42] GET https://www.google.com/search?q=schufa%20selbstauskunft%20si...
+2026-04-05 23:58:30 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa selbstauskunft' → falling back to DuckDuckGo
+2026-04-05 23:58:30 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa selbstauskunft'
+2026-04-06 00:00:21 | DEBUG    | → [43] GET https://html.duckduckgo.com/html/?q=schufa%20selbstauskunft%...
+2026-04-06 00:00:22 | INFO     | ✓ DuckDuckGo found 10 results for 'schufa selbstauskunft'
+2026-04-06 00:00:22 | INFO     | ⏳ Inter-keyword: 115.06s
+2026-04-06 00:02:17 | INFO     | 🔄 [29/50] 'ing diba kredit'
+2026-04-06 00:02:17 | DEBUG    | 🔍 Google search: 'ing diba kredit'
+2026-04-06 00:02:17 | DEBUG    | → [44] GET https://www.google.com/search?q=ing%20diba%20kredit%20site%3...
+2026-04-06 00:02:18 | WARNING  | ⚠️  Google 429 Rate Limit for 'ing diba kredit' → falling back to DuckDuckGo
+2026-04-06 00:02:18 | INFO     | 🦆 Switching to DuckDuckGo for 'ing diba kredit'
+2026-04-06 00:03:51 | DEBUG    | → [45] GET https://html.duckduckgo.com/html/?q=ing%20diba%20kredit%20si...
+2026-04-06 00:03:55 | INFO     | ✓ DuckDuckGo found 10 results for 'ing diba kredit'
+2026-04-06 00:03:55 | INFO     | ⏳ Inter-keyword: 105.27s
+2026-04-06 00:05:40 | INFO     | 🔄 [30/50] 'schufa negativ for expats'
+2026-04-06 00:05:40 | DEBUG    | 🔍 Google search: 'schufa negativ for expats'
+2026-04-06 00:05:40 | DEBUG    | → [46] GET https://www.google.com/search?q=schufa%20negativ%20for%20exp...
+2026-04-06 00:05:41 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa negativ for expats' → falling back to DuckDuckGo
+2026-04-06 00:05:41 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa negativ for expats'
+2026-04-06 00:07:14 | DEBUG    | → [47] GET https://html.duckduckgo.com/html/?q=schufa%20negativ%20for%2...
+2026-04-06 00:07:15 | INFO     | ✓ DuckDuckGo found 10 results for 'schufa negativ for expats'
+2026-04-06 00:07:15 | INFO     | ⏳ Inter-keyword: 91.3s
+2026-04-06 00:08:47 | INFO     | 🔄 [31/50] 'what is german credit history'
+2026-04-06 00:08:47 | DEBUG    | 🔍 Google search: 'what is german credit history'
+2026-04-06 00:08:47 | DEBUG    | → [48] GET https://www.google.com/search?q=what%20is%20german%20credit%...
+2026-04-06 00:08:49 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is german credit history' → falling back to DuckDuckGo
+2026-04-06 00:08:49 | INFO     | 🦆 Switching to DuckDuckGo for 'what is german credit history'
+2026-04-06 00:10:25 | DEBUG    | → [49] GET https://html.duckduckgo.com/html/?q=what%20is%20german%20cre...
+2026-04-06 00:10:26 | INFO     | ✓ DuckDuckGo found 10 results for 'what is german credit history'
+2026-04-06 00:10:26 | INFO     | ⏳ Inter-keyword: 72.18s
+2026-04-06 00:11:39 | INFO     | 🔄 [32/50] 'schufa bonität for expats'
+2026-04-06 00:11:39 | DEBUG    | 🔍 Google search: 'schufa bonität for expats'
+2026-04-06 00:11:39 | DEBUG    | → [50] GET https://www.google.com/search?q=schufa%20bonit%C3%A4t%20for%...
+2026-04-06 00:11:40 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa bonität for expats' → falling back to DuckDuckGo
+2026-04-06 00:11:40 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa bonität for expats'
+2026-04-06 00:12:55 | DEBUG    | → [51] GET https://html.duckduckgo.com/html/?q=schufa%20bonit%C3%A4t%20...
+2026-04-06 00:12:56 | INFO     | ✓ DuckDuckGo found 8 results for 'schufa bonität for expats'
+2026-04-06 00:12:56 | INFO     | ⏳ Inter-keyword: 102.66s
+2026-04-06 00:14:39 | INFO     | 🔄 [33/50] 'schufa münchen'
+2026-04-06 00:14:39 | DEBUG    | 🔍 Google search: 'schufa münchen'
+2026-04-06 00:14:39 | DEBUG    | → [52] GET https://www.google.com/search?q=schufa%20m%C3%BCnchen%20site...
+2026-04-06 00:14:41 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa münchen' → falling back to DuckDuckGo
+2026-04-06 00:14:41 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa münchen'
+2026-04-06 00:15:57 | DEBUG    | → [53] GET https://html.duckduckgo.com/html/?q=schufa%20m%C3%BCnchen%20...
+2026-04-06 00:15:59 | INFO     | ✓ DuckDuckGo found 9 results for 'schufa münchen'
+2026-04-06 00:15:59 | INFO     | ⏳ Inter-keyword: 87.95s
+2026-04-06 00:17:26 | INFO     | 🔄 [34/50] 'schufa industry score for expats'
+2026-04-06 00:17:26 | DEBUG    | 🔍 Google search: 'schufa industry score for expats'
+2026-04-06 00:17:26 | DEBUG    | → [54] GET https://www.google.com/search?q=schufa%20industry%20score%20...
+2026-04-06 00:17:27 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa industry score for expats' → falling back to DuckDuckGo
+2026-04-06 00:17:27 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa industry score for expats'
+2026-04-06 00:19:05 | DEBUG    | → [55] GET https://html.duckduckgo.com/html/?q=schufa%20industry%20scor...
+2026-04-06 00:19:06 | INFO     | ✓ DuckDuckGo found 3 results for 'schufa industry score for expats'
+2026-04-06 00:19:06 | INFO     | 😴 Batch complete | Rest 3.3min
+2026-04-06 00:19:06 | INFO     | 🔄 Rotating IP between batches...
+2026-04-06 00:19:07 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.10
+2026-04-06 00:19:07 | INFO     | ⏳ Post-rotation cooldown: 65.08s (Gaussian 45-90)
+2026-04-06 00:20:13 | INFO     | ✓ Circuit verified: 185.220.101.10 → 109.70.100.1 [CLEAN]
+2026-04-06 00:23:30 | INFO     | 
+📦 Batch #5 | 7 keywords
+2026-04-06 00:23:30 | INFO     | 🔄 [35/50] 'how to commerzbank schufa'
+2026-04-06 00:23:30 | DEBUG    | 🔍 Google search: 'how to commerzbank schufa'
+2026-04-06 00:23:30 | DEBUG    | → [56] GET https://www.google.com/search?q=how%20to%20commerzbank%20sch...
+2026-04-06 00:23:31 | WARNING  | ⚠️  Google 429 Rate Limit for 'how to commerzbank schufa' → falling back to DuckDuckGo
+2026-04-06 00:23:31 | INFO     | 🦆 Switching to DuckDuckGo for 'how to commerzbank schufa'
+2026-04-06 00:24:46 | DEBUG    | → [57] GET https://html.duckduckgo.com/html/?q=how%20to%20commerzbank%2...
+2026-04-06 00:24:47 | INFO     | ✓ DuckDuckGo found 9 results for 'how to commerzbank schufa'
+2026-04-06 00:24:47 | INFO     | ⏳ Inter-keyword: 66.64s
+2026-04-06 00:25:54 | INFO     | 🔄 [36/50] 'schufa negativ'
+2026-04-06 00:25:54 | DEBUG    | 🔍 Google search: 'schufa negativ'
+2026-04-06 00:25:54 | DEBUG    | → [58] GET https://www.google.com/search?q=schufa%20negativ%20site%3Aqu...
+2026-04-06 00:25:55 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa negativ' → falling back to DuckDuckGo
+2026-04-06 00:25:55 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa negativ'
+2026-04-06 00:27:19 | DEBUG    | → [59] GET https://html.duckduckgo.com/html/?q=schufa%20negativ%20site%...
+2026-04-06 00:27:20 | INFO     | ✓ DuckDuckGo found 9 results for 'schufa negativ'
+2026-04-06 00:27:20 | INFO     | ⏳ Inter-keyword: 103.6s
+2026-04-06 00:29:04 | INFO     | 🔄 [37/50] 'what is schufa hamburg'
+2026-04-06 00:29:04 | DEBUG    | 🔍 Google search: 'what is schufa hamburg'
+2026-04-06 00:29:04 | DEBUG    | → [60] GET https://www.google.com/search?q=what%20is%20schufa%20hamburg...
+2026-04-06 00:29:05 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa hamburg' → falling back to DuckDuckGo
+2026-04-06 00:29:05 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa hamburg'
+2026-04-06 00:30:32 | DEBUG    | → [61] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20ham...
+2026-04-06 00:30:33 | INFO     | ✓ DuckDuckGo found 9 results for 'what is schufa hamburg'
+2026-04-06 00:30:33 | INFO     | ⏳ Inter-keyword: 115.72s
+2026-04-06 00:32:29 | INFO     | 🔄 [38/50] 'schufa abfrage'
+2026-04-06 00:32:29 | DEBUG    | 🔍 Google search: 'schufa abfrage'
+2026-04-06 00:32:29 | DEBUG    | → [62] GET https://www.google.com/search?q=schufa%20abfrage%20site%3Aqu...
+2026-04-06 00:32:30 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa abfrage' → falling back to DuckDuckGo
+2026-04-06 00:32:30 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa abfrage'
+2026-04-06 00:34:07 | DEBUG    | → [63] GET https://html.duckduckgo.com/html/?q=schufa%20abfrage%20site%...
+2026-04-06 00:34:08 | INFO     | ✓ DuckDuckGo found 10 results for 'schufa abfrage'
+2026-04-06 00:34:08 | INFO     | ⏳ Inter-keyword: 105.95s
+2026-04-06 00:35:54 | INFO     | 🔄 [39/50] 'expat banking germany'
+2026-04-06 00:35:54 | DEBUG    | 🔍 Google search: 'expat banking germany'
+2026-04-06 00:35:54 | DEBUG    | → [64] GET https://www.google.com/search?q=expat%20banking%20germany%20...
+2026-04-06 00:35:55 | WARNING  | ⚠️  Google 429 Rate Limit for 'expat banking germany' → falling back to DuckDuckGo
+2026-04-06 00:35:55 | INFO     | 🦆 Switching to DuckDuckGo for 'expat banking germany'
+2026-04-06 00:37:20 | DEBUG    | → [65] GET https://html.duckduckgo.com/html/?q=expat%20banking%20german...
+2026-04-06 00:37:22 | INFO     | ✓ DuckDuckGo found 2 results for 'expat banking germany'
+2026-04-06 00:37:22 | INFO     | ⏳ Inter-keyword: 83.69s
+2026-04-06 00:38:45 | INFO     | 🔄 [40/50] 'schufa vs credit karma'
+2026-04-06 00:38:45 | DEBUG    | 🔍 Google search: 'schufa vs credit karma'
+2026-04-06 00:38:45 | DEBUG    | → [66] GET https://www.google.com/search?q=schufa%20vs%20credit%20karma...
+2026-04-06 00:38:47 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa vs credit karma' → falling back to DuckDuckGo
+2026-04-06 00:38:47 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa vs credit karma'
+2026-04-06 00:39:59 | DEBUG    | → [67] GET https://html.duckduckgo.com/html/?q=schufa%20vs%20credit%20k...
+2026-04-06 00:40:00 | INFO     | ✓ DuckDuckGo found 10 results for 'schufa vs credit karma'
+2026-04-06 00:40:00 | INFO     | ⏳ Inter-keyword: 113.08s
+2026-04-06 00:41:53 | INFO     | 🔄 [41/50] 'non resident bank account for expats'
+2026-04-06 00:41:53 | DEBUG    | 🔍 Google search: 'non resident bank account for expats'
+2026-04-06 00:41:53 | DEBUG    | → [68] GET https://www.google.com/search?q=non%20resident%20bank%20acco...
+2026-04-06 00:41:55 | WARNING  | ⚠️  Google 429 Rate Limit for 'non resident bank account for expats' → falling back to DuckDuckGo
+2026-04-06 00:41:55 | INFO     | 🦆 Switching to DuckDuckGo for 'non resident bank account for expats'
+2026-04-06 00:43:08 | DEBUG    | → [69] GET https://html.duckduckgo.com/html/?q=non%20resident%20bank%20...
+2026-04-06 00:43:09 | INFO     | ✓ DuckDuckGo found 3 results for 'non resident bank account for expats'
+2026-04-06 00:43:10 | INFO     | 😴 Batch complete | Rest 4.8min
+2026-04-06 00:47:57 | INFO     | 
+📦 Batch #6 | 7 keywords
+2026-04-06 00:47:57 | INFO     | 🔄 [42/50] 'commerzbank schufa'
+2026-04-06 00:47:57 | DEBUG    | 🔍 Google search: 'commerzbank schufa'
+2026-04-06 00:47:57 | DEBUG    | → [70] GET https://www.google.com/search?q=commerzbank%20schufa%20site%...
+2026-04-06 00:47:58 | WARNING  | ⚠️  Google 429 Rate Limit for 'commerzbank schufa' → falling back to DuckDuckGo
+2026-04-06 00:47:58 | INFO     | 🦆 Switching to DuckDuckGo for 'commerzbank schufa'
+2026-04-06 00:49:40 | DEBUG    | → [71] GET https://html.duckduckgo.com/html/?q=commerzbank%20schufa%20s...
+2026-04-06 00:49:42 | INFO     | ✓ DuckDuckGo found 10 results for 'commerzbank schufa'
+2026-04-06 00:49:42 | INFO     | ⏳ Inter-keyword: 92.15s
+2026-04-06 00:51:14 | INFO     | 🔄 [43/50] 'what is schufa berlin'
+2026-04-06 00:51:14 | DEBUG    | 🔍 Google search: 'what is schufa berlin'
+2026-04-06 00:51:14 | DEBUG    | → [72] GET https://www.google.com/search?q=what%20is%20schufa%20berlin%...
+2026-04-06 00:51:15 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa berlin' → falling back to DuckDuckGo
+2026-04-06 00:51:15 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa berlin'
+2026-04-06 00:52:18 | DEBUG    | → [73] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20ber...
+2026-04-06 00:52:20 | INFO     | ✓ DuckDuckGo found 10 results for 'what is schufa berlin'
+2026-04-06 00:52:20 | INFO     | ⏳ Inter-keyword: 68.69s
+2026-04-06 00:53:28 | INFO     | 🔄 [44/50] 'schufa for us citizens for expats'
+2026-04-06 00:53:28 | DEBUG    | 🔍 Google search: 'schufa for us citizens for expats'
+2026-04-06 00:53:28 | DEBUG    | → [74] GET https://www.google.com/search?q=schufa%20for%20us%20citizens...
+2026-04-06 00:53:30 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa for us citizens for expats' → falling back to DuckDuckGo
+2026-04-06 00:53:30 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa for us citizens for expats'
+2026-04-06 00:54:51 | DEBUG    | → [75] GET https://html.duckduckgo.com/html/?q=schufa%20for%20us%20citi...
+2026-04-06 00:54:53 | INFO     | ✓ DuckDuckGo found 2 results for 'schufa for us citizens for expats'
+2026-04-06 00:54:53 | INFO     | ⏳ Inter-keyword: 78.68s
+2026-04-06 00:56:11 | INFO     | 🔄 [45/50] 'how to expat banking germany'
+2026-04-06 00:56:11 | DEBUG    | 🔍 Google search: 'how to expat banking germany'
+2026-04-06 00:56:11 | DEBUG    | → [76] GET https://www.google.com/search?q=how%20to%20expat%20banking%2...
+2026-04-06 00:56:12 | WARNING  | ⚠️  Google 429 Rate Limit for 'how to expat banking germany' → falling back to DuckDuckGo
+2026-04-06 00:56:12 | INFO     | 🦆 Switching to DuckDuckGo for 'how to expat banking germany'
+2026-04-06 00:57:36 | DEBUG    | → [77] GET https://html.duckduckgo.com/html/?q=how%20to%20expat%20banki...
+2026-04-06 00:57:37 | INFO     | ✓ DuckDuckGo found 10 results for 'how to expat banking germany'
+2026-04-06 00:57:37 | INFO     | ⏳ Inter-keyword: 107.49s
+2026-04-06 00:59:25 | INFO     | 🔄 [46/50] 'what is schufa for us citizens'
+2026-04-06 00:59:25 | DEBUG    | 🔍 Google search: 'what is schufa for us citizens'
+2026-04-06 00:59:25 | DEBUG    | → [78] GET https://www.google.com/search?q=what%20is%20schufa%20for%20u...
+2026-04-06 00:59:27 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa for us citizens' → falling back to DuckDuckGo
+2026-04-06 00:59:27 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa for us citizens'
+2026-04-06 01:00:50 | DEBUG    | → [79] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20for...
+2026-04-06 01:00:51 | INFO     | ✓ DuckDuckGo found 10 results for 'what is schufa for us citizens'
+2026-04-06 01:00:51 | INFO     | ⏳ Inter-keyword: 99.89s
+2026-04-06 01:02:31 | INFO     | 🔄 [47/50] 'what is schufa for british expats'
+2026-04-06 01:02:31 | DEBUG    | 🔍 Google search: 'what is schufa for british expats'
+2026-04-06 01:02:31 | DEBUG    | → [80] GET https://www.google.com/search?q=what%20is%20schufa%20for%20b...
+2026-04-06 01:02:32 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa for british expats' → falling back to DuckDuckGo
+2026-04-06 01:02:32 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa for british expats'
+2026-04-06 01:03:49 | DEBUG    | → [81] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20for...
+2026-04-06 01:03:51 | INFO     | ✓ DuckDuckGo found 9 results for 'what is schufa for british expats'
+2026-04-06 01:03:51 | INFO     | ⏳ Inter-keyword: 75.39s
+2026-04-06 01:05:06 | INFO     | 🔄 [48/50] 'schufafrei kredit'
+2026-04-06 01:05:06 | DEBUG    | 🔍 Google search: 'schufafrei kredit'
+2026-04-06 01:05:06 | DEBUG    | → [82] GET https://www.google.com/search?q=schufafrei%20kredit%20site%3...
+2026-04-06 01:05:07 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufafrei kredit' → falling back to DuckDuckGo
+2026-04-06 01:05:07 | INFO     | 🦆 Switching to DuckDuckGo for 'schufafrei kredit'
+2026-04-06 01:06:16 | DEBUG    | → [83] GET https://html.duckduckgo.com/html/?q=schufafrei%20kredit%20si...
+2026-04-06 01:06:18 | INFO     | ✓ DuckDuckGo found 10 results for 'schufafrei kredit'
+2026-04-06 01:06:18 | INFO     | 😴 Batch complete | Rest 5.0min
+2026-04-06 01:06:18 | INFO     | 🔄 Rotating IP between batches...
+2026-04-06 01:06:18 | INFO     | 🔄 NEWNYM sent | Previous: 185.241.208.185
+2026-04-06 01:06:18 | INFO     | ⏳ Post-rotation cooldown: 48.1s (Gaussian 45-90)
+2026-04-06 01:07:07 | INFO     | ✓ Circuit verified: 185.241.208.185 → 45.84.107.101 [CLEAN]
+2026-04-06 01:12:09 | INFO     | 
+📦 Batch #7 | 7 keywords
+2026-04-06 01:12:09 | INFO     | 🔄 [49/50] 'what is financial integration germany'
+2026-04-06 01:12:09 | DEBUG    | 🔍 Google search: 'what is financial integration germany'
+2026-04-06 01:12:09 | DEBUG    | → [84] GET https://www.google.com/search?q=what%20is%20financial%20inte...
+2026-04-06 01:12:10 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is financial integration germany' → falling back to DuckDuckGo
+2026-04-06 01:12:10 | INFO     | 🦆 Switching to DuckDuckGo for 'what is financial integration germany'
+2026-04-06 01:14:05 | DEBUG    | → [85] GET https://html.duckduckgo.com/html/?q=what%20is%20financial%20...
+2026-04-06 01:14:06 | INFO     | ✓ DuckDuckGo found 7 results for 'what is financial integration germany'
+2026-04-06 01:14:06 | INFO     | ⏳ Inter-keyword: 67.04s
+2026-04-06 01:15:13 | INFO     | 🔄 [50/50] 'what is schufa widerspruch'
+2026-04-06 01:15:13 | DEBUG    | 🔍 Google search: 'what is schufa widerspruch'
+2026-04-06 01:15:13 | DEBUG    | → [86] GET https://www.google.com/search?q=what%20is%20schufa%20widersp...
+2026-04-06 01:15:15 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa widerspruch' → falling back to DuckDuckGo
+2026-04-06 01:15:15 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa widerspruch'
+2026-04-06 01:17:06 | DEBUG    | → [87] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20wid...
+2026-04-06 01:17:07 | INFO     | ✓ DuckDuckGo found 10 results for 'what is schufa widerspruch'
+2026-04-06 01:17:07 | INFO     | ⏳ Inter-keyword: 65.84s
+2026-04-06 01:18:13 | INFO     | 😴 Batch complete | Rest 7.0min
+2026-04-06 01:18:13 | INFO     | 🔄 Rotating IP between batches...
+2026-04-06 01:18:14 | INFO     | 🔄 NEWNYM sent | Previous: 80.94.92.92
+2026-04-06 01:18:14 | INFO     | ⏳ Post-rotation cooldown: 73.32s (Gaussian 45-90)
+2026-04-06 01:19:28 | INFO     | ✓ Circuit verified: 80.94.92.92 → 192.121.44.34 [CLEAN]
+2026-04-06 01:26:26 | INFO     | ⏸️  Daily cap reached (50)
+2026-04-06 01:26:26 | INFO     | 
+✅ PATCHED EXECUTION COMPLETE
+2026-04-06 01:26:26 | INFO     | 📊 Signals: 2 | Keywords: 50 | Time: 158.9min
+2026-04-06 01:26:26 | INFO     | 📁 Output: /Users/macgr/Downloads/expat_web/data/quora_signals_v7.jsonl
+2026-04-06 01:26:26 | INFO     | 🔄 NEWNYM sent | Previous: 45.138.16.76
+2026-04-06 01:26:26 | INFO     | ⏳ Post-rotation cooldown: 52.4s (Gaussian 45-90)
+2026-04-06 01:27:19 | INFO     | ✓ Circuit verified: 45.138.16.76 → 194.26.192.177 [CLEAN]
+2026-04-06 01:27:20 | INFO     | 🔚 Final rotation | Exit IP: 194.26.192.177
+2026-04-06 02:03:51 | INFO     | 🚀 Quora Worker v7.7 'Aggressive Data Capture' initializing...
+2026-04-06 02:03:51 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-06 02:03:51 | DEBUG    | ✓ Control:9051 reachable
+2026-04-06 02:03:52 | INFO     | 🛡️  Tor operational | Exit IP: 194.163.157.49
+2026-04-06 02:03:52 | INFO     | 📊 Session: 0/50 today
+2026-04-06 02:03:52 | INFO     | 🔥 Warming up session...
+2026-04-06 02:04:05 | DEBUG    | ✓ Session warmup complete
+2026-04-06 02:04:05 | INFO     | 🔐 Stealth session: chrome110 | Referer enforced | Random Accept-Language (German)
+2026-04-06 02:04:05 | INFO     | 
+📦 Batch #1 | 7 keywords
+2026-04-06 02:04:05 | INFO     | 🔄 [1/50] 'what is schufa berlin'
+2026-04-06 02:04:05 | DEBUG    | 🔍 Google search: 'what is schufa berlin'
+2026-04-06 02:04:05 | DEBUG    | → [1] GET https://www.google.com/search?q=what%20is%20schufa%20berlin%...
+2026-04-06 02:04:06 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is schufa berlin' → falling back to DuckDuckGo
+2026-04-06 02:04:06 | INFO     | 🦆 Switching to DuckDuckGo for 'what is schufa berlin'
+2026-04-06 02:06:04 | DEBUG    | → [2] GET https://html.duckduckgo.com/html/?q=what%20is%20schufa%20ber...
+2026-04-06 02:06:05 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'what is schufa berlin'
+2026-04-06 02:06:05 | INFO     | ⏳ Inter-keyword: 115.91s
+2026-04-06 02:08:01 | INFO     | 🔄 [2/50] 'schufa processing time'
+2026-04-06 02:08:01 | DEBUG    | 🔍 Google search: 'schufa processing time'
+2026-04-06 02:08:01 | DEBUG    | → [3] GET https://www.google.com/search?q=schufa%20processing%20time%2...
+2026-04-06 02:08:01 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa processing time' → falling back to DuckDuckGo
+2026-04-06 02:08:01 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa processing time'
+2026-04-06 02:09:47 | DEBUG    | → [4] GET https://html.duckduckgo.com/html/?q=schufa%20processing%20ti...
+2026-04-06 02:09:48 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'schufa processing time'
+2026-04-06 02:09:48 | INFO     | ⏳ Inter-keyword: 107.33s
+2026-04-06 02:11:35 | INFO     | 🔄 [3/50] 'how to build credit germany'
+2026-04-06 02:11:35 | DEBUG    | 🔍 Google search: 'how to build credit germany'
+2026-04-06 02:11:35 | DEBUG    | → [5] GET https://www.google.com/search?q=how%20to%20build%20credit%20...
+2026-04-06 02:11:36 | WARNING  | ⚠️  Google 429 Rate Limit for 'how to build credit germany' → falling back to DuckDuckGo
+2026-04-06 02:11:36 | INFO     | 🦆 Switching to DuckDuckGo for 'how to build credit germany'
+2026-04-06 02:13:14 | DEBUG    | → [6] GET https://html.duckduckgo.com/html/?q=how%20to%20build%20credi...
+2026-04-06 02:13:15 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'how to build credit germany'
+2026-04-06 02:13:15 | INFO     | ⏳ Inter-keyword: 60.86s
+2026-04-06 02:14:16 | INFO     | 🔄 [4/50] 'how to schufa application process'
+2026-04-06 02:14:16 | DEBUG    | 🔍 Google search: 'how to schufa application process'
+2026-04-06 02:14:16 | DEBUG    | → [7] GET https://www.google.com/search?q=how%20to%20schufa%20applicat...
+2026-04-06 02:14:17 | WARNING  | ⚠️  Google 429 Rate Limit for 'how to schufa application process' → falling back to DuckDuckGo
+2026-04-06 02:14:17 | INFO     | 🦆 Switching to DuckDuckGo for 'how to schufa application process'
+2026-04-06 02:16:18 | DEBUG    | → [8] GET https://html.duckduckgo.com/html/?q=how%20to%20schufa%20appl...
+2026-04-06 02:16:19 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'how to schufa application process'
+2026-04-06 02:16:19 | INFO     | ⏳ Inter-keyword: 74.48s
+2026-04-06 02:17:33 | INFO     | 🔄 [5/50] 'what is ing diba kredit'
+2026-04-06 02:17:33 | DEBUG    | 🔍 Google search: 'what is ing diba kredit'
+2026-04-06 02:17:33 | DEBUG    | → [9] GET https://www.google.com/search?q=what%20is%20ing%20diba%20kre...
+2026-04-06 02:17:34 | WARNING  | ⚠️  Google 429 Rate Limit for 'what is ing diba kredit' → falling back to DuckDuckGo
+2026-04-06 02:17:34 | INFO     | 🦆 Switching to DuckDuckGo for 'what is ing diba kredit'
+2026-04-06 02:19:22 | DEBUG    | → [10] GET https://html.duckduckgo.com/html/?q=what%20is%20ing%20diba%2...
+2026-04-06 02:19:23 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'what is ing diba kredit'
+2026-04-06 02:19:23 | INFO     | ⏳ Inter-keyword: 66.33s
+2026-04-06 02:20:29 | INFO     | 🔄 [6/50] 'schufa appeal'
+2026-04-06 02:20:29 | DEBUG    | 🔍 Google search: 'schufa appeal'
+2026-04-06 02:20:29 | DEBUG    | → [11] GET https://www.google.com/search?q=schufa%20appeal%20site%3Aquo...
+2026-04-06 02:20:31 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa appeal' → falling back to DuckDuckGo
+2026-04-06 02:20:31 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa appeal'
+2026-04-06 02:21:48 | DEBUG    | → [12] GET https://html.duckduckgo.com/html/?q=schufa%20appeal%20site%3...
+2026-04-06 02:21:49 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'schufa appeal'
+2026-04-06 02:21:49 | INFO     | ⏳ Inter-keyword: 75.63s
+2026-04-06 02:23:05 | INFO     | 🔄 [7/50] 'how to schufa basisscore'
+2026-04-06 02:23:05 | DEBUG    | 🔍 Google search: 'how to schufa basisscore'
+2026-04-06 02:23:05 | DEBUG    | → [13] GET https://www.google.com/search?q=how%20to%20schufa%20basissco...
+2026-04-06 02:23:06 | WARNING  | ⚠️  Google 429 Rate Limit for 'how to schufa basisscore' → falling back to DuckDuckGo
+2026-04-06 02:23:06 | INFO     | 🦆 Switching to DuckDuckGo for 'how to schufa basisscore'
+2026-04-06 02:24:17 | DEBUG    | → [14] GET https://html.duckduckgo.com/html/?q=how%20to%20schufa%20basi...
+2026-04-06 02:24:18 | DEBUG    | ⚪ No Quora results from DuckDuckGo for 'how to schufa basisscore'
+2026-04-06 02:24:18 | INFO     | 😴 Batch complete | Rest 4.5min
+2026-04-06 02:24:18 | INFO     | 🔄 Rotating IP between batches...
+2026-04-06 02:24:19 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.2
+2026-04-06 02:24:19 | INFO     | ⏳ Post-rotation cooldown: 69.44s (Gaussian 45-90)
+2026-04-06 02:25:29 | INFO     | ✓ Circuit verified: 185.220.101.2 → 192.42.116.102 [CLEAN]
+2026-04-06 02:29:57 | INFO     | 
+📦 Batch #2 | 7 keywords
+2026-04-06 02:29:57 | INFO     | 🔄 [8/50] 'schufa for british expats'
+2026-04-06 02:29:57 | DEBUG    | 🔍 Google search: 'schufa for british expats'
+2026-04-06 02:29:57 | DEBUG    | → [15] GET https://www.google.com/search?q=schufa%20for%20british%20exp...
+2026-04-06 02:29:58 | WARNING  | ⚠️  Google 429 Rate Limit for 'schufa for british expats' → falling back to DuckDuckGo
+2026-04-06 02:29:58 | INFO     | 🦆 Switching to DuckDuckGo for 'schufa for british expats'
+2026-04-06 02:31:18 | DEBUG    | → [16] GET https://html.duckduckgo.com/html/?q=schufa%20for%20british%2...
+2026-04-06 03:38:21 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-06 03:38:21 | DEBUG    | ✓ Control:9051 reachable
+2026-04-06 03:38:23 | INFO     | 🛡️  Tor operational | Exit IP: 23.129.64.159
+2026-04-06 03:38:23 | INFO     | 📊 Session: 0 keywords processed today
+2026-04-06 03:38:23 | INFO     | 🔥 Warming up session...
+2026-04-06 03:38:41 | DEBUG    | ✓ Session warmup complete
+2026-04-06 03:38:41 | INFO     | 🔐 Stealth session ready (modern UAs, Sec‑Ch‑Ua, pre‑fetch jitter)
+2026-04-06 03:38:41 | INFO     | 🔄 NEWNYM sent | Previous: 38.135.24.31
+2026-04-06 03:38:41 | INFO     | ⏳ Post-rotation cooldown: 89.5s (Gaussian 45-90)
+2026-04-06 03:40:12 | INFO     | ✓ Circuit verified: 38.135.24.31 → 185.129.62.64 [CLEAN]
+2026-04-06 03:40:15 | DEBUG    | → [1] GET https://www.google.de/search?q=schufa%20score%20foreigners%2...
+2026-04-06 03:40:36 | DEBUG    | → [2] GET https://html.duckduckgo.com/html/?q=site%3Aquora.com%20%22sc...
+2026-04-06 03:40:59 | INFO     | 🔄 NEWNYM sent | Previous: 185.129.62.64
+2026-04-06 03:40:59 | INFO     | ⏳ Post-rotation cooldown: 61.53s (Gaussian 45-90)
+2026-04-06 03:42:01 | INFO     | ✓ Circuit verified: 185.129.62.64 → 185.246.188.74 [CLEAN]
+2026-04-06 03:42:06 | DEBUG    | → [3] GET https://www.google.com/search?q=how%20to%20improve%20schufa%...
+2026-04-06 03:42:39 | DEBUG    | → [4] GET https://html.duckduckgo.com/html/?q=site%3Aquora.com%20%22ho...
+2026-04-06 04:01:22 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-06 04:01:22 | DEBUG    | ✓ Control:9051 reachable
+2026-04-06 04:01:23 | INFO     | 🛡️  Tor operational | Exit IP: 109.70.100.5
+2026-04-06 04:01:23 | INFO     | 📊 Session: 2 keywords processed today
+2026-04-06 04:01:23 | INFO     | 🔥 Warming up session...
+2026-04-06 04:01:38 | DEBUG    | ✓ Session warmup complete
+2026-04-06 04:01:38 | INFO     | 🔐 Stealth session ready (modern UAs, wide‑net search, Bing added)
+2026-04-06 04:01:39 | INFO     | 🔄 NEWNYM sent | Previous: 45.154.98.33
+2026-04-06 04:01:39 | INFO     | ⏳ Post-rotation cooldown: 66.64s (Gaussian 45-90)
+2026-04-06 04:02:46 | INFO     | ✓ Circuit verified: 45.154.98.33 → 109.70.100.10 [CLEAN]
+2026-04-06 04:02:49 | DEBUG    | → [1] GET https://www.google.com/search?q=rejected%20for%20apartment%2...
+2026-04-06 04:02:51 | DEBUG    | HTML preview (Google_0): <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <html> <head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://www.google.com/search?q=rejected%20for%20apartment%20because%20of%20schufa&amp;num=10&amp;hl=en&amp;gl=de</title></head> <body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementB...
+2026-04-06 04:02:51 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.47
+2026-04-06 04:02:51 | INFO     | ⏳ Post-rotation cooldown: 46.56s (Gaussian 45-90)
+2026-04-06 04:03:39 | INFO     | ✓ Circuit verified: 185.220.101.47 → 45.84.107.174 [CLEAN]
+2026-04-06 04:03:39 | DEBUG    | → [2] GET https://html.duckduckgo.com/html/?q=rejected%20for%20apartme...
+2026-04-06 04:03:41 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:03:59 | DEBUG    | → [3] GET https://www.bing.com/search?q=rejected%20for%20apartment%20b...
+2026-04-06 04:04:01 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="u8jq6HXTUcQBoDb39rhMMXZTqZqIB1nEY3mtd7uu6Zg=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>rejected for apartment because of schufa - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:description"...
+2026-04-06 04:04:56 | INFO     | 🔄 NEWNYM sent | Previous: 45.84.107.174
+2026-04-06 04:04:56 | INFO     | ⏳ Post-rotation cooldown: 55.7s (Gaussian 45-90)
+2026-04-06 04:05:53 | WARNING  | ⚠️  New IP flagged: 185.220.101.38
+2026-04-06 04:05:53 | WARNING  | ⚠️  Circuit verify attempt 1/3 failed
+2026-04-06 04:05:58 | WARNING  | ⚠️  New IP flagged: 185.220.101.38
+2026-04-06 04:05:58 | WARNING  | ⚠️  Circuit verify attempt 2/3 failed
+2026-04-06 04:06:04 | WARNING  | ⚠️  New IP flagged: 185.220.101.38
+2026-04-06 04:06:04 | WARNING  | ⚠️  Circuit verify attempt 3/3 failed
+2026-04-06 04:06:09 | ERROR    | ✗ Circuit verification failed after 3 attempts
+2026-04-06 04:06:44 | DEBUG    | → [4] GET https://www.google.com/search?q=schufa%20auskunft%20english%...
+2026-04-06 04:06:45 | DEBUG    | HTML preview (Google_0): <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <html> <head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://www.google.com/search?q=schufa%20auskunft%20english%20guide&amp;num=10&amp;hl=en&amp;gl=de</title></head> <body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementById('captcha');...
+2026-04-06 04:06:45 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.38
+2026-04-06 04:06:45 | INFO     | ⏳ Post-rotation cooldown: 59.42s (Gaussian 45-90)
+2026-04-06 04:07:45 | INFO     | ✓ Circuit verified: 185.220.101.38 → 192.42.116.16 [CLEAN]
+2026-04-06 04:07:45 | DEBUG    | → [5] GET https://html.duckduckgo.com/html/?q=schufa%20auskunft%20engl...
+2026-04-06 04:07:47 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:08:29 | DEBUG    | → [6] GET https://www.bing.com/search?q=schufa%20auskunft%20english%20...
+2026-04-06 04:08:30 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="FU0YzRu+TGz7vO8Ub/JZAatP/neGGLqY7btXTvQYDiE=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>schufa auskunft english guide - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:description" content="In...
+2026-04-06 04:09:26 | INFO     | 🔄 NEWNYM sent | Previous: 192.42.116.16
+2026-04-06 04:09:26 | INFO     | ⏳ Post-rotation cooldown: 54.18s (Gaussian 45-90)
+2026-04-06 04:10:20 | INFO     | ✓ Circuit verified: 192.42.116.16 → 107.189.13.253 [CLEAN]
+2026-04-06 04:10:55 | DEBUG    | → [7] GET https://www.google.de/search?q=opening%20bank%20account%20ge...
+2026-04-06 04:10:56 | DEBUG    | HTML preview (Google_0): <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <html> <head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://www.google.de/search?q=opening%20bank%20account%20germany%20with%20schufa&amp;num=10&amp;hl=en&amp;gl=de</title></head> <body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementBy...
+2026-04-06 04:10:57 | INFO     | 🔄 NEWNYM sent | Previous: 45.80.158.249
+2026-04-06 04:10:57 | INFO     | ⏳ Post-rotation cooldown: 94.5s (Gaussian 45-90)
+2026-04-06 04:12:32 | WARNING  | ⚠️  New IP flagged: 185.220.101.24
+2026-04-06 04:12:32 | WARNING  | ⚠️  Circuit verify attempt 1/3 failed
+2026-04-06 04:12:39 | INFO     | ✓ Circuit verified: 45.80.158.249 → 171.25.193.131 [CLEAN]
+2026-04-06 04:12:39 | DEBUG    | → [8] GET https://html.duckduckgo.com/html/?q=opening%20bank%20account...
+2026-04-06 04:12:41 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:13:11 | DEBUG    | → [9] GET https://www.bing.com/search?q=opening%20bank%20account%20ger...
+2026-04-06 04:13:12 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="NQCBM0mLmM3NuyD9nxHyNmk5LlPJUFZzctjilxFr/OM=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>opening bank account germany with schufa - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:description"...
+2026-04-06 04:14:27 | INFO     | 🔄 NEWNYM sent | Previous: 171.25.193.131
+2026-04-06 04:14:27 | INFO     | ⏳ Post-rotation cooldown: 65.64s (Gaussian 45-90)
+2026-04-06 04:15:33 | INFO     | ✓ Circuit verified: 171.25.193.131 → 45.84.107.128 [CLEAN]
+2026-04-06 04:16:06 | DEBUG    | → [10] GET https://www.google.de/search?q=expat%20credit%20card%20germa...
+2026-04-06 04:16:07 | DEBUG    | HTML preview (Google_0): <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <html> <head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1"><title>https://www.google.de/search?q=expat%20credit%20card%20germany%20no%20schufa&amp;num=10&amp;hl=en&amp;gl=de</title></head> <body style="font-family: arial, sans-serif; background-color: #fff; color: #000; padding:20px; font-size:18px; overscroll-behavior:contain;" onload="e=document.getElementById('c...
+2026-04-06 04:16:08 | INFO     | 🔄 NEWNYM sent | Previous: 192.42.116.102
+2026-04-06 04:16:08 | INFO     | ⏳ Post-rotation cooldown: 47.08s (Gaussian 45-90)
+2026-04-06 04:16:56 | WARNING  | ⚠️  New IP flagged: 185.220.101.11
+2026-04-06 04:16:56 | WARNING  | ⚠️  Circuit verify attempt 1/3 failed
+2026-04-06 04:17:02 | WARNING  | ⚠️  New IP flagged: 185.220.101.11
+2026-04-06 04:17:02 | WARNING  | ⚠️  Circuit verify attempt 2/3 failed
+2026-04-06 04:17:08 | WARNING  | ⚠️  New IP flagged: 185.220.101.11
+2026-04-06 04:17:08 | WARNING  | ⚠️  Circuit verify attempt 3/3 failed
+2026-04-06 04:17:13 | ERROR    | ✗ Circuit verification failed after 3 attempts
+2026-04-06 04:17:13 | DEBUG    | → [11] GET https://html.duckduckgo.com/html/?q=expat%20credit%20card%20...
+2026-04-06 04:17:15 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:17:47 | DEBUG    | → [12] GET https://www.bing.com/search?q=expat%20credit%20card%20german...
+2026-04-06 04:17:47 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="WdCbHe8fk0OJ8oQlKJpLfHKk1Y0gHI59l5L+8RLO8lk=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>expat credit card germany no schufa - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:description" conte...
+2026-04-06 04:19:10 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-06 04:19:10 | DEBUG    | ✓ Control:9051 reachable
+2026-04-06 04:19:11 | INFO     | 🛡️  Tor operational | Exit IP: 185.220.101.11
+2026-04-06 04:19:11 | INFO     | 📊 Session: 6 keywords processed today
+2026-04-06 04:19:11 | INFO     | 🔥 Warming up session...
+2026-04-06 04:19:29 | DEBUG    | ✓ Session warmup complete
+2026-04-06 04:19:29 | INFO     | 🔐 Stealth session ready (modern UAs, wide‑net search, Google disabled)
+2026-04-06 04:19:29 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.11
+2026-04-06 04:19:29 | INFO     | ⏳ Post-rotation cooldown: 25.18s (Gaussian 20-45)
+2026-04-06 04:19:56 | INFO     | ✓ Circuit verified: 185.220.101.11 → 185.130.47.58 [CLEAN]
+2026-04-06 04:19:58 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:19:58 | DEBUG    | → [1] GET https://html.duckduckgo.com/html/?q=schufa%20explained%20for...
+2026-04-06 04:20:00 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:20:45 | DEBUG    | → [2] GET https://www.bing.com/search?q=schufa%20explained%20for%20exp...
+2026-04-06 04:20:46 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="CQ0slihLbhGmYfInFsEc+xyhA3RXv2qsz/tDYOdjWfs=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>schufa explained for expats - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:description" content="Inte...
+2026-04-06 04:21:21 | INFO     | 🔄 NEWNYM sent | Previous: 45.141.215.156
+2026-04-06 04:21:21 | INFO     | ⏳ Post-rotation cooldown: 38.09s (Gaussian 20-45)
+2026-04-06 04:22:00 | INFO     | ✓ Circuit verified: 45.141.215.156 → 37.228.129.162 [CLEAN]
+2026-04-06 04:22:03 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:22:03 | DEBUG    | → [3] GET https://html.duckduckgo.com/html/?q=blocked%20account%20germ...
+2026-04-06 04:22:05 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:22:41 | DEBUG    | → [4] GET https://www.bing.com/search?q=blocked%20account%20germany%20...
+2026-04-06 04:22:42 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="pNvyHnXZnRhCFc767Y2jgskqYk2+IEE+3hJJVScSiDA=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>blocked account germany expat - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:description" content="In...
+2026-04-06 04:23:24 | INFO     | 🔄 NEWNYM sent | Previous: 37.228.129.162
+2026-04-06 04:23:24 | INFO     | ⏳ Post-rotation cooldown: 24.11s (Gaussian 20-45)
+2026-04-06 04:23:49 | INFO     | ✓ Circuit verified: 37.228.129.162 → 5.45.102.93 [CLEAN]
+2026-04-06 04:23:51 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:23:51 | DEBUG    | → [5] GET https://html.duckduckgo.com/html/?q=german%20credit%20score%...
+2026-04-06 04:23:53 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:24:35 | DEBUG    | → [6] GET https://www.bing.com/search?q=german%20credit%20score%20syst...
+2026-04-06 04:24:35 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="2cESLxvjry1+7bgP8GeFiW9UvQ3f8jHMSBD6IcG/CkM=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>german credit score system explained - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:description" cont...
+2026-04-06 04:24:36 | INFO     | 🔄 NEWNYM sent | Previous: 5.45.102.93
+2026-04-06 04:24:36 | INFO     | ⏳ Post-rotation cooldown: 28.5s (Gaussian 20-45)
+2026-04-06 04:25:05 | INFO     | ✓ Circuit verified: 5.45.102.93 → 51.38.225.46 [CLEAN]
+2026-04-06 04:40:31 | DEBUG    | ✓ SOCKS:9050 reachable
+2026-04-06 04:40:31 | DEBUG    | ✓ Control:9051 reachable
+2026-04-06 04:40:32 | INFO     | 🛡️  Tor operational | Exit IP: 185.220.101.26
+2026-04-06 04:40:32 | INFO     | 📊 Session: 9 keywords processed today
+2026-04-06 04:40:32 | INFO     | 🔥 Warming up session...
+2026-04-06 04:40:49 | DEBUG    | ✓ Session warmup complete
+2026-04-06 04:40:49 | INFO     | 🔐 Stealth session ready (modern UAs, wide‑net search, Google disabled)
+2026-04-06 04:40:50 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.131
+2026-04-06 04:40:50 | INFO     | ⏳ Post-rotation cooldown: 27.36s (Gaussian 20-45)
+2026-04-06 04:41:18 | INFO     | ✓ Circuit verified: 185.220.101.131 → 109.70.100.12 [CLEAN]
+2026-04-06 04:41:20 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:41:20 | DEBUG    | → [1] GET https://html.duckduckgo.com/html/?q=schufa%20eintrag%20l%C3%...
+2026-04-06 04:41:21 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:41:47 | DEBUG    | → [2] GET https://www.bing.com/search?q=schufa%20eintrag%20l%C3%B6sche...
+2026-04-06 04:41:48 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="Qq2MLfBTYMQUaWPXTZeekKky7OmPsiXwd4PgaADDoQw=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>schufa eintrag l&#246;schen how to remove quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:descri...
+2026-04-06 04:42:31 | INFO     | 🔄 NEWNYM sent | Previous: 109.70.100.12
+2026-04-06 04:42:31 | INFO     | ⏳ Post-rotation cooldown: 44.22s (Gaussian 20-45)
+2026-04-06 04:43:16 | INFO     | ✓ Circuit verified: 109.70.100.12 → 5.253.247.27 [CLEAN]
+2026-04-06 04:43:18 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:43:18 | DEBUG    | → [3] GET https://html.duckduckgo.com/html/?q=expatrio%20blocked%20acc...
+2026-04-06 04:43:19 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:43:52 | DEBUG    | → [4] GET https://www.bing.com/search?q=expatrio%20blocked%20account%2...
+2026-04-06 04:43:53 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="yf05pOnB0NcK4oUVXqbLBW6NjNGXeggrMSV4eumrRBA=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>expatrio blocked account waiting too long site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="...
+2026-04-06 04:44:23 | INFO     | 🔄 NEWNYM sent | Previous: 5.253.247.27
+2026-04-06 04:44:23 | INFO     | ⏳ Post-rotation cooldown: 30.75s (Gaussian 20-45)
+2026-04-06 04:44:54 | WARNING  | ⚠️  New IP flagged: 185.220.101.161
+2026-04-06 04:44:54 | WARNING  | ⚠️  Circuit verify attempt 1/3 failed
+2026-04-06 04:45:00 | WARNING  | ⚠️  New IP flagged: 185.220.101.160
+2026-04-06 04:45:00 | WARNING  | ⚠️  Circuit verify attempt 2/3 failed
+2026-04-06 04:45:05 | WARNING  | ⚠️  New IP flagged: 185.220.101.160
+2026-04-06 04:45:05 | WARNING  | ⚠️  Circuit verify attempt 3/3 failed
+2026-04-06 04:45:11 | ERROR    | ✗ Circuit verification failed after 3 attempts
+2026-04-06 04:45:14 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:45:14 | DEBUG    | → [5] GET https://html.duckduckgo.com/html/?q=fintiba%20blocked%20acco...
+2026-04-06 04:45:15 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:45:38 | DEBUG    | → [6] GET https://www.bing.com/search?q=fintiba%20blocked%20account%20...
+2026-04-06 04:45:39 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="XcHqbk+BjNDrPbjXxfArsBLXiFefNz+6L7vArhrRvbA=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>fintiba blocked account problem not working site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property...
+2026-04-06 04:46:02 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.160
+2026-04-06 04:46:02 | INFO     | ⏳ Post-rotation cooldown: 35.95s (Gaussian 20-45)
+2026-04-06 04:46:39 | WARNING  | ⚠️  New IP flagged: 185.220.101.152
+2026-04-06 04:46:39 | WARNING  | ⚠️  Circuit verify attempt 1/3 failed
+2026-04-06 04:46:44 | WARNING  | ⚠️  New IP flagged: 185.220.101.152
+2026-04-06 04:46:44 | WARNING  | ⚠️  Circuit verify attempt 2/3 failed
+2026-04-06 04:46:50 | WARNING  | ⚠️  New IP flagged: 185.220.101.152
+2026-04-06 04:46:50 | WARNING  | ⚠️  Circuit verify attempt 3/3 failed
+2026-04-06 04:46:55 | ERROR    | ✗ Circuit verification failed after 3 attempts
+2026-04-06 04:46:57 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:46:57 | DEBUG    | → [7] GET https://html.duckduckgo.com/html/?q=blocked%20account%20germ...
+2026-04-06 04:46:58 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:47:30 | DEBUG    | → [8] GET https://www.bing.com/search?q=blocked%20account%20germany%20...
+2026-04-06 04:47:31 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="8AoRgu7xrrY830zNsa1V97Jv9xuYeSK1OGLSGi9eZ7s=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>blocked account germany visa rejected site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:d...
+2026-04-06 04:47:55 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.152
+2026-04-06 04:47:55 | INFO     | ⏳ Post-rotation cooldown: 38.25s (Gaussian 20-45)
+2026-04-06 04:48:33 | INFO     | ✓ Circuit verified: 185.220.101.152 → 45.84.107.222 [CLEAN]
+2026-04-06 04:48:36 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:48:36 | DEBUG    | → [9] GET https://html.duckduckgo.com/html/?q=sperrkonto%20germany%20f...
+2026-04-06 04:48:37 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:48:58 | DEBUG    | → [10] GET https://www.bing.com/search?q=sperrkonto%20germany%20failed%...
+2026-04-06 04:48:58 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="ACGE43pd/uXjBXNiNynd+nzCNO7IgCp6WfAL0mQC0ig=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>sperrkonto germany failed to open site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:descr...
+2026-04-06 04:49:29 | INFO     | 🔄 NEWNYM sent | Previous: 45.84.107.222
+2026-04-06 04:49:29 | INFO     | ⏳ Post-rotation cooldown: 29.59s (Gaussian 20-45)
+2026-04-06 04:49:59 | INFO     | ✓ Circuit verified: 45.84.107.222 → 193.189.100.195 [CLEAN]
+2026-04-06 04:50:03 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:50:03 | DEBUG    | → [11] GET https://html.duckduckgo.com/html/?q=n26%20account%20rejected...
+2026-04-06 04:50:04 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:50:26 | DEBUG    | → [12] GET https://www.bing.com/search?q=n26%20account%20rejected%20ger...
+2026-04-06 04:50:27 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="2yr1RmixisbdZb81bZGwsefYz7t4s1ntUwVuC3kf9Ik=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>n26 account rejected germany foreigner site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:...
+2026-04-06 04:51:10 | INFO     | 🔄 NEWNYM sent | Previous: 193.189.100.195
+2026-04-06 04:51:10 | INFO     | ⏳ Post-rotation cooldown: 37.62s (Gaussian 20-45)
+2026-04-06 04:51:49 | INFO     | ✓ Circuit verified: 193.189.100.195 → 199.195.253.180 [CLEAN]
+2026-04-06 04:51:51 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:51:51 | DEBUG    | → [13] GET https://html.duckduckgo.com/html/?q=bank%20account%20germany...
+2026-04-06 04:51:52 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:52:32 | DEBUG    | → [14] GET https://www.bing.com/search?q=bank%20account%20germany%20wit...
+2026-04-06 04:52:33 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="7R/RyNqDd9LbHw77P93MS0rAUL7dDWGJiKujRusBgtk=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>bank account germany without anmeldung problem quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:d...
+2026-04-06 04:52:55 | INFO     | 🔄 NEWNYM sent | Previous: 124.198.131.108
+2026-04-06 04:52:55 | INFO     | ⏳ Post-rotation cooldown: 36.5s (Gaussian 20-45)
+2026-04-06 04:53:32 | WARNING  | ⚠️  New IP flagged: 185.220.101.30
+2026-04-06 04:53:32 | WARNING  | ⚠️  Circuit verify attempt 1/3 failed
+2026-04-06 04:53:38 | INFO     | ✓ Circuit verified: 124.198.131.108 → 192.42.116.42 [CLEAN]
+2026-04-06 04:53:40 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:53:40 | DEBUG    | → [15] GET https://html.duckduckgo.com/html/?q=deutsche%20bank%20blocke...
+2026-04-06 04:53:41 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:54:01 | DEBUG    | → [16] GET https://www.bing.com/search?q=deutsche%20bank%20blocked%20ac...
+2026-04-06 04:54:01 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="83drYjm/XDc2E9Zi6bhR2duie559MHrXq7hA0vEejVA=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>deutsche bank blocked account delayed quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:descriptio...
+2026-04-06 04:54:27 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.25
+2026-04-06 04:54:27 | INFO     | ⏳ Post-rotation cooldown: 27.28s (Gaussian 20-45)
+2026-04-06 04:54:55 | INFO     | ✓ Circuit verified: 185.220.101.25 → 45.80.158.165 [CLEAN]
+2026-04-06 04:54:59 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:54:59 | DEBUG    | → [17] GET https://html.duckduckgo.com/html/?q=coracle%20vs%20expatrio%...
+2026-04-06 04:55:00 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:55:25 | DEBUG    | → [18] GET https://www.bing.com/search?q=coracle%20vs%20expatrio%20whic...
+2026-04-06 04:55:26 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="R0L8Izb/DIvg/MhYtWq5kmRboeR7p4RxHFlMMKEU+kw=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>coracle vs expatrio which better germany quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:descrip...
+2026-04-06 04:56:09 | INFO     | 🔄 NEWNYM sent | Previous: 192.42.116.13
+2026-04-06 04:56:09 | INFO     | ⏳ Post-rotation cooldown: 44.38s (Gaussian 20-45)
+2026-04-06 04:56:54 | INFO     | ✓ Circuit verified: 192.42.116.13 → 93.113.25.96 [CLEAN]
+2026-04-06 04:56:57 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:56:57 | DEBUG    | → [19] GET https://html.duckduckgo.com/html/?q=blocked%20account%20germ...
+2026-04-06 04:56:58 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:57:32 | DEBUG    | → [20] GET https://www.bing.com/search?q=blocked%20account%20germany%20...
+2026-04-06 04:57:33 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="uh2mhcPAjwgbJfVUYINdzCmiRvqdvVC0WNp1NVmcw3w=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>blocked account germany how long does it take quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:de...
+2026-04-06 04:58:03 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.186
+2026-04-06 04:58:03 | INFO     | ⏳ Post-rotation cooldown: 31.9s (Gaussian 20-45)
+2026-04-06 04:58:35 | WARNING  | ⚠️  New IP flagged: 185.220.101.131
+2026-04-06 04:58:35 | WARNING  | ⚠️  Circuit verify attempt 1/3 failed
+2026-04-06 04:58:40 | WARNING  | ⚠️  New IP flagged: 185.220.101.131
+2026-04-06 04:58:41 | WARNING  | ⚠️  Circuit verify attempt 2/3 failed
+2026-04-06 04:58:46 | WARNING  | ⚠️  New IP flagged: 185.220.101.131
+2026-04-06 04:58:46 | WARNING  | ⚠️  Circuit verify attempt 3/3 failed
+2026-04-06 04:58:51 | ERROR    | ✗ Circuit verification failed after 3 attempts
+2026-04-06 04:58:54 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 04:58:54 | DEBUG    | → [21] GET https://html.duckduckgo.com/html/?q=german%20bank%20refused%...
+2026-04-06 04:58:55 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 04:59:39 | DEBUG    | → [22] GET https://www.bing.com/search?q=german%20bank%20refused%20acco...
+2026-04-06 04:59:40 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="YTNgsifmRdY8piTgR2q59p4MT/GqmLDMnVhz4nN8xmc=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>german bank refused account no schufa quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:descriptio...
+2026-04-06 05:00:03 | INFO     | 🔄 NEWNYM sent | Previous: 185.220.101.131
+2026-04-06 05:00:03 | INFO     | ⏳ Post-rotation cooldown: 37.32s (Gaussian 20-45)
+2026-04-06 05:00:41 | INFO     | ✓ Circuit verified: 185.220.101.131 → 37.187.5.192 [CLEAN]
+2026-04-06 05:00:43 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:00:43 | DEBUG    | → [23] GET https://html.duckduckgo.com/html/?q=landlord%20rejected%20ap...
+2026-04-06 05:00:45 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:01:06 | DEBUG    | → [24] GET https://www.bing.com/search?q=landlord%20rejected%20applicat...
+2026-04-06 05:01:06 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="4x4tx9OemCzQaAPntEbf5HGJvJzaxEX/kfYtvItfSgU=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>landlord rejected application no schufa germany site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta prop...
+2026-04-06 05:01:34 | INFO     | 🔄 NEWNYM sent | Previous: 192.42.116.43
+2026-04-06 05:01:34 | INFO     | ⏳ Post-rotation cooldown: 30.83s (Gaussian 20-45)
+2026-04-06 05:02:06 | INFO     | ✓ Circuit verified: 192.42.116.43 → 107.189.3.148 [CLEAN]
+2026-04-06 05:02:09 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:02:09 | DEBUG    | → [25] GET https://html.duckduckgo.com/html/?q=apartment%20hunting%20be...
+2026-04-06 05:02:10 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:02:47 | DEBUG    | → [26] GET https://www.bing.com/search?q=apartment%20hunting%20berlin%2...
+2026-04-06 05:02:48 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="roWIh6PgnKWhD8vhld/qB6DSLGBxmLGjEmzHNkRtSSw=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>apartment hunting berlin schufa problem foreigner site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta pr...
+2026-04-06 05:03:17 | INFO     | 🔄 NEWNYM sent | Previous: 192.159.99.38
+2026-04-06 05:03:17 | INFO     | ⏳ Post-rotation cooldown: 28.98s (Gaussian 20-45)
+2026-04-06 05:03:47 | INFO     | ✓ Circuit verified: 192.159.99.38 → 45.148.10.111 [CLEAN]
+2026-04-06 05:03:51 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:03:51 | DEBUG    | → [27] GET https://html.duckduckgo.com/html/?q=mietschuldenfreiheitsbes...
+2026-04-06 05:03:53 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:04:16 | DEBUG    | → [28] GET https://www.bing.com/search?q=mietschuldenfreiheitsbescheini...
+2026-04-06 05:04:17 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="2you0J0Ool8YwDEHl01sk4duUL1YlkrQtaAoB8sMqmU=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>mietschuldenfreiheitsbescheinigung how to get site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta proper...
+2026-04-06 05:05:03 | INFO     | 🔄 NEWNYM sent | Previous: 45.148.10.111
+2026-04-06 05:05:03 | INFO     | ⏳ Post-rotation cooldown: 28.83s (Gaussian 20-45)
+2026-04-06 05:05:33 | INFO     | ✓ Circuit verified: 45.148.10.111 → 109.70.100.6 [CLEAN]
+2026-04-06 05:05:35 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:05:35 | DEBUG    | → [29] GET https://html.duckduckgo.com/html/?q=proof%20of%20income%20ap...
+2026-04-06 05:05:37 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:06:05 | DEBUG    | → [30] GET https://www.bing.com/search?q=proof%20of%20income%20apartmen...
+2026-04-06 05:06:06 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="bPl+sQkAzLYcEa1X6fpyT5xLMSBRJV5SRfhmOoeVRvE=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>proof of income apartment germany rejected site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property=...
+2026-04-06 05:06:35 | INFO     | 🔄 NEWNYM sent | Previous: 109.70.100.6
+2026-04-06 05:06:35 | INFO     | ⏳ Post-rotation cooldown: 45.14s (Gaussian 20-45)
+2026-04-06 05:07:21 | INFO     | ✓ Circuit verified: 109.70.100.6 → 45.134.225.36 [CLEAN]
+2026-04-06 05:07:24 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:07:24 | DEBUG    | → [31] GET https://html.duckduckgo.com/html/?q=bonit%C3%A4tsnachweis%20...
+2026-04-06 05:07:25 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:07:47 | DEBUG    | → [32] GET https://www.bing.com/search?q=bonit%C3%A4tsnachweis%20what%2...
+2026-04-06 05:07:47 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="xRAeDQlkSU/28lP/dlfY+a/xwKyfU0kGoUxsxKydq9s=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>bonit&#228;tsnachweis what is required germany expat site:quora.com - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta...
+2026-04-06 05:08:26 | INFO     | 🔄 NEWNYM sent | Previous: 185.207.107.216
+2026-04-06 05:08:26 | INFO     | ⏳ Post-rotation cooldown: 30.17s (Gaussian 20-45)
+2026-04-06 05:08:57 | INFO     | ✓ Circuit verified: 185.207.107.216 → 87.118.116.12 [CLEAN]
+2026-04-06 05:09:00 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:09:00 | DEBUG    | → [33] GET https://html.duckduckgo.com/html/?q=munich%20apartment%20app...
+2026-04-06 05:09:01 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:09:29 | DEBUG    | → [34] GET https://www.bing.com/search?q=munich%20apartment%20applicati...
+2026-04-06 05:09:29 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="MkTK41RodfAWQUSfOKf8jtoA6/XFv1r3DSJAoCia8Cw=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>munich apartment application failed schufa quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:descr...
+2026-04-06 05:10:01 | INFO     | 🔄 NEWNYM sent | Previous: 192.42.116.46
+2026-04-06 05:10:01 | INFO     | ⏳ Post-rotation cooldown: 27.41s (Gaussian 20-45)
+2026-04-06 05:10:29 | INFO     | ✓ Circuit verified: 192.42.116.46 → 45.66.35.33 [CLEAN]
+2026-04-06 05:10:32 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:10:32 | DEBUG    | → [35] GET https://html.duckduckgo.com/html/?q=wohnungssuche%20as%20for...
+2026-04-06 05:10:34 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:11:02 | DEBUG    | → [36] GET https://www.bing.com/search?q=wohnungssuche%20as%20foreigner...
+2026-04-06 05:11:03 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="Q1/7UckS9x27Z7g4cgCNxfboLuzPX4Ghq+dtVLHF+4M=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>wohnungssuche as foreigner germany impossible quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:de...
+2026-04-06 05:11:40 | INFO     | 🔄 NEWNYM sent | Previous: 192.42.116.95
+2026-04-06 05:11:40 | INFO     | ⏳ Post-rotation cooldown: 25.52s (Gaussian 20-45)
+2026-04-06 05:12:07 | INFO     | ✓ Circuit verified: 192.42.116.95 → 192.42.116.50 [CLEAN]
+2026-04-06 05:12:10 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:12:10 | DEBUG    | → [37] GET https://html.duckduckgo.com/html/?q=landlord%20requirements%...
+2026-04-06 05:12:11 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:12:32 | DEBUG    | → [38] GET https://www.bing.com/search?q=landlord%20requirements%20germ...
+2026-04-06 05:12:32 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="8hbwpot404RSb9ewcCYRFKJ4vgW97Z/lxp007V4i1XI=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>landlord requirements germany expat no credit history quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta propert...
+2026-04-06 05:13:07 | INFO     | 🔄 NEWNYM sent | Previous: 109.70.100.10
+2026-04-06 05:13:07 | INFO     | ⏳ Post-rotation cooldown: 43.38s (Gaussian 20-45)
+2026-04-06 05:13:51 | INFO     | ✓ Circuit verified: 109.70.100.10 → 124.198.132.172 [CLEAN]
+2026-04-06 05:13:53 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:13:53 | DEBUG    | → [39] GET https://html.duckduckgo.com/html/?q=apartment%20deposit%20ge...
+2026-04-06 05:13:54 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:14:25 | DEBUG    | → [40] GET https://www.bing.com/search?q=apartment%20deposit%20germany%...
+2026-04-06 05:14:26 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="WENObkeU0Ic0yZNWKI9n39JbpsUKTxhHD8fU14lzhgY=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>apartment deposit germany schufa failed quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:descript...
+2026-04-06 05:14:56 | INFO     | 🔄 NEWNYM sent | Previous: 124.198.132.172
+2026-04-06 05:14:56 | INFO     | ⏳ Post-rotation cooldown: 31.74s (Gaussian 20-45)
+2026-04-06 05:15:28 | INFO     | ✓ Circuit verified: 124.198.132.172 → 45.138.16.222 [CLEAN]
+2026-04-06 05:15:31 | INFO     | Google search engine is disabled (429 rate limit). Using only DuckDuckGo and Bing.
+2026-04-06 05:15:31 | DEBUG    | → [41] GET https://html.duckduckgo.com/html/?q=WG%20zimmer%20rejected%2...
+2026-04-06 05:15:33 | DEBUG    | HTML preview (DDG_attempt_0): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  <!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]--> <!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--> <head>   <meta http-equiv="content-t...
+2026-04-06 05:16:06 | DEBUG    | → [42] GET https://www.bing.com/search?q=WG%20zimmer%20rejected%20no%20...
+2026-04-06 05:16:06 | DEBUG    | HTML preview (Bing_0): <!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="EG8e83+9QhFkTanK2xQCCkBv+ouutkS9KLr9whCpsm8=" >//<![CDATA[ si_ST=new Date //]]></script><head><!--pc--><title>WG zimmer rejected no schufa history germany quora - Search</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="referrer" content="origin-when-cross-origin" /><meta property="og:des...
+2026-04-06 05:16:07 | INFO     | 🔄 NEWNYM sent | Previous: 45.138.16.222
+2026-04-06 05:16:07 | INFO     | ⏳ Post-rotation cooldown: 32.49s (Gaussian 20-45)
+2026-04-06 05:16:41 | INFO     | ✓ Circuit verified: 45.138.16.222 → 107.189.14.4 [CLEAN]

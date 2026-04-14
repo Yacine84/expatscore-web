@@ -4,3 +4,8 @@ node_modules/
 .aider.input.history
 .aider.tags.cache.v4/
 .env
+
+# Slug fix artifacts
+docs_backup_*/
+vercel-redirects.snippet.json
+slug_fix_report.txt

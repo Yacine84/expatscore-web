@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: expatscore_n8n
+    restart: unless-stopped          # ← Survives Mac restarts automatically
+    ports:
+      - "5678:5678"                  # n8n UI + webhook listener on localhost:5678
+    environment:
+      # --- Core ---
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - WEBHOOK_URL=http://localhost:5678/   # ← Fixed webhook base — never changes
+
+      # --- Timezone (important for your schedule logic) ---
+      - GENERIC_TIMEZONE=Europe/Berlin
+      - TZ=Europe/Berlin
+
+      # --- Security (generates a login for the UI) ---
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=expatscore
+      - N8N_BASIC_AUTH_PASSWORD=expatscore2025
+
+      # --- Disable telemetry ---
+      - N8N_DIAGNOSTICS_ENABLED=false
+      - N8N_VERSION_NOTIFICATIONS_ENABLED=false
+
+    volumes:
+      - n8n_data:/home/node/.n8n    # ← All workflows saved here — survives container restarts
+
+volumes:
+  n8n_data:
+    driver: local                   # ← Docker-managed volume — persists on your Mac

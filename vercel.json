@@ -141,6 +141,16 @@
       "source": "/dauerhaft-score",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/blog/bahnbonus-punkte-einlsen-fr-ice-tickets",
+      "destination": "/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bahnbonus-punkte-einlsen-fr-ice-tickets.html",
+      "destination": "/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets",
+      "permanent": true
     }
   ],
   "rewrites": [
