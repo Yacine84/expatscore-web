@@ -151,82 +151,32 @@
       "source": "/blog/bahnbonus-punkte-einlsen-fr-ice-tickets.html",
       "destination": "/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets",
       "permanent": true
-    },
-    {
-      "source": "/anmeldung-germany",
-      "destination": "/blog/anmeldung-germany",
-      "permanent": true
-    },
-    {
-      "source": "/anmeldung-germany.html",
-      "destination": "/blog/anmeldung-germany",
-      "permanent": true
-    },
-    {
-      "source": "/blocked-account-germany",
-      "destination": "/blog/blocked-account-germany",
-      "permanent": true
-    },
-    {
-      "source": "/blocked-account-germany.html",
-      "destination": "/blog/blocked-account-germany",
-      "permanent": true
-    },
-    {
-      "source": "/konto-ohne-anmeldung",
-      "destination": "/blog/konto-ohne-anmeldung",
-      "permanent": true
-    },
-    {
-      "source": "/konto-ohne-anmeldung.html",
-      "destination": "/blog/konto-ohne-anmeldung",
-      "permanent": true
-    },
-    {
-      "source": "/n26-bank-erfahrungen",
-      "destination": "/blog/n26-bank-erfahrungen",
-      "permanent": true
-    },
-    {
-      "source": "/n26-bank-erfahrungen.html",
-      "destination": "/blog/n26-bank-erfahrungen",
-      "permanent": true
-    },
-    {
-      "source": "/steuer-id-guide",
-      "destination": "/blog/steuer-id-guide",
-      "permanent": true
-    },
-    {
-      "source": "/steuer-id-guide.html",
-      "destination": "/blog/steuer-id-guide",
-      "permanent": true
-    },
-    {
-      "source": "/tk-health-insurance",
-      "destination": "/blog/tk-health-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/tk-health-insurance.html",
-      "destination": "/blog/tk-health-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-get-schufa-germany",
-      "destination": "/blog/how-to-get-schufa-germany",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-get-schufa-germany.html",
-      "destination": "/blog/how-to-get-schufa-germany",
-      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/schufa-guide",
       "destination": "/docs/schufa-guide.html"
+    },
+    {
+      "source": "/anmeldung-germany",
+      "destination": "/docs/anmeldung-germany.html"
+    },
+    {
+      "source": "/steuer-id-guide",
+      "destination": "/docs/steuer-id-guide.html"
+    },
+    {
+      "source": "/n26-bank-erfahrungen",
+      "destination": "/docs/n26-bank-erfahrungen.html"
+    },
+    {
+      "source": "/blocked-account-germany",
+      "destination": "/docs/blocked-account-germany.html"
+    },
+    {
+      "source": "/tk-health-insurance",
+      "destination": "/docs/tk-health-insurance.html"
     },
     {
       "source": "/blue-card-tool",
