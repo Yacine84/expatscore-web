@@ -33,7 +33,7 @@ from xml.sax.saxutils import escape
 # ─────────────────────────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────
-SITE_BASE = 'https://www.expatscore.de'
+SITE_BASE = 'https://expatscore.de'          # NO 'www' – strictly non-www
 
 # Files to exclude from sitemap even if they exist as .html
 EXCLUDE_FILES = {
@@ -53,12 +53,13 @@ EXCLUDE_PREFIXES = (
 PRIORITY_RULES = [
     # (regex_pattern,                      priority, changefreq)
     (r'^/$',                               '1.0',   'weekly'),
+    (r'^/blog$',                           '0.8',   'weekly'),           # blog index
+    (r'^/blog/',                           '0.7',   'monthly'),          # individual posts
     (r'^/schufa-simulator$',               '0.9',   'weekly'),
     (r'^/blue-card-tool$',                 '0.9',   'weekly'),
-    (r'^/(banking|insurance|blog)$',       '0.8',   'weekly'),
+    (r'^/(banking|insurance)$',            '0.8',   'weekly'),
     (r'^/schufa-guide$',                   '0.85',  'monthly'),
     (r'^/how-to-get-schufa-germany$',      '0.85',  'monthly'),
-    (r'^/blog/',                           '0.7',   'monthly'),
     (r'^/about$',                          '0.5',   'monthly'),
     (r'^/(impressum|datenschutz|affiliate-hinweis)$', '0.3', 'yearly'),
 ]
@@ -354,7 +355,7 @@ def main():
     print("\nNext steps:")
     print("  1. git add docs/sitemap.xml && git commit -m 'chore: regenerate sitemap'")
     print("  2. git push  (Vercel deploys)")
-    print("  3. Google Search Console → Sitemaps → resubmit https://www.expatscore.de/sitemap.xml")
+    print("  3. Google Search Console → Sitemaps → resubmit https://expatscore.de/sitemap.xml")
 
 
 if __name__ == '__main__':
