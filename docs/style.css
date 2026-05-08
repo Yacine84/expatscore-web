@@ -2020,15 +2020,37 @@ input:disabled + .toggle-slider { opacity: 0.5; cursor: default; }
   margin: 0 auto;
   padding: var(--space-lg) var(--space-md);
 }
-.article-body p { font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.25rem; }
-.article-body h2 { font-size: 1.6rem; color: var(--gold); margin-top: 2.5rem; margin-bottom: 0.75rem; }
-.article-body h3 { font-size: 1.15rem; margin-top: 1.75rem; color: var(--text-primary); }
-.article-body strong { color: var(--text-primary); }
-.article-body a { color: var(--emerald); }
-.article-body a:hover { color: var(--gold); }
-.article-body ul, .article-body ol { color: var(--text-secondary); padding-left: 1.25rem; margin-bottom: 1.25rem; }
-.article-body li { line-height: 1.8; margin-bottom: 0.4rem; }
+/* ↑ Phase 1 fix: 1.05rem → 1.2rem for premium 20px readability target */
+.article-body p { font-size: 1.2rem; line-height: 1.85; color: var(--text-secondary); margin-bottom: 1.4rem; }
+.article-body h2 { font-size: 1.65rem; color: var(--gold); margin-top: 2.75rem; margin-bottom: 0.85rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.article-body h3 { font-size: 1.2rem; margin-top: 2rem; color: var(--gold-light); }
+.article-body h4 { font-size: 1rem; margin-top: 1.5rem; color: var(--text-primary); font-family: var(--font-display); }
+.article-body strong { color: var(--gold-light); font-weight: 600; }
+.article-body a { color: var(--emerald); text-decoration: underline; text-decoration-color: var(--emerald-border); text-underline-offset: 3px; transition: color 0.2s, text-decoration-color 0.2s; }
+.article-body a:hover { color: var(--gold); text-decoration-color: var(--gold-border); }
+.article-body ul, .article-body ol { color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1.4rem; font-size: 1.2rem; }
+.article-body li { line-height: 1.85; margin-bottom: 0.5rem; }
 .article-body li::marker { color: var(--gold); }
+.article-body blockquote {
+  border-left: 3px solid var(--gold);
+  background: var(--gold-glow);
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.article-body code {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background: rgba(212,175,55,0.06);
+  border: 1px solid var(--gold-border);
+  padding: 0.15em 0.45em;
+  border-radius: 4px;
+  color: var(--gold-light);
+}
 
 .back-link {
   display: inline-flex; align-items: center; gap: 0.35rem;
@@ -2037,6 +2059,143 @@ input:disabled + .toggle-slider { opacity: 0.5; cursor: default; }
   transition: color 0.2s;
 }
 .back-link:hover { color: var(--gold); }
+
+/* =========================================================================
+   AFFILIATE CARD SYSTEM — Phase 1 addition
+   Usage: <div class="affiliate-card affiliate-card--primary">
+   ========================================================================= */
+
+.affiliate-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin: 2.5rem 0;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+.affiliate-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--emerald), var(--gold));
+}
+.affiliate-card:hover {
+  border-color: var(--gold-border);
+  box-shadow: var(--shadow-gold);
+}
+.affiliate-card--primary {
+  border-color: rgba(80,200,120,0.25);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(80,200,120,0.03) 100%);
+}
+.affiliate-card--primary:hover {
+  border-color: rgba(80,200,120,0.4);
+  box-shadow: var(--shadow-emerald);
+}
+.affiliate-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.affiliate-card__logo {
+  width: 48px; height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.affiliate-card__meta { flex: 1; }
+.affiliate-card__name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+.affiliate-card__category {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+.affiliate-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.affiliate-card__rating span { color: var(--text-muted); }
+.affiliate-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+.feature-pill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  border: 1px solid var(--emerald-border);
+  color: var(--emerald);
+  background: var(--emerald-glow);
+}
+.feature-pill--gold {
+  border-color: var(--gold-border);
+  color: var(--gold);
+  background: var(--gold-glow);
+}
+.feature-pill--warning {
+  border-color: rgba(239,68,68,0.2);
+  color: var(--color-red);
+  background: rgba(239,68,68,0.06);
+}
+.affiliate-card__desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+.affiliate-card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.affiliate-card__disclaimer {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+@media (max-width: 600px) {
+  .affiliate-card { padding: 1.1rem; }
+  .affiliate-card__cta { flex-direction: column; align-items: flex-start; }
+  .affiliate-card__cta .cta-btn,
+  .affiliate-card__cta .cta-teal,
+  .affiliate-card__cta .cta-gold { width: 100%; justify-content: center; text-align: center; }
+}
 
 /* --- 17. RESPONSIVE --- */
 /* Aliases for sim-section classes */

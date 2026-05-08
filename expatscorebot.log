@@ -9627,3 +9627,81 @@ I don't q
 2026-04-04 00:49:13  [INFO]    🌙 Next harvest in silent window — sleeping now.
 2026-04-04 00:49:13  [INFO]  🌙 [YouTube] SLEEP — 10h 10m until 11:00
 2026-04-04 01:23:22  [INFO]  🌙 [Reddit] SLEEP MODE — Sleeping 9h 36m until 11:00
+2026-05-08 07:22:09  [WARNING]  ⚠  Worker import failed (No module named 'googleapiclient') — sniper mode unavailable in this env
+2026-05-08 07:22:09  [INFO]  =================================================================
+2026-05-08 07:22:09  [INFO]  🚀 ExpatScore Coordinator v2.0 — SEO Foundation Edition
+2026-05-08 07:22:09  [INFO]     Workers  : RedditWorker + YouTubeWorker
+2026-05-08 07:22:09  [INFO]     Generator: Jinja2 blog page builder with schema injection
+2026-05-08 07:22:09  [INFO]     Scoring  : Groq llama3 (fallback: keyword heuristic)
+2026-05-08 07:22:09  [INFO]     Watchdog : Auto-restarts dead threads every 5 min
+2026-05-08 07:22:09  [INFO]  =================================================================
+2026-05-08 07:22:09  [INFO]  
+📐 Running page generator...
+2026-05-08 07:22:09  [CRITICAL]  ❌ jinja2 not installed. Run: pip install jinja2
+2026-05-08 07:22:09  [INFO]    ✅ All pages up to date — no sitemap regeneration needed
+2026-05-08 07:22:09  [INFO]  ✅ GENERATOR_ONLY mode — exiting after page generation.
+2026-05-08 07:23:07  [WARNING]  ⚠  Worker import failed (No module named 'googleapiclient') — sniper mode unavailable in this env
+2026-05-08 07:23:07  [INFO]  =================================================================
+2026-05-08 07:23:07  [INFO]  🚀 ExpatScore Coordinator v2.0 — SEO Foundation Edition
+2026-05-08 07:23:07  [INFO]     Workers  : RedditWorker + YouTubeWorker
+2026-05-08 07:23:07  [INFO]     Generator: Jinja2 blog page builder with schema injection
+2026-05-08 07:23:07  [INFO]     Scoring  : Groq llama3 (fallback: keyword heuristic)
+2026-05-08 07:23:07  [INFO]     Watchdog : Auto-restarts dead threads every 5 min
+2026-05-08 07:23:07  [INFO]  =================================================================
+2026-05-08 07:23:07  [INFO]  
+📐 Running page generator...
+2026-05-08 07:23:07  [CRITICAL]  ❌ Template not found: /Users/macgr/Downloads/expat_web/docs/blog_template.html
+2026-05-08 07:23:07  [INFO]    ✅ All pages up to date — no sitemap regeneration needed
+2026-05-08 07:23:07  [INFO]  ✅ GENERATOR_ONLY mode — exiting after page generation.
+2026-05-08 07:25:31  [WARNING]  ⚠  Worker import failed (No module named 'googleapiclient') — sniper mode unavailable in this env
+2026-05-08 07:25:31  [INFO]  =================================================================
+2026-05-08 07:25:31  [INFO]  🚀 ExpatScore Coordinator v2.0 — SEO Foundation Edition
+2026-05-08 07:25:31  [INFO]     Workers  : RedditWorker + YouTubeWorker
+2026-05-08 07:25:31  [INFO]     Generator: Jinja2 blog page builder with schema injection
+2026-05-08 07:25:31  [INFO]     Scoring  : Groq llama3 (fallback: keyword heuristic)
+2026-05-08 07:25:31  [INFO]     Watchdog : Auto-restarts dead threads every 5 min
+2026-05-08 07:25:31  [INFO]  =================================================================
+2026-05-08 07:25:31  [INFO]  
+📐 Running page generator...
+2026-05-08 07:25:31  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-08 07:25:31  [INFO]    ✅ Built: blog/.dedup_registry.html (0 words · 1 min read)
+2026-05-08 07:25:31  [INFO]    ✅ Built: blog/.session_state.html (0 words · 1 min read)
+2026-05-08 07:30:26  [WARNING]  ⚠  Worker import failed (No module named 'googleapiclient') — sniper mode unavailable in this env
+2026-05-08 07:30:26  [INFO]  =================================================================
+2026-05-08 07:30:26  [INFO]  🚀 ExpatScore Coordinator v2.0 — SEO Foundation Edition
+2026-05-08 07:30:26  [INFO]     Workers  : RedditWorker + YouTubeWorker
+2026-05-08 07:30:26  [INFO]     Generator: Jinja2 blog page builder with schema injection
+2026-05-08 07:30:26  [INFO]     Scoring  : Groq llama3 (fallback: keyword heuristic)
+2026-05-08 07:30:26  [INFO]     Watchdog : Auto-restarts dead threads every 5 min
+2026-05-08 07:30:26  [INFO]  =================================================================
+2026-05-08 07:30:26  [INFO]  
+📐 Running page generator...
+2026-05-08 07:30:26  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-08 07:30:26  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-08 07:30:26  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-08 07:30:26  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-08 07:30:26  [WARNING]    ⚠  seen_posts.json does not contain a valid post object (type: str) — skipping
+2026-05-08 07:30:27  [INFO]    ✅ Built: blog/seen_urls.html (0 words · 1 min read)
+2026-05-08 07:30:27  [INFO]    📊 Generator summary: 1 built, 10 already current, 11 total tracked
+2026-05-08 07:30:27  [INFO]    🗺  Regenerating sitemap after 1 new page(s)...
+2026-05-08 07:30:27  [INFO]    🗺  Sitemap regenerated: 33 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-08 07:30:27  [INFO]  ✅ GENERATOR_ONLY mode — exiting after page generation.
+2026-05-08 07:44:33  [WARNING]  ⚠  Worker import failed (No module named 'googleapiclient') — sniper mode unavailable in this env
+2026-05-08 07:44:33  [INFO]  =================================================================
+2026-05-08 07:44:33  [INFO]  🚀 ExpatScore Coordinator v2.0 — SEO Foundation Edition
+2026-05-08 07:44:33  [INFO]     Workers  : RedditWorker + YouTubeWorker
+2026-05-08 07:44:33  [INFO]     Generator: Jinja2 blog page builder with schema injection
+2026-05-08 07:44:33  [INFO]     Scoring  : Groq llama3 (fallback: keyword heuristic)
+2026-05-08 07:44:33  [INFO]     Watchdog : Auto-restarts dead threads every 5 min
+2026-05-08 07:44:33  [INFO]  =================================================================
+2026-05-08 07:44:33  [INFO]  
+📐 Running page generator...
+2026-05-08 07:44:33  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-08 07:44:33  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-08 07:44:33  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-08 07:44:33  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-08 07:44:33  [WARNING]    ⚠  seen_posts.json does not contain a valid post object (type: str) — skipping
+2026-05-08 07:44:33  [INFO]    ⏭  seen_urls — up to date, skipping
+2026-05-08 07:44:33  [INFO]    📊 Generator summary: 0 built, 11 already current, 11 total tracked
+2026-05-08 07:44:33  [INFO]    ✅ All pages up to date — no sitemap regeneration needed
+2026-05-08 07:44:33  [INFO]  ✅ GENERATOR_ONLY mode — exiting after page generation.

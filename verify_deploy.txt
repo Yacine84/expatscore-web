@@ -1,0 +1,73 @@
+--- STYLE.CSS (FIRST 50 LINES) ---
+/* ==========================================================================
+   EXPATSCORE.DE — PREMIUM FINTECH DESIGN SYSTEM v4.0
+   Aesthetic: Deep Obsidian × Gold × Emerald — Luxury Fintech
+   Fonts: Playfair Display (headings) + Outfit (body) + JetBrains Mono (data)
+   ========================================================================== */
+
+/* --- 0. FONT IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* --- 1. DESIGN TOKENS --- */
+:root {
+  /* Core Palette */
+  --bg-primary:     #0a0e17;
+  --bg-secondary:   #111827;
+  --bg-card:        #1a2035;
+  --bg-card-hover:  #1f2741;
+  --bg-glass:       rgba(26, 32, 53, 0.55);
+  --bg-overlay:     rgba(10, 14, 23, 0.92);
+
+  /* Gold System */
+  --gold:           #D4AF37;
+  --gold-light:     #F0D875;
+  --gold-dim:       #8a6e2e;
+  --gold-glow:      rgba(212, 175, 55, 0.08);
+  --gold-border:    rgba(212, 175, 55, 0.18);
+
+  /* Emerald System */
+  --emerald:        #50C878;
+  --emerald-light:  #7DDFAA;
+  --emerald-dim:    #2E8B57;
+  --emerald-glow:   rgba(80, 200, 120, 0.08);
+  --emerald-border: rgba(80, 200, 120, 0.18);
+
+  /* Text */
+  --text-primary:   #F0F2F5;
+  --text-secondary: #9CA3AF;
+  --text-muted:     #6B7280;
+
+  /* Borders */
+  --border:         rgba(212, 175, 55, 0.12);
+  --border-subtle:  rgba(255, 255, 255, 0.06);
+
+  /* Semantic */
+  --color-red:      #EF4444;
+  --color-blue:     #60A5FA;
+  --color-amber:    #FBBF24;
+
+  /* Typography */
+  --font-display:   'Playfair Display', Georgia, serif;
+  --font-body:      'Outfit', system-ui, sans-serif;
+
+--- SCHEMA & STRUCTURE CHECK (SCHUFA GUIDE) ---
+  <!-- Article Schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Get a SCHUFA Score in Germany as an Expat (2026 Guide)","description":"Complete guide for expats building a SCHUFA credit score in Germany from zero, covering the 2026 reform and a 90-day action plan.","author":{"@type":"Person","name":"Yassine Chaikhi"},"publisher":{"@type":"Organization","name":"ExpatScore.de","url":"https://expatscore.de"},"datePublished":"2026-03-20","dateModified":"2026-03-20","url":"https://expatscore.de/blog/how-to-get-schufa-germany","inLanguage":"en"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can expats get a SCHUFA score in Germany?","acceptedAnswer":{"@type":"Answer","text":"Yes. SCHUFA begins tracking your credit activity as soon as you open a German bank account or sign a contract with a German provider. There is no minimum residency period required. Expats start with no score — not a bad score — and can build one within 6–12 months."}},{"@type":"Question","name":"How long does it take to build a SCHUFA score from zero?","acceptedAnswer":{"@type":"Answer","text":"Most expats reach a functional score above 600 within 6 months if they open a bank account immediately, pay all bills on time, and keep one active credit line. A strong score of 750+ typically takes 12–18 months."}},{"@type":"Question","name":"Which bank is best for expats with no SCHUFA?","acceptedAnswer":{"@type":"Answer","text":"N26 and Vivid Money are the most accessible entry points — both accept foreign addresses and do not require an existing SCHUFA score."}},{"@type":"Question","name":"Does SCHUFA check your nationality?","acceptedAnswer":{"@type":"Answer","text":"No. Under the 2026 system, SCHUFA is legally prohibited from using nationality as a scoring factor. The 12 new factors focus exclusively on financial behaviour."}},{"@type":"Question","name":"How can I check my SCHUFA score for free in 2026?","acceptedAnswer":{"@type":"Answer","text":"Since the March 2026 reform, you can request a free online score at meineSCHUFA.de after verifying your identity via eID or Video-Ident."}},{"@type":"Question","name":"Does registering your address (Anmeldung) affect your SCHUFA score?","acceptedAnswer":{"@type":"Answer","text":"Yes, indirectly. Factor 2 of the new scoring system rewards stability of address. Completing your Anmeldung promptly and staying at the same address for at least 12 months benefits your score."}},{"@type":"Question","name":"Can a landlord reject me because I have no SCHUFA score?","acceptedAnswer":{"@type":"Answer","text":"Yes, legally. Landlords may request a SCHUFA Bonitätsauskunft as part of rental applications. No score is typically interpreted as higher risk. The best workaround is to provide employment contract, payslips, and bank statements as alternative proof."}},{"@type":"Question","name":"What happens to my SCHUFA file if I leave Germany?","acceptedAnswer":{"@type":"Answer","text":"Your SCHUFA file remains active even after you leave Germany. Positive entries are stored for the duration of the account or contract plus up to 3 years. Close accounts cleanly before leaving."}}]}</script>
+  <link rel="stylesheet" href="/style.css">
+       without touching style.css
+  <p>The reform that took effect on 17 March 2026 is the direct result of a 2023 European Court of Justice ruling that found SCHUFA's fully automated credit scoring system in violation of Article 22 of the GDPR. After a two-year transition period and intense pressure from consumer protection groups, the new system launched with four major structural changes:</p>
+        <div class="build-step-desc">At month 3, request your free annual data copy under Article 15 GDPR from meineSCHUFA.de. Choose "Datenkopie nach Art. 15 DSGVO" — this comprehensive version is sent by post within 4–6 weeks and contains your full file. Verify all entries are accurate. Dispute any inaccurate entries in writing. SCHUFA is legally required to respond within one month.</div>
+    <li class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How can I check my SCHUFA score for free in 2026?<span class="faq-icon">+</span></button><div class="faq-a">Since the March 2026 reform, you can request a free online score at meineSCHUFA.de after verifying your identity via eID or Video-Ident. For the full data file, request the free Article 15 GDPR data copy by post — it contains more detail and is delivered within 4–6 weeks.</div></li>
+
+--- SITEMAP CHECK ---
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://expatscore.de/schufa-simulator</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
