@@ -9705,3 +9705,174 @@ I don't q
 2026-05-08 07:44:33  [INFO]    📊 Generator summary: 0 built, 11 already current, 11 total tracked
 2026-05-08 07:44:33  [INFO]    ✅ All pages up to date — no sitemap regeneration needed
 2026-05-08 07:44:33  [INFO]  ✅ GENERATOR_ONLY mode — exiting after page generation.
+2026-05-11 10:36:37  [INFO]  =================================================================
+2026-05-11 10:36:37  [INFO]  🚀 ExpatScore Coordinator v2.1 — SEO Foundation Edition (surgical fixes)
+2026-05-11 10:36:37  [INFO]     Workers  : RedditWorker + YouTubeWorker
+2026-05-11 10:36:37  [INFO]     Generator: Jinja2 blog page builder with schema injection
+2026-05-11 10:36:37  [INFO]     Scoring  : Groq llama3 (fallback: keyword heuristic)
+2026-05-11 10:36:37  [INFO]     Watchdog : Auto-restarts dead threads every 5 min
+2026-05-11 10:36:37  [INFO]  =================================================================
+2026-05-11 10:36:37  [INFO]  
+📐 Running page generator...
+2026-05-11 10:36:38  [CRITICAL]  ❌ Template not found: /Users/macgr/Downloads/expat_web/docs/blog_template.html
+2026-05-11 10:36:38  [INFO]    ✅ All pages up to date — no sitemap regeneration needed
+2026-05-11 10:36:38  [INFO]  ✅ Environment check passed
+2026-05-11 10:36:38  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 10:36:38  [INFO]  🟠 Reddit worker launched
+2026-05-11 10:36:38  [CRITICAL]  💥 [Reddit Worker] Fatal crash: module 'reddit_worker' has no attribute 'main'
+Traceback (most recent call last):
+  File "/Users/macgr/Downloads/expat_web/main.py", line 446, in run_reddit
+    reddit_worker.main()
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reddit_worker' has no attribute 'main'
+2026-05-11 10:36:53  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 10:36:53  [INFO]  🔴 YouTube worker launched
+2026-05-11 10:36:53  [INFO]  =================================================================
+2026-05-11 10:36:53  [INFO]  ✅ Both workers running. Press Ctrl+C to stop all.
+2026-05-11 10:36:53  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 10:36:53  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 10:36:53  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 10:36:53  [INFO]     Competitor brands: 19
+2026-05-11 10:36:53  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 10:36:53  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 10:36:53  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 10:36:53  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 10:36:53  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 10:36:53  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 10:36:53  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 10:36:53  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 10:36:53  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 10:36:53  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 10:36:53  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 10:36:53  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 10:36:53  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 10:36:53  [INFO]  =================================================================
+2026-05-11 10:36:53  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 10:36:53  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 10:36:53  [INFO]  🌙 [YouTube] SLEEP — 0h 23m until 11:00
+2026-05-11 10:37:47  [INFO]  🔴 Ctrl+C received — shutting down. Goodbye.
+2026-05-11 10:48:27  [INFO]  =================================================================
+2026-05-11 10:48:27  [INFO]  🚀 ExpatScore Coordinator v2.2 — Template path fixed
+2026-05-11 10:48:27  [INFO]  =================================================================
+2026-05-11 10:48:27  [INFO]  
+📐 Running page generator...
+2026-05-11 10:48:27  [CRITICAL]  ❌ Template not found: /Users/macgr/Downloads/expat_web/templates/blog_template.html
+2026-05-11 10:48:27  [INFO]    ✅ All pages up to date
+2026-05-11 10:48:27  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 10:48:27  [CRITICAL]  💥 [Reddit Worker] Fatal crash: module 'reddit_worker' has no attribute 'main'
+Traceback (most recent call last):
+  File "/Users/macgr/Downloads/expat_web/main.py", line 313, in run_reddit
+    reddit_worker.main()
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reddit_worker' has no attribute 'main'
+2026-05-11 10:48:42  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 10:48:42  [INFO]  ✅ Both workers running. Press Ctrl+C to stop.
+2026-05-11 10:48:42  [INFO]  =================================================================
+2026-05-11 10:48:42  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 10:48:42  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 10:48:42  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 10:48:42  [INFO]     Competitor brands: 19
+2026-05-11 10:48:42  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 10:48:42  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 10:48:42  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 10:48:42  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 10:48:42  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 10:48:42  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 10:48:42  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 10:48:42  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 10:48:42  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 10:48:42  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 10:48:42  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 10:48:42  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 10:48:42  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 10:48:42  [INFO]  =================================================================
+2026-05-11 10:48:42  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 10:48:42  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 10:48:42  [INFO]  🌙 [YouTube] SLEEP — 0h 11m until 11:00
+2026-05-11 10:49:14  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 10:50:24  [INFO]  =================================================================
+2026-05-11 10:50:24  [INFO]  🚀 ExpatScore Coordinator v2.2 — Template path fixed
+2026-05-11 10:50:24  [INFO]  =================================================================
+2026-05-11 10:50:24  [INFO]  
+📐 Running page generator...
+2026-05-11 10:50:24  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 10:50:24  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 10:50:24  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 10:50:24  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-11 10:50:24  [WARNING]    ⚠  seen_posts.json does not contain a valid post object — skipping
+2026-05-11 10:50:24  [INFO]    ✅ Built: blog/seen_urls.html (0 words · 1 min read)
+2026-05-11 10:50:24  [INFO]    📊 Generator summary: 1 built, 1 total tracked
+2026-05-11 10:50:24  [INFO]    🗺  Sitemap regenerated: 32 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 10:50:24  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 10:50:24  [CRITICAL]  💥 [Reddit Worker] Fatal crash: module 'reddit_worker' has no attribute 'main'
+Traceback (most recent call last):
+  File "/Users/macgr/Downloads/expat_web/main.py", line 313, in run_reddit
+    reddit_worker.main()
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reddit_worker' has no attribute 'main'
+2026-05-11 10:50:39  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 10:50:39  [INFO]  ✅ Both workers running. Press Ctrl+C to stop.
+2026-05-11 10:50:39  [INFO]  =================================================================
+2026-05-11 10:50:39  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 10:50:39  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 10:50:39  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 10:50:39  [INFO]     Competitor brands: 19
+2026-05-11 10:50:39  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 10:50:39  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 10:50:39  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 10:50:39  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 10:50:39  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 10:50:39  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 10:50:39  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 10:50:39  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 10:50:39  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 10:50:39  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 10:50:39  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 10:50:39  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 10:50:39  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 10:50:39  [INFO]  =================================================================
+2026-05-11 10:50:39  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 10:50:39  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 10:50:39  [INFO]  🌙 [YouTube] SLEEP — 0h 9m until 11:00
+2026-05-11 10:55:07  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 10:56:04  [INFO]  =================================================================
+2026-05-11 10:56:04  [INFO]  🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled
+2026-05-11 10:56:04  [INFO]  =================================================================
+2026-05-11 10:56:04  [INFO]  
+📐 Running page generator...
+2026-05-11 10:56:05  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 10:56:05  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 10:56:05  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 10:56:05  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-11 10:56:05  [WARNING]    ⚠  seen_posts.json does not contain a valid post object — skipping
+2026-05-11 10:56:05  [INFO]    ✅ Built: blog/seen_urls.html (0 words · 1 min read)
+2026-05-11 10:56:05  [INFO]    📊 Generator summary: 1 built, 1 total tracked
+2026-05-11 10:56:05  [INFO]    🗺  Sitemap regenerated: 32 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 10:56:05  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 10:56:05  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 10:56:20  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 10:56:20  [INFO]  ✅ YouTube worker only is active. Reddit worker is disabled.
+2026-05-11 10:56:20  [INFO]  =================================================================
+2026-05-11 10:56:20  [INFO]  Press Ctrl+C to stop.
+2026-05-11 10:56:20  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 10:56:20  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 10:56:20  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 10:56:20  [INFO]     Competitor brands: 19
+2026-05-11 10:56:20  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 10:56:20  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 10:56:20  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 10:56:20  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 10:56:20  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 10:56:20  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 10:56:20  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 10:56:20  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 10:56:20  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 10:56:20  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 10:56:20  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 10:56:20  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 10:56:20  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 10:56:20  [INFO]  =================================================================
+2026-05-11 10:56:20  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 10:56:20  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 10:56:20  [INFO]  🌙 [YouTube] SLEEP — 0h 3m until 11:00
+2026-05-11 10:57:24  [INFO]  🔴 Shutting down. Goodbye.
