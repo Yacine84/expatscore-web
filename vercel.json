@@ -241,6 +241,18 @@
       "destination": "/docs/schufa-simulator.html"
     },
     {
+      "source": "/blog/schufa-simulator",
+      "destination": "/docs/schufa-simulator.html"
+    },
+    {
+      "source": "/blog/schufa-guide",
+      "destination": "/docs/schufa-guide.html"
+    },
+    {
+      "source": "/blog/blue-card-tool",
+      "destination": "/docs/blue-card-tool.html"
+    },
+    {
       "source": "/blog/style.css",
       "destination": "/docs/style.css"
     },
