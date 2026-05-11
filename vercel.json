@@ -1,276 +1,82 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+
   "redirects": [
-    {
-      "source": "/guides/schufa-guide",
-      "destination": "/schufa-guide",
-      "permanent": true
-    },
-    {
-      "source": "/guides/schufa-guide.html",
-      "destination": "/schufa-guide",
-      "permanent": true
-    },
-    {
-      "source": "/guides/anmeldung-germany",
-      "destination": "/anmeldung-germany",
-      "permanent": true
-    },
-    {
-      "source": "/guides/anmeldung-germany.html",
-      "destination": "/anmeldung-germany",
-      "permanent": true
-    },
-    {
-      "source": "/guides/steuer-id-guide",
-      "destination": "/steuer-id-guide",
-      "permanent": true
-    },
-    {
-      "source": "/guides/steuer-id-guide.html",
-      "destination": "/steuer-id-guide",
-      "permanent": true
-    },
-    {
-      "source": "/guides",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/guides/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/banking/n26-bank-erfahrungen",
-      "destination": "/n26-bank-erfahrungen",
-      "permanent": true
-    },
-    {
-      "source": "/banking/n26-bank-erfahrungen.html",
-      "destination": "/n26-bank-erfahrungen",
-      "permanent": true
-    },
-    {
-      "source": "/banking/blocked-account-germany",
-      "destination": "/blocked-account-germany",
-      "permanent": true
-    },
-    {
-      "source": "/banking/blocked-account-germany.html",
-      "destination": "/blocked-account-germany",
-      "permanent": true
-    },
-    {
-      "source": "/banking/",
-      "destination": "/banking",
-      "permanent": true
-    },
-    {
-      "source": "/insurance/tk-health-insurance",
-      "destination": "/tk-health-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/insurance/tk-health-insurance.html",
-      "destination": "/tk-health-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/insurance/",
-      "destination": "/insurance",
-      "permanent": true
-    },
-    {
-      "source": "/legal/steuer-id-guide",
-      "destination": "/steuer-id-guide",
-      "permanent": true
-    },
-    {
-      "source": "/legal/steuer-id-guide.html",
-      "destination": "/steuer-id-guide",
-      "permanent": true
-    },
-    {
-      "source": "/legal/blue-card-tool",
-      "destination": "/blue-card-tool",
-      "permanent": true
-    },
-    {
-      "source": "/legal/blue-card-tool.html",
-      "destination": "/blue-card-tool",
-      "permanent": true
-    },
-    {
-      "source": "/legal",
-      "destination": "/impressum",
-      "permanent": true
-    },
-    {
-      "source": "/legal/",
-      "destination": "/impressum",
-      "permanent": true
-    },
-    {
-      "source": "/tools/schufa-simulator",
-      "destination": "/schufa-simulator",
-      "permanent": true
-    },
-    {
-      "source": "/tools/schufa-simulator.html",
-      "destination": "/schufa-simulator",
-      "permanent": true
-    },
-    {
-      "source": "/tools",
-      "destination": "/schufa-simulator",
-      "permanent": true
-    },
-    {
-      "source": "/tools/",
-      "destination": "/schufa-simulator",
-      "permanent": true
-    },
-    {
-      "source": "/wenn-du-dauerhaft-ins-minus-rutschst-und-ruckzahlungen-ausbleiben-wer-sein-konto-sauber-fuhrt/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/dauerhaft-score",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/bahnbonus-punkte-einlsen-fr-ice-tickets",
-      "destination": "/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets",
-      "permanent": true
-    },
-    {
-      "source": "/blog/bahnbonus-punkte-einlsen-fr-ice-tickets.html",
-      "destination": "/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets",
-      "permanent": true
-    },
-    {
-      "source": "/anmeldung-germany",
-      "destination": "/blog/anmeldung-germany",
-      "permanent": true
-    },
-    {
-      "source": "/anmeldung-germany.html",
-      "destination": "/blog/anmeldung-germany",
-      "permanent": true
-    },
-    {
-      "source": "/blocked-account-germany",
-      "destination": "/blog/blocked-account-germany",
-      "permanent": true
-    },
-    {
-      "source": "/blocked-account-germany.html",
-      "destination": "/blog/blocked-account-germany",
-      "permanent": true
-    },
-    {
-      "source": "/konto-ohne-anmeldung",
-      "destination": "/blog/konto-ohne-anmeldung",
-      "permanent": true
-    },
-    {
-      "source": "/konto-ohne-anmeldung.html",
-      "destination": "/blog/konto-ohne-anmeldung",
-      "permanent": true
-    },
-    {
-      "source": "/n26-bank-erfahrungen",
-      "destination": "/blog/n26-bank-erfahrungen",
-      "permanent": true
-    },
-    {
-      "source": "/n26-bank-erfahrungen.html",
-      "destination": "/blog/n26-bank-erfahrungen",
-      "permanent": true
-    },
-    {
-      "source": "/steuer-id-guide",
-      "destination": "/blog/steuer-id-guide",
-      "permanent": true
-    },
-    {
-      "source": "/steuer-id-guide.html",
-      "destination": "/blog/steuer-id-guide",
-      "permanent": true
-    },
-    {
-      "source": "/tk-health-insurance",
-      "destination": "/blog/tk-health-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/tk-health-insurance.html",
-      "destination": "/blog/tk-health-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-get-schufa-germany",
-      "destination": "/blog/how-to-get-schufa-germany",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-get-schufa-germany.html",
-      "destination": "/blog/how-to-get-schufa-germany",
-      "permanent": true
-    }
+
+    { "source": "/blog/schufa-simulator",        "destination": "/schufa-simulator",                    "permanent": true },
+    { "source": "/blog/schufa-simulator.html",   "destination": "/schufa-simulator",                    "permanent": true },
+    { "source": "/blog/blue-card-tool",          "destination": "/blue-card-tool",                      "permanent": true },
+    { "source": "/blog/blue-card-tool.html",     "destination": "/blue-card-tool",                      "permanent": true },
+    { "source": "/blog/schufa-guide",            "destination": "/schufa-guide",                        "permanent": true },
+    { "source": "/blog/schufa-guide.html",       "destination": "/schufa-guide",                        "permanent": true },
+    { "source": "/blog/etf-guide",               "destination": "/etf-guide",                           "permanent": true },
+    { "source": "/blog/etf-guide.html",          "destination": "/etf-guide",                           "permanent": true },
+
+    { "source": "/guides/schufa-guide",          "destination": "/schufa-guide",                        "permanent": true },
+    { "source": "/guides/schufa-guide.html",     "destination": "/schufa-guide",                        "permanent": true },
+    { "source": "/guides/anmeldung-germany",     "destination": "/blog/anmeldung-germany",              "permanent": true },
+    { "source": "/guides/anmeldung-germany.html","destination": "/blog/anmeldung-germany",              "permanent": true },
+    { "source": "/guides/steuer-id-guide",       "destination": "/blog/steuer-id-guide",                "permanent": true },
+    { "source": "/guides/steuer-id-guide.html",  "destination": "/blog/steuer-id-guide",                "permanent": true },
+    { "source": "/guides",                       "destination": "/",                                     "permanent": true },
+    { "source": "/guides/",                      "destination": "/",                                     "permanent": true },
+
+    { "source": "/banking/n26-bank-erfahrungen",        "destination": "/blog/n26-bank-erfahrungen",    "permanent": true },
+    { "source": "/banking/n26-bank-erfahrungen.html",   "destination": "/blog/n26-bank-erfahrungen",    "permanent": true },
+    { "source": "/banking/blocked-account-germany",     "destination": "/blog/blocked-account-germany", "permanent": true },
+    { "source": "/banking/blocked-account-germany.html","destination": "/blog/blocked-account-germany", "permanent": true },
+
+    { "source": "/insurance/tk-health-insurance",       "destination": "/blog/tk-health-insurance",     "permanent": true },
+    { "source": "/insurance/tk-health-insurance.html",  "destination": "/blog/tk-health-insurance",     "permanent": true },
+
+    { "source": "/legal/steuer-id-guide",        "destination": "/blog/steuer-id-guide",                "permanent": true },
+    { "source": "/legal/steuer-id-guide.html",   "destination": "/blog/steuer-id-guide",                "permanent": true },
+    { "source": "/legal/blue-card-tool",         "destination": "/blue-card-tool",                      "permanent": true },
+    { "source": "/legal/blue-card-tool.html",    "destination": "/blue-card-tool",                      "permanent": true },
+    { "source": "/legal",                        "destination": "/impressum",                            "permanent": true },
+    { "source": "/legal/",                       "destination": "/impressum",                            "permanent": true },
+
+    { "source": "/tools/schufa-simulator",       "destination": "/schufa-simulator",                    "permanent": true },
+    { "source": "/tools/schufa-simulator.html",  "destination": "/schufa-simulator",                    "permanent": true },
+    { "source": "/tools",                        "destination": "/schufa-simulator",                     "permanent": true },
+    { "source": "/tools/",                       "destination": "/schufa-simulator",                     "permanent": true },
+
+    { "source": "/anmeldung-germany",             "destination": "/blog/anmeldung-germany",              "permanent": true },
+    { "source": "/anmeldung-germany.html",        "destination": "/blog/anmeldung-germany",              "permanent": true },
+    { "source": "/blocked-account-germany",       "destination": "/blog/blocked-account-germany",        "permanent": true },
+    { "source": "/blocked-account-germany.html",  "destination": "/blog/blocked-account-germany",        "permanent": true },
+    { "source": "/konto-ohne-anmeldung",          "destination": "/blog/konto-ohne-anmeldung",           "permanent": true },
+    { "source": "/konto-ohne-anmeldung.html",     "destination": "/blog/konto-ohne-anmeldung",           "permanent": true },
+    { "source": "/n26-bank-erfahrungen",          "destination": "/blog/n26-bank-erfahrungen",           "permanent": true },
+    { "source": "/n26-bank-erfahrungen.html",     "destination": "/blog/n26-bank-erfahrungen",           "permanent": true },
+    { "source": "/steuer-id-guide",               "destination": "/blog/steuer-id-guide",                "permanent": true },
+    { "source": "/steuer-id-guide.html",          "destination": "/blog/steuer-id-guide",                "permanent": true },
+    { "source": "/tk-health-insurance",           "destination": "/blog/tk-health-insurance",            "permanent": true },
+    { "source": "/tk-health-insurance.html",      "destination": "/blog/tk-health-insurance",            "permanent": true },
+    { "source": "/how-to-get-schufa-germany",     "destination": "/blog/how-to-get-schufa-germany",      "permanent": true },
+    { "source": "/how-to-get-schufa-germany.html","destination": "/blog/how-to-get-schufa-germany",      "permanent": true },
+
+    { "source": "/blog/bahnbonus-punkte-einlsen-fr-ice-tickets",      "destination": "/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets", "permanent": true },
+    { "source": "/blog/bahnbonus-punkte-einlsen-fr-ice-tickets.html", "destination": "/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets", "permanent": true },
+
+    { "source": "/wenn-du-dauerhaft-ins-minus-rutschst-und-ruckzahlungen-ausbleiben-wer-sein-konto-sauber-fuhrt/:path*", "destination": "/", "permanent": true },
+    { "source": "/dauerhaft-score",              "destination": "/",                                     "permanent": true }
+
   ],
+
   "rewrites": [
-    {
-      "source": "/etf-guide",
-      "destination": "/docs/blog/savings-etfs-and-pensions-essential-money-guide-for-young-expats-in-germany.html"
-    },
-    {
-      "source": "/schufa-guide",
-      "destination": "/docs/schufa-guide.html"
-    },
-    {
-      "source": "/blue-card-tool",
-      "destination": "/docs/blue-card-tool.html"
-    },
-    {
-      "source": "/schufa-simulator",
-      "destination": "/docs/schufa-simulator.html"
-    },
-    {
-      "source": "/blog/schufa-simulator",
-      "destination": "/docs/schufa-simulator.html"
-    },
-    {
-      "source": "/blog/schufa-guide",
-      "destination": "/docs/schufa-guide.html"
-    },
-    {
-      "source": "/blog/blue-card-tool",
-      "destination": "/docs/blue-card-tool.html"
-    },
-    {
-      "source": "/blog/style.css",
-      "destination": "/docs/style.css"
-    },
-    {
-      "source": "/blog/script.js",
-      "destination": "/docs/script.js"
-    },
-    {
-      "source": "/blog",
-      "destination": "/docs/blog.html"
-    },
-    {
-      "source": "/blog/:slug",
-      "destination": "/docs/blog/:slug.html"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/docs/:path*"
-    }
+    { "source": "/blog/style.css",   "destination": "/docs/style.css"   },
+    { "source": "/blog/script.js",   "destination": "/docs/script.js"   },
+
+    { "source": "/etf-guide",        "destination": "/docs/blog/savings-etfs-and-pensions-essential-money-guide-for-young-expats-in-germany.html" },
+    { "source": "/schufa-guide",     "destination": "/docs/schufa-guide.html"    },
+    { "source": "/blue-card-tool",   "destination": "/docs/blue-card-tool.html"  },
+    { "source": "/schufa-simulator", "destination": "/docs/schufa-simulator.html"},
+
+    { "source": "/blog",             "destination": "/docs/blog.html"            },
+    { "source": "/blog/:slug",       "destination": "/docs/blog/:slug.html"      },
+
+    { "source": "/:path*",           "destination": "/docs/:path*"               }
   ]
 }
