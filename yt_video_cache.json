@@ -1,6 +1,54 @@
 {
-  "date": "2026-04-09",
+  "date": "2026-05-11",
   "video_entries": [
+    {
+      "id": "i7m5IkFrW0s",
+      "source": "search",
+      "channel_name": "Davids Videos",
+      "channel_id": "UCPMb-9UsPCxwqYGe3lLs29g",
+      "published_at": "2023-10-25T06:34:28Z",
+      "title": "Living in Germany as a British Expat: A Guide to Life Abroad"
+    },
+    {
+      "id": "1S6sVewaMB8",
+      "source": "search",
+      "channel_name": "Leaving The US",
+      "channel_id": "UCyKx5uciOvDE2JqcWbMJuJA",
+      "published_at": "2025-02-18T04:28:17Z",
+      "title": "Expat Communities and Legal Systems in Germany for 2025"
+    },
+    {
+      "id": "t0bNibT8GW4",
+      "source": "search",
+      "channel_name": "hello erika",
+      "channel_id": "UCDDobgQYZHvlYqwnuGE1B7w",
+      "published_at": "2023-02-02T16:00:25Z",
+      "title": "9 things I wish I knew before moving to Germany"
+    },
+    {
+      "id": "YwAmnrvOZjM",
+      "source": "search",
+      "channel_name": "Beyond Borders",
+      "channel_id": "UCES3XxQPx2d7WQHlnI-Qa4Q",
+      "published_at": "2025-08-23T17:00:44Z",
+      "title": "Living in Germany\u2013 Expat Life, Local Culture and What to Expect."
+    },
+    {
+      "id": "MJJuyaC-slo",
+      "source": "search",
+      "channel_name": "Harikrishnan",
+      "channel_id": "UCqttDNccpXADSfYQ76w2mNw",
+      "published_at": "2024-04-10T16:00:25Z",
+      "title": "How to move to Germany checklist. Germany relocation tips #germany #checklist"
+    },
+    {
+      "id": "jfBAj6QQyLQ",
+      "source": "search",
+      "channel_name": "Money in Germany",
+      "channel_id": "UCEgTKqcn6XxYScSQIy6o4pQ",
+      "published_at": "2026-03-31T14:43:39Z",
+      "title": "How to Open a German Bank Account as a Foreigner Complete Guide."
+    },
     {
       "id": "ovsUC89jh60",
       "source": "search",
@@ -18,14 +66,6 @@
       "title": "German Banks for English Speakers"
     },
     {
-      "id": "aVISupCAS5s",
-      "source": "search",
-      "channel_name": "Simple Germany",
-      "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
-      "published_at": "2026-02-02T16:00:02Z",
-      "title": "Best Bank Accounts To Open When Moving To Germany in 2026"
-    },
-    {
       "id": "_whezj6Rw0E",
       "source": "search",
       "channel_name": "Simple Germany",
@@ -34,12 +74,12 @@
       "title": "Best 4 Bank Accounts for Foreigners in Germany [2025 UPDATE]"
     },
     {
-      "id": "GjRG1IBV5hU",
+      "id": "aVISupCAS5s",
       "source": "search",
       "channel_name": "Simple Germany",
       "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
-      "published_at": "2024-02-19T16:00:17Z",
-      "title": "Top 4 Bank Accounts for Foreigners in Germany [2024 Update]"
+      "published_at": "2026-02-02T16:00:02Z",
+      "title": "Best Bank Accounts To Open When Moving To Germany in 2026"
     },
     {
       "id": "jjUQJcnTtOA",
@@ -90,6 +130,14 @@
       "title": "How to Apply for a German Study Visa 2025 \ud83c\udde9\ud83c\uddea | New Process, Checklist &amp; Must-Know Steps"
     },
     {
+      "id": "_ec2bO6H1Q0",
+      "source": "search",
+      "channel_name": "Lou in Germany ",
+      "channel_id": "UCG8AAd6aSIuG3iQSOeRI4Bg",
+      "published_at": "2024-04-23T18:51:33Z",
+      "title": "Language course visa requirements for Germany \ud83c\udde9\ud83c\uddea"
+    },
+    {
       "id": "ZDk9QKOLoLA",
       "source": "search",
       "channel_name": "Bharat in Germany!",
@@ -106,36 +154,12 @@
       "title": "Germany Online Visa | Avoid These Mistakes! | Must Carry Originals &amp; Processing Time Explained"
     },
     {
-      "id": "VNC9StNMjWY",
+      "id": "-kxTeMFDseE",
       "source": "search",
-      "channel_name": "Travel With Suvra",
-      "channel_id": "UChQOkV1UVzWcFSlmTV-mHCw",
-      "published_at": "2025-04-13T15:18:39Z",
-      "title": "&quot;How to Apply for a German Language Visa | Step-by-Step Guide (2025)&quot; German language Visa."
-    },
-    {
-      "id": "_WfbElXN5f8",
-      "source": "search",
-      "channel_name": "Bharat in Germany!",
-      "channel_id": "UCnpz3eMa1IJcgsSU15W0H3Q",
-      "published_at": "2025-02-20T14:19:13Z",
-      "title": "Germany&#39;s VISA PROCESS HAS CHANGED!!!"
-    },
-    {
-      "id": "84TYdk8gNQg",
-      "source": "search",
-      "channel_name": "DW Euromaxx",
-      "channel_id": "UCd-swDW3HCs4LTZhq8Cf7Fg",
-      "published_at": "2023-05-09T14:30:02Z",
-      "title": "3 things I WISH I knew before moving to Berlin"
-    },
-    {
-      "id": "YF9Bk7-wZ7A",
-      "source": "search",
-      "channel_name": "Five & Six Duo",
-      "channel_id": "UClUE3WcCNAEQTxrG9bCDiWQ",
-      "published_at": "2022-08-03T18:31:16Z",
-      "title": "LIVING IN GERMANY | IMPORTANT THINGS EVERY NEWCOMER MUST PAY ATTENTION TO IN GERMANY | ARRIVAL TIPS"
+      "channel_name": "growing.abroad",
+      "channel_id": "UCFlN7h2oM6fR5vfgPUQ-xLQ",
+      "published_at": "2024-01-12T13:00:02Z",
+      "title": "How to get a work VISA for Germany as a highly skilled foreigner  \ud83c\udde9\ud83c\uddea"
     },
     {
       "id": "xJL53oKO5gQ",
@@ -154,20 +178,28 @@
       "title": "13 things you NEED TO KNOW before going to Germany! | Feli from Germany"
     },
     {
-      "id": "W7qrYv-jyow",
+      "id": "YF9Bk7-wZ7A",
       "source": "search",
-      "channel_name": "Simple Germany",
-      "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
-      "published_at": "2025-10-20T15:00:54Z",
-      "title": "The Anmeldung in Germany [Explained for Newcomers]"
+      "channel_name": "Five & Six Duo",
+      "channel_id": "UClUE3WcCNAEQTxrG9bCDiWQ",
+      "published_at": "2022-08-03T18:31:16Z",
+      "title": "LIVING IN GERMANY | IMPORTANT THINGS EVERY NEWCOMER MUST PAY ATTENTION TO IN GERMANY | ARRIVAL TIPS"
     },
     {
-      "id": "S692x-WQh3A",
+      "id": "84TYdk8gNQg",
       "source": "search",
-      "channel_name": "Radical Living",
-      "channel_id": "UCkmGqbPKl9p8qGMTi-h4rgQ",
-      "published_at": "2025-07-06T09:21:42Z",
-      "title": "Looking for an Apartment in Germany as a Foreigner \ud83d\udc80"
+      "channel_name": "DW Euromaxx",
+      "channel_id": "UCd-swDW3HCs4LTZhq8Cf7Fg",
+      "published_at": "2023-05-09T14:30:02Z",
+      "title": "3 things I WISH I knew before moving to Berlin"
+    },
+    {
+      "id": "0wZAKhGCJS0",
+      "source": "search",
+      "channel_name": "Education and Entertainment For All",
+      "channel_id": "UCSVfonSpfjnVaNS_tTXC0ZQ",
+      "published_at": "2026-01-12T06:00:05Z",
+      "title": "8 Mistakes Foreigners Make in Germany (Avoid These Problems as a Newcomer!) \ud83c\udde9\ud83c\uddea"
     },
     {
       "id": "f7NyimNdorc",
@@ -186,20 +218,28 @@
       "title": "Step-by-step guide: How to buy property in Germany as a Foreigner? [Complete Beginner&#39;s Tutorial]"
     },
     {
-      "id": "zZp6Az0_j6Q",
+      "id": "S692x-WQh3A",
       "source": "search",
-      "channel_name": "Sikho German",
-      "channel_id": "UCs8UrYdzeTMosL6kM7_p_Lw",
-      "published_at": "2026-03-28T14:45:04Z",
-      "title": "How to Find an Apartment in Germany | Step-by-Step Guide | From Search to Contract | Sikho German"
+      "channel_name": "Radical Living",
+      "channel_id": "UCkmGqbPKl9p8qGMTi-h4rgQ",
+      "published_at": "2025-07-06T09:21:42Z",
+      "title": "Looking for an Apartment in Germany as a Foreigner \ud83d\udc80"
     },
     {
-      "id": "w1oT8Vhosrc",
+      "id": "x1fXHojsaJ0",
       "source": "search",
-      "channel_name": "ZeroZeroFourNine",
-      "channel_id": "UCHCcVLPbpM3VzeM-7_vMOhA",
-      "published_at": "2025-09-07T09:15:09Z",
-      "title": "How to Find Accommodation in Germany | 2025 Step By Step Guide"
+      "channel_name": "ExpatinSwiss",
+      "channel_id": "UCgDSYZu0qdVaIbYCEwVCC-w",
+      "published_at": "2023-11-09T09:00:08Z",
+      "title": "|| How To Find an Apartment in Germany as an Expat || Pro Tips &amp; Insider Secrets ||"
+    },
+    {
+      "id": "EHseibf_vFo",
+      "source": "search",
+      "channel_name": "Hans | German Realty",
+      "channel_id": "UCDss4n05r5nm757hrh6wNMw",
+      "published_at": "2026-04-23T16:30:11Z",
+      "title": "Here&#39;s How to Buy Your First Apartment in Germany \u2014 I Started With Zero Experience"
     },
     {
       "id": "cqw7gk6tZE8",
@@ -210,14 +250,6 @@
       "title": "Mastering Germany&#39;s Healthcare: Essential Guide for Expats"
     },
     {
-      "id": "OejiDwAC_MI",
-      "source": "search",
-      "channel_name": "Stiftung Warentest",
-      "channel_id": "UCOocT72FdI4ext5h069pJFw",
-      "published_at": "2025-04-08T05:00:28Z",
-      "title": "Private Health Insurance in Germany: Affordable Coverage for Expats (Stiftung Warentest)"
-    },
-    {
       "id": "Ejqx8nc5JG0",
       "source": "search",
       "channel_name": "Cidz Guide Book",
@@ -226,20 +258,44 @@
       "title": "Health Insurance In Germany | Coverage of Health Insurance in Germany \ud83c\udde9\ud83c\uddea"
     },
     {
-      "id": "ebWeIE4ms5M",
+      "id": "OejiDwAC_MI",
+      "source": "search",
+      "channel_name": "Stiftung Warentest",
+      "channel_id": "UCOocT72FdI4ext5h069pJFw",
+      "published_at": "2025-04-08T05:00:28Z",
+      "title": "Private Health Insurance in Germany: Affordable Coverage for Expats (Stiftung Warentest)"
+    },
+    {
+      "id": "cHLMgGfPVPM",
       "source": "search",
       "channel_name": "Simple Germany",
       "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
-      "published_at": "2025-03-03T16:00:42Z",
-      "title": "Should you change Health Insurance in Germany? [2025 Pricing Update]"
+      "published_at": "2024-06-17T15:00:29Z",
+      "title": "Health insurance for Germany Visa [7 Life Cases clarified]"
     },
     {
-      "id": "hidl4njcwDY",
+      "id": "M4WyXxSoe1I",
       "source": "search",
-      "channel_name": "Ahsan Finance",
-      "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2025-11-06T16:15:05Z",
-      "title": "Private VS Public Health Insurance in Germany 2026 - Which is better?"
+      "channel_name": "Simple Germany",
+      "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
+      "published_at": "2023-07-24T15:00:25Z",
+      "title": "Private or Public Health Insurance in Germany [Which One To Choose?]"
+    },
+    {
+      "id": "ssoCumPEH0g",
+      "source": "channel",
+      "channel_name": "Simple Germany",
+      "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
+      "published_at": "2026-04-20T15:01:29Z",
+      "title": "We asked 540 expats in Germany if they're HAPPY here"
+    },
+    {
+      "id": "-H6GtfMUdT0",
+      "source": "channel",
+      "channel_name": "Simple Germany",
+      "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
+      "published_at": "2026-04-13T15:00:00Z",
+      "title": "5 Unspoken Rules NOT to break in Germany"
     },
     {
       "id": "ZXKoNEF8uX8",
@@ -288,22 +344,6 @@
       "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
       "published_at": "2026-03-02T16:00:36Z",
       "title": "The Honest Cost of Living in Germany [Prepare Your Wallet]"
-    },
-    {
-      "id": "g3qF9NvmQgc",
-      "source": "channel",
-      "channel_name": "Simple Germany",
-      "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
-      "published_at": "2026-02-23T16:01:05Z",
-      "title": "Why LGBTQ+ Foreigners Are Moving to Germany"
-    },
-    {
-      "id": "4nCv17yEhpU",
-      "source": "channel",
-      "channel_name": "Simple Germany",
-      "channel_id": "UCLZcxlLIOzCl4AUVV8ikCgQ",
-      "published_at": "2026-02-16T16:00:12Z",
-      "title": "Which jobs pay \u20ac100K or more to foreigners in Germany?"
     },
     {
       "id": "GJ9s7g7Qyh4",
@@ -370,68 +410,124 @@
       "title": "24. Juli 2025"
     },
     {
-      "id": "bHDSCybaQbA",
+      "id": "xgvfzy6RpqY",
       "source": "channel",
       "channel_name": "Finanzfluss",
       "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
-      "published_at": "2026-04-08T08:04:23Z",
-      "title": "\ud83d\udee2\ufe0f Exxon ist mehr wert als Nvidia?"
+      "published_at": "2026-05-11T08:04:36Z",
+      "title": "Helmut Jonen aka Waikiki im Fragenfluss \ud83c\udfa4"
     },
     {
-      "id": "K1Z8UdNsKoI",
+      "id": "KC922Jd8Upk",
       "source": "channel",
       "channel_name": "Finanzfluss",
       "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
-      "published_at": "2026-04-06T08:03:03Z",
-      "title": "\ud83d\udcc8 Entwicklung des deutschen ETF-Markts"
+      "published_at": "2026-05-10T16:04:02Z",
+      "title": "\ud83d\udcc8 Warum passives Investieren eigentlich unschlagbar ist"
     },
     {
-      "id": "JGTCFAGaU7I",
+      "id": "TS1F6DIzHVI",
       "source": "channel",
       "channel_name": "Finanzfluss",
       "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
-      "published_at": "2026-04-05T08:02:48Z",
-      "title": "Himmlisch Investieren \ud83d\ude4c"
+      "published_at": "2026-05-10T10:02:49Z",
+      "title": "Frau Finanzen macht Frauen eine Ansage"
     },
     {
-      "id": "IbbGPvJx_bE",
+      "id": "JvstY3dVD_g",
       "source": "channel",
       "channel_name": "Finanzfluss",
       "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
-      "published_at": "2026-04-05T08:00:29Z",
-      "title": "Benzin \uff1e2\u20ac, Inflation... Was der Iran-Krieg wirklich f\u00fcr dein Geld bedeutet!"
+      "published_at": "2026-05-10T08:00:31Z",
+      "title": "Mehr Finanzwissen als 90% der Deutschen (in nur 6 Charts)"
     },
     {
-      "id": "5GP0CK7BfoQ",
+      "id": "NoidfYvC_F0",
       "source": "channel",
       "channel_name": "Finanzfluss",
       "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
-      "published_at": "2026-04-04T16:03:39Z",
-      "title": "Thomas zu Gast im Hotel Matze \ud83c\udf99\ufe0f"
+      "published_at": "2026-05-09T10:02:28Z",
+      "title": "\ud83d\udcc8 Anteil von Sparpl\u00e4nen in der jeweiligen Anlageform"
     },
     {
-      "id": "ezOZkb6uNmU",
+      "id": "d0p_gTWfZfw",
       "source": "channel",
       "channel_name": "Finanzfluss",
       "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
-      "published_at": "2026-04-04T08:03:37Z",
-      "title": "\ud83e\udd14 Zusammenziehen oder nicht?"
+      "published_at": "2026-05-08T10:04:38Z",
+      "title": "Bundesrat lehnt Entlastungspr\u00e4mie ab"
     },
     {
-      "id": "YPkQOUAf6ts",
+      "id": "PgJWwlB6eww",
       "source": "channel",
       "channel_name": "Finanzfluss",
       "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
-      "published_at": "2026-04-03T16:05:27Z",
-      "title": "\ud83d\udd27 Handwerkerrechnung? So zahlt der Staat 20% deiner Renovierung"
+      "published_at": "2026-05-07T08:04:48Z",
+      "title": "\u26a0\ufe0f Als Selbstst\u00e4ndiger musst du heute mehr verdienen, um sp\u00e4ter ausreichend Rente zu bekommen"
     },
     {
-      "id": "jJb2LXmywVQ",
+      "id": "btpirbGMBQk",
       "source": "channel",
       "channel_name": "Finanzfluss",
       "channel_id": "UCeARcCUiZg79SQQ-2_XNlXQ",
-      "published_at": "2026-04-03T10:03:12Z",
-      "title": "\ud83d\udca1 Steuerklasse 3 und 5 spart keine Steuer"
+      "published_at": "2026-05-06T16:06:29Z",
+      "title": "\ud83c\udf6c Haribos Erfolgsgeschichte trotz Familiendrama"
+    },
+    {
+      "id": "CWxpE1mmqV8",
+      "source": "channel",
+      "channel_name": "PerFinEx",
+      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
+      "published_at": "2026-05-10T07:59:00Z",
+      "title": "Germanys BIG Investment Change: The Altersvorsorgedepot"
+    },
+    {
+      "id": "n928El4hxcM",
+      "source": "channel",
+      "channel_name": "PerFinEx",
+      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
+      "published_at": "2026-05-03T07:59:01Z",
+      "title": "9 Ways to Save on Health Insurance in Germany (Public & Private)"
+    },
+    {
+      "id": "y2rCsFlq4aw",
+      "source": "channel",
+      "channel_name": "PerFinEx",
+      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
+      "published_at": "2026-04-30T15:59:01Z",
+      "title": "5 Big Changes Coming to Germany in May 2026"
+    },
+    {
+      "id": "KATyj_us9xc",
+      "source": "channel",
+      "channel_name": "PerFinEx",
+      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
+      "published_at": "2026-04-26T07:59:01Z",
+      "title": "Top 10 Legal Tax Tricks in Germany Which Save You Money"
+    },
+    {
+      "id": "-szekkYJTcY",
+      "source": "channel",
+      "channel_name": "PerFinEx",
+      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
+      "published_at": "2026-04-19T07:59:01Z",
+      "title": "Don\u2019t Ask ChatGPT for Financial Advice"
+    },
+    {
+      "id": "8Yi3QGLhiy0",
+      "source": "channel",
+      "channel_name": "PerFinEx",
+      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
+      "published_at": "2026-04-16T15:59:00Z",
+      "title": "Pay Off Your Mortgage or Invest? The 100 000\u20ac Decision"
+    },
+    {
+      "id": "D_Vm-iWDlQM",
+      "source": "channel",
+      "channel_name": "PerFinEx",
+      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
+      "published_at": "2026-04-12T07:59:00Z",
+      "title": "The 3 Million \u20ac Asset Most Expats Forget to Insure"
     },
     {
       "id": "pTME6vgcLoE",
@@ -442,188 +538,132 @@
       "title": "Unemployed in Germany? Do These 3 Things Immediately"
     },
     {
-      "id": "6XgOCHsudPc",
-      "source": "channel",
-      "channel_name": "PerFinEx",
-      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
-      "published_at": "2026-04-01T15:59:00Z",
-      "title": "5 Big Changes Coming to Germany in April 2026"
-    },
-    {
-      "id": "aAL9p-R2uwI",
-      "source": "channel",
-      "channel_name": "PerFinEx",
-      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
-      "published_at": "2026-03-29T07:59:00Z",
-      "title": "Why 9/10 Expats Overpay Taxes in Germany (And How to Fix It)"
-    },
-    {
-      "id": "1zGFfH4T7UA",
-      "source": "channel",
-      "channel_name": "PerFinEx",
-      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
-      "published_at": "2026-03-22T08:59:00Z",
-      "title": "Sell Everything? A Rational Look at the Current Crisis"
-    },
-    {
-      "id": "wUlzzDtLC6k",
-      "source": "channel",
-      "channel_name": "PerFinEx",
-      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
-      "published_at": "2026-03-18T16:59:00Z",
-      "title": "The 12.348\u20ac German Tax Secret Most Expats Ignore"
-    },
-    {
-      "id": "pTOThNLGSCI",
-      "source": "channel",
-      "channel_name": "PerFinEx",
-      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
-      "published_at": "2026-03-15T08:59:00Z",
-      "title": "The Legal 0% Tax on Gold in Germany Explained"
-    },
-    {
-      "id": "iuNyMu5dBKM",
-      "source": "channel",
-      "channel_name": "PerFinEx",
-      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
-      "published_at": "2026-03-08T08:59:01Z",
-      "title": "Why Expats in Germany Are Poor (And How to Fix It)"
-    },
-    {
-      "id": "3M6_QDrEcqA",
-      "source": "channel",
-      "channel_name": "PerFinEx",
-      "channel_id": "UCyb3q2v3OvEQgBCN4eJ0GSw",
-      "published_at": "2026-03-01T08:59:00Z",
-      "title": "The German Healthcare Crisis: What\u2019s Wrong?"
-    },
-    {
-      "id": "bol0_tl5O5w",
+      "id": "lE5FIV-76x0",
       "source": "channel",
       "channel_name": "Easy German",
       "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
-      "published_at": "2026-04-08T16:45:21Z",
-      "title": "Aus Berlin wegziehen #berlin #interview  #easygerman"
+      "published_at": "2026-05-10T17:00:52Z",
+      "title": "Understand Real German from the Streets (Erfurt \ud83c\udde9\ud83c\uddea)"
     },
     {
-      "id": "TIPR1D44BOQ",
+      "id": "uujSKRLUbhw",
       "source": "channel",
       "channel_name": "Easy German",
       "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
-      "published_at": "2026-04-07T17:00:38Z",
-      "title": "German Habits We Love (or Hate) | Easy German Podcast 654"
+      "published_at": "2026-05-09T19:08:14Z",
+      "title": "Ordnungsliebe #ordnungsliebe #easygermanpodcast #germanonline"
     },
     {
-      "id": "SoZhk9FB0G8",
+      "id": "vj3iK5XK908",
       "source": "channel",
       "channel_name": "Easy German",
       "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
-      "published_at": "2026-04-05T17:00:36Z",
-      "title": "Germans Share Their Unpopular Opinions | Easy German 654"
+      "published_at": "2026-05-08T18:04:27Z",
+      "title": "Spielst du ein Instrument? #instrument #easygerman #lerndeutsch"
     },
     {
-      "id": "ijqE6U6q7i4",
+      "id": "5-o0m-qM00I",
       "source": "channel",
       "channel_name": "Easy German",
       "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
-      "published_at": "2026-04-04T16:34:42Z",
-      "title": "\u201eWerden\u201c als Hilfsverb #easygerman #grammatik #germangrammar"
+      "published_at": "2026-05-07T15:59:21Z",
+      "title": "Arbeitsvermittlung #jobcenter #arbeitslos #easygerman #deutschlernen"
     },
     {
-      "id": "Gpa8QMUPwxo",
+      "id": "ElqpN_BVN4Q",
       "source": "channel",
       "channel_name": "Easy German",
       "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
-      "published_at": "2026-04-02T22:20:23Z",
-      "title": "Eine Situation in der du eifers\u00fcchtig warst #eifers\u00fcchtig #eifersucht #easygerman"
+      "published_at": "2026-05-06T17:00:15Z",
+      "title": "Exploring a typical German Shop (A2 | for Advanced Beginners)"
     },
     {
-      "id": "paIiikWpnok",
+      "id": "LKyQVWS2Z0o",
       "source": "channel",
       "channel_name": "Easy German",
       "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
-      "published_at": "2026-04-01T17:00:50Z",
-      "title": "A Day at University in Slow German | Super Easy German 303"
+      "published_at": "2026-05-05T16:17:15Z",
+      "title": "Berlin - ein zu Hause? #easygerman #berlin #deutschew\u00f6rter"
     },
     {
-      "id": "3p5J3WT7xpI",
+      "id": "cpXIdzL5lFE",
       "source": "channel",
       "channel_name": "Easy German",
       "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
-      "published_at": "2026-03-31T18:31:14Z",
-      "title": "Vorname vs. Nachname #easygerman #easygermanpodcast #germanwords"
+      "published_at": "2026-05-04T10:01:02Z",
+      "title": "Was kann man nicht f\u00fcr Geld kaufen? #easygerman #deutschlernen #geld"
     },
     {
-      "id": "EYWUzAvP8_E",
+      "id": "tjHVSxXGfbU",
       "source": "channel",
       "channel_name": "Easy German",
       "channel_id": "UCbxb2fqe9oNgglAoYqsYOtQ",
-      "published_at": "2026-03-30T16:21:37Z",
-      "title": "Seit wann lebst du in Berlin? #easygerman #berlin #wohneninberlin"
+      "published_at": "2026-05-03T17:01:11Z",
+      "title": "How Germans Feel About Music | Easy German 658"
     },
     {
-      "id": "K6cF_8xZ3lE",
+      "id": "QfHg4yFkRsM",
       "source": "channel",
       "channel_name": "Ahsan Finance",
       "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2026-04-05T09:30:10Z",
-      "title": "This is how you Become Financially Free in Germany!"
+      "published_at": "2026-05-10T09:00:28Z",
+      "title": "I Lost \u20ac2,300 by Ignoring This Simple Bill"
     },
     {
-      "id": "Iv1Cyn1ZSqQ",
+      "id": "YewEuBDN3Rw",
       "source": "channel",
       "channel_name": "Ahsan Finance",
       "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2026-03-29T09:30:06Z",
-      "title": "Best FREE Bank Accounts in Germany for Expats !"
+      "published_at": "2026-05-07T15:00:54Z",
+      "title": "Maintenance declaration form explained"
     },
     {
-      "id": "cbbzRM6XSKE",
+      "id": "6gPfa9db_Lc",
       "source": "channel",
       "channel_name": "Ahsan Finance",
       "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2026-03-26T16:00:51Z",
-      "title": "Stop Using Elster, Use This Free German Tax Filing App Instead!"
+      "published_at": "2026-05-05T15:00:19Z",
+      "title": "One of the Best Tax Tricks for Germany!"
     },
     {
-      "id": "llyCdVy2ulg",
+      "id": "wV57BBB8IhI",
       "source": "channel",
       "channel_name": "Ahsan Finance",
       "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2026-03-22T10:30:35Z",
-      "title": "You will not survive Germany without this Insurance!"
+      "published_at": "2026-05-03T09:30:35Z",
+      "title": "I used the top Investing Apps in Germany!"
     },
     {
-      "id": "RyD4fWt6lUw",
+      "id": "_a4xcIIsYfc",
       "source": "channel",
       "channel_name": "Ahsan Finance",
       "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2026-03-15T10:30:30Z",
-      "title": "7 Money Habits Keeping YOU Poor in Germany"
+      "published_at": "2026-04-29T15:00:58Z",
+      "title": "Who is Obliged to File a Tax Declaration in Germany?"
     },
     {
-      "id": "AsU1HnUdkSQ",
+      "id": "spWWjD1sma8",
       "source": "channel",
       "channel_name": "Ahsan Finance",
       "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2026-03-12T16:00:23Z",
-      "title": "Global Uncertainty VS  Germany's issues"
+      "published_at": "2026-04-28T15:01:29Z",
+      "title": "Why Did You Choose Germany?"
     },
     {
-      "id": "y9EpwAqI2uQ",
+      "id": "lEb069UYm2g",
       "source": "channel",
       "channel_name": "Ahsan Finance",
       "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2026-03-08T10:30:41Z",
-      "title": "Please Stop Donating to the German Tax Office !"
+      "published_at": "2026-04-26T09:00:58Z",
+      "title": "These things are Changing in Germany!"
     },
     {
-      "id": "aVlS2jul1ng",
+      "id": "RH9j58rGzJY",
       "source": "channel",
       "channel_name": "Ahsan Finance",
       "channel_id": "UC8NOlkt22UCIAunNTZprE7g",
-      "published_at": "2026-03-05T16:00:02Z",
-      "title": "3 questions BEFORE leaving Germany!"
+      "published_at": "2026-04-24T15:00:53Z",
+      "title": "These are the TOP 3 German Tax Deductions"
     },
     {
       "id": "WyG-wM7gDNo",

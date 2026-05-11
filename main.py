@@ -1,11 +1,6 @@
 # =============================================================================
 # main.py — ExpatScore.de Sniper Coordinator + Page Generator
-# Version: 2.3 | Reddit worker disabled (commented), template path fixed
-#
-# Changes from 2.2:
-#   - Commented out reddit_worker.main() call to prevent AttributeError
-#   - Template path explicitly set to /templates/blog_template.html
-#   - All other SEO logic (155‑char meta, absolute URLs) intact
+# Version: 2.8 | AI prompt enforces CSS classes & relative links
 # =============================================================================
 
 import threading
@@ -16,6 +11,7 @@ import os
 import json
 import re
 import math
+import argparse
 from datetime import datetime, date
 from pathlib import Path
 
@@ -47,18 +43,106 @@ logging.basicConfig(
 log = logging.getLogger("Coordinator")
 
 # =============================================================================
-# PATHS — HARDCODED template inside /templates folder
+# PATHS
 # =============================================================================
 
 BASE_DIR      = Path(__file__).parent.resolve()
 DOCS_DIR      = BASE_DIR / "docs"
 BLOG_DIR      = DOCS_DIR / "blog"
-TEMPLATE_FILE = BASE_DIR / "templates" / "blog_template.html"   # ✅ Strict path
+TEMPLATE_FILE = BASE_DIR / "templates" / "blog_template.html"
 DATA_DIR      = BASE_DIR / "data"
 BUILT_FILE    = BASE_DIR / "built_pages.json"
 
 # =============================================================================
-# PAGE GENERATOR — renders JSON post data into production HTML
+# AI CONTENT GENERATION (Groq / LLaMA 3.3)
+# =============================================================================
+
+def _call_groq_for_article(topic: str) -> dict:
+    """
+    Send a prompt to Groq API to generate a full blog article.
+    The prompt enforces:
+      - Only HTML tags that match the existing CSS (h2, h3, p, ul, li, etc.)
+      - Relative internal links (starting with /)
+      - No inline styles, no header/footer duplication
+    Returns a dict with keys: content_html, summary, meta_description, keywords.
+    """
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        log.warning("  ⚠  GROQ_API_KEY not set – cannot generate AI article")
+        return None
+
+    try:
+        import groq
+    except ImportError:
+        log.warning("  ⚠  groq library not installed. Run: pip install groq")
+        return None
+
+    client = groq.Groq(api_key=api_key)
+
+    # Updated prompt to enforce CSS class compatibility
+    prompt = f"""You are a professional financial writer for expats in Germany. Write a detailed, SEO‑optimized blog article about: "{topic}"
+
+CRITICAL REQUIREMENTS:
+- Length: 800–1000 words.
+- Target audience: English‑speaking expats living in Germany.
+- Tone: authoritative, helpful, trustworthy (like a financial advisor).
+- Use ONLY the following HTML tags: <h2>, <h3>, <p>, <ul>, <li>, <strong>, <em>, <a>, <blockquote>. Do NOT use inline styles, divs, or custom classes.
+- Headings: <h2> for main sections, <h3> for subsections.
+- Internal links: use relative paths starting with "/". Example: <a href="/schufa-simulator">Free SCHUFA simulator</a>.
+- Do NOT include any header, navigation, footer, or hero section – only the article body content.
+- Do NOT include any markdown or code blocks – only pure HTML.
+
+Structure:
+- Start with a short introductory paragraph (no heading).
+- Then use <h2> for each major point.
+- Use <ul> or <li> for lists where appropriate.
+- End with a conclusion or call‑to‑action paragraph.
+
+Output format (exactly as shown):
+<SUMMARY>One or two sentences summarizing the article.</SUMMARY>
+<CONTENT>
+Full HTML article content (using only allowed tags, no extra markup).
+</CONTENT>
+<META>Meta description under 155 characters.</META>
+<KEYWORDS>keyword1, keyword2, keyword3, ...</KEYWORDS>
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7,
+            max_tokens=2500,
+        )
+        raw = response.choices[0].message.content
+
+        # Parse the response
+        summary_match = re.search(r'<SUMMARY>(.*?)</SUMMARY>', raw, re.DOTALL)
+        content_match = re.search(r'<CONTENT>(.*?)</CONTENT>', raw, re.DOTALL)
+        meta_match = re.search(r'<META>(.*?)</META>', raw, re.DOTALL)
+        keywords_match = re.search(r'<KEYWORDS>(.*?)</KEYWORDS>', raw, re.DOTALL)
+
+        summary = summary_match.group(1).strip() if summary_match else f"Complete guide to {topic} for expats in Germany."
+        content_html = content_match.group(1).strip() if content_match else f"<p>AI content could not be generated for '{topic}'. Please try again later.</p>"
+        meta_description = meta_match.group(1).strip() if meta_match else (summary[:152] + "…" if len(summary) > 155 else summary)
+        keywords = keywords_match.group(1).strip() if keywords_match else f"{topic}, expat Germany, guide"
+
+        # Truncate meta description to 155 chars
+        if len(meta_description) > 155:
+            meta_description = meta_description[:152] + "…"
+
+        return {
+            "content_html": content_html,
+            "summary": summary,
+            "meta_description": meta_description,
+            "keywords": keywords,
+        }
+    except Exception as e:
+        log.error(f"  ✖ Groq API error: {e}")
+        return None
+
+# =============================================================================
+# HELPER FUNCTIONS (estimates, dates, enrichment)
 # =============================================================================
 
 def _estimate_read_minutes(html_or_text: str) -> int:
@@ -87,14 +171,12 @@ def _enrich_post(post: dict) -> dict:
     """Adds derived SEO fields. Enforces 155‑char limit for meta_description."""
     post = dict(post)
 
-    # Dates
     post.setdefault('date', date.today().strftime('%B %d, %Y'))
     post['date_iso']          = _to_iso_date(post.get('date_iso', post['date']))
     post['date_modified_iso'] = _to_iso_date(
         post.get('date_modified_iso', post.get('date_modified', post['date_iso']))
     )
 
-    # Reading time + word count
     content = post.get('content_html', post.get('content', ''))
     post.setdefault('read_minutes', _estimate_read_minutes(content))
     post.setdefault('word_count',   _estimate_word_count(content))
@@ -102,7 +184,6 @@ def _enrich_post(post: dict) -> dict:
     if 'content_html' not in post and 'content' in post:
         post['content_html'] = post['content']
 
-    # Meta description – HARD 155-CHAR LIMIT
     if 'meta_description' not in post or not post['meta_description']:
         raw_desc = post.get('summary', '')[:155]
         post['meta_description'] = raw_desc + ('…' if len(raw_desc) == 155 else '')
@@ -119,7 +200,6 @@ def _enrich_post(post: dict) -> dict:
                     'sponsored' in content.lower()
     post.setdefault('has_affiliate_links', has_affiliate)
 
-    # FAQs
     faqs = post.get('faqs', [])
     if isinstance(faqs, list) and all(
         isinstance(f, dict) and 'question' in f and 'answer' in f
@@ -129,7 +209,6 @@ def _enrich_post(post: dict) -> dict:
     else:
         post['faqs'] = []
 
-    # Affiliate card validation
     card = post.get('affiliate_card')
     if card and isinstance(card, dict):
         required_keys = {'name', 'category', 'url', 'description'}
@@ -140,7 +219,6 @@ def _enrich_post(post: dict) -> dict:
     else:
         post['affiliate_card'] = None
 
-    # Related slugs
     related = post.get('related_slugs', [])
     if isinstance(related, list) and all(
         isinstance(r, dict) and 'slug' in r and 'title' in r
@@ -152,7 +230,15 @@ def _enrich_post(post: dict) -> dict:
 
     return post
 
-def generate_blog_pages(data_glob: str = "*.json") -> list[str]:
+# =============================================================================
+# PAGE GENERATOR (with AI support for forced topics)
+# =============================================================================
+
+def generate_blog_pages(data_glob: str = "*.json", force_topic_title: str = None) -> list[str]:
+    """
+    Generate blog pages from JSON data.
+    If force_topic_title is provided, generate an AI article (bypass JSON).
+    """
     try:
         from jinja2 import Environment, FileSystemLoader, select_autoescape
     except ImportError:
@@ -181,8 +267,69 @@ def generate_blog_pages(data_glob: str = "*.json") -> list[str]:
             built = []
 
     newly_built = []
-    data_files = sorted(DATA_DIR.glob(data_glob)) if DATA_DIR.exists() else []
 
+    # ─────────────────────────────────────────────────────────────────────
+    # FORCED TOPIC MODE: generate AI article (bypass any existing JSON)
+    # ─────────────────────────────────────────────────────────────────────
+    if force_topic_title:
+        log.info(f"  🔥 Force topic mode: '{force_topic_title}'")
+        forced_slug = re.sub(r'[^a-z0-9]+', '-', force_topic_title.lower()).strip('-')
+
+        # Generate AI content
+        log.info("  🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...")
+        ai_data = _call_groq_for_article(force_topic_title)
+        if ai_data:
+            content_html = ai_data["content_html"]
+            summary = ai_data["summary"]
+            meta_desc = ai_data["meta_description"]
+            keywords = ai_data["keywords"]
+            log.info("  ✅ AI content received")
+        else:
+            # Fallback placeholder
+            content_html = f"<p>Full article about {force_topic_title} will be generated soon. Check back later.</p>"
+            summary = f"Complete guide to {force_topic_title} for expats in Germany."
+            meta_desc = summary[:155]
+            keywords = f"{force_topic_title}, expat Germany, guide"
+            log.warning("  ⚠  Using placeholder content (AI failed)")
+
+        # Build the post dictionary
+        post_dict = {
+            "slug": forced_slug,
+            "title": force_topic_title,
+            "summary": summary,
+            "content_html": content_html,
+            "meta_description": meta_desc,
+            "keywords": keywords,
+            "category": "Guide",
+            "date": date.today().strftime('%B %d, %Y'),
+            "date_iso": date.today().isoformat(),
+        }
+
+        # Enrich and render
+        enriched = _enrich_post(post_dict)
+        enriched['slug'] = forced_slug
+        out_path = BLOG_DIR / f"{forced_slug}.html"
+
+        try:
+            html = template.render(post=enriched, year=datetime.now().year)
+            out_path.write_text(html, encoding='utf-8')
+            wordcount = enriched.get('word_count', 0)
+            log.info(f"  ✅ Built (forced AI): blog/{forced_slug}.html ({wordcount} words)")
+            newly_built.append(forced_slug)
+        except Exception as e:
+            log.error(f"  ✖ Render failed for forced topic: {e}", exc_info=True)
+            return []
+
+        # Update registry
+        if forced_slug not in built:
+            built.append(forced_slug)
+        BUILT_FILE.write_text(json.dumps(sorted(built), indent=2, ensure_ascii=False), encoding='utf-8')
+        return newly_built
+
+    # ─────────────────────────────────────────────────────────────────────
+    # NORMAL MODE (no --topic) – process all JSON files as before
+    # ─────────────────────────────────────────────────────────────────────
+    data_files = sorted(DATA_DIR.glob(data_glob)) if DATA_DIR.exists() else []
     if not data_files:
         log.warning(f"  ⚠  No JSON data files found in {DATA_DIR}")
         return []
@@ -294,7 +441,7 @@ def regenerate_sitemap(base_url: str = "https://expatscore.de") -> None:
     log.info(f"  🗺  Sitemap regenerated: {len(urls)} URLs → {sitemap_path}")
 
 # =============================================================================
-# IMPORT WORKERS
+# WORKER IMPORTS
 # =============================================================================
 
 try:
@@ -311,7 +458,7 @@ def make_thread(target_fn, name: str) -> threading.Thread:
 def run_reddit():
     log.info("🟠 [Reddit Worker] Thread started.")
     try:
-        # ❌ REDDIT WORKER DISABLED (commented out to prevent AttributeError)
+        # REDDIT WORKER DISABLED
         # reddit_worker.main()
         log.info("🟠 [Reddit Worker] Skipped (disabled in configuration).")
     except Exception as e:
@@ -324,20 +471,32 @@ def run_youtube():
     except Exception as e:
         log.critical(f"💥 [YouTube Worker] Fatal crash: {e}", exc_info=True)
 
+# =============================================================================
+# MAIN
+# =============================================================================
+
 def main():
+    parser = argparse.ArgumentParser(description="ExpatScore Coordinator")
+    parser.add_argument("--generator-only", action="store_true",
+                        help="Only generate pages, then exit (no workers)")
+    parser.add_argument("--topic", type=str,
+                        help="Force generate a full AI article for this topic (ignores JSON)")
+    args = parser.parse_args()
+
     log.info("=" * 65)
-    log.info("🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled")
+    log.info("🚀 ExpatScore Coordinator v2.8 — AI prompt ensures CSS compatibility")
     log.info("=" * 65)
 
     log.info("\n📐 Running page generator...")
-    newly_built = generate_blog_pages()
+    newly_built = generate_blog_pages(force_topic_title=args.topic)
+
     if newly_built:
         regenerate_sitemap()
     else:
-        log.info("  ✅ All pages up to date")
+        log.info("  ✅ No new pages built (no force topic and no changed JSON).")
 
-    if os.getenv("GENERATOR_ONLY"):
-        log.info("✅ GENERATOR_ONLY mode — exiting.")
+    if args.generator_only:
+        log.info("✅ --generator-only mode — exiting.")
         sys.exit(0)
 
     if not WORKERS_AVAILABLE:
@@ -353,25 +512,32 @@ def main():
         log.critical(f"🚫 Missing required .env variables: {missing_critical}")
         sys.exit(1)
 
-    # Reddit thread is still started but its inner call is commented out
+    youtube_enabled = os.getenv("YOUTUBE_WORKER_ENABLED", "true").lower() == "true"
+
     reddit_thread = make_thread(run_reddit, "RedditWorker")
     reddit_thread.start()
+    log.info("🟠 Reddit worker thread started (disabled internally).")
+
     time.sleep(15)
 
-    youtube_thread = make_thread(run_youtube, "YouTubeWorker")
-    youtube_thread.start()
+    if youtube_enabled:
+        youtube_thread = make_thread(run_youtube, "YouTubeWorker")
+        youtube_thread.start()
+        log.info("🔴 YouTube worker started.")
+    else:
+        log.info("🔴 YouTube worker disabled by YOUTUBE_WORKER_ENABLED=false")
+        youtube_thread = None
 
-    log.info("✅ YouTube worker only is active. Reddit worker is disabled.")
-    log.info("Press Ctrl+C to stop.")
+    log.info("✅ Workers initialised. Press Ctrl+C to stop.")
 
     try:
         while True:
             time.sleep(300)
             if not reddit_thread.is_alive():
-                log.critical("🟠 [Watchdog] Reddit thread dead — RESTARTING (but still disabled)")
+                log.critical("🟠 [Watchdog] Reddit thread dead — RESTARTING")
                 reddit_thread = make_thread(run_reddit, "RedditWorker")
                 reddit_thread.start()
-            if not youtube_thread.is_alive():
+            if youtube_enabled and (youtube_thread is None or not youtube_thread.is_alive()):
                 log.critical("🔴 [Watchdog] YouTube thread dead — RESTARTING")
                 youtube_thread = make_thread(run_youtube, "YouTubeWorker")
                 youtube_thread.start()

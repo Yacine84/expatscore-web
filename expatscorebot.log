@@ -9876,3 +9876,928 @@ AttributeError: module 'reddit_worker' has no attribute 'main'
 2026-05-11 10:56:20  [INFO]  ✅ [YouTube] API client initialised
 2026-05-11 10:56:20  [INFO]  🌙 [YouTube] SLEEP — 0h 3m until 11:00
 2026-05-11 10:57:24  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 11:24:11  [INFO]  =================================================================
+2026-05-11 11:24:11  [INFO]  🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled
+2026-05-11 11:24:11  [INFO]  =================================================================
+2026-05-11 11:24:11  [INFO]  
+📐 Running page generator...
+2026-05-11 11:24:11  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 11:24:11  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 11:24:11  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 11:24:11  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-11 11:24:11  [WARNING]    ⚠  seen_posts.json does not contain a valid post object — skipping
+2026-05-11 11:24:11  [INFO]    ⏭  seen_urls — up to date, skipping
+2026-05-11 11:24:11  [INFO]    📊 Generator summary: 0 built, 1 total tracked
+2026-05-11 11:24:11  [INFO]    ✅ All pages up to date
+2026-05-11 11:24:11  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 11:24:11  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 11:24:26  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 11:24:26  [INFO]  ✅ YouTube worker only is active. Reddit worker is disabled.
+2026-05-11 11:24:26  [INFO]  =================================================================
+2026-05-11 11:24:26  [INFO]  Press Ctrl+C to stop.
+2026-05-11 11:24:26  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 11:24:26  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 11:24:26  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 11:24:26  [INFO]     Competitor brands: 19
+2026-05-11 11:24:26  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 11:24:26  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 11:24:26  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 11:24:26  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 11:24:26  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 11:24:26  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 11:24:26  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 11:24:26  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 11:24:26  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 11:24:26  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 11:24:26  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 11:24:26  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 11:24:26  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 11:24:26  [INFO]  =================================================================
+2026-05-11 11:24:26  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 11:24:26  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 11:24:26  [INFO]    📂 Video cache stale — fresh discovery needed
+2026-05-11 11:24:26  [INFO]  =================================================================
+2026-05-11 11:24:26  [INFO]  🔭 DISCOVERY RUN | 2026-05-11 11:24:26
+2026-05-11 11:24:26  [INFO]     Path A: Keyword search × 7 queries (~700 units)
+2026-05-11 11:24:26  [INFO]     Path B: Channel radar × 8 channels (~8 units)
+2026-05-11 11:24:26  [INFO]  =================================================================
+2026-05-11 11:24:26  [INFO]    🔍 Keyword Discovery — 7 queries × 100 units
+2026-05-11 11:24:27  [INFO]    ✔  "moving to Germany expat guide" → 5 video(s)
+2026-05-11 11:24:31  [INFO]    ✔  "Germany bank account foreigners english" → 5 video(s)
+2026-05-11 11:24:34  [INFO]    ✔  "Schufa explained expats" → 5 video(s)
+2026-05-11 11:24:37  [INFO]    ✔  "Germany visa process english" → 5 video(s)
+2026-05-11 11:24:41  [INFO]    ✔  "life in Germany newcomer tips" → 5 video(s)
+2026-05-11 11:24:44  [INFO]    ✔  "Germany apartment search expat" → 5 video(s)
+2026-05-11 11:24:46  [INFO]    ✔  "Germany health insurance expat guide" → 5 video(s)
+2026-05-11 11:24:49  [INFO]    📊 Path A complete — 35 videos from keyword search
+2026-05-11 11:24:49  [INFO]    📡 Channel Radar — 8 channels × ~1 unit each
+2026-05-11 11:24:49  [INFO]    📺 [Simple Germany] Resolved from cache: UCLZcxlLIOzCl4AUVV8ikCgQ
+2026-05-11 11:24:49  [INFO]    📺 [Simple Germany] 8 latest video(s) fetched
+2026-05-11 11:24:51  [INFO]    📺 [My Life in Germany] Resolved from cache: UCfGxA0NYGNwdoyB9M8T6jjA
+2026-05-11 11:24:51  [INFO]    📺 [My Life in Germany] 8 latest video(s) fetched
+2026-05-11 11:24:53  [INFO]    📺 [Finanzfluss] Resolved from cache: UCeARcCUiZg79SQQ-2_XNlXQ
+2026-05-11 11:24:53  [INFO]    📺 [Finanzfluss] 8 latest video(s) fetched
+2026-05-11 11:24:56  [INFO]    📺 [PerFinEx] Resolved from cache: UCyb3q2v3OvEQgBCN4eJ0GSw
+2026-05-11 11:24:56  [INFO]    📺 [PerFinEx] 8 latest video(s) fetched
+2026-05-11 11:24:59  [INFO]    📺 [Easy German] Resolved from cache: UCbxb2fqe9oNgglAoYqsYOtQ
+2026-05-11 11:24:59  [INFO]    📺 [Easy German] 8 latest video(s) fetched
+2026-05-11 11:25:01  [INFO]    📺 [Ahsan Finance] Resolved from cache: UC8NOlkt22UCIAunNTZprE7g
+2026-05-11 11:25:01  [INFO]    📺 [Ahsan Finance] 8 latest video(s) fetched
+2026-05-11 11:25:03  [INFO]    📺 [HalloGermany] Resolved from cache: UC3kkqGi7a2q6tQWOjQw2TuA
+2026-05-11 11:25:04  [INFO]    📺 [HalloGermany] 8 latest video(s) fetched
+2026-05-11 11:25:05  [INFO]    📺 [Wanted Adventure] Resolved from cache: UCv5967rhojn0IaPxJusxy1A
+2026-05-11 11:25:05  [INFO]    📺 [Wanted Adventure] 8 latest video(s) fetched
+2026-05-11 11:25:08  [INFO]    📊 Path B complete — 64 videos from channel radar
+2026-05-11 11:25:08  [INFO]    💾 Video cache saved — 99 entries
+2026-05-11 11:25:08  [INFO]    📊 Discovery complete — 99 unique video(s) cached total
+2026-05-11 11:25:08  [INFO]  =================================================================
+2026-05-11 11:25:08  [INFO]  🌾 HARVEST RUN | 2026-05-11 11:25:08
+2026-05-11 11:25:08  [INFO]     Videos total   : 99
+2026-05-11 11:25:08  [INFO]     Priority videos: 0
+2026-05-11 11:25:08  [INFO]     Channel videos : 64
+2026-05-11 11:25:08  [INFO]  =================================================================
+2026-05-11 11:25:08  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xgvfzy6RpqY | Source: channel | Age: 0.1d
+2026-05-11 11:25:14  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=lE5FIV-76x0 | Source: channel | Age: 0.7d
+2026-05-11 11:25:14  [INFO]  ✅ [Groq] Client initialised
+2026-05-11 11:25:15  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:15  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:25:15  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:25:19  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=KC922Jd8Upk | Source: channel | Age: 0.8d
+2026-05-11 11:25:19  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:19  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context, non-English text
+2026-05-11 11:25:19  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:25:25  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=TS1F6DIzHVI | Source: channel | Age: 1.0d
+2026-05-11 11:25:32  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=QfHg4yFkRsM | Source: channel | Age: 1.1d
+2026-05-11 11:25:38  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=JvstY3dVD_g | Source: channel | Age: 1.1d
+2026-05-11 11:25:39  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:39  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial rant about German language
+2026-05-11 11:25:39  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:25:45  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=CWxpE1mmqV8 | Source: channel | Age: 1.1d
+2026-05-11 11:25:45  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:45  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:25:45  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:25:46  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:46  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial, non-German content
+2026-05-11 11:25:46  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:25:46  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:46  [INFO]    🧠 [Groq] Score: 85/100 | Reason: Experiencing Schufa-related account opening issues
+2026-05-11 11:25:46  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-11 11:25:48  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:48  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial pain or Schufa context
+2026-05-11 11:25:48  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:25:48  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:48  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No Schufa/credit context
+2026-05-11 11:25:48  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:25:52  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=uujSKRLUbhw | Source: channel | Age: 1.6d
+2026-05-11 11:25:53  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:25:53  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context
+2026-05-11 11:25:53  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:26:00  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=NoidfYvC_F0 | Source: channel | Age: 2.0d
+2026-05-11 11:26:04  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=vj3iK5XK908 | Source: channel | Age: 2.7d
+2026-05-11 11:26:05  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:26:05  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context, language only
+2026-05-11 11:26:05  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:26:12  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xYuRt7a7UT8 | Source: search | Age: 2.9d
+2026-05-11 11:26:17  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=d0p_gTWfZfw | Source: channel | Age: 3.0d
+2026-05-11 11:26:17  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:26:17  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-English text
+2026-05-11 11:26:17  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:26:23  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=5-o0m-qM00I | Source: channel | Age: 3.8d
+2026-05-11 11:26:28  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=YewEuBDN3Rw | Source: channel | Age: 3.8d
+2026-05-11 11:26:35  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=PgJWwlB6eww | Source: channel | Age: 4.1d
+2026-05-11 11:26:41  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=ElqpN_BVN4Q | Source: channel | Age: 4.7d
+2026-05-11 11:26:41  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:26:41  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial, non-expat content
+2026-05-11 11:26:41  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:26:41  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:26:41  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No German expat context
+2026-05-11 11:26:41  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:26:42  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:26:42  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context
+2026-05-11 11:26:42  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:26:49  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=btpirbGMBQk | Source: channel | Age: 4.8d
+2026-05-11 11:26:54  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=LKyQVWS2Z0o | Source: channel | Age: 5.8d
+2026-05-11 11:26:58  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=6gPfa9db_Lc | Source: channel | Age: 5.8d
+2026-05-11 11:27:01  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=cpXIdzL5lFE | Source: channel | Age: 7.0d
+2026-05-11 11:27:03  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 11:27:57  [INFO]  =================================================================
+2026-05-11 11:27:57  [INFO]  🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled
+2026-05-11 11:27:57  [INFO]  =================================================================
+2026-05-11 11:27:57  [INFO]  
+📐 Running page generator...
+2026-05-11 11:27:57  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 11:27:57  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 11:27:57  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 11:27:57  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-11 11:27:57  [WARNING]    ⚠  seen_posts.json does not contain a valid post object — skipping
+2026-05-11 11:27:57  [INFO]    ⏭  seen_urls — up to date, skipping
+2026-05-11 11:27:57  [INFO]    📊 Generator summary: 0 built, 1 total tracked
+2026-05-11 11:27:57  [INFO]    ✅ All pages up to date
+2026-05-11 11:27:57  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 11:27:57  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 11:28:12  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 11:28:12  [INFO]  ✅ YouTube worker only is active. Reddit worker is disabled.
+2026-05-11 11:28:12  [INFO]  =================================================================
+2026-05-11 11:28:12  [INFO]  Press Ctrl+C to stop.
+2026-05-11 11:28:12  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 11:28:12  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 11:28:12  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 11:28:12  [INFO]     Competitor brands: 19
+2026-05-11 11:28:12  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 11:28:12  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 11:28:12  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 11:28:12  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 11:28:12  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 11:28:12  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 11:28:12  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 11:28:12  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 11:28:12  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 11:28:12  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 11:28:12  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 11:28:12  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 11:28:12  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 11:28:12  [INFO]  =================================================================
+2026-05-11 11:28:12  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 11:28:12  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 11:28:12  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-11 11:28:12  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-11 11:28:12  [INFO]  =================================================================
+2026-05-11 11:28:12  [INFO]  🌾 HARVEST RUN | 2026-05-11 11:28:12
+2026-05-11 11:28:12  [INFO]     Videos total   : 99
+2026-05-11 11:28:12  [INFO]     Priority videos: 0
+2026-05-11 11:28:12  [INFO]     Channel videos : 64
+2026-05-11 11:28:12  [INFO]  =================================================================
+2026-05-11 11:28:12  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xgvfzy6RpqY | Source: channel | Age: 0.1d
+2026-05-11 11:28:17  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=lE5FIV-76x0 | Source: channel | Age: 0.7d
+2026-05-11 11:28:18  [INFO]  ✅ [Groq] Client initialised
+2026-05-11 11:28:18  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:19  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:28:19  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:28:24  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=KC922Jd8Upk | Source: channel | Age: 0.8d
+2026-05-11 11:28:24  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:24  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-English text, no financial context
+2026-05-11 11:28:24  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:28:32  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=TS1F6DIzHVI | Source: channel | Age: 1.0d
+2026-05-11 11:28:37  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=QfHg4yFkRsM | Source: channel | Age: 1.1d
+2026-05-11 11:28:43  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=JvstY3dVD_g | Source: channel | Age: 1.1d
+2026-05-11 11:28:44  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:44  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial rant in German
+2026-05-11 11:28:44  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:28:50  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=CWxpE1mmqV8 | Source: channel | Age: 1.1d
+2026-05-11 11:28:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:50  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:28:50  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:28:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:50  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Not related to Schufa/credit
+2026-05-11 11:28:50  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:28:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:50  [INFO]    🧠 [Groq] Score: 85/100 | Reason: Experiencing Schufa-related account opening issues
+2026-05-11 11:28:50  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-11 11:28:52  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:52  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial pain or Schufa context
+2026-05-11 11:28:52  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:28:52  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:52  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No Schufa/credit context
+2026-05-11 11:28:52  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:28:58  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=uujSKRLUbhw | Source: channel | Age: 1.6d
+2026-05-11 11:28:59  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:28:59  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:28:59  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:29:02  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=NoidfYvC_F0 | Source: channel | Age: 2.0d
+2026-05-11 11:29:10  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=vj3iK5XK908 | Source: channel | Age: 2.7d
+2026-05-11 11:29:10  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:29:10  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context
+2026-05-11 11:29:10  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:29:15  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xYuRt7a7UT8 | Source: search | Age: 2.9d
+2026-05-11 11:29:23  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=d0p_gTWfZfw | Source: channel | Age: 3.0d
+2026-05-11 11:29:23  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:29:23  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-English text, no financial context
+2026-05-11 11:29:23  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:29:27  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=5-o0m-qM00I | Source: channel | Age: 3.8d
+2026-05-11 11:29:33  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=YewEuBDN3Rw | Source: channel | Age: 3.8d
+2026-05-11 11:29:38  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=PgJWwlB6eww | Source: channel | Age: 4.1d
+2026-05-11 11:29:47  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=ElqpN_BVN4Q | Source: channel | Age: 4.7d
+2026-05-11 11:29:47  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 11:30:10  [INFO]  =================================================================
+2026-05-11 11:30:10  [INFO]  🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled
+2026-05-11 11:30:10  [INFO]  =================================================================
+2026-05-11 11:30:10  [INFO]  
+📐 Running page generator...
+2026-05-11 11:30:10  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 11:30:10  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 11:30:10  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 11:30:10  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-11 11:30:10  [WARNING]    ⚠  seen_posts.json does not contain a valid post object — skipping
+2026-05-11 11:30:10  [INFO]    ⏭  seen_urls — up to date, skipping
+2026-05-11 11:30:10  [INFO]    📊 Generator summary: 0 built, 1 total tracked
+2026-05-11 11:30:10  [INFO]    ✅ All pages up to date
+2026-05-11 11:30:10  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 11:30:10  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 11:30:25  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 11:30:25  [INFO]  ✅ YouTube worker only is active. Reddit worker is disabled.
+2026-05-11 11:30:25  [INFO]  =================================================================
+2026-05-11 11:30:25  [INFO]  Press Ctrl+C to stop.
+2026-05-11 11:30:25  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 11:30:25  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 11:30:25  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 11:30:25  [INFO]     Competitor brands: 19
+2026-05-11 11:30:25  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 11:30:25  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 11:30:25  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 11:30:25  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 11:30:25  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 11:30:25  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 11:30:25  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 11:30:25  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 11:30:25  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 11:30:25  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 11:30:25  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 11:30:25  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 11:30:25  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 11:30:25  [INFO]  =================================================================
+2026-05-11 11:30:25  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 11:30:25  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 11:30:25  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-11 11:30:25  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-11 11:30:25  [INFO]  =================================================================
+2026-05-11 11:30:25  [INFO]  🌾 HARVEST RUN | 2026-05-11 11:30:25
+2026-05-11 11:30:25  [INFO]     Videos total   : 99
+2026-05-11 11:30:25  [INFO]     Priority videos: 0
+2026-05-11 11:30:25  [INFO]     Channel videos : 64
+2026-05-11 11:30:25  [INFO]  =================================================================
+2026-05-11 11:30:25  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xgvfzy6RpqY | Source: channel | Age: 0.1d
+2026-05-11 11:30:31  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=lE5FIV-76x0 | Source: channel | Age: 0.7d
+2026-05-11 11:30:31  [INFO]  ✅ [Groq] Client initialised
+2026-05-11 11:30:32  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:30:32  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:30:32  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:30:38  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=KC922Jd8Upk | Source: channel | Age: 0.8d
+2026-05-11 11:30:38  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:30:38  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-English text, no financial context
+2026-05-11 11:30:38  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:30:45  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=TS1F6DIzHVI | Source: channel | Age: 1.0d
+2026-05-11 11:30:52  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=QfHg4yFkRsM | Source: channel | Age: 1.1d
+2026-05-11 11:30:56  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=JvstY3dVD_g | Source: channel | Age: 1.1d
+2026-05-11 11:30:57  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:30:57  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial rant in German
+2026-05-11 11:30:57  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:00  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=CWxpE1mmqV8 | Source: channel | Age: 1.1d
+2026-05-11 11:31:01  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:01  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:31:01  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:01  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:01  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-relevant financial question
+2026-05-11 11:31:01  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:01  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:01  [INFO]    🧠 [Groq] Score: 85/100 | Reason: Experiencing Schufa-related account opening issues
+2026-05-11 11:31:01  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-11 11:31:03  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:03  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial pain or Schufa context
+2026-05-11 11:31:03  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:03  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:03  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-relevant financial question
+2026-05-11 11:31:03  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:09  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=uujSKRLUbhw | Source: channel | Age: 1.6d
+2026-05-11 11:31:09  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:09  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain
+2026-05-11 11:31:09  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:14  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=NoidfYvC_F0 | Source: channel | Age: 2.0d
+2026-05-11 11:31:17  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=vj3iK5XK908 | Source: channel | Age: 2.7d
+2026-05-11 11:31:18  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:18  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context, language only
+2026-05-11 11:31:18  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:25  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xYuRt7a7UT8 | Source: search | Age: 2.9d
+2026-05-11 11:31:28  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=d0p_gTWfZfw | Source: channel | Age: 3.0d
+2026-05-11 11:31:28  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:28  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Not in English or German
+2026-05-11 11:31:28  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:33  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=5-o0m-qM00I | Source: channel | Age: 3.8d
+2026-05-11 11:31:40  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=YewEuBDN3Rw | Source: channel | Age: 3.8d
+2026-05-11 11:31:43  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=PgJWwlB6eww | Source: channel | Age: 4.1d
+2026-05-11 11:31:49  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=ElqpN_BVN4Q | Source: channel | Age: 4.7d
+2026-05-11 11:31:49  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:49  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial content
+2026-05-11 11:31:49  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:50  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No German expat financial context
+2026-05-11 11:31:50  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:31:50  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context
+2026-05-11 11:31:50  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:31:55  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=btpirbGMBQk | Source: channel | Age: 4.8d
+2026-05-11 11:32:03  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=LKyQVWS2Z0o | Source: channel | Age: 5.8d
+2026-05-11 11:32:06  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 11:32:16  [INFO]  =================================================================
+2026-05-11 11:32:16  [INFO]  🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled
+2026-05-11 11:32:16  [INFO]  =================================================================
+2026-05-11 11:32:16  [INFO]  
+📐 Running page generator...
+2026-05-11 11:32:16  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 11:32:16  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 11:32:16  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 11:32:16  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-11 11:32:16  [WARNING]    ⚠  seen_posts.json does not contain a valid post object — skipping
+2026-05-11 11:32:16  [INFO]    ⏭  seen_urls — up to date, skipping
+2026-05-11 11:32:16  [INFO]    📊 Generator summary: 0 built, 1 total tracked
+2026-05-11 11:32:16  [INFO]    ✅ All pages up to date
+2026-05-11 11:32:16  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 11:32:16  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 11:32:31  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 11:32:31  [INFO]  ✅ YouTube worker only is active. Reddit worker is disabled.
+2026-05-11 11:32:31  [INFO]  =================================================================
+2026-05-11 11:32:31  [INFO]  Press Ctrl+C to stop.
+2026-05-11 11:32:31  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 11:32:31  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 11:32:31  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 11:32:31  [INFO]     Competitor brands: 19
+2026-05-11 11:32:31  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 11:32:31  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 11:32:31  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 11:32:31  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 11:32:31  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 11:32:31  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 11:32:31  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 11:32:31  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 11:32:31  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 11:32:31  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 11:32:31  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 11:32:31  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 11:32:31  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 11:32:31  [INFO]  =================================================================
+2026-05-11 11:32:31  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 11:32:31  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 11:32:31  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-11 11:32:31  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-11 11:32:31  [INFO]  =================================================================
+2026-05-11 11:32:31  [INFO]  🌾 HARVEST RUN | 2026-05-11 11:32:31
+2026-05-11 11:32:31  [INFO]     Videos total   : 99
+2026-05-11 11:32:31  [INFO]     Priority videos: 0
+2026-05-11 11:32:31  [INFO]     Channel videos : 64
+2026-05-11 11:32:31  [INFO]  =================================================================
+2026-05-11 11:32:31  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xgvfzy6RpqY | Source: channel | Age: 0.1d
+2026-05-11 11:32:36  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=lE5FIV-76x0 | Source: channel | Age: 0.7d
+2026-05-11 11:32:36  [INFO]  ✅ [Groq] Client initialised
+2026-05-11 11:32:36  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:32:36  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:32:36  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:32:40  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=KC922Jd8Upk | Source: channel | Age: 0.8d
+2026-05-11 11:32:40  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:32:40  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context, non-English text
+2026-05-11 11:32:40  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:32:45  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=TS1F6DIzHVI | Source: channel | Age: 1.0d
+2026-05-11 11:32:51  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=QfHg4yFkRsM | Source: channel | Age: 1.1d
+2026-05-11 11:32:56  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=JvstY3dVD_g | Source: channel | Age: 1.1d
+2026-05-11 11:32:57  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:32:57  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial rant in German
+2026-05-11 11:32:57  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:02  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=CWxpE1mmqV8 | Source: channel | Age: 1.1d
+2026-05-11 11:33:02  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:02  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial pain or context
+2026-05-11 11:33:02  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:03  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:03  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-relevant financial question
+2026-05-11 11:33:03  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:03  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:03  [INFO]    🧠 [Groq] Score: 85/100 | Reason: Experiencing Schufa-related account opening issues
+2026-05-11 11:33:03  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-11 11:33:05  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:05  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial pain or Schufa context
+2026-05-11 11:33:05  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:05  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:05  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-relevant financial question
+2026-05-11 11:33:05  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:09  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=uujSKRLUbhw | Source: channel | Age: 1.6d
+2026-05-11 11:33:10  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:10  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:33:10  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:16  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=NoidfYvC_F0 | Source: channel | Age: 2.0d
+2026-05-11 11:33:22  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=vj3iK5XK908 | Source: channel | Age: 2.7d
+2026-05-11 11:33:23  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:23  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context
+2026-05-11 11:33:23  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:29  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xYuRt7a7UT8 | Source: search | Age: 2.9d
+2026-05-11 11:33:33  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=d0p_gTWfZfw | Source: channel | Age: 3.0d
+2026-05-11 11:33:34  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:34  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-relevant language
+2026-05-11 11:33:34  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:40  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=5-o0m-qM00I | Source: channel | Age: 3.8d
+2026-05-11 11:33:43  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=YewEuBDN3Rw | Source: channel | Age: 3.8d
+2026-05-11 11:33:48  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=PgJWwlB6eww | Source: channel | Age: 4.1d
+2026-05-11 11:33:52  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=ElqpN_BVN4Q | Source: channel | Age: 4.7d
+2026-05-11 11:33:53  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:53  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No German expat context
+2026-05-11 11:33:53  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:53  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:53  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial content, German language
+2026-05-11 11:33:53  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:33:53  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:33:53  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context
+2026-05-11 11:33:53  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:34:01  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=btpirbGMBQk | Source: channel | Age: 4.8d
+2026-05-11 11:34:09  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=LKyQVWS2Z0o | Source: channel | Age: 5.8d
+2026-05-11 11:34:17  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=6gPfa9db_Lc | Source: channel | Age: 5.8d
+2026-05-11 11:34:21  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=cpXIdzL5lFE | Source: channel | Age: 7.0d
+2026-05-11 11:34:27  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=tjHVSxXGfbU | Source: channel | Age: 7.7d
+2026-05-11 11:34:33  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=wV57BBB8IhI | Source: channel | Age: 8.0d
+2026-05-11 11:34:41  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=n928El4hxcM | Source: channel | Age: 8.1d
+2026-05-11 11:34:48  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=y2rCsFlq4aw | Source: channel | Age: 10.8d
+2026-05-11 11:34:53  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=_a4xcIIsYfc | Source: channel | Age: 11.8d
+2026-05-11 11:34:58  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=spWWjD1sma8 | Source: channel | Age: 12.8d
+2026-05-11 11:35:03  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=lEb069UYm2g | Source: channel | Age: 15.1d
+2026-05-11 11:35:10  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=KATyj_us9xc | Source: channel | Age: 15.1d
+2026-05-11 11:35:17  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=RH9j58rGzJY | Source: channel | Age: 16.8d
+2026-05-11 11:35:23  [INFO]    📹 [📄 STANDARD] https://www.youtube.com/watch?v=EHseibf_vFo | Source: search | Age: 17.8d
+2026-05-11 11:35:30  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=ssoCumPEH0g | Source: channel | Age: 20.8d
+2026-05-11 11:35:37  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=-szekkYJTcY | Source: channel | Age: 22.1d
+2026-05-11 11:35:41  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=8Yi3QGLhiy0 | Source: channel | Age: 24.8d
+2026-05-11 11:35:48  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=-H6GtfMUdT0 | Source: channel | Age: 27.8d
+2026-05-11 11:35:54  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=D_Vm-iWDlQM | Source: channel | Age: 29.1d
+2026-05-11 11:35:59  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=ZXKoNEF8uX8 | Source: channel | Age: 34.8d
+2026-05-11 11:36:03  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=pTME6vgcLoE | Source: channel | Age: 36.1d
+2026-05-11 11:36:09  [INFO]    📹 [📄 STANDARD] https://www.youtube.com/watch?v=jfBAj6QQyLQ | Source: search | Age: 40.8d
+2026-05-11 11:36:13  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=4WoHfXx58po | Source: channel | Age: 41.8d
+2026-05-11 11:36:14  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:36:14  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial, humorous anecdote
+2026-05-11 11:36:14  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:36:14  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:36:14  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:36:14  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:36:20  [INFO]    📹 [📄 STANDARD] https://www.youtube.com/watch?v=-K664qAB4TM | Source: search | Age: 43.0d
+2026-05-11 11:36:26  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=bwrb21VE9-M | Source: channel | Age: 48.8d
+2026-05-11 11:36:30  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=BiE8AJIID_U | Source: channel | Age: 55.8d
+2026-05-11 11:36:36  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=FyNaUz4dqw8 | Source: channel | Age: 62.8d
+2026-05-11 11:36:43  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=QOK-jHTV2jE | Source: channel | Age: 69.8d
+2026-05-11 11:36:49  [INFO]    📹 [📄 STANDARD] https://www.youtube.com/watch?v=aVISupCAS5s | Source: search | Age: 97.8d
+2026-05-11 11:36:56  [INFO]    📹 [📄 STANDARD] https://www.youtube.com/watch?v=0wZAKhGCJS0 | Source: search | Age: 119.2d
+2026-05-11 11:37:01  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=GJ9s7g7Qyh4 | Source: channel | Age: 176.9d
+2026-05-11 11:37:05  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=aFApm52paiY | Source: channel | Age: 184.0d
+2026-05-11 11:37:05  [WARNING]  Encountered 403 Forbidden with reason "commentsDisabled"
+2026-05-11 11:37:05  [CRITICAL]  🚫 [YouTube] QUOTA EXHAUSTED — halting all API calls until midnight
+2026-05-11 11:37:13  [WARNING]    ⚠  Quota exhausted mid-harvest — stopping
+2026-05-11 11:37:13  [INFO]    📊 Harvest complete — Videos:99 | Scanned:1062 | Sent:0 | New priority:0
+2026-05-11 11:37:13  [INFO]    🌙 Next harvest in silent window — sleeping now.
+2026-05-11 11:37:13  [INFO]  🚫 [YouTube] Quota exhausted. Sleeping 12.5h until midnight.
+2026-05-11 11:37:31  [CRITICAL]  🟠 [Watchdog] Reddit thread dead — RESTARTING (but still disabled)
+2026-05-11 11:37:31  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 11:37:31  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 11:38:50  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 11:39:17  [INFO]  =================================================================
+2026-05-11 11:39:17  [INFO]  🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled
+2026-05-11 11:39:17  [INFO]  =================================================================
+2026-05-11 11:39:17  [INFO]  
+📐 Running page generator...
+2026-05-11 11:39:18  [INFO]    📄 Found 4 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 11:39:18  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 11:39:18  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 11:39:18  [INFO]    🔄 seen_posts.json was a list — using first element as post
+2026-05-11 11:39:18  [WARNING]    ⚠  seen_posts.json does not contain a valid post object — skipping
+2026-05-11 11:39:18  [INFO]    ⏭  seen_urls — up to date, skipping
+2026-05-11 11:39:18  [INFO]    📊 Generator summary: 0 built, 1 total tracked
+2026-05-11 11:39:18  [INFO]    ✅ All pages up to date
+2026-05-11 11:39:18  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 11:39:18  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 11:39:33  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 11:39:33  [INFO]  ✅ YouTube worker only is active. Reddit worker is disabled.
+2026-05-11 11:39:33  [INFO]  =================================================================
+2026-05-11 11:39:33  [INFO]  Press Ctrl+C to stop.
+2026-05-11 11:39:33  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 11:39:33  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 11:39:33  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 11:39:33  [INFO]     Competitor brands: 19
+2026-05-11 11:39:33  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 11:39:33  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 11:39:33  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 11:39:33  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 11:39:33  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 11:39:33  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 11:39:33  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 11:39:33  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 11:39:33  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 11:39:33  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 11:39:33  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 11:39:33  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 11:39:33  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 11:39:33  [INFO]  =================================================================
+2026-05-11 11:39:33  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 11:39:33  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 11:39:33  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-11 11:39:33  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-11 11:39:33  [INFO]  =================================================================
+2026-05-11 11:39:33  [INFO]  🌾 HARVEST RUN | 2026-05-11 11:39:33
+2026-05-11 11:39:33  [INFO]     Videos total   : 99
+2026-05-11 11:39:33  [INFO]     Priority videos: 0
+2026-05-11 11:39:33  [INFO]     Channel videos : 64
+2026-05-11 11:39:33  [INFO]  =================================================================
+2026-05-11 11:39:33  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xgvfzy6RpqY | Source: channel | Age: 0.1d
+2026-05-11 11:39:40  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=lE5FIV-76x0 | Source: channel | Age: 0.7d
+2026-05-11 11:39:40  [INFO]  ✅ [Groq] Client initialised
+2026-05-11 11:39:41  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:39:41  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:39:41  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:39:45  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=KC922Jd8Upk | Source: channel | Age: 0.8d
+2026-05-11 11:39:46  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:39:46  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-English text, no financial context
+2026-05-11 11:39:46  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:39:50  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=TS1F6DIzHVI | Source: channel | Age: 1.0d
+2026-05-11 11:39:57  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=QfHg4yFkRsM | Source: channel | Age: 1.1d
+2026-05-11 11:40:00  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=JvstY3dVD_g | Source: channel | Age: 1.1d
+2026-05-11 11:40:01  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:40:01  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial rant in German
+2026-05-11 11:40:01  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:40:02  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 11:41:21  [INFO]  =================================================================
+2026-05-11 11:41:21  [INFO]  🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled
+2026-05-11 11:41:21  [INFO]  =================================================================
+2026-05-11 11:41:21  [INFO]  
+📐 Running page generator...
+2026-05-11 11:41:21  [INFO]    📄 Found 2 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 11:41:21  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 11:41:21  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 11:41:21  [INFO]    📊 Generator summary: 0 built, 1 total tracked
+2026-05-11 11:41:21  [INFO]    ✅ All pages up to date
+2026-05-11 11:41:21  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 11:41:21  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 11:41:36  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 11:41:36  [INFO]  ✅ YouTube worker only is active. Reddit worker is disabled.
+2026-05-11 11:41:36  [INFO]  =================================================================
+2026-05-11 11:41:36  [INFO]  Press Ctrl+C to stop.
+2026-05-11 11:41:36  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 11:41:36  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 11:41:36  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 11:41:36  [INFO]     Competitor brands: 19
+2026-05-11 11:41:36  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 11:41:36  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 11:41:36  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 11:41:36  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 11:41:36  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 11:41:36  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 11:41:36  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 11:41:36  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 11:41:36  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 11:41:36  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 11:41:36  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 11:41:36  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 11:41:36  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 11:41:36  [INFO]  =================================================================
+2026-05-11 11:41:36  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 11:41:36  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 11:41:36  [INFO]  =================================================================
+2026-05-11 11:41:36  [INFO]  🔭 DISCOVERY RUN | 2026-05-11 11:41:36
+2026-05-11 11:41:36  [INFO]     Path A: Keyword search × 7 queries (~700 units)
+2026-05-11 11:41:36  [INFO]     Path B: Channel radar × 8 channels (~8 units)
+2026-05-11 11:41:36  [INFO]  =================================================================
+2026-05-11 11:41:36  [INFO]    🔍 Keyword Discovery — 7 queries × 100 units
+2026-05-11 11:41:37  [INFO]    ✔  "moving to Germany expat guide" → 5 video(s)
+2026-05-11 11:41:40  [INFO]    ✔  "Germany bank account foreigners english" → 5 video(s)
+2026-05-11 11:41:43  [INFO]    ✔  "Schufa explained expats" → 5 video(s)
+2026-05-11 11:41:46  [INFO]    ✔  "Germany visa process english" → 5 video(s)
+2026-05-11 11:41:51  [INFO]    ✔  "life in Germany newcomer tips" → 5 video(s)
+2026-05-11 11:41:54  [INFO]    ✔  "Germany apartment search expat" → 5 video(s)
+2026-05-11 11:41:58  [INFO]    ✔  "Germany health insurance expat guide" → 5 video(s)
+2026-05-11 11:42:02  [INFO]    📊 Path A complete — 35 videos from keyword search
+2026-05-11 11:42:02  [INFO]    📡 Channel Radar — 8 channels × ~1 unit each
+2026-05-11 11:42:02  [INFO]    📺 [Simple Germany] Resolved from cache: UCLZcxlLIOzCl4AUVV8ikCgQ
+2026-05-11 11:42:02  [INFO]    📺 [Simple Germany] 8 latest video(s) fetched
+2026-05-11 11:42:03  [INFO]    📺 [My Life in Germany] Resolved from cache: UCfGxA0NYGNwdoyB9M8T6jjA
+2026-05-11 11:42:06  [INFO]    📺 [My Life in Germany] 8 latest video(s) fetched
+2026-05-11 11:42:08  [INFO]    📺 [Finanzfluss] Resolved from cache: UCeARcCUiZg79SQQ-2_XNlXQ
+2026-05-11 11:42:08  [INFO]    📺 [Finanzfluss] 8 latest video(s) fetched
+2026-05-11 11:42:10  [INFO]    📺 [PerFinEx] Resolved from cache: UCyb3q2v3OvEQgBCN4eJ0GSw
+2026-05-11 11:42:10  [INFO]    📺 [PerFinEx] 8 latest video(s) fetched
+2026-05-11 11:42:12  [INFO]    📺 [Easy German] Resolved from cache: UCbxb2fqe9oNgglAoYqsYOtQ
+2026-05-11 11:42:12  [INFO]    📺 [Easy German] 8 latest video(s) fetched
+2026-05-11 11:42:14  [INFO]    📺 [Ahsan Finance] Resolved from cache: UC8NOlkt22UCIAunNTZprE7g
+2026-05-11 11:42:14  [INFO]    📺 [Ahsan Finance] 8 latest video(s) fetched
+2026-05-11 11:42:15  [INFO]    📺 [HalloGermany] Resolved from cache: UC3kkqGi7a2q6tQWOjQw2TuA
+2026-05-11 11:42:15  [INFO]    📺 [HalloGermany] 8 latest video(s) fetched
+2026-05-11 11:42:18  [INFO]    📺 [Wanted Adventure] Resolved from cache: UCv5967rhojn0IaPxJusxy1A
+2026-05-11 11:42:18  [INFO]    📺 [Wanted Adventure] 8 latest video(s) fetched
+2026-05-11 11:42:20  [INFO]    📊 Path B complete — 64 videos from channel radar
+2026-05-11 11:42:20  [INFO]    💾 Video cache saved — 99 entries
+2026-05-11 11:42:20  [INFO]    📊 Discovery complete — 99 unique video(s) cached total
+2026-05-11 11:42:20  [INFO]  =================================================================
+2026-05-11 11:42:20  [INFO]  🌾 HARVEST RUN | 2026-05-11 11:42:20
+2026-05-11 11:42:20  [INFO]     Videos total   : 99
+2026-05-11 11:42:20  [INFO]     Priority videos: 0
+2026-05-11 11:42:20  [INFO]     Channel videos : 64
+2026-05-11 11:42:20  [INFO]  =================================================================
+2026-05-11 11:42:20  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xgvfzy6RpqY | Source: channel | Age: 0.1d
+2026-05-11 11:42:25  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=lE5FIV-76x0 | Source: channel | Age: 0.7d
+2026-05-11 11:42:26  [INFO]  ✅ [Groq] Client initialised
+2026-05-11 11:42:26  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:26  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:42:26  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:42:29  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=KC922Jd8Upk | Source: channel | Age: 0.8d
+2026-05-11 11:42:30  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:30  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context, non-English text
+2026-05-11 11:42:30  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:42:35  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=TS1F6DIzHVI | Source: channel | Age: 1.0d
+2026-05-11 11:42:39  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=QfHg4yFkRsM | Source: channel | Age: 1.1d
+2026-05-11 11:42:44  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=JvstY3dVD_g | Source: channel | Age: 1.1d
+2026-05-11 11:42:46  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:46  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial rant in German
+2026-05-11 11:42:46  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:42:49  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=CWxpE1mmqV8 | Source: channel | Age: 1.1d
+2026-05-11 11:42:49  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:49  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:42:49  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:42:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:50  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-relevant financial question
+2026-05-11 11:42:50  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:42:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:50  [INFO]    🧠 [Groq] Score: 85/100 | Reason: Experiencing Schufa-related account opening issues
+2026-05-11 11:42:50  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-11 11:42:51  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:51  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial pain or Schufa context
+2026-05-11 11:42:51  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:42:52  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:52  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No Schufa/credit context
+2026-05-11 11:42:52  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:42:57  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=uujSKRLUbhw | Source: channel | Age: 1.6d
+2026-05-11 11:42:57  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:42:57  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:42:57  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:43:02  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=NoidfYvC_F0 | Source: channel | Age: 2.0d
+2026-05-11 11:43:09  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=vj3iK5XK908 | Source: channel | Age: 2.7d
+2026-05-11 11:43:09  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:43:09  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context, language only
+2026-05-11 11:43:09  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:43:15  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xYuRt7a7UT8 | Source: search | Age: 2.9d
+2026-05-11 11:43:19  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=d0p_gTWfZfw | Source: channel | Age: 3.0d
+2026-05-11 11:43:19  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:43:19  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-English text
+2026-05-11 11:43:19  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:43:27  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=5-o0m-qM00I | Source: channel | Age: 3.8d
+2026-05-11 11:43:32  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=YewEuBDN3Rw | Source: channel | Age: 3.8d
+2026-05-11 11:43:39  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=PgJWwlB6eww | Source: channel | Age: 4.1d
+2026-05-11 11:43:47  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=ElqpN_BVN4Q | Source: channel | Age: 4.7d
+2026-05-11 11:43:48  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:43:49  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No German expat context
+2026-05-11 11:43:49  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:43:49  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:43:49  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-financial content
+2026-05-11 11:43:49  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:43:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:43:50  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context
+2026-05-11 11:43:50  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:43:51  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 11:45:08  [INFO]  =================================================================
+2026-05-11 11:45:08  [INFO]  🚀 ExpatScore Coordinator v2.3 — Reddit worker disabled
+2026-05-11 11:45:08  [INFO]  =================================================================
+2026-05-11 11:45:08  [INFO]  
+📐 Running page generator...
+2026-05-11 11:45:08  [INFO]    📄 Found 2 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 11:45:08  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 11:45:08  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 11:45:08  [INFO]    📊 Generator summary: 0 built, 1 total tracked
+2026-05-11 11:45:08  [INFO]    ✅ All pages up to date
+2026-05-11 11:45:08  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-11 11:45:08  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-11 11:45:23  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-11 11:45:23  [INFO]  ✅ YouTube worker only is active. Reddit worker is disabled.
+2026-05-11 11:45:23  [INFO]  =================================================================
+2026-05-11 11:45:23  [INFO]  Press Ctrl+C to stop.
+2026-05-11 11:45:23  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-11 11:45:23  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-11 11:45:23  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-11 11:45:23  [INFO]     Competitor brands: 19
+2026-05-11 11:45:23  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-11 11:45:23  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-11 11:45:23  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-11 11:45:23  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-11 11:45:23  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-11 11:45:23  [INFO]       • Easy German (@EasyGerman)
+2026-05-11 11:45:23  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-11 11:45:23  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-11 11:45:23  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-11 11:45:23  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-11 11:45:23  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-11 11:45:23  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-11 11:45:23  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-11 11:45:23  [INFO]  =================================================================
+2026-05-11 11:45:23  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-11 11:45:23  [INFO]  ✅ [YouTube] API client initialised
+2026-05-11 11:45:23  [INFO]  =================================================================
+2026-05-11 11:45:23  [INFO]  🔭 DISCOVERY RUN | 2026-05-11 11:45:23
+2026-05-11 11:45:23  [INFO]     Path A: Keyword search × 7 queries (~700 units)
+2026-05-11 11:45:23  [INFO]     Path B: Channel radar × 8 channels (~8 units)
+2026-05-11 11:45:23  [INFO]  =================================================================
+2026-05-11 11:45:23  [INFO]    🔍 Keyword Discovery — 7 queries × 100 units
+2026-05-11 11:45:24  [INFO]    ✔  "moving to Germany expat guide" → 5 video(s)
+2026-05-11 11:45:28  [INFO]    ✔  "Germany bank account foreigners english" → 5 video(s)
+2026-05-11 11:45:31  [INFO]    ✔  "Schufa explained expats" → 5 video(s)
+2026-05-11 11:45:34  [INFO]    ✔  "Germany visa process english" → 5 video(s)
+2026-05-11 11:45:39  [INFO]    ✔  "life in Germany newcomer tips" → 5 video(s)
+2026-05-11 11:45:43  [INFO]    ✔  "Germany apartment search expat" → 5 video(s)
+2026-05-11 11:45:46  [INFO]    ✔  "Germany health insurance expat guide" → 5 video(s)
+2026-05-11 11:45:48  [INFO]    📊 Path A complete — 35 videos from keyword search
+2026-05-11 11:45:48  [INFO]    📡 Channel Radar — 8 channels × ~1 unit each
+2026-05-11 11:45:48  [INFO]    📺 [Simple Germany] Resolved from cache: UCLZcxlLIOzCl4AUVV8ikCgQ
+2026-05-11 11:45:49  [INFO]    📺 [Simple Germany] 8 latest video(s) fetched
+2026-05-11 11:45:51  [INFO]    📺 [My Life in Germany] Resolved from cache: UCfGxA0NYGNwdoyB9M8T6jjA
+2026-05-11 11:45:51  [INFO]    📺 [My Life in Germany] 8 latest video(s) fetched
+2026-05-11 11:45:54  [INFO]    📺 [Finanzfluss] Resolved from cache: UCeARcCUiZg79SQQ-2_XNlXQ
+2026-05-11 11:45:54  [INFO]    📺 [Finanzfluss] 8 latest video(s) fetched
+2026-05-11 11:45:57  [INFO]    📺 [PerFinEx] Resolved from cache: UCyb3q2v3OvEQgBCN4eJ0GSw
+2026-05-11 11:45:57  [INFO]    📺 [PerFinEx] 8 latest video(s) fetched
+2026-05-11 11:45:59  [INFO]    📺 [Easy German] Resolved from cache: UCbxb2fqe9oNgglAoYqsYOtQ
+2026-05-11 11:45:59  [INFO]    📺 [Easy German] 8 latest video(s) fetched
+2026-05-11 11:46:01  [INFO]    📺 [Ahsan Finance] Resolved from cache: UC8NOlkt22UCIAunNTZprE7g
+2026-05-11 11:46:01  [INFO]    📺 [Ahsan Finance] 8 latest video(s) fetched
+2026-05-11 11:46:03  [INFO]    📺 [HalloGermany] Resolved from cache: UC3kkqGi7a2q6tQWOjQw2TuA
+2026-05-11 11:46:04  [INFO]    📺 [HalloGermany] 8 latest video(s) fetched
+2026-05-11 11:46:06  [INFO]    📺 [Wanted Adventure] Resolved from cache: UCv5967rhojn0IaPxJusxy1A
+2026-05-11 11:46:07  [INFO]    📺 [Wanted Adventure] 8 latest video(s) fetched
+2026-05-11 11:46:08  [INFO]    📊 Path B complete — 64 videos from channel radar
+2026-05-11 11:46:08  [INFO]    💾 Video cache saved — 99 entries
+2026-05-11 11:46:08  [INFO]    📊 Discovery complete — 99 unique video(s) cached total
+2026-05-11 11:46:08  [INFO]  =================================================================
+2026-05-11 11:46:08  [INFO]  🌾 HARVEST RUN | 2026-05-11 11:46:08
+2026-05-11 11:46:08  [INFO]     Videos total   : 99
+2026-05-11 11:46:08  [INFO]     Priority videos: 0
+2026-05-11 11:46:08  [INFO]     Channel videos : 64
+2026-05-11 11:46:08  [INFO]  =================================================================
+2026-05-11 11:46:08  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=xgvfzy6RpqY | Source: channel | Age: 0.1d
+2026-05-11 11:46:16  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=lE5FIV-76x0 | Source: channel | Age: 0.7d
+2026-05-11 11:46:16  [INFO]  ✅ [Groq] Client initialised
+2026-05-11 11:46:17  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:46:17  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context or pain mentioned
+2026-05-11 11:46:17  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:46:24  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=KC922Jd8Upk | Source: channel | Age: 0.8d
+2026-05-11 11:46:24  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 11:46:24  [INFO]    🧠 [Groq] Score: 0/100 | Reason: No financial context, non-English text
+2026-05-11 11:46:24  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-11 11:46:32  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=TS1F6DIzHVI | Source: channel | Age: 1.0d
+2026-05-11 11:46:40  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=QfHg4yFkRsM | Source: channel | Age: 1.1d
+2026-05-11 11:46:45  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-11 11:54:02  [INFO]  =================================================================
+2026-05-11 11:54:02  [INFO]  🚀 ExpatScore Coordinator v2.4 — Generator-only & topic force
+2026-05-11 11:54:02  [INFO]  =================================================================
+2026-05-11 11:54:02  [INFO]    🔥 Forced rebuild for topic: 'BAMF Integration Course Freeze 2026' → slug: 'bamf-integration-course-freeze-2026'
+2026-05-11 11:54:02  [INFO]  
+📐 Running page generator...
+2026-05-11 11:54:02  [INFO]    📄 Found 2 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-11 11:54:02  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-11 11:54:02  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-11 11:54:02  [INFO]    📊 Generator summary: 0 built, 1 total tracked
+2026-05-11 11:54:02  [INFO]    ✅ No pages rebuilt (or forced topic slug not found in data files).
+2026-05-11 11:54:02  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 12:00:35  [INFO]  =================================================================
+2026-05-11 12:00:35  [INFO]  🚀 ExpatScore Coordinator v2.5 — On‑the‑fly topic creation
+2026-05-11 12:00:35  [INFO]  =================================================================
+2026-05-11 12:00:35  [INFO]  
+📐 Running page generator...
+2026-05-11 12:00:36  [INFO]    🔥 Force topic mode: 'BAMF Integration Course Freeze 2026'
+2026-05-11 12:00:36  [INFO]    ✨ No JSON found for 'BAMF Integration Course Freeze 2026' – creating synthetic post
+2026-05-11 12:00:36  [INFO]    ✅ Built (forced): blog/bamf-integration-course-freeze-2026.html (17 words)
+2026-05-11 12:00:36  [INFO]    🗺  Sitemap regenerated: 33 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 12:00:36  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 12:11:11  [INFO]  =================================================================
+2026-05-11 12:11:11  [INFO]  🚀 ExpatScore Coordinator v2.6 — AI‑powered forced topics
+2026-05-11 12:11:11  [INFO]  =================================================================
+2026-05-11 12:11:11  [INFO]  
+📐 Running page generator...
+2026-05-11 12:11:11  [INFO]    🔥 Force topic mode: 'BAMF Integration Course Freeze 2026'
+2026-05-11 12:11:11  [INFO]    🤖 Requesting AI article from Groq (this may take 10–20 seconds)...
+2026-05-11 12:11:11  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-05-11 12:11:11  [ERROR]    ✖ Groq API error: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-05-11 12:11:11  [WARNING]    ⚠  Using placeholder content (AI failed)
+2026-05-11 12:11:11  [INFO]    ✅ Built (forced AI): blog/bamf-integration-course-freeze-2026.html (15 words)
+2026-05-11 12:11:11  [INFO]    🗺  Sitemap regenerated: 33 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 12:11:11  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 12:16:18  [INFO]  =================================================================
+2026-05-11 12:16:18  [INFO]  🚀 ExpatScore Coordinator v2.7 — Updated Groq model (llama-3.3-70b-versatile)
+2026-05-11 12:16:18  [INFO]  =================================================================
+2026-05-11 12:16:18  [INFO]  
+📐 Running page generator...
+2026-05-11 12:16:18  [INFO]    🔥 Force topic mode: 'BAMF Integration Course Freeze 2026'
+2026-05-11 12:16:18  [INFO]    🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...
+2026-05-11 12:16:22  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 12:16:22  [INFO]    ✅ AI content received
+2026-05-11 12:16:22  [INFO]    ✅ Built (forced AI): blog/bamf-integration-course-freeze-2026.html (518 words)
+2026-05-11 12:16:22  [INFO]    🗺  Sitemap regenerated: 33 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 12:16:22  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 12:36:36  [INFO]  =================================================================
+2026-05-11 12:36:36  [INFO]  🚀 ExpatScore Coordinator v2.8 — AI prompt ensures CSS compatibility
+2026-05-11 12:36:36  [INFO]  =================================================================
+2026-05-11 12:36:36  [INFO]  
+📐 Running page generator...
+2026-05-11 12:36:36  [INFO]    🔥 Force topic mode: 'BAMF Integration Course Freeze 2026'
+2026-05-11 12:36:36  [INFO]    🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...
+2026-05-11 12:36:40  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 12:36:40  [INFO]    ✅ AI content received
+2026-05-11 12:36:40  [INFO]    ✅ Built (forced AI): blog/bamf-integration-course-freeze-2026.html (459 words)
+2026-05-11 12:36:40  [INFO]    🗺  Sitemap regenerated: 33 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 12:36:40  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 12:37:14  [INFO]  =================================================================
+2026-05-11 12:37:14  [INFO]  🚀 ExpatScore Coordinator v2.8 — AI prompt ensures CSS compatibility
+2026-05-11 12:37:14  [INFO]  =================================================================
+2026-05-11 12:37:14  [INFO]  
+📐 Running page generator...
+2026-05-11 12:37:14  [INFO]    🔥 Force topic mode: 'BAMF Integration Course Freeze 2026'
+2026-05-11 12:37:14  [INFO]    🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...
+2026-05-11 12:37:18  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 12:37:18  [INFO]    ✅ AI content received
+2026-05-11 12:37:18  [INFO]    ✅ Built (forced AI): blog/bamf-integration-course-freeze-2026.html (576 words)
+2026-05-11 12:37:18  [INFO]    🗺  Sitemap regenerated: 33 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 12:37:18  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 13:44:00  [INFO]  =================================================================
+2026-05-11 13:44:00  [INFO]  🚀 ExpatScore Coordinator v2.8 — AI prompt ensures CSS compatibility
+2026-05-11 13:44:00  [INFO]  =================================================================
+2026-05-11 13:44:00  [INFO]  
+📐 Running page generator...
+2026-05-11 13:44:00  [INFO]    🔥 Force topic mode: 'BAMF Integration Course Freeze 2026'
+2026-05-11 13:44:00  [INFO]    🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...
+2026-05-11 13:44:03  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 13:44:03  [INFO]    ✅ AI content received
+2026-05-11 13:44:03  [INFO]    ✅ Built (forced AI): blog/bamf-integration-course-freeze-2026.html (641 words)
+2026-05-11 13:44:04  [INFO]    🗺  Sitemap regenerated: 33 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 13:44:04  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 13:53:47  [INFO]  =================================================================
+2026-05-11 13:53:47  [INFO]  🚀 ExpatScore Coordinator v2.8 — AI prompt ensures CSS compatibility
+2026-05-11 13:53:47  [INFO]  =================================================================
+2026-05-11 13:53:47  [INFO]  
+📐 Running page generator...
+2026-05-11 13:53:47  [INFO]    🔥 Force topic mode: 'Can you afford a child in Germany? All costs and benefits calculated for 2026'
+2026-05-11 13:53:47  [INFO]    🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...
+2026-05-11 13:53:51  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 13:53:51  [INFO]    ✅ AI content received
+2026-05-11 13:53:51  [INFO]    ✅ Built (forced AI): blog/can-you-afford-a-child-in-germany-all-costs-and-benefits-calculated-for-2026.html (556 words)
+2026-05-11 13:53:51  [INFO]    🗺  Sitemap regenerated: 34 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 13:53:51  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 13:54:31  [INFO]  =================================================================
+2026-05-11 13:54:31  [INFO]  🚀 ExpatScore Coordinator v2.8 — AI prompt ensures CSS compatibility
+2026-05-11 13:54:31  [INFO]  =================================================================
+2026-05-11 13:54:31  [INFO]  
+📐 Running page generator...
+2026-05-11 13:54:31  [INFO]    🔥 Force topic mode: 'Best Bitcoin Apps in Germany 2026: Trade Republic vs. Bitpanda vs. Bison'
+2026-05-11 13:54:31  [INFO]    🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...
+2026-05-11 13:54:34  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 13:54:34  [INFO]    ✅ AI content received
+2026-05-11 13:54:34  [INFO]    ✅ Built (forced AI): blog/best-bitcoin-apps-in-germany-2026-trade-republic-vs-bitpanda-vs-bison.html (516 words)
+2026-05-11 13:54:34  [INFO]    🗺  Sitemap regenerated: 35 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 13:54:34  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 13:55:44  [INFO]  =================================================================
+2026-05-11 13:55:44  [INFO]  🚀 ExpatScore Coordinator v2.8 — AI prompt ensures CSS compatibility
+2026-05-11 13:55:44  [INFO]  =================================================================
+2026-05-11 13:55:44  [INFO]  
+📐 Running page generator...
+2026-05-11 13:55:44  [INFO]    🔥 Force topic mode: 'Cost trap with retirement savings accounts in Germany: Why you need to act now'
+2026-05-11 13:55:44  [INFO]    🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...
+2026-05-11 13:55:47  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 13:55:47  [INFO]    ✅ AI content received
+2026-05-11 13:55:47  [INFO]    ✅ Built (forced AI): blog/cost-trap-with-retirement-savings-accounts-in-germany-why-you-need-to-act-now.html (565 words)
+2026-05-11 13:55:47  [INFO]    🗺  Sitemap regenerated: 36 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 13:55:47  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-11 13:55:56  [INFO]  =================================================================
+2026-05-11 13:55:56  [INFO]  🚀 ExpatScore Coordinator v2.8 — AI prompt ensures CSS compatibility
+2026-05-11 13:55:56  [INFO]  =================================================================
+2026-05-11 13:55:56  [INFO]  
+📐 Running page generator...
+2026-05-11 13:55:56  [INFO]    🔥 Force topic mode: 'Savings, ETFs, and pensions: Essential money guide for young expats in Germany'
+2026-05-11 13:55:56  [INFO]    🤖 Requesting AI article from Groq (llama-3.3-70b-versatile) – this may take 10–20 seconds...
+2026-05-11 13:56:00  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-11 13:56:00  [INFO]    ✅ AI content received
+2026-05-11 13:56:00  [INFO]    ✅ Built (forced AI): blog/savings-etfs-and-pensions-essential-money-guide-for-young-expats-in-germany.html (541 words)
+2026-05-11 13:56:00  [INFO]    🗺  Sitemap regenerated: 37 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-11 13:56:00  [INFO]  ✅ --generator-only mode — exiting.
