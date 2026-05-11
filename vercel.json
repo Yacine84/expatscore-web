@@ -225,6 +225,10 @@
   ],
   "rewrites": [
     {
+      "source": "/etf-guide",
+      "destination": "/docs/blog/savings-etfs-and-pensions-essential-money-guide-for-young-expats-in-germany.html"
+    },
+    {
       "source": "/schufa-guide",
       "destination": "/docs/schufa-guide.html"
     },
