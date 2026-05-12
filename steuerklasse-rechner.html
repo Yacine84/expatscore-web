@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Tax Class Finder 2026 | Steuerklasse Rechner — ExpatScore.de</title>
+
+<!-- SEO Core -->
+<meta name="description" content="Free interactive tool for expats in Germany. Calculate your optimal Steuerklasse (Tax Class I, III/V, IV/IV) based on marital status and salary. Updated for 2026.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="ExpatScore.de">
+
+<!-- Canonical & Hreflang -->
+<link rel="canonical" href="https://expatscore.de/steuerklasse-rechner/">
+<link rel="alternate" hreflang="en" href="https://expatscore.de/steuerklasse-rechner/">
+<link rel="alternate" hreflang="de" href="https://expatscore.de/steuerklasse-rechner/?lang=de">
+<link rel="alternate" hreflang="x-default" href="https://expatscore.de/steuerklasse-rechner/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="German Tax Class Finder 2026 | ExpatScore.de">
+<meta property="og:description" content="Discover your optimal Steuerklasse in seconds. Built for expats in Germany.">
+<meta property="og:url" content="https://expatscore.de/steuerklasse-rechner/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ExpatScore.de">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Tax Class Finder 2026">
+<meta name="twitter:description" content="Free tool to find your optimal German tax class.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "ExpatScore.de",
+      "url": "https://expatscore.de/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "German Tax Class Finder",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "url": "https://expatscore.de/steuerklasse-rechner/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Steuerklasse III/V in Germany?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tax Class III/V is for married couples where one partner earns significantly more than the other. The higher earner gets Class III (with the full married tax-free allowance), while the lower earner gets Class V. This maximizes monthly net income but may result in a tax payment at year-end for the Class V partner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is IV/IV mit Faktor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IV/IV with Factor is a variant for married couples where payroll tax is calculated considering the actual income ratio of both partners. It aims to distribute the tax burden evenly throughout the year, avoiding large year-end tax payments or refunds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I change my tax class during the year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can change your tax class once per year (with exceptions for marriage, divorce, or childbirth). Submit the form 'Antrag auf Steuerklassenwechsel' to your local Finanzamt."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ============================================================
+     EXPATSCORE.DE — PRODUCTION TAX CLASS FINDER
+     Design System: Deep Obsidian × Gold × Emerald
+  ============================================================ */
+  :root {
+    --bg-primary:     #0a0e17;
+    --bg-secondary:   #111827;
+    --bg-card:        #1a2035;
+    --bg-card-hover:  #1f2741;
+    --bg-input:       #111827;
+
+    --gold:           #D4AF37;
+    --gold-light:     #F1D592;
+    --gold-dim:       #8a6e2e;
+    --gold-glow:      rgba(212, 175, 55, 0.08);
+    --gold-border:    rgba(212, 175, 55, 0.18);
+    --gold-dim-bg:    rgba(212, 175, 55, 0.12);
+
+    --emerald:        #50C878;
+    --emerald-light:  #7DDFAA;
+    --emerald-glow:   rgba(80, 200, 120, 0.08);
+    --emerald-border: rgba(80, 200, 120, 0.18);
+
+    --text-primary:   #F0F2F5;
+    --text-secondary: #9CA3AF;
+    --text-muted:     #6B7280;
+
+    --border:         rgba(212, 175, 55, 0.12);
+    --border-subtle:  rgba(255, 255, 255, 0.06);
+
+    --font-display:   'Playfair Display', Georgia, serif;
+    --font-body:      'Outfit', system-ui, sans-serif;
+    --font-mono:      'JetBrains Mono', 'Courier New', monospace;
+
+    --radius-sm:  8px;
+    --radius-md:  14px;
+    --radius-lg:  20px;
+
+    --shadow-card:    0 4px 24px rgba(0,0,0,0.4), 0 1px 4px rgba(0,0,0,0.25);
+    --shadow-gold:    0 0 40px rgba(212,175,55,0.12);
+    --shadow-btn:     0 8px 32px rgba(212,175,55,0.28);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Ambient textures */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(212,175,55,0.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,55,0.018) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 75%);
+    pointer-events: none;
+  }
+  body::after {
+    content: ''; position: fixed; top: -10%; left: -15%;
+    width: 55vw; height: 55vw;
+    background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 65%);
+    filter: blur(60px); pointer-events: none; z-index: 0;
+  }
+  .orb-emerald {
+    position: fixed; bottom: -10%; right: -10%;
+    width: 45vw; height: 45vw;
+    background: radial-gradient(circle, rgba(80,200,120,0.05) 0%, transparent 65%);
+    filter: blur(70px); pointer-events: none; z-index: 0; border-radius: 50%;
+  }
+
+  /* ── Header ── */
+  .site-header {
+    position: relative; z-index: 10;
+    border-bottom: 1px solid var(--border-subtle);
+    background: rgba(10, 14, 23, 0.85);
+    backdrop-filter: blur(12px);
+  }
+  .header-inner {
+    max-width: 1100px; margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.35rem; font-weight: 700;
+    color: var(--gold); text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .main-nav {
+    display: flex; gap: 2rem;
+  }
+  .main-nav a {
+    font-family: var(--font-mono);
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .main-nav a:hover { color: var(--gold); }
+
+  /* ── Layout ── */
+  main {
+    flex: 1;
+    width: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 3rem 1.25rem;
+    position: relative; z-index: 1;
+  }
+  .container {
+    width: 100%; max-width: 660px;
+  }
+
+  /* ── Hero ── */
+  header[role="banner"] { text-align: center; margin-bottom: 3.5rem; }
+  .brand-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 1.25rem;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+  }
+  .brand-eyebrow::before, .brand-eyebrow::after {
+    content: ''; display: inline-block;
+    width: 24px; height: 1px; background: var(--emerald); opacity: 0.5;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 5vw, 3rem);
+    font-weight: 700; line-height: 1.12;
+    letter-spacing: -0.02em; margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 10%, var(--gold-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .subtitle {
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.05rem; font-weight: 400; font-style: italic;
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    margin-bottom: 1.25rem;
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.4s ease, border-color 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: var(--shadow-card), var(--shadow-gold);
+    border-color: rgba(212,175,55,0.2);
+  }
+  .card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 40%, var(--emerald) 100%);
+    opacity: 0.6; border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  /* ── Form ── */
+  .form-group { margin-bottom: 2rem; }
+  label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 0.85rem;
+  }
+  .segmented-control {
+    display: flex; gap: 0.5rem;
+    background: var(--bg-secondary);
+    padding: 0.35rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+  }
+  .segmented-control button {
+    flex: 1; padding: 0.9rem 1rem;
+    background: transparent; border: 1px solid transparent;
+    border-radius: calc(var(--radius-md) - 4px);
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-size: 0.95rem; font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.03em;
+  }
+  .segmented-control button.active {
+    background: var(--gold-dim-bg); color: var(--gold);
+    border-color: var(--gold-border);
+    box-shadow: 0 0 16px rgba(212,175,55,0.08);
+  }
+  .segmented-control button:hover:not(.active) {
+    color: var(--text-primary); background: rgba(255,255,255,0.03);
+  }
+
+  .salary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+  .input-wrap { position: relative; }
+  .input-prefix {
+    position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%);
+    color: var(--gold); font-family: var(--font-mono);
+    font-weight: 600; font-size: 1rem; pointer-events: none; opacity: 0.9;
+  }
+  input[type="number"] {
+    width: 100%; padding: 1rem 1rem 1rem 2.6rem;
+    background: var(--bg-input);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 1.05rem; font-weight: 400;
+    outline: none; transition: all 0.25s ease;
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type="number"]:focus {
+    border-color: var(--gold-border);
+    box-shadow: 0 0 0 3px var(--gold-glow);
+    background: var(--bg-card-hover);
+  }
+  input::placeholder { color: #374151; font-style: normal; }
+
+  .btn-primary {
+    width: 100%; padding: 1.1rem 1.5rem;
+    background: var(--gold); color: #0a0e17;
+    border: none; border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative; overflow: hidden;
+    box-shadow: 0 4px 16px rgba(212,175,55,0.18);
+  }
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-btn);
+  }
+  .btn-primary:active { transform: translateY(0); }
+
+  /* ── Result ── */
+  .result {
+    display: none; opacity: 0; transform: translateY(28px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .result.show { display: block; opacity: 1; transform: translateY(0); }
+
+  .result-eyebrow {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 0.4rem;
+  }
+  .result-class {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 4rem);
+    font-weight: 700; color: var(--gold);
+    text-align: center; margin: 0.3rem 0;
+    letter-spacing: 0.06em;
+    text-shadow: 0 0 60px rgba(212,175,55,0.18);
+  }
+  .result-divider {
+    display: flex; align-items: center; gap: 1rem;
+    margin: 1.75rem auto; max-width: 200px;
+  }
+  .result-divider::before, .result-divider::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(212,175,55,0.35));
+  }
+  .result-divider::after {
+    background: linear-gradient(to left, transparent, rgba(212,175,55,0.35));
+  }
+  .result-divider-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold); opacity: 0.6; flex-shrink: 0;
+  }
+
+  .result-text {
+    text-align: center; color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.05rem; line-height: 1.85;
+    margin-bottom: 1.5rem;
+    max-width: 500px; margin-left: auto; margin-right: auto;
+  }
+  .result-text strong { color: var(--text-primary); font-weight: 600; }
+  .result-text em { color: #9CA3AF; font-style: italic; }
+
+  /* ── Alternative Path (IV/IV mit Faktor) ── */
+  .alt-path {
+    background: rgba(212,175,55,0.04);
+    border: 1px solid var(--gold-border);
+    border-left: 3px solid var(--gold);
+    border-radius: var(--radius-sm);
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 520px;
+  }
+  .alt-path-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.6rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .alt-path-label::before {
+    content: '◆'; font-size: 0.5rem; opacity: 0.7;
+  }
+  .alt-path-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--gold-light); margin-bottom: 0.5rem;
+  }
+  .alt-path-desc {
+    font-family: var(--font-body);
+    font-size: 0.95rem; line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .alt-path-desc strong { color: var(--text-primary); font-weight: 500; }
+
+  /* ── Warning Banner (Minijob) ── */
+  .warning-banner {
+    background: rgba(212,175,55,0.06);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.25rem;
+    margin: 1.25rem auto; max-width: 520px;
+    display: flex; align-items: flex-start; gap: 0.75rem;
+  }
+  .warning-icon {
+    color: var(--gold); font-size: 1.1rem; line-height: 1;
+    margin-top: 0.1rem; flex-shrink: 0;
+  }
+  .warning-text {
+    font-family: var(--font-body);
+    font-size: 0.88rem; line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .warning-text strong { color: var(--gold-light); font-weight: 600; }
+
+  /* ── CTA Block ── */
+  .cta-block {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin: 1.5rem auto; max-width: 520px;
+    text-align: center;
+    background: rgba(255,255,255,0.02);
+  }
+  .cta-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 1rem;
+  }
+  .cta-links {
+    display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;
+  }
+  .cta-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.7rem 1.2rem;
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-sm);
+    color: var(--gold);
+    font-family: var(--font-body);
+    font-size: 0.82rem; font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+  .cta-link:hover {
+    background: var(--gold-dim-bg);
+    border-color: rgba(212,175,55,0.35);
+    color: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  /* ── Footnotes ── */
+  .footnote {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    margin: 1.25rem auto 0; max-width: 520px;
+    font-family: var(--font-body);
+    font-size: 0.82rem; line-height: 1.6;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .footnote-icon { color: var(--gold); font-style: normal; flex-shrink: 0; }
+
+  /* ── Disclaimer ── */
+  .disclaimer {
+    margin-top: 1.75rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: 0.68rem; color: var(--text-muted);
+    text-align: center; line-height: 1.7; letter-spacing: 0.02em;
+  }
+
+  /* ── Copy Button ── */
+  .btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+    padding: 0.8rem 1.6rem;
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-sm);
+    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.25s ease;
+  }
+  .btn-secondary:hover {
+    background: var(--gold-dim-bg);
+    border-color: rgba(212,175,55,0.35);
+    color: var(--gold-light);
+    box-shadow: 0 0 20px rgba(212,175,55,0.08);
+    transform: translateY(-1px);
+  }
+  .copy-wrap { text-align: center; margin-top: 1.5rem; }
+
+  /* ── Toast ── */
+  .toast {
+    position: fixed; bottom: 2.5rem; left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--bg-card);
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-md);
+    color: var(--gold);
+    padding: 0.85rem 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    opacity: 0; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none; z-index: 100;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5), var(--shadow-gold);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ── Footer ── */
+  .site-footer {
+    position: relative; z-index: 10;
+    border-top: 1px solid var(--border-subtle);
+    background: rgba(10, 14, 23, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 2.5rem 1.5rem;
+    margin-top: auto;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex; justify-content: center; gap: 1.75rem;
+    margin-bottom: 1.25rem; flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-family: var(--font-mono);
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .copyright {
+    font-family: var(--font-mono);
+    font-size: 0.65rem; color: #374151;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── Utilities ── */
+  .hidden { display: none !important; }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+  ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .salary-grid { grid-template-columns: 1fr; }
+    .card { padding: 1.75rem 1.25rem; }
+    .result-class { font-size: 2.8rem; }
+    .header-inner { flex-direction: column; gap: 1rem; }
+    .main-nav { gap: 1.25rem; }
+    .cta-links { flex-direction: column; align-items: center; }
+  }
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<div class="orb-emerald"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="https://expatscore.de/" class="logo">ExpatScore.de</a>
+    <nav class="main-nav">
+      <a href="https://expatscore.de/guides/">Guides</a>
+      <a href="https://expatscore.de/tools/">Tools</a>
+      <a href="https://expatscore.de/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN TOOL -->
+<main>
+  <div class="container">
+    <header role="banner">
+      <div class="brand-eyebrow">ExpatScore.de</div>
+      <h1>German Tax Class<br>Finder</h1>
+      <p class="subtitle">Discover your optimal Steuerklasse in seconds</p>
+    </header>
+
+    <div class="card">
+      <div class="form-group">
+        <label>Marital Status</label>
+        <div class="segmented-control">
+          <button type="button" id="btn-single" class="active" onclick="setStatus('single')">Single</button>
+          <button type="button" id="btn-married" onclick="setStatus('married')">Married</button>
+        </div>
+      </div>
+
+      <div class="salary-grid">
+        <div class="form-group">
+          <label id="label-a">Your Annual Salary</label>
+          <div class="input-wrap">
+            <span class="input-prefix">&euro;</span>
+            <input type="number" id="salary-a" placeholder="50000" min="0" step="1000">
+          </div>
+        </div>
+
+        <div class="form-group" id="group-b">
+          <label>Partner's Annual Salary</label>
+          <div class="input-wrap">
+            <span class="input-prefix">&euro;</span>
+            <input type="number" id="salary-b" placeholder="35000" min="0" step="1000">
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="calculate()">Calculate Recommendation</button>
+    </div>
+
+    <div class="card result" id="result-card">
+      <div class="result-eyebrow">Recommended Tax Class</div>
+      <div class="result-class" id="result-title">IV / IV</div>
+      <div class="result-divider"><div class="result-divider-dot"></div></div>
+      <div class="result-text" id="result-desc"></div>
+
+      <!-- Alternative Path: IV/IV mit Faktor -->
+      <div class="alt-path hidden" id="alt-path">
+        <div class="alt-path-label">Third Recommendation Path</div>
+        <div class="alt-path-title" id="alt-path-title">IV / IV mit Faktor</div>
+        <div class="alt-path-desc" id="alt-path-desc"></div>
+      </div>
+
+      <!-- Minijob Warning -->
+      <div class="warning-banner hidden" id="minijob-warning">
+        <div class="warning-icon">▲</div>
+        <div class="warning-text" id="minijob-text"></div>
+      </div>
+
+      <!-- CTA Block -->
+      <div class="cta-block">
+        <div class="cta-label">Continue Your Setup</div>
+        <div class="cta-links">
+          <a href="https://expatscore.de/german-banking-guide-2026/" class="cta-link">German Banking Guide →</a>
+          <a href="https://expatscore.de/health-insurance-germany-2026/" class="cta-link">Insurance / Versicherung →</a>
+        </div>
+      </div>
+
+      <!-- Self-Employed Footnote -->
+      <div class="footnote" id="se-footnote">
+        <span class="footnote-icon">⚠</span>
+        <span>This tool is optimized for employees (<em>Angestellte</em>). Self-employed persons should consult a <em>Steuerberater</em> for personalized advice.</span>
+      </div>
+
+      <div class="copy-wrap">
+        <button class="btn-secondary" onclick="copyLink()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Copy Link
+        </button>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Disclosure:</strong> This tool uses a heuristic ratio-based model for educational purposes only. It does not constitute tax advice. German tax law is complex — consult a <em>Steuerberater</em> for advice tailored to your situation.
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="https://expatscore.de/german-banking-guide-2026/">German Banking Guide</a>
+      <a href="https://expatscore.de/health-insurance-germany-2026/">Insurance</a>
+      <a href="https://expatscore.de/impressum/">Impressum</a>
+      <a href="https://expatscore.de/privacy/">Privacy</a>
+    </div>
+    <p class="copyright">&copy; 2026 ExpatScore.de &middot; Built for expats in Germany</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Link copied to clipboard</div>
+
+<script>
+  let status = 'single';
+
+  function setStatus(s) {
+    status = s;
+    document.getElementById('btn-single').classList.toggle('active', s === 'single');
+    document.getElementById('btn-married').classList.toggle('active', s === 'married');
+
+    const groupB = document.getElementById('group-b');
+    const labelA = document.getElementById('label-a');
+
+    if (s === 'single') {
+      groupB.classList.add('hidden');
+      labelA.textContent = 'Your Annual Salary';
+    } else {
+      groupB.classList.remove('hidden');
+      labelA.textContent = 'Partner A Annual Salary';
+    }
+
+    // Hide result when switching to avoid stale data confusion
+    document.getElementById('result-card').classList.remove('show');
+  }
+
+  function getParams() {
+    const p = new URLSearchParams(window.location.search);
+    return {
+      status: p.get('status') || 'single',
+      a: p.get('a') || '',
+      b: p.get('b') || ''
+    };
+  }
+
+  function init() {
+    const p = getParams();
+    setStatus(p.status === 'married' ? 'married' : 'single');
+    if (p.a) document.getElementById('salary-a').value = p.a;
+    if (p.b) document.getElementById('salary-b').value = p.b;
+    if (p.a && (status === 'single' || p.b !== '')) {
+      calculate();
+    }
+  }
+
+  function calculate() {
+    const a = parseInt(document.getElementById('salary-a').value) || 0;
+    const b = parseInt(document.getElementById('salary-b').value) || 0;
+
+    if (a <= 0) {
+      alert('Please enter a valid salary for Partner A.');
+      return;
+    }
+
+    let title = '';
+    let desc = '';
+    let altPath = null;
+    let minijobPartner = null;
+
+    // Minijob edge-case detection (monthly <= €538)
+    if (status === 'married') {
+      if (b > 0 && (b / 12) <= 538) minijobPartner = 'Partner B';
+      if (a > 0 && (a / 12) <= 538) minijobPartner = 'Partner A';
+    } else {
+      if (a > 0 && (a / 12) <= 538) minijobPartner = 'You';
+    }
+
+    if (status === 'single') {
+      title = 'I';
+      desc = 'As a single person, you are automatically assigned <strong>Tax Class I</strong>. This is the standard class for all single, divorced, or permanently separated taxpayers in Germany. No action is required.';
+    } else {
+      const min = Math.min(a, b);
+      const max = Math.max(a, b);
+      const ratio = min > 0 ? max / min : Infinity;
+
+      if (min === 0) {
+        const earner = a > b ? 'Partner A' : 'Partner B';
+        const other = a > b ? 'Partner B' : 'Partner A';
+        title = 'III / V';
+        desc = `With one partner not currently earning, <strong>Tax Class III / V</strong> is optimal. <strong>${earner}</strong> takes Class III (full married tax-free allowance), while <strong>${other}</strong> takes Class V. This maximizes your household net income each month.`;
+        altPath = {
+          title: 'IV / IV mit Faktor',
+          desc: 'If you prefer to avoid a potential year-end tax payment for the non-earning partner, <strong>IV/IV with Factor</strong> spreads the tax benefit evenly across both salaries using your actual income ratio.'
+        };
+      } else if (ratio > 1.6) {
+        const higher = a > b ? 'Partner A' : 'Partner B';
+        const lower = a > b ? 'Partner B' : 'Partner A';
+        title = 'III / V';
+        desc = `With a significant income gap, <strong>Tax Class III / V</strong> will likely maximize your combined monthly net income. <strong>${higher}</strong> (higher earner) takes Class III for a larger tax-free allowance, while <strong>${lower}</strong> takes Class V.`;
+        altPath = {
+          title: 'IV / IV mit Faktor',
+          desc: 'Consider <strong>IV/IV with Factor</strong> if you want to avoid the high monthly tax rate of Class V. The factor method calculates tax based on your actual income split, giving you the same annual result as III/V but distributed evenly throughout the year.'
+        };
+      } else {
+        title = 'IV / IV';
+        desc = 'With relatively similar incomes, <strong>Tax Class IV / IV</strong> is your default and typically most balanced option. Both partners receive the same basic tax-free allowance split evenly. This avoids the high tax rate associated with Class V.<br><br><em>Tip:</em> If one of you earns significantly more in the future, switching to III/V may become advantageous.';
+        if (ratio > 1.3) {
+          altPath = {
+            title: 'III / V',
+            desc: 'If your income gap widens further, <strong>III/V</strong> could increase your monthly household net income. Consider switching if your ratio exceeds 1.6.'
+          };
+        }
+      }
+    }
+
+    // Render primary result
+    document.getElementById('result-title').textContent = title;
+    document.getElementById('result-desc').innerHTML = desc;
+
+    // Render alternative path (Third Recommendation)
+    const altEl = document.getElementById('alt-path');
+    if (altPath) {
+      document.getElementById('alt-path-title').textContent = altPath.title;
+      document.getElementById('alt-path-desc').innerHTML = altPath.desc;
+      altEl.classList.remove('hidden');
+    } else {
+      altEl.classList.add('hidden');
+    }
+
+    // Render Minijob warning
+    const warnEl = document.getElementById('minijob-warning');
+    if (minijobPartner) {
+      document.getElementById('minijob-text').innerHTML =
+        `<strong>Minijob detected:</strong> ${minijobPartner}'s income appears to be below the €538/month threshold. Minijobs follow special tax and social contribution rules. This tool assumes standard employment contracts — please verify your status with your employer or a <em>Steuerberater</em>.`;
+      warnEl.classList.remove('hidden');
+    } else {
+      warnEl.classList.add('hidden');
+    }
+
+    // Show result card with animation
+    const card = document.getElementById('result-card');
+    card.classList.remove('show');
+    void card.offsetWidth;
+    card.classList.add('show');
+    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Update URL for shareability
+    const url = new URL(window.location.href);
+    url.searchParams.set('status', status);
+    url.searchParams.set('a', a);
+    if (status === 'married') url.searchParams.set('b', b);
+    else url.searchParams.delete('b');
+    window.history.replaceState({}, '', url);
+  }
+
+  async function copyLink() {
+    const url = window.location.href;
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast();
+    } catch (err) {
+      const ta = document.createElement('textarea');
+      ta.value = url;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast();
+    }
+  }
+
+  function showToast() {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+  }
+
+  init();
+</script>
+
+</body>
+</html>
