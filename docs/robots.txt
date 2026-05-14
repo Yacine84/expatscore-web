@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /docs/
-
 Sitemap: https://expatscore.de/sitemap.xml
