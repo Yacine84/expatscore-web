@@ -10801,3 +10801,242 @@ AttributeError: module 'reddit_worker' has no attribute 'main'
 2026-05-11 13:56:00  [INFO]    ✅ Built (forced AI): blog/savings-etfs-and-pensions-essential-money-guide-for-young-expats-in-germany.html (541 words)
 2026-05-11 13:56:00  [INFO]    🗺  Sitemap regenerated: 37 URLs → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
 2026-05-11 13:56:00  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-19 11:42:14  [INFO]  =================================================================
+2026-05-19 11:42:14  [INFO]  🚀 ExpatScore Coordinator v2.9 — Provider URLs · SEO links · Zero-Slash
+2026-05-19 11:42:14  [INFO]  =================================================================
+2026-05-19 11:42:14  [INFO]  
+📐 Running page generator...
+2026-05-19 11:42:14  [WARNING]    ⚠  Providers CSV not found: /Users/macgr/Downloads/expat_web/data/providers.csv — company buttons will keep whatever URL is in the JSON data.
+2026-05-19 11:42:14  [INFO]    📄 Found 2 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-19 11:42:14  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-19 11:42:14  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-19 11:42:14  [INFO]    📊 Generator summary: 0 built, 6 total tracked
+2026-05-19 11:42:14  [INFO]    ✅ No new pages built (no force topic and no changed JSON).
+2026-05-19 11:42:14  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-19 11:42:14  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-19 11:42:14  [INFO]  🟠 Reddit worker thread started (disabled internally).
+2026-05-19 11:42:29  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-19 11:42:29  [INFO]  🔴 YouTube worker started.
+2026-05-19 11:42:29  [INFO]  =================================================================
+2026-05-19 11:42:29  [INFO]  ✅ Workers initialised. Press Ctrl+C to stop.
+2026-05-19 11:42:29  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-19 11:42:29  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-19 11:42:29  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-19 11:42:29  [INFO]     Competitor brands: 19
+2026-05-19 11:42:29  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-19 11:42:29  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-19 11:42:29  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-19 11:42:29  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-19 11:42:29  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-19 11:42:29  [INFO]       • Easy German (@EasyGerman)
+2026-05-19 11:42:29  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-19 11:42:29  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-19 11:42:29  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-19 11:42:29  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-19 11:42:29  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-19 11:42:29  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-19 11:42:29  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-19 11:42:29  [INFO]  =================================================================
+2026-05-19 11:42:29  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-19 11:42:29  [INFO]  ✅ [YouTube] API client initialised
+2026-05-19 11:42:29  [INFO]    📂 Video cache stale — fresh discovery needed
+2026-05-19 11:42:29  [INFO]  =================================================================
+2026-05-19 11:42:29  [INFO]  🔭 DISCOVERY RUN | 2026-05-19 11:42:29
+2026-05-19 11:42:29  [INFO]     Path A: Keyword search × 7 queries (~700 units)
+2026-05-19 11:42:29  [INFO]     Path B: Channel radar × 8 channels (~8 units)
+2026-05-19 11:42:29  [INFO]  =================================================================
+2026-05-19 11:42:29  [INFO]    🔍 Keyword Discovery — 7 queries × 100 units
+2026-05-19 11:42:31  [INFO]    ✔  "moving to Germany expat guide" → 5 video(s)
+2026-05-19 11:42:34  [INFO]    ✔  "Germany bank account foreigners english" → 5 video(s)
+2026-05-19 11:42:37  [INFO]    ✔  "Schufa explained expats" → 5 video(s)
+2026-05-19 11:42:40  [INFO]    ✔  "Germany visa process english" → 5 video(s)
+2026-05-19 11:42:43  [INFO]    ✔  "life in Germany newcomer tips" → 5 video(s)
+2026-05-19 11:42:47  [INFO]    ✔  "Germany apartment search expat" → 5 video(s)
+2026-05-19 11:42:50  [INFO]    ✔  "Germany health insurance expat guide" → 5 video(s)
+2026-05-19 11:42:54  [INFO]    📊 Path A complete — 35 videos from keyword search
+2026-05-19 11:42:54  [INFO]    📡 Channel Radar — 8 channels × ~1 unit each
+2026-05-19 11:42:54  [INFO]    📺 [Simple Germany] Resolved from cache: UCLZcxlLIOzCl4AUVV8ikCgQ
+2026-05-19 11:42:54  [INFO]    📺 [Simple Germany] 8 latest video(s) fetched
+2026-05-19 11:42:56  [INFO]    📺 [My Life in Germany] Resolved from cache: UCfGxA0NYGNwdoyB9M8T6jjA
+2026-05-19 11:42:57  [INFO]    📺 [My Life in Germany] 8 latest video(s) fetched
+2026-05-19 11:42:58  [INFO]    📺 [Finanzfluss] Resolved from cache: UCeARcCUiZg79SQQ-2_XNlXQ
+2026-05-19 11:42:59  [INFO]    📺 [Finanzfluss] 8 latest video(s) fetched
+2026-05-19 11:43:00  [INFO]    📺 [PerFinEx] Resolved from cache: UCyb3q2v3OvEQgBCN4eJ0GSw
+2026-05-19 11:43:01  [INFO]    📺 [PerFinEx] 8 latest video(s) fetched
+2026-05-19 11:43:02  [INFO]    📺 [Easy German] Resolved from cache: UCbxb2fqe9oNgglAoYqsYOtQ
+2026-05-19 11:43:02  [INFO]    📺 [Easy German] 8 latest video(s) fetched
+2026-05-19 11:43:04  [INFO]    📺 [Ahsan Finance] Resolved from cache: UC8NOlkt22UCIAunNTZprE7g
+2026-05-19 11:43:04  [INFO]    📺 [Ahsan Finance] 8 latest video(s) fetched
+2026-05-19 11:43:06  [INFO]    📺 [HalloGermany] Resolved from cache: UC3kkqGi7a2q6tQWOjQw2TuA
+2026-05-19 11:43:06  [INFO]    📺 [HalloGermany] 8 latest video(s) fetched
+2026-05-19 11:43:08  [INFO]    📺 [Wanted Adventure] Resolved from cache: UCv5967rhojn0IaPxJusxy1A
+2026-05-19 11:43:08  [INFO]    📺 [Wanted Adventure] 8 latest video(s) fetched
+2026-05-19 11:43:09  [INFO]    📊 Path B complete — 64 videos from channel radar
+2026-05-19 11:43:09  [INFO]    💾 Video cache saved — 99 entries
+2026-05-19 11:43:09  [INFO]    📊 Discovery complete — 99 unique video(s) cached total
+2026-05-19 11:43:09  [INFO]  =================================================================
+2026-05-19 11:43:09  [INFO]  🌾 HARVEST RUN | 2026-05-19 11:43:09
+2026-05-19 11:43:09  [INFO]     Videos total   : 99
+2026-05-19 11:43:09  [INFO]     Priority videos: 0
+2026-05-19 11:43:09  [INFO]     Channel videos : 64
+2026-05-19 11:43:09  [INFO]  =================================================================
+2026-05-19 11:43:09  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=v0NYCkw7kW8 | Source: channel | Age: 0.8d
+2026-05-19 11:43:10  [INFO]  ✅ [Groq] Client initialised
+2026-05-19 11:43:10  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:10  [INFO]    🧠 [Groq] Score: 85/100 | Reason: Confused about German financial system and tax implications
+2026-05-19 11:43:10  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:43:12  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:12  [INFO]    🧠 [Groq] Score: 100/100 | Reason: Financial stress, Schufa concern, urgent need
+2026-05-19 11:43:12  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:43:14  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:14  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Not in English or German
+2026-05-19 11:43:14  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-19 11:43:14  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:14  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-relevant financial content
+2026-05-19 11:43:14  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-19 11:43:14  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:14  [INFO]    🧠 [Groq] Score: 40/100 | Reason: Mentions financial context in expat life
+2026-05-19 11:43:14  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:43:16  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:16  [INFO]    🧠 [Groq] Score: 89/100 | Reason: Complaining about Sparkasse, financial frustration
+2026-05-19 11:43:16  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:43:25  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=dkvBJernuKE | Source: channel | Age: 1.7d
+2026-05-19 11:43:32  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=D0-6wuKJD1k | Source: channel | Age: 1.8d
+2026-05-19 11:43:39  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=pWcLAH0puEs | Source: channel | Age: 2.1d
+2026-05-19 11:43:40  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:40  [INFO]    🧠 [Groq] Score: 89/100 | Reason: Seeking interest-free loan for house purchase
+2026-05-19 11:43:40  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:43:48  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=oUs8UnS6nlQ | Source: channel | Age: 2.1d
+2026-05-19 11:43:48  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:48  [INFO]    🧠 [Groq] Score: 89/100 | Reason: Confused about German financial system as a newcomer
+2026-05-19 11:43:48  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:43:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:50  [INFO]    🧠 [Groq] Score: 89/100 | Reason: Confused about Schufa and work impact
+2026-05-19 11:43:50  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:43:52  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:43:52  [INFO]    🧠 [Groq] Score: 89/100 | Reason: Confused about German financial system
+2026-05-19 11:43:52  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:43:55  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-19 11:54:31  [INFO]  =================================================================
+2026-05-19 11:54:31  [INFO]  🚀 ExpatScore Coordinator v3.0 — --force · CSV alignment · Zero-Slash
+2026-05-19 11:54:31  [INFO]  =================================================================
+2026-05-19 11:54:31  [INFO]  ⚠  --force flag active: full cache bypass, all pages will be rebuilt
+2026-05-19 11:54:31  [INFO]  
+📐 Running page generator …
+2026-05-19 11:54:31  [INFO]    🔥 --force mode: cache bypassed — ALL pages will be rebuilt
+2026-05-19 11:54:31  [INFO]    📋 Loaded 0 provider row(s) from providers.csv
+2026-05-19 11:54:31  [INFO]    📄 Found 2 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-19 11:54:31  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-19 11:54:31  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-19 11:54:31  [INFO]    📊 Summary: 0 built (full force rebuild), 0 total tracked
+2026-05-19 11:54:31  [INFO]    📋 Loaded 0 provider row(s) from providers.csv
+2026-05-19 11:54:31  [INFO]    🗺  Sitemap written: 31 URLs (31 from disk · 0 from CSV) → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-19 11:54:31  [INFO]  🟠 [Reddit Worker] Thread started.
+2026-05-19 11:54:31  [INFO]  🟠 Reddit worker thread started (disabled internally).
+2026-05-19 11:54:31  [INFO]  🟠 [Reddit Worker] Skipped (disabled in configuration).
+2026-05-19 11:54:46  [INFO]  🔴 [YouTube Worker] Thread started.
+2026-05-19 11:54:46  [INFO]  🔴 YouTube worker started.
+2026-05-19 11:54:46  [INFO]  =================================================================
+2026-05-19 11:54:46  [INFO]  ✅ Workers initialised. Press Ctrl+C to stop.
+2026-05-19 11:54:46  [INFO]  🚀 [YouTube] YouTubeWorker 1.3 — Deep Search & Channel Authority (Final)
+2026-05-19 11:54:46  [INFO]     Tier 1 triggers  : 91 CRITICAL phrases
+2026-05-19 11:54:46  [INFO]     Tier 2 triggers  : 75 WARM phrases
+2026-05-19 11:54:46  [INFO]     Competitor brands: 19
+2026-05-19 11:54:46  [INFO]     Monitored channels: 8 (handle auto-resolution enabled)
+2026-05-19 11:54:46  [INFO]       • Simple Germany (@SimpleGermany)
+2026-05-19 11:54:46  [INFO]       • My Life in Germany (@MyLifeInGermany)
+2026-05-19 11:54:46  [INFO]       • Finanzfluss (@Finanzfluss)
+2026-05-19 11:54:46  [INFO]       • PerFinEx (@PerFinEx)
+2026-05-19 11:54:46  [INFO]       • Easy German (@EasyGerman)
+2026-05-19 11:54:46  [INFO]       • Ahsan Finance (@AhsanFinance)
+2026-05-19 11:54:46  [INFO]       • HalloGermany (@HalloGermany)
+2026-05-19 11:54:46  [INFO]       • Wanted Adventure (@WantedAdventure)
+2026-05-19 11:54:46  [INFO]     Scan depth       : 75 standard / 200 deep
+2026-05-19 11:54:46  [INFO]     Deep scan gate   : videos < 7 days old
+2026-05-19 11:54:46  [INFO]     Priority density : ≥4% Tier1 hits → priority
+2026-05-19 11:54:46  [INFO]     Estimated budget : ~895 units/day (91% headroom)
+2026-05-19 11:54:46  [INFO]  =================================================================
+2026-05-19 11:54:46  [INFO]  file_cache is only supported with oauth2client<4.0.0
+2026-05-19 11:54:46  [INFO]  ✅ [YouTube] API client initialised
+2026-05-19 11:54:46  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-19 11:54:46  [INFO]    📂 Loaded 99 video entries from today's cache
+2026-05-19 11:54:46  [INFO]  =================================================================
+2026-05-19 11:54:46  [INFO]  🌾 HARVEST RUN | 2026-05-19 11:54:46
+2026-05-19 11:54:46  [INFO]     Videos total   : 99
+2026-05-19 11:54:46  [INFO]     Priority videos: 0
+2026-05-19 11:54:46  [INFO]     Channel videos : 64
+2026-05-19 11:54:46  [INFO]  =================================================================
+2026-05-19 11:54:46  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=v0NYCkw7kW8 | Source: channel | Age: 0.8d
+2026-05-19 11:54:47  [INFO]  ✅ [Groq] Client initialised
+2026-05-19 11:54:47  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:54:47  [INFO]    🧠 [Groq] Score: 85/100 | Reason: Confused about German financial system, seeking advice
+2026-05-19 11:54:47  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:54:50  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:54:50  [INFO]    🧠 [Groq] Score: 100/100 | Reason: Financial stress, Schufa concern, urgent help needed
+2026-05-19 11:54:50  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:54:51  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:54:51  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Not in English or German
+2026-05-19 11:54:51  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-19 11:54:52  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:54:52  [INFO]    🧠 [Groq] Score: 0/100 | Reason: Non-relevant financial content
+2026-05-19 11:54:52  [INFO]     🔕 [WARM] Score 0 < gate 30 — skipped
+2026-05-19 11:54:52  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:54:52  [INFO]    🧠 [Groq] Score: 89/100 | Reason: Confused about German tax system
+2026-05-19 11:54:52  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:54:54  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:54:54  [INFO]    🧠 [Groq] Score: 89/100 | Reason: Complaining about Sparkasse, confused about German finance
+2026-05-19 11:54:54  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:55:02  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=dkvBJernuKE | Source: channel | Age: 1.7d
+2026-05-19 11:55:06  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=D0-6wuKJD1k | Source: channel | Age: 1.8d
+2026-05-19 11:55:11  [INFO]    📹 [🔬 DEEP] https://www.youtube.com/watch?v=pWcLAH0puEs | Source: channel | Age: 2.1d
+2026-05-19 11:55:11  [INFO]  HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-19 11:55:11  [INFO]    🧠 [Groq] Score: 89/100 | Reason: Seeking interest-free loan for house purchase
+2026-05-19 11:55:11  [ERROR]     ✖  Delivery failed: HTTPConnectionPool(host='localhost', port=5678): Max retries exceeded with url: /webhook/expatscore-leads (Caused by NewConnectionError("HTTPConnection(host='localhost', port=5678): Failed to establish a new connection: [Errno 61] Connection refused"))
+2026-05-19 11:55:15  [INFO]  🔴 Shutting down. Goodbye.
+2026-05-19 11:55:35  [INFO]  =================================================================
+2026-05-19 11:55:35  [INFO]  🚀 ExpatScore Coordinator v3.0 — --force · CSV alignment · Zero-Slash
+2026-05-19 11:55:35  [INFO]  =================================================================
+2026-05-19 11:55:35  [INFO]  ⚠  --force flag active: full cache bypass, all pages will be rebuilt
+2026-05-19 11:55:35  [INFO]  
+📐 Running page generator …
+2026-05-19 11:55:35  [INFO]    🔥 --force mode: cache bypassed — ALL pages will be rebuilt
+2026-05-19 11:55:35  [INFO]    📋 Loaded 0 provider row(s) from providers.csv
+2026-05-19 11:55:35  [INFO]    📄 Found 2 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-19 11:55:35  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-19 11:55:35  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-19 11:55:35  [INFO]    📊 Summary: 0 built (full force rebuild), 0 total tracked
+2026-05-19 11:55:35  [INFO]    📋 Loaded 0 provider row(s) from providers.csv
+2026-05-19 11:55:35  [INFO]    🗺  Sitemap written: 31 URLs (31 from disk · 0 from CSV) → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-19 11:55:35  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-19 12:02:11  [INFO]  =================================================================
+2026-05-19 12:02:11  [INFO]  🚀 ExpatScore Coordinator v3.0 — --force · CSV alignment · Zero-Slash
+2026-05-19 12:02:11  [INFO]  =================================================================
+2026-05-19 12:02:11  [INFO]  ⚠  --force flag active: full cache bypass, all pages will be rebuilt
+2026-05-19 12:02:11  [INFO]  
+📐 Running page generator …
+2026-05-19 12:02:11  [INFO]    🔥 --force mode: cache bypassed — ALL pages will be rebuilt
+2026-05-19 12:02:11  [INFO]    📋 Loaded 2 provider row(s) from providers.csv
+2026-05-19 12:02:11  [INFO]    📄 Found 2 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-19 12:02:11  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-19 12:02:11  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-19 12:02:11  [INFO]    📊 Summary: 0 built (full force rebuild), 0 total tracked
+2026-05-19 12:02:11  [INFO]    📋 Loaded 2 provider row(s) from providers.csv
+2026-05-19 12:02:11  [INFO]    📋 Added 2 CSV-only programmatic URL(s) to sitemap
+2026-05-19 12:02:11  [INFO]    🗺  Sitemap written: 33 URLs (31 from disk · 2 from CSV) → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-19 12:02:11  [INFO]  ✅ --generator-only mode — exiting.
+2026-05-19 12:03:39  [INFO]  =================================================================
+2026-05-19 12:03:39  [INFO]  🚀 ExpatScore Coordinator v3.0 — --force · CSV alignment · Zero-Slash
+2026-05-19 12:03:39  [INFO]  =================================================================
+2026-05-19 12:03:39  [INFO]  ⚠  --force flag active: full cache bypass, all pages will be rebuilt
+2026-05-19 12:03:39  [INFO]  
+📐 Running page generator …
+2026-05-19 12:03:39  [INFO]    🔥 --force mode: cache bypassed — ALL pages will be rebuilt
+2026-05-19 12:03:39  [INFO]    📋 Loaded 4 provider row(s) from providers.csv
+2026-05-19 12:03:39  [INFO]    📄 Found 2 post file(s) in /Users/macgr/Downloads/expat_web/data
+2026-05-19 12:03:39  [INFO]    ⏭  Skipping dot-file: .dedup_registry.json
+2026-05-19 12:03:39  [INFO]    ⏭  Skipping dot-file: .session_state.json
+2026-05-19 12:03:39  [INFO]    📊 Summary: 0 built (full force rebuild), 0 total tracked
+2026-05-19 12:03:39  [INFO]    📋 Loaded 4 provider row(s) from providers.csv
+2026-05-19 12:03:39  [INFO]    📋 Added 4 CSV-only programmatic URL(s) to sitemap
+2026-05-19 12:03:39  [INFO]    🗺  Sitemap written: 35 URLs (31 from disk · 4 from CSV) → /Users/macgr/Downloads/expat_web/docs/sitemap.xml
+2026-05-19 12:03:39  [INFO]  ✅ --generator-only mode — exiting.

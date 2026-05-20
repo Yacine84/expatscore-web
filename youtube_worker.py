@@ -38,12 +38,23 @@ from googleapiclient.errors import HttpError
 
 from groq_scorer import score_lead
 
+# -----------------------------------------------------------------------------
+# Load environment variables from .env file (MUST happen BEFORE any os.getenv)
+# -----------------------------------------------------------------------------
+from dotenv import load_dotenv
+load_dotenv()
+
 # =============================================================================
-# CONFIGURATION
+# CONFIGURATION – STRICTLY FROM ENVIRONMENT (NO HARDCODED FALLBACKS)
 # =============================================================================
 
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "YOUR_YOUTUBE_API_KEY_HERE")
-N8N_WEBHOOK_URL = os.getenv("N8N_WEBHOOK_URL", "YOUR_N8N_WEBHOOK_URL_HERE")
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+N8N_WEBHOOK_URL = os.getenv("N8N_WEBHOOK_URL")
+
+if not YOUTUBE_API_KEY:
+    raise ValueError("❌ YOUTUBE_API_KEY environment variable not set")
+if not N8N_WEBHOOK_URL:
+    raise ValueError("❌ N8N_WEBHOOK_URL environment variable not set")
 
 # =============================================================================
 # 📡 MONITORED CHANNELS — "Authority Radar"
@@ -716,10 +727,15 @@ def get_video_age_days(published_at: str) -> float:
         return 999.0
 
 # =============================================================================
-# n8n DELIVERY
+# n8n DELIVERY — FIXED: strictly uses env URL, no hardcoded fallback
 # =============================================================================
 
 def send_to_n8n(payload: dict) -> bool:
+    # Additional safety: ensure URL is not empty or a placeholder
+    if not N8N_WEBHOOK_URL or N8N_WEBHOOK_URL.startswith("YOUR_N8N_WEBHOOK"):
+        log.error("   ✖  N8N_WEBHOOK_URL is not set correctly (placeholder or empty)")
+        return False
+
     try:
         response = requests.post(
             N8N_WEBHOOK_URL,
@@ -740,10 +756,10 @@ def send_to_n8n(payload: dict) -> bool:
             )
             return True
         else:
-            log.warning(f"   ⚠  n8n {response.status_code}")
+            log.warning(f"   ⚠  n8n {response.status_code} — URL: {N8N_WEBHOOK_URL}")
             return False
     except requests.exceptions.RequestException as e:
-        log.error(f"   ✖  Delivery failed: {e}")
+        log.error(f"   ✖  Delivery failed: {e} — URL: {N8N_WEBHOOK_URL}")
         return False
 
 # =============================================================================
@@ -1266,14 +1282,21 @@ def main():
 # =============================================================================
 
 if __name__ == "__main__":
+    # Set up basic logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+
+    # dotenv is already loaded at the top, but we reload to allow manual overrides
     try:
         from dotenv import load_dotenv
         load_dotenv()
-        YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", YOUTUBE_API_KEY)
-        N8N_WEBHOOK_URL = os.getenv("N8N_WEBHOOK_URL", N8N_WEBHOOK_URL)
-        log.info("  ✅ .env loaded")
+        # Refresh global variables (optional, top-level already set)
+        # No need to re-raise ValueError here – the top-level already validated.
+        log.info("  ✅ .env reloaded (optional override)")
     except ImportError:
-        log.warning("  ⚠  python-dotenv not installed")
+        log.warning("  ⚠  python-dotenv not installed – using existing environment")
 
     try:
         main()
