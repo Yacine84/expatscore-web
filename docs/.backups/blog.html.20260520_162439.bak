@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   ExpatScore Blog – Insights for Expats in Germany
+  </title>
+  <meta content="Practical guides and expert insights on SCHUFA, banking, taxes, and bureaucracy for expats in Germany." name="description"/>
+  <meta content="expat Germany, SCHUFA, bank account, blocked account, tax, bureaucracy" name="keywords"/>
+  <!-- Open Graph -->
+  <meta content="ExpatScore Blog" property="og:title"/>
+  <meta content="Practical guides and expert insights for expats in Germany." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://expatscore.de/blog/" property="og:url"/>
+  <!-- Canonical -->
+  <link href="https://expatscore.de/blog/" rel="canonical"/>
+  <!-- Styles – CSS is in the same directory as generated HTML (docs folder) -->
+  <link href="/style.css" rel="stylesheet"/>
+  <style>
+   /* Additional styles for blog grid – these are not in the global CSS but safe to add */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    .blog-card {
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .blog-card-category {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--emerald);
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .blog-card-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .blog-card-title a:hover {
+      color: var(--gold);
+    }
+
+    .blog-card-summary {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .blog-card-meta {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .blog-card-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--emerald);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: gap 0.2s;
+    }
+
+    .blog-card-link:hover {
+      gap: 0.5rem;
+      color: var(--gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: var(--space-md);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+ </head>
+ <body class="dark-theme">
+  <!-- Header (identical to article.html) -->
+  <header class="global-header">
+   <div class="header-inner">
+    <div class="logo">
+     <a href="/">
+      ExpatScore.de
+     </a>
+    </div>
+    <div class="nav-links">
+     <a href="/blog">
+      Blog
+     </a>
+     <a href="/#tool">
+      SCHUFA Tool
+     </a>
+     <a href="/#contact">
+      Contact
+     </a>
+    </div>
+    <button aria-label="Menu" class="nav-toggle">
+     ☰
+    </button>
+   </div>
+  </header>
+  <!-- Hero Section (blog specific) -->
+  <div class="hero hero-article">
+   <div class="hero-inner">
+    <span class="hero-eyebrow">
+     ExpatScore Blog
+    </span>
+    <h1 class="hero-h1">
+     Insights for Expats in Germany
+    </h1>
+    <div class="hero-sub">
+     <p>
+      Practical guides, expert tips, and real‑life stories to help you navigate SCHUFA, banking, taxes, and bureaucracy.
+     </p>
+    </div>
+   </div>
+  </div>
+  <!-- Blog Grid -->
+  <div class="blog-grid" id="blog-container">
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     BAMF Integration Course Freeze 2026
+    </h3>
+    <p>
+     The BAMF Integration Course Freeze 2026 has significant implications for English-speaking expats living in Germany. As of 2026, the German Federal Office for Migration and Refugees (BAMF) has announce
+    </p>
+    <span class="date">
+     2026-05-11
+    </span>
+    <a href="blog/bamf-integration-course-freeze-2026.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Best Bitcoin Apps in Germany 2026: Trade Republic vs. Bitpanda vs. Bison
+    </h3>
+    <p>
+     As an expat living in Germany, navigating the world of cryptocurrency can be daunting, especially with the numerous options available. However, with the rise of Bitcoin and other digital currencies, i
+    </p>
+    <span class="date">
+     2026-05-11
+    </span>
+    <a href="blog/best-bitcoin-apps-in-germany-2026-trade-republic-vs-bitpanda-vs-bison.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Can you afford a child in Germany? All costs and benefits calculated for 2026
+    </h3>
+    <p>
+     As an expat living in Germany, deciding whether to have a child can be a complex and personal decision, especially when considering the financial implications. With a range of costs and benefits to ta
+    </p>
+    <span class="date">
+     2026-05-11
+    </span>
+    <a href="blog/can-you-afford-a-child-in-germany-all-costs-and-benefits-calculated-for-2026.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Cost trap with retirement savings accounts in Germany: Why you need to act now
+    </h3>
+    <p>
+     As an expat living in Germany, navigating the complex landscape of retirement savings accounts can be daunting. With various options available, it's crucial to understand the potential cost traps that
+    </p>
+    <span class="date">
+     2026-05-11
+    </span>
+    <a href="blog/cost-trap-with-retirement-savings-accounts-in-germany-why-you-need-to-act-now.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Savings, ETFs, and pensions: Essential money guide for young expats in Germany
+    </h3>
+    <p>
+     As a young expat in Germany, navigating the country's financial system can be daunting. With so many options available, it's essential to understand the basics of savings, investments, and pensions to
+    </p>
+    <span class="date">
+     2026-05-11
+    </span>
+    <a href="blog/savings-etfs-and-pensions-essential-money-guide-for-young-expats-in-germany.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     How to Get a SCHUFA ScoreThe Complete Expat Guide — 2026 Edition
+    </h3>
+    <p>
+     For the first time in SCHUFA's 75-year history, the scoring algorithm is transparent. As of 17 March 2026, only12 clearly defined factorsdetermine your score — down from 250+ opaque criteria. The new
+    </p>
+    <span class="date">
+     2026-05-08
+    </span>
+    <a href="blog/how-to-get-schufa-germany.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     N26 Bank Erfahrungen 2026Der vollständige Expat-Test — Standard, Smart, Go &amp; Metal
+    </h3>
+    <p>
+     N26 ist eine in Berlin gegründete Digitalbank, die seit 2016 eine vollständige BaFin-Banklizenz hält. Mit über 8 Millionen Kunden in 24 europäischen Ländern zählt N26 zu den erfolgreichsten Neobanken
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/n26-bank-erfahrungen.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Easy German Tax Return for Expats: Free Options Compared
+    </h3>
+    <p>
+     The German tax system can be overwhelming, especially for expats. The German tax authority, Finanzamt, requires all residents, including expats, to file a tax return. This can be done for free using t
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/german-tax-return-for-expats-free-options.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     How to Deregister ARD ZDF Beitrag When Leaving Germany
+    </h3>
+    <p>
+     When you move to Germany, you're required to register with the local authorities and pay the ARD ZDF Beitrag. However, when you leave the country, you need to deregister to avoid ongoing payments. Fai
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/deregister-ard-zdf-beitrag-as-expat-leaving-germany.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Expat Guide: Income &amp; Savings Needed to Buy a House in Germa
+    </h3>
+    <p>
+     In Germany, the process of buying a house as an expat involves several steps, including obtaining a German bank account, which is necessary for paying bills and receiving salary. A good SCHUFA score,
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/what-income-needed-to-buy-house-in-germany-as-expat.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     How to Get a C1 Medical Language Course in Germany as a Fore
+    </h3>
+    <p>
+     The C1 medical language course is a mandatory requirement for foreign doctors in Germany, as stated by the German Medical Association (Bundesärztekammer). This course aims to ensure that doctors have
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/c1-medical-language-course-for-foreign-doctors-in-germany.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     German Tax ID (Steuer-ID) Guide 2026Everything Expats Need to Know
+    </h3>
+    <p>
+     This guide is coming soon.We are finalizing the definitive Steuer-ID guide for expats in Germany. It will cover everything from what the Steuer-Identifikationsnummer is, how to get it, Tax Class selec
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/steuer-id-guide.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     TK Health Insurance Germany 2026The Complete Expat Review — Rates, Benefits &amp; Enrollment
+    </h3>
+    <p>
+     Techniker Krankenkasse (TK)is Germany's largest statutory health insurer (gesetzliche Krankenversicherung / GKV), covering 12.3 million people. Founded in 1884 originally for technical workers, TK has
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/tk-health-insurance.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     How to Fill Foreign Prescriptions in Germany
+    </h3>
+    <p>
+     When you try to fill a foreign prescription in Germany, you may encounter issues due to differences in medication names, dosages, or formulations. German pharmacies may not recognize your prescription
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/using-foreign-prescription-in-germany.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Apply for a German Working Holiday Visa: A Step-by-Step Guid
+    </h3>
+    <p>
+     The Working Holiday Visa Germany is designed for young adults who want to live and work in Germany for up to 12 months. To be eligible, applicants must be between 18 and 35 years old, have a valid pas
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/working-holiday-visa-germany-application-process.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Redeeming BahnBonus points for ICE tickets: A step-by-step g
+    </h3>
+    <p>
+     When trying to redeem BahnBonus points for ICE tickets, expats in Germany often encounter issues with the reimbursement process. This can be due to a blocked German bank account or an incomplete SCHUF
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/bahnbonus-punkte-einloesen-fuer-ice-tickets.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Mastering Germany's Integration Course for Permanent Residen
+    </h3>
+    <p>
+     The German government requires expats to complete an integration course to demonstrate their commitment to German society. This course covers language skills, cultural orientation, and civic education
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/german-permanent-residence-integration-course-requirements.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Konto ohne Anmeldung eröffnen 2026: Den Teufelskreis legal durchbrechen
+    </h3>
+    <p>
+     Du bist neu in Deutschland. Du brauchst ein Bankkonto — für das Gehalt, für die Kaution, für alles. Also gehst du zur Sparkasse. Die sagen:„Ohne Anmeldung kein Konto."Also versuchst du, dich anzumelde
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/konto-ohne-anmeldung.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     How to Save Money on a German Driver's License as an Expat
+    </h3>
+    <p>
+     The high cost of a German driver's license is largely due to the required theoretical and practical driving lessons. Expats often need to take additional courses to meet the German standards, which ca
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/cost-of-getting-a-german-drivers-license-as-an-expat.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Best Blocked Accounts Germany 2026€11,904 Sperrkonto — Expatrio vs Fintiba vs Coracle
+    </h3>
+    <p>
+     ASperrkonto(blocked account) is a mandatory financial instrument for non-EU international students and job seekers applying for a German student or job-seeker visa. It proves to German authorities tha
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/blocked-account-germany.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Career Change in Germany: A Step-by-Step Guide for Expats
+    </h3>
+    <p>
+     Many expats in Germany find themselves in careers that don't align with their passions or skills, often due to the pressures of making a living in a new country. The SCHUFA score, which is crucial for
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/career-change-for-expats-in-germany-with-student-debt.html">
+     Read more →
+    </a>
+   </div>
+   <div class="blog-card">
+    <span class="category">
+     GUIDE
+    </span>
+    <h3>
+     Anmeldung Germany 2026The Complete Address Registration Guide for Expats
+    </h3>
+    <p>
+     TheAnmeldung(Einwohnermeldeamt registration) is Germany's mandatory address registration system. When you move into any residence in Germany — whether it's a flat you rent, a shared apartment (WG), or
+    </p>
+    <span class="date">
+     2026-04-15
+    </span>
+    <a href="blog/anmeldung-germany.html">
+     Read more →
+    </a>
+   </div>
+  </div>
+  <!-- Footer (identical to article.html) -->
+  <footer class="global-footer">
+   <div class="inner">
+    <div class="footer-disclaimer">
+     <strong>
+      ExpatScore.de
+     </strong>
+     — Financial clarity for expats in Germany
+    </div>
+    <div class="footer-legal-links">
+     <a href="/impressum">
+      Impressum
+     </a>
+     <a href="/datenschutz">
+      Datenschutz
+     </a>
+    </div>
+    <div class="footer-copy">
+     © 2026
+     <a href="/">
+      ExpatScore.de
+     </a>
+    </div>
+   </div>
+  </footer>
+  <!-- Mobile menu toggle (same as article.html) -->
+  <script>
+   document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav-links')?.classList.toggle('open');
+    });
+  </script>
+ </body>
+</html>

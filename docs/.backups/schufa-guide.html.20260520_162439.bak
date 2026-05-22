@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCHUFA Guide Germany 2026 — Score, Reform & Expat Strategy | ExpatScore.de</title>
+  <meta name="description" content="Vollständiger SCHUFA Guide 2026: Neue 12-Faktoren-Reform (März 2026), Score-Berechnung, kostenloser Online-Zugang, Löschfristen, Aufbau-Strategie für Expats.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Yassine Chaikhi">
+  <link rel="canonical" href="https://expatscore.de/schufa-guide">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SCHUFA Guide Germany 2026 — Score, Reform & Expat Strategy">
+  <meta property="og:url" content="https://expatscore.de/schufa-guide">
+  <meta property="og:site_name" content="ExpatScore.de">
+  <meta property="og:image" content="https://expatscore.de/og-image.jpg">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <meta name="theme-color" content="#0a0e17">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SCHUFA Guide Germany 2026","author":{"@type":"Person","name":"Yassine Chaikhi"},"publisher":{"@type":"Organization","name":"ExpatScore.de"},"dateModified":"2026-03-17","url":"https://expatscore.de/schufa-guide"}</script>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .reform-banner {
+      background: linear-gradient(135deg, rgba(80,200,120,0.08), rgba(212,175,55,0.06));
+      border: 1px solid var(--emerald-border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      position: relative;
+    }
+    .reform-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--emerald), var(--emerald-dim));
+      color: #080c14;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.85rem;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+    .reform-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--emerald);
+      margin-bottom: 0.5rem;
+    }
+
+    .factor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 0.85rem;
+      margin: 1.5rem 0;
+    }
+    .factor-card {
+      background: var(--bg-glass);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+    .factor-card:hover { border-color: var(--gold-border); }
+    .factor-num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gold);
+      background: var(--gold-glow);
+      border: 1px solid var(--gold-border);
+      border-radius: 50%;
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .factor-info-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.2rem;
+    }
+    .factor-info-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Score Scale */
+    .score-scale {
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .score-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .score-range {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      min-width: 80px;
+      color: var(--text-muted);
+    }
+    .score-bar-outer {
+      flex: 1;
+      height: 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .score-bar-inner {
+      height: 100%;
+      border-radius: 20px;
+    }
+    .score-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      min-width: 120px;
+    }
+
+    /* Timeline build */
+    .build-steps {
+      counter-reset: step;
+      margin: 2rem 0;
+    }
+    .build-step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .build-step:last-child { border-bottom: none; }
+    .build-step-num {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--gold-glow);
+      border: 2px solid var(--gold-border);
+      color: var(--gold);
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .build-step-month {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--emerald);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.3rem;
+    }
+    .build-step-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+    .build-step-desc {
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* Deletion periods table */
+    .deletion-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+    .deletion-table th {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .deletion-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .deletion-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .del-period {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .del-new {
+      font-size: 0.7rem;
+      background: rgba(80,200,120,0.1);
+      color: var(--emerald);
+      border: 1px solid var(--emerald-border);
+      padding: 0.15rem 0.5rem;
+      border-radius: 20px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    /* Rights card */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .right-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      transition: all 0.2s;
+    }
+    .right-card:hover { border-color: var(--gold-border); }
+    .right-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .right-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.35rem; }
+    .right-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
+    .right-law {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--emerald);
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="global-header">
+  <div class="header-inner">
+    <div class="logo"><a href="index.html">ExpatScore.de</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">&#9776;</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="banking.html">Banking</a>
+      <a href="schufa-simulator.html">SCHUFA Tool</a>
+      <a href="schufa-guide.html" aria-current="page">SCHUFA Guide</a>
+      <a href="insurance.html">Versicherung</a>
+      <a href="about.html">Über uns</a>
+    </nav>
+  </div>
+</header>
+
+<div class="werbung-bar" role="note">
+  <strong>⚑ Anzeige:</strong> Diese Seite enthält Affiliate-Links. <a href="affiliate-hinweis.html">Details →</a>
+</div>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a> › <span class="current">SCHUFA Guide 2026</span>
+</nav>
+
+<section class="hero-article">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">SCHUFA · ExpatScore.de · 2026</span>
+    <h1>SCHUFA Guide Germany 2026<br><span style="font-size:.55em;color:var(--text-secondary);font-weight:400;">Reform, Score-Berechnung &amp; Aufbau-Strategie</span></h1>
+    <p class="hero-sub">Die größte SCHUFA-Reform seit Jahren: Ab 17. März 2026 nur noch 12 Faktoren statt 250+. Neues Punktesystem 100–999. Kostenloser Online-Zugang. Alles, was Expats jetzt wissen müssen.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
+      <span style="font-size:.8rem;color:var(--text-muted);">⏱ 12 Min Lesezeit</span>
+      <span style="font-size:.8rem;color:var(--emerald);">🔄 Aktualisiert: 17. März 2026</span>
+      <span style="font-size:.8rem;color:var(--gold);">★ Reform-Special</span>
+    </div>
+  </div>
+</section>
+
+<main class="article-body" style="max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;">
+
+  <a href="index.html" class="back-link">← Zur Startseite</a>
+
+  <!-- BREAKING: REFORM BANNER -->
+  <div class="reform-banner">
+    <div class="reform-badge">🆕 NEU: SCHUFA-Reform 17. März 2026</div>
+    <div class="reform-title">Die SCHUFA-Black-Box ist Geschichte</div>
+    <p style="font-size:.9rem;color:var(--text-secondary);margin-bottom:1rem;">Ab dem 17. März 2026 gilt Deutschlands neues, transparentes SCHUFA-System: <strong style="color:var(--text-primary);">12 klare Faktoren</strong> statt undurchsichtiger 250+, einheitliche Punkte-Skala von 100–999, kostenloser Online-Score-Abruf, und gleiches Ergebnis für Verbraucher und Unternehmen.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.75rem;">
+      <div style="background:rgba(80,200,120,0.08);border:1px solid var(--emerald-border);border-radius:8px;padding:.75rem;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:700;color:var(--emerald);">12</div>
+        <div style="font-size:.75rem;color:var(--text-muted);">statt 250+ Faktoren</div>
+      </div>
+      <div style="background:rgba(212,175,55,0.06);border:1px solid var(--gold-border);border-radius:8px;padding:.75rem;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:700;color:var(--gold);">100–999</div>
+        <div style="font-size:.75rem;color:var(--text-muted);">Neue Punkte-Skala</div>
+      </div>
+      <div style="background:rgba(80,200,120,0.08);border:1px solid var(--emerald-border);border-radius:8px;padding:.75rem;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:700;color:var(--emerald);">Kostenlos</div>
+        <div style="font-size:.75rem;color:var(--text-muted);">Online-Score-Abruf</div>
+      </div>
+      <div style="background:rgba(212,175,55,0.06);border:1px solid var(--gold-border);border-radius:8px;padding:.75rem;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:700;color:var(--gold);">18 Mo.</div>
+        <div style="font-size:.75rem;color:var(--text-muted);">Neue Löschfrist (vorher 36)</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Was ist die SCHUFA?</h2>
+  <p>Die <strong>SCHUFA (Schutzgemeinschaft für allgemeine Kreditsicherung)</strong> ist Deutschlands größte Auskunftei. Sie sammelt Finanzdaten von über 68 Millionen Personen — geliefert von mehr als 10.000 Vertragspartnern: Banken, Kreditkartenunternehmen, Mobilfunkanbieter, Energieversorger und Versicherungen.</p>
+
+  <p>Vermieter, Banken, Online-Händler auf Rechnung und Telefonanbieter fragen die SCHUFA ab, bevor sie einen Vertrag abschließen. Ein guter Score öffnet Türen. Kein Score oder ein schlechter Score schließt sie — buchstäblich, wenn es um Wohnungssuche geht.</p>
+
+  <p>Für Expats ist die SCHUFA ein <strong>"Cold Start"-Problem</strong>: Du hast keine deutsche Kredithistorie — nicht weil du ein schlechter Zahler bist, sondern weil du schlicht nicht im System bist. Das war früher schwerer zu überwinden als heute.</p>
+
+  <h2>Die SCHUFA-Reform 2026 — Die 12 neuen Faktoren</h2>
+  <p>Das bisherige Scoring-Modell mit 250+ intransparenten Kriterien (darunter offenbar auch Wohnortfaktoren wie "Geoscoring") wurde nach einem Urteil des Europäischen Gerichtshofs von 2023 und jahrelangem Druck durch Verbraucherschützer grundlegend reformiert. Die Reform trat am 17. März 2026 in Kraft.</p>
+
+  <p>Die neuen 12 Faktoren sind für alle einsehbar — hier sind sie im Detail:</p>
+
+  <div class="factor-grid">
+    <div class="factor-card">
+      <div class="factor-num">1</div>
+      <div>
+        <div class="factor-info-name">Alter älteste Kreditkarte</div>
+        <div class="factor-info-desc">Je länger deine älteste Kreditkarte aktiv ist, desto besser. Schließe alte Kreditkarten niemals unnötig.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">2</div>
+      <div>
+        <div class="factor-info-name">Wohndauer an aktueller Adresse</div>
+        <div class="factor-info-desc">Häufige Umzüge gelten als Instabilitätssignal. Einmal pro Umzug aktualisieren — nicht mehr.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">3</div>
+      <div>
+        <div class="factor-info-name">Anzahl Kreditanfragen</div>
+        <div class="factor-info-desc">Viele Anfragen in kurzer Zeit senken den Score. Immer auf "Konditionsanfrage" (SCHUFA-neutral) bestehen.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">4</div>
+      <div>
+        <div class="factor-info-name">Bestehende Verträge &amp; Konten</div>
+        <div class="factor-info-desc">Aktive Bankkonten, laufende Verträge — positiv. Viele gleichzeitige Neuabschlüsse — negativ.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">5</div>
+      <div>
+        <div class="factor-info-name">Negative Einträge</div>
+        <div class="factor-info-desc">Mahnbescheide, Inkasso, nicht bezahlte Forderungen. Stärkster negativer Faktor im System.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">6</div>
+      <div>
+        <div class="factor-info-name">Zahlungshistorie</div>
+        <div class="factor-info-desc">Pünktliche Zahlungen über Zeit aufgebaut. Der wichtigste positive Faktor für Newcomer.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">7</div>
+      <div>
+        <div class="factor-info-name">Kreditauslastung</div>
+        <div class="factor-info-desc">Anteil genutzter Kredit vs. verfügbarem Limit. Unter 30% ist ideal. Nie an die Grenze gehen.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">8</div>
+      <div>
+        <div class="factor-info-name">Kredittypenmix</div>
+        <div class="factor-info-desc">Verschiedene Kreditarten (Kreditkarte + Ratenkredit) zeigen Kompetenz. Zu viele sind schlecht.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">9</div>
+      <div>
+        <div class="factor-info-name">Gesamtverschuldung</div>
+        <div class="factor-info-desc">Summe aller laufenden Kredite. Hoch ≠ schlecht, aber unverhältnismäßig hoch schon.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">10</div>
+      <div>
+        <div class="factor-info-name">Aktuelle Laufzeitkredite</div>
+        <div class="factor-info-desc">Anzahl laufender Ratenkredite. Wenige, pünktlich bediente Kredite sind ideal.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">11</div>
+      <div>
+        <div class="factor-info-name">Kontowechselfrequenz</div>
+        <div class="factor-info-desc">Häufige Bankwechsel senken den Score leicht. Halte älteste Konten offen.</div>
+      </div>
+    </div>
+    <div class="factor-card">
+      <div class="factor-num">12</div>
+      <div>
+        <div class="factor-info-name">Demografische Faktoren</div>
+        <div class="factor-info-desc">Alter der Person. Nicht beeinflussbar — junges Alter hat leicht negativen Effekt.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.18);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin:1.5rem 0;font-size:.85rem;">
+    <strong style="color:#EF4444;">❌ Nicht mehr im neuen System:</strong> Einkommen, Beruf, Nationalität, Wohnort ("Geoscoring") — all das spielt offiziell keine Rolle mehr. Die SCHUFA bewertet ausschließlich finanzielles Verhalten.
+  </div>
+
+  <h2>Neue Score-Skala: Was bedeutet dein Score?</h2>
+  <p>Das alte Prozentsystem (z.B. "97,5% Bonität") wurde vollständig durch eine einheitliche Punkteskala von <strong>100 bis 999</strong> ersetzt. Je höher, desto besser:</p>
+
+  <div class="score-scale">
+    <div class="score-row">
+      <div class="score-range">900–999</div>
+      <div class="score-bar-outer"><div class="score-bar-inner" style="width:100%;background:linear-gradient(90deg,#50C878,#7DDFAA);"></div></div>
+      <div class="score-label" style="color:#50C878;">Exzellent — Top 5%</div>
+    </div>
+    <div class="score-row">
+      <div class="score-range">750–899</div>
+      <div class="score-bar-outer"><div class="score-bar-inner" style="width:80%;background:#7DDFAA;"></div></div>
+      <div class="score-label" style="color:#7DDFAA;">Sehr Gut</div>
+    </div>
+    <div class="score-row">
+      <div class="score-range">600–749</div>
+      <div class="score-bar-outer"><div class="score-bar-inner" style="width:60%;background:var(--gold);"></div></div>
+      <div class="score-label" style="color:var(--gold);">Gut</div>
+    </div>
+    <div class="score-row">
+      <div class="score-range">450–599</div>
+      <div class="score-bar-outer"><div class="score-bar-inner" style="width:42%;background:#FBBF24;"></div></div>
+      <div class="score-label" style="color:#FBBF24;">Ausreichend</div>
+    </div>
+    <div class="score-row">
+      <div class="score-range">300–449</div>
+      <div class="score-bar-outer"><div class="score-bar-inner" style="width:28%;background:#F97316;"></div></div>
+      <div class="score-label" style="color:#F97316;">Begrenzt</div>
+    </div>
+    <div class="score-row">
+      <div class="score-range">100–299</div>
+      <div class="score-bar-outer"><div class="score-bar-inner" style="width:15%;background:#EF4444;"></div></div>
+      <div class="score-label" style="color:#EF4444;">Sehr Schlecht / Kein Score</div>
+    </div>
+  </div>
+
+  <p style="font-size:.85rem;color:var(--text-muted);margin-top:.5rem;">Hinweis: Newcomer ohne SCHUFA-Einträge starten automatisch im unteren Bereich (100–200). Das ist <em>normal</em> — nicht ein Zeichen von schlechter Kreditwürdigkeit.</p>
+
+  <h2>Neue Löschfristen 2026 — Was sich geändert hat</h2>
+  <p>Eine der positivsten Änderungen der Reform: Kürzere Löschfristen für negative Einträge. Das ist besonders für Expats relevant, die in frühen Monaten versehentlich eine Zahlung verpasst haben.</p>
+
+  <table class="deletion-table">
+    <thead>
+      <tr>
+        <th>Eintragstyp</th>
+        <th>Alte Frist</th>
+        <th>Neue Frist 2026</th>
+        <th>Hinweis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Einmalige Zahlungsverzögerung (beglichen)</td>
+        <td style="color:var(--text-muted);">36 Monate</td>
+        <td><span class="del-period">18 Monate</span> <span class="del-new">NEU</span></td>
+        <td style="font-size:.8rem;color:var(--text-muted);">Nach Begleichung der Schuld</td>
+      </tr>
+      <tr>
+        <td>Insolvenz / Privatinsolvenz</td>
+        <td style="color:var(--text-muted);">3 Jahre nach Abschluss</td>
+        <td><span class="del-period">3 Jahre</span></td>
+        <td style="font-size:.8rem;color:var(--text-muted);">Keine Änderung</td>
+      </tr>
+      <tr>
+        <td>Abgeschlossene Kredite (positiv)</td>
+        <td style="color:var(--text-muted);">3 Jahre</td>
+        <td><span class="del-period">3 Jahre</span></td>
+        <td style="font-size:.8rem;color:var(--text-muted);">Positive Einträge auch gelöscht</td>
+      </tr>
+      <tr>
+        <td>Mahnbescheid (bezahlt)</td>
+        <td style="color:var(--text-muted);">3 Jahre</td>
+        <td><span class="del-period">18 Monate</span> <span class="del-new">NEU</span></td>
+        <td style="font-size:.8rem;color:var(--text-muted);">Wenn vollständig beglichen</td>
+      </tr>
+      <tr>
+        <td>Kreditanfrage (Konditionsanfrage)</td>
+        <td style="color:var(--text-muted);">12 Monate</td>
+        <td><span class="del-period">12 Monate</span></td>
+        <td style="font-size:.8rem;color:var(--text-muted);">SCHUFA-neutral!</td>
+      </tr>
+      <tr>
+        <td>Laufendes Bankkonto</td>
+        <td style="color:var(--text-muted);">3 Jahre nach Kündigung</td>
+        <td><span class="del-period">3 Jahre</span></td>
+        <td style="font-size:.8rem;color:var(--text-muted);">Deshalb: Konten nicht unnötig schließen</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>12-Monats-Aufbau-Plan für Expats</h2>
+  <p>Mit dem neuen, transparenten SCHUFA-System ist der Aufbau eines guten Scores systematischer und schneller möglich als je zuvor. Hier ist unser bewährter Plan:</p>
+
+  <div class="build-steps">
+    <div class="build-step">
+      <div class="build-step-num">1</div>
+      <div>
+        <div class="build-step-month">Woche 1 — Tag der Ankunft</div>
+        <div class="build-step-title">N26 Standard eröffnen</div>
+        <div class="build-step-desc">Nur Reisepass benötigt. VideoIdent in 8 Minuten. Virtuelle Karte sofort nutzbar. Die SCHUFA-Uhr beginnt zu ticken — ab dem ersten Monat mit aktivem Konto.</div>
+      </div>
+    </div>
+    <div class="build-step">
+      <div class="build-step-num">2</div>
+      <div>
+        <div class="build-step-month">Woche 2 — Bis 14 Tage nach Einzug</div>
+        <div class="build-step-title">Anmeldung beim Bürgeramt</div>
+        <div class="build-step-desc">Gesetzlich verpflichtend. Die offizielle Adressmeldung verbindet dich mit dem deutschen System. Benötigte Dokumente: Reisepass + Wohnungsgeberbestätigung des Vermieters + Anmeldeformular.</div>
+      </div>
+    </div>
+    <div class="build-step">
+      <div class="build-step-num">3</div>
+      <div>
+        <div class="build-step-month">Monat 1–3 — Fundament legen</div>
+        <div class="build-step-title">Alle Rechnungen immer pünktlich zahlen</div>
+        <div class="build-step-desc">Miete, Strom, Handy, Streaming-Abos — alles per Lastschrift oder Dauerauftrag. Niemals eine Mahnung riskieren. Handy auf Vertrag (statt Prepaid) wechseln — das ist ein positiver SCHUFA-Eintrag.</div>
+      </div>
+    </div>
+    <div class="build-step">
+      <div class="build-step-num">4</div>
+      <div>
+        <div class="build-step-month">Monat 3–6 — Kredit aufbauen</div>
+        <div class="build-step-title">Kreditkarte beantragen und verantwortungsvoll nutzen</div>
+        <div class="build-step-desc">Eine gesicherte oder niedrig-limit Kreditkarte (z.B. Hanseatic Bank GenialCard oder Barclays) beantragen. 2–3 kleine monatliche Käufe tätigen. Saldo <strong>immer vollständig</strong> am Monatsende zurückzahlen. Kreditauslastung unter 30% halten.</div>
+      </div>
+    </div>
+    <div class="build-step">
+      <div class="build-step-num">5</div>
+      <div>
+        <div class="build-step-month">Monat 6 — Erweiterung</div>
+        <div class="build-step-title">Zweites Konto beantragen (C24 oder DKB)</div>
+        <div class="build-step-desc">Mit 6 Monaten positiver History kannst du jetzt traditionellere Banken angehen. C24 Bank ist am tolerantesten bei der SCHUFA-Prüfung. DKB ist auch eine Option. Beide Konten offen halten — mehr Konten = mehr SCHUFA-Datenpunkte.</div>
+      </div>
+    </div>
+    <div class="build-step">
+      <div class="build-step-num">6</div>
+      <div>
+        <div class="build-step-month">Monat 12 — Überprüfung</div>
+        <div class="build-step-title">Kostenloser SCHUFA-Score-Abruf</div>
+        <div class="build-step-desc">Dank der Reform 2026 kannst du deinen Score jetzt kostenlos online abrufen: schufa.de → Konto erstellen → eID oder Video-Ident verifizieren → Score ansehen (Warteliste beachten). Alternativ: Datenkopie per Post (Art. 15 DSGVO) — dauert 4–6 Wochen, aber vollständig kostenlos.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Deine Rechte — Was die SCHUFA dir schuldet</h2>
+
+  <div class="rights-grid">
+    <div class="right-card">
+      <div class="right-icon">📋</div>
+      <div class="right-title">Kostenlose Datenkopie</div>
+      <div class="right-desc">Einmal jährlich kostenlose Auskunft über alle gespeicherten Daten. Per Post (4–6 Wochen) oder ab 2026 kostenlos online.</div>
+      <div class="right-law">Art. 15 DSGVO</div>
+    </div>
+    <div class="right-card">
+      <div class="right-icon">✏️</div>
+      <div class="right-title">Korrektur falscher Daten</div>
+      <div class="right-desc">Bei fehlerhaften Einträgen kannst du schriftliche Korrektur verlangen. SCHUFA muss innerhalb eines Monats reagieren.</div>
+      <div class="right-law">Art. 16 DSGVO</div>
+    </div>
+    <div class="right-card">
+      <div class="right-icon">🗑️</div>
+      <div class="right-title">Löschung nach Fristablauf</div>
+      <div class="right-desc">Einträge müssen nach gesetzlichen Fristen gelöscht werden. Wenn nicht: schriftlicher Löschantrag + Frist setzen.</div>
+      <div class="right-law">Art. 17 DSGVO</div>
+    </div>
+    <div class="right-card">
+      <div class="right-icon">🚫</div>
+      <div class="right-title">Widerspruch gegen Verarbeitung</div>
+      <div class="right-desc">Du kannst der Nutzung deiner Daten für Scoring-Zwecke widersprechen. Caveat: Das kann die Nutzung bestimmter Services erschweren.</div>
+      <div class="right-law">Art. 21 DSGVO</div>
+    </div>
+    <div class="right-card">
+      <div class="right-icon">⚖️</div>
+      <div class="right-title">Keine rein algorithmische Entscheidung</div>
+      <div class="right-desc">Darf eine Bank dich nur aufgrund eines Algorithmus (SCHUFA-Score) ablehnen? Nein. Du hast Recht auf menschliche Überprüfung.</div>
+      <div class="right-law">Art. 22 DSGVO</div>
+    </div>
+    <div class="right-card">
+      <div class="right-icon">🔍</div>
+      <div class="right-title">Erklärung des Score-Ergebnisses</div>
+      <div class="right-desc">Seit der Reform 2026 musst du eine Erklärung der 12 Faktoren bekommen können — nicht nur einen opaken Prozentsatz.</div>
+      <div class="right-law">Reform 2026</div>
+    </div>
+  </div>
+
+  <h2>Häufige Mythen über die SCHUFA — Richtiggestellt</h2>
+
+  <ul class="faq-list" role="list" style="max-width:100%;">
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        "Ein hoher Score braucht ein hohes Einkommen"
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <strong>Falsch.</strong> Die SCHUFA erfasst keinerlei Einkommensdaten. Dein Gehalt, dein Beruf, dein Arbeitgeber — all das ist der SCHUFA unbekannt. Entscheidend ist ausschließlich das <em>Verhalten</em>: pünktliche Zahlungen, aktive Konten, keine Negativeinträge.
+      </div>
+    </li>
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        "Kein SCHUFA-Eintrag ist besser als ein niedriger Eintrag"
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <strong>Falsch.</strong> Kein Eintrag bedeutet für die SCHUFA: keine Daten = höheres Risiko. Ein Newcomer mit 6 Monaten positivem N26-Konto hat bereits einen besseren Score als jemand ohne jeglichen Eintrag. Fang sofort an, History aufzubauen.
+      </div>
+    </li>
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        "Zu viele Kreditkarten schaden dem Score"
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <strong>Teilweise richtig.</strong> Viele Kreditkartenanfragen in kurzer Zeit senken den Score temporär. Aber ein "Kredittypenmix" (Faktor 8 im neuen System) kann auch helfen. Die Faustregel: maximal 1–2 Kreditkarten, die du aktiv und verantwortungsvoll nutzt.
+      </div>
+    </li>
+    <li class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        "Alte, nicht genutzte Konten schließen verbessert den Score"
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <strong>Falsch.</strong> Das Alter deines ältesten Kontos ist Faktor 1 im neuen System. Schließe niemals dein ältestes Bankkonto oder deine älteste Kreditkarte — selbst wenn du sie kaum nutzt. Die Kontolänge zählt positiv.
+      </div>
+    </li>
+  </ul>
+
+  <h2>So rufst du deinen SCHUFA-Score 2026 kostenlos ab</h2>
+  <p>Mit der Reform ist der kostenlose Online-Abruf neu eingeführt worden. So geht es:</p>
+
+  <ol style="padding-left:1.25rem;color:var(--text-secondary);font-size:.9rem;line-height:2;">
+    <li><strong style="color:var(--text-primary);">schufa.de besuchen</strong> → Auf "Meine SCHUFA" klicken</li>
+    <li><strong style="color:var(--text-primary);">Kostenloses Konto erstellen</strong> → E-Mail-Adresse und Name</li>
+    <li><strong style="color:var(--text-primary);">Identität verifizieren</strong> → Per eID (Online-Ausweis) oder Video-Ident</li>
+    <li><strong style="color:var(--text-primary);">Score abrufen</strong> → Derzeit noch mit Warteliste — bald für alle sofort</li>
+    <li><strong style="color:var(--text-primary);">Alle Einträge prüfen</strong> → Fehlerhafte Einträge sofort anfechten!</li>
+  </ol>
+
+  <div style="background:rgba(212,175,55,0.05);border:1px solid var(--gold-border);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin:1.5rem 0;font-size:.85rem;">
+    <strong style="color:var(--gold);">Tipp:</strong> Die kostenlose Datenkopie nach Art. 15 DSGVO (Brief per Post) ist weiterhin verfügbar und enthält <em>mehr Details</em> als der Online-Score. Auf meineSCHUFA.de → "Datenkopie nach Art. 15 DSGVO" auswählen. Dauert 4–6 Wochen, aber vollständig kostenlos und maximal informativ.
+  </div>
+
+  <div style="text-align:center;margin:2.5rem 0;">
+    <p style="color:var(--text-secondary);margin-bottom:1rem;">Willst du wissen, wo dein SCHUFA-Score wahrscheinlich liegt?</p>
+    <a href="schufa-simulator.html" class="cta-btn cta-teal">Kostenlosen SCHUFA-Score-Simulator starten →</a>
+  </div>
+
+</main>
+
+<footer class="global-footer">
+  <div class="inner">
+    <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
+    <nav class="footer-legal-links" aria-label="Legal-Links">
+      <a href="about.html">Über uns</a>
+      <a href="banking.html">Banking</a>
+      <a href="schufa-guide.html">SCHUFA Guide</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
+      <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
+    </nav>
+    <div class="footer-disclosure"><strong>⚑ Affiliate-Hinweis:</strong> Diese Seite enthält Partnerlinks. Für dich keine Mehrkosten.</div>
+    <p class="footer-copy">&copy; 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
+  </div>
+</footer>
+
+<div id="cookie-banner" role="dialog" aria-live="polite">
+  <div class="cookie-banner-header">
+    <div class="cookie-banner-icon">🍪</div>
+    <div class="cookie-banner-body">
+      <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
+      <div class="cookie-banner-text">Wir nutzen Cookies. <a href="datenschutz.html">Mehr Info</a></div>
+    </div>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
+    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-cookie-settings" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
+    <h2>Cookie-Einstellungen</h2>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Immer aktiv.</span></div>
+      <label class="toggle-switch"><input type="checkbox" checked disabled><span class="toggle-slider"></span></label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-analytics"><span class="toggle-slider"></span></label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong></div>
+      <label class="toggle-switch"><input type="checkbox" id="toggle-affiliate"><span class="toggle-slider"></span></label>
+    </div>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

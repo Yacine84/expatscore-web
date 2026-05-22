@@ -1,0 +1,140 @@
+#!/usr/bin/env python3
+"""
+update_titles.py — ExpatScore.de Bulk Title Updater
+----------------------------------------------------
+Iterates over all .html files in docs/ and replaces
+<title> and <h1> tag content based on a defined mapping.
+
+Safe to re-run: only writes to a file if a change was made.
+"""
+
+import os
+import re
+
+# ──────────────────────────────────────────────
+# CONFIGURATION: Add or edit title pairs here.
+# Key   = exact current title (as it appears in <title> and <h1>)
+# Value = the new title to replace it with
+# ──────────────────────────────────────────────
+TITLE_MAPPING = {
+    "SCHUFA Guide Germany 2026":
+        "SCHUFA Score Guide 2026: Fix Your Score (Step-by-Step)",
+
+    "Anmeldung Germany 2026":
+        "Anmeldung Germany 2026: Avoid Fines & Register Fast",
+
+    "Best Blocked Accounts Germany 2026":
+        "Best Blocked Accounts Germany 2026: Save Money (Expatrio vs Fintiba)",
+
+    "TK Health Insurance Germany 2026":
+        "TK Health Insurance 2026: Is it Worth it? (Full Review)",
+
+    "German Tax ID (Steuer-ID) Guide 2026":
+        "German Tax ID (Steuer-ID) 2026: The Ultimate Expat Guide",
+
+    "N26 Bank Erfahrungen 2026":
+        "N26 Bank Review 2026: Best Digital Bank for Expats?",
+
+    "Health Insurance Germany 2026":
+        "Health Insurance Germany 2026: GKV vs PKV (The Complete Guide)",
+}
+
+# ──────────────────────────────────────────────
+# PATH: Resolves to docs/ relative to this script
+# ──────────────────────────────────────────────
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DOCS_DIR   = os.path.join(SCRIPT_DIR, "docs")
+
+
+def replace_title_tag(content: str, old: str, new: str) -> str:
+    """
+    Replaces the text content inside <title>...</title>.
+    Handles optional whitespace around the title text.
+    Does NOT touch HTML attributes or any other tags.
+    """
+    pattern = re.compile(
+        r'(<title>)(\s*)' + re.escape(old) + r'(\s*)(</title>)',
+        re.IGNORECASE
+    )
+    return pattern.sub(r'\g<1>\g<2>' + new + r'\g<3>\g<4>', content)
+
+
+def replace_h1_tag(content: str, old: str, new: str) -> str:
+    """
+    Replaces the text content inside <h1>...</h1>.
+    Handles optional class/id attributes on the opening tag
+    and optional whitespace around the title text.
+    Does NOT affect nested tags or multi-line h1 blocks.
+    """
+    pattern = re.compile(
+        r'(<h1[^>]*>)(\s*)' + re.escape(old) + r'(\s*)(</h1>)',
+        re.IGNORECASE
+    )
+    return pattern.sub(r'\g<1>\g<2>' + new + r'\g<3>\g<4>', content)
+
+
+def process_file(filepath: str) -> bool:
+    """
+    Reads a single HTML file, applies all title replacements,
+    and writes it back only if something actually changed.
+    Returns True if the file was modified.
+    """
+    with open(filepath, "r", encoding="utf-8") as f:
+        original = f.read()
+
+    updated = original
+
+    for old_title, new_title in TITLE_MAPPING.items():
+        updated = replace_title_tag(updated, old_title, new_title)
+        updated = replace_h1_tag(updated, old_title, new_title)
+
+    if updated != original:
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(updated)
+        return True
+
+    return False
+
+
+def main():
+    if not os.path.isdir(DOCS_DIR):
+        print(f"❌  ERROR: Could not find docs/ directory at: {DOCS_DIR}")
+        print("    Make sure update_titles.py lives in the same folder as docs/")
+        return
+
+    html_files = [
+        os.path.join(DOCS_DIR, fname)
+        for fname in os.listdir(DOCS_DIR)
+        if fname.endswith(".html")
+    ]
+
+    if not html_files:
+        print(f"⚠️  No .html files found in: {DOCS_DIR}")
+        return
+
+    print(f"\n🔍  Scanning {len(html_files)} HTML file(s) in docs/...\n")
+    print("-" * 60)
+
+    updated_count = 0
+    skipped_count = 0
+
+    for filepath in sorted(html_files):
+        filename = os.path.basename(filepath)
+        was_updated = process_file(filepath)
+
+        if was_updated:
+            print(f"  ✅  UPDATED  →  {filename}")
+            updated_count += 1
+        else:
+            print(f"  ⏭️  SKIPPED  →  {filename}  (no matching titles found)")
+            skipped_count += 1
+
+    print("-" * 60)
+    print(f"\n📊  SUMMARY")
+    print(f"    Files updated : {updated_count}")
+    print(f"    Files skipped : {skipped_count}")
+    print(f"    Total scanned : {len(html_files)}\n")
+
+
+if __name__ == "__main__":
+    main()
