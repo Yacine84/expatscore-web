@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>German Tax Class Calculator 2026 — Steuerklasse I-VI Guide &amp; Net Income Tool</title>
+<meta content="Calculate your German tax class and net salary for 2026. Compare Steuerklasse 1-6, Ehegattensplitting, and find your optimal tax class as an expat in Germany." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Yassine Chaikhi" name="author"/>
+<link href="https://expatscore.de/tax-class-tool" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="German Tax Class Calculator 2026 — Steuerklasse I-VI Guide" property="og:title"/>
+<meta content="Compare all 6 German tax classes, calculate net income, and understand Ehegattensplitting. Built for expats moving to Germany in 2026." property="og:description"/>
+<meta content="https://expatscore.de/tax-class-tool" property="og:url"/>
+<meta content="https://expatscore.de/og-image.jpg" property="og:image"/>
+<meta content="ExpatScore.de" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="German Tax Class Calculator 2026 — Steuerklasse I-VI" name="twitter:title"/>
+<meta content="Find your optimal German tax class and see exactly how it affects your net salary. Free tool for expats." name="twitter:description"/>
+<link href="assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="#080c10" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg-primary: #080c10;
+    --bg-secondary: #0e1318;
+    --bg-card: #131920;
+    --text-primary: #e8edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #5c6b7a;
+    --accent-gold: #c9a84c;
+    --accent-gold-light: #e4c97a;
+    --accent-teal: #00c4a7;
+    --border-subtle: rgba(255,255,255,0.07);
+    --border-gold: rgba(201,168,76,0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-gold); text-decoration: none; transition: opacity 0.2s; }
+  a:hover { opacity: 0.85; text-decoration: underline; }
+
+  /* Header */
+  .global-header {
+    background: rgba(8,12,16,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header-inner {
+    max-width: 1100px; margin: 0 auto;
+    padding: 0.9rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo a {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.35rem; font-weight: 700;
+    color: var(--accent-gold-light); text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 1.75rem; }
+  .nav-links a {
+    font-size: 0.82rem; font-weight: 500;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent-gold-light); }
+  .nav-toggle {
+    display: none; background: none; border: none;
+    color: var(--text-secondary); font-size: 1.4rem; cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+  }
+
+  /* Hero */
+  .page-hero {
+    background: linear-gradient(180deg, #0e1318 0%, var(--bg-primary) 100%);
+    border-bottom: 1px solid var(--border-gold);
+    padding: 3.5rem 1.5rem 2.5rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
+    background-size: 48px 48px; pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+  .hero-eyebrow {
+    display: inline-block; font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent-gold);
+    border: 1px solid rgba(201,168,76,0.25);
+    background: rgba(201,168,76,0.06); border-radius: 20px;
+    padding: 0.3rem 1rem; margin-bottom: 1.25rem;
+  }
+  .hero-h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700;
+    color: var(--accent-gold-light); line-height: 1.2; margin-bottom: 0.85rem;
+  }
+  .hero-sub {
+    font-size: 1rem; color: var(--text-secondary); line-height: 1.7;
+    max-width: 620px; margin: 0 auto 1.75rem;
+  }
+  .trust-pills { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+  .trust-pill {
+    font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle);
+    border-radius: 20px; padding: 0.3rem 0.9rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .trust-pill span { color: var(--accent-teal); }
+
+  /* Calculator Placeholder */
+  .calc-placeholder {
+    max-width: 720px; margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+  }
+  .calc-box {
+    background: linear-gradient(145deg, #0e1318, #131920);
+    border: 1px dashed rgba(201,168,76,0.3);
+    border-radius: 16px; padding: 3rem 2rem;
+    text-align: center; position: relative;
+  }
+  .calc-box::before {
+    content: '';
+    position: absolute; inset: 0; border-radius: 16px; padding: 1px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.3), rgba(0,196,167,0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+  }
+  .calc-box-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .calc-box-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--accent-gold-light);
+    margin-bottom: 0.5rem;
+  }
+  .calc-box-desc {
+    font-size: 0.9rem; color: var(--text-muted); max-width: 420px;
+    margin: 0 auto 1.25rem; line-height: 1.6;
+  }
+  .calc-box-tag {
+    display: inline-block; font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent-gold);
+    background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 20px; padding: 0.35rem 1rem;
+  }
+
+  /* SEO Content */
+  .seo-content {
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-subtle);
+    padding: 4rem 1.5rem 2rem;
+  }
+  .seo-inner {
+    max-width: 720px; margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 0.95rem; line-height: 1.75;
+  }
+  .seo-inner h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700; color: var(--accent-gold-light);
+    margin-top: 2.75rem; margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+  .seo-inner h2:first-of-type { margin-top: 0; }
+  .seo-inner h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.15rem, 3vw, 1.45rem);
+    font-weight: 600; color: var(--text-primary);
+    margin-top: 1.75rem; margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  .seo-inner p { margin-bottom: 1rem; }
+  .seo-inner strong { color: var(--text-primary); font-weight: 600; }
+  .seo-inner ul, .seo-inner ol {
+    margin-bottom: 1.25rem; padding-left: 1.4rem;
+  }
+  .seo-inner li { margin-bottom: 0.5rem; }
+  .seo-inner a { color: var(--accent-gold); text-decoration: underline; }
+  .seo-inner a:hover { color: var(--accent-gold-light); }
+
+  /* Table styling */
+  .tax-table {
+    width: 100%; border-collapse: collapse;
+    margin: 1.25rem 0 1.5rem;
+    font-size: 0.88rem;
+  }
+  .tax-table th {
+    text-align: left; padding: 0.75rem 0.85rem;
+    background: rgba(201,168,76,0.08);
+    color: var(--accent-gold-light); font-weight: 600;
+    border-bottom: 1px solid var(--border-gold);
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .tax-table td {
+    padding: 0.75rem 0.85rem;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+  }
+  .tax-table tr:last-child td { border-bottom: none; }
+  .tax-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* FAQ Accordion */
+  .faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px; margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+  .faq-question {
+    padding: 1rem 1.25rem;
+    font-weight: 600; color: var(--text-primary);
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.92rem; transition: background 0.2s;
+  }
+  .faq-question:hover { background: rgba(255,255,255,0.03); }
+  .faq-question::after {
+    content: '+'; font-family: 'DM Mono', monospace;
+    font-size: 1.1rem; color: var(--accent-gold); transition: transform 0.2s;
+  }
+  .faq-item.open .faq-question::after { content: '−'; }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease-out, padding 0.35s ease-out;
+    padding: 0 1.25rem;
+    font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;
+  }
+  .faq-item.open .faq-answer {
+    max-height: 600px;
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  /* CTA Box */
+  .cta-box {
+    background: rgba(201,168,76,0.05);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px; padding: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .cta-box-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem; font-weight: 600;
+    color: var(--accent-gold-light); margin-bottom: 0.5rem;
+  }
+  .cta-box p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+
+  /* Cluster Links */
+  .cluster-links {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    padding: 2.5rem 1.5rem; margin-top: 1rem;
+  }
+  .cluster-inner { max-width: 720px; margin: 0 auto; }
+  .cluster-label {
+    font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--text-muted);
+    font-family: 'DM Mono', monospace; margin-bottom: 0.85rem;
+  }
+  .cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.6rem;
+  }
+  .cluster-card {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px; text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .cluster-card:hover {
+    border-color: var(--border-gold);
+    background: rgba(201,168,76,0.04);
+  }
+  .cluster-card span:first-child { font-size: 1rem; }
+  .cluster-card span:last-child {
+    font-size: 0.83rem; color: #a8b3bf;
+  }
+
+  /* Footer */
+  .global-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    padding: 2.5rem 1.5rem 2rem;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-disclaimer {
+    font-size: 0.78rem; color: var(--text-muted);
+    margin-bottom: 1rem; font-weight: 600;
+  }
+  .footer-legal-links {
+    display: flex; flex-wrap: wrap; gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer-legal-links a {
+    font-size: 0.78rem; color: var(--text-muted);
+    text-decoration: none;
+  }
+  .footer-legal-links a:hover { color: var(--accent-gold-light); text-decoration: underline; }
+  .footer-disclosure {
+    font-size: 0.75rem; color: var(--text-muted);
+    line-height: 1.6; margin-bottom: 1.25rem;
+    border-left: 2px solid var(--border-gold);
+    padding-left: 0.85rem;
+  }
+  .footer-copy {
+    font-size: 0.75rem; color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .footer-copy a { color: var(--text-muted); text-decoration: underline; }
+
+
+  /* ── TAX CALCULATOR ── */
+  .tax-calculator {
+    background: linear-gradient(145deg, #0e1318, #131920);
+    border: 1px solid var(--border-gold);
+    border-radius: 16px; padding: 2rem 2.25rem;
+    position: relative; overflow: hidden;
+  }
+  .tax-calculator::before {
+    content: '';
+    position: absolute; inset: 0; border-radius: 16px; padding: 1px;
+    background: linear-gradient(135deg, rgba(201,168,76,0.3), rgba(0,196,167,0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+  }
+  .calc-header { text-align: center; margin-bottom: 1.75rem; position: relative; z-index: 1; }
+  .calc-icon { font-size: 2.25rem; margin-bottom: 0.75rem; }
+  .calc-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--accent-gold-light);
+    margin-bottom: 0.35rem;
+  }
+  .calc-subtitle { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+  .calc-form { position: relative; z-index: 1; }
+  .form-row { margin-bottom: 1.25rem; }
+  .form-row label {
+    display: block; font-size: 0.82rem; font-weight: 600;
+    color: var(--text-muted); text-transform: uppercase;
+    letter-spacing: 0.06em; margin-bottom: 0.5rem;
+  }
+  .input-wrap {
+    display: flex; align-items: center;
+    background: var(--bg-card); border: 1px solid var(--border-subtle);
+    border-radius: 12px; overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .input-wrap:focus-within { border-color: var(--accent-gold); }
+  .input-currency {
+    padding: 0 1rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--accent-gold);
+    border-right: 1px solid var(--border-subtle);
+    background: rgba(201,168,76,0.04);
+  }
+  #grossSalary, #taxClass {
+    flex: 1; background: transparent; border: none; outline: none;
+    font-family: 'DM Sans', sans-serif; font-size: 1rem;
+    color: var(--text-primary); padding: 0.85rem 1rem;
+    width: 100%;
+  }
+  #taxClass { cursor: pointer; -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235c6b7a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+  #taxClass option { background: var(--bg-card); color: var(--text-primary); }
+  #grossSalary::placeholder { color: var(--text-muted); opacity: 0.5; }
+  #grossSalary::-webkit-outer-spin-button,
+  #grossSalary::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .calc-btn {
+    width: 100%; padding: 0.95rem;
+    background: linear-gradient(135deg, #8a6e2e, var(--accent-gold));
+    color: var(--bg-primary); font-weight: 700; font-size: 1rem;
+    border: none; border-radius: 10px; cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    font-family: 'DM Sans', sans-serif; letter-spacing: 0.04em;
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .calc-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+  .calc-btn:active { transform: translateY(0); }
+  .calc-result { margin-top: 1.5rem; position: relative; z-index: 1; animation: fadeUp 0.4s ease-out; }
+  @keyframes fadeUp { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform: translateY(0); } }
+  .result-divider {
+    height: 1px; background: var(--border-subtle);
+    margin-bottom: 1.5rem;
+  }
+  .result-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0.75rem; margin-bottom: 1rem;
+  }
+  .result-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px; padding: 1rem 1.1rem;
+  }
+  .result-item.highlight {
+    border-color: var(--border-gold);
+    background: rgba(201,168,76,0.06);
+    grid-column: 1 / -1;
+  }
+  .result-label {
+    font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--text-muted);
+    margin-bottom: 0.4rem; font-weight: 600;
+  }
+  .result-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.15rem; font-weight: 700; color: var(--text-primary);
+  }
+  .result-item.highlight .result-value {
+    color: var(--accent-gold-light); font-size: 1.35rem;
+  }
+  .result-disclaimer {
+    font-size: 0.78rem; color: var(--text-muted);
+    line-height: 1.6; text-align: center; margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .tax-table { font-size: 0.8rem; }
+    .tax-table th, .tax-table td { padding: 0.55rem 0.6rem; }
+    .calc-box { padding: 2rem 1.25rem; }
+  }
+</style>
+<base target="_blank">
+<base target="_blank">
+</head>
+<body>
+
+<!-- GLOBAL HEADER -->
+<header class="global-header">
+  <div class="header-inner">
+    <div class="logo"><a href="index.html">ExpatScore.de</a></div>
+    <button aria-label="Navigation öffnen" class="nav-toggle" id="navToggle">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="banking.html">Banking</a>
+      <a href="schufa-simulator.html">SCHUFA Tool</a>
+      <a href="schufa-guide.html">SCHUFA Guide</a>
+      <a href="insurance.html">Versicherung</a>
+      <a href="about.html">Über uns</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Free Tool · Updated 2026</div>
+    <h1 class="hero-h1">German Tax Class Calculator 2026</h1>
+    <p class="hero-sub">Understand your <strong>Steuerklasse</strong> (Tax Class I–VI), calculate your exact net income, and discover how marriage, children, and multiple jobs affect your German tax withholding. Built specifically for expats relocating to Germany.</p>
+    <div class="trust-pills">
+      <div class="trust-pill"><span>✓</span> 2026 official rates</div>
+      <div class="trust-pill"><span>✓</span> All 6 tax classes</div>
+      <div class="trust-pill"><span>✓</span> Ehegattensplitting explained</div>
+      <div class="trust-pill"><span>✓</span> Expat-optimised</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     CALCULATOR SECTION — Functional Tax Class Calculator
+     ════════════════════════════════════════════════════════════════ -->
+<div class="calc-placeholder">
+  <div class="tax-calculator" id="calculator-container">
+    <div class="calc-header">
+      <div class="calc-icon">🧮</div>
+      <div class="calc-title">Tax Class &amp; Net Income Calculator</div>
+      <p class="calc-subtitle">Enter your details to estimate your 2026 net salary</p>
+    </div>
+
+    <div class="calc-form">
+      <div class="form-row">
+        <label for="grossSalary">Gross Annual Salary</label>
+        <div class="input-wrap">
+          <div class="input-currency">€</div>
+          <input autocomplete="off" id="grossSalary" min="0" placeholder="60000" step="1000" type="number"/>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="taxClass">Steuerklasse (Tax Class)</label>
+        <div class="input-wrap">
+          <select id="taxClass" style="flex:1; background:transparent; border:none; outline:none; font-family:'DM Sans',sans-serif; font-size:1rem; color:var(--text-primary); padding:0.85rem 1rem; width:100%; cursor:pointer;">
+            <option disabled selected value="">Select your tax class...</option>
+            <option value="1">Class I — Single, Divorced, Widowed, Separated</option>
+            <option value="2">Class II — Single Parent (Alleinerziehend)</option>
+            <option value="3">Class III — Married, Higher / Sole Earner</option>
+            <option value="4">Class IV — Married, Both Working (Default)</option>
+            <option value="5">Class V — Married, Lower Earner (paired with III)</option>
+            <option value="6">Class VI — Second Job / Additional Employment</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="calculateBtn" onclick="calculateNetIncome()">
+        Calculate Net Income →
+      </button>
+    </div>
+
+    <div class="calc-result" id="calcResult" style="display:none;">
+      <div class="result-divider"></div>
+      <div class="result-grid">
+        <div class="result-item">
+          <div class="result-label">Gross Annual Salary</div>
+          <div class="result-value" id="resGross">—</div>
+        </div>
+        <div class="result-item">
+          <div class="result-label">Tax-Free Allowance</div>
+          <div class="result-value" id="resAllowance">—</div>
+        </div>
+        <div class="result-item">
+          <div class="result-label">Estimated Income Tax</div>
+          <div class="result-value" id="resTax">—</div>
+        </div>
+        <div class="result-item highlight">
+          <div class="result-label">Estimated Annual Net Income</div>
+          <div class="result-value" id="resNet">—</div>
+        </div>
+      </div>
+      <p class="result-disclaimer">This is an estimate based on 2026 German income tax brackets. Actual net income depends on health insurance fund, church tax, federal state, solidarity surcharge, and individual deductions. For precise figures, consult a Steuerberater.</p>
+    </div>
+  </div>
+</div>
+<!-- ════════════════════════════════════════════════════════════════
+     /CALCULATOR SECTION
+     ════════════════════════════════════════════════════════════════ -->
+
+<!-- SEO CONTENT -->
+<div class="seo-content">
+  <div class="seo-inner">
+
+    <h2>German Tax Classes (Steuerklasse) Explained for 2026: A Complete Expat Guide</h2>
+    <p>When you start working in Germany, your employer deducts income tax (<strong>Lohnsteuer</strong>) directly from your salary every month. The amount withheld depends almost entirely on your <strong>Steuerklasse</strong> — your tax class. For expats, understanding this system is not optional: choosing the wrong class can cost you hundreds of euros per month in unnecessary over-withholding, or leave you with an unexpected tax bill the following year.</p>
+    <p>Germany operates six tax classes (Steuerklasse I through VI), each designed for a specific life and employment situation. In 2026, these classes remain unchanged in structure, but the underlying tax brackets, solidarity surcharge thresholds, and social contribution ceilings have been updated to reflect inflation and wage growth. This guide covers every class in detail, explains the famous <strong>Ehegattensplitting</strong> mechanism for married couples, and shows you exactly how to change your tax class in Germany — both online and in person.</p>
+
+    <h2>How German Income Tax Works for Employees in 2026</h2>
+    <p>Before diving into the individual tax classes, it is essential to understand the mechanics of German payroll tax. Your <strong>gross salary (Bruttogehalt)</strong> is reduced by several mandatory deductions before it reaches your bank account as <strong>net salary (Nettogehalt)</strong>:</p>
+    <ul>
+      <li><strong>Income Tax (Lohnsteuer / Einkommensteuer):</strong> A progressive tax ranging from 0% to 45% depending on your taxable income. The 2026 basic tax-free allowance (Grundfreibetrag) is <strong>€12,096</strong> for single filers and <strong>€24,192</strong> for married couples filing jointly.</li>
+      <li><strong>Solidarity Surcharge (Solidaritätszuschlag):</strong> An additional 5.5% levied on income tax, but only for higher earners. In 2026, the surcharge applies only once your annual income tax exceeds approximately <strong>€18,720</strong> (single) or <strong>€37,440</strong> (married). Most middle-income earners no longer pay it.</li>
+      <li><strong>Church Tax (Kirchensteuer):</strong> If you are registered with a recognised religious community (Catholic, Protestant, or Jewish), an additional 8% or 9% of your income tax is withheld, depending on your federal state (Bundesland).</li>
+      <li><strong>Social Security Contributions:</strong> These include statutory health insurance (~7.3% employee share + possible supplementary rate), pension insurance (9.3%), unemployment insurance (1.3%), and long-term care insurance (1.7%, or 2.1% if childless and aged 23+).</li>
+    </ul>
+    <p>Your <strong>Steuerklasse</strong> determines the algorithm your employer uses to calculate monthly withholding. It does not change your ultimate tax liability — that is calculated once a year when you file your tax return (<strong>Steuererklärung</strong>). However, it dramatically affects your monthly cash flow. If too much is withheld, you receive a refund after filing. If too little is withheld, you owe the difference.</p>
+
+    <h2>The Six German Tax Classes (Steuerklasse I–VI) in Detail</h2>
+    <p>Each tax class is assigned by the <strong>Finanzamt</strong> (tax office) based on your personal circumstances. You do not choose freely; your class is determined by facts. Here is the complete breakdown for 2026:</p>
+
+    <h3>Steuerklasse I — Single, Divorced, Widowed, or Permanently Separated</h3>
+    <p><strong>Who it applies to:</strong> Unmarried employees without children, divorced individuals, widowed persons, and married couples who are permanently separated. It is the default class for the majority of expats arriving in Germany alone.</p>
+    <p><strong>How it works:</strong> Your employer withholds tax based on the standard single-person tax algorithm. You receive the basic tax-free allowance of €12,096 per year (€1,008 per month) automatically. No splitting benefits apply. For a gross salary of €60,000 per year, this class produces the highest monthly withholding among the standard classes — but it is accurate for your situation if you are single.</p>
+    <p><strong>When to reconsider:</strong> If you marry or enter a registered civil partnership (<strong>eingetragene Lebenspartnerschaft</strong>), you must notify the Finanzamt and the registry office. You will automatically be moved to Steuerklasse IV as the default married class, with the option to elect III/V or IV/IV with factor.</p>
+
+    <h3>Steuerklasse II — Single Parent (Alleinerziehend)</h3>
+    <p><strong>Who it applies to:</strong> Single parents who live with at least one child for whom they receive child benefit (<strong>Kindergeld</strong>) or the tax-free child allowance (<strong>Kinderfreibetrag</strong>). The child must be registered at the same address.</p>
+    <p><strong>How it works:</strong> Steuerklasse II grants an additional tax relief amount (<strong>Entlastungsbetrag für Alleinerziehende</strong>) of <strong>€4,260 per year</strong> in 2026 (€355 per month), plus €282 for each additional child. This significantly reduces monthly withholding compared to Steuerklasse I. For example, a single parent earning €50,000 gross per year keeps approximately €180–€220 more per month in net pay than they would in Class I.</p>
+    <p><strong>Important:</strong> You must actively apply for this class at the Finanzamt. It is not assigned automatically. You will need your child's birth certificate, proof of residence registration (<strong>Meldebescheinigung</strong>), and confirmation of child benefit receipt.</p>
+
+    <h3>Steuerklasse III — Married, Higher Earner (or Sole Earner)</h3>
+    <p><strong>Who it applies to:</strong> Married couples where one partner earns significantly more than the other, or where only one partner works. The higher earner selects Steuerklasse III; the lower earner (or non-earner) is placed in Steuerklasse V.</p>
+    <p><strong>How it works:</strong> This is the most misunderstood and powerful class in the German system. Steuerklasse III applies the <strong>Ehegattensplitting</strong> (income splitting for married couples) almost entirely to the higher earner's paycheque. The result: dramatically reduced monthly withholding. A person earning €70,000 gross per year in Class III can take home €400–€600 more per month than the same salary in Class I.</p>
+    <p><strong>The catch:</strong> The lower-earning spouse in Class V suffers heavily inflated withholding — often 2× to 3× the normal rate. The system is designed so that the <em>household's</em> total monthly withholding roughly equals the couple's actual annual liability. However, if both spouses earn similar amounts (e.g., €45,000 and €50,000), the III/V combination usually results in a large tax bill when you file your joint return, because too little was withheld overall. In such cases, IV/IV is usually safer.</p>
+
+    <h3>Steuerklasse IV — Married, Both Working (Default)</h3>
+    <p><strong>Who it applies to:</strong> Married couples where both partners are employed. This is the automatic assignment upon marriage unless you actively request a different combination.</p>
+    <p><strong>How it works:</strong> Both spouses are treated as single filers for withholding purposes, each receiving their own basic tax-free allowance (€12,096). Monthly withholding is moderate and predictable. When you file your joint tax return at year-end, the Ehegattensplitting is applied retroactively, usually resulting in a refund because the combined withholding was slightly higher than the actual joint liability.</p>
+    <p><strong>IV/IV with Factor (Faktorverfahren):</strong> An advanced option where the Finanzamt calculates a personalised factor based on your previous year's joint tax liability. This factor is applied to both spouses' withholding, aiming to eliminate the year-end refund or payment. It is ideal for couples with very stable incomes who want predictable monthly net pay without a large refund or bill.</p>
+
+    <h3>Steuerklasse V — Married, Lower Earner (Paired with III)</h3>
+    <p><strong>Who it applies to:</strong> The lower-earning spouse in a III/V marriage arrangement. If one spouse does not work, they technically hold Class V but have zero income and therefore zero withholding.</p>
+    <p><strong>How it works:</strong> Class V assumes the spouse has already used up the entire household's tax-free allowance and splitting benefit via the partner in Class III. Consequently, withholding is calculated as if the person were a high-income single filer with no allowances. A part-time worker earning €25,000 in Class V can see effective withholding rates of 18–25%, whereas the same salary in Class IV would be closer to 6–10%.</p>
+    <p><strong>Strategic note:</strong> Only choose III/V if the higher earner's income is roughly 60% or more of the household total. If incomes are close, III/V almost always creates a tax debt at year-end. Use the calculator above to model both scenarios before deciding.</p>
+
+    <h3>Steuerklasse VI — Second Job or Additional Employment</h3>
+    <p><strong>Who it applies to:</strong> Anyone with a second job, side employment, or multiple concurrent employment contracts. It applies to the <em>highest-paying</em> job by default, but you can request it be applied to a lower-paying job if you prefer to keep your main job in a more favourable class.</p>
+    <p><strong>How it works:</strong> Class VI applies <strong>zero tax-free allowance</strong>. Every euro earned is taxed from the first cent at the marginal rate. For a mini-job earning €520 per month (the 2026 mini-job limit), Class VI would be devastating. Therefore, second jobs are often structured as <strong>Geringfügige Beschäftigung</strong> (mini-jobs) taxed at a flat 2% employer contribution, or as freelance work reported separately.</p>
+    <p><strong>Practical advice:</strong> If you have a main job in Class I and a side job, ask your second employer to apply Class VI to the side job while keeping your main job in Class I. If the side job is small, explore whether it qualifies as a mini-job instead.</p>
+
+    <table class="tax-table">
+      <thead>
+        <tr>
+          <th>Tax Class</th>
+          <th>Applies To</th>
+          <th>Tax-Free Allowance</th>
+          <th>Typical Use Case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>I</strong></td>
+          <td>Single, divorced, widowed, separated</td>
+          <td>€12,096 / year</td>
+          <td>Single expats, no children</td>
+        </tr>
+        <tr>
+          <td><strong>II</strong></td>
+          <td>Single parent (Alleinerziehend)</td>
+          <td>€12,096 + €4,260 relief</td>
+          <td>Single parent with child benefit</td>
+        </tr>
+        <tr>
+          <td><strong>III</strong></td>
+          <td>Married, higher earner</td>
+          <td>€24,192 (splitting)</td>
+          <td>Sole or primary breadwinner</td>
+        </tr>
+        <tr>
+          <td><strong>IV</strong></td>
+          <td>Married, both working (default)</td>
+          <td>€12,096 each</td>
+          <td>Dual-income couples</td>
+        </tr>
+        <tr>
+          <td><strong>V</strong></td>
+          <td>Married, lower earner (paired with III)</td>
+          <td>€0</td>
+          <td>Lower earner in III/V combo</td>
+        </tr>
+        <tr>
+          <td><strong>VI</strong></td>
+          <td>Second or additional job</td>
+          <td>€0</td>
+          <td>Side employment, multiple contracts</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Ehegattensplitting: The Marriage Tax Splitting Mechanism</h2>
+    <p><strong>Ehegattensplitting</strong> is Germany's system of joint taxation for married couples. Instead of each spouse paying tax on their individual income, the couple's combined income is halved, tax is calculated on that average, and then doubled. Because Germany's income tax is progressive, this almost always results in a lower total tax bill than two single filers would pay — especially when one spouse earns significantly more than the other.</p>
+    <p>For example, consider a couple where Partner A earns €80,000 and Partner B earns €30,000. As single filers, they would pay tax on their full respective incomes. Under Ehegattensplitting, the taxable base is calculated as if each earned €55,000. The tax on €55,000 is lower per person than the tax on €80,000, so the total household tax drops — often by €3,000 to €6,000 annually depending on the exact income gap.</p>
+    <p>The III/V withholding arrangement front-loads this benefit to the higher earner's monthly pay. The IV/IV arrangement spreads it more evenly but delivers it as a year-end refund. Neither changes the ultimate tax liability; they only change the timing.</p>
+    <p><strong>2026 update:</strong> The basic tax-free allowance for married couples filing jointly is <strong>€24,192</strong>. The top marginal rate of 45% (plus solidarity surcharge) now kicks in at approximately <strong>€277,826</strong> of joint taxable income. The 42% bracket begins at roughly <strong>€62,810</strong> for single filers and <strong>€125,620</strong> for joint filers.</p>
+
+    <h2>How to Change Your Tax Class in Germany 2026</h2>
+    <p>Life changes — marriage, divorce, childbirth, a new job, or separation — all affect your tax class. You are legally required to notify the authorities promptly. Here is the exact process for each scenario:</p>
+
+    <h3>After Marriage or Civil Partnership</h3>
+    <p>Upon registering your marriage at the <strong>Standesamt</strong> (registry office), the authorities automatically notify the Finanzamt. You will both be moved to Steuerklasse IV by default. If you want III/V or IV/IV with factor, you must submit a written request. You can do this online via <strong>ELSTER</strong> (the German tax portal) using the "Antrag auf Steuerklassenwechsel" form, or by visiting your local Finanzamt in person.</p>
+    <p>The change takes effect on the <strong>first day of the month following your application</strong>. If you marry in March and apply in March, the new class applies from 1 April. You can change your tax class <strong>once per calendar year</strong> (with exceptions for events like divorce or childbirth).</p>
+
+    <h3>After Divorce or Permanent Separation</h3>
+    <p>From the date of permanent separation (<strong>dauernde Trennung</strong>) or the final divorce decree, both partners revert to Steuerklasse I (or II if a single parent). You must inform the Finanzamt and provide proof (court order or sworn declaration). The change is retroactive to the separation date, which can result in a significant tax reassessment.</p>
+
+    <h3>After the Birth of a Child</h3>
+    <p>If you are a single parent after the birth, apply for Steuerklasse II immediately. If married, you may want to reconsider your III/V vs. IV/IV choice, especially if one partner reduces working hours for parental leave (<strong>Elternzeit</strong>). The parent on Elternzeit often drops to a very low income, making III/V highly advantageous.</p>
+
+    <h3>For Second Jobs</h3>
+    <p>If you take a second job, inform your new employer of your existing tax class. They will automatically assign Steuerklasse VI unless the job qualifies as a mini-job (€520/month limit in 2026). You can request that Class VI be applied to the lower-paying job if you prefer, but this requires coordination with both employers' payroll departments.</p>
+
+    <h2>Tax Class for Single vs. Married Expats: Real-World Impact on Net Income</h2>
+    <p>To illustrate the financial impact, here are approximate 2026 net monthly salaries for a gross income of <strong>€60,000 per year</strong> (€5,000/month) across different classes, assuming statutory health insurance, no church tax, and residence in a typical federal state:</p>
+    <ul>
+      <li><strong>Steuerklasse I (Single):</strong> ~€3,050 net per month. Income tax withholding: ~€820/month. Social contributions: ~€1,130/month.</li>
+      <li><strong>Steuerklasse II (Single Parent, 1 child):</strong> ~€3,220 net per month. The Alleinerziehend relief reduces withholding by ~€170/month compared to Class I.</li>
+      <li><strong>Steuerklasse III (Married, higher earner, spouse earns €0):</strong> ~€3,480 net per month. The full splitting benefit is applied to the paycheque, reducing withholding by ~€430/month versus Class I.</li>
+      <li><strong>Steuerklasse IV (Married, both earn €60k):</strong> ~€3,050 net per month (same as Class I for this earner). The splitting benefit arrives as a year-end refund of roughly €2,500–€3,500 for the household.</li>
+      <li><strong>Steuerklasse V (Married, lower earner at €30k, spouse in III at €60k):</strong> ~€1,780 net per month. Withholding is ~€270/month higher than it would be in Class IV. The household's total monthly cash flow is optimised, but the lower earner sees a smaller paycheque.</li>
+      <li><strong>Steuerklasse VI (Second job at €15k/year):</strong> ~€940 net per month. Withholding is ~€310/month — roughly double what the same income would face in Class I, because no allowance applies.</li>
+    </ul>
+    <p>These figures are illustrative. Your exact net pay depends on your health insurance fund's supplementary rate, your federal state, your age (for long-term care insurance), and whether you pay church tax. Always use an official net salary calculator or the tool above for precise numbers.</p>
+
+    <h2>Special Scenarios for Expat Professionals</h2>
+
+    <h3>The Expatriate Tax Regime and Tax Classes</h3>
+    <p>Some highly skilled expats qualify for Germany's <strong>Expatriate Tax Regime</strong> (Aufwandsentschädigung für Doppelhaushaltung), which allows tax-free reimbursement of costs related to maintaining two households (one in Germany, one abroad) for up to 24 months. This regime does not change your Steuerklasse, but it reduces your taxable income — meaning the tax class algorithm applies to a lower base. If you believe you qualify, discuss this with your employer's payroll department and a German tax advisor (<strong>Steuerberater</strong>).</p>
+
+    <h3>Cross-Border Workers and Tax Classes</h3>
+    <p>If you live in Germany but work in a neighbouring country (e.g., Switzerland, Luxembourg, France, or Austria), or vice versa, your tax class situation becomes complex. Germany has double-taxation treaties with most countries. Typically, you remain liable for tax in your country of residence (Germany) on worldwide income, but wages from the foreign employer may be taxed at source abroad. In such cases, your German tax class may still apply to other German-sourced income, or you may need to file a non-resident tax return. Always consult a cross-border tax specialist.</p>
+
+    <h3>Blue Card Holders and Tax Optimization</h3>
+    <p>EU Blue Card holders are fully subject to German tax law and therefore fall into the standard Steuerklasse system. If you relocate with a spouse who does not initially work, electing III/V immediately maximises your monthly net income — critical during the expensive first months of settling in. Once your spouse finds employment, reassess whether IV/IV or IV/IV with factor becomes more advantageous.</p>
+
+    <h2>How to File Your German Tax Return (Steuererklärung) as an Expat</h2>
+    <p>Even if your tax class accurately reflects your situation, filing an annual tax return is highly recommended — and in some cases mandatory. You must file if:</p>
+    <ul>
+      <li>You had more than one employer simultaneously (Class VI situation).</li>
+      <li>You received wage replacement benefits (<strong>Lohnersatzleistungen</strong>) such as short-time work benefits (<strong>Kurzarbeitergeld</strong>) or parental allowance (<strong>Elterngeld</strong>).</li>
+      <li>You want to claim deductions for work-related expenses (<strong>Werbungskosten</strong>), such as commuting costs, home office allowances (up to €600/year in 2026 if no dedicated office exists), professional training, or relocation expenses.</li>
+      <li>You are in Steuerklasse III/V and want to settle any under- or over-withholding.</li>
+    </ul>
+    <p>The tax return deadline for 2026 income is <strong>31 July 2027</strong> (extended to 31 August if prepared by a tax advisor). Use the free <strong>ELSTER</strong> portal or commercial software such as WISO Steuer, Taxfix, or Sorted. Many expats find Taxfix particularly user-friendly because it is available in English and guides you through German-specific deductions.</p>
+
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What is the best tax class for married couples in Germany?
+      </div>
+      <div class="faq-answer">
+        <p>There is no universally "best" class — it depends on your income split. If one spouse earns 60% or more of the household income, <strong>Steuerklasse III/V</strong> usually maximises monthly cash flow. If both spouses earn similar amounts, <strong>IV/IV</strong> is safer and avoids a year-end tax bill. <strong>IV/IV with Factor</strong> is ideal for couples who want predictable monthly pay without a large refund or debt. Use the calculator above to model your specific household.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Can I choose my tax class freely?
+      </div>
+      <div class="faq-answer">
+        <p>No. Your tax class is determined by your personal circumstances (marital status, children, number of jobs). However, married couples can <strong>elect</strong> between IV/IV, III/V, or IV/IV with Factor. Single parents must actively apply for Steuerklasse II — it is not automatic. You can change your election once per calendar year.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        How often can I change my tax class in Germany?
+      </div>
+      <div class="faq-answer">
+        <p>Generally, <strong>once per calendar year</strong>. Exceptions apply for life events such as marriage, divorce, permanent separation, childbirth, or the death of a spouse. In those cases, you can change immediately and regardless of the annual limit. Submit the change via ELSTER or at your local Finanzamt; it takes effect on the first day of the following month.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Does my tax class affect my actual annual tax liability?
+      </div>
+      <div class="faq-answer">
+        <p>No. Your tax class only affects <strong>monthly withholding</strong>. Your true tax liability is calculated once a year based on your total taxable income, deductions, and the Ehegattensplitting formula (if married). If too much was withheld, you get a refund. If too little was withheld, you pay the difference. Over the full year, the tax class system is revenue-neutral.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What happens if I do not inform the Finanzamt of my marriage?
+      </div>
+      <div class="faq-answer">
+        <p>The <strong>Standesamt</strong> (registry office) automatically notifies the Finanzamt when you marry, so you cannot hide it. You will be moved to Steuerklasse IV by default. If you want III/V or IV/IV with Factor, you must submit a separate request. Failing to do so simply means you stay in IV/IV — which is often fine, but may not optimise your monthly cash flow.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Is church tax connected to my tax class?
+      </div>
+      <div class="faq-answer">
+        <p>No. Church tax (<strong>Kirchensteuer</strong>) is an additional 8% or 9% surcharge on your income tax, depending on your federal state. It is calculated <em>after</em> your tax class has determined the base income tax. If you leave a religious community, you can stop paying church tax by formally declaring your exit (<strong>Kirchenaustritt</strong>) at the local registry office or court — a process that costs €20–€50 depending on the state.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        What is the mini-job limit in 2026 and how does it relate to tax classes?
+      </div>
+      <div class="faq-answer">
+        <p>In 2026, the <strong>mini-job limit (Geringfügigkeitsgrenze)</strong> is <strong>€520 per month</strong> (€6,240 per year). Mini-jobs are taxed at a flat 2% employer contribution and are exempt from income tax and most social contributions for the employee. Because they bypass the Steuerklasse system entirely, a mini-job is often preferable to a second job in Steuerklasse VI if you want to supplement your main income without heavy tax consequences.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        Do freelancers and self-employed people have a tax class?
+      </div>
+      <div class="faq-answer">
+        <p>No. The six Steuerklassen apply only to <strong>employees</strong> (<strong>Arbeitnehmer</strong>). Freelancers (<strong>Freiberufler</strong>) and self-employed traders (<strong>Gewerbetreibende</strong>) do not have monthly tax withholding. Instead, they make quarterly prepayments (<strong>Vorauszahlungen</strong>) based on the previous year's tax liability and file an annual tax return. If you are both employed and freelance, your employment income is taxed under your Steuerklasse, while freelance income is reported separately.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+        How do I know which Finanzamt is responsible for me?
+      </div>
+      <div class="faq-answer">
+        <p>Your responsible <strong>Finanzamt</strong> is determined by your registered residential address (<strong>Wohnsitz</strong>). After completing your <strong>Anmeldung</strong> (address registration) at the Bürgeramt, the Finanzamt is automatically informed. You will receive your tax number (<strong>Steuernummer</strong>) by post within 2–4 weeks. If you move to a different city, your case may be transferred to a new Finanzamt. Your <strong>Steuer-ID</strong> (Tax ID) remains the same for life, but your Steuernummer may change with relocation.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <div class="cta-box-title">Calculate your exact net salary now</div>
+      <p>Use the interactive calculator at the top of this page to select your Steuerklasse, enter your gross salary, and see your precise monthly net income for 2026. Compare classes side-by-side and find the optimal setup for your household.</p>
+    </div>
+
+  </div>
+</div>
+<!-- /SEO CONTENT -->
+
+<!-- CLUSTER LINKS -->
+<div class="cluster-links">
+  <div class="cluster-inner">
+    <div class="cluster-label">Complete your German financial setup</div>
+    <div class="cluster-grid">
+      <a class="cluster-card" href="steuer-id-guide">
+        <span>📋</span>
+        <span>Steuer-ID Guide 2026 → Tax ID explained</span>
+      </a>
+      <a class="cluster-card" href="n26-bank-erfahrungen">
+        <span>🏦</span>
+        <span>N26 Review 2026 → Best expat bank</span>
+      </a>
+      <a class="cluster-card" href="schufa-guide.html">
+        <span>📊</span>
+        <span>SCHUFA Guide 2026 → Score Estimator</span>
+      </a>
+      <a class="cluster-card" href="tk-health-insurance">
+        <span>💊</span>
+        <span>TK Insurance 2026 → Cost Calculator</span>
+      </a>
+      <a class="cluster-card" href="blue-card-tool.html">
+        <span>🇪🇺</span>
+        <span>EU Blue Card Tool → Eligibility Check</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- GLOBAL FOOTER -->
+<footer class="global-footer">
+  <div class="footer-inner">
+    <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
+    <nav aria-label="Legal-Links" class="footer-legal-links">
+      <a href="about.html">Über uns</a>
+      <a href="banking.html">Banking</a>
+      <a href="schufa-guide.html">SCHUFA Guide</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
+    </nav>
+    <div class="footer-disclosure">
+      <strong>⚑ Affiliate-Hinweis (Werbung):</strong>
+      Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten. Unsere redaktionellen Inhalte basieren auf eigenen Erfahrungen und sind davon unabhängig.
+    </div>
+    <p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · Alle Angaben ohne Gewähr · Kein Ersatz für individuelle Rechts- oder Finanzberatung. · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
+  </div>
+</footer>
+
+
+<script>
+  function calculateNetIncome() {
+    const grossInput = document.getElementById('grossSalary');
+    const classInput = document.getElementById('taxClass');
+    const resultDiv = document.getElementById('calcResult');
+
+    const gross = parseFloat(grossInput.value);
+    const taxClass = parseInt(classInput.value);
+
+    if (!gross || gross <= 0 || !taxClass) {
+      alert('Please enter a valid gross salary and select a tax class.');
+      return;
+    }
+
+    // 2026 tax-free allowances by Steuerklasse
+    const allowances = {
+      1: 12096,   // Single
+      2: 16356,   // Single parent (12096 + 4260)
+      3: 24192,   // Married higher earner
+      4: 12096,   // Married both working
+      5: 0,       // Married lower earner
+      6: 0        // Second job
+    };
+
+    const allowance = allowances[taxClass] || 0;
+    const taxableIncome = Math.max(0, gross - allowance);
+
+    // Simplified 2026 German income tax estimate
+    const tax = estimateIncomeTax(taxableIncome);
+    const netIncome = gross - tax;
+
+    // Update UI
+    document.getElementById('resGross').textContent = '€' + Math.round(gross).toLocaleString('de-DE');
+    document.getElementById('resAllowance').textContent = '€' + allowance.toLocaleString('de-DE');
+    document.getElementById('resTax').textContent = '€' + Math.round(tax).toLocaleString('de-DE');
+    document.getElementById('resNet').textContent = '€' + Math.round(netIncome).toLocaleString('de-DE');
+
+    resultDiv.style.display = 'block';
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function estimateIncomeTax(zvE) {
+    // zvE = zu versteuerndes Einkommen (taxable income)
+    // Piecewise linear approximation calibrated to 2026 German tax brackets
+    if (zvE <= 0) return 0;
+    const x = zvE - 12096; // excess above Grundfreibetrag
+    if (x <= 0) return 0;
+
+    if (x <= 5000) {
+      return x * 0.12;
+    } else if (x <= 20000) {
+      return 600 + (x - 5000) * 0.22;
+    } else if (x <= 50000) {
+      return 3900 + (x - 20000) * 0.32;
+    } else if (x <= 150000) {
+      return 13500 + (x - 50000) * 0.42;
+    } else {
+      return 55500 + (x - 150000) * 0.45;
+    }
+  }
+
+  // Trigger calculation on Enter key
+  document.getElementById('grossSalary').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') calculateNetIncome();
+  });
+</script>
+
+</body>
+</html>
