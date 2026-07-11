@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ExpatScore · Reddit Comment Engine</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --bg: #0a0c0f;
+    --surface: #111418;
+    --surface2: #181d23;
+    --border: #1e2530;
+    --teal: #00c4b3;
+    --teal-dim: #00c4b320;
+    --teal-glow: #00c4b340;
+    --gold: #c9a84c;
+    --gold-dim: #c9a84c20;
+    --text: #e8eaf0;
+    --muted: #6b7585;
+    --danger: #e05c5c;
+    --success: #4caf7d;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* ── Ambient Background ── */
+  .noise {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+  .glow-orb {
+    position: fixed; width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, var(--teal-glow) 0%, transparent 70%);
+    top: -200px; right: -200px; pointer-events: none; z-index: 0;
+  }
+  .glow-orb2 {
+    position: fixed; width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, #c9a84c15 0%, transparent 70%);
+    bottom: -100px; left: -100px; pointer-events: none; z-index: 0;
+  }
+
+  /* ── Layout ── */
+  .app {
+    position: relative; z-index: 1;
+    max-width: 860px; margin: 0 auto; padding: 48px 24px 80px;
+  }
+
+  /* ── Header ── */
+  header { margin-bottom: 48px; }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; font-weight: 400; letter-spacing: 4px;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 8px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px; font-weight: 300; line-height: 1.1; color: var(--text);
+  }
+  h1 span { color: var(--teal); font-weight: 600; }
+  .subtitle {
+    font-size: 14px; color: var(--muted); margin-top: 10px;
+    font-weight: 300; letter-spacing: 0.3px;
+  }
+
+  /* ── Webhook Config Banner ── */
+  .webhook-banner {
+    background: var(--surface);
+    border: 1px solid var(--gold);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .webhook-banner-icon { font-size: 20px; flex-shrink: 0; }
+  .webhook-banner-content { flex: 1; }
+  .webhook-banner-title {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 6px;
+  }
+  .webhook-input-row { display: flex; gap: 10px; align-items: center; }
+  .webhook-input {
+    flex: 1; background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 6px; color: var(--text); font-family: 'DM Sans', sans-serif;
+    font-size: 13px; padding: 10px 14px; outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .webhook-input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px var(--gold-dim);
+  }
+  .webhook-input::placeholder { color: var(--muted); opacity: 0.6; }
+  .webhook-save-btn {
+    background: var(--gold-dim); border: 1px solid var(--gold);
+    color: var(--gold); border-radius: 6px; padding: 10px 18px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer; white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .webhook-save-btn:hover { background: #c9a84c30; }
+  .webhook-status {
+    font-size: 11px; margin-top: 6px; height: 14px;
+    color: var(--muted);
+  }
+  .webhook-status.ok { color: var(--success); }
+  .webhook-status.err { color: var(--danger); }
+
+  /* ── Mode Toggle ── */
+  .mode-toggle {
+    display: flex; gap: 0; margin-bottom: 28px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 4px; width: fit-content;
+  }
+  .mode-btn {
+    padding: 8px 20px; border-radius: 6px; border: none;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer; transition: all 0.2s;
+    color: var(--muted); background: transparent;
+  }
+  .mode-btn.active {
+    background: var(--teal-dim); color: var(--teal); border: 1px solid var(--teal);
+  }
+
+  .divider {
+    height: 1px; margin: 28px 0;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--gold) 50%, transparent 100%);
+    opacity: 0.3;
+  }
+
+  /* ── Form Elements ── */
+  label {
+    display: block; font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--gold); font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .field-group { margin-bottom: 24px; }
+  .row { display: flex; gap: 16px; margin-bottom: 24px; }
+  .row .field-group { flex: 1; margin-bottom: 0; }
+
+  textarea, input[type="text"], select {
+    width: 100%; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 300; padding: 14px 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none; resize: vertical;
+  }
+  textarea:focus, input[type="text"]:focus, select:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px var(--teal-dim);
+  }
+  textarea { min-height: 140px; line-height: 1.6; }
+  select { appearance: none; cursor: pointer; }
+  ::placeholder { color: var(--muted); opacity: 0.6; }
+
+  /* ── Tone Grid ── */
+  .tone-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+  }
+  .tone-btn {
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--muted); border-radius: 6px; padding: 10px 6px;
+    font-size: 12px; letter-spacing: 0.5px; cursor: pointer;
+    text-align: center; transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .tone-btn:hover { border-color: var(--teal); color: var(--teal); }
+  .tone-btn.active {
+    background: var(--teal-dim); border-color: var(--teal);
+    color: var(--teal); font-weight: 500;
+  }
+
+  /* ── Generate Button ── */
+  .generate-btn {
+    width: 100%; padding: 16px;
+    background: linear-gradient(135deg, var(--teal) 0%, #009e90 100%);
+    color: #0a0c0f; border: none; border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
+    letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer;
+    transition: all 0.25s; margin-top: 8px;
+  }
+  .generate-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px var(--teal-glow);
+  }
+  .generate-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  .spinner {
+    display: inline-block; width: 14px; height: 14px;
+    border: 2px solid rgba(0,0,0,0.3); border-top-color: #0a0c0f;
+    border-radius: 50%; animation: spin 0.7s linear infinite;
+    vertical-align: middle; margin-right: 8px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Output ── */
+  .output-section { margin-top: 36px; animation: fadeUp 0.4s ease; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .output-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .output-label {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); font-weight: 500;
+  }
+  .badge {
+    font-size: 10px; letter-spacing: 1px; padding: 4px 10px;
+    border-radius: 20px; text-transform: uppercase;
+    background: var(--teal-dim); color: var(--teal); border: 1px solid var(--teal);
+  }
+  .output-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--teal);
+    border-radius: 6px; padding: 22px 20px;
+    font-size: 15px; line-height: 1.8; color: var(--text);
+    font-weight: 300; white-space: pre-wrap; min-height: 80px;
+  }
+  .stats { display: flex; gap: 24px; margin-top: 12px; }
+  .stat { font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
+  .stat span { color: var(--teal); }
+
+  .actions { display: flex; gap: 10px; margin-top: 14px; }
+  .action-btn {
+    flex: 1; padding: 12px;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--muted); border-radius: 6px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px;
+    letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .action-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .action-btn.copied { border-color: var(--teal); color: var(--teal); background: var(--teal-dim); }
+  .regen-btn { background: var(--gold-dim); border-color: var(--gold); color: var(--gold); }
+  .regen-btn:hover { background: #c9a84c30; }
+
+  /* ── Error ── */
+  .error-msg {
+    color: var(--danger); font-size: 13px; margin-top: 12px;
+    padding: 12px 16px; background: #e05c5c15;
+    border: 1px solid #e05c5c40; border-radius: 6px; display: none;
+  }
+
+  /* ── Payload Inspector ── */
+  .payload-section { margin-top: 32px; }
+  .payload-toggle {
+    background: none; border: none; color: var(--muted); font-size: 12px;
+    letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
+    display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif;
+    padding: 0; margin-bottom: 10px; transition: color 0.2s;
+  }
+  .payload-toggle:hover { color: var(--gold); }
+  .payload-box {
+    background: #070a0d; border: 1px solid var(--border);
+    border-radius: 6px; padding: 16px; font-size: 12px; font-family: monospace;
+    color: var(--muted); line-height: 1.7; display: none;
+    white-space: pre; overflow-x: auto;
+  }
+  .payload-box .key { color: var(--gold); }
+  .payload-box .val { color: var(--teal); }
+  .payload-box .str { color: #a8d8a8; }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--muted); }
+  .footer-brand strong { color: var(--gold); }
+  .footer-note { font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
+
+  @media (max-width: 600px) {
+    .tone-grid { grid-template-columns: repeat(2, 1fr); }
+    .row { flex-direction: column; }
+    h1 { font-size: 28px; }
+    .webhook-input-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="glow-orb"></div>
+<div class="glow-orb2"></div>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">ExpatScore.de</div>
+    <h1>Reddit <span>Comment Engine</span></h1>
+    <p class="subtitle">Paste any Reddit question. Get a battle-ready, human-sounding reply in seconds.</p>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════
+       n8n WEBHOOK CONFIGURATION
+       ─ Paste your n8n webhook URL here and click Save.
+       ─ The URL is stored in localStorage so it persists.
+  ════════════════════════════════════════════════════ -->
+  <div class="webhook-banner">
+    <div class="webhook-banner-icon">⚡</div>
+    <div class="webhook-banner-content">
+      <div class="webhook-banner-title">n8n Webhook Endpoint</div>
+      <div class="webhook-input-row">
+        <input
+          class="webhook-input"
+          type="text"
+          id="webhookUrl"
+          placeholder="https://your-n8n-instance.com/webhook/your-webhook-id"
+        />
+        <button class="webhook-save-btn" onclick="saveWebhook()">Save URL</button>
+      </div>
+      <div class="webhook-status" id="webhookStatus">No webhook configured — running in direct API mode.</div>
+    </div>
+  </div>
+
+  <!-- MODE TOGGLE -->
+  <div class="mode-toggle">
+    <button class="mode-btn active" id="modeN8n" onclick="setMode('n8n')">⚡ n8n Webhook</button>
+    <button class="mode-btn" id="modeDirect" onclick="setMode('direct')">🔗 Direct API</button>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FORM -->
+  <div class="field-group">
+    <label>Reddit Post / Question</label>
+    <textarea id="postInput" placeholder="Paste the full Reddit post or question here — the more context, the better the reply..."></textarea>
+  </div>
+
+  <div class="row">
+    <div class="field-group">
+      <label>Subreddit</label>
+      <select id="subreddit">
+        <option value="r/germany">r/germany</option>
+        <option value="r/expats">r/expats</option>
+        <option value="r/AskEurope">r/AskEurope</option>
+        <option value="r/berlinsocialclub">r/berlinsocialclub</option>
+        <option value="r/Munich">r/Munich</option>
+        <option value="r/Hamburg">r/Hamburg</option>
+        <option value="r/Frankfurt">r/Frankfurt</option>
+        <option value="r/de">r/de</option>
+        <option value="r/arbeitsrecht">r/arbeitsrecht</option>
+        <option value="r/ImmigrationGermany">r/ImmigrationGermany</option>
+      </select>
+    </div>
+    <div class="field-group">
+      <label>Topic Focus</label>
+      <select id="topic">
+        <option value="SCHUFA / Credit Score">SCHUFA / Credit Score</option>
+        <option value="Visa & Residency">Visa & Residency</option>
+        <option value="Housing & Mietrecht">Housing & Mietrecht</option>
+        <option value="Banking & Finance">Banking & Finance</option>
+        <option value="Anmeldung & Bureaucracy">Anmeldung & Bureaucracy</option>
+        <option value="Health Insurance (Krankenversicherung)">Health Insurance</option>
+        <option value="Job & Work Permit">Job & Work Permit</option>
+        <option value="Tax (Steuer)">Tax (Steuer)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label>Reply Tone</label>
+    <div class="tone-grid">
+      <button class="tone-btn active" data-tone="Empathetic & Expert">Empathetic Expert</button>
+      <button class="tone-btn" data-tone="Concise & Practical">Concise & Practical</button>
+      <button class="tone-btn" data-tone="Detailed & Thorough">Detailed & Thorough</button>
+      <button class="tone-btn" data-tone="Friendly Peer">Friendly Peer</button>
+    </div>
+  </div>
+
+  <button class="generate-btn" id="generateBtn" onclick="generate()">
+    Generate Reply
+  </button>
+
+  <div class="error-msg" id="errorMsg"></div>
+
+  <!-- OUTPUT -->
+  <div class="output-section" id="outputSection" style="display:none">
+    <div class="output-header">
+      <span class="output-label">Generated Comment</span>
+      <span class="badge" id="toneLabel">Empathetic Expert</span>
+    </div>
+    <div class="output-box" id="outputBox"></div>
+    <div class="stats">
+      <div class="stat">Words: <span id="wordCount">—</span></div>
+      <div class="stat">Read time: <span id="readTime">—</span>s</div>
+      <div class="stat">Mode: <span id="modeLabel">—</span></div>
+    </div>
+    <div class="actions">
+      <button class="action-btn" id="copyBtn" onclick="copyText()">Copy to Clipboard</button>
+      <button class="action-btn regen-btn" onclick="generate()">↺ Regenerate</button>
+    </div>
+
+    <!-- PAYLOAD INSPECTOR — shows exactly what is sent to n8n -->
+    <div class="payload-section">
+      <button class="payload-toggle" onclick="togglePayload()">
+        <span id="payloadArrow">▶</span> Inspect Payload Sent to n8n
+      </button>
+      <div class="payload-box" id="payloadBox"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-brand">Powered by <strong>ExpatScore.de</strong> AI Stack</div>
+    <div class="footer-note">Internal Tool · Not for distribution</div>
+  </div>
+</div>
+
+<script>
+  // ════════════════════════════════════════════════════════
+  //  STATE
+  // ════════════════════════════════════════════════════════
+  let selectedTone = 'Empathetic & Expert';
+  let currentMode  = 'n8n';   // 'n8n' | 'direct'
+  let lastPayload  = null;
+  let payloadOpen  = false;
+
+  // ── Tone buttons ──
+  document.querySelectorAll('.tone-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tone-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedTone = btn.dataset.tone;
+    });
+  });
+
+  // ════════════════════════════════════════════════════════
+  //  WEBHOOK CONFIG (persisted to localStorage)
+  // ════════════════════════════════════════════════════════
+  function loadWebhook() {
+    const saved = localStorage.getItem('expatscore_webhook_url');
+    if (saved) {
+      document.getElementById('webhookUrl').value = saved;
+      setStatus(`✓ Webhook loaded: ${truncate(saved, 55)}`, 'ok');
+    } else {
+      // Default webhook URL when nothing is saved
+      const defaultUrl = "http://localhost:5678/webhook/reddit-lead";
+      document.getElementById('webhookUrl').value = defaultUrl;
+      // Keep status message unchanged (shows no webhook configured)
+      // This way the user sees the default but can still save it later.
+    }
+  }
+
+  function saveWebhook() {
+    const url = document.getElementById('webhookUrl').value.trim();
+    if (!url.startsWith('http')) {
+      setStatus('✗ Invalid URL. Must start with http:// or https://', 'err'); return;
+    }
+    localStorage.setItem('expatscore_webhook_url', url);
+    setStatus(`✓ Saved: ${truncate(url, 55)}`, 'ok');
+  }
+
+  function setStatus(msg, type) {
+    const el = document.getElementById('webhookStatus');
+    el.textContent = msg;
+    el.className = 'webhook-status ' + (type || '');
+  }
+
+  // ════════════════════════════════════════════════════════
+  //  MODE TOGGLE
+  // ════════════════════════════════════════════════════════
+  function setMode(mode) {
+    currentMode = mode;
+    document.getElementById('modeN8n').classList.toggle('active',    mode === 'n8n');
+    document.getElementById('modeDirect').classList.toggle('active', mode === 'direct');
+  }
+
+  // ════════════════════════════════════════════════════════
+  //  GENERATE — routes to n8n or direct API
+  // ════════════════════════════════════════════════════════
+  async function generate() {
+    const post = document.getElementById('postInput').value.trim();
+    if (!post) { showError('Please paste a Reddit post or question first.'); return; }
+
+    const btn = document.getElementById('generateBtn');
+    hideError();
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>Generating…';
+    document.getElementById('outputSection').style.display = 'none';
+
+    try {
+      const result = currentMode === 'n8n'
+        ? await callN8n(post)
+        : await callDirectAPI(post);
+
+      renderOutput(result, currentMode);
+    } catch (err) {
+      showError(err.message);
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = 'Generate Reply';
+    }
+  }
+
+  // ════════════════════════════════════════════════════════
+  //  n8n WEBHOOK CALL
+  //  ─────────────────────────────────────────────────────
+  //  What ExpatScore sends → your n8n webhook:
+  //
+  //  POST https://your-n8n.com/webhook/xxx
+  //  Content-Type: application/json
+  //
+  //  {
+  //    "post":       "<the Reddit post text>",
+  //    "subreddit":  "r/germany",
+  //    "topic":      "SCHUFA / Credit Score",
+  //    "tone":       "Empathetic & Expert",
+  //    "timestamp":  "2025-07-03T10:22:00.000Z",
+  //    "source":     "expatscore-reddit-engine"
+  //  }
+  //
+  //  What n8n should return to ExpatScore:
+  //
+  //  {
+  //    "reply": "<generated comment text>"
+  //  }
+  //
+  //  OR simply a plain text response body (string).
+  // ════════════════════════════════════════════════════════
+  async function callN8n(post) {
+    const webhookUrl = document.getElementById('webhookUrl').value.trim();
+    if (!webhookUrl) throw new Error('No n8n webhook URL set. Paste your URL in the banner above and click Save.');
+
+    const payload = {
+      post:       post,
+      subreddit:  document.getElementById('subreddit').value,
+      topic:      document.getElementById('topic').value,
+      tone:       selectedTone,
+      timestamp:  new Date().toISOString(),
+      source:     'expatscore-reddit-engine'
+    };
+
+    lastPayload = payload;
+
+    const response = await fetch(webhookUrl, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload)
+    });
+
+    if (!response.ok) throw new Error(`n8n returned HTTP ${response.status}. Check your webhook node is active.`);
+
+    const raw = await response.text();
+
+    // Try JSON first ({ "reply": "..." }), fall back to plain text
+    try {
+      const json = JSON.parse(raw);
+      // Accept: { reply }, { text }, { output }, { message }, { comment }
+      return json.reply || json.text || json.output || json.message || json.comment || raw;
+    } catch {
+      return raw;
+    }
+  }
+
+  // ════════════════════════════════════════════════════════
+  //  DIRECT ANTHROPIC API CALL (fallback mode)
+  // ════════════════════════════════════════════════════════
+  async function callDirectAPI(post) {
+    const systemPrompt = buildSystemPrompt();
+    lastPayload = { mode: 'direct', model: 'claude-sonnet-4-20250514', system: systemPrompt };
+
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model:      'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system:     systemPrompt,
+        messages:   [{ role: 'user', content: `Reddit Post:\n\n${post}` }]
+      })
+    });
+
+    const data = await response.json();
+    if (data.error) throw new Error('API error: ' + data.error.message);
+    return data.content[0].text;
+  }
+
+  function buildSystemPrompt() {
+    const sub   = document.getElementById('subreddit').value;
+    const topic = document.getElementById('topic').value;
+    return `You are a highly knowledgeable consultant for expats living in Germany, active on Reddit.
+Your job is to write a genuinely helpful, human-sounding reply to a Reddit post.
+
+Rules:
+1. Empathetic, warm opening — acknowledge their situation.
+2. Clear, actionable answer in 1–2 focused paragraphs. No fluff.
+3. Mention ExpatScore.de only when it genuinely helps (SCHUFA tools, credit, financial planning). Make it feel like a peer dropping a useful link, not an ad. Skip it if the topic doesn't fit.
+4. Write like a knowledgeable expat, not a corporate bot. Slight informality is fine.
+5. End with one helpful closing sentence. No signature, no sign-off.
+
+Context: Subreddit = ${sub} | Topic = ${topic} | Tone = ${selectedTone}`;
+  }
+
+  // ════════════════════════════════════════════════════════
+  //  RENDER OUTPUT
+  // ════════════════════════════════════════════════════════
+  function renderOutput(text, mode) {
+    document.getElementById('outputBox').textContent       = text;
+    document.getElementById('toneLabel').textContent       = selectedTone;
+    document.getElementById('modeLabel').textContent       = mode === 'n8n' ? '⚡ n8n' : '🔗 Direct API';
+    document.getElementById('outputSection').style.display = 'block';
+    document.getElementById('copyBtn').textContent         = 'Copy to Clipboard';
+    document.getElementById('copyBtn').classList.remove('copied');
+
+    const words = text.split(/\s+/).filter(Boolean).length;
+    document.getElementById('wordCount').textContent = words;
+    document.getElementById('readTime').textContent  = Math.round(words / 3);
+
+    // Update payload inspector
+    updatePayloadDisplay();
+    payloadOpen = false;
+    document.getElementById('payloadArrow').textContent = '▶';
+    document.getElementById('payloadBox').style.display = 'none';
+  }
+
+  // ════════════════════════════════════════════════════════
+  //  PAYLOAD INSPECTOR
+  // ════════════════════════════════════════════════════════
+  function updatePayloadDisplay() {
+    if (!lastPayload) return;
+    const box = document.getElementById('payloadBox');
+    box.innerHTML = syntaxHighlight(JSON.stringify(lastPayload, null, 2));
+  }
+
+  function togglePayload() {
+    payloadOpen = !payloadOpen;
+    document.getElementById('payloadArrow').textContent = payloadOpen ? '▼' : '▶';
+    document.getElementById('payloadBox').style.display = payloadOpen ? 'block' : 'none';
+  }
+
+  function syntaxHighlight(json) {
+    return json
+      .replace(/("([^"]+)")\s*:/g, '<span class="key">$1</span>:')
+      .replace(/:\s*("([^"]*)")/g, ': <span class="str">$1</span>')
+      .replace(/:\s*(true|false|null)/g, ': <span class="val">$1</span>')
+      .replace(/:\s*(\d+)/g, ': <span class="val">$1</span>');
+  }
+
+  // ════════════════════════════════════════════════════════
+  //  UTILS
+  // ════════════════════════════════════════════════════════
+  function copyText() {
+    const text = document.getElementById('outputBox').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copyBtn');
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy to Clipboard'; btn.classList.remove('copied'); }, 2500);
+    });
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('errorMsg');
+    el.textContent = msg; el.style.display = 'block';
+  }
+  function hideError() { document.getElementById('errorMsg').style.display = 'none'; }
+  function truncate(s, n) { return s.length > n ? s.slice(0, n) + '…' : s; }
+
+  // ── Init ──
+  loadWebhook();
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Tax Class Finder 2026 | Steuerklasse Rechner — ExpatScore.de</title>
+
+<!-- SEO Core -->
+<meta name="description" content="Free interactive tool for expats in Germany. Calculate your optimal Steuerklasse (Tax Class I, III/V, IV/IV) based on marital status and salary. Updated for 2026.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="ExpatScore.de">
+
+<!-- Canonical & Hreflang -->
+<link rel="canonical" href="https://expatscore.de/steuerklasse-rechner/">
+<link rel="alternate" hreflang="en" href="https://expatscore.de/steuerklasse-rechner/">
+<link rel="alternate" hreflang="de" href="https://expatscore.de/steuerklasse-rechner/?lang=de">
+<link rel="alternate" hreflang="x-default" href="https://expatscore.de/steuerklasse-rechner/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="German Tax Class Finder 2026 | ExpatScore.de">
+<meta property="og:description" content="Discover your optimal Steuerklasse in seconds. Built for expats in Germany.">
+<meta property="og:url" content="https://expatscore.de/steuerklasse-rechner/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ExpatScore.de">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Tax Class Finder 2026">
+<meta name="twitter:description" content="Free tool to find your optimal German tax class.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "ExpatScore.de",
+      "url": "https://expatscore.de/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "German Tax Class Finder",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "url": "https://expatscore.de/steuerklasse-rechner/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Steuerklasse III/V in Germany?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tax Class III/V is for married couples where one partner earns significantly more than the other. The higher earner gets Class III (with the full married tax-free allowance), while the lower earner gets Class V. This maximizes monthly net income but may result in a tax payment at year-end for the Class V partner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is IV/IV mit Faktor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IV/IV with Factor is a variant for married couples where payroll tax is calculated considering the actual income ratio of both partners. It aims to distribute the tax burden evenly throughout the year, avoiding large year-end tax payments or refunds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I change my tax class during the year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can change your tax class once per year (with exceptions for marriage, divorce, or childbirth). Submit the form 'Antrag auf Steuerklassenwechsel' to your local Finanzamt."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ============================================================
+     EXPATSCORE.DE — PRODUCTION TAX CLASS FINDER
+     Design System: Deep Obsidian × Gold × Emerald
+  ============================================================ */
+  :root {
+    --bg-primary:     #0a0e17;
+    --bg-secondary:   #111827;
+    --bg-card:        #1a2035;
+    --bg-card-hover:  #1f2741;
+    --bg-input:       #111827;
+
+    --gold:           #D4AF37;
+    --gold-light:     #F1D592;
+    --gold-dim:       #8a6e2e;
+    --gold-glow:      rgba(212, 175, 55, 0.08);
+    --gold-border:    rgba(212, 175, 55, 0.18);
+    --gold-dim-bg:    rgba(212, 175, 55, 0.12);
+
+    --emerald:        #50C878;
+    --emerald-light:  #7DDFAA;
+    --emerald-glow:   rgba(80, 200, 120, 0.08);
+    --emerald-border: rgba(80, 200, 120, 0.18);
+
+    --text-primary:   #F0F2F5;
+    --text-secondary: #9CA3AF;
+    --text-muted:     #6B7280;
+
+    --border:         rgba(212, 175, 55, 0.12);
+    --border-subtle:  rgba(255, 255, 255, 0.06);
+
+    --font-display:   'Playfair Display', Georgia, serif;
+    --font-body:      'Outfit', system-ui, sans-serif;
+    --font-mono:      'JetBrains Mono', 'Courier New', monospace;
+
+    --radius-sm:  8px;
+    --radius-md:  14px;
+    --radius-lg:  20px;
+
+    --shadow-card:    0 4px 24px rgba(0,0,0,0.4), 0 1px 4px rgba(0,0,0,0.25);
+    --shadow-gold:    0 0 40px rgba(212,175,55,0.12);
+    --shadow-btn:     0 8px 32px rgba(212,175,55,0.28);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Ambient textures */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(212,175,55,0.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,55,0.018) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 75%);
+    pointer-events: none;
+  }
+  body::after {
+    content: ''; position: fixed; top: -10%; left: -15%;
+    width: 55vw; height: 55vw;
+    background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 65%);
+    filter: blur(60px); pointer-events: none; z-index: 0;
+  }
+  .orb-emerald {
+    position: fixed; bottom: -10%; right: -10%;
+    width: 45vw; height: 45vw;
+    background: radial-gradient(circle, rgba(80,200,120,0.05) 0%, transparent 65%);
+    filter: blur(70px); pointer-events: none; z-index: 0; border-radius: 50%;
+  }
+
+  /* ── Header ── */
+  .site-header {
+    position: relative; z-index: 10;
+    border-bottom: 1px solid var(--border-subtle);
+    background: rgba(10, 14, 23, 0.85);
+    backdrop-filter: blur(12px);
+  }
+  .header-inner {
+    max-width: 1100px; margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.35rem; font-weight: 700;
+    color: var(--gold); text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .main-nav {
+    display: flex; gap: 2rem;
+  }
+  .main-nav a {
+    font-family: var(--font-mono);
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .main-nav a:hover { color: var(--gold); }
+
+  /* ── Layout ── */
+  main {
+    flex: 1;
+    width: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 3rem 1.25rem;
+    position: relative; z-index: 1;
+  }
+  .container {
+    width: 100%; max-width: 660px;
+  }
+
+  /* ── Hero ── */
+  header[role="banner"] { text-align: center; margin-bottom: 3.5rem; }
+  .brand-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 1.25rem;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+  }
+  .brand-eyebrow::before, .brand-eyebrow::after {
+    content: ''; display: inline-block;
+    width: 24px; height: 1px; background: var(--emerald); opacity: 0.5;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 5vw, 3rem);
+    font-weight: 700; line-height: 1.12;
+    letter-spacing: -0.02em; margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 10%, var(--gold-light) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .subtitle {
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.05rem; font-weight: 400; font-style: italic;
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    margin-bottom: 1.25rem;
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.4s ease, border-color 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: var(--shadow-card), var(--shadow-gold);
+    border-color: rgba(212,175,55,0.2);
+  }
+  .card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 40%, var(--emerald) 100%);
+    opacity: 0.6; border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  /* ── Form ── */
+  .form-group { margin-bottom: 2rem; }
+  label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 0.85rem;
+  }
+  .segmented-control {
+    display: flex; gap: 0.5rem;
+    background: var(--bg-secondary);
+    padding: 0.35rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+  }
+  .segmented-control button {
+    flex: 1; padding: 0.9rem 1rem;
+    background: transparent; border: 1px solid transparent;
+    border-radius: calc(var(--radius-md) - 4px);
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-size: 0.95rem; font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.03em;
+  }
+  .segmented-control button.active {
+    background: var(--gold-dim-bg); color: var(--gold);
+    border-color: var(--gold-border);
+    box-shadow: 0 0 16px rgba(212,175,55,0.08);
+  }
+  .segmented-control button:hover:not(.active) {
+    color: var(--text-primary); background: rgba(255,255,255,0.03);
+  }
+
+  .salary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+  .input-wrap { position: relative; }
+  .input-prefix {
+    position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%);
+    color: var(--gold); font-family: var(--font-mono);
+    font-weight: 600; font-size: 1rem; pointer-events: none; opacity: 0.9;
+  }
+  input[type="number"] {
+    width: 100%; padding: 1rem 1rem 1rem 2.6rem;
+    background: var(--bg-input);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 1.05rem; font-weight: 400;
+    outline: none; transition: all 0.25s ease;
+    -moz-appearance: textfield;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type="number"]:focus {
+    border-color: var(--gold-border);
+    box-shadow: 0 0 0 3px var(--gold-glow);
+    background: var(--bg-card-hover);
+  }
+  input::placeholder { color: #374151; font-style: normal; }
+
+  .btn-primary {
+    width: 100%; padding: 1.1rem 1.5rem;
+    background: var(--gold); color: #0a0e17;
+    border: none; border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative; overflow: hidden;
+    box-shadow: 0 4px 16px rgba(212,175,55,0.18);
+  }
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-btn);
+  }
+  .btn-primary:active { transform: translateY(0); }
+
+  /* ── Result ── */
+  .result {
+    display: none; opacity: 0; transform: translateY(28px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .result.show { display: block; opacity: 1; transform: translateY(0); }
+
+  .result-eyebrow {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 0.4rem;
+  }
+  .result-class {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 4rem);
+    font-weight: 700; color: var(--gold);
+    text-align: center; margin: 0.3rem 0;
+    letter-spacing: 0.06em;
+    text-shadow: 0 0 60px rgba(212,175,55,0.18);
+  }
+  .result-divider {
+    display: flex; align-items: center; gap: 1rem;
+    margin: 1.75rem auto; max-width: 200px;
+  }
+  .result-divider::before, .result-divider::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(212,175,55,0.35));
+  }
+  .result-divider::after {
+    background: linear-gradient(to left, transparent, rgba(212,175,55,0.35));
+  }
+  .result-divider-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold); opacity: 0.6; flex-shrink: 0;
+  }
+
+  .result-text {
+    text-align: center; color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.05rem; line-height: 1.85;
+    margin-bottom: 1.5rem;
+    max-width: 500px; margin-left: auto; margin-right: auto;
+  }
+  .result-text strong { color: var(--text-primary); font-weight: 600; }
+  .result-text em { color: #9CA3AF; font-style: italic; }
+
+  /* ── Alternative Path (IV/IV mit Faktor) ── */
+  .alt-path {
+    background: rgba(212,175,55,0.04);
+    border: 1px solid var(--gold-border);
+    border-left: 3px solid var(--gold);
+    border-radius: var(--radius-sm);
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 520px;
+  }
+  .alt-path-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.6rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .alt-path-label::before {
+    content: '◆'; font-size: 0.5rem; opacity: 0.7;
+  }
+  .alt-path-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--gold-light); margin-bottom: 0.5rem;
+  }
+  .alt-path-desc {
+    font-family: var(--font-body);
+    font-size: 0.95rem; line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .alt-path-desc strong { color: var(--text-primary); font-weight: 500; }
+
+  /* ── Warning Banner (Minijob) ── */
+  .warning-banner {
+    background: rgba(212,175,55,0.06);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.25rem;
+    margin: 1.25rem auto; max-width: 520px;
+    display: flex; align-items: flex-start; gap: 0.75rem;
+  }
+  .warning-icon {
+    color: var(--gold); font-size: 1.1rem; line-height: 1;
+    margin-top: 0.1rem; flex-shrink: 0;
+  }
+  .warning-text {
+    font-family: var(--font-body);
+    font-size: 0.88rem; line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .warning-text strong { color: var(--gold-light); font-weight: 600; }
+
+  /* ── CTA Block ── */
+  .cta-block {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin: 1.5rem auto; max-width: 520px;
+    text-align: center;
+    background: rgba(255,255,255,0.02);
+  }
+  .cta-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 1rem;
+  }
+  .cta-links {
+    display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;
+  }
+  .cta-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.7rem 1.2rem;
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-sm);
+    color: var(--gold);
+    font-family: var(--font-body);
+    font-size: 0.82rem; font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+  .cta-link:hover {
+    background: var(--gold-dim-bg);
+    border-color: rgba(212,175,55,0.35);
+    color: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  /* ── Footnotes ── */
+  .footnote {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    margin: 1.25rem auto 0; max-width: 520px;
+    font-family: var(--font-body);
+    font-size: 0.82rem; line-height: 1.6;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .footnote-icon { color: var(--gold); font-style: normal; flex-shrink: 0; }
+
+  /* ── Disclaimer ── */
+  .disclaimer {
+    margin-top: 1.75rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: 0.68rem; color: var(--text-muted);
+    text-align: center; line-height: 1.7; letter-spacing: 0.02em;
+  }
+
+  /* ── Copy Button ── */
+  .btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+    padding: 0.8rem 1.6rem;
+    background: transparent;
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-sm);
+    color: var(--gold);
+    font-family: var(--font-mono);
+    font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.25s ease;
+  }
+  .btn-secondary:hover {
+    background: var(--gold-dim-bg);
+    border-color: rgba(212,175,55,0.35);
+    color: var(--gold-light);
+    box-shadow: 0 0 20px rgba(212,175,55,0.08);
+    transform: translateY(-1px);
+  }
+  .copy-wrap { text-align: center; margin-top: 1.5rem; }
+
+  /* ── Toast ── */
+  .toast {
+    position: fixed; bottom: 2.5rem; left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--bg-card);
+    border: 1px solid var(--gold-border);
+    border-radius: var(--radius-md);
+    color: var(--gold);
+    padding: 0.85rem 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    opacity: 0; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none; z-index: 100;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5), var(--shadow-gold);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ── Footer ── */
+  .site-footer {
+    position: relative; z-index: 10;
+    border-top: 1px solid var(--border-subtle);
+    background: rgba(10, 14, 23, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 2.5rem 1.5rem;
+    margin-top: auto;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex; justify-content: center; gap: 1.75rem;
+    margin-bottom: 1.25rem; flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-family: var(--font-mono);
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .copyright {
+    font-family: var(--font-mono);
+    font-size: 0.65rem; color: #374151;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── Utilities ── */
+  .hidden { display: none !important; }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+  ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .salary-grid { grid-template-columns: 1fr; }
+    .card { padding: 1.75rem 1.25rem; }
+    .result-class { font-size: 2.8rem; }
+    .header-inner { flex-direction: column; gap: 1rem; }
+    .main-nav { gap: 1.25rem; }
+    .cta-links { flex-direction: column; align-items: center; }
+  }
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<div class="orb-emerald"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="https://expatscore.de/" class="logo">ExpatScore.de</a>
+    <nav class="main-nav">
+      <a href="https://expatscore.de/guides/">Guides</a>
+      <a href="https://expatscore.de/tools/">Tools</a>
+      <a href="https://expatscore.de/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN TOOL -->
+<main>
+  <div class="container">
+    <header role="banner">
+      <div class="brand-eyebrow">ExpatScore.de</div>
+      <h1>German Tax Class<br>Finder</h1>
+      <p class="subtitle">Discover your optimal Steuerklasse in seconds</p>
+    </header>
+
+    <div class="card">
+      <div class="form-group">
+        <label>Marital Status</label>
+        <div class="segmented-control">
+          <button type="button" id="btn-single" class="active" onclick="setStatus('single')">Single</button>
+          <button type="button" id="btn-married" onclick="setStatus('married')">Married</button>
+        </div>
+      </div>
+
+      <div class="salary-grid">
+        <div class="form-group">
+          <label id="label-a">Your Annual Salary</label>
+          <div class="input-wrap">
+            <span class="input-prefix">&euro;</span>
+            <input type="number" id="salary-a" placeholder="50000" min="0" step="1000">
+          </div>
+        </div>
+
+        <div class="form-group" id="group-b">
+          <label>Partner's Annual Salary</label>
+          <div class="input-wrap">
+            <span class="input-prefix">&euro;</span>
+            <input type="number" id="salary-b" placeholder="35000" min="0" step="1000">
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="calculate()">Calculate Recommendation</button>
+    </div>
+
+    <div class="card result" id="result-card">
+      <div class="result-eyebrow">Recommended Tax Class</div>
+      <div class="result-class" id="result-title">IV / IV</div>
+      <div class="result-divider"><div class="result-divider-dot"></div></div>
+      <div class="result-text" id="result-desc"></div>
+
+      <!-- Alternative Path: IV/IV mit Faktor -->
+      <div class="alt-path hidden" id="alt-path">
+        <div class="alt-path-label">Third Recommendation Path</div>
+        <div class="alt-path-title" id="alt-path-title">IV / IV mit Faktor</div>
+        <div class="alt-path-desc" id="alt-path-desc"></div>
+      </div>
+
+      <!-- Minijob Warning -->
+      <div class="warning-banner hidden" id="minijob-warning">
+        <div class="warning-icon">▲</div>
+        <div class="warning-text" id="minijob-text"></div>
+      </div>
+
+      <!-- CTA Block -->
+      <div class="cta-block">
+        <div class="cta-label">Continue Your Setup</div>
+        <div class="cta-links">
+          <a href="https://expatscore.de/german-banking-guide-2026/" class="cta-link">German Banking Guide →</a>
+          <a href="https://expatscore.de/health-insurance-germany-2026/" class="cta-link">Insurance / Versicherung →</a>
+        </div>
+      </div>
+
+      <!-- Self-Employed Footnote -->
+      <div class="footnote" id="se-footnote">
+        <span class="footnote-icon">⚠</span>
+        <span>This tool is optimized for employees (<em>Angestellte</em>). Self-employed persons should consult a <em>Steuerberater</em> for personalized advice.</span>
+      </div>
+
+      <div class="copy-wrap">
+        <button class="btn-secondary" onclick="copyLink()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Copy Link
+        </button>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Disclosure:</strong> This tool uses a heuristic ratio-based model for educational purposes only. It does not constitute tax advice. German tax law is complex — consult a <em>Steuerberater</em> for advice tailored to your situation.
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="https://expatscore.de/german-banking-guide-2026/">German Banking Guide</a>
+      <a href="https://expatscore.de/health-insurance-germany-2026/">Insurance</a>
+      <a href="https://expatscore.de/impressum/">Impressum</a>
+      <a href="https://expatscore.de/privacy/">Privacy</a>
+    </div>
+    <p class="copyright">&copy; 2026 ExpatScore.de &middot; Built for expats in Germany</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Link copied to clipboard</div>
+
+<script>
+  let status = 'single';
+
+  function setStatus(s) {
+    status = s;
+    document.getElementById('btn-single').classList.toggle('active', s === 'single');
+    document.getElementById('btn-married').classList.toggle('active', s === 'married');
+
+    const groupB = document.getElementById('group-b');
+    const labelA = document.getElementById('label-a');
+
+    if (s === 'single') {
+      groupB.classList.add('hidden');
+      labelA.textContent = 'Your Annual Salary';
+    } else {
+      groupB.classList.remove('hidden');
+      labelA.textContent = 'Partner A Annual Salary';
+    }
+
+    // Hide result when switching to avoid stale data confusion
+    document.getElementById('result-card').classList.remove('show');
+  }
+
+  function getParams() {
+    const p = new URLSearchParams(window.location.search);
+    return {
+      status: p.get('status') || 'single',
+      a: p.get('a') || '',
+      b: p.get('b') || ''
+    };
+  }
+
+  function init() {
+    const p = getParams();
+    setStatus(p.status === 'married' ? 'married' : 'single');
+    if (p.a) document.getElementById('salary-a').value = p.a;
+    if (p.b) document.getElementById('salary-b').value = p.b;
+    if (p.a && (status === 'single' || p.b !== '')) {
+      calculate();
+    }
+  }
+
+  function calculate() {
+    const a = parseInt(document.getElementById('salary-a').value) || 0;
+    const b = parseInt(document.getElementById('salary-b').value) || 0;
+
+    if (a <= 0) {
+      alert('Please enter a valid salary for Partner A.');
+      return;
+    }
+
+    let title = '';
+    let desc = '';
+    let altPath = null;
+    let minijobPartner = null;
+
+    // Minijob edge-case detection (monthly <= €538)
+    if (status === 'married') {
+      if (b > 0 && (b / 12) <= 538) minijobPartner = 'Partner B';
+      if (a > 0 && (a / 12) <= 538) minijobPartner = 'Partner A';
+    } else {
+      if (a > 0 && (a / 12) <= 538) minijobPartner = 'You';
+    }
+
+    if (status === 'single') {
+      title = 'I';
+      desc = 'As a single person, you are automatically assigned <strong>Tax Class I</strong>. This is the standard class for all single, divorced, or permanently separated taxpayers in Germany. No action is required.';
+    } else {
+      const min = Math.min(a, b);
+      const max = Math.max(a, b);
+      const ratio = min > 0 ? max / min : Infinity;
+
+      if (min === 0) {
+        const earner = a > b ? 'Partner A' : 'Partner B';
+        const other = a > b ? 'Partner B' : 'Partner A';
+        title = 'III / V';
+        desc = `With one partner not currently earning, <strong>Tax Class III / V</strong> is optimal. <strong>${earner}</strong> takes Class III (full married tax-free allowance), while <strong>${other}</strong> takes Class V. This maximizes your household net income each month.`;
+        altPath = {
+          title: 'IV / IV mit Faktor',
+          desc: 'If you prefer to avoid a potential year-end tax payment for the non-earning partner, <strong>IV/IV with Factor</strong> spreads the tax benefit evenly across both salaries using your actual income ratio.'
+        };
+      } else if (ratio > 1.6) {
+        const higher = a > b ? 'Partner A' : 'Partner B';
+        const lower = a > b ? 'Partner B' : 'Partner A';
+        title = 'III / V';
+        desc = `With a significant income gap, <strong>Tax Class III / V</strong> will likely maximize your combined monthly net income. <strong>${higher}</strong> (higher earner) takes Class III for a larger tax-free allowance, while <strong>${lower}</strong> takes Class V.`;
+        altPath = {
+          title: 'IV / IV mit Faktor',
+          desc: 'Consider <strong>IV/IV with Factor</strong> if you want to avoid the high monthly tax rate of Class V. The factor method calculates tax based on your actual income split, giving you the same annual result as III/V but distributed evenly throughout the year.'
+        };
+      } else {
+        title = 'IV / IV';
+        desc = 'With relatively similar incomes, <strong>Tax Class IV / IV</strong> is your default and typically most balanced option. Both partners receive the same basic tax-free allowance split evenly. This avoids the high tax rate associated with Class V.<br><br><em>Tip:</em> If one of you earns significantly more in the future, switching to III/V may become advantageous.';
+        if (ratio > 1.3) {
+          altPath = {
+            title: 'III / V',
+            desc: 'If your income gap widens further, <strong>III/V</strong> could increase your monthly household net income. Consider switching if your ratio exceeds 1.6.'
+          };
+        }
+      }
+    }
+
+    // Render primary result
+    document.getElementById('result-title').textContent = title;
+    document.getElementById('result-desc').innerHTML = desc;
+
+    // Render alternative path (Third Recommendation)
+    const altEl = document.getElementById('alt-path');
+    if (altPath) {
+      document.getElementById('alt-path-title').textContent = altPath.title;
+      document.getElementById('alt-path-desc').innerHTML = altPath.desc;
+      altEl.classList.remove('hidden');
+    } else {
+      altEl.classList.add('hidden');
+    }
+
+    // Render Minijob warning
+    const warnEl = document.getElementById('minijob-warning');
+    if (minijobPartner) {
+      document.getElementById('minijob-text').innerHTML =
+        `<strong>Minijob detected:</strong> ${minijobPartner}'s income appears to be below the €538/month threshold. Minijobs follow special tax and social contribution rules. This tool assumes standard employment contracts — please verify your status with your employer or a <em>Steuerberater</em>.`;
+      warnEl.classList.remove('hidden');
+    } else {
+      warnEl.classList.add('hidden');
+    }
+
+    // Show result card with animation
+    const card = document.getElementById('result-card');
+    card.classList.remove('show');
+    void card.offsetWidth;
+    card.classList.add('show');
+    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Update URL for shareability
+    const url = new URL(window.location.href);
+    url.searchParams.set('status', status);
+    url.searchParams.set('a', a);
+    if (status === 'married') url.searchParams.set('b', b);
+    else url.searchParams.delete('b');
+    window.history.replaceState({}, '', url);
+  }
+
+  async function copyLink() {
+    const url = window.location.href;
+    try {
+      await navigator.clipboard.writeText(url);
+      showToast();
+    } catch (err) {
+      const ta = document.createElement('textarea');
+      ta.value = url;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast();
+    }
+  }
+
+  function showToast() {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+  }
+
+  init();
+</script>
+
+</body>
+</html>
