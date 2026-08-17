@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/macgr/Downloads/expat_web/verify_urls.py", line 405, in <module>
+    main()
+  File "/Users/macgr/Downloads/expat_web/verify_urls.py", line 350, in main
+    urls = load_sitemap_urls(sitemap_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/macgr/Downloads/expat_web/verify_urls.py", line 164, in load_sitemap_urls
+    tree = ET.parse(sitemap_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/xml/etree/ElementTree.py", line 1204, in parse
+    tree.parse(source, parser)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/xml/etree/ElementTree.py", line 569, in parse
+    self._root = parser._parse_whole(source)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xml.etree.ElementTree.ParseError: not well-formed (invalid token): line 2, column 1
