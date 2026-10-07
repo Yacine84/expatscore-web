@@ -153,15 +153,15 @@
 <div class="progress-bar" id="progressBar"></div>
 <header class="global-header">
 <div class="header-inner">
-<div class="logo"><a href="index.html">ExpatScore.de</a></div>
+<div class="logo"><a href="/">ExpatScore.de</a></div>
 <button aria-label="Navigation öffnen" class="nav-toggle" id="navToggle">☰</button>
 <nav class="nav-links" id="navLinks">
-<a href="index.html">Home</a>
-<a href="banking.html">Banking</a>
-<a aria-current="page" href="schufa-simulator.html">SCHUFA Tool</a>
-<a href="schufa-guide.html">SCHUFA Guide</a>
-<a href="insurance.html">Versicherung</a>
-<a href="about.html">Über uns</a>
+<a href="/">Home</a>
+<a href="/banking">Banking</a>
+<a aria-current="page" href="/schufa-simulator">SCHUFA Tool</a>
+<a href="/schufa-guide">SCHUFA Guide</a>
+<a href="/insurance">Versicherung</a>
+<a href="/about">Über uns</a>
 </nav>
 </div>
 </header>
@@ -253,8 +253,8 @@
 <button class="restart-btn" onclick="restartQuiz()">↻ Retake the simulator</button>
 <p class="sim-disclaimer">
 <strong>Disclaimer:</strong> This simulator provides an estimated SCHUFA score range for informational purposes only. It is not an official SCHUFA assessment — actual scores are calculated solely by SCHUFA Holding AG based on your full credit file. This tool does not constitute financial advice.
-       ·  <a href="affiliate-hinweis.html">Affiliate disclosure</a>
-       ·  <a href="datenschutz.html">Privacy policy</a>
+       ·  <a href="/affiliate-hinweis">Affiliate disclosure</a>
+       ·  <a href="/datenschutz">Privacy policy</a>
 </p>
 </div>
 </div><!-- /sim-wrap -->
@@ -263,12 +263,12 @@
 <div class="inner">
 <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
 <nav aria-label="Legal-Links" class="footer-legal-links">
-<a href="about.html">Über uns</a>
-<a href="banking.html">Banking</a>
-<a href="schufa-guide.html">SCHUFA Guide</a>
-<a href="impressum.html">Impressum</a>
-<a href="datenschutz.html">Datenschutzerklärung</a>
-<a href="affiliate-hinweis.html">Affiliate-Hinweis</a>
+<a href="/about">Über uns</a>
+<a href="/banking">Banking</a>
+<a href="/schufa-guide">SCHUFA Guide</a>
+<a href="/impressum">Impressum</a>
+<a href="/datenschutz">Datenschutzerklärung</a>
+<a href="/affiliate-hinweis">Affiliate-Hinweis</a>
 <a href="#" onclick="openModal('cookie-settings');return false;">Cookie-Einstellungen</a>
 </nav>
 <div class="footer-disclosure">
@@ -284,7 +284,7 @@
 <div aria-hidden="true" class="cookie-banner-icon">🍪</div>
 <div class="cookie-banner-body">
 <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
-<div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</div>
+<div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</div>
 </div>
 </div>
 <div class="cookie-btns">
@@ -894,7 +894,7 @@ function renderNextSteps(profile, factors) {
     steps.map(function(s, i) {
       return '<div class="next-step-item"><div class="step-num-circle">' + (i + 1) + '</div><div class="next-step-text">' + s + '</div></div>';
     }).join('') +
-    '<a href="schufa-guide.html" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:1.25rem;font-size:.88rem;color:var(--teal);">Read the complete SCHUFA Guide for Expats &rarr;</a>';
+    '<a href="/schufa-guide" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:1.25rem;font-size:.88rem;color:var(--teal);">Read the complete SCHUFA Guide for Expats &rarr;</a>';
 }
 
 function restartQuiz() {
