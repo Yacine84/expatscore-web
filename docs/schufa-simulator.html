@@ -21,6 +21,44 @@
 <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <meta content="#080c10" name="theme-color"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator","url":"https://expatscore.de/schufa-simulator","description":"Interactive SCHUFA score estimator for expats in Germany","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this my official SCHUFA score?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. The simulator gives an estimated range based on six key factors. Your official score is calculated solely by SCHUFA Holding AG. You can request a free copy of your data (Datenkopie) once per year at meineSCHUFA.de."}
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the estimate?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The estimate is directional, not precise. It reflects how residency length, employment stability, Anmeldung status, banking history, payment behaviour, and credit history typically influence a SCHUFA profile."}
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to register or share personal data?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No. The simulator runs entirely in your browser. No registration, no email, no personal data sent or stored."}
+    },
+    {
+      "@type": "Question",
+      "name": "I just arrived in Germany. What score should I expect?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Most likely \u201cNo SCHUFA Data\u201d or \u201cLimited\u201d, which is completely normal for newcomers. Opening a no-SCHUFA-check bank account (N26, Vivid, bunq) starts building history immediately."}
+    },
+    {
+      "@type": "Question",
+      "name": "How can I improve my SCHUFA score as an expat?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Complete your Anmeldung, open a German bank account early, pay every bill on time, consider a credit card paid in full monthly after 6 months, and check your free yearly SCHUFA Datenkopie for errors."}
+    },
+    {
+      "@type": "Question",
+      "name": "Which German banks don't check SCHUFA?",
+      "acceptedAnswer": {"@type": "Answer", "text": "N26, Vivid, and bunq open accounts based on ID verification only, without any SCHUFA check \u2014 ideal first accounts for newcomers."}
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
@@ -149,6 +187,17 @@
       .sticky-cta-btn{width:100%;text-align:center;display:block}
     }
   </style>
+<style>
+.sim-seo{max-width:760px;margin:0 auto;padding:1rem 1.5rem 4rem}
+.sim-seo h2{font-family:var(--font-display);font-size:1.5rem;color:var(--gold-light);margin:2.5rem 0 1rem}
+.sim-seo h2:first-child{margin-top:0}
+.sim-seo p{font-size:.95rem;color:var(--text-secondary);line-height:1.75;margin-bottom:1rem}
+.sim-seo a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.sim-seo a:hover{color:var(--gold)}
+.faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem}
+.faq-item h3{font-family:var(--font-display);font-size:1.1rem;color:var(--text-primary);margin-bottom:.6rem}
+.faq-item p{margin-bottom:0}
+</style>
 </head>
 <body>
 <div class="progress-bar" id="progressBar"></div>
@@ -259,6 +308,64 @@
 </p>
 </div>
 </div><!-- /sim-wrap -->
+<!-- ===== SEO CONTENT + FAQ ===== -->
+<section class="sim-seo" id="sim-faq">
+  <h2>How the SCHUFA Simulator Works</h2>
+  <p>
+    The SCHUFA Simulator asks you 6 quick questions about your life in Germany &mdash;
+    how long you have lived here, your employment, your Anmeldung status, your bank
+    accounts, your payment history, and your credit history. Based on your answers, it
+    estimates a SCHUFA score range (shown on this tool&rsquo;s 0&ndash;1000 scale) and
+    recommends the German bank accounts that best fit your current profile.
+  </p>
+  <p>
+    Why does this matter? In Germany, landlords, banks, and even some employers check
+    your SCHUFA score before signing a contract with you. Most newcomers arrive with no
+    SCHUFA record at all &mdash; which is completely normal, but means traditional banks
+    may reject your application. Knowing your estimated range helps you apply to the
+    right banks first instead of collecting rejections. For the full background, read our
+    <a href="/schufa-guide">SCHUFA Guide for Expats</a> and
+    <a href="/blog/how-to-get-schufa-germany">how to build a SCHUFA score from zero</a>.
+  </p>
+  <p>
+    <strong>Important:</strong> this is an educational estimate, not an official SCHUFA
+    assessment. SCHUFA Holding AG calculates your real score from your complete credit
+    file. You can request your full official report for free once a year
+    (Datenkopie) at meineSCHUFA.de.
+  </p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h3>Is this my official SCHUFA score?</h3>
+    <p>No. The simulator gives an estimated range based on the six factors SCHUFA weighs most heavily for newcomers. Your official score is calculated solely by SCHUFA Holding AG from your full credit file. By law, you can request a free copy of your data (Datenkopie) once per year at meineSCHUFA.de to see your real score.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How accurate is the estimate?</h3>
+    <p>The estimate is directional, not precise. It reflects how the six key factors &mdash; residency length, employment stability, Anmeldung status, banking history, payment behaviour, and credit history &mdash; typically influence a SCHUFA profile. Use it to understand your starting point and which banks are realistic for you right now.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do I need to register or share personal data?</h3>
+    <p>No. The simulator runs entirely in your browser. No registration, no email, no personal data sent or stored &mdash; your answers never leave your device.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>I just arrived in Germany. What score should I expect?</h3>
+    <p>Most likely &ldquo;No SCHUFA Data&rdquo; or &ldquo;Limited&rdquo; &mdash; and that is completely normal. SCHUFA only tracks activity inside Germany, so every newcomer starts from zero. The fastest way to change that is opening a German bank account that requires no SCHUFA check (such as N26, Vivid, or bunq): every month the account is open builds positive history. See our <a href="/banking">banking comparison</a> for details.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How can I improve my SCHUFA score as an expat?</h3>
+    <p>Five actions move the needle fastest: (1) complete your Anmeldung at the B&uuml;rgeramt; (2) open a German bank account as early as possible; (3) pay every bill on time &mdash; rent, phone, utilities, subscriptions; (4) after about 6 months, consider a credit card that you pay off in full each month; (5) request your free SCHUFA Datenkopie once a year and dispute any errors. Our <a href="/schufa-guide">complete SCHUFA guide</a> walks through each step.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Which German banks don&rsquo;t check SCHUFA?</h3>
+    <p>Several digital banks welcome newcomers without any SCHUFA check: N26, Vivid, and bunq all open accounts based on ID verification only. These are ideal first accounts &mdash; they give you a German IBAN immediately and start building the banking history that SCHUFA scores later.</p>
+  </div>
+</section>
 </main>
 <footer class="global-footer">
 <div class="inner">
@@ -279,6 +386,11 @@
 <p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · Alle Angaben ohne Gewähr · Kein Ersatz für individuelle Rechts- oder Finanzberatung. · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
 </div>
 </footer>
+<!-- STICKY CTA BAR -->
+<div id="sticky-cta-bar">
+  <div class="sticky-text">Top recommendation for you: <strong id="stickyBankName">N26</strong></div>
+  <a class="sticky-cta-btn" id="stickyCTALink" href="#" target="_blank" rel="noopener sponsored">Open account &rarr;</a>
+</div>
 <!-- COOKIE BANNER -->
 <div aria-label="Cookie-Einstellungen" aria-live="polite" id="cookie-banner" role="dialog">
 <div class="cookie-banner-header">
