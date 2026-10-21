@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="robots" content="index, follow"/>
+<title>German Pension Refund: Getting Your Contributions Back When You Leave</title>
+<meta content="Leaving Germany for good? Non-EU expats can often reclaim their pension contributions — 9.3% of gross pay per month worked. Rules, the 24-month wait, form V0901." name="description"/>
+
+<meta content="Yassine Chaikhi" name="author"/>
+<link href="https://expatscore.de/blog/german-pension-refund-leaving-germany" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="German Pension Refund: Getting Your Contributions Back When You Leave" property="og:title"/>
+<meta content="https://expatscore.de/blog/german-pension-refund-leaving-germany" property="og:url"/>
+<meta content="German Pension Refund: Getting Your Contributions Back When You Leave" name="twitter:title"/>
+<meta content="Leaving Germany for good? Non-EU expats can often reclaim their pension contributions — 9.3% of gross pay per month worked. Rules, the 24-month wait, form V0901." name="twitter:description"/>
+<meta content="ExpatScore.de" property="og:site_name"/>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="#0a0e17" name="theme-color"/>
+<link href="/style.css" rel="stylesheet"/>
+<style>
+    .doc-checklist {
+      background: var(--bg-glass);
+      border: 1px solid var(--emerald-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .doc-checklist-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--emerald);
+      margin-bottom: 1rem;
+    }
+    .doc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .doc-item:last-child { border-bottom: none; }
+    .doc-check {
+      width: 22px; height: 22px;
+      border: 2px solid var(--emerald);
+      border-radius: 4px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .doc-check.checked { background: var(--emerald); }
+    .doc-check.checked::after { content: '✓'; color: #080c14; font-weight: 700; font-size: 0.75rem; }
+    .doc-name { font-weight: 600; font-size: 0.9rem; }
+    .doc-desc { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .doc-required { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700; color: #EF4444; margin-left: auto; flex-shrink: 0; }
+    .doc-optional { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700; color: var(--gold); margin-left: auto; flex-shrink: 0; }
+
+    .step-cards { display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0; }
+    .step-card {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 1.25rem;
+      padding: 1.25rem;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      transition: border-color 0.2s;
+    }
+    .step-card:hover { border-color: var(--gold-border); }
+    .step-card-num {
+      width: 44px; height: 44px;
+      background: var(--gold-glow);
+      border: 2px solid var(--gold-border);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-card-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+    .step-card-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
+    .step-card-tip {
+      font-size: 0.78rem;
+      color: var(--gold);
+      margin-top: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      background: var(--gold-glow);
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .city-table { width: 100%; border-collapse: collapse; font-size: .83rem; margin: 1.5rem 0; }
+    .city-table th {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .city-table td {
+      padding: .75rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .city-table tr:hover td { background: rgba(255,255,255,.015); }
+
+    .after-anmeldung-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: .85rem;
+      margin: 1.5rem 0;
+    }
+    .aa-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      transition: border-color .2s;
+    }
+    .aa-card:hover { border-color: var(--gold-border); }
+    .aa-title { font-weight: 700; font-size: .88rem; margin-bottom: .3rem; }
+    .aa-desc { font-size: .78rem; color: var(--text-muted); line-height: 1.55; }
+    .aa-link { font-size: .75rem; color: var(--emerald); margin-top: .4rem; display: block; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "German Pension Refund: Getting Your Contributions Back When You Leave",
+      "description": "Leaving Germany for good? Non-EU expats can often reclaim their pension contributions — 9.3% of gross pay per month worked. Rules, the 24-month wait, form V0901.",
+      "url": "https://expatscore.de/blog/german-pension-refund-leaving-germany",
+      "mainEntityOfPage": "https://expatscore.de/blog/german-pension-refund-leaving-germany",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "ExpatScore",
+        "url": "https://expatscore.de/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ExpatScore",
+        "url": "https://expatscore.de/"
+      },
+      "datePublished": "2026-10-21",
+      "dateModified": "2026-10-21"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://expatscore.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://expatscore.de/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "German Pension Refund: Getting Your Contributions Back When You Leave"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "I have EU citizenship — can I get a refund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost certainly not while you are of working age. EU, EEA and Swiss citizens always have the right to pay voluntary contributions into the German pension system, and that right alone disqualifies you from a refund. The only exception comes at standard retirement age: if you reach it with fewer than 60 months of German contributions, a refund of your own share is possible then."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I worked in Germany for 6 years — can I still get a refund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends entirely on your nationality. If you are a non-EU national from a country without a social security agreement with Germany, yes — a refund is possible even beyond 60 months. If you come from an agreement country such as the USA, Canada, Japan, India, Turkey or Morocco, no: with 60 months or more you hold a German pension entitlement instead, and the DRV will pay that pension to you abroad at retirement age."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the 24-month waiting period run from the day I left Germany?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The 24 months are counted from your last month of compulsory pension contributions — not from your departure, your deregistration or the end of your visa. Leaving Germany earlier does not start the clock any sooner, and if you take another compulsorily insured job in Germany during the wait, the 24 months start again from the new last contribution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the refund be paid into my foreign bank account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The DRV can transfer the refund to an account abroad — give your IBAN on the form, or your SWIFT/BIC details if your bank is outside the IBAN system. International transfers can add some processing time on top of the decision period, so allow roughly 6 to 9 months in total after the 24-month wait."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I might return to Germany one day — should I take the refund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Probably not. A refund dissolves your entire German pension insurance relationship: every claim built on those contribution periods is extinguished, including credited periods such as child-raising years. If you return and work in Germany again, you start again from zero months. Keeping the entitlement costs you nothing and it remains payable worldwide at retirement age."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a deadline to apply for the refund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Once the 24 months have passed, there is no application deadline and the claim does not expire — you can apply years later. The only cost of waiting is that the money sits idle: refunded contributions earn no interest while they wait, and the DRV pays out the nominal amount you contributed."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<header class="global-header">
+<div class="header-inner">
+<div class="logo"><a href="/">ExpatScore.de</a></div>
+<button aria-label="Navigation öffnen" class="nav-toggle" id="navToggle">☰</button>
+<nav class="nav-links" id="navLinks">
+<a href="/">Home</a>
+<a href="/banking">Banking</a>
+<a href="/schufa-simulator">SCHUFA Tool</a>
+<a href="/schufa-guide">SCHUFA Guide</a>
+<a href="/insurance">Versicherung</a>
+<a href="/about">Über uns</a>
+</nav>
+</div>
+</header>
+<div class="werbung-bar" role="note">
+<strong>⚑ Anzeige:</strong> Diese Seite enthält Affiliate-Links. <a href="/affiliate-hinweis">Details →</a>
+</div>
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+<a href="/">Home</a> › <span class="current">Pension Refund Guide 2026</span>
+</nav>
+<section class="hero-article">
+<div class="hero-inner">
+<span class="hero-eyebrow">Guide · Leaving Germany · 2026</span>
+<h1>German Pension Refund<br/><span style="font-size:.55em;color:var(--text-secondary);font-weight:400;">Getting Your Contributions Back When You Leave</span></h1>
+<p class="hero-sub">Worked in Germany and leaving for good? Many non-EU expats can reclaim the pension contributions deducted from every payslip — 9.3% of your gross salary for each month you worked. Here are the rules, the 24-month wait, and the catch you must understand first.</p>
+<div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.25rem;">
+<span style="font-size:.8rem;color:#EF4444;">⏳ Refunds open 24 months after your last contribution</span>
+<span style="font-size:.8rem;color:var(--text-muted);">⏱ 11 Min Read</span>
+<span style="font-size:.8rem;color:var(--emerald);">✓ 2026 Updated</span>
+</div>
+</div>
+</section>
+<main class="article-body" style="max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;">
+<a class="back-link" href="/">← Back to Home</a>
+<p style="margin-top:1.5rem;">If you worked in Germany and are now leaving for good, the pension deductions on every payslip do not have to stay behind. Under <strong>§210 SGB VI</strong>, many expats can claim a refund of their state pension contributions — the <strong>Beitragserstattung</strong> — from the Deutsche Rentenversicherung (DRV). Whether you qualify, how much you get back, and whether claiming is even a good idea depends on rules that most leavers never hear about. This guide walks through all three.</p>
+<h2>The Short Answer</h2>
+<p>The Beitragserstattung is a refund of your German pension contributions, paid by the Deutsche Rentenversicherung when you leave the German pension system for good. It is an exception in the system, not the rule — and it only ever returns <strong>your own share</strong> of the contributions: <strong>9.3% of your gross salary for every month you were insured</strong>. Your employer's half is never refunded.</p>
+<p>Three conditions must all be met before you can apply:</p>
+<ul style="padding-left:1.25rem;color:var(--text-secondary);font-size:.9rem;line-height:2.2;">
+<li><strong>You are no longer compulsorily insured in Germany</strong> — your German employment, and with it your obligation to pay into the system, has ended.</li>
+<li><strong>24 full calendar months have passed</strong> since your last compulsory contribution (more on this clock below — it does not start when you leave the country).</li>
+<li><strong>You have no right to insure yourself voluntarily</strong> in the German pension system. This third condition is where your nationality decides everything.</li>
+</ul>
+<p>A refund is also only one item on a longer leaving-Germany list — alongside deregistering your address (Abmeldung) and stopping charges tied to your German home, such as the broadcasting fee covered in our guide to <a href="/blog/deregister-ard-zdf-beitrag-as-expat-leaving-germany">deregistering the ARD ZDF Beitrag when leaving Germany</a>. It is simply the largest amount of money on that list.</p>
+<h2>How Much You Get Back</h2>
+<p>While you worked in Germany, <strong>18.6% of your gross salary</strong> went into the state pension every month. Half of that — 9.3 percentage points — was deducted from your pay; your employer paid the other 9.3 points on top. A Beitragserstattung returns <strong>only the share you paid yourself</strong>: 9.3% of your gross salary for every insured month. The employer's half stays in the system permanently, no matter how much it was.</p>
+<p>Two reductions catch people out. If you paid contributions as a <strong>self-employed person</strong>, or you paid <strong>voluntary contributions</strong> at any point, those amounts are refunded at only <strong>half</strong> their value. Employee contributions from a normal job are the only ones returned in full.</p>
+<p>The formula is simple: <strong>months worked × monthly gross salary × 9.3%</strong>. Two examples at steady salaries:</p>
+<div style="overflow-x:auto;">
+<table class="city-table">
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Calculation</th>
+<th>Refund</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3 years at €3,500/month</strong></td>
+<td>36 months × €3,500 × 9.3%</td>
+<td><strong>≈ €11,700</strong></td>
+</tr>
+<tr>
+<td><strong>4 years at €4,000/month</strong></td>
+<td>48 months × €4,000 × 9.3%</td>
+<td><strong>≈ €17,850</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In practice the DRV calculates your refund from your actual insurance record, month by month, so pay rises, part-time phases and gaps are all reflected exactly. For most employed expats, the refund lands somewhere in the four-to-low-five figures.</p>
+<h2>Who Can Claim: The Nationality Rules</h2>
+<p>Everything turns on the third condition: whether you have the <strong>right to pay voluntary contributions</strong> (freiwillige Versicherung) into the German system from abroad. If you could simply keep paying in voluntarily, the DRV will not refund you — the law treats the refund as an exit only for people who genuinely have no way to stay in the system. That produces three very different groups:</p>
+<p><strong>Non-EU nationals from countries without a social security agreement.</strong> If your home country has no pension agreement with Germany — this covers most African states, Russia, Argentina, Saudi Arabia and many others — you generally have no right to voluntary insurance, so a refund is possible <strong>regardless of how long you contributed</strong>, even well beyond five years. You must be living outside Germany when you claim; your residence is checked.</p>
+<p><strong>Nationals of agreement (treaty) countries.</strong> Germany has social security agreements with countries including the <strong>USA, Canada, Japan, India, Turkey and Morocco</strong>. Under these agreements, your insurance periods count in both systems — so you can normally keep building toward a pension, and a refund is generally only possible with <strong>fewer than 60 contribution months</strong>. At 60 months or more, you hold a German pension entitlement instead, and there is nothing to refund.</p>
+<p><strong>EU/EEA/Swiss citizens — and German citizens.</strong> In practice, there is <strong>no refund during working life</strong>: citizens of these countries can always insure themselves voluntarily, so the third condition is never met. Their only refund route opens at standard retirement age, and only if they never reached 60 months of contributions.</p>
+<p><strong>Dual nationals</strong> should note which passport counts: an EU/EEA/Swiss — or German — passport always wins. A German-Turkish dual national is treated as German and cannot claim a refund; a US-Italian dual national is treated as an EU citizen, with the same result.</p>
+<p>Finally, some good news on timing: once the 24 months have passed, there is <strong>no application deadline</strong>. The claim does not expire and you can apply years later. The only downside of waiting is that the money sits idle — refunded contributions earn no interest in the meantime.</p>
+<h2>The Price of a Refund: Read This Before You Apply</h2>
+<div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:var(--radius-sm);padding:1rem 1.25rem;margin:1.5rem 0;font-size:.9rem;">
+<strong style="color:#EF4444;">⚠ All or Nothing:</strong> A refund cannot be partial. You cannot refund your first two years and keep the rest — the payout dissolves your <strong>entire</strong> German pension insurance relationship.
+  </div>
+<p>This is the section that matters most. When the DRV pays out your contributions, <strong>every pension claim built on those periods is extinguished</strong>. Not just your own payments disappear from the record — the pension those years would have bought you, funded by both halves of the 18.6%, is gone, along with every credited period attached to your account, such as <strong>child-raising years</strong> (Kindererziehungszeiten) and other credited times that cost you nothing but counted toward your pension.</p>
+<p>The consequence for the future is just as stark: if you later return to Germany and work again, you start <strong>from zero months</strong>, as if you had never been insured — the old record cannot be bought back. One carve-out: if you previously received a benefit from the pension insurance, such as a medical rehabilitation measure, only contributions paid <strong>after</strong> that benefit can be refunded at all.</p>
+<p>None of this makes a refund wrong. For a non-EU expat who is certain they will never live or retire in Germany, €12,000 in hand can easily beat a small German pension payable decades from now. But it is a one-way door, and it should be walked through with open eyes.</p>
+<h2>Refund or Keep the Pension?</h2>
+<p>The alternative to a refund is simply doing nothing — and for many leavers it is the better deal. Anyone with <strong>60 or more contribution months</strong> owns a German pension entitlement for life. The DRV pays German pensions to <strong>almost every country in the world</strong>, so leaving Germany does not strand your entitlement; the money will reach you at retirement age wherever you live.</p>
+<p>The refund returns only your half: 9.3% of gross. The pension you keep is calculated on <strong>both halves — the full 18.6%</strong> — plus credited periods. That is why treaty-country nationals approaching or past the five-year mark, and anyone who might plausibly return to Europe, usually come out ahead by keeping the entitlement, even if the monthly pension looks modest. Your annual pension statement (Renteninformation) shows where you stand, and the DRV advises on individual cases <strong>free of charge</strong> — ask before you sign a refund application.</p>
+<p>If you do keep the German pension as one building block, it is worth planning the rest of your retirement savings around it; our guide to <a href="/blog/savings-etfs-and-pensions-essential-money-guide-for-young-expats-in-germany">savings, ETFs and pensions for expats in Germany</a> shows how the pieces fit together. And if you also hold private German pension contracts — a Riester policy, for example — read our breakdown of <a href="/blog/cost-trap-with-retirement-savings-accounts-in-germany-why-you-need-to-act-now">retirement savings cost traps</a> before cancelling anything, because those contracts follow completely different rules from the state pension refund described here.</p>
+<h2>How to Apply, Step by Step</h2>
+<div class="step-cards">
+<div class="step-card">
+<div class="step-card-num">1</div>
+<div>
+<div class="step-card-title">Wait Out the 24 Months</div>
+<div class="step-card-desc">The clock starts with your <strong>last month of compulsory contributions</strong> — not your departure date and not your deregistration. Count 24 full calendar months from that last contribution month. Applying earlier achieves nothing; the DRV will reject it as premature.</div>
+<span class="step-card-tip">⚠ Warning: A new compulsorily insured job in Germany during the wait restarts the 24-month clock.</span>
+</div>
+</div>
+<div class="step-card">
+<div class="step-card-num">2</div>
+<div>
+<div class="step-card-title">Download Form V0901</div>
+<div class="step-card-desc">The application is form <strong>V0901 "Antrag auf Beitragserstattung"</strong>, available from deutsche-rentenversicherung.de. The form itself is bilingual (German/English), which helps — but be prepared: all later correspondence from the DRV will be in German.</div>
+</div>
+</div>
+<div class="step-card">
+<div class="step-card-num">3</div>
+<div>
+<div class="step-card-title">Gather Your Documents</div>
+<div class="step-card-desc">Assemble the documents in the checklist below. The item people most often have to hunt for is the pension insurance number (Sozialversicherungsnummer) — you will find it on old German payslips and on every pension statement the DRV ever sent you.</div>
+</div>
+</div>
+<div class="step-card">
+<div class="step-card-num">4</div>
+<div>
+<div class="step-card-title">Get Copies and Your Signature Certified</div>
+<div class="step-card-desc">The form requires certified copies and a certified signature. A German embassy or consulate can do this; depending on your country, a local notary with an apostille is the alternative route. Follow the certification instructions printed on the V0901 itself.</div>
+</div>
+</div>
+<div class="step-card">
+<div class="step-card-num">5</div>
+<div>
+<div class="step-card-title">Post the Application to Your DRV Office</div>
+<div class="step-card-desc">Send the complete package by post to the DRV office that handled your insurance — its address is printed on your pension statements. If you are unsure which office that is, applications sent to the DRV's central addresses are routed internally to the right place.</div>
+</div>
+</div>
+<div class="step-card">
+<div class="step-card-num">6</div>
+<div>
+<div class="step-card-title">Wait for the Decision and Payment</div>
+<div class="step-card-desc">The DRV may take up to about <strong>6 months</strong> to decide, and a transfer to a foreign account can add further time. Realistically, expect <strong>6 to 9 months end to end</strong> after the 24-month wait. There is no fee for applying yourself.</div>
+<span class="step-card-tip">💡 Tip: Commercial "refund agents" charge substantial fees for filing the same free form — the DIY route costs you nothing but postage.</span>
+</div>
+</div>
+</div>
+<div class="doc-checklist">
+<div class="doc-checklist-title">📋 Documents to Send With Form V0901</div>
+<div class="doc-item">
+<div class="doc-check checked"></div>
+<div>
+<div class="doc-name">Certified Copy of Your Passport</div>
+<div class="doc-desc">Certified as described in step 4 — a plain photocopy is not enough.</div>
+</div>
+<span class="doc-required">REQUIRED</span>
+</div>
+<div class="doc-item">
+<div class="doc-check checked"></div>
+<div>
+<div class="doc-name">Proof of Your Current Address Abroad</div>
+<div class="doc-desc">The DRV checks that you actually live outside Germany — a registration certificate or official letter showing your foreign address.</div>
+</div>
+<span class="doc-required">REQUIRED</span>
+</div>
+<div class="doc-item">
+<div class="doc-check checked"></div>
+<div>
+<div class="doc-name">German Pension Insurance Number (Sozialversicherungsnummer)</div>
+<div class="doc-desc">Printed on your old payslips and on every DRV pension statement (Renteninformation).</div>
+</div>
+<span class="doc-required">REQUIRED</span>
+</div>
+<div class="doc-item">
+<div class="doc-check checked"></div>
+<div>
+<div class="doc-name">Deregistration Certificate (Abmeldebescheinigung)</div>
+<div class="doc-desc">The certificate you received when you deregistered your German address — our <a href="/blog/anmeldung-germany">Anmeldung and Abmeldung guide</a> explains how deregistration works.</div>
+</div>
+<span class="doc-required">REQUIRED</span>
+</div>
+<div class="doc-item">
+<div class="doc-check checked"></div>
+<div>
+<div class="doc-name">Bank Details for the Payout</div>
+<div class="doc-desc">Your IBAN, or SWIFT/BIC details for an account outside the IBAN system. The refund can be paid abroad.</div>
+</div>
+<span class="doc-required">REQUIRED</span>
+</div>
+</div>
+<p>One tax note, because it is asked about constantly: how a refund payout is treated for tax depends on the rules of your <strong>new home country</strong>, not Germany's. Check the position locally before the money arrives — we cannot give you a reliable answer for every destination country, and neither can the DRV.</p>
+<h2>Frequently Asked Questions</h2>
+<ul class="faq-list" role="list" style="max-width:100%;">
+<li class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+        I have EU citizenship — can I get a refund?
+        <span class="faq-icon">+</span>
+</button>
+<div class="faq-a">
+        Almost certainly not while you are of working age. EU, EEA and Swiss citizens always have the right to pay voluntary contributions into the German pension system, and that right alone disqualifies you from a refund. The only exception comes at standard retirement age: if you reach it with fewer than 60 months of German contributions, a refund of your own share is possible then.
+      </div>
+</li>
+<li class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+        I worked in Germany for 6 years — can I still get a refund?
+        <span class="faq-icon">+</span>
+</button>
+<div class="faq-a">
+        It depends entirely on your nationality. If you are a non-EU national from a country without a social security agreement with Germany, yes — a refund is possible even beyond 60 months. If you come from an agreement country such as the USA, Canada, Japan, India, Turkey or Morocco, no: with 60 months or more you hold a German pension entitlement instead, and the DRV will pay that pension to you abroad at retirement age.
+      </div>
+</li>
+<li class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+        Does the 24-month waiting period run from the day I left Germany?
+        <span class="faq-icon">+</span>
+</button>
+<div class="faq-a">
+        No. The 24 months are counted from your last month of compulsory pension contributions — not from your departure, your deregistration or the end of your visa. Leaving Germany earlier does not start the clock any sooner, and if you take another compulsorily insured job in Germany during the wait, the 24 months start again from the new last contribution.
+      </div>
+</li>
+<li class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+        Can the refund be paid into my foreign bank account?
+        <span class="faq-icon">+</span>
+</button>
+<div class="faq-a">
+        Yes. The DRV can transfer the refund to an account abroad — give your IBAN on the form, or your SWIFT/BIC details if your bank is outside the IBAN system. International transfers can add some processing time on top of the decision period, so allow roughly 6 to 9 months in total after the 24-month wait.
+      </div>
+</li>
+<li class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+        I might return to Germany one day — should I take the refund?
+        <span class="faq-icon">+</span>
+</button>
+<div class="faq-a">
+        Probably not. A refund dissolves your entire German pension insurance relationship: every claim built on those contribution periods is extinguished, including credited periods such as child-raising years. If you return and work in Germany again, you start again from zero months. Keeping the entitlement costs you nothing and it remains payable worldwide at retirement age.
+      </div>
+</li>
+<li class="faq-item">
+<button aria-expanded="false" class="faq-q" onclick="toggleFaq(this)">
+        Is there a deadline to apply for the refund?
+        <span class="faq-icon">+</span>
+</button>
+<div class="faq-a">
+        No. Once the 24 months have passed, there is no application deadline and the claim does not expire — you can apply years later. The only cost of waiting is that the money sits idle: refunded contributions earn no interest while they wait, and the DRV pays out the nominal amount you contributed.
+      </div>
+</li>
+</ul>
+<section class="related-guides" style="margin:2.5rem auto;max-width:800px;padding:1.5rem 1.75rem;border:1px solid rgba(212,175,55,.25);border-radius:12px;background:rgba(255,255,255,.03);">
+<h2 style="margin:0 0 1rem;font-size:1.3rem;">Related guides</h2>
+<ul style="margin:0;padding-left:1.2rem;line-height:1.9;">
+<li><a href="/blog/deregister-ard-zdf-beitrag-as-expat-leaving-germany">Deregister ARD ZDF Beitrag When Leaving Germany</a></li>
+<li><a href="/blog/savings-etfs-and-pensions-essential-money-guide-for-young-expats-in-germany">Savings, ETFs &amp; Pensions: Money Guide for Young Expats</a></li>
+<li><a href="/blog/cost-trap-with-retirement-savings-accounts-in-germany-why-you-need-to-act-now">Retirement Savings Cost Traps in Germany</a></li>
+<li><a href="/blog/anmeldung-germany">Anmeldung in Germany: Registration &amp; Deregistration Guide</a></li>
+</ul>
+</section>
+</main>
+<footer class="global-footer">
+<div class="inner">
+<div class="footer-disclaimer"><strong>No Legal Advice</strong> — All information without warranty</div>
+<nav aria-label="Legal-Links" class="footer-legal-links">
+<a href="/about">About</a>
+<a href="/banking">Banking</a>
+<a href="/schufa-guide">SCHUFA Guide</a>
+<a href="/impressum">Impressum</a>
+<a href="/datenschutz">Privacy</a>
+<a href="/affiliate-hinweis">Affiliate Disclosure</a>
+<a href="#" onclick="openModal('cookie-settings');return false;">Cookie Settings</a>
+</nav>
+<p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
+</div>
+</footer>
+<div aria-live="polite" id="cookie-banner" role="dialog">
+<div class="cookie-banner-header">
+<div class="cookie-banner-icon">🍪</div>
+<div class="cookie-banner-body">
+<div class="cookie-banner-title">Your Privacy Settings</div>
+<div class="cookie-banner-text">We use cookies. <a href="/datenschutz">Privacy Policy</a></div>
+</div>
+</div>
+<div class="cookie-btns">
+<button class="cookie-accept" onclick="acceptCookies()">Accept All</button>
+<button class="cookie-decline" onclick="declineCookies()">Necessary Only</button>
+<button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
+</div>
+</div>
+<div aria-modal="true" class="modal-overlay" id="modal-cookie-settings" role="dialog">
+<div class="modal">
+<button class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
+<h2>Cookie Settings</h2>
+<div class="cookie-toggle-row">
+<div class="cookie-toggle-info"><strong>Technically Necessary</strong><span>Always active.</span></div>
+<label class="toggle-switch"><input checked="" disabled="" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="cookie-toggle-row">
+<div class="cookie-toggle-info"><strong>Analytics</strong></div>
+<label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="cookie-toggle-row">
+<div class="cookie-toggle-info"><strong>Affiliate Tracking</strong></div>
+<label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<button class="cookie-save-btn" onclick="saveGranularCookies()">Save Selection</button>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
