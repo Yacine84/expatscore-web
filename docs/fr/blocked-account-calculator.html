@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-16817T2VWQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-16817T2VWQ');
+</script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<title>Calculateur compte bloqué 2026 : combien bloquer ?</title>
+<meta content="Calculez le montant exact à bloquer pour l'Allemagne en 2026 : 992 €/mois pour les étudiants, 1 091 €/mois pour la Chancenkarte. Gratuit, instantané." name="description"/>
+
+<meta content="Yassine Chaikhi" name="author"/>
+<link href="https://expatscore.de/fr/blocked-account-calculator" rel="canonical"/>
+<link rel="alternate" hreflang="fr" href="https://expatscore.de/fr/blocked-account-calculator"/>
+<link rel="alternate" hreflang="en" href="https://expatscore.de/blocked-account-calculator"/>
+<link rel="alternate" hreflang="x-default" href="https://expatscore.de/blocked-account-calculator"/>
+<meta content="website" property="og:type"/>
+<meta content="Calculateur compte bloqué 2026 : combien bloquer ?" property="og:title"/>
+<meta content="https://expatscore.de/fr/blocked-account-calculator" property="og:url"/>
+<meta content="ExpatScore.de" property="og:site_name"/>
+<meta content="https://expatscore.de/og-image.jpg" property="og:image"/>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<meta content="#0a0e17" name="theme-color"/>
+<link href="/style.css" rel="stylesheet"/>
+<style>
+    /* ── Blocked Account Calculator ── */
+    .calculator-section {
+      background: var(--bg-secondary);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin: 2.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .calculator-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at bottom right, rgba(212,175,55,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .calc-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .calc-sub { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+
+    .calc-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+    @media (max-width: 600px) { .calc-inputs { grid-template-columns: 1fr; } }
+
+    .calc-input-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .calc-input-group input,
+    .calc-input-group select {
+      width: 100%;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      color: var(--text-primary);
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 600;
+      transition: border-color 0.2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .calc-input-group input:focus,
+    .calc-input-group select:focus { border-color: var(--gold-border); }
+
+    .calc-summary {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1.25rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+    .calc-summary strong { color: var(--gold); }
+
+    .calc-results {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .provider-result {
+      background: var(--bg-glass);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .provider-result:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-2px);
+    }
+    .provider-result.cheapest {
+      border-color: var(--emerald-border);
+      box-shadow: var(--shadow-emerald);
+    }
+    .provider-best-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--emerald), var(--emerald-dim));
+      color: #080c14;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.25rem 0.9rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .provider-name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .provider-breakdown { margin-bottom: 1rem; }
+    .cost-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.83rem;
+    }
+    .cost-line:last-child { border-bottom: none; }
+    .cost-line-label { color: var(--text-muted); }
+    .cost-line-value {
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .cost-line-value.negative { color: var(--emerald); }
+    .cost-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0 0;
+      border-top: 2px solid var(--border);
+      margin-top: 0.5rem;
+    }
+    .cost-total-label {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .cost-total-value {
+      font-family: var(--font-mono);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .provider-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .provider-features-list li {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      padding: 0.25rem 0 0.25rem 1.3rem;
+      position: relative;
+    }
+    .provider-features-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--emerald);
+      font-weight: 700;
+    }
+
+    /* Provider Comparison Table */
+    .provider-compare-wrap { overflow-x: auto; margin: 2rem 0; }
+    .provider-compare {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      min-width: 600px;
+    }
+    .provider-compare th {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .provider-compare th.highlight { color: var(--emerald); }
+    .provider-compare td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      vertical-align: middle;
+    }
+    .provider-compare tr:hover td { background: rgba(255,255,255,0.015); }
+    .pc-check { color: var(--emerald); font-weight: 700; font-size: 1rem; }
+    .pc-cross { color: #EF4444; font-weight: 700; }
+    .pc-best { color: var(--emerald); font-weight: 700; font-family: var(--font-mono); font-size: 0.8rem; }
+    .pc-val { font-family: var(--font-mono); font-weight: 600; color: var(--gold); }
+
+    /* Process Steps */
+    .process-steps {
+      counter-reset: step;
+      margin: 2rem 0;
+    }
+    .process-step {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .process-step:last-child { border-bottom: none; }
+    .ps-num {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--emerald-dim), var(--emerald));
+      color: #080c14;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .ps-content {}
+    .ps-title {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: var(--text-primary);
+    }
+    .ps-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+    .ps-timing {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--gold);
+      margin-top: 0.3rem;
+    }
+
+    /* Alert box */
+    .alert-warning {
+      background: rgba(251,191,36,0.06);
+      border: 1px solid rgba(251,191,36,0.2);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.87rem;
+    }
+    .alert-warning strong { color: #FBBF24; }
+  
+    /* ── Amount calculator result cards ── */
+    .ba-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+    }
+    .ba-card .ba-label {
+      font-size: .82rem; font-weight: 600; color: var(--text-secondary);
+      text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem;
+    }
+    .ba-card .ba-value {
+      font-family: var(--font-mono); font-size: 1.7rem; font-weight: 700; color: var(--gold);
+    }
+    .ba-card .ba-note { font-size: .85rem; color: var(--text-muted); margin-top: .35rem; }
+    .ba-card.ba-hero .ba-value { color: var(--emerald); }
+    .alert-warning {
+      background: rgba(212,175,55,.08); border: 1px solid var(--gold-border);
+      border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin: 1.5rem 0;
+    }
+    .ba-faq h3 { font-size: 1.05rem; margin: 1.4rem 0 .35rem; }
+    .ba-faq p { margin: 0 0 .5rem; }
+    .ba-capture iframe { width: 100%; max-width: 480px; height: 320px; border: 1px solid var(--border-subtle); background: #fff; border-radius: var(--radius-sm); }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculateur compte bloqué 2026","url":"https://expatscore.de/fr/blocked-account-calculator","description":"Calculez le montant exact à bloquer pour l'Allemagne en 2026 selon le type de visa et la durée du séjour.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Combien faut-il bloquer pour un visa étudiant ?",
+     "acceptedAnswer": {"@type": "Answer", "text": "992 € par mois, soit 11 904 € pour un séjour de 12 mois. Ce montant est en vigueur depuis janvier 2025 et reste inchangé pour 2026."}},
+    {"@type": "Question", "name": "Combien faut-il bloquer pour la Chancenkarte ?",
+     "acceptedAnswer": {"@type": "Answer", "text": "1 091 € par mois, soit jusqu'à 13 092 € pour 12 mois. C'est le taux étudiant de 992 € majoré de 10 %."}},
+    {"@type": "Question", "name": "Faut-il un compte bloqué pour la Carte bleue européenne ?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Non. Les titulaires de la Carte bleue et les travailleurs qualifiés prouvent leurs moyens financiers par leur contrat de travail et leur offre de salaire."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<header class="global-header">
+<div class="header-inner">
+<div class="logo"><a href="/">ExpatScore.de</a></div>
+<button aria-label="Ouvrir la navigation" class="nav-toggle" id="navToggle">☰</button>
+<nav class="nav-links" id="navLinks">
+<a href="/">Accueil</a>
+<a href="/banking">Banque</a>
+<a href="/schufa-simulator">Outil SCHUFA</a>
+<a href="/fr/schufa-guide">Guide SCHUFA</a>
+<a href="/insurance">Assurance</a>
+<a href="/about">À propos</a>
+</nav>
+</div>
+</header>
+<nav aria-label="Fil d'Ariane" class="breadcrumbs">
+<a href="/">Accueil</a> › <a href="/banking">Banque</a> › <span class="current">Calculateur compte bloqué</span>
+</nav>
+<section class="hero-article">
+<div class="hero-inner">
+<span class="hero-eyebrow">Outils · Compte bloqué · 2026</span>
+<h1>Calculateur compte bloqué 2026</h1>
+<p class="hero-sub">Combien faut-il bloquer pour l'Allemagne en 2026 ? Choisissez votre visa et la durée de votre séjour : le montant officiel exact, instantanément. Gratuit, sans inscription.</p>
+<p style="font-size:.8rem;color:var(--text-muted);">✓ Dernière vérification : novembre 2026 — montants vérifiés auprès de l'Office fédéral des Affaires étrangères et de Make it in Germany.</p>
+</div>
+</section>
+<main class="article-body" style="max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;">
+<div class="calculator-section" id="ba-calculator">
+<div class="calc-title">💰 Calculateur du montant à bloquer</div>
+<p class="calc-sub">Le montant exigé dépend de votre type de visa. Les étudiants paient le taux de base ; la Chancenkarte, les cours de langue, la recherche de place d'études et les procédures de reconnaissance paient le taux de base + 10 %.</p>
+<div class="calc-inputs">
+<div class="calc-input-group">
+<label for="ba-visa">Type de visa</label>
+<select id="ba-visa">
+<option value="student">Visa étudiant (§16b) — 992 €/mois</option>
+<option value="chancenkarte">Chancenkarte / carte d'opportunité (§20a) — 1 091 €/mois</option>
+<option value="language">Cours de langue — 1 091 €/mois</option>
+<option value="studysearch">Recherche de place d'études — 1 091 €/mois</option>
+<option value="recognition">Reconnaissance des qualifications — 1 091 €/mois</option>
+<option value="bluecard">Carte bleue / travailleur qualifié — pas de compte bloqué</option>
+</select>
+</div>
+<div class="calc-input-group">
+<label for="ba-months">Durée (mois)</label>
+<input id="ba-months" max="24" min="1" step="1" type="number" value="12"/>
+</div>
+</div>
+<div class="calc-summary" id="ba-summary"></div>
+<div class="calc-results" id="ba-results"></div>
+<div id="ba-bluecard" hidden="">
+<p><strong>Pas de compte bloqué nécessaire.</strong> Les titulaires de la Carte bleue européenne et les travailleurs qualifiés prouvent leurs moyens financiers par leur contrat de travail et leur offre de salaire, et non par un compte bloqué. Vérifiez les seuils de salaire dans notre <a href="/blue-card-tool">outil Carte bleue</a>.</p>
+</div>
+</div>
+<script>
+(function() {
+  var RATES = { student: 992, chancenkarte: 1091, language: 1091, studysearch: 1091, recognition: 1091, bluecard: 0 };
+  var LABELS = { student: 'Visa étudiant (§16b)', chancenkarte: 'Chancenkarte (§20a)', language: 'Cours de langue', studysearch: 'Recherche de place d\'études', recognition: 'Reconnaissance des qualifications' };
+  function fmt(n) { return n.toLocaleString('fr-FR') + ' €'; }
+  function calc() {
+    var visa = document.getElementById('ba-visa').value;
+    var monthsEl = document.getElementById('ba-months');
+    var months = parseInt(monthsEl.value, 10);
+    if (!months || months < 1) months = 1;
+    if (months > 24) months = 24;
+    monthsEl.value = months;
+    var rate = RATES[visa];
+    var results = document.getElementById('ba-results');
+    var summary = document.getElementById('ba-summary');
+    var bc = document.getElementById('ba-bluecard');
+    if (rate === 0) {
+      summary.innerHTML = 'Carte bleue / travailleur qualifié — aucun compte bloqué requis.';
+      results.innerHTML = '';
+      bc.hidden = false;
+      return;
+    }
+    bc.hidden = true;
+    var total = rate * months;
+    summary.innerHTML = '<strong>' + LABELS[visa] + '</strong> · ' + months + ' mois · ' + fmt(rate) + '/mois.';
+    results.innerHTML =
+      '<div class="ba-card ba-hero"><div class="ba-label">Total à bloquer</div><div class="ba-value">' + fmt(total) + '</div><div class="ba-note">Déposez ce montant avant votre rendez-vous au consulat.</div></div>' +
+      '<div class="ba-card"><div class="ba-label">Par mois</div><div class="ba-value">' + fmt(rate) + '</div><div class="ba-note">Le taux mensuel officiel 2026 pour ce visa.</div></div>' +
+      '<div class="ba-card"><div class="ba-label">Versement mensuel en Allemagne</div><div class="ba-value">' + fmt(rate) + '</div><div class="ba-note">Versé chaque mois sur votre Girokonto allemand après votre arrivée.</div></div>';
+  }
+  document.getElementById('ba-visa').addEventListener('change', calc);
+  document.getElementById('ba-months').addEventListener('input', calc);
+  calc();
+})();
+</script>
+<div class="alert-warning">
+<strong>⚠ Montant obsolète — 934 €/mois :</strong> L'ancien montant de 934 € par mois (11 208 € par an) a expiré à l'automne 2024. Beaucoup de sites et d'anciennes checklists l'affichent encore, mais les consulats allemands rejettent les confirmations de blocage basées sur l'ancien montant. Calculez toujours avec 992 € (étudiants) ou 1 091 € (Chancenkarte et autres catégories).
+</div>
+<p><strong>Transférez 100 à 200 € de plus que le minimum.</strong> Les virements internationaux perdent de l'argent en route : frais bancaires intermédiaires et conversion de devises font que le montant qui arrive réellement sur votre compte bloqué peut être légèrement inférieur à ce que vous avez envoyé. S'il manque ne serait-ce que quelques euros, le prestataire ne peut pas délivrer votre confirmation de blocage (Sperrbestätigung) avant un complément — et ce retard peut vous coûter votre rendez-vous au consulat. Le surplus n'est pas perdu : il reste sur votre compte et vous est versé en Allemagne.</p>
+<h2>Pourquoi deux montants différents ?</h2>
+<p>Il n'existe pas un seul montant de compte bloqué pour l'Allemagne. L'Office fédéral des Affaires étrangères fixe la somme exigée par catégorie de visa, sur la base du taux BAföG — et il y a <strong>deux montants différents</strong>. Les étudiants paient le taux de base ; la plupart des autres demandeurs doivent montrer le taux de base <strong>majoré de 10 %</strong> :</p>
+<table>
+<thead><tr><th>Catégorie de visa</th><th>Par mois</th><th>12 mois</th></tr></thead>
+<tbody>
+<tr><td>Visa étudiant (§16b)</td><td>992 €</td><td>11 904 €</td></tr>
+<tr><td>Chancenkarte / carte d'opportunité (§20a) — chercheurs d'emploi</td><td>1 091 €</td><td>13 092 €</td></tr>
+<tr><td>Cours de langue, reconnaissance des qualifications et recherche de place d'études</td><td>1 091 €</td><td>13 092 €</td></tr>
+</tbody>
+</table>
+<p>Si votre visa est valable moins de 12 mois, le total est proportionnel au nombre de mois — par exemple 5 952 € pour un séjour étudiant de 6 mois (992 € × 6) ou 6 546 € pour 6 mois avec la Chancenkarte (1 091 € × 6).</p>
+<div class="ba-faq">
+<h2>Questions fréquentes</h2>
+<h3>Combien faut-il bloquer pour un visa étudiant ?</h3>
+<p>992 € par mois, soit 11 904 € pour un séjour de 12 mois. Ce montant est en vigueur depuis janvier 2025 et reste inchangé pour 2026.</p>
+<h3>Combien faut-il bloquer pour la Chancenkarte ?</h3>
+<p>1 091 € par mois, soit jusqu'à 13 092 € pour 12 mois. C'est le taux étudiant de 992 € majoré de 10 % : les chercheurs d'emploi doivent donc bloquer 1 188 € de plus que les étudiants pour une année complète.</p>
+<h3>Faut-il un compte bloqué pour la Carte bleue européenne ?</h3>
+<p>Non. Les titulaires de la Carte bleue et les travailleurs qualifiés prouvent leurs moyens financiers par leur contrat de travail et leur offre de salaire. Voir les seuils de salaire dans notre <a href="/blue-card-tool">outil Carte bleue</a>.</p>
+</div>
+<div class="calculator-section ba-capture" id="ba-capture">
+<div class="calc-title">📧 Recevez votre résultat + la checklist des 30 premiers jours par e-mail</div>
+<p class="calc-sub">Newsletter gratuite. Nous vous envoyons votre résultat et la checklist Anmeldung → Steuer-ID → compte bancaire → assurance maladie. Double opt-in : vous confirmez d'abord votre e-mail. Désinscription à tout moment — nous ne partageons jamais votre e-mail. La newsletter est en anglais.</p>
+<iframe src="https://expatscore.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+</div>
+<p>Pour une vue complète, lisez le <a href="/fr/blog/compte-bloque-allemagne">guide du compte bloqué 2026</a> — Expatrio contre Fintiba, procédure étape par étape et alternatives à Expatrio. English version: <a href="/blocked-account-calculator">blocked account calculator</a> and <a href="/blog/blocked-account-germany">blocked account guide</a>.</p>
+</main>
+<footer class="global-footer">
+<div class="inner">
+<div class="footer-disclaimer"><strong>Aucun conseil financier</strong> — Toutes les informations sans garantie</div>
+<nav aria-label="Liens juridiques" class="footer-legal-links">
+<a href="/about">À propos</a>
+<a href="/banking">Banque</a>
+<a href="/fr/schufa-guide">Guide SCHUFA</a>
+<a href="/impressum">Mentions légales</a>
+<a href="/datenschutz">Confidentialité</a>
+<a href="/affiliate-hinweis">Divulgation des affiliations</a>
+<a href="#" onclick="openModal('cookie-settings');return false;">Paramètres des cookies</a>
+</nav>
+<p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
+</div>
+</footer>
+
+<div aria-live="polite" id="cookie-banner" role="dialog">
+<div class="cookie-banner-header">
+<div class="cookie-banner-icon">🍪</div>
+<div class="cookie-banner-body">
+<div class="cookie-banner-title">Vos paramètres de confidentialité</div>
+<div class="cookie-banner-text">Nous utilisons des cookies pour les fonctions techniques et — avec votre consentement — pour les analyses. <a href="/datenschutz">Politique de confidentialité</a></div>
+</div>
+</div>
+<div class="cookie-btns">
+<button class="cookie-accept" onclick="acceptCookies()">Tout accepter</button>
+<button class="cookie-decline" onclick="declineCookies()">Nécessaires uniquement</button>
+<button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Paramètres</button>
+</div>
+</div>
+<div aria-modal="true" class="modal-overlay" id="modal-cookie-settings" role="dialog">
+<div class="modal">
+<button class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
+<h2>Paramètres des cookies</h2>
+<div class="cookie-toggle-row">
+<div class="cookie-toggle-info"><strong>Techniquement nécessaires</strong><span>Toujours actifs.</span></div>
+<label class="toggle-switch"><input checked="" disabled="" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="cookie-toggle-row">
+<div class="cookie-toggle-info"><strong>Analyses et statistiques</strong></div>
+<label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="cookie-toggle-row">
+<div class="cookie-toggle-info"><strong>Suivi des affiliations</strong></div>
+<label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<button class="cookie-save-btn" onclick="saveGranularCookies()">Enregistrer la sélection</button>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
