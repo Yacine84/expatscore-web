@@ -9,70 +9,70 @@
 /* ============================================================
    QUESTION DATA
    ============================================================ */
-const QUESTIONS = [
+var QUESTIONS = [
   {
     id: 'duration',
-    text: 'Wie lange lebst du bereits in Deutschland?',
-    hint: 'Die Aufenthaltsdauer ist einer der wichtigsten SCHUFA-Faktoren. Je länger du hier lebst, desto mehr Daten hat die SCHUFA über dich — auch wenn diese ausnahmslos positiv sind.',
+    text: 'How long have you been living in Germany?',
+    hint: 'Length of residency is one of the most important SCHUFA factors. The longer you\'ve lived here, the more data SCHUFA has on you — even if that data is all positive.',
     options: [
-      { label: 'Gerade angekommen (unter 3 Monate)', sub: 'Noch keine SCHUFA-Daten vorhanden',        badge: null,      score: 0,   key: 'new'  },
-      { label: '3 bis 12 Monate',                   sub: 'Frühphase — History-Aufbau beginnt',       badge: 'building',score: 60,  key: 'mid'  },
-      { label: '1 bis 3 Jahre',                     sub: 'Etabliert — solide Datenspur',             badge: null,      score: 130, key: 'est'  },
-      { label: 'Mehr als 3 Jahre',                  sub: 'Langfristig — starkes Historienpotenzial', badge: 'best',    score: 200, key: 'long' }
+      { label: 'I just arrived (under 3 months)',      sub: 'No SCHUFA data exists yet',             badge: null,      score: 0,   key: 'new' },
+      { label: '3 to 12 months',                        sub: 'Early stage — building history',        badge: 'building',score: 60,  key: 'mid' },
+      { label: '1 to 3 years',                          sub: 'Established — solid data trail',        badge: null,      score: 130, key: 'est' },
+      { label: 'More than 3 years',                     sub: 'Long-term — strong history potential',  badge: 'best',    score: 200, key: 'long' }
     ]
   },
   {
     id: 'employment',
-    text: 'Was ist dein aktueller Beschäftigungsstatus in Deutschland?',
-    hint: 'Beschäftigungsstabilität signalisiert finanzielle Zuverlässigkeit. Banken und SCHUFA gewichten dies stark — ein unbefristeter Vertrag ist der Goldstandard.',
+    text: 'What is your current employment status in Germany?',
+    hint: 'Employment stability signals financial reliability. Banks and SCHUFA both weight this heavily — a permanent contract is the gold standard.',
     options: [
-      { label: 'Vollzeitbeschäftigt (unbefristeter Vertrag)', sub: 'Stärkstes Beschäftigungssignal',      badge: 'best', score: 120, key: 'employed'  },
-      { label: 'Selbständig oder Freiberufler',               sub: 'Variables Einkommen — handhabbar',    badge: null,   score: 75,  key: 'freelance' },
-      { label: 'Student (immatrikuliert)',                    sub: 'Gültiger Aufenthaltszweck',           badge: null,   score: 55,  key: 'student'   },
-      { label: 'Aktuell auf Jobsuche',                       sub: 'Vorübergehend — blockiert keine Konten', badge: null, score: 25,  key: 'seeking'   }
+      { label: 'Full-time employed (permanent contract)', sub: 'Strongest employment signal',          badge: 'best',  score: 120, key: 'employed' },
+      { label: 'Self-employed or freelancer',             sub: 'Variable income — manageable',         badge: null,    score: 75,  key: 'freelance' },
+      { label: 'Student (enrolled at university)',        sub: 'Valid residency purpose',              badge: null,    score: 55,  key: 'student' },
+      { label: 'Currently job-seeking',                  sub: 'Temporary — does not block accounts',  badge: null,    score: 25,  key: 'seeking' }
     ]
   },
   {
     id: 'anmeldung',
-    text: 'Bist du offiziell an einer deutschen Adresse gemeldet? (Anmeldung)',
-    hint: 'Die Anmeldung ist deine offizielle Adressregistrierung beim Bürgeramt. Gesetzlich innerhalb von 14 Tagen nach Einzug erforderlich — nahezu alle deutschen Banken verlangen sie.',
+    text: 'Are you officially registered at a German address? (Anmeldung)',
+    hint: 'Anmeldung is your official address registration at your local Bürgeramt. It is legally required within 2 weeks of moving in, and virtually all German banks require it to open an account.',
     options: [
-      { label: 'Ja — vollständig angemeldet',          sub: 'Von allen deutschen Banken gefordert',    badge: 'best', score: 80, key: 'yes'     },
-      { label: 'In Bearbeitung — Termin vorhanden',    sub: 'Manche Banken akzeptieren dies temporär', badge: null,   score: 30, key: 'process' },
-      { label: 'Noch nicht registriert',               sub: 'Dringend nachholen',                      badge: 'risk', score: 0,  key: 'no'      }
+      { label: 'Yes — fully registered (Angemeldet)',      sub: 'Required by all major German banks',   badge: 'best',  score: 80,  key: 'yes' },
+      { label: 'In progress — I have an appointment',      sub: 'Some banks accept this temporarily',   badge: null,    score: 30,  key: 'process' },
+      { label: 'Not yet — I haven\'t registered',          sub: 'You need this urgently',               badge: 'risk',  score: 0,   key: 'no' }
     ]
   },
   {
     id: 'accounts',
-    text: 'Hast du derzeit deutsche Bankkonten?',
-    hint: 'Ein aktives deutsches Bankkonto ist der schnellste Weg, SCHUFA-History aufzubauen. Selbst ein kostenloser N26-Account zählt — jeder offene Monat ist ein Monat positiver Historie.',
+    text: 'Do you currently have any German bank accounts?',
+    hint: 'Having an active German bank account is the single fastest way to build SCHUFA history. Even a free N26 or Vivid account counts — every month it\'s open is a month of positive history.',
     options: [
-      { label: 'Keine deutschen Bankkonten',               sub: 'SCHUFA hat keinerlei Banking-Daten zu dir', badge: null,   score: 0,   key: 'none'    },
-      { label: 'Ein Konto, kürzlich eröffnet (< 1 Jahr)', sub: 'Aufbau hat begonnen',                       badge: null,   score: 60,  key: 'one_new' },
-      { label: 'Ein Konto, über 12 Monate alt',           sub: 'Solide Banking-History im Aufbau',          badge: null,   score: 100, key: 'one_old' },
-      { label: 'Zwei oder mehr deutsche Konten',          sub: 'Starker Banking-Fußabdruck',                badge: 'best', score: 130, key: 'multi'   }
+      { label: 'No German bank accounts at all',            sub: 'SCHUFA has zero banking data on you', badge: null,   score: 0,   key: 'none' },
+      { label: 'One account, opened recently (< 1 year)',   sub: 'Just starting to build history',      badge: null,   score: 60,  key: 'one_new' },
+      { label: 'One account, over 12 months old',           sub: 'Solid banking history building',      badge: null,   score: 100, key: 'one_old' },
+      { label: 'Two or more German accounts',               sub: 'Strong banking footprint',            badge: 'best', score: 130, key: 'multi' }
     ]
   },
   {
     id: 'payments',
-    text: 'Hast du in Deutschland jemals eine Zahlung versäumt?',
-    hint: 'Versäumte Zahlungen — Miete, Strom, Handyvertrag, Streaming-Abos — sind die häufigste Ursache für SCHUFA-Schäden. Ein ungelöster Eintrag kann deinen Score bis zu 3 Jahre erheblich belasten.',
+    text: 'Have you ever missed a payment in Germany?',
+    hint: 'Missed payments — rent, utilities, phone contracts, streaming subscriptions — are the #1 cause of SCHUFA damage. Even one unresolved missed payment can reduce your score significantly for up to 3 years.',
     options: [
-      { label: 'Nie — alle Zahlungen pünktlich',          sub: 'Ideales Zahlungsverhalten',              badge: 'best', score: 120, key: 'perfect' },
-      { label: 'Einmal oder zweimal — aber nachgezahlt',  sub: 'Geringer Einfluss, wenn schnell geklärt', badge: null,   score: 40,  key: 'minor'   },
-      { label: 'Ja — und noch ungelöst',                  sub: 'Erhebliche negative Auswirkung',          badge: 'risk', score: -80, key: 'bad'     },
-      { label: 'Nicht zutreffend — zu neu hier',          sub: 'Noch keine Zahlungshistorie',             badge: null,   score: 50,  key: 'na'      }
+      { label: 'Never — all payments on time',              sub: 'Ideal payment behaviour',             badge: 'best',  score: 120, key: 'perfect' },
+      { label: 'Once or twice — but I paid eventually',     sub: 'Minor impact if resolved quickly',    badge: null,    score: 40,  key: 'minor' },
+      { label: 'Yes — and it is still unresolved',          sub: 'Significant negative impact',         badge: 'risk',  score: -80, key: 'bad' },
+      { label: 'Not applicable — I\'m too new here',        sub: 'No payment history yet',              badge: null,    score: 50,  key: 'na' }
     ]
   },
   {
     id: 'credit',
-    text: 'Wie sieht deine Kreditgeschichte in Deutschland aus?',
-    hint: 'Verantwortungsvoll verwalteter Kredit — eine monatlich vollständig bezahlte Kreditkarte oder ein Ratenkredit — verbessert deinen SCHUFA-Score aktiv. Kein Kredit ist neutral, nicht positiv.',
+    text: 'What is your credit history in Germany?',
+    hint: 'Responsibly managed credit — a credit card paid off monthly, or an installment loan — actively improves your SCHUFA score over time. No credit at all is neutral, not positive.',
     options: [
-      { label: 'Kein Kredit — komplett neu',                   sub: 'Neutraler Ausgangspunkt',          badge: null,   score: 30,  key: 'none'      },
-      { label: 'Kreditkarte — immer pünktlich bezahlt',        sub: 'Exzellentes positives Signal',     badge: 'best', score: 110, key: 'cc_good'   },
-      { label: 'Ratenkredit — immer pünktlich bezahlt',        sub: 'Starkes positives Signal',         badge: 'best', score: 120, key: 'loan_good' },
-      { label: 'Kredit vorhanden — aber einige Verzögerungen', sub: 'Negativer Einfluss auf Score',     badge: 'risk', score: -20, key: 'late'      }
+      { label: 'No credit at all — completely new',         sub: 'Neutral starting point',             badge: null,    score: 30,  key: 'none' },
+      { label: 'Credit card — always paid on time',         sub: 'Excellent positive signal',          badge: 'best',  score: 110, key: 'cc_good' },
+      { label: 'Instalment loan — always paid on time',     sub: 'Strong positive signal',             badge: 'best',  score: 120, key: 'loan_good' },
+      { label: 'Have credit — but some late payments',      sub: 'Negative impact on score',           badge: 'risk',  score: -20, key: 'late' }
     ]
   }
 ];
@@ -80,104 +80,112 @@ const QUESTIONS = [
 /* ============================================================
    BANK DATABASE
    ============================================================ */
-const BANKS = {
+var BANKS = {
   n26: {
     name: 'N26 Standard',
-    tagline: 'Deutschlands expat-freundlichste Digitalbank',
-    url: 'https://n26.com/r/expatscore',
-    cta: 'N26 kostenlos eröffnen',
+    tagline: 'Germany\'s most expat-friendly digital bank',
+    url: 'https://n26.com/r/expatscore', /* Replace with real affiliate link */
+    cta: 'Open N26 free',
     ctaStyle: 'teal-cta',
-    fee: 'Kostenlos',
-    time: '8 Min Setup',
-    schufa: 'Kein SCHUFA-Check',
-    features: ['Kein SCHUFA-Check', 'VideoIdent — komplett online', 'Englische App', 'Kostenlose Mastercard', 'Sofortige Kontonummer']
+    fee: 'Free forever',
+    time: '8 min setup',
+    schufa: 'No SCHUFA check',
+    features: ['No SCHUFA required', 'VideoIdent — fully online', 'English app interface', 'Free Mastercard', 'Instant account number'],
+    why: 'The go-to first account for expats. Opens fully online with just your passport and a 5-minute video call — no German address required to apply.'
   },
   vivid: {
     name: 'Vivid Money',
-    tagline: 'Mehrwährungs-Konto für internationale Fachkräfte',
+    tagline: 'Multi-currency account for international professionals',
     url: '#vivid-affiliate',
-    cta: 'Vivid kostenlos eröffnen',
+    cta: 'Open Vivid free',
     ctaStyle: '',
-    fee: 'Kostenloser Tarif',
-    time: '10 Min Setup',
-    schufa: 'Kein SCHUFA-Check',
-    features: ['Kein SCHUFA-Check', 'Mehrwährungs-Pockets', 'Cashback auf Einkäufe', 'Englischer Support', 'EU + Nicht-EU akzeptiert']
+    fee: 'Free plan available',
+    time: '10 min setup',
+    schufa: 'No SCHUFA check',
+    features: ['No SCHUFA check', 'Multi-currency pockets', 'Cashback on purchases', 'English support', 'EU + non-EU accepted'],
+    why: 'Excellent as a second account for multi-currency management, cashback, and salary deposits from international employers.'
   },
   bunq: {
     name: 'Bunq',
-    tagline: 'International-first Bank für mobile Menschen',
+    tagline: 'International-first bank built for people who move',
     url: '#bunq-affiliate',
-    cta: 'Bunq kostenlos testen',
+    cta: 'Try Bunq free',
     ctaStyle: '',
-    fee: '3 Monate gratis',
-    time: '5 Min Setup',
-    schufa: 'Kein SCHUFA erforderlich',
-    features: ['Kein SCHUFA-Check', '100% online Eröffnung', 'Keine Anmeldung für Antrag', 'EU-Einlagensicherung', 'Mehrsprachige App']
+    fee: '3 months free trial',
+    time: '5 min setup',
+    schufa: 'No SCHUFA required',
+    features: ['No SCHUFA check', '100% online opening', 'No Anmeldung needed to apply', 'Dutch bank — EU deposit protection', 'Multi-language app'],
+    why: 'Dutch bank with a 3-month free trial. Ideal for those not yet registered in Germany — no Anmeldung required to open the account.'
   },
   dkb: {
-    name: 'DKB',
-    tagline: 'Deutschlands vertrauenswürdigste Onlinebank für etablierte Expats',
+    name: 'DKB — Deutsche Kreditbank',
+    tagline: 'Germany\'s most trusted online bank for settled expats',
     url: '#dkb-affiliate',
-    cta: 'DKB beantragen',
+    cta: 'Apply for DKB',
     ctaStyle: 'teal-cta',
-    fee: 'Kostenlos (Bedingungen)',
-    time: '3–5 Tage',
-    schufa: 'Soft SCHUFA-Prüfung',
-    features: ['Kostenlos ab €700/Monat', 'VISA weltweit akzeptiert', 'Exzellenter Service', 'Deutsche IBAN sofort', 'VideoIdent oder PostIdent']
+    fee: 'Free with conditions',
+    time: '3–5 day approval',
+    schufa: 'Soft SCHUFA check',
+    features: ['Free with €700+/mo income', 'VISA card accepted worldwide', 'Excellent customer service', 'German IBAN instantly', 'PostIdent or VideoIdent'],
+    why: 'The expat community\'s favourite bank for a reason. Accepts newcomers with basic history and provides the most reliable full-service German banking experience.'
   },
   c24: {
     name: 'C24 Bank',
-    tagline: 'Neue Generation — toleranter als traditionelle deutsche Banken',
+    tagline: 'New generation German bank — more lenient than traditional options',
     url: '#c24-affiliate',
-    cta: 'C24 Konto eröffnen',
+    cta: 'Open C24 account',
     ctaStyle: '',
-    fee: 'Kostenloses Basiskonto',
-    time: 'Tageszulassung',
-    schufa: 'Basis SCHUFA-Prüfung',
-    features: ['Tolerante SCHUFA-Anforderungen', 'Vollständig digital', 'Englische Oberfläche', 'Deutsche IBAN sofort', 'Kostenlose Visa-Debitkarte']
+    fee: 'Free basic account',
+    time: 'Same-day approval',
+    schufa: 'Basic SCHUFA check',
+    features: ['Lenient SCHUFA requirements', 'Fully digital onboarding', 'English interface available', 'German IBAN issued instantly', 'Free Visa debit card'],
+    why: 'Launched 2023 — C24 has the most flexible SCHUFA requirements of any regulated German bank. Strong choice for those with 3–12 months of history.'
   },
   ing: {
-    name: 'ING Deutschland',
-    tagline: 'Top-bewertetes kostenloses deutsches Konto — für etablierte Expats',
+    name: 'ING Germany',
+    tagline: 'Top-rated free German current account — best for established expats',
     url: '#ing-affiliate',
-    cta: 'ING beantragen',
+    cta: 'Apply for ING',
     ctaStyle: 'teal-cta',
-    fee: 'Kostenlos für immer',
-    time: '3–7 Tage',
-    schufa: 'Vollständige SCHUFA-Prüfung',
-    features: ['Nie monatliche Gebühren', 'Höchste Kundenzufriedenheit', '€1.500/Monat Einkommensanf.', 'Sofortiger Kreditkarten-Upgrade', 'Vollständiges Banking-Paket']
+    fee: 'Free forever',
+    time: '3–7 day approval',
+    schufa: 'Full SCHUFA check',
+    features: ['No monthly fee ever', 'Highest German customer satisfaction', '€1,500/mo income requirement', 'Instant credit card upgrade path', 'Full German banking suite'],
+    why: 'The gold standard. Germany\'s highest-rated bank by customer satisfaction — unlocked once you\'ve built solid SCHUFA history. Worth the wait.'
   },
   comdirect: {
     name: 'Comdirect',
-    tagline: 'Vollservice-Bank für Expats beim langfristigen Vermögensaufbau',
+    tagline: 'Full-service bank for expats building long-term wealth in Germany',
     url: '#comdirect-affiliate',
-    cta: 'Comdirect eröffnen',
+    cta: 'Open Comdirect',
     ctaStyle: '',
-    fee: 'Kostenlos mit Aktivität',
-    time: '5–7 Tage',
-    schufa: 'Vollständige SCHUFA-Prüfung',
-    features: ['Kostenlos mit 2 Transaktionen/Mo.', 'Spar- und ETF-Integration', 'SCHUFA-aufbauend', 'Visa und Mastercard', 'Starke Mobile-App']
+    fee: 'Free with activity',
+    time: '5–7 day approval',
+    schufa: 'Full SCHUFA check',
+    features: ['Free with 2 transactions/month', 'Savings and ETF integration', 'SCHUFA-building account type', 'Visa and Mastercard', 'Strong mobile banking app'],
+    why: 'The ideal companion account for savings and ETF investing. Comdirect pairs perfectly with ING for expats building long-term financial life in Germany.'
   },
   commerzbank: {
     name: 'Commerzbank',
-    tagline: 'Zweitgrößte deutsche Bank — vollständiger Premium-Service',
+    tagline: 'Germany\'s second-largest bank — full premium service',
     url: '#commerzbank-affiliate',
-    cta: 'Commerzbank eröffnen',
+    cta: 'Open Commerzbank',
     ctaStyle: 'teal-cta',
-    fee: '€9,90/Mo (oder gratis)',
-    time: '2–5 Tage',
-    schufa: 'Vollständige SCHUFA-Prüfung',
-    features: ['Bundesweites Filialnetz', 'Premium-Kreditkarten', 'Hypothekenzugang', 'Geschäftskonto verfügbar', 'Vollständiges Banking-Paket']
+    fee: '€9.90/mo (or free)',
+    time: '2–5 day approval',
+    schufa: 'Full SCHUFA check',
+    features: ['Nationwide branch network', 'Premium credit card options', 'Excellent mortgage access', 'Business account available', 'Full banking suite'],
+    why: 'For expats with excellent SCHUFA who want a traditional German bank with branches, face-to-face service, and access to mortgages and premium credit.'
   }
 };
 
 /* ============================================================
    STATE
    ============================================================ */
-let currentStep = 0;
-let answers = {};
-let selectedOptionIndex = -1;
-let scoreResult = null;
+var currentStep = 0;
+var answers = {};
+var selectedOptionIndex = -1;
+var scoreResult = null;
 
 /* ============================================================
    PROGRESS BAR (page scroll)
@@ -365,7 +373,7 @@ function updateStepTracker(step) {
     }
   });
   const sl = document.getElementById('stepLabel');
-  if (sl) sl.textContent = `Schritt ${step + 1} von ${QUESTIONS.length}`;
+  if (sl) sl.textContent = `Step ${step + 1} of ${QUESTIONS.length}`;
   const f = document.getElementById('simProgressFill');
   if (f) f.style.width = `${((step + 1) / QUESTIONS.length * 100).toFixed(1)}%`;
 }
@@ -457,7 +465,7 @@ function selectOption(idx) {
 function updateNextBtn() {
   const btn = document.getElementById('nextBtn');
   if (!btn) return;
-  btn.textContent = currentStep === QUESTIONS.length - 1 ? 'SCHUFA-Score berechnen ★' : 'Weiter →';
+  btn.textContent = currentStep === QUESTIONS.length - 1 ? 'Calculate my SCHUFA score ★' : 'Continue →';
   btn.classList.toggle('enabled', selectedOptionIndex >= 0);
 }
 
@@ -565,42 +573,11 @@ function computeScore() {
 }
 
 function getScoreProfile(n) {
-  if (n >= 880) return {
-    level: 'Exzellent',
-    color: '#50C878',
-    desc: 'Dein SCHUFA-Profil ist in der Spitzenklasse. Deutsche Banken werden aktiv um dein Geschäft konkurrieren. Du qualifizierst dich für Kredit, Hypotheken und Premium-Konten.',
-    pills: ['Top 5% in Deutschland', 'Alle Konten verfügbar', 'Hypotheken-berechtigt']
-  };
-  if (n >= 720) return {
-    level: 'Sehr Gut',
-    color: '#7DDFAA',
-    desc: 'Starkes SCHUFA-Profil. Du qualifizierst dich für nahezu alle deutschen Bankkonten, die meisten Kreditkarten und viele Kredite.',
-    pills: ['Meiste Kredite zugänglich', 'Kreditkarten verfügbar', 'Weiter ausbauen']
-  };
-  if (n >= 560) return {
-    level: 'Gut',
-    color: '#D4AF37',
-    desc: 'Solides Fundament mit Wachstumspotenzial. Du kannst die meisten Konten eröffnen. Längere Banking-History und pünktliche Zahlungen bringen dich nach oben.',
-    pills: ['Standardkonten offen', 'Etwas Kredit zugänglich', 'Wachstumsphase']
-  };
-  if (n >= 380) return {
-    level: 'Aufbauphase',
-    color: '#FBBF24',
-    desc: 'Deine SCHUFA ist im Aufbau — normal für Expats, die vor 6–18 Monaten angekommen sind. Digitalbanken sind jetzt deine beste Option.',
-    pills: ['Digitalbanken bevorzugt', 'Noch kein Kredit', '12-Monat-Wachstumsfenster']
-  };
-  if (n >= 180) return {
-    level: 'Begrenzt',
-    color: '#F97316',
-    desc: 'Dein Profil zeigt begrenzte SCHUFA-Daten — typisch für Newcomer. Mehrere ausgezeichnete Banken arbeiten ohne SCHUFA-Prüfung.',
-    pills: ['Zuerst No-SCHUFA-Banken', 'Jetzt History aufbauen', 'Verbesserung in 6–12 Mo.']
-  };
-  return {
-    level: 'Keine SCHUFA',
-    color: '#EF4444',
-    desc: 'Du hast noch keine SCHUFA-Geschichte — völlig normal. SCHUFA gibt es in den meisten Ländern außerhalb Deutschlands nicht. Mehrere Banken heißen Newcomer ausdrücklich willkommen.',
-    pills: ['Noch kein Eintrag', 'Perfekter Startpunkt', 'Mehrere Banken für dich']
-  };
+  if (n >= 776) return { level: 'Excellent',  color: '#00c4a7', desc: 'Your SCHUFA profile is in the highest class — Excellent, the class held by around 62% of people in Germany. German banks will actively compete for your business. You qualify for credit, mortgages, and premium accounts without issue.', pills: ['Held by ~62% of people', 'All accounts available', 'Mortgage-eligible'] };
+  if (n >= 709) return { level: 'Good',       color: '#3ecf8e', desc: 'Strong SCHUFA profile — the Good class. You qualify for virtually all German bank accounts, most credit cards, and many personal loans. Keep your current behaviour to reach Excellent.', pills: ['Most loans accessible', 'Credit cards available', 'Keep building'] };
+  if (n >= 642) return { level: 'Acceptable', color: '#c9a84c', desc: 'You are in the Acceptable class — a solid foundation with room to grow. You can open most accounts and some credit products. A longer banking history and zero missed payments will push you into the Good class.', pills: ['Standard accounts open', 'Some credit accessible', 'Growth phase'] };
+  if (n >= 100) return { level: 'Sufficient', color: '#e8724a', desc: 'Your SCHUFA sits in the Sufficient class — the widest class, and where most newcomers start. Banks see elevated risk, so credit products are limited for now, and several banks operate without SCHUFA checks at all. Open one today: consistent on-time payments are what move you up.', pills: ['Elevated risk class', 'No-SCHUFA banks first', 'Build history now'] };
+  return                { level: 'No SCHUFA Data', color: '#f26d6d', desc: 'You have no SCHUFA history yet — which is completely normal. SCHUFA doesn\'t exist in most countries outside Germany. Several banks specifically welcome newcomers without any credit check at all.', pills: ['No record — yet', 'Perfect starting point', 'Multiple banks for you'] };
 }
 
 function getBankRecs(n, factors) {
@@ -609,29 +586,29 @@ function getBankRecs(n, factors) {
 
   if (n < 300 || dur === 'new' || acc === 'none') {
     return [
-      { ...BANKS.n26, rank: 1, why: 'Kein SCHUFA-Check erforderlich. Eröffnet vollständig online mit VideoIdent in 8 Minuten — nur Reisepass benötigt. Jeder offene Monat baut deine SCHUFA-History auf.' },
-      { ...BANKS.vivid, rank: 2, why: 'Kein SCHUFA-Check, Mehrwährungs-Pockets und Cashback. Ideal als Alltagskonto, während du über N26 SCHUFA aufbaust.' },
-      { ...BANKS.bunq, rank: 3, why: '3 Monate kostenlos und keine Anmeldung für den Antrag erforderlich. Tolle Backup-Option, wenn deine Anmeldung noch in Bearbeitung ist.' }
+      { ...BANKS.n26, rank: 1, why: 'No SCHUFA check required. Opens fully online with VideoIdent in 8 minutes — just your passport needed. Every month it\'s open builds your SCHUFA history.' },
+      { ...BANKS.vivid, rank: 2, why: 'No credit check, multi-currency pockets, and cashback. Ideal as a day-to-day account while you build SCHUFA through N26.' },
+      { ...BANKS.bunq, rank: 3, why: '3-month free trial and no Anmeldung required to apply. Great backup option if your Anmeldung is still processing.' }
     ];
   }
   if (n < 560) {
     return [
-      { ...BANKS.n26, rank: 1, why: 'Immer noch die sicherste Genehmigung. N26 garantiert Zulassung und gibt dir eine verlässliche Basis.' },
-      { ...BANKS.c24, rank: 2, why: 'Neue deutsche Bank mit den tolerantesten SCHUFA-Anforderungen ihrer Klasse. Ideal für Expats mit 3–18 Monaten Geschichte.' },
-      { ...BANKS.dkb, rank: 3, why: 'Es lohnt sich, jetzt zu beantragen. DKB akzeptiert die meisten Newcomer mit Basishistorie.' }
+      { ...BANKS.n26, rank: 1, why: 'Still your safest approval. N26 guarantees approval and gives you a reliable base to build from — even with limited history.' },
+      { ...BANKS.c24, rank: 2, why: 'New German bank with the most lenient SCHUFA requirements in its class. Ideal bridge bank for those with 3–18 months of German history.' },
+      { ...BANKS.dkb, rank: 3, why: 'Worth applying now. DKB accepts most newcomers with basic history and gives you a full-service German banking relationship from day one.' }
     ];
   }
   if (n < 750) {
     return [
-      { ...BANKS.dkb, rank: 1, why: 'Dein Profil qualifiziert dich jetzt für DKB — die Lieblingsbank der Expat-Community für Verlässlichkeit, kostenlose VISA und exzellenten Kundenservice.' },
-      { ...BANKS.c24, rank: 2, why: 'Ergänzt DKB perfekt — sofortiger Cashback und Visa-Debitkarte.' },
-      { ...BANKS.ing, rank: 3, why: 'Jetzt beantragen — du könntest dich qualifizieren. Deutschlands bestbewertete Bank nach Kundenzufriedenheit.' }
+      { ...BANKS.dkb, rank: 1, why: 'Your profile now qualifies you for DKB — the expat community\'s favourite for reliability, free VISA, and excellent customer service.' },
+      { ...BANKS.c24, rank: 2, why: 'Complementary to DKB — instant cashback and a Visa debit in one account. A strong second card for everyday spending.' },
+      { ...BANKS.ing, rank: 3, why: 'Apply now — you may qualify. Germany\'s highest-rated bank by customer satisfaction. If approved, this becomes your long-term primary account.' }
     ];
   }
   return [
-    { ...BANKS.ing, rank: 1, why: 'Dein Score erschließt Deutschlands bestbewertete kostenlose Bank. ING ist das Ziel-Konto für etablierte Expats.' },
-    { ...BANKS.comdirect, rank: 2, why: 'Der ideale Vermögensaufbau-Begleiter. Comdirets ETF- und Sparfunktionen sind unübertroffen.' },
-    { ...BANKS.commerzbank, rank: 3, why: 'Du qualifizierst dich jetzt für Premium-Commerzbank-Produkte. Ideal für Filialnetz, Geschäftskonto oder Hypothek.' }
+    { ...BANKS.ing, rank: 1, why: 'Your score unlocks Germany\'s best-rated free bank. ING is the destination account for established expats — best conditions, no fees, highest satisfaction.' },
+    { ...BANKS.comdirect, rank: 2, why: 'The ideal wealth-building companion. Comdirect\'s ETF and savings features are unmatched among free German accounts — pair it with ING.' },
+    { ...BANKS.commerzbank, rank: 3, why: 'You now qualify for premium Commerzbank products. Consider this if you need a branch network, business account, or are planning a mortgage.' }
   ];
 }
 
@@ -644,21 +621,21 @@ function getNextSteps(profile, factors) {
   const dur = factors.duration?.key || '';
 
   if (anm === 'no' || anm === 'process') {
-    steps.push('<strong>Anmeldung sofort erledigen.</strong> Besuche dein lokales Bürgeramt innerhalb von 14 Tagen nach Einzug. Mitbringen: Reisepass, Mietvertrag, Wohnungsgeberbestätigung.');
+    steps.push('<strong>Complete your Anmeldung immediately.</strong> Visit your local Bürgeramt within 2 weeks of moving in. This is legally required and unlocks all German financial services. Bring: passport, rental contract, and Wohnungsgeberbestätigung from your landlord.');
   }
   if (acc === 'none') {
-    steps.push('<strong>Diese Woche ein SCHUFA-freies Konto eröffnen.</strong> N26 oder Vivid öffnen innerhalb von 24 Stunden, kein SCHUFA-Check. Jeder Monat ohne Konto ist verschenkte positive Historie.');
+    steps.push('<strong>Open a no-SCHUFA bank account this week.</strong> N26 or Vivid open within 24 hours, no credit check. Having any German bank account starts building SCHUFA history immediately — every month you wait is a wasted month of potential positive history.');
   }
   if (pmts === 'bad') {
-    steps.push('<strong>Offene Zahlungen dringend klären.</strong> Kontaktiere den Gläubiger — viele stimmen zu, den Eintrag gegen vollständige Zahlung zu löschen (Löschungsvereinbarung). Innerhalb von 30 Tagen handeln.');
+    steps.push('<strong>Resolve outstanding payments urgently.</strong> Unresolved SCHUFA entries stay on record for 3 years. Contact the creditor directly — many will agree to remove the entry in exchange for full payment. This is called a <em>Löschungsvereinbarung</em>. Act within 30 days for the best outcome.');
   }
   if (dur === 'new' || dur === 'mid') {
-    steps.push('<strong>Kreditkarte 6 Monate verantwortungsvoll nutzen.</strong> Nach dem ersten Konto: gesicherte Kreditkarte beantragen. 2–3 kleine Käufe pro Monat, Saldo monatlich vollständig abbezahlen.');
+    steps.push('<strong>Use a credit card responsibly for 6 months.</strong> After opening your first account, apply for a secured credit card. Make 2–3 small purchases per month and pay the full balance monthly. This single action improves SCHUFA scores faster than anything else for newcomers.');
   }
   if (n < 560) {
-    steps.push('<strong>Kostenlosen SCHUFA-Bericht anfordern.</strong> Besuche meineSCHUFA.de → Datenkopie (kostenlos). Alle Einträge auf Fehler prüfen.');
+    steps.push('<strong>Get your free official SCHUFA report.</strong> Once per year, SCHUFA must provide your full credit report for free by law. Visit <em>meineSCHUFA.de → Datenkopie (kostenlos)</em>. Verify there are no errors — even small inaccuracies can significantly damage your score.');
   }
-  steps.push('<strong>Den vollständigen SCHUFA-Guide lesen.</strong> Unser Leitfaden deckt alle Faktoren ab — wie man Einträge anficht, die schnellsten Strategien, und was zu tun ist, wenn eine Bank ablehnt. Aktualisiert für 2026.');
+  steps.push('<strong>Read our complete SCHUFA Guide for Expats.</strong> Our in-depth guide covers every factor, how to dispute entries, the fastest improvement strategies, and what to do when a bank says no. Updated for 2026.');
   return steps;
 }
 
@@ -710,13 +687,13 @@ function animateGauge(normalised) {
 /* ============================================================
    FACTOR BARS
    ============================================================ */
-const FACTOR_LABELS = {
-  duration:   { label: 'Aufenthaltsdauer',   icon: '📅' },
-  employment: { label: 'Beschäftigung',       icon: '💼' },
-  anmeldung:  { label: 'Anmeldung',           icon: '🏛️' },
-  accounts:   { label: 'Banking-History',     icon: '🏦' },
-  payments:   { label: 'Zahlungsverhalten',   icon: '✅' },
-  credit:     { label: 'Kredithistorie',      icon: '💳' }
+var FACTOR_LABELS = {
+  duration:   { label: 'Time in Germany',    icon: '📅' },
+  employment: { label: 'Employment status',  icon: '💼' },
+  anmeldung:  { label: 'Anmeldung status',   icon: '🏛️' },
+  accounts:   { label: 'Banking history',    icon: '🏦' },
+  payments:   { label: 'Payment behaviour',  icon: '✅' },
+  credit:     { label: 'Credit history',     icon: '💳' }
 };
 
 function renderFactorBars(factors) {
@@ -769,7 +746,7 @@ function renderBankCards(recs) {
     card.className = 'bank-card';
     card.style.animationDelay = `${i * 0.12}s`;
 
-    const rankLabel = i === 0 ? '🥇 #1 Empfehlung' : i === 1 ? '🥈 #2 Option' : '🥉 #3 Option';
+    const rankLabel = i === 0 ? '🥇 #1 Recommendation' : i === 1 ? '🥈 #2 Option' : '🥉 #3 Option';
     const featuresHTML = bank.features.slice(0, 4).map(f => `<li>✓ ${f}</li>`).join('');
     const ctaClass = bank.ctaStyle === 'teal-cta' ? 'cta-btn cta-teal' : 'cta-btn';
 
@@ -807,10 +784,10 @@ function renderNextSteps(steps) {
     </div>
   `).join('');
   card.innerHTML = `
-    <div class="next-steps-title">📋 Dein persönlicher Action-Plan</div>
+    <div class="next-steps-title">Your personalised action plan</div>
     ${stepsHTML}
     <a href="schufa-guide.html" class="cta-btn cta-teal" style="margin-top:1.25rem;display:inline-block;">
-      Vollständigen SCHUFA-Guide lesen →
+      Read the complete SCHUFA Guide for Expats →
     </a>
   `;
 }
@@ -865,8 +842,8 @@ function showResult() {
   // Recommendations
   const recoTitle = document.getElementById('recoTitle');
   const recoSub = document.getElementById('recoSub');
-  if (recoTitle) recoTitle.textContent = `Empfohlen für dein Profil — ${profile.level}`;
-  if (recoSub) recoSub.textContent = `Basierend auf deinem Score von ~${scoreResult.normalised}/1000 haben wir die besten Banken für deine Situation ausgewählt.`;
+  if (recoTitle) recoTitle.textContent = `Recommended for your profile — ${profile.level}`;
+  if (recoSub) recoSub.textContent = `Based on your score of ~${scoreResult.normalised}/1000, we selected the best banks for your situation.`;
   renderBankCards(recs);
 
   // Next steps
@@ -919,7 +896,7 @@ const BLOCKED_ACCOUNT_DATA = {
     disbursementFee: 0,
     color: '#50C878',
     url: '#fintiba-affiliate',
-    features: ['BaFin-reguliert', 'Schnelle Eröffnung (~3 Tage)', 'Kein Mindestguthaben', 'Online-Portal auf Englisch']
+    features: ['BaFin-regulated', 'Fast opening (~3 days)', 'No minimum balance', 'Online portal in English']
   },
   expatrio: {
     name: 'Expatrio',
@@ -930,7 +907,7 @@ const BLOCKED_ACCOUNT_DATA = {
     disbursementFee: 0,
     color: '#D4AF37',
     url: '#expatrio-affiliate',
-    features: ['Kombinierbar mit Krankenversicherung', 'Studentenrabatte', 'Multi-Service-Paket', 'SEPA-Sofortauszahlung']
+    features: ['Can be combined with health insurance', 'Student discounts', 'Multi-service package', 'SEPA instant payout']
   }
 };
 
@@ -993,12 +970,12 @@ function renderBlockedAccountResults(results, duration, amount) {
     const isBest = p.name === cheapest.name;
     return `
       <div class="blocked-card${isBest ? ' blocked-card-best' : ''}">
-        ${isBest ? '<div class="blocked-best-badge">💰 Günstigste Option</div>' : ''}
+        ${isBest ? '<div class="blocked-best-badge">💰 Cheapest option</div>' : ''}
         <div class="blocked-provider-name" style="color:${p.color}">${p.name}</div>
         <div class="blocked-breakdown">
-          <div class="blocked-line"><span>Einrichtungsgebühr</span><span>€${p.setup.toFixed(2)}</span></div>
-          <div class="blocked-line"><span>Monatl. Gebühren (${duration} Mo.)</span><span>€${p.monthly.toFixed(2)}</span></div>
-          ${parseFloat(p.transfers) > 0 ? `<div class="blocked-line"><span>Auszahlungsgebühren</span><span>€${p.transfers.toFixed(2)}</span></div>` : ''}
+          <div class="blocked-line"><span>Setup fee</span><span>€${p.setup.toFixed(2)}</span></div>
+          <div class="blocked-line"><span>Monthly fees (${duration} mo.)</span><span>€${p.monthly.toFixed(2)}</span></div>
+          ${parseFloat(p.transfers) > 0 ? `<div class="blocked-line"><span>Payout fees</span><span>€${p.transfers.toFixed(2)}</span></div>` : ''}
           <div class="blocked-line blocked-line-interest"><span>Zinsgutschrift (~)</span><span>−€${p.interest}</span></div>
           <div class="blocked-line blocked-total"><span><strong>Nettokosten gesamt</strong></span><span><strong>€${p.net}</strong></span></div>
         </div>
@@ -1006,7 +983,7 @@ function renderBlockedAccountResults(results, duration, amount) {
           ${p.features.map(f => `<li>✓ ${f}</li>`).join('')}
         </ul>
         <a href="${p.url}" class="cta-btn${isBest ? ' cta-teal' : ''}" target="_blank" rel="noopener sponsored">
-          ${p.name} Konto eröffnen →
+          ${p.name} Open account →
         </a>
       </div>
     `;
@@ -1016,7 +993,7 @@ function renderBlockedAccountResults(results, duration, amount) {
   const summaryEl = document.getElementById('blocked-summary');
   if (summaryEl) {
     const saving = Math.abs(parseFloat(results.fintiba?.net || 0) - parseFloat(results.expatrio?.net || 0)).toFixed(2);
-    summaryEl.textContent = `Für ${duration} Monate mit €${amount.toLocaleString('de-DE')} Blockbetrag. Ersparnis durch beste Wahl: ~€${saving}`;
+    summaryEl.textContent = `For ${duration} months with €${amount.toLocaleString('de-DE')} blocked. You save ~€${saving} with the best choice.`;
   }
 }
 
