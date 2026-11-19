@@ -300,7 +300,17 @@
     }
     .ba-faq h3 { font-size: 1.05rem; margin: 1.4rem 0 .35rem; }
     .ba-faq p { margin: 0 0 .5rem; }
-    .ba-capture iframe { display: block; width: 100%; max-width: 480px; height: 320px; margin: 0 auto; border: 1px solid var(--border-subtle); background: #fff; border-radius: var(--radius-sm); }
+    .ba-capture .ba-form { display: block; width: 100%; max-width: 480px; margin: 0 auto; }
+    .ba-form-row { display: flex; gap: .5rem; }
+    .ba-form-row input[type="email"] { flex: 1; min-width: 0; background: var(--bg-glass); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: .75rem 1rem; color: var(--text-primary); font-size: 1rem; outline: none; }
+    .ba-form-row input[type="email"]:focus { border-color: var(--gold-border); }
+    .ba-form-row button { padding: .75rem 1.1rem; font-size: 1rem; font-weight: 700; border: 0; border-radius: var(--radius-sm); background: var(--gold); color: #1a1a1a; cursor: pointer; white-space: nowrap; }
+    .ba-form-row button:disabled { opacity: .6; cursor: wait; }
+    .ba-form-error { color: #f87171; font-size: .85rem; margin-top: .5rem; text-align: center; }
+    .ba-thanks { max-width: 480px; margin: 0 auto; text-align: center; border: 1px solid var(--gold-border); background: rgba(212,175,55,.08); border-radius: var(--radius-sm); padding: 1.25rem 1.5rem; }
+    .ba-thanks-title { font-size: 1.1rem; font-weight: 700; color: var(--emerald); margin-bottom: .5rem; }
+    .ba-thanks p { margin: 0; font-size: .92rem; color: var(--text-secondary); }
+    @media (max-width: 520px) { .ba-form-row { flex-direction: column; } .ba-form-row button { width: 100%; } }
     .calculator-section .calc-inputs { grid-template-columns: 1fr; }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculateur compte bloqué 2026","url":"https://expatscore.de/fr/blocked-account-calculator","description":"Calculez le montant exact à bloquer pour l'Allemagne en 2026 selon le type de visa et la durée du séjour.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
@@ -435,7 +445,66 @@
 <div class="calculator-section ba-capture" id="ba-capture">
 <div class="calc-title">📧 Recevez votre résultat + la checklist des 30 premiers jours par e-mail</div>
 <p class="calc-sub">Newsletter gratuite. Nous vous envoyons votre résultat et la checklist Anmeldung → Steuer-ID → compte bancaire → assurance maladie. Double opt-in : vous confirmez d'abord votre e-mail. Désinscription à tout moment — nous ne partageons jamais votre e-mail. La newsletter est en anglais.</p>
-<iframe src="https://expatscore.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+<form id="ba-subscribe-form" class="ba-form" action="https://expatscore.substack.com/api/v1/free?nojs=true" method="post" novalidate>
+<input type="hidden" name="source" value="embed"/>
+<input type="hidden" name="first_url" value="https://expatscore.de/fr/blocked-account-calculator"/>
+<input type="hidden" name="current_url" value="https://expatscore.de/fr/blocked-account-calculator"/>
+<input type="hidden" name="first_referrer" value=""/>
+<input type="hidden" name="current_referrer" value=""/>
+<input type="hidden" name="first_session_url" value=""/>
+<input type="hidden" name="first_session_referrer" value=""/>
+<input type="hidden" name="referral_code" value=""/>
+<input type="hidden" name="referring_pub_id" value=""/>
+<input type="hidden" name="additional_referring_pub_ids" value=""/>
+<div class="ba-form-row">
+<input type="email" name="email" id="ba-email" placeholder="votre@email.com" required autocomplete="email" aria-label="Adresse e-mail"/>
+<button type="submit" id="ba-subscribe-btn">Recevoir mon résultat par e-mail</button>
+</div>
+<p class="ba-form-error" id="ba-form-error" hidden></p>
+</form>
+<div class="ba-thanks" id="ba-thanks" hidden>
+<div class="ba-thanks-title">✓ Merci — vérifiez votre boîte mail</div>
+<p>Nous avons envoyé un lien de confirmation à <strong id="ba-thanks-email"></strong>. Cliquez dessus pour finaliser votre abonnement — votre résultat (<span id="ba-thanks-result"></span>) et la checklist des 30 premiers jours seront en route. Rien reçu ? Vérifiez vos courriers indésirables.</p>
+</div>
+<script>
+(function() {
+  var form = document.getElementById('ba-subscribe-form');
+  var btn = document.getElementById('ba-subscribe-btn');
+  var emailInput = document.getElementById('ba-email');
+  var error = document.getElementById('ba-form-error');
+  var thanks = document.getElementById('ba-thanks');
+  var sending = false;
+  function showError(msg) { error.textContent = msg; error.hidden = false; }
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (sending) return;
+    var email = emailInput.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Veuillez saisir une adresse e-mail valide.'); emailInput.focus(); return; }
+    error.hidden = true;
+    sending = true;
+    btn.disabled = true;
+    btn.textContent = 'Envoi…';
+    var ctrl = new AbortController();
+    var timer = setTimeout(function() { ctrl.abort(); }, 15000);
+    fetch(form.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)), signal: ctrl.signal })
+      .then(function() {
+        clearTimeout(timer);
+        document.getElementById('ba-thanks-email').textContent = email;
+        var s = document.getElementById('ba-summary');
+        document.getElementById('ba-thanks-result').textContent = s ? s.textContent.trim() : '';
+        form.hidden = true;
+        thanks.hidden = false;
+      })
+      .catch(function() {
+        clearTimeout(timer);
+        sending = false;
+        btn.disabled = false;
+        btn.textContent = 'Recevoir mon résultat par e-mail';
+        showError('Une erreur est survenue — veuillez réessayer.');
+      });
+  });
+})();
+</script>
 </div>
 <p>Pour une vue complète, lisez le <a href="/fr/blog/compte-bloque-allemagne">guide du compte bloqué 2026</a> — Expatrio contre Fintiba, procédure étape par étape et alternatives à Expatrio. English version: <a href="/blocked-account-calculator">blocked account calculator</a> and <a href="/blog/blocked-account-germany">blocked account guide</a>.</p>
 </main>
