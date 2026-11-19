@@ -387,7 +387,7 @@ function renderQuestion(step) {
   selectedOptionIndex = -1;
 
   const qNum = document.getElementById('qNumber');
-  if (qNum) qNum.textContent = `Frage ${step + 1} / ${QUESTIONS.length}`;
+  if (qNum) qNum.textContent = `Question ${step + 1} / ${QUESTIONS.length}`;
 
   const qT = document.getElementById('qText');
   if (qT) qT.textContent = q.text;
