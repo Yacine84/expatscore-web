@@ -446,10 +446,10 @@
 <div class="calculator-section ba-capture" id="ba-capture">
 <div class="calc-title">📧 Recevez votre résultat + la checklist des 30 premiers jours par e-mail</div>
 <p class="calc-sub">Newsletter gratuite. Nous vous envoyons votre résultat et la checklist Anmeldung → Steuer-ID → compte bancaire → assurance maladie. Double opt-in : vous confirmez d'abord votre e-mail. Désinscription à tout moment — nous ne partageons jamais votre e-mail. La newsletter est en anglais.</p>
-<form id="ba-subscribe-form" class="ba-form" action="https://expatscore.substack.com/api/v1/free?nojs=true" method="post" novalidate>
+<form id="ba-subscribe-form" class="ba-form" action="https://expatscore.substack.com/api/v1/free?nojs=true" method="post" target="ba-substack-frame" novalidate>
 <input type="hidden" name="source" value="embed"/>
-<input type="hidden" name="first_url" value="https://expatscore.de/fr/blocked-account-calculator"/>
-<input type="hidden" name="current_url" value="https://expatscore.de/fr/blocked-account-calculator"/>
+<input type="hidden" name="first_url" id="ba-first-url" value=""/>
+<input type="hidden" name="current_url" id="ba-current-url" value=""/>
 <input type="hidden" name="first_referrer" value=""/>
 <input type="hidden" name="current_referrer" value=""/>
 <input type="hidden" name="first_session_url" value=""/>
@@ -463,6 +463,7 @@
 </div>
 <p class="ba-form-error" id="ba-form-error" hidden></p>
 </form>
+<iframe name="ba-substack-frame" id="ba-substack-frame" title="Substack signup" style="display:none" tabindex="-1" aria-hidden="true"></iframe>
 <div class="ba-thanks" id="ba-thanks" hidden>
 <div class="ba-thanks-title">✓ Merci — vérifiez votre boîte mail</div>
 <p>Nous avons envoyé un lien de confirmation à <strong id="ba-thanks-email"></strong>. Cliquez dessus pour finaliser votre abonnement — votre résultat (<span id="ba-thanks-result"></span>) et la checklist des 30 premiers jours seront en route. Rien reçu ? Vérifiez vos courriers indésirables.</p>
@@ -474,35 +475,36 @@
   var emailInput = document.getElementById('ba-email');
   var error = document.getElementById('ba-form-error');
   var thanks = document.getElementById('ba-thanks');
+  var frame = document.getElementById('ba-substack-frame');
   var sending = false;
+  var timer = null;
   function showError(msg) { error.textContent = msg; error.hidden = false; }
+  frame.addEventListener('load', function() {
+    if (!sending) return;
+    clearTimeout(timer);
+    sending = false;
+    document.getElementById('ba-thanks-email').textContent = emailInput.value.trim();
+    var s = document.getElementById('ba-summary');
+    document.getElementById('ba-thanks-result').textContent = s ? s.textContent.trim() : '';
+    form.hidden = true;
+    thanks.hidden = false;
+  });
   form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    if (sending) return;
+    if (sending) { e.preventDefault(); return; }
     var email = emailInput.value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Veuillez saisir une adresse e-mail valide.'); emailInput.focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { e.preventDefault(); showError('Veuillez saisir une adresse e-mail valide.'); emailInput.focus(); return; }
     error.hidden = true;
+    document.getElementById('ba-first-url').value = window.location.href;
+    document.getElementById('ba-current-url').value = window.location.href;
     sending = true;
     btn.disabled = true;
     btn.textContent = 'Envoi…';
-    var ctrl = new AbortController();
-    var timer = setTimeout(function() { ctrl.abort(); }, 15000);
-    fetch(form.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)), signal: ctrl.signal })
-      .then(function() {
-        clearTimeout(timer);
-        document.getElementById('ba-thanks-email').textContent = email;
-        var s = document.getElementById('ba-summary');
-        document.getElementById('ba-thanks-result').textContent = s ? s.textContent.trim() : '';
-        form.hidden = true;
-        thanks.hidden = false;
-      })
-      .catch(function() {
-        clearTimeout(timer);
-        sending = false;
-        btn.disabled = false;
-        btn.textContent = 'Recevoir mon résultat par e-mail';
-        showError('Une erreur est survenue — veuillez réessayer.');
-      });
+    timer = setTimeout(function() {
+      sending = false;
+      btn.disabled = false;
+      btn.textContent = 'Recevoir mon résultat par e-mail';
+      showError('Une erreur est survenue — veuillez réessayer.');
+    }, 20000);
   });
 })();
 </script>
