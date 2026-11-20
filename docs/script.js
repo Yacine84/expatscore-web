@@ -934,7 +934,7 @@ function calculateBlockedAccount() {
   const amountEl = document.getElementById('blocked-amount');
 
   const duration = parseInt(durationEl?.value) || 12;
-  const amount = parseFloat(amountEl?.value) || 11208; // German standard blocked amount 2026
+  const amount = parseFloat(amountEl?.value) || 992; // German standard monthly blocked amount 2026 (€992)
 
   const results = {};
   for (const [key, provider] of Object.entries(BLOCKED_ACCOUNT_DATA)) {
