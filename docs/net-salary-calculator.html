@@ -139,7 +139,7 @@
 <header class="global-header">
     <div class="header-inner">
         <div class="logo"><a href="/">ExpatScore.de</a></div>
-        <button aria-label="Navigation öffnen" class="nav-toggle" id="navToggle">☰</button>
+        <button aria-label="Open navigation" class="nav-toggle" id="navToggle">☰</button>
         <nav class="nav-links" id="navLinks">
             <a href="/">Home</a>
             <a href="/banking">Banking</a>
@@ -148,26 +148,26 @@
             <a href="/tax-class-tool">Tax Tool</a>
             <a href="/blog">Blog</a>
             <a href="/blog/how-to-get-schufa-germany">EN Guide</a>
-            <a href="/insurance">Versicherung</a>
-            <a href="/about">Über uns</a>
+            <a href="/insurance">Insurance</a>
+            <a href="/about">About us</a>
         </nav>
     </div>
 </header>
 
 <div class="werbung-bar" role="note">
-    <strong>⚑ Anzeige:</strong> Diese Seite enthält Affiliate-Links. Bei Kontoeröffnung erhalten wir eine Provision — für dich keine Mehrkosten. <a href="/affiliate-hinweis">Details →</a>
+    <strong>⚑ Ad:</strong> This page contains affiliate links. If you open an account, we may receive a commission — at no extra cost to you. <a href="/affiliate-hinweis">Details →</a>
 </div>
 <div class="urgency-strip">
-    <strong>2026:</strong> Steuerfreibeträge und Beitragsbemessungsgrenzen wurden aktualisiert – jetzt informieren.
+    <strong>2026:</strong> Tax allowances and contribution ceilings have been updated — check them now.
 </div>
 
 <main>
     <!-- Hero Section -->
     <section class="hero hero-article" style="padding: 3rem 1rem; min-height: auto;">
         <div class="hero-inner">
-            <span class="hero-eyebrow">Interaktives Tool · 2026</span>
+            <span class="hero-eyebrow">Interactive Tool · 2026</span>
             <h1 class="hero-h1">Net Salary &amp; Cost-of-Living Reality Check</h1>
-            <p class="hero-sub">Finde heraus, wie viel dir wirklich bleibt. Berücksichtigt alle Steuern, Sozialabgaben und typische Lebenshaltungskosten in Deutschland 2026.</p>
+            <p class="hero-sub">Find out how much really stays in your pocket. Covers all taxes, social contributions and typical living costs in Germany in 2026.</p>
         </div>
     </section>
 
@@ -176,37 +176,37 @@
         <div class="tool-card">
             <div class="grid-2cols">
                 <div>
-                    <label class="tax-label">💶 Monatliches Bruttogehalt (€)</label>
-                    <input type="number" id="grossSalary" class="tax-input" placeholder="z.B. 4500" value="4500" step="100">
+                    <label class="tax-label">💶 Monthly gross salary (€)</label>
+                    <input type="number" id="grossSalary" class="tax-input" placeholder="e.g. 4500" value="4500" step="100">
                 </div>
                 <div>
-                    <label class="tax-label">📑 Steuerklasse (Tax Class)</label>
+                    <label class="tax-label">📑 Tax class (Steuerklasse)</label>
                     <select id="taxClass" class="sim-select">
-                        <option value="1">Steuerklasse I (Single, ledig)</option>
-                        <option value="2">Steuerklasse II (Alleinerziehend)</option>
-                        <option value="3">Steuerklasse III (Verheiratet, höheres Einkommen)</option>
-                        <option value="4">Steuerklasse IV (Verheiratet, ähnliches Einkommen)</option>
+                        <option value="1">Tax class I (single)</option>
+                        <option value="2">Tax class II (single parent)</option>
+                        <option value="3">Tax class III (married, higher earner)</option>
+                        <option value="4">Tax class IV (married, similar incomes)</option>
                     </select>
                 </div>
                 <div>
-                    <label class="tax-label">🏙️ Stadt (für Mietpreise)</label>
+                    <label class="tax-label">🏙️ City (for rent prices)</label>
                     <select id="city" class="sim-select">
-                        <option value="berlin">Berlin (Durchschnitt: 16,20€/m²)</option>
-                        <option value="munich">München (Durchschnitt: 22,52€/m²)</option>
-                        <option value="frankfurt">Frankfurt (Durchschnitt: 17,71€/m²)</option>
-                        <option value="cologne">Köln (Durchschnitt: 13,14€/m²)</option>
-                        <option value="hamburg">Hamburg (Durchschnitt: 15,88€/m²)</option>
+                        <option value="berlin">Berlin (average: €16.20/m²)</option>
+                        <option value="munich">Munich (average: €22.52/m²)</option>
+                        <option value="frankfurt">Frankfurt (average: €17.71/m²)</option>
+                        <option value="cologne">Cologne (average: €13.14/m²)</option>
+                        <option value="hamburg">Hamburg (average: €15.88/m²)</option>
                     </select>
                 </div>
                 <div>
-                    <label class="tax-label">🏠 Wohnungsgröße (m²)</label>
-                    <input type="number" id="apartmentSize" class="tax-input" placeholder="z.B. 55" value="55" step="5">
+                    <label class="tax-label">🏠 Apartment size (m²)</label>
+                    <input type="number" id="apartmentSize" class="tax-input" placeholder="e.g. 55" value="55" step="5">
                 </div>
             </div>
             <div style="margin-top: 1.5rem;">
-                <button id="calculateBtn" class="tax-btn-primary">🔍 Realität prüfen →</button>
+                <button id="calculateBtn" class="tax-btn-primary">🔍 Check reality →</button>
             </div>
-            <p class="sim-disclaimer" style="font-size: 0.7rem; margin-top: 1.5rem; text-align: center;">Dies ist eine realitätsnahe Schätzung für 2026. Abhängig von Bundesland, Kinderfreibeträgen, Kirchensteuer und individuellem Zusatzbeitrag der Krankenkasse kann das tatsächliche Netto abweichen.</p>
+            <p class="sim-disclaimer" style="font-size: 0.7rem; margin-top: 1.5rem; text-align: center;">This is a realistic estimate for 2026. Depending on your federal state, child allowances, church tax and your health insurer’s supplementary rate, the actual net pay may differ.</p>
         </div>
 
         <!-- Dynamic results container -->
@@ -222,7 +222,7 @@
             <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 1rem;">Germany’s tax and social security system can be daunting for newcomers. This guide breaks down every deduction – from progressive <strong>income tax (Lohnsteuer)</strong> to <strong>pension, health, and unemployment insurance</strong> – and shows you how your net salary translates into real monthly spending.</p>
             
             <h3 style="font-size: 1.3rem; margin-top: 1.5rem;">1. How German income tax works in 2026</h3>
-            <p>The German tax system is progressive: the more you earn, the higher the percentage of tax. Every employee benefits from a <strong>basic tax-free allowance (Grundfreibetrag)</strong> – in 2026 it’s <strong>€12,348 per year (€1,029/month)</strong>. Income above this is taxed in brackets. For example, single filers pay 14% on the first €4,320 above the allowance, climbing to 42% for higher incomes. Our interactive tool simulates this precisely for your <strong>Steuerklasse</strong>.</p>
+            <p>The German tax system is progressive: the more you earn, the higher the percentage of tax. Every employee benefits from a <strong>basic tax-free allowance (Grundfreibetrag)</strong> – in 2026 it’s <strong>€12,348 per year (€1,029/month)</strong>. Income above this is taxed in brackets. For example, single filers pay 14% on the first €4,320 above the allowance, climbing to 42% for higher incomes. Our interactive tool gives a rough estimate for your <strong>Steuerklasse</strong>.</p>
             
             <h3 style="font-size: 1.3rem; margin-top: 1.5rem;">2. Social security deductions explained</h3>
             <p>Every employee contributes to four pillars: <strong>pension (Rentenversicherung)</strong>, <strong>unemployment (Arbeitslosenversicherung)</strong>, <strong>health (Krankenversicherung)</strong> and <strong>nursing care (Pflegeversicherung)</strong>. In 2026, the employee shares are:</p>
@@ -238,7 +238,7 @@
             <p>Your <strong>Steuerklasse</strong> determines the amount of income tax withheld. Singles are usually in class I, married couples can choose between III/V (if one earns significantly more) or IV/IV (similar incomes). Class III gives a much higher allowance, significantly increasing monthly net pay. The tool lets you compare different classes instantly – a must for every expat couple.</p>
             
             <h3 style="font-size: 1.3rem; margin-top: 1.5rem;">4. Cost of living: where does your money go?</h3>
-            <p>After taxes, the biggest expense is <strong>rent (Kaltmiete)</strong>. In cities like Munich, expect €22.50/m², while Berlin is around €16.20/m². Add utilities (Nebenkosten), electricity, internet, the mandatory <strong>Deutschlandticket (€63/month)</strong> for public transport, groceries, and the radio fee (€18.36). If you regularly travel on long-distance trains instead, those trips earn BahnBonus points that convert into free ICE tickets — our <a href="/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets">BahnBonus points guide</a> explains how to redeem them. Our expense list gives you a transparent breakdown, and we even estimate personal spending (15% of what’s left) to show your potential monthly savings.</p>
+            <p>After taxes, the biggest expense is <strong>rent (Kaltmiete)</strong>. In cities like Munich, expect €22.52/m², while Berlin is around €16.20/m². Add utilities (Nebenkosten), electricity, internet, the optional <strong>Deutschlandticket (€63/month)</strong> for public transport, groceries, and the radio fee (€18.36). If you regularly travel on long-distance trains instead, those trips earn BahnBonus points that convert into free ICE tickets — our <a href="/blog/bahnbonus-punkte-einloesen-fuer-ice-tickets">BahnBonus points guide</a> explains how to redeem them. Our expense list gives you a transparent breakdown, and we even estimate personal spending (15% of what’s left) to show your potential monthly savings.</p>
         </div>
 
         <!-- FAQ Section (optimized for featured snippets) -->
@@ -255,7 +255,7 @@
                 </li>
                 <li class="faq-item">
                     <button aria-expanded="false" class="faq-q">How is the solidarity surcharge (Soli) calculated in 2026?<span aria-hidden="true" class="faq-icon">+</span></button>
-                    <div class="faq-a" role="region">The Soli is 5.5% of your income tax. It is fully waived for most employees – only those with a monthly taxable income above roughly €6,000 (single) pay it. Our calculator applies the correct threshold.</div>
+                    <div class="faq-a" role="region">The Soli is 5.5% of your income tax. It is fully waived for most employees — only those whose annual income tax exceeds roughly €20,350 (single) or €40,700 (married) pay it.</div>
                 </li>
                 <li class="faq-item">
                     <button aria-expanded="false" class="faq-q">What is the Deutschlandticket and is it mandatory?<span aria-hidden="true" class="faq-icon">+</span></button>
@@ -263,14 +263,14 @@
                 </li>
                 <li class="faq-item">
                     <button aria-expanded="false" class="faq-q">Can I reduce my social security contributions?<span aria-hidden="true" class="faq-icon">+</span></button>
-                    <div class="faq-a" role="region">Contributions to pension, health, and nursing care are mandatory for employees. However, you can choose a public health insurance provider with a lower supplementary rate (Zusatzbeitrag). Private health insurance (PKV) is only an option for high earners (above €66,600/year).</div>
+                    <div class="faq-a" role="region">Contributions to pension, health, and nursing care are mandatory for employees. However, you can choose a public health insurance provider with a lower supplementary rate (Zusatzbeitrag). Private health insurance (PKV) is only an option for high earners (above €77,400/year).</div>
                 </li>
             </ul>
         </div>
 
         <!-- Related Resources / Internal Links -->
         <div class="card" style="margin-bottom: 2rem;">
-            <span class="card-badge card-badge-schufa">Weitere Ratgeber</span>
+            <span class="card-badge card-badge-schufa">More guides</span>
             <h2 style="font-family: var(--font-display); font-size: 1.5rem; margin: 0.5rem 0 1rem;">Related resources for your financial journey</h2>
             <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
                 <a href="/blog/how-to-get-schufa-germany" class="tax-cta-link" style="border-color: var(--emerald-border);">📘 How to get a SCHUFA score (EN)</a>
@@ -287,21 +287,21 @@
 
 <footer class="global-footer">
     <div class="inner">
-        <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
+        <div class="footer-disclaimer"><strong>No financial advice</strong> — All information without guarantee</div>
         <nav class="footer-legal-links">
-            <a href="/about">Über uns</a>
+            <a href="/about">About us</a>
             <a href="/banking">Banking</a>
             <a href="/schufa-guide">SCHUFA Guide</a>
             <a href="/blog/how-to-get-schufa-germany">SCHUFA Guide (EN)</a>
             <a href="/impressum">Impressum</a>
-            <a href="/datenschutz">Datenschutzerklärung</a>
-            <a href="/affiliate-hinweis">Affiliate-Hinweis</a>
+            <a href="/datenschutz">Privacy policy</a>
+            <a href="/affiliate-hinweis">Affiliate disclosure</a>
         </nav>
         <div class="footer-disclosure">
-            <strong>⚑ Affiliate-Hinweis (Werbung):</strong>
-            Diese Seite enthält Partnerlinks. Wenn du über einen dieser Links ein Konto eröffnest, erhalten wir eine Provision vom Anbieter. Für dich entstehen keine zusätzlichen Kosten.
+            <strong>⚑ Affiliate disclosure (advertising):</strong>
+            This page contains partner links. If you open an account through one of these links, we receive a commission from the provider. There are no additional costs for you.
         </div>
-        <p class="footer-copy">© 2026 ExpatScore.de · Alle Angaben ohne Gewähr · Kein Ersatz für individuelle Rechts- oder Finanzberatung.</p>
+        <p class="footer-copy">© 2026 ExpatScore.de · All information without guarantee · Not a substitute for individual legal or financial advice.</p>
     </div>
 </footer>
 
@@ -383,7 +383,7 @@
         const taxClass = parseInt(document.getElementById('taxClass').value);
         const city = document.getElementById('city').value;
         let size = parseFloat(document.getElementById('apartmentSize').value);
-        if (isNaN(gross) || isNaN(size) || gross <= 0 || size <= 0) { alert("Bitte gültige Werte eingeben."); return; }
+        if (isNaN(gross) || isNaN(size) || gross <= 0 || size <= 0) { alert("Please enter valid values."); return; }
         const cappedPension = Math.min(gross, SOCIAL.contributionCeilingPension);
         const cappedHealth = Math.min(gross, SOCIAL.contributionCeilingHealth);
         let pension = cappedPension * SOCIAL.pensionRate;
@@ -400,22 +400,22 @@
         let remainingAfterFixed = netSalary - totalFixed;
         let personalSpending = remainingAfterFixed * 0.15;
         let monthlySavings = remainingAfterFixed - personalSpending;
-        let statusMsg = monthlySavings > 800 ? "💰 Ausgezeichnet! Du lebst komfortabel und kannst gut sparen." :
-                        monthlySavings > 300 ? "✅ Solide. Du hast ein gesundes finanzielles Polster." :
-                        monthlySavings > 0 ? "⚠️ Ausgeglichen. Dein Budget ist knapp, aber machbar." :
-                        "❌ Kritisch. Du gibst mehr aus als du verdienst.";
+        let statusMsg = monthlySavings > 800 ? "💰 Excellent! You live comfortably and can save well." :
+                        monthlySavings > 300 ? "✅ Solid. You have a healthy financial cushion." :
+                        monthlySavings > 0 ? "⚠️ Balanced. Your budget is tight but manageable." :
+                        "❌ Critical. You spend more than you earn.";
         document.getElementById('resultContainer').innerHTML = `
             <div class="tool-card" style="padding: 2rem;">
-                <h2 style="font-family: var(--font-display); margin-bottom: 1rem;">📋 Deine Finanzübersicht 2026</h2>
+                <h2 style="font-family: var(--font-display); margin-bottom: 1rem;">📋 Your 2026 financial overview</h2>
                 <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
-                    <div><span class="tax-label">💰 Monatliches Netto</span><div class="result-value">${netSalary.toFixed(2)} €</div><div class="result-status">nach Steuern & Sozialabgaben</div></div>
-                    <div><span class="tax-label">🏦 Monatliche Sparrate</span><div class="result-value" style="color: ${monthlySavings >= 0 ? 'var(--emerald)' : '#EF4444'};">${monthlySavings.toFixed(2)} €</div><div class="result-status">${statusMsg}</div></div>
+                    <div><span class="tax-label">💰 Monthly net</span><div class="result-value">${netSalary.toFixed(2)} €</div><div class="result-status">after taxes & social contributions</div></div>
+                    <div><span class="tax-label">🏦 Monthly savings rate</span><div class="result-value" style="color: ${monthlySavings >= 0 ? 'var(--emerald)' : '#EF4444'};">${monthlySavings.toFixed(2)} €</div><div class="result-status">${statusMsg}</div></div>
                 </div>
                 <div class="grid-2cols">
-                    <div><h3 style="font-size: 1.2rem;">🧾 Abzüge im Detail</h3><ul class="expense-list"><li><span>Lohnsteuer</span><span>${incomeTax.toFixed(2)} €</span></li><li><span>Solidaritätszuschlag</span><span>${solidarity.toFixed(2)} €</span></li><li><span>Rentenversicherung</span><span>${pension.toFixed(2)} €</span></li><li><span>Arbeitslosenversicherung</span><span>${unemployment.toFixed(2)} €</span></li><li><span>Krankenversicherung</span><span>${health.toFixed(2)} €</span></li><li><span>Pflegeversicherung</span><span>${nursing.toFixed(2)} €</span></li></ul></div>
-                    <div><h3 style="font-size: 1.2rem;">🏡 Lebenshaltungskosten</h3><ul class="expense-list"><li><span>Kaltmiete</span><span>${rentCold.toFixed(2)} €</span></li><li><span>Nebenkosten</span><span>${utilities.toFixed(2)} €</span></li><li><span>Strom</span><span>${FIXED.electricity} €</span></li><li><span>Internet & Mobil</span><span>${FIXED.internet + FIXED.mobile} €</span></li><li><span>Deutschlandticket</span><span>${FIXED.deutschlandTicket} €</span></li><li><span>Lebensmittel</span><span>${FIXED.groceries} €</span></li><li><span>Rundfunkbeitrag</span><span>${FIXED.tvTax} €</span></li><li><span>Persönliche Ausgaben</span><span>${personalSpending.toFixed(2)} €</span></li></ul></div>
+                    <div><h3 style="font-size: 1.2rem;">🧾 Deductions in detail</h3><ul class="expense-list"><li><span>Income tax</span><span>${incomeTax.toFixed(2)} €</span></li><li><span>Solidarity surcharge</span><span>${solidarity.toFixed(2)} €</span></li><li><span>Pension insurance</span><span>${pension.toFixed(2)} €</span></li><li><span>Unemployment insurance</span><span>${unemployment.toFixed(2)} €</span></li><li><span>Health insurance</span><span>${health.toFixed(2)} €</span></li><li><span>Care insurance</span><span>${nursing.toFixed(2)} €</span></li></ul></div>
+                    <div><h3 style="font-size: 1.2rem;">🏡 Living costs</h3><ul class="expense-list"><li><span>Base rent (Kaltmiete)</span><span>${rentCold.toFixed(2)} €</span></li><li><span>Utilities (Nebenkosten)</span><span>${utilities.toFixed(2)} €</span></li><li><span>Electricity</span><span>${FIXED.electricity} €</span></li><li><span>Internet & mobile</span><span>${FIXED.internet + FIXED.mobile} €</span></li><li><span>Deutschlandticket</span><span>${FIXED.deutschlandTicket} €</span></li><li><span>Groceries</span><span>${FIXED.groceries} €</span></li><li><span>Broadcasting fee (Rundfunkbeitrag)</span><span>${FIXED.tvTax} €</span></li><li><span>Personal spending</span><span>${personalSpending.toFixed(2)} €</span></li></ul></div>
                 </div>
-                <button onclick="location.reload();" class="tax-btn-primary" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); margin-top: 1rem;">🔄 Neue Berechnung</button>
+                <button onclick="location.reload();" class="tax-btn-primary" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); margin-top: 1rem;">🔄 New calculation</button>
             </div>`;
         document.getElementById('resultContainer').style.display = 'block';
         document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth' });
