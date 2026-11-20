@@ -238,7 +238,30 @@ function toggleFaq(btn) {
 /* ============================================================
    COOKIE BANNER
    ============================================================ */
+function updateAnalyticsConsent(granted) {
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': granted ? 'granted' : 'denied' });
+  }
+}
+
+function applyStoredConsent() {
+  try {
+    var c = localStorage.getItem('cookieConsent');
+    if (!c) {
+      // one-time migration from the old how-to key
+      var legacy = localStorage.getItem('es_consent');
+      if (legacy) { c = legacy; localStorage.setItem('cookieConsent', legacy); localStorage.removeItem('es_consent'); }
+    }
+    if (!c) return;
+    var granted = (c === 'all');
+    if (c.charAt(0) === '{') { try { granted = !!JSON.parse(c).analytics; } catch (e) {} }
+    updateAnalyticsConsent(granted);
+  } catch (e) {}
+}
+
 function initCookieBanner() {
+  // Apply any stored consent choice to Google Analytics (Consent Mode)
+  applyStoredConsent();
   // ── Wire up buttons (fix: event listeners were never attached) ──────────
   const acceptBtn   = document.querySelector('.cookie-accept');
   const declineBtn  = document.querySelector('.cookie-decline');
@@ -283,20 +306,22 @@ function initCookieBanner() {
 
 function acceptCookies() {
   localStorage.setItem('cookieConsent', 'all');
+  updateAnalyticsConsent(true);
   hideCookieBanner();
   document.body.style.overflow = 'auto';
 }
 
 function declineCookies() {
   localStorage.setItem('cookieConsent', 'necessary');
+  updateAnalyticsConsent(false);
   hideCookieBanner();
   document.body.style.overflow = 'auto';
 }
 
 function saveGranularCookies() {
   const analytics = document.getElementById('toggle-analytics')?.checked;
-  const affiliate = document.getElementById('toggle-affiliate')?.checked;
-  localStorage.setItem('cookieConsent', JSON.stringify({ analytics, affiliate }));
+  localStorage.setItem('cookieConsent', JSON.stringify({ analytics }));
+  updateAnalyticsConsent(!!analytics);
   hideCookieBanner();
   closeModal('cookie-settings');
   document.body.style.overflow = 'auto';

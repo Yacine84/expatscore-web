@@ -589,14 +589,35 @@ function toggleFaq(btn) {
 }
 
 /* Cookie */
+function updateAnalyticsConsent(granted) {
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', { 'analytics_storage': granted ? 'granted' : 'denied' });
+  }
+}
+
+function applyStoredConsent() {
+  try {
+    var c = localStorage.getItem('cookieConsent');
+    if (!c) {
+      // one-time migration from the old how-to key
+      var legacy = localStorage.getItem('es_consent');
+      if (legacy) { c = legacy; localStorage.setItem('cookieConsent', legacy); localStorage.removeItem('es_consent'); }
+    }
+    if (!c) return;
+    var granted = (c === 'all');
+    if (c.charAt(0) === '{') { try { granted = !!JSON.parse(c).analytics; } catch (e) {} }
+    updateAnalyticsConsent(granted);
+  } catch (e) {}
+}
 function openModal(id) { var m = document.getElementById('modal-' + id); if (m) m.classList.add('open'); }
 function closeModal(id){ var m = document.getElementById('modal-' + id); if (m) m.classList.remove('open'); }
 function hideCookieBanner() { var b = document.getElementById('cookie-banner'); if (b) b.style.display = 'none'; }
-function acceptCookies()  { localStorage.setItem('es_consent','all');       hideCookieBanner(); }
-function declineCookies() { localStorage.setItem('es_consent','essential'); hideCookieBanner(); }
+function acceptCookies()  { localStorage.setItem('cookieConsent','all');  updateAnalyticsConsent(true);  hideCookieBanner(); }
+function declineCookies() { localStorage.setItem('cookieConsent','necessary'); updateAnalyticsConsent(false); hideCookieBanner(); }
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (!localStorage.getItem('es_consent')) {
+  applyStoredConsent();
+  if (!localStorage.getItem('cookieConsent')) {
     setTimeout(function() {
       var b = document.getElementById('cookie-banner');
       if (b) b.style.display = 'flex';
@@ -619,8 +640,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (mo)  mo.addEventListener('click',  function(e) { if (e.target === this) this.classList.remove('open'); });
   if (csv) csv.addEventListener('click', function() {
     var a = document.getElementById('toggle-analytics');
-    var f = document.getElementById('toggle-affiliate');
-    localStorage.setItem('es_consent', JSON.stringify({ necessary: true, analytics: a && a.checked, affiliate: f && f.checked }));
+    localStorage.setItem('cookieConsent', JSON.stringify({ necessary: true, analytics: a && a.checked }));
+    updateAnalyticsConsent(!!(a && a.checked));
     hideCookieBanner();
     closeModal('cookie-settings');
   });

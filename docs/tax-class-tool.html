@@ -6,6 +6,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-16817T2VWQ');
 </script>
@@ -569,7 +575,7 @@
     <div aria-hidden="true" class="cookie-banner-icon">🍪</div>
     <div class="cookie-banner-body">
       <div class="cookie-banner-title">Your Privacy Settings</div>
-      <div class="cookie-banner-text">We use cookies for technical functions and — with your consent — for analytics and affiliate tracking. More in our <a href="/datenschutz">Privacy Policy</a>.</div>
+      <div class="cookie-banner-text">We use cookies for technical functions and — with your consent — for analytics. More in our <a href="/datenschutz">Privacy Policy</a>.</div>
     </div>
   </div>
   <div class="cookie-btns">
@@ -593,10 +599,7 @@
       <div class="cookie-toggle-info"><strong>Analytics &amp; Statistics</strong><span>Pseudonymised usage data.</span></div>
       <label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label>
     </div>
-    <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Affiliate Tracking</strong><span>Correct attribution of partner commissions.</span></div>
-      <label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label>
-    </div>
+    
     <button class="cookie-save-btn" onclick="saveGranularCookies()">Save selection</button>
   </div>
 </div>
@@ -834,10 +837,13 @@ document.getElementById('grossSalary').addEventListener('keypress', function(e) 
 // ════════════════════════════════════════════════════════════════════════
 function openModal(id) { const m = document.getElementById('modal-' + id); if(m) m.classList.add('open'); }
 function closeModal(id) { const m = document.getElementById('modal-' + id); if(m) m.classList.remove('open'); }
-function acceptCookies() { localStorage.setItem('cookieConsent','all'); document.getElementById('cookie-banner').classList.remove('visible'); closeModal('cookie-settings'); }
-function declineCookies() { localStorage.setItem('cookieConsent','necessary'); document.getElementById('cookie-banner').classList.remove('visible'); closeModal('cookie-settings'); }
-function saveGranularCookies() { localStorage.setItem('cookieConsent','necessary'); document.getElementById('cookie-banner').classList.remove('visible'); closeModal('cookie-settings'); }
+function updateAnalyticsConsent(granted){ if(typeof gtag==='function'){ gtag('consent','update',{'analytics_storage':granted?'granted':'denied'}); } }
+function applyStoredConsent(){ try{ var c=localStorage.getItem('cookieConsent'); if(!c){ var l=localStorage.getItem('es_consent'); if(l){ c=l; localStorage.setItem('cookieConsent',l); localStorage.removeItem('es_consent'); } } if(!c) return; var g=(c==='all'); if(c.charAt(0)==='{'){ try{ g=!!JSON.parse(c).analytics; }catch(e){} } updateAnalyticsConsent(g); }catch(e){} }
+function acceptCookies() { localStorage.setItem('cookieConsent','all'); updateAnalyticsConsent(true); document.getElementById('cookie-banner').classList.remove('visible'); closeModal('cookie-settings'); }
+function declineCookies() { localStorage.setItem('cookieConsent','necessary'); updateAnalyticsConsent(false); document.getElementById('cookie-banner').classList.remove('visible'); closeModal('cookie-settings'); }
+function saveGranularCookies() { var a = document.getElementById('toggle-analytics'); localStorage.setItem('cookieConsent', JSON.stringify({ necessary: true, analytics: a ? a.checked : false })); updateAnalyticsConsent(a ? a.checked : false); document.getElementById('cookie-banner').classList.remove('visible'); closeModal('cookie-settings'); }
 
+applyStoredConsent();
 (function() {
   if(!localStorage.getItem('cookieConsent')) {
     setTimeout(function() { document.getElementById('cookie-banner').classList.add('visible'); }, 1500);

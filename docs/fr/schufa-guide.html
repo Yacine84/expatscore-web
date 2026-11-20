@@ -6,6 +6,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-16817T2VWQ');
 </script>
@@ -681,10 +687,7 @@
 <div class="cookie-toggle-info"><strong>Analyse et statistiques</strong></div>
 <label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label>
 </div>
-<div class="cookie-toggle-row">
-<div class="cookie-toggle-info"><strong>Suivi d'affiliation</strong></div>
-<label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label>
-</div>
+
 <button class="cookie-save-btn" onclick="saveGranularCookies()">Enregistrer la sélection</button>
 </div>
 </div>

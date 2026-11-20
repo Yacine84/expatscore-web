@@ -7,6 +7,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-16817T2VWQ');
 </script>
@@ -227,7 +233,7 @@
 <div aria-hidden="true" class="cookie-banner-icon">🍪</div>
 <div class="cookie-banner-body">
 <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
-<div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</div>
+<div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse. Mehr in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</div>
 </div>
 </div>
 <div class="cookie-btns">
@@ -243,7 +249,7 @@
 <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
 <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div><label class="toggle-switch"><input checked="" disabled="" type="checkbox"/><span class="toggle-slider"></span></label></div>
 <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div><label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label></div>
-<div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div><label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label></div>
+
 <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
 </div>
 </div>

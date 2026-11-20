@@ -7,6 +7,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-16817T2VWQ');
 </script>
@@ -443,10 +449,7 @@
 <div class="cookie-toggle-info"><strong>Analyses et statistiques</strong></div>
 <label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label>
 </div>
-<div class="cookie-toggle-row">
-<div class="cookie-toggle-info"><strong>Suivi des affiliations</strong></div>
-<label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label>
-</div>
+
 <button class="cookie-save-btn" onclick="saveGranularCookies()">Enregistrer la sélection</button>
 </div>
 </div>
@@ -1060,14 +1063,17 @@ window.addEventListener('scroll', function() {
 function openModal(id) { var m = document.getElementById('modal-' + id); if (m) m.classList.add('open'); }
 function closeModal(id) { var m = document.getElementById('modal-' + id); if (m) m.classList.remove('open'); }
 function hideBanner() { var b = document.getElementById('cookie-banner'); if (b) b.classList.remove('visible'); }
-function acceptCookies() { localStorage.setItem('cookieConsent','all'); hideBanner(); closeModal('cookie-settings'); }
-function declineCookies() { localStorage.setItem('cookieConsent','necessary'); hideBanner(); closeModal('cookie-settings'); }
+function updateAnalyticsConsent(granted){ if(typeof gtag==='function'){ gtag('consent','update',{'analytics_storage':granted?'granted':'denied'}); } }
+function applyStoredConsent(){ try{ var c=localStorage.getItem('cookieConsent'); if(!c){ var l=localStorage.getItem('es_consent'); if(l){ c=l; localStorage.setItem('cookieConsent',l); localStorage.removeItem('es_consent'); } } if(!c) return; var g=(c==='all'); if(c.charAt(0)==='{'){ try{ g=!!JSON.parse(c).analytics; }catch(e){} } updateAnalyticsConsent(g); }catch(e){} }
+function acceptCookies() { localStorage.setItem('cookieConsent','all'); updateAnalyticsConsent(true); hideBanner(); closeModal('cookie-settings'); }
+function declineCookies() { localStorage.setItem('cookieConsent','necessary'); updateAnalyticsConsent(false); hideBanner(); closeModal('cookie-settings'); }
 function saveGranularCookies() {
   var a = document.getElementById('toggle-analytics');
-  var f = document.getElementById('toggle-affiliate');
-  localStorage.setItem('cookieConsent', JSON.stringify({ necessary: true, analytics: a ? a.checked : false, affiliate: f ? f.checked : false }));
+  localStorage.setItem('cookieConsent', JSON.stringify({ necessary: true, analytics: a ? a.checked : false }));
+  updateAnalyticsConsent(a ? a.checked : false);
   hideBanner(); closeModal('cookie-settings');
 }
+applyStoredConsent();
 (function() {
   if (!localStorage.getItem('cookieConsent')) {
     setTimeout(function() { var b = document.getElementById('cookie-banner'); if (b) b.classList.add('visible'); }, 1400);

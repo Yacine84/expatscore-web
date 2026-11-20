@@ -7,6 +7,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-16817T2VWQ');
 </script>
@@ -208,18 +214,19 @@
 <p class="mp-para">Cookies sind kleine Textdateien, die Ihr Browser auf Ihrem Gerät speichert. ExpatScore.de verwendet folgende Arten:</p>
 <p class="mp-para"><strong>5.2 Notwendige Cookies</strong> — Diese sind für den Betrieb technisch erforderlich und können nicht deaktiviert werden.</p>
 <div class="mp-table-wrap"><table class="mp-table"><thead><tr><th>Cookie-Name</th><th>Zweck</th><th>Lebensdauer</th></tr></thead><tbody>
-<tr><td><code>es_cookie_consent</code></td><td>Speichert Ihre Cookie-Einwilligung</td><td>365 Tage</td></tr>
+<tr><td><code>cookieConsent</code> (localStorage)</td><td>Speichert Ihre Cookie-Einwilligung</td><td>Unbegrenzt — bis zur Löschung im Browser</td></tr>
+<tr><td><code>_ga, _ga_*</code> (Google Analytics)</td><td>Pseudonymisierte Nutzungsmessung — nur nach Einwilligung (siehe 5.3)</td><td>Max. 2 Jahre</td></tr>
 </tbody></table></div>
-<p class="mp-para"><strong>5.3 Analytische Cookies</strong> — Nur mit Einwilligung. IP-Adresse wird vor Speicherung anonymisiert. Einwilligung jederzeit über Cookie-Einstellungen widerrufbar.</p>
+<p class="mp-para"><strong>5.3 Analytische Cookies (Google Analytics)</strong> — Wir nutzen Google Analytics 4 (Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland; Muttergesellschaft: Google LLC, USA) zur pseudonymisierten Auswertung der Website-Nutzung. Google Analytics ist standardmäßig deaktiviert (Consent Mode): Erst wenn Sie im Cookie-Banner „Alle akzeptieren" wählen oder die Analyse-Option in den Einstellungen aktivieren, werden Analyse-Cookies gesetzt und Nutzungsdaten an Google übertragen. Bis dahin werden keine Analyse-Cookies gesetzt und keine Nutzer-Kennungen an Google übertragen. IP-Adressen werden von Google Analytics standardmäßig anonymisiert. Ihre Einwilligung können Sie jederzeit über „Cookie-Einstellungen" im Footer widerrufen.</p>
 <p class="mp-para"><strong>5.4 Cookies deaktivieren</strong> — Sie können Cookies in Ihrem Browser deaktivieren. Einige Funktionen funktionieren dann möglicherweise nicht korrekt.</p>
 </div>
 <div class="mp-divider"></div>
 <!-- 6. AFFILIATE -->
 <div class="mp-section" id="affiliate">
 <div class="mp-section-header"><div class="mp-icon ai-green">🔗</div><div class="mp-section-label"><div class="mp-section-eyebrow">Abschnitt 6</div><div class="mp-section-title">Affiliate-Links &amp; externe Dienste</div></div></div>
-<p class="mp-para">ExpatScore.de enthält Affiliate-Links zu Finanzprodukten. Bei Nutzung über diese Links erhalten wir möglicherweise eine Vergütung. Für Sie entstehen <strong>keine zusätzlichen Kosten</strong>.</p>
-<p class="mp-para">Beim Klick auf Affiliate-Links werden Referrer-Informationen und ggf. ein Tracking-Cookie an den Anbieter übertragen. Unsere <strong>redaktionelle Unabhängigkeit</strong> bleibt davon unberührt. Weitere Informationen: <a href="/affiliate-hinweis">Affiliate-Hinweis</a>.</p>
-<p class="mp-para"><strong>6.1 Eingebettete externe Inhalte:</strong> Diese Website bindet keine externen Medieninhalte ein, die ohne Zustimmung Daten übertragen.</p>
+<p class="mp-para">ExpatScore.de enthält derzeit <strong>keine Affiliate-Links</strong> zu Finanzprodukten und keine Affiliate-Partnerschaften. Die einzige Ausnahme ist unser persönlicher N26-Einladungslink: Wenn Sie über diesen Link ein N26-Konto eröffnen und Ihre erste Transaktion tätigen, zahlt N26 uns eine Prämie. Für Sie entstehen <strong>keine zusätzlichen Kosten</strong>. Alle anderen Anbieterlinks sind Direktlinks zu den Websites der Anbieter. Weitere Informationen: <a href="/affiliate-hinweis">Affiliate-Hinweis</a>.</p>
+<p class="mp-para">Beim Klick auf den N26-Einladungslink wird die Einladungskennung in der URL an N26 übertragen; es wird kein Tracking-Cookie gesetzt. Unsere <strong>redaktionelle Unabhängigkeit</strong> bleibt davon unberührt.</p>
+<p class="mp-para"><strong>6.1 Eingebettete externe Inhalte:</strong> Diese Website lädt beim Seitenaufruf externe Inhalte, bei denen Daten (insbesondere Ihre IP-Adresse) an die jeweiligen Anbieter übertragen werden: Google Fonts (Schriftarten, Anbieter: Google Ireland Limited) und Google Tag Manager / Google Analytics (siehe Abschnitt 5). Die Analyse-Datenübertragung an Google Analytics selbst erfolgt nur nach Ihrer Einwilligung (Consent Mode, Abschnitt 5.3).</p>
 </div>
 <div class="mp-divider"></div>
 <!-- 7. DRITTE -->
@@ -305,7 +312,7 @@
 <div aria-hidden="true" class="cookie-banner-icon">🍪</div>
 <div class="cookie-banner-body">
 <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
-<div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</div>
+<div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse. Mehr in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</div>
 </div>
 </div>
 <div class="cookie-btns">
@@ -321,7 +328,7 @@
 <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
 <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div><label class="toggle-switch"><input checked="" disabled="" type="checkbox"/><span class="toggle-slider"></span></label></div>
 <div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div><label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label></div>
-<div class="cookie-toggle-row"><div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div><label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label></div>
+
 <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
 </div>
 </div>

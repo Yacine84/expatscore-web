@@ -7,6 +7,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-16817T2VWQ');
 </script>
@@ -817,7 +823,7 @@
 <div aria-hidden="true" class="cookie-banner-icon">🍪</div>
 <div class="cookie-banner-body">
 <div class="cookie-banner-title">Your Privacy Settings</div>
-<div class="cookie-banner-text">We use cookies for technical functions and — with your consent — for analytics and affiliate tracking. More in our <a href="/datenschutz">Privacy Policy</a>.</div>
+<div class="cookie-banner-text">We use cookies for technical functions and — with your consent — for analytics. More in our <a href="/datenschutz">Privacy Policy</a>.</div>
 </div>
 </div>
 <div class="cookie-btns">
@@ -840,10 +846,7 @@
 <div class="cookie-toggle-info"><strong>Analytics &amp; Statistics</strong><span>Pseudonymised usage data.</span></div>
 <label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label>
 </div>
-<div class="cookie-toggle-row">
-<div class="cookie-toggle-info"><strong>Affiliate Tracking</strong><span>Correct attribution of partner commissions.</span></div>
-<label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label>
-</div>
+
 <button class="cookie-save-btn" onclick="saveGranularCookies()">Save selection</button>
 </div>
 </div>

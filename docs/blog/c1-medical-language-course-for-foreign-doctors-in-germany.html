@@ -6,6 +6,12 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-16817T2VWQ');
 </script>
@@ -492,6 +498,7 @@
       <div class="footer-legal-links">
         <a href="/impressum">Impressum</a>
         <a href="/datenschutz">Datenschutz</a>
+<a href="#" onclick="openModal('cookie-settings');return false;">Cookie Settings</a>
       </div>
       <div class="footer-copy">
         &copy; 2026 <a href="/">ExpatScore.de</a>
@@ -533,6 +540,50 @@ function toggleFaq(btn) {
     if (icon) icon.textContent = '\u2212';
   }
 }
+</script>
+<!-- COOKIE BANNER -->
+<div aria-label="Cookie settings" aria-live="polite" id="cookie-banner" role="dialog">
+<div class="cookie-banner-header">
+<div aria-hidden="true" class="cookie-banner-icon">🍪</div>
+<div class="cookie-banner-body">
+<div class="cookie-banner-title">Your privacy settings</div>
+<div class="cookie-banner-text">We use cookies for technical functions and — with your consent — for analytics. More in our <a href="/datenschutz">Privacy Policy</a>.</div>
+</div>
+</div>
+<div class="cookie-btns">
+<button class="cookie-accept" onclick="acceptCookies()">Accept all</button>
+<button class="cookie-decline" onclick="declineCookies()">Necessary only</button>
+<button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
+</div>
+</div>
+<!-- COOKIE SETTINGS MODAL -->
+<div aria-label="Cookie settings" aria-modal="true" class="modal-overlay" id="modal-cookie-settings" role="dialog">
+<div class="modal">
+<button aria-label="Close" class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
+<h2>Cookie settings</h2>
+<p>Strictly necessary cookies cannot be disabled — they ensure the basic functions of this website.</p>
+<div class="cookie-toggle-row">
+<div class="cookie-toggle-info"><strong>Strictly necessary</strong><span>Consent storage. Always active.</span></div>
+<label class="toggle-switch"><input checked="" disabled="" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<div class="cookie-toggle-row">
+<div class="cookie-toggle-info"><strong>Analytics &amp; statistics</strong><span>Pseudonymised usage data.</span></div>
+<label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label>
+</div>
+<button class="cookie-save-btn" onclick="saveGranularCookies()">Save selection</button>
+</div>
+</div>
+<script>
+/* Cookie banner + Google Analytics consent (Consent Mode: analytics denied by default) */
+function updateAnalyticsConsent(granted){ if(typeof gtag==='function'){ gtag('consent','update',{'analytics_storage':granted?'granted':'denied'}); } }
+function applyStoredConsent(){ try{ var c=localStorage.getItem('cookieConsent'); if(!c) return; var g=(c==='all'); if(c.charAt(0)==='{'){ try{ g=!!JSON.parse(c).analytics; }catch(e){} } updateAnalyticsConsent(g); }catch(e){} }
+function acceptCookies(){ localStorage.setItem('cookieConsent','all'); updateAnalyticsConsent(true); hideCookieBanner(); }
+function declineCookies(){ localStorage.setItem('cookieConsent','necessary'); updateAnalyticsConsent(false); hideCookieBanner(); }
+function saveGranularCookies(){ var a=document.getElementById('toggle-analytics'); localStorage.setItem('cookieConsent', JSON.stringify({analytics: a ? a.checked : false})); updateAnalyticsConsent(a ? a.checked : false); hideCookieBanner(); closeModal('cookie-settings'); }
+function hideCookieBanner(){ var b=document.getElementById('cookie-banner'); if(b){ b.classList.remove('visible'); b.style.display='none'; b.style.pointerEvents='none'; } }
+function openModal(id){ var m=document.getElementById('modal-'+id); if(m){ m.classList.add('open'); } }
+function closeModal(id){ var m=document.getElementById('modal-'+id); if(m){ m.classList.remove('open'); } }
+(function(){ applyStoredConsent(); if(!localStorage.getItem('cookieConsent')){ setTimeout(function(){ var b=document.getElementById('cookie-banner'); if(b) b.classList.add('visible'); }, 1200); } })();
 </script>
 </body>
 </html>
