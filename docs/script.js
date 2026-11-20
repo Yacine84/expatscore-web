@@ -976,8 +976,8 @@ function renderBlockedAccountResults(results, duration, amount) {
           <div class="blocked-line"><span>Setup fee</span><span>€${p.setup.toFixed(2)}</span></div>
           <div class="blocked-line"><span>Monthly fees (${duration} mo.)</span><span>€${p.monthly.toFixed(2)}</span></div>
           ${parseFloat(p.transfers) > 0 ? `<div class="blocked-line"><span>Payout fees</span><span>€${p.transfers.toFixed(2)}</span></div>` : ''}
-          <div class="blocked-line blocked-line-interest"><span>Zinsgutschrift (~)</span><span>−€${p.interest}</span></div>
-          <div class="blocked-line blocked-total"><span><strong>Nettokosten gesamt</strong></span><span><strong>€${p.net}</strong></span></div>
+          <div class="blocked-line blocked-line-interest"><span>Interest credit (~)</span><span>−€${p.interest}</span></div>
+          <div class="blocked-line blocked-total"><span><strong>Total net cost</strong></span><span><strong>€${p.net}</strong></span></div>
         </div>
         <ul class="blocked-features">
           ${p.features.map(f => `<li>✓ ${f}</li>`).join('')}
