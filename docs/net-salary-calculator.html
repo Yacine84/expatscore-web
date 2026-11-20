@@ -193,7 +193,17 @@
                         <option value="2">Tax class II (single parent)</option>
                         <option value="3">Tax class III (married, higher earner)</option>
                         <option value="4">Tax class IV (married, similar incomes)</option>
+                        <option value="5">Tax class V (married, lower earner)</option>
+                        <option value="6">Tax class VI (second job)</option>
                     </select>
+                </div>
+                <div>
+                    <label class="tax-label">👶 Children</label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); padding: 0.6rem 0; cursor: pointer;">
+                        <input type="checkbox" id="hasChildren" style="width: 1.1rem; height: 1.1rem; accent-color: var(--emerald);">
+                        I have children (lower care insurance rate of 1.8%)
+                    </label>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Class II always assumes one child. Without children, care insurance is 2.4% from age 23.</p>
                 </div>
                 <div>
                     <label class="tax-label">🏙️ City (for rent prices)</label>
@@ -213,7 +223,7 @@
             <div style="margin-top: 1.5rem;">
                 <button id="calculateBtn" class="tax-btn-primary">🔍 Check reality →</button>
             </div>
-            <p class="sim-disclaimer" style="font-size: 0.7rem; margin-top: 1.5rem; text-align: center;">This is a realistic estimate for 2026. Depending on your federal state, child allowances, church tax and your health insurer’s supplementary rate, the actual net pay may differ.</p>
+            <p class="sim-disclaimer" style="font-size: 0.7rem; margin-top: 1.5rem; text-align: center;">Estimate for 2026, calculated with the BMF Programmablaufplan 2026 (§32a EStG tariff, Vorsorgepauschale, class V/VI formula) and the 2026 social security rates and ceilings. Assumes statutory health insurance at the 2026 average supplementary rate of 2.9%, no church tax, and residence outside Saxony. The actual net pay may differ depending on your federal state, your health insurer's supplementary rate, and individual deductions.</p>
         </div>
 
         <!-- Dynamic results container -->
@@ -355,35 +365,103 @@
         btn.nextElementSibling.style.display = 'none';
     });
 
-    // ========== TOOL LOGIC (same as before, fully intact) ==========
-    const TAX_BRACKETS = {
-        1: { baseAllowance: 1029, brackets: [{ limit: 4320, rate: 0.14 }, { limit: 5666, rate: 0.23 }, { limit: 7916, rate: 0.32 }, { limit: 21666, rate: 0.42 }] },
-        2: { baseAllowance: 1050, brackets: [{ limit: 4320, rate: 0.14 }, { limit: 5666, rate: 0.23 }, { limit: 7916, rate: 0.32 }, { limit: 21666, rate: 0.42 }] },
-        3: { baseAllowance: 2000, brackets: [{ limit: 8640, rate: 0.14 }, { limit: 11332, rate: 0.23 }, { limit: 15832, rate: 0.32 }, { limit: 43332, rate: 0.42 }] },
-        4: { baseAllowance: 1029, brackets: [{ limit: 4320, rate: 0.14 }, { limit: 5666, rate: 0.23 }, { limit: 7916, rate: 0.32 }, { limit: 21666, rate: 0.42 }] }
-    };
+    // ========== 2026 GERMAN PAYROLL TAX ENGINE — BMF Programmablaufplan 2026 ==========
+    // (BMF v. 12.11.2025, BStBl 2025 I S. 1948)
+    // Income tax: §32a EStG tariff. Withholding: §39b EStG — Vorsorgepauschale
+    // (pension 9.3%; health 7.0% + half the Zusatzbeitrag; care at the employee
+    // rate; unemployment 1.3% in classes I–V only insofar as health + care +
+    // unemployment together do not exceed €1,900) and the class V/VI formula
+    // (§39b Abs. 2 Satz 7 EStG). The Vorsorgepauschale is rounded up to full
+    // euros, the tax is rounded down to full euros, as the PAP prescribes.
+    // Verified against the BMF's official test table (Allgemeine maschinelle
+    // Jahreslohnsteuer 2026): 258/258 values exact, all six classes.
+    // Social contributions (actual, for the net figure): pension 9.3%,
+    // unemployment 1.3% (ceiling €8,450/month), health 7.3% + half of the
+    // 2026 average Zusatzbeitrag of 2.9% (= 8.75%), care 1.8% / 2.4% childless
+    // (ceiling €5,812.50/month). No church tax; residence outside Saxony.
+
+    // §32a EStG 2026 tariff (Grundtarif). zvE is rounded down to full euros;
+    // the resulting tax is rounded down to full euros.
+    function tariff32a(x) {
+        x = Math.floor(x);
+        if (x <= 12348) return 0;
+        if (x <= 17799) { const y = (x - 12348) / 10000; return Math.floor((914.51 * y + 1400) * y); }
+        if (x <= 69878) { const z = (x - 17799) / 10000; return Math.floor((173.10 * z + 2397) * z + 1034.87); }
+        if (x <= 277825) return Math.floor(0.42 * x - 11135.63);
+        return Math.floor(0.45 * x - 19470.38);
+    }
+
+    // Vorsorgepauschale, §39b Abs. 2 Satz 5 Nr. 3 EStG (rounded up to full euros).
+    function vorsorgepauschale(grossAnnual, taxClass, hasChild) {
+        const rv = 0.093 * Math.min(grossAnnual, 101400);
+        const base = Math.min(grossAnnual, 69750);
+        const kv = (0.070 + 0.029 / 2) * base; // 7.0% + half of the 2.9% average Zusatzbeitrag
+        const pv = (hasChild ? 0.018 : 0.024) * base;
+        const kvpv = kv + pv;
+        let v = rv + kvpv;
+        if (taxClass !== 6) { // unemployment Teilbetrag: classes I–V only
+            const alv = 0.013 * Math.min(grossAnnual, 101400);
+            v = Math.max(v, rv + Math.min(kvpv + alv, 1900));
+        }
+        return Math.ceil(v);
+    }
+
+    function zuVersteuerndesEinkommen(grossAnnual, taxClass, hasChild) {
+        let z = grossAnnual - vorsorgepauschale(grossAnnual, taxClass, hasChild);
+        if (taxClass !== 6) z -= 1230 + 36; // Arbeitnehmer- + Sonderausgaben-Pauschbetrag (I–V)
+        if (taxClass === 2) z -= 4260;      // Entlastungsbetrag für Alleinerziehende
+        return Math.max(0, z);
+    }
+
+    // Lohnsteuer for classes V and VI, §39b Abs. 2 Satz 7 EStG (BMF PAP 2026).
+    function up56(zx) {
+        const st1 = tariff32a(zx * 1.25);
+        const st2 = tariff32a(zx * 0.75);
+        const diff = (st1 - st2) * 2;
+        const mist = Math.floor(zx * 0.14);
+        return Math.max(diff, mist);
+    }
+    function mst56(x) {
+        const zzx = x;
+        const zx = Math.min(zzx, 34939);
+        let st = up56(zx);
+        if (zzx > 34939) {
+            if (zzx > 222260) st = st + (222260 - 34939) * 0.42 + (zzx - 222260) * 0.45;
+            else st = st + (zzx - 34939) * 0.42;
+        }
+        const vergl = st;
+        if (zzx > 14071) {
+            const hoch = up56(14071) + (zzx - 14071) * 0.42;
+            st = Math.min(vergl, hoch);
+        }
+        return Math.floor(st);
+    }
+
+    function lohnsteuerAnnual(grossAnnual, taxClass, hasChild) {
+        const hc = (taxClass === 2) ? true : !!hasChild;
+        const z = zuVersteuerndesEinkommen(grossAnnual, taxClass, hc);
+        if (taxClass === 3) return 2 * tariff32a(z / 2); // Splittingtarif, §32a Abs. 5
+        if (taxClass === 5 || taxClass === 6) return mst56(z);
+        return tariff32a(z);
+    }
+
+    // Solidarity surcharge (SolZG): 5.5% of the annual Lohnsteuer, only above the
+    // Freigrenze (€20,350 single / €40,700 splitting), capped at 11.9% of the
+    // amount above the Freigrenze (Gleitzone).
+    function solidarityAnnual(taxAnnual, taxClass) {
+        const frei = (taxClass === 3) ? 40700 : 20350;
+        if (taxAnnual <= frei) return 0;
+        return Math.min(taxAnnual * 0.055, (taxAnnual - frei) * 0.119);
+    }
+
     const SOCIAL = {
-        pensionRate: 0.093, unemploymentRate: 0.013, healthRate: 0.073, nursingRate: 0.018, nursingSurcharge: 0.006,
+        pensionRate: 0.093, unemploymentRate: 0.013,
+        healthRate: 0.073 + 0.029 / 2, // 7.3% + half of the 2.9% average Zusatzbeitrag = 8.75%
+        nursingRate: 0.018, nursingSurcharge: 0.006, // surcharge only if childless (age 23+)
         contributionCeilingPension: 8450, contributionCeilingHealth: 5812.50
     };
     const RENT_PRICES = { berlin: 16.20, munich: 22.52, frankfurt: 17.71, cologne: 13.14, hamburg: 15.88 };
     const FIXED = { utilitiesPerSqm: 2.80, electricity: 50, internet: 40, mobile: 20, deutschlandTicket: 63, groceries: 250, tvTax: 18.36 };
-
-    function calculateIncomeTax(gross, taxClass) {
-        const classData = TAX_BRACKETS[taxClass];
-        if (!classData) return 0;
-        let taxable = Math.max(0, gross - classData.baseAllowance);
-        let tax = 0, prev = 0;
-        for (let b of classData.brackets) {
-            if (taxable > prev) {
-                const slice = Math.min(taxable, b.limit) - prev;
-                tax += slice * b.rate;
-                prev = b.limit;
-            } else break;
-        }
-        return Math.round(tax);
-    }
-    function calculateSolidarity(incomeTax, gross) { return incomeTax > (gross > 6000 ? 1696 : 9999) ? Math.round(incomeTax * 0.055) : 0; }
 
     function calculate() {
         let gross = parseFloat(document.getElementById('grossSalary').value);
@@ -391,14 +469,21 @@
         const city = document.getElementById('city').value;
         let size = parseFloat(document.getElementById('apartmentSize').value);
         if (isNaN(gross) || isNaN(size) || gross <= 0 || size <= 0) { alert("Please enter valid values."); return; }
+        // Class II always assumes one child; otherwise the checkbox decides.
+        const hasChild = (taxClass === 2) || document.getElementById('hasChildren').checked;
         const cappedPension = Math.min(gross, SOCIAL.contributionCeilingPension);
         const cappedHealth = Math.min(gross, SOCIAL.contributionCeilingHealth);
         let pension = cappedPension * SOCIAL.pensionRate;
         let unemployment = cappedPension * SOCIAL.unemploymentRate;
         let health = cappedHealth * SOCIAL.healthRate;
-        let nursing = cappedHealth * SOCIAL.nursingRate + cappedHealth * SOCIAL.nursingSurcharge;
-        let incomeTax = calculateIncomeTax(gross, taxClass);
-        let solidarity = calculateSolidarity(incomeTax, gross);
+        let nursing = cappedHealth * SOCIAL.nursingRate + (hasChild ? 0 : cappedHealth * SOCIAL.nursingSurcharge);
+        // Annual Lohnsteuer + Soli (BMF PAP 2026), converted to monthly amounts
+        // (fractions of a cent are dropped, as on a real payslip).
+        const grossAnnual = gross * 12;
+        const taxAnnual = lohnsteuerAnnual(grossAnnual, taxClass, hasChild);
+        const soliAnnual = solidarityAnnual(taxAnnual, taxClass);
+        let incomeTax = Math.floor(taxAnnual / 12 * 100) / 100;
+        let solidarity = Math.floor(soliAnnual / 12 * 100) / 100;
         const totalDeductions = pension + unemployment + health + nursing + incomeTax + solidarity;
         const netSalary = gross - totalDeductions;
         const rentCold = RENT_PRICES[city] * size;

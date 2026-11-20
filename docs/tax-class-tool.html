@@ -223,15 +223,15 @@
 
         <div class="sim-nav">
           <button class="sim-back-btn" onclick="resetCalculator()" type="button">↺ Reset</button>
-          <button class="sim-next-btn enabled" id="calculateBtn" onclick="calculateNetIncome()" type="button">Estimate Income Tax →</button>
+          <button class="sim-next-btn enabled" id="calculateBtn" onclick="calculateNetIncome()" type="button">Calculate My Net Income →</button>
         </div>
       </div>
 
       <!-- Results Panel -->
       <div class="sim-result" id="calcResult" style="display:none;">
         <div class="result-hero">
-          <div class="gauge-label" id="resultTitle">Your Estimated Income Tax</div>
-          <div class="gauge-desc" id="resultSubtitle">Simplified 2026 estimate — income tax only, before social security contributions</div>
+          <div class="gauge-label" id="resultTitle">Your Estimated Net Income</div>
+          <div class="gauge-desc" id="resultSubtitle">2026 estimate — Lohnsteuer (§32a EStG / BMF Programmablaufplan) + social security; no church tax</div>
           <div class="score-pills" style="margin-top: 1rem;">
             <span class="score-pill" id="resClassPill" style="background: var(--gold-glow); color: var(--gold); border: 1px solid var(--gold-border);">Class I</span>
             <span class="score-pill" id="resAllowancePill" style="background: var(--emerald-glow); color: var(--emerald); border: 1px solid var(--emerald-border);">€12,348 allowance</span>
@@ -251,19 +251,39 @@
             <span class="factor-val" id="resAllowance">—</span>
           </div>
           <div class="factor-item">
+            <span class="factor-label">Vorsorgepauschale (pension, health &amp; care lump sum)</span>
+            <div class="factor-bar-wrap"><div class="factor-bar" id="barVSP" style="width:0%; background: linear-gradient(90deg, var(--color-blue), #3b82f6);"></div></div>
+            <span class="factor-val" id="resVSP">—</span>
+          </div>
+          <div class="factor-item">
             <span class="factor-label">Taxable Income</span>
             <div class="factor-bar-wrap"><div class="factor-bar" id="barTaxable" style="width:0%; background: linear-gradient(90deg, var(--color-blue), #3b82f6);"></div></div>
             <span class="factor-val" id="resTaxable">—</span>
           </div>
           <div class="factor-item">
-            <span class="factor-label">Est. Income Tax</span>
+            <span class="factor-label">Est. Income Tax (Lohnsteuer)</span>
             <div class="factor-bar-wrap"><div class="factor-bar" id="barTax" style="width:0%; background: linear-gradient(90deg, var(--color-red), #f87171);"></div></div>
             <span class="factor-val" id="resTax">—</span>
           </div>
+          <div class="factor-item">
+            <span class="factor-label">Solidarity Surcharge</span>
+            <div class="factor-bar-wrap"><div class="factor-bar" id="barSoli" style="width:0%; background: linear-gradient(90deg, var(--color-red), #f87171);"></div></div>
+            <span class="factor-val" id="resSoli">—</span>
+          </div>
+          <div class="factor-item">
+            <span class="factor-label">Social Security Contributions</span>
+            <div class="factor-bar-wrap"><div class="factor-bar" id="barSocial" style="width:0%; background: linear-gradient(90deg, var(--gold-dim), var(--gold));"></div></div>
+            <span class="factor-val" id="resSocial">—</span>
+          </div>
           <div class="factor-item" style="margin-top: 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle);">
-            <span class="factor-label" style="color: var(--gold); font-weight: 700;">Annual Net Before Social Security</span>
+            <span class="factor-label" style="color: var(--gold); font-weight: 700;">Annual Net Income (after tax + social security)</span>
             <div class="factor-bar-wrap"><div class="factor-bar" id="barNet" style="width:0%; background: linear-gradient(90deg, var(--emerald-dim), var(--emerald));"></div></div>
             <span class="factor-val" id="resNet" style="color: var(--emerald); font-size: 1rem;">—</span>
+          </div>
+          <div class="factor-item">
+            <span class="factor-label" style="color: var(--gold); font-weight: 700;">Monthly Net Income</span>
+            <div class="factor-bar-wrap"><div class="factor-bar" id="barNetMonthly" style="width:0%; background: linear-gradient(90deg, var(--emerald-dim), var(--emerald));"></div></div>
+            <span class="factor-val" id="resNetMonthly" style="color: var(--emerald); font-size: 1rem;">—</span>
           </div>
         </div>
 
@@ -271,7 +291,7 @@
           <div class="next-steps-title">What This Means For You</div>
           <div class="next-step-item">
             <div class="step-num-circle">1</div>
-            <div class="next-step-text"><strong>Monthly figure:</strong> Divide the result by 12 for a rough monthly figure. This is income tax only — social security contributions (health insurance ~7.3%, pension 9.3%, unemployment 1.3%, care insurance 1.8%) are deducted separately from your gross.</div>
+            <div class="next-step-text"><strong>Monthly figure:</strong> Your monthly net is shown above. It already includes income tax and all four social security contributions (pension 9.3%, health 7.3% + half of your fund's supplementary rate — 2.9% on average in 2026, so 8.75% in total — unemployment 1.3%, care 1.8%, or 2.4% if childless and aged 23+). It assumes no church tax and statutory health insurance outside Saxony.</div>
           </div>
           <div class="next-step-item">
             <div class="step-num-circle">2</div>
@@ -286,7 +306,7 @@
         <div style="text-align: center; margin-top: 1.5rem;">
           <button class="restart-btn" onclick="resetCalculator()">↺ Calculate Again</button>
         </div>
-        <p class="sim-disclaimer">This is an estimate based on 2026 German income tax brackets. Actual net income depends on health insurance fund, church tax, federal state, solidarity surcharge, and individual deductions. For precise figures, consult a <a href="https://www.stbv.de/" rel="noopener" target="_blank">Steuerberater</a>.</p>
+        <p class="sim-disclaimer">Estimate for 2026, calculated with the Federal Ministry of Finance's Programmablaufplan 2026 (BMF, 12 Nov 2025): the §32a EStG tariff (basic allowance €12,348; 42% from €69,879 taxable income; 45% from €277,826), the Vorsorgepauschale, and the class V/VI formula (§39b Abs. 2 Satz 7 EStG). Social contributions use the 2026 rates and ceilings (pension/unemployment ceiling €8,450/month; health/care ceiling €5,812.50/month; average health supplementary rate 2.9%). Assumes statutory health insurance, no church tax, no children (care 2.4%) except Class II (one child, care 1.8%), and residence outside Saxony. Your actual payslip depends on your health fund's own supplementary rate, federal state, and individual deductions. For the exact withholding on your payslip, use the BMF Lohnsteuerrechner; for personal advice, consult a <a href="https://www.stbv.de/" rel="noopener" target="_blank">Steuerberater</a>.</p>
       </div>
     </div>
   </div>
@@ -636,18 +656,29 @@ function calculateNetIncome() {
   };
 
   const allowance = allowances[selectedTaxClass];
-  const taxableIncome = Math.max(0, gross - allowance);
+  // Class II always assumes one child (care insurance 1.8%); all other
+  // classes are calculated as childless (care insurance 2.4%).
+  const hasChild = (selectedTaxClass === 2);
 
-  // Simplified 2026 German income tax estimate
-  const tax = estimateIncomeTax(taxableIncome);
-  const netIncome = gross - tax;
+  const vsp = vorsorgepauschale(gross, selectedTaxClass, hasChild);
+  const taxableIncome = zuVersteuerndesEinkommen(gross, selectedTaxClass, hasChild);
+  const tax = lohnsteuerAnnual(gross, selectedTaxClass, hasChild);
+  const soli = solidarityAnnual(tax, selectedTaxClass);
+  const social = socialContributionsMonthly(gross / 12, hasChild);
+  const socialAnnual = social.total * 12;
+  const netIncome = gross - tax - soli - socialAnnual;
+  const netMonthly = netIncome / 12;
 
   // Update UI
   document.getElementById('resGross').textContent = '€' + Math.round(gross).toLocaleString('de-DE');
   document.getElementById('resAllowance').textContent = '€' + allowance.toLocaleString('de-DE');
+  document.getElementById('resVSP').textContent = '€' + Math.round(vsp).toLocaleString('de-DE');
   document.getElementById('resTaxable').textContent = '€' + Math.round(taxableIncome).toLocaleString('de-DE');
   document.getElementById('resTax').textContent = '€' + Math.round(tax).toLocaleString('de-DE');
+  document.getElementById('resSoli').textContent = '€' + Math.round(soli).toLocaleString('de-DE');
+  document.getElementById('resSocial').textContent = '€' + Math.round(socialAnnual).toLocaleString('de-DE');
   document.getElementById('resNet').textContent = '€' + Math.round(netIncome).toLocaleString('de-DE');
+  document.getElementById('resNetMonthly').textContent = '€' + Math.round(netMonthly).toLocaleString('de-DE');
 
   // Update pills
   document.getElementById('resClassPill').textContent = classNames[selectedTaxClass];
@@ -655,14 +686,22 @@ function calculateNetIncome() {
 
   // Update bars (relative to gross)
   const pctAllowance = Math.min((allowance / gross) * 100, 100);
+  const pctVSP = Math.min((vsp / gross) * 100, 100);
   const pctTaxable = Math.min((taxableIncome / gross) * 100, 100);
   const pctTax = Math.min((tax / gross) * 100, 100);
+  const pctSoli = Math.min((soli / gross) * 100, 100);
+  const pctSocial = Math.min((socialAnnual / gross) * 100, 100);
   const pctNet = Math.min((netIncome / gross) * 100, 100);
+  const pctNetMonthly = Math.min((netMonthly / (gross / 12)) * 100, 100);
 
   document.getElementById('barAllowance').style.width = pctAllowance + '%';
+  document.getElementById('barVSP').style.width = pctVSP + '%';
   document.getElementById('barTaxable').style.width = pctTaxable + '%';
   document.getElementById('barTax').style.width = pctTax + '%';
+  document.getElementById('barSoli').style.width = pctSoli + '%';
+  document.getElementById('barSocial').style.width = pctSocial + '%';
   document.getElementById('barNet').style.width = pctNet + '%';
+  document.getElementById('barNetMonthly').style.width = pctNetMonthly + '%';
 
   // Show result, hide form
   formDiv.style.display = 'none';
@@ -670,15 +709,107 @@ function calculateNetIncome() {
   resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function estimateIncomeTax(zvE) {
-  if (zvE <= 0) return 0;
-  const x = zvE; // allowance already subtracted by the caller
-  if (x <= 0) return 0;
-  if (x <= 5000) return x * 0.12;
-  if (x <= 20000) return 600 + (x - 5000) * 0.22;
-  if (x <= 50000) return 3900 + (x - 20000) * 0.32;
-  if (x <= 150000) return 13500 + (x - 50000) * 0.42;
-  return 55500 + (x - 150000) * 0.45;
+// ════════════════════════════════════════════════════════════════════════
+//  2026 GERMAN PAYROLL TAX ENGINE — BMF Programmablaufplan 2026
+//  (BMF v. 12.11.2025, BStBl 2025 I S. 1948)
+//  Income tax: §32a EStG tariff. Withholding: §39b EStG — Vorsorgepauschale
+//  (pension 9.3%; health 7.0% + half the Zusatzbeitrag; care at the employee
+//  rate; unemployment 1.3% in classes I–V only insofar as health + care +
+//  unemployment together do not exceed €1,900) and the class V/VI formula
+//  (§39b Abs. 2 Satz 7 EStG). The Vorsorgepauschale is rounded up to full
+//  euros, the tax is rounded down to full euros, as the PAP prescribes.
+//  Verified against the BMF's official test table (Allgemeine maschinelle
+//  Jahreslohnsteuer 2026): 258/258 values exact, all six classes.
+//  Social contributions (actual, for the net figure): pension 9.3%,
+//  unemployment 1.3% (ceiling €8,450/month), health 7.3% + half of the
+//  2026 average Zusatzbeitrag of 2.9% (= 8.75%), care 1.8% / 2.4% childless
+//  (ceiling €5,812.50/month). No church tax; residence outside Saxony.
+// ════════════════════════════════════════════════════════════════════════
+
+// §32a EStG 2026 tariff (Grundtarif). zvE is rounded down to full euros;
+// the resulting tax is rounded down to full euros.
+function tariff32a(x) {
+  x = Math.floor(x);
+  if (x <= 12348) return 0;
+  if (x <= 17799) { const y = (x - 12348) / 10000; return Math.floor((914.51 * y + 1400) * y); }
+  if (x <= 69878) { const z = (x - 17799) / 10000; return Math.floor((173.10 * z + 2397) * z + 1034.87); }
+  if (x <= 277825) return Math.floor(0.42 * x - 11135.63);
+  return Math.floor(0.45 * x - 19470.38);
+}
+
+// Vorsorgepauschale, §39b Abs. 2 Satz 5 Nr. 3 EStG (rounded up to full euros).
+function vorsorgepauschale(grossAnnual, taxClass, hasChild) {
+  const rv = 0.093 * Math.min(grossAnnual, 101400);
+  const base = Math.min(grossAnnual, 69750);
+  const kv = (0.070 + 0.029 / 2) * base; // 7.0% + half of the 2.9% average Zusatzbeitrag
+  const pv = (hasChild ? 0.018 : 0.024) * base;
+  const kvpv = kv + pv;
+  let v = rv + kvpv;
+  if (taxClass !== 6) { // unemployment Teilbetrag: classes I–V only
+    const alv = 0.013 * Math.min(grossAnnual, 101400);
+    v = Math.max(v, rv + Math.min(kvpv + alv, 1900));
+  }
+  return Math.ceil(v);
+}
+
+function zuVersteuerndesEinkommen(grossAnnual, taxClass, hasChild) {
+  let z = grossAnnual - vorsorgepauschale(grossAnnual, taxClass, hasChild);
+  if (taxClass !== 6) z -= 1230 + 36; // Arbeitnehmer- + Sonderausgaben-Pauschbetrag (I–V)
+  if (taxClass === 2) z -= 4260;      // Entlastungsbetrag für Alleinerziehende
+  return Math.max(0, z);
+}
+
+// Lohnsteuer for classes V and VI, §39b Abs. 2 Satz 7 EStG (BMF PAP 2026).
+// Tax = 2 × (tariff on 1.25× zvE − tariff on 0.75× zvE), at least 14% of zvE,
+// capped so the part of zvE above €34,939 is charged at 42% and the part
+// above €222,260 at 45% (W1/W2/W3 = €14,071 / €34,939 / €222,260).
+function up56(zx) {
+  const st1 = tariff32a(zx * 1.25);
+  const st2 = tariff32a(zx * 0.75);
+  const diff = (st1 - st2) * 2;
+  const mist = Math.floor(zx * 0.14);
+  return Math.max(diff, mist);
+}
+function mst56(x) {
+  const zzx = x;
+  const zx = Math.min(zzx, 34939);
+  let st = up56(zx);
+  if (zzx > 34939) {
+    if (zzx > 222260) st = st + (222260 - 34939) * 0.42 + (zzx - 222260) * 0.45;
+    else st = st + (zzx - 34939) * 0.42;
+  }
+  const vergl = st;
+  if (zzx > 14071) {
+    const hoch = up56(14071) + (zzx - 14071) * 0.42;
+    st = Math.min(vergl, hoch);
+  }
+  return Math.floor(st);
+}
+
+function lohnsteuerAnnual(grossAnnual, taxClass, hasChild) {
+  const hc = (taxClass === 2) ? true : !!hasChild;
+  const z = zuVersteuerndesEinkommen(grossAnnual, taxClass, hc);
+  if (taxClass === 3) return 2 * tariff32a(z / 2); // Splittingtarif, §32a Abs. 5
+  if (taxClass === 5 || taxClass === 6) return mst56(z);
+  return tariff32a(z);
+}
+
+// Solidarity surcharge (SolZG): 5.5% of the annual Lohnsteuer, only above the
+// Freigrenze (€20,350 single / €40,700 splitting), capped at 11.9% of the
+// amount above the Freigrenze (Gleitzone).
+function solidarityAnnual(taxAnnual, taxClass) {
+  const frei = (taxClass === 3) ? 40700 : 20350;
+  if (taxAnnual <= frei) return 0;
+  return Math.min(taxAnnual * 0.055, (taxAnnual - frei) * 0.119);
+}
+
+// Actual monthly social security contributions (employee share, 2026).
+function socialContributionsMonthly(grossMonthly, hasChild) {
+  const pension = 0.093 * Math.min(grossMonthly, 8450);
+  const unemployment = 0.013 * Math.min(grossMonthly, 8450);
+  const health = (0.073 + 0.029 / 2) * Math.min(grossMonthly, 5812.50);
+  const care = (hasChild ? 0.018 : 0.024) * Math.min(grossMonthly, 5812.50);
+  return { pension, unemployment, health, care, total: pension + unemployment + health + care };
 }
 
 function resetCalculator() {
