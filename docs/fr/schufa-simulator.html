@@ -30,7 +30,7 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Simulateur gratuit de score SCHUFA pour expatriés · ExpatScore.de" name="twitter:title"/>
 <meta content="6 questions. Estimation SCHUFA instantanée. Recommandations bancaires personnalisées." name="twitter:description"/>
-<link href="assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 <meta content="#080c10" name="theme-color"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Simulateur de score SCHUFA","url":"https://expatscore.de/fr/schufa-simulator","description":"Estimateur interactif du score SCHUFA pour les expatriés en Allemagne","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"ExpatScore.de"}}</script>
 <script type="application/ld+json">
@@ -294,7 +294,7 @@
 </svg>
 <div class="gauge-score-text">
 <div class="gauge-num" id="gaugeNum">—</div>
-<div class="gauge-max">/1000</div>
+<div class="gauge-max">/999</div>
 </div>
 </div>
 <div class="gauge-label" id="scoreLevelLabel">—</div>
@@ -327,7 +327,7 @@
     Le simulateur SCHUFA vous pose 6 questions rapides sur votre vie en Allemagne &mdash;
     depuis combien de temps vous y vivez, votre emploi, votre statut Anmeldung, vos comptes
     bancaires, votre historique de paiement et votre historique de crédit. Selon vos réponses, il
-    estime une fourchette de score SCHUFA (affichée sur l'échelle 0&ndash;1000 de cet outil) et
+    estime une fourchette de score SCHUFA (affichée sur l'échelle 0&ndash;999 de cet outil) et
     recommande les comptes bancaires allemands qui correspondent le mieux à votre profil actuel.
   </p>
   <p>
@@ -519,7 +519,7 @@ var BANKS = {
     ctaStyle: 'teal-cta',
     fee: 'Gratuit pour toujours',
     time: 'Configuration en 8 min',
-    schufa: 'Aucune vérification SCHUFA',
+    schufa: 'Aucun score SCHUFA requis',
     features: ['Aucune SCHUFA requise', 'VideoIdent — 100 % en ligne', 'Application en anglais', 'Mastercard gratuite', 'Numéro de compte instantané'],
     why: 'Le premier compte de référence pour les expatriés. S\'ouvre entièrement en ligne avec juste votre passeport et un appel vidéo de 5 minutes — aucune adresse allemande requise pour postuler.'
   },
@@ -541,11 +541,11 @@ var BANKS = {
     url: '#bunq-affiliate',
     cta: 'Essayer Bunq gratuitement',
     ctaStyle: '',
-    fee: '3 mois d\'essai gratuit',
+    fee: 'Essai gratuit de 30 jours',
     time: 'Configuration en 5 min',
     schufa: 'Aucune SCHUFA requise',
     features: ['Aucune vérification SCHUFA', 'Ouverture 100 % en ligne', 'Aucune Anmeldung requise pour postuler', 'Banque néerlandaise — protection des dépôts de l\'UE', 'Application multilingue'],
-    why: 'Banque néerlandaise avec 3 mois d\'essai gratuit. Idéale pour ceux qui ne sont pas encore enregistrés en Allemagne — aucune Anmeldung requise pour ouvrir le compte.'
+    why: 'Banque néerlandaise avec un essai gratuit de 30 jours. Idéale pour ceux qui ne sont pas encore enregistrés en Allemagne — aucune Anmeldung requise pour ouvrir le compte.'
   },
   dkb: {
     name: 'DKB — Deutsche Kreditbank',
@@ -568,8 +568,8 @@ var BANKS = {
     fee: 'Compte de base gratuit',
     time: 'Approbation le jour même',
     schufa: 'Vérification SCHUFA de base',
-    features: ['Exigences SCHUFA souples', 'Inscription entièrement numérique', 'Interface en anglais disponible', 'IBAN allemand émis instantanément', 'Carte de débit Visa gratuite'],
-    why: 'Lancée en 2023 — C24 a les exigences SCHUFA les plus souples de toutes les banques allemandes réglementées. Excellent choix pour ceux qui ont 3 à 12 mois d\'historique.'
+    features: ['Exigences SCHUFA souples', 'Inscription entièrement numérique', 'Application en allemand uniquement (assistance téléphonique en anglais)', 'IBAN allemand émis instantanément', 'Carte de débit Visa gratuite'],
+    why: 'Lancée en 2020 — C24 a les exigences SCHUFA les plus souples de toutes les banques allemandes réglementées. Excellent choix pour ceux qui ont 3 à 12 mois d\'historique.'
   },
   ing: {
     name: 'ING Germany',
@@ -577,10 +577,10 @@ var BANKS = {
     url: '#ing-affiliate',
     cta: 'Postuler chez ING',
     ctaStyle: 'teal-cta',
-    fee: 'Gratuit pour toujours',
+    fee: 'Gratuit avec 1 000 €/mois de revenus entrants',
     time: 'Approbation en 3–7 jours',
     schufa: 'Vérification SCHUFA complète',
-    features: ['Aucun frais mensuel, jamais', 'Plus haute satisfaction client en Allemagne', 'Exigence de revenu de 1 500 €/mois', 'Passage instantané à la carte de crédit', 'Suite bancaire allemande complète'],
+    features: ['Gratuit avec 1 000 €/mois de revenus entrants (sinon 4,90 €/mois)', 'Plus haute satisfaction client en Allemagne', 'Exigence de revenu de 1 000 €/mois', 'Passage instantané à la carte de crédit', 'Suite bancaire allemande complète'],
     why: 'La référence. La banque la mieux notée d\'Allemagne en satisfaction client — débloquée une fois que vous avez construit un historique SCHUFA solide. Ça vaut l\'attente.'
   },
   comdirect: {
@@ -592,7 +592,7 @@ var BANKS = {
     fee: 'Gratuit avec activité',
     time: 'Approbation en 5–7 jours',
     schufa: 'Vérification SCHUFA complète',
-    features: ['Gratuit avec 2 transactions/mois', 'Intégration épargne et ETF', 'Type de compte qui construit la SCHUFA', 'Visa et Mastercard', 'Excellente application mobile'],
+    features: ['Gratuit avec 700 € entrants, 3 paiements mobiles ou 1 ordre/mois (sinon 4,90 €/mois)', 'Intégration épargne et ETF', 'Type de compte qui construit la SCHUFA', 'Visa et Mastercard', 'Excellente application mobile'],
     why: 'Le compte compagnon idéal pour l\'épargne et l\'investissement en ETF. Comdirect s\'associe parfaitement à ING pour les expatriés qui construisent leur vie financière en Allemagne.'
   },
   commerzbank: {
@@ -601,7 +601,7 @@ var BANKS = {
     url: '#commerzbank-affiliate',
     cta: 'Ouvrir Commerzbank',
     ctaStyle: 'teal-cta',
-    fee: '9,90 €/mois (ou gratuit)',
+    fee: '4,90 €/mois (3 premiers mois gratuits)',
     time: 'Approbation en 2–5 jours',
     schufa: 'Vérification SCHUFA complète',
     features: ['Réseau d\'agences national', 'Options de cartes de crédit premium', 'Excellent accès au prêt immobilier', 'Compte professionnel disponible', 'Suite bancaire complète'],
@@ -757,7 +757,7 @@ function animateCardIn() {
 function computeScore() {
   var raw = 0;
   var factors = {};
-  var RAW_MIN = -150;
+  var RAW_MIN = -75;
   var RAW_MAX = 770;
 
   QUESTIONS.forEach(function(q) {
@@ -771,7 +771,7 @@ function computeScore() {
     }
   });
 
-  var normalised = Math.max(0, Math.min(1000, Math.round((raw - RAW_MIN) / (RAW_MAX - RAW_MIN) * 1000)));
+  var normalised = Math.max(0, Math.min(999, Math.round((raw - RAW_MIN) / (RAW_MAX - RAW_MIN) * 999)));
   return { raw: raw, normalised: normalised, factors: factors };
 }
 
@@ -789,9 +789,9 @@ function getBankRecs(n, factors) {
 
   if (n < 300 || dur === 'new' || acc === 'none') {
     return [
-      Object.assign({}, BANKS.n26,  { rank: 1, why: 'Aucune vérification SCHUFA requise. S\'ouvre entièrement en ligne avec VideoIdent en 8 minutes — juste votre passeport. Chaque mois d\'ouverture construit votre historique SCHUFA.' }),
+      Object.assign({}, BANKS.n26,  { rank: 1, why: 'Aucun score SCHUFA requis. S\'ouvre entièrement en ligne avec VideoIdent en 8 minutes — juste votre passeport. Chaque mois d\'ouverture construit votre historique SCHUFA.' }),
       Object.assign({}, BANKS.vivid, { rank: 2, why: 'Aucune vérification de crédit, pochettes multidevises et cashback. Idéal comme compte quotidien pendant que vous construisez votre SCHUFA avec N26.' }),
-      Object.assign({}, BANKS.bunq,  { rank: 3, why: '3 mois d\'essai gratuit et aucune Anmeldung requise pour postuler. Excellente option de secours si votre Anmeldung est encore en cours de traitement.' })
+      Object.assign({}, BANKS.bunq,  { rank: 3, why: 'Essai gratuit de 30 jours et aucune Anmeldung requise pour postuler. Excellente option de secours si votre Anmeldung est encore en cours de traitement.' })
     ];
   }
   if (n < 560) {
@@ -809,7 +809,7 @@ function getBankRecs(n, factors) {
     ];
   }
   return [
-    Object.assign({}, BANKS.ing,         { rank: 1, why: 'Votre score débloque la meilleure banque gratuite d\'Allemagne. ING est le compte de destination pour les expatriés établis — meilleures conditions, aucun frais, satisfaction la plus élevée.' }),
+    Object.assign({}, BANKS.ing,         { rank: 1, why: 'Votre score débloque la meilleure banque gratuite d\'Allemagne. ING est le compte de destination pour les expatriés établis — meilleures conditions, gratuite avec 1 000 €/mois de revenus entrants, satisfaction la plus élevée.' }),
     Object.assign({}, BANKS.comdirect,   { rank: 2, why: 'Le compagnon idéal pour construire votre patrimoine. Les fonctionnalités ETF et épargne de Comdirect sont inégalées parmi les comptes allemands gratuits — associez-le à ING.' }),
     Object.assign({}, BANKS.commerzbank, { rank: 3, why: 'Vous êtes désormais éligible aux produits premium de Commerzbank. Pensez-y si vous avez besoin d\'un réseau d\'agences, d\'un compte professionnel, ou si vous prévoyez un prêt immobilier.' })
   ];
@@ -903,7 +903,7 @@ function showResult(result) {
 function animateGauge(score, profile) {
   var ARC_LEN = 251.3;
   var R = 80, cx = 100, cy = 110;
-  var pct = score / 1000;
+  var pct = score / 999;
   var offset = ARC_LEN * (1 - pct);
 
   var fill = document.getElementById('gaugeFill');
@@ -1032,9 +1032,6 @@ function restartQuiz() {
 /* ============================================================
    UTILITIES
    ============================================================ */
-var nt = document.getElementById('navToggle');
-var nl = document.getElementById('navLinks');
-if (nt && nl) nt.addEventListener('click', function() { nl.classList.toggle('open'); });
 
 window.addEventListener('scroll', function() {
   var el = document.getElementById('progressBar');

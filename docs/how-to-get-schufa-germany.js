@@ -70,14 +70,14 @@ var QUESTIONS = [
 ];
 
 var BANKS = {
-  n26:         { name: 'N26 Standard',      tagline: 'Germany\'s most expat-friendly digital bank',                       url: 'https://n26.com/r/expatscore', cta: 'Open N26 free',       ctaStyle: 'teal-cta', fee: 'Free forever',          time: '8 min setup',         schufa: 'No SCHUFA check',   features: ['No SCHUFA required','VideoIdent — fully online','English app interface','Free Mastercard','Instant account number'],                          why: 'The go-to first account for expats. Opens fully online with just your passport and a 5-minute video call — no German address required to apply.' },
+  n26:         { name: 'N26 Standard',      tagline: 'Germany\'s most expat-friendly digital bank',                       url: 'https://n26.com/r/expatscore', cta: 'Open N26 free',       ctaStyle: 'teal-cta', fee: 'Free forever',          time: '8 min setup',         schufa: 'No SCHUFA score required',   features: ['No SCHUFA required','VideoIdent — fully online','English app interface','Free Mastercard','Instant account number'],                          why: 'The go-to first account for expats. Opens fully online with just your passport and a 5-minute video call — no German address required to apply.' },
   vivid:       { name: 'Vivid Money',        tagline: 'Multi-currency account for international professionals',            url: '#vivid-affiliate',             cta: 'Open Vivid free',     ctaStyle: '',         fee: 'Free plan available',   time: '10 min setup',        schufa: 'No SCHUFA check',   features: ['No SCHUFA check','Multi-currency pockets','Cashback on purchases','English support','EU + non-EU accepted'],                                    why: 'Excellent as a second account for multi-currency management, cashback, and salary deposits from international employers.' },
-  bunq:        { name: 'Bunq',               tagline: 'International-first bank built for people who move',               url: '#bunq-affiliate',              cta: 'Try Bunq free',       ctaStyle: '',         fee: '3 months free trial',   time: '5 min setup',         schufa: 'No SCHUFA required',features: ['No SCHUFA check','100% online opening','No Anmeldung needed to apply','Dutch bank — EU deposit protection','Multi-language app'],          why: 'Dutch bank with a 3-month free trial. Ideal for those not yet registered in Germany — no Anmeldung required to open the account.' },
+  bunq:        { name: 'Bunq',               tagline: 'International-first bank built for people who move',               url: '#bunq-affiliate',              cta: 'Try Bunq free',       ctaStyle: '',         fee: '30-day free trial',   time: '5 min setup',         schufa: 'No SCHUFA required',features: ['No SCHUFA check','100% online opening','No Anmeldung needed to apply','Dutch bank — EU deposit protection','Multi-language app'],          why: 'Dutch bank with a 30-day free trial. Ideal for those not yet registered in Germany — no Anmeldung required to open the account.' },
   dkb:         { name: 'DKB — Deutsche Kreditbank', tagline: 'Germany\'s most trusted online bank for settled expats',   url: '#dkb-affiliate',               cta: 'Apply for DKB',       ctaStyle: 'teal-cta', fee: 'Free with conditions',  time: '3–5 day approval',    schufa: 'Soft SCHUFA check', features: ['Free with €700+/mo income','VISA card accepted worldwide','Excellent customer service','German IBAN instantly','PostIdent or VideoIdent'],    why: 'The expat community\'s favourite bank for a reason. Accepts newcomers with basic history and provides the most reliable full-service German banking experience.' },
-  c24:         { name: 'C24 Bank',           tagline: 'New generation German bank — more lenient than traditional options',url: '#c24-affiliate',              cta: 'Open C24 account',    ctaStyle: '',         fee: 'Free basic account',    time: 'Same-day approval',   schufa: 'Basic SCHUFA check',features: ['Lenient SCHUFA requirements','Fully digital onboarding','English interface available','German IBAN issued instantly','Free Visa debit card'], why: 'Launched 2023 — C24 has the most flexible SCHUFA requirements of any regulated German bank. Strong choice for those with 3–12 months of history.' },
-  ing:         { name: 'ING Germany',        tagline: 'Top-rated free German current account — best for established expats',url: '#ing-affiliate',             cta: 'Apply for ING',       ctaStyle: 'teal-cta', fee: 'Free forever',          time: '3–7 day approval',    schufa: 'Full SCHUFA check', features: ['No monthly fee ever','Highest German customer satisfaction','€1,500/mo income requirement','Instant credit card upgrade path','Full German banking suite'], why: 'The gold standard. Germany\'s highest-rated bank by customer satisfaction — unlocked once you\'ve built solid SCHUFA history. Worth the wait.' },
-  comdirect:   { name: 'Comdirect',          tagline: 'Full-service bank for expats building long-term wealth in Germany', url: '#comdirect-affiliate',        cta: 'Open Comdirect',      ctaStyle: '',         fee: 'Free with activity',    time: '5–7 day approval',    schufa: 'Full SCHUFA check', features: ['Free with 2 transactions/month','Savings and ETF integration','SCHUFA-building account type','Visa and Mastercard','Strong mobile banking app'],    why: 'The ideal companion account for savings and ETF investing. Pairs perfectly with ING for expats building long-term financial life in Germany.' },
-  commerzbank: { name: 'Commerzbank',        tagline: 'Germany\'s second-largest bank — full premium service',            url: '#commerzbank-affiliate',      cta: 'Open Commerzbank',    ctaStyle: 'teal-cta', fee: '€9.90/mo (or free)',    time: '2–5 day approval',    schufa: 'Full SCHUFA check', features: ['Nationwide branch network','Premium credit card options','Excellent mortgage access','Business account available','Full banking suite'],             why: 'For expats with excellent SCHUFA who want a traditional German bank with branches, face-to-face service, and access to mortgages and premium credit.' }
+  c24:         { name: 'C24 Bank',           tagline: 'New generation German bank — more lenient than traditional options',url: '#c24-affiliate',              cta: 'Open C24 account',    ctaStyle: '',         fee: 'Free basic account',    time: 'Same-day approval',   schufa: 'Basic SCHUFA check',features: ['Lenient SCHUFA requirements','Fully digital onboarding','German-only app (English phone support)','German IBAN issued instantly','Free Visa debit card'], why: 'Launched 2020 — C24 has the most flexible SCHUFA requirements of any regulated German bank. Strong choice for those with 3–12 months of history.' },
+  ing:         { name: 'ING Germany',        tagline: 'Top-rated free German current account — best for established expats',url: '#ing-affiliate',             cta: 'Apply for ING',       ctaStyle: 'teal-cta', fee: 'Free with €1,000/mo incoming', time: '3–7 day approval',    schufa: 'Full SCHUFA check', features: ['Free with €1,000/mo incoming (else €4.90/mo)','Highest German customer satisfaction','€1,000/mo income requirement','Instant credit card upgrade path','Full German banking suite'], why: 'The gold standard. Germany\'s highest-rated bank by customer satisfaction — unlocked once you\'ve built solid SCHUFA history. Worth the wait.' },
+  comdirect:   { name: 'Comdirect',          tagline: 'Full-service bank for expats building long-term wealth in Germany', url: '#comdirect-affiliate',        cta: 'Open Comdirect',      ctaStyle: '',         fee: 'Free with activity',    time: '5–7 day approval',    schufa: 'Full SCHUFA check', features: ['Free with €700 incoming, 3 mobile payments, or 1 trade/mo (else €4.90/mo)','Savings and ETF integration','SCHUFA-building account type','Visa and Mastercard','Strong mobile banking app'],    why: 'The ideal companion account for savings and ETF investing. Pairs perfectly with ING for expats building long-term financial life in Germany.' },
+  commerzbank: { name: 'Commerzbank',        tagline: 'Germany\'s second-largest bank — full premium service',            url: '#commerzbank-affiliate',      cta: 'Open Commerzbank',    ctaStyle: 'teal-cta', fee: '€4.90/mo (first 3 months free)',    time: '2–5 day approval',    schufa: 'Full SCHUFA check', features: ['Nationwide branch network','Premium credit card options','Excellent mortgage access','Business account available','Full banking suite'],             why: 'For expats with excellent SCHUFA who want a traditional German bank with branches, face-to-face service, and access to mortgages and premium credit.' }
 };
 
 /* ============================================================
@@ -239,7 +239,7 @@ function animateCardIn() {
 function computeScore() {
   var raw = 0;
   var factors = {};
-  var RAW_MIN = -150, RAW_MAX = 770;
+  var RAW_MIN = -75, RAW_MAX = 770;
 
   QUESTIONS.forEach(function(q) {
     var idx = simAnswers[q.id];
@@ -252,7 +252,7 @@ function computeScore() {
     }
   });
 
-  var normalised = Math.max(0, Math.min(1000, Math.round((raw - RAW_MIN) / (RAW_MAX - RAW_MIN) * 1000)));
+  var normalised = Math.max(0, Math.min(999, Math.round((raw - RAW_MIN) / (RAW_MAX - RAW_MIN) * 999)));
   return { raw: raw, normalised: normalised, factors: factors };
 }
 
@@ -260,7 +260,7 @@ function getScoreProfile(n) {
   if (n >= 776) return { level: 'Excellent',      color: '#00c4a7', desc: 'Your SCHUFA profile is in the highest class — Excellent, the class held by around 62% of people in Germany. German banks will actively compete for your business. You qualify for credit, mortgages, and premium accounts without issue.',                                                                                                     pills: ['Held by ~62% of people', 'All accounts available', 'Mortgage-eligible'] };
   if (n >= 709) return { level: 'Good',            color: '#3ecf8e', desc: 'Strong SCHUFA profile — the Good class. You qualify for virtually all German bank accounts, most credit cards, and many personal loans. Keep your current behaviour to reach Excellent.',                                                                                                         pills: ['Most loans accessible', 'Credit cards available', 'Keep building'] };
   if (n >= 642) return { level: 'Acceptable',      color: '#c9a84c', desc: 'You are in the Acceptable class — a solid foundation with room to grow. You can open most accounts and some credit products. A longer banking history and zero missed payments will push you into the Good class.',                                                                                                               pills: ['Standard accounts open', 'Some credit accessible', 'Growth phase'] };
-  if (n >= 100) return { level: 'Sufficient',      color: '#e8724a', desc: 'Your SCHUFA sits in the Sufficient class — the widest class, and where most newcomers start. Banks see elevated risk, so credit products are limited for now, and several banks operate without SCHUFA checks at all. Open one today: consistent on-time payments are what move you up.',                                                             pills: ['Elevated risk class', 'No-SCHUFA banks first', 'Build history now'] };
+  if (n >= 100) return { level: 'Satisfactory',      color: '#e8724a', desc: 'Your SCHUFA sits in the Satisfactory class — the widest class, and where most newcomers start. Banks see elevated risk, so credit products are limited for now, and several banks operate without SCHUFA checks at all. Open one today: consistent on-time payments are what move you up.',                                                             pills: ['Elevated risk class', 'No-SCHUFA banks first', 'Build history now'] };
   return               { level: 'No SCHUFA Data', color: '#f26d6d', desc: 'You have no SCHUFA history yet — which is completely normal. SCHUFA doesn\'t exist in most countries outside Germany. Several banks specifically welcome newcomers without any credit check at all.',                                                                               pills: ['No record — yet', 'Perfect starting point', 'Multiple banks for you'] };
 }
 
@@ -270,7 +270,7 @@ function getBankRecs(n, factors) {
 
   if (n < 300 || dur === 'new' || acc === 'none') {
     return [
-      Object.assign({}, BANKS.n26,   { rank: 1, why: 'No SCHUFA check required. Opens fully online with VideoIdent in 8 minutes — just your passport needed. Every month it\'s open builds your SCHUFA history.' }),
+      Object.assign({}, BANKS.n26,   { rank: 1, why: 'No SCHUFA score required. Opens fully online with VideoIdent in 8 minutes — just your passport needed. Every month it\'s open builds your SCHUFA history.' }),
       Object.assign({}, BANKS.vivid, { rank: 2, why: 'No credit check, multi-currency pockets, and cashback. Ideal as a day-to-day account while you build SCHUFA through N26.' }),
       Object.assign({}, BANKS.bunq,  { rank: 3, why: '3-month free trial and no Anmeldung required to apply. Great backup option if your Anmeldung is still processing.' })
     ];
@@ -290,7 +290,7 @@ function getBankRecs(n, factors) {
     ];
   }
   return [
-    Object.assign({}, BANKS.ing,         { rank: 1, why: 'Your score unlocks Germany\'s best-rated free bank. ING is the destination account for established expats — best conditions, no fees, highest satisfaction.' }),
+    Object.assign({}, BANKS.ing,         { rank: 1, why: 'Your score unlocks Germany\'s best-rated free bank. ING is the destination account for established expats — best conditions, free with €1,000/mo incoming, highest satisfaction.' }),
     Object.assign({}, BANKS.comdirect,   { rank: 2, why: 'The ideal wealth-building companion. Comdirect\'s ETF and savings features are unmatched among free German accounts — pair it with ING.' }),
     Object.assign({}, BANKS.commerzbank, { rank: 3, why: 'You now qualify for premium Commerzbank products. Consider this if you need a branch network, business account, or are planning a mortgage.' })
   ];
@@ -389,7 +389,7 @@ function showResult(result) {
 function animateGauge(score, profile) {
   var ARC_LEN = 251.3;
   var R = 80, cx = 100, cy = 110;
-  var pct = score / 1000;
+  var pct = score / 999;
   var offset = ARC_LEN * (1 - pct);
 
   var fill = document.getElementById('gaugeFill');
@@ -566,14 +566,25 @@ if (nt && nl) nt.addEventListener('click', function() { nl.classList.toggle('ope
 /* FAQ accordion */
 function toggleFaq(btn) {
   var answer = btn.nextElementSibling;
+  var icon = btn.querySelector('.faq-icon');
+  var item = btn.closest('.faq-item');
   var isOpen = btn.getAttribute('aria-expanded') === 'true';
   document.querySelectorAll('.faq-q').forEach(function(b) {
     b.setAttribute('aria-expanded', 'false');
-    if (b.nextElementSibling) b.nextElementSibling.classList.remove('open');
+    var p = b.closest('.faq-item');
+    if (p) p.classList.remove('open');
+    var ic = b.querySelector('.faq-icon');
+    if (ic) ic.textContent = '+';
   });
-  if (!isOpen) {
+  if (isOpen) {
+    btn.setAttribute('aria-expanded', 'false');
+    if (item) item.classList.remove('open');
+    if (icon) icon.textContent = '+';
+  } else {
     btn.setAttribute('aria-expanded', 'true');
-    answer.classList.add('open');
+    if (item) item.classList.add('open');
+    if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+    if (icon) icon.textContent = '\u2212';
   }
 }
 

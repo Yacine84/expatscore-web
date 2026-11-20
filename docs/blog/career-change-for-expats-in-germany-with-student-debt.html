@@ -476,5 +476,34 @@
       document.querySelector('.nav-links')?.classList.toggle('open');
     });
   </script>
+<script>
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var icon = btn.querySelector('.faq-icon');
+  var item = btn.closest('.faq-item');
+  var isOpen = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.faq-q[aria-expanded="true"]').forEach(function(b) {
+    if (b !== btn) {
+      b.setAttribute('aria-expanded', 'false');
+      if (b.nextElementSibling) b.nextElementSibling.style.maxHeight = null;
+      var p = b.closest('.faq-item');
+      if (p) p.classList.remove('open');
+      var ic = b.querySelector('.faq-icon');
+      if (ic) ic.textContent = '+';
+    }
+  });
+  if (isOpen) {
+    btn.setAttribute('aria-expanded', 'false');
+    if (answer) answer.style.maxHeight = null;
+    if (item) item.classList.remove('open');
+    if (icon) icon.textContent = '+';
+  } else {
+    btn.setAttribute('aria-expanded', 'true');
+    if (item) item.classList.add('open');
+    if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+    if (icon) icon.textContent = '\u2212';
+  }
+}
+</script>
 </body>
 </html>

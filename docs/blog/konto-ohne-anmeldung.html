@@ -1189,8 +1189,6 @@ window.addEventListener('scroll', function(){
   if(!el) return;
   el.style.width = Math.min(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100,100)+'%';
 });
-var nt=document.getElementById('navToggle'),nl=document.getElementById('navLinks');
-if(nt&&nl) nt.addEventListener('click',function(){ nl.classList.toggle('open'); });
 function openModal(id){ var m=document.getElementById('modal-'+id); if(m) m.classList.add('open'); }
 function closeModal(id){ var m=document.getElementById('modal-'+id); if(m) m.classList.remove('open'); }
 function hideBanner(){ var b=document.getElementById('cookie-banner'); if(b) b.classList.remove('visible'); }

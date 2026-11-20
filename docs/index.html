@@ -420,8 +420,8 @@
 <p class="sim-q-hint" id="qHint"></p>
 <div class="sim-options" id="optionsList"></div>
 <div class="sim-nav">
-<button class="sim-back-btn" id="backBtn" style="visibility:hidden">← Back</button>
-<button class="sim-next-btn" id="nextBtn">Continue →</button>
+<button class="sim-back-btn" id="backBtn" style="visibility:hidden" onclick="goBack()">← Back</button>
+<button class="sim-next-btn" id="nextBtn" onclick="goNext()">Continue →</button>
 </div>
 </div>
 <div class="trust-mini">
@@ -434,7 +434,7 @@
 <div class="sim-calculating" id="calcScreen">
 <div class="calc-spinner"></div>
 <div class="calc-text">Analysing your profile…</div>
-<div class="calc-sub">Checking against 6 SCHUFA factors</div>
+<div class="calc-sub">Checking your profile against the SCHUFA criteria</div>
 <div class="calc-steps">
 <div class="calc-step" id="cs1">Checking residence duration</div>
 <div class="calc-step" id="cs2">Assessing employment signal</div>
@@ -464,7 +464,7 @@
 </svg>
 <div class="gauge-score-text">
 <div class="gauge-num" id="gaugeNum">—</div>
-<div class="gauge-max">/1000</div>
+<div class="gauge-max">/999</div>
 </div>
 </div>
 <div class="gauge-label" id="scoreLevelLabel">—</div>
@@ -474,7 +474,7 @@
 <div class="factors-card">
 <div class="factors-title">Your score factor breakdown</div>
 <div id="factorBars"></div>
-<p style="font-size:.8rem;color:var(--text-muted);margin-top:1rem;line-height:1.6">SCHUFA weights these six factors when calculating your score. Each bar shows how your profile performs on that dimension.</p>
+<p style="font-size:.8rem;color:var(--text-muted);margin-top:1rem;line-height:1.6">These six answers are this tool's estimate of how your profile maps onto SCHUFA's 12 published criteria. Each bar shows how your profile performs on that dimension. <a href="/blog/how-to-get-schufa-germany" style="color:var(--emerald)">See the 12 criteria explained →</a></p>
 </div>
 <div id="recommendationsSection">
 <div class="banks-title" id="recoTitle">Recommended for your profile</div>
@@ -482,7 +482,7 @@
 <div class="bank-cards" id="bankCards"></div>
 </div>
 <div class="next-steps-card" id="nextStepsCard"></div>
-<button class="restart-btn">↻ Restart simulator</button>
+<button class="restart-btn" onclick="restartQuiz()">↻ Restart simulator</button>
 <p class="sim-disclaimer">
 <strong>Note:</strong> This simulator provides an estimated SCHUFA score range for information purposes. It is not an official SCHUFA rating — the actual calculation is performed exclusively by SCHUFA Holding AG. Not a substitute for individual financial advice.
            ·  <a href="/affiliate-hinweis">Affiliate disclosure</a>
