@@ -460,7 +460,7 @@ function renderBanks(banks, profile, score) {
   if (rt) rt.textContent = score < 300 ? 'Best accounts for your situation \u2014 no SCHUFA required' : 'Top-rated accounts for your SCHUFA profile';
   if (rs) rs.textContent = score < 300
     ? 'These banks do not run a SCHUFA check and actively welcome newcomers. Open any of them today \u2014 it counts immediately towards building your history.'
-    : 'Ranked by fit with your current SCHUFA profile. All links are affiliate \u2014 we may earn a small commission at no cost to you.';
+    : 'Ranked by fit with your current SCHUFA profile. Links go directly to the providers \u2014 we earn no commission, except a possible referral bonus via our N26 invite link.';
 
   var container = document.getElementById('bankCards');
   if (!container) return;
