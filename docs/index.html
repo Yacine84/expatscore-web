@@ -36,16 +36,11 @@
 <meta content="Banking, Insurance &amp; SCHUFA Guides for Expats in Germany" property="og:title"/>
 <meta content="Practical English guides and free tools for expats in Germany: open a bank account, build your SCHUFA score, choose health insurance and sort out admin." property="og:description"/>
 <meta content="Practical English guides and free tools for expats in Germany: open a bank account, build your SCHUFA score, choose health insurance and sort out admin." name="twitter:description"/>
-<meta content="https://expatscore.de/og-image.png" property="og:image"/>
-<meta content="1200" property="og:image:width"/>
-<meta content="630" property="og:image:height"/>
-<meta content="image/png" property="og:image:type"/>
 <!-- BRANDING TWITTER (PNG) -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Banking, Insurance &amp; SCHUFA Guides for Expats in Germany" name="twitter:title"/>
-<meta content="https://expatscore.de/og-image.png" name="twitter:image"/>
 <!-- Additional OG (locale, site_name) – kept as they are not replaced -->
-<meta content="de_DE" property="og:locale"/>
+<meta content="en_US" property="og:locale"/>
 <meta content="ExpatScore.de" property="og:site_name"/>
 <meta content="#0a0e17" name="theme-color"/>
 <!-- Schema -->
@@ -323,7 +318,7 @@
       .tax-cta-links { flex-direction: column; align-items: center; }
     }
   </style>
-</meta><base target="_blank">
+</meta>
 </head>
 <body>
 <div class="progress-bar" id="progressBar"></div>
@@ -356,7 +351,7 @@
 <div aria-hidden="true" class="hero-orb hero-orb-1"></div>
 <div aria-hidden="true" class="hero-orb hero-orb-2"></div>
 <div class="hero-inner">
-<span class="hero-eyebrow">Germany's #1 Financial Guide for Expats · 2026</span>
+<span class="hero-eyebrow">Independent Financial Guides for Expats · 2026</span>
 <h1 class="hero-h1">Banking, Insurance &amp; SCHUFA Guides for Expats in Germany</h1>
 <p class="hero-sub">Free interactive tools and step-by-step guides for expats in Germany: check your SCHUFA score, open the right bank account, choose health insurance and sort your taxes — from day one to decade one.</p>
 <div class="hero-ctas">
@@ -365,12 +360,12 @@
 </div>
 <div class="hero-stats">
 <div class="hero-stat">
-<span class="hero-stat-num">23</span>
+<span class="hero-stat-num">25</span>
 <span class="hero-stat-label">Expert Guides</span>
 </div>
 <div aria-hidden="true" class="hero-stat-divider"></div>
 <div class="hero-stat">
-<span class="hero-stat-num">4</span>
+<span class="hero-stat-num">5</span>
 <span class="hero-stat-label">Interactive Tools</span>
 </div>
 <div aria-hidden="true" class="hero-stat-divider"></div>
@@ -696,7 +691,7 @@
 <td>German IBAN (DE…)</td>
 <td class="col-highlight"><span class="pt-check">✓</span></td>
 <td><span class="pt-check">✓</span></td>
-<td><span class="pt-cross">✗</span></td>
+<td><span class="pt-check">✓</span></td>
 <td><span class="pt-cross">✗</span></td>
 </tr>
 <tr>
@@ -717,13 +712,13 @@
 <td>Monthly cost</td>
 <td class="col-highlight"><span class="pt-val pt-val-best">0 €</span></td>
 <td><span class="pt-val pt-val-best">0 €</span></td>
-<td><span class="pt-val">0–9,99 €</span></td>
+<td><span class="pt-val">0–65 €</span></td>
 <td><span class="pt-val">0 €</span></td>
 </tr>
 <tr>
 <td>Free ATM withdrawals/month</td>
 <td class="col-highlight"><span class="pt-val">2×</span></td>
-<td><span class="pt-val pt-val-best">Unlimited</span></td>
+<td><span class="pt-val pt-val-best">Unlimited*</span></td>
 <td><span class="pt-val">€200 limit</span></td>
 <td><span class="pt-val">2×</span></td>
 </tr>
@@ -744,6 +739,7 @@
 </tbody>
 </table>
 </div>
+<p style="font-size:.8rem;color:var(--text-muted);margin-top:.5rem;">* DKB free withdrawals require Aktivstatus (€700+/mo incoming, or under 28); otherwise a €4.50/mo account fee applies. Revolut plans range from free (Standard) to €65/mo (Ultra).</p>
 </div>
 <!-- ═══════════════════════════ FAQ ══════════════════════════════════════════ -->
 <section aria-label="Frequently asked questions" class="faq-section section" id="faq">
@@ -931,10 +927,10 @@
     if (a <= 0) { alert('Please enter a valid salary.'); return; }
     let title = '', desc = '', altPath = null, minijobPartner = null;
     if (status === 'married') {
-      if (b > 0 && (b / 12) <= 538) minijobPartner = 'Partner B';
-      if (a > 0 && (a / 12) <= 538) minijobPartner = 'Partner A';
+      if (b > 0 && (b / 12) <= 603) minijobPartner = 'Partner B';
+      if (a > 0 && (a / 12) <= 603) minijobPartner = 'Partner A';
     } else {
-      if (a > 0 && (a / 12) <= 538) minijobPartner = 'You';
+      if (a > 0 && (a / 12) <= 603) minijobPartner = 'You';
     }
     if (status === 'single') {
       title = 'I';
@@ -967,7 +963,7 @@
     } else altEl.classList.add('tax-hidden');
     const warnEl = document.getElementById('minijob-warning');
     if (minijobPartner) {
-      document.getElementById('minijob-text').innerHTML = `<strong>Minijob detected:</strong> The income of ${minijobPartner} is below the €538/month threshold. Minijobs are subject to special tax and social contribution rules. This tool assumes standard employment — please check your status with your employer or a <em>tax advisor (Steuerberater)</em>.`;
+      document.getElementById('minijob-text').innerHTML = `<strong>Minijob detected:</strong> The income of ${minijobPartner} is below the €603/month threshold. Minijobs are subject to special tax and social contribution rules. This tool assumes standard employment — please check your status with your employer or a <em>tax advisor (Steuerberater)</em>.`;
       warnEl.classList.remove('tax-hidden');
     } else warnEl.classList.add('tax-hidden');
     const card = document.getElementById('result-card');
