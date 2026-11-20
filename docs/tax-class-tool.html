@@ -85,14 +85,14 @@
 <header class="global-header" id="globalHeader">
   <div class="header-inner">
     <div class="logo"><a href="/">ExpatScore.de</a></div>
-    <button aria-label="Navigation öffnen" class="nav-toggle" id="navToggle">☰</button>
+    <button aria-label="Open navigation" class="nav-toggle" id="navToggle">☰</button>
     <nav class="nav-links" id="navLinks">
       <a href="/">Home</a>
       <a href="/banking">Banking</a>
       <a href="/schufa-simulator">SCHUFA Tool</a>
       <a href="/schufa-guide">SCHUFA Guide</a>
-      <a href="/insurance">Versicherung</a>
-      <a href="/about">Über uns</a>
+      <a href="/insurance">Insurance</a>
+      <a href="/about">About us</a>
     </nav>
   </div>
 </header>
@@ -529,7 +529,7 @@
   <div class="inner">
     <div class="footer-disclaimer"><strong>Keine Finanzberatung</strong> — Alle Angaben ohne Gewähr</div>
     <nav aria-label="Legal-Links" class="footer-legal-links">
-      <a href="/about">Über uns</a>
+      <a href="/about">About us</a>
       <a href="/banking">Banking</a>
       <a href="/schufa-guide">SCHUFA Guide</a>
       <a href="/impressum">Impressum</a>
@@ -545,40 +545,40 @@
 </footer>
 
 <!-- COOKIE BANNER -->
-<div aria-label="Cookie-Einstellungen" aria-live="polite" id="cookie-banner" role="dialog">
+<div aria-label="Cookie Settings" aria-live="polite" id="cookie-banner" role="dialog">
   <div class="cookie-banner-header">
     <div aria-hidden="true" class="cookie-banner-icon">🍪</div>
     <div class="cookie-banner-body">
-      <div class="cookie-banner-title">Deine Datenschutz-Einstellungen</div>
-      <div class="cookie-banner-text">Wir nutzen Cookies für technische Funktionen und — mit deiner Zustimmung — zur Analyse und für Affiliate-Tracking. Mehr in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</div>
+      <div class="cookie-banner-title">Your Privacy Settings</div>
+      <div class="cookie-banner-text">We use cookies for technical functions and — with your consent — for analytics and affiliate tracking. More in our <a href="/datenschutz">Privacy Policy</a>.</div>
     </div>
   </div>
   <div class="cookie-btns">
-    <button class="cookie-accept" onclick="acceptCookies()">Alle akzeptieren</button>
-    <button class="cookie-decline" onclick="declineCookies()">Nur notwendige</button>
-    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Einstellungen</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Accept all</button>
+    <button class="cookie-decline" onclick="declineCookies()">Essential only</button>
+    <button class="cookie-settings-btn" onclick="openModal('cookie-settings')">Settings</button>
   </div>
 </div>
 
 <!-- COOKIE SETTINGS MODAL -->
-<div aria-label="Cookie-Einstellungen" aria-modal="true" class="modal-overlay" id="modal-cookie-settings" role="dialog">
+<div aria-label="Cookie Settings" aria-modal="true" class="modal-overlay" id="modal-cookie-settings" role="dialog">
   <div class="modal" style="position: relative;">
-    <button aria-label="Schließen" class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
-    <h2>Cookie-Einstellungen</h2>
-    <p>Technisch notwendige Cookies können nicht deaktiviert werden — sie sichern die Grundfunktionen dieser Website.</p>
+    <button aria-label="Close" class="modal-close" onclick="closeModal('cookie-settings')">✕</button>
+    <h2>Cookie Settings</h2>
+    <p>Technically necessary cookies cannot be disabled — they secure the basic functions of this website.</p>
     <div class="cookie-toggle-row">
       <div class="cookie-toggle-info"><strong>Technisch notwendig</strong><span>Einwilligungsspeicherung. Immer aktiv.</span></div>
       <label class="toggle-switch"><input checked="" disabled="" type="checkbox"/><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Analyse &amp; Statistik</strong><span>Pseudonymisierte Nutzungsdaten.</span></div>
+      <div class="cookie-toggle-info"><strong>Analytics &amp; Statistics</strong><span>Pseudonymised usage data.</span></div>
       <label class="toggle-switch"><input id="toggle-analytics" type="checkbox"/><span class="toggle-slider"></span></label>
     </div>
     <div class="cookie-toggle-row">
-      <div class="cookie-toggle-info"><strong>Affiliate-Tracking</strong><span>Korrekte Zuordnung von Partnerprovisionen.</span></div>
+      <div class="cookie-toggle-info"><strong>Affiliate Tracking</strong><span>Correct attribution of partner commissions.</span></div>
       <label class="toggle-switch"><input id="toggle-affiliate" type="checkbox"/><span class="toggle-slider"></span></label>
     </div>
-    <button class="cookie-save-btn" onclick="saveGranularCookies()">Auswahl speichern</button>
+    <button class="cookie-save-btn" onclick="saveGranularCookies()">Save selection</button>
   </div>
 </div>
 
