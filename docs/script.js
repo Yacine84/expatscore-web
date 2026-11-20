@@ -889,10 +889,10 @@ function restartQuiz() {
 const BLOCKED_ACCOUNT_DATA = {
   fintiba: {
     name: 'Fintiba',
-    setupFee: 49,
-    monthlyFee: 4.90,
-    transferFeePerMonth: 1.50, // per disbursement
-    interestRate: 0.01,        // 1% p.a. approx
+    setupFee: 159,
+    monthlyFee: 9.90,
+    transferFeePerMonth: 0, // no per-payout transfer fee on any official Fintiba page (verified 2026-11-20)
+    // no interestRate — no interest is paid on blocked-account deposits (verified 2026-11-20)
     disbursementFee: 0,
     color: '#50C878',
     url: '#fintiba-affiliate',
@@ -900,10 +900,10 @@ const BLOCKED_ACCOUNT_DATA = {
   },
   expatrio: {
     name: 'Expatrio',
-    setupFee: 89,
-    monthlyFee: 6.90,
+    setupFee: 119,
+    monthlyFee: 9,
     transferFeePerMonth: 0,
-    interestRate: 0.005,
+    // no interestRate — no interest is paid on blocked-account deposits (verified 2026-11-20)
     disbursementFee: 0,
     color: '#D4AF37',
     url: '#expatrio-affiliate',
@@ -941,16 +941,14 @@ function calculateBlockedAccount() {
     const setup = provider.setupFee;
     const monthly = provider.monthlyFee * duration;
     const transfers = provider.transferFeePerMonth * duration;
-    const interest = amount * provider.interestRate * (duration / 12);
     const total = setup + monthly + transfers;
-    const net = total - interest; // net cost after interest earned
+    const net = total; // no interest is paid on blocked accounts, so net cost = total fees
 
     results[key] = {
       ...provider,
       setup,
       monthly,
       transfers,
-      interest: interest.toFixed(2),
       total: total.toFixed(2),
       net: Math.max(0, net).toFixed(2)
     };
@@ -976,7 +974,6 @@ function renderBlockedAccountResults(results, duration, amount) {
           <div class="blocked-line"><span>Setup fee</span><span>€${p.setup.toFixed(2)}</span></div>
           <div class="blocked-line"><span>Monthly fees (${duration} mo.)</span><span>€${p.monthly.toFixed(2)}</span></div>
           ${parseFloat(p.transfers) > 0 ? `<div class="blocked-line"><span>Payout fees</span><span>€${p.transfers.toFixed(2)}</span></div>` : ''}
-          <div class="blocked-line blocked-line-interest"><span>Interest credit (~)</span><span>−€${p.interest}</span></div>
           <div class="blocked-line blocked-total"><span><strong>Total net cost</strong></span><span><strong>€${p.net}</strong></span></div>
         </div>
         <ul class="blocked-features">
@@ -993,7 +990,7 @@ function renderBlockedAccountResults(results, duration, amount) {
   const summaryEl = document.getElementById('blocked-summary');
   if (summaryEl) {
     const saving = Math.abs(parseFloat(results.fintiba?.net || 0) - parseFloat(results.expatrio?.net || 0)).toFixed(2);
-    summaryEl.textContent = `For ${duration} months with €${amount.toLocaleString('de-DE')} blocked. You save ~€${saving} with the best choice.`;
+    summaryEl.textContent = `For ${duration} months (total blocked €${(amount * duration).toLocaleString('de-DE')}). You save ~€${saving} with the best choice.`;
   }
 }
 
