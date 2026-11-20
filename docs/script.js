@@ -84,7 +84,7 @@ var BANKS = {
   n26: {
     name: 'N26 Standard',
     tagline: 'Germany\'s most expat-friendly digital bank',
-    url: 'https://n26.com/r/expatscore', /* Replace with real affiliate link */
+    url: 'https://n26.com/r/expatscore', /* N26 invite link */
     cta: 'Open N26 free',
     ctaStyle: 'teal-cta',
     fee: 'Free forever',
@@ -96,7 +96,7 @@ var BANKS = {
   vivid: {
     name: 'Vivid Money',
     tagline: 'Multi-currency account for international professionals',
-    url: '#vivid-affiliate',
+    url: 'https://www.vivid.money',
     cta: 'Open Vivid free',
     ctaStyle: '',
     fee: 'Free plan available',
@@ -108,7 +108,7 @@ var BANKS = {
   bunq: {
     name: 'Bunq',
     tagline: 'International-first bank built for people who move',
-    url: '#bunq-affiliate',
+    url: 'https://www.bunq.com',
     cta: 'Try Bunq free',
     ctaStyle: '',
     fee: '30-day free trial',
@@ -120,7 +120,7 @@ var BANKS = {
   dkb: {
     name: 'DKB — Deutsche Kreditbank',
     tagline: 'Germany\'s most trusted online bank for settled expats',
-    url: '#dkb-affiliate',
+    url: 'https://www.dkb.de',
     cta: 'Apply for DKB',
     ctaStyle: 'teal-cta',
     fee: 'Free with conditions',
@@ -132,7 +132,7 @@ var BANKS = {
   c24: {
     name: 'C24 Bank',
     tagline: 'New generation German bank — more lenient than traditional options',
-    url: '#c24-affiliate',
+    url: 'https://www.c24.de',
     cta: 'Open C24 account',
     ctaStyle: '',
     fee: 'Free basic account',
@@ -144,7 +144,7 @@ var BANKS = {
   ing: {
     name: 'ING Germany',
     tagline: 'Top-rated free German current account — best for established expats',
-    url: '#ing-affiliate',
+    url: 'https://www.ing.de',
     cta: 'Apply for ING',
     ctaStyle: 'teal-cta',
     fee: 'Free with €1,000/mo incoming',
@@ -156,7 +156,7 @@ var BANKS = {
   comdirect: {
     name: 'Comdirect',
     tagline: 'Full-service bank for expats building long-term wealth in Germany',
-    url: '#comdirect-affiliate',
+    url: 'https://www.comdirect.de',
     cta: 'Open Comdirect',
     ctaStyle: '',
     fee: 'Free with activity',
@@ -168,7 +168,7 @@ var BANKS = {
   commerzbank: {
     name: 'Commerzbank',
     tagline: 'Germany\'s second-largest bank — full premium service',
-    url: '#commerzbank-affiliate',
+    url: 'https://www.commerzbank.de',
     cta: 'Open Commerzbank',
     ctaStyle: 'teal-cta',
     fee: '€4.90/mo (first 3 months free)',
@@ -771,7 +771,7 @@ function renderBankCards(recs) {
         <span class="bank-meta-item schufa-tag">🔍 ${bank.schufa}</span>
       </div>
       <ul class="bank-features">${featuresHTML}</ul>
-      <a href="${bank.url}" class="${ctaClass}" target="_blank" rel="noopener sponsored">${bank.cta} →</a>
+      <a href="${bank.url}" class="${ctaClass}" target="_blank" rel="noopener${bank.url.includes('n26.com/r/') ? ' sponsored' : ''}">${bank.cta} →</a>
     `;
     container.appendChild(card);
   });
@@ -808,6 +808,7 @@ function showStickyCTA(bank) {
   if (!bar || !nameEl || !linkEl) return;
   nameEl.textContent = bank.name;
   linkEl.href = bank.url;
+  linkEl.rel = bank.url.indexOf('n26.com/r/') !== -1 ? 'noopener sponsored' : 'noopener';
   bar.classList.add('visible');
 }
 
@@ -901,7 +902,7 @@ const BLOCKED_ACCOUNT_DATA = {
     // no interestRate — no interest is paid on blocked-account deposits (verified 2026-11-20)
     disbursementFee: 0,
     color: '#50C878',
-    url: '#fintiba-affiliate',
+    url: 'https://www.fintiba.com',
     features: ['BaFin-regulated', 'Fast opening (~3 days)', 'No minimum balance', 'Online portal in English']
   },
   expatrio: {
@@ -912,7 +913,7 @@ const BLOCKED_ACCOUNT_DATA = {
     // no interestRate — no interest is paid on blocked-account deposits (verified 2026-11-20)
     disbursementFee: 0,
     color: '#D4AF37',
-    url: '#expatrio-affiliate',
+    url: 'https://www.expatrio.com',
     features: ['Can be combined with health insurance', 'Student discounts', 'Multi-service package', 'SEPA instant payout']
   }
 };
@@ -985,7 +986,7 @@ function renderBlockedAccountResults(results, duration, amount) {
         <ul class="blocked-features">
           ${p.features.map(f => `<li>✓ ${f}</li>`).join('')}
         </ul>
-        <a href="${p.url}" class="cta-btn${isBest ? ' cta-teal' : ''}" target="_blank" rel="noopener sponsored">
+        <a href="${p.url}" class="cta-btn${isBest ? ' cta-teal' : ''}" target="_blank" rel="noopener">
           ${p.name} Open account →
         </a>
       </div>

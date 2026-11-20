@@ -244,7 +244,7 @@
 </div>
 </header>
 <div class="werbung-bar">
-<strong>⚑ Anzeige:</strong> This tool contains affiliate links. We may earn a commission — no extra cost to you.
+<strong>⚑ Anzeige:</strong> Bank links in this tool go directly to the providers' websites. Only our N26 invite link can earn us a referral bonus — no extra cost to you.
 </div>
 <main class="main-content">
 <div class="sim-wrap">
@@ -409,7 +409,7 @@
 <a href="#" onclick="openModal('cookie-settings');return false;">Cookie Settings</a>
 </nav>
 <div class="footer-disclosure">
-<strong>&#9873; Affiliate Notice:</strong> This page contains partner links. If you open an account via one of these links, we receive a commission from the provider. No additional cost to you. Our editorial content is based on our own experience and is independent of this.
+<strong>&#9873; Affiliate Notice:</strong> Provider links on this page go directly to the providers' own websites. We earn no commission from them — the only exception is our N26 invite link, through which N26 may pay us a referral bonus at no extra cost to you. <a href="/affiliate-hinweis">Details →</a>
     </div>
 <p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · All information without guarantee · Not a substitute for individual legal or financial advice. · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
 </div>
@@ -417,7 +417,7 @@
 <!-- STICKY CTA BAR -->
 <div id="sticky-cta-bar">
   <div class="sticky-text">Top recommendation for you: <strong id="stickyBankName">N26</strong></div>
-  <a class="sticky-cta-btn" id="stickyCTALink" href="#" target="_blank" rel="noopener sponsored">Open account &rarr;</a>
+  <a class="sticky-cta-btn" id="stickyCTALink" href="#" target="_blank" rel="noopener">Open account &rarr;</a>
 </div>
 <!-- COOKIE BANNER -->
 <div aria-label="Cookie Settings" aria-live="polite" id="cookie-banner" role="dialog">
@@ -535,7 +535,7 @@ var BANKS = {
   n26: {
     name: 'N26 Standard',
     tagline: 'Germany\'s most expat-friendly digital bank',
-    url: 'https://n26.com/r/expatscore', /* Replace with real affiliate link */
+    url: 'https://n26.com/r/expatscore', /* N26 invite link */
     cta: 'Open N26 free',
     ctaStyle: 'teal-cta',
     fee: 'Free forever',
@@ -547,7 +547,7 @@ var BANKS = {
   vivid: {
     name: 'Vivid Money',
     tagline: 'Multi-currency account for international professionals',
-    url: '#vivid-affiliate',
+    url: 'https://www.vivid.money',
     cta: 'Open Vivid free',
     ctaStyle: '',
     fee: 'Free plan available',
@@ -559,7 +559,7 @@ var BANKS = {
   bunq: {
     name: 'Bunq',
     tagline: 'International-first bank built for people who move',
-    url: '#bunq-affiliate',
+    url: 'https://www.bunq.com',
     cta: 'Try Bunq free',
     ctaStyle: '',
     fee: '30-day free trial',
@@ -571,7 +571,7 @@ var BANKS = {
   dkb: {
     name: 'DKB — Deutsche Kreditbank',
     tagline: 'Germany\'s most trusted online bank for settled expats',
-    url: '#dkb-affiliate',
+    url: 'https://www.dkb.de',
     cta: 'Apply for DKB',
     ctaStyle: 'teal-cta',
     fee: 'Free with conditions',
@@ -583,7 +583,7 @@ var BANKS = {
   c24: {
     name: 'C24 Bank',
     tagline: 'New generation German bank — more lenient than traditional options',
-    url: '#c24-affiliate',
+    url: 'https://www.c24.de',
     cta: 'Open C24 account',
     ctaStyle: '',
     fee: 'Free basic account',
@@ -595,7 +595,7 @@ var BANKS = {
   ing: {
     name: 'ING Germany',
     tagline: 'Top-rated free German current account — best for established expats',
-    url: '#ing-affiliate',
+    url: 'https://www.ing.de',
     cta: 'Apply for ING',
     ctaStyle: 'teal-cta',
     fee: 'Free with €1,000/mo incoming',
@@ -607,7 +607,7 @@ var BANKS = {
   comdirect: {
     name: 'Comdirect',
     tagline: 'Full-service bank for expats building long-term wealth in Germany',
-    url: '#comdirect-affiliate',
+    url: 'https://www.comdirect.de',
     cta: 'Open Comdirect',
     ctaStyle: '',
     fee: 'Free with activity',
@@ -619,7 +619,7 @@ var BANKS = {
   commerzbank: {
     name: 'Commerzbank',
     tagline: 'Germany\'s second-largest bank — full premium service',
-    url: '#commerzbank-affiliate',
+    url: 'https://www.commerzbank.de',
     cta: 'Open Commerzbank',
     ctaStyle: 'teal-cta',
     fee: '€4.90/mo (first 3 months free)',
@@ -913,6 +913,7 @@ function showResult(result) {
   var topBank = banks[0];
   document.getElementById('stickyBankName').textContent = topBank.name;
   document.getElementById('stickyCTALink').href = topBank.url;
+  document.getElementById('stickyCTALink').rel = topBank.url.indexOf('n26.com/r/') !== -1 ? 'noopener sponsored' : 'noopener';
   document.getElementById('stickyCTALink').textContent = topBank.cta + ' \u2192';
   setTimeout(function() {
     document.getElementById('sticky-cta-bar').classList.add('visible');
@@ -1019,7 +1020,7 @@ function renderBanks(banks, profile, score) {
       '<div class="bank-why-box">' + bank.why + '</div>' +
       '<div class="bank-bottom">' +
         '<span style="font-size:.82rem;color:var(--text-muted)">' + bank.fee + ' &nbsp;&middot;&nbsp; ' + bank.schufa + ' &nbsp;&middot;&nbsp; ' + bank.time + '</span>' +
-        '<a href="' + bank.url + '" target="_blank" rel="noopener sponsored" class="bank-cta ' + bank.ctaStyle + '">' + bank.cta + ' &rarr;</a>' +
+        '<a href="' + bank.url + '" target="_blank" rel="noopener' + (bank.url.indexOf('n26.com/r/') !== -1 ? ' sponsored' : '') + '" class="bank-cta ' + bank.ctaStyle + '">' + bank.cta + ' &rarr;</a>' +
       '</div>';
 
     container.appendChild(card);

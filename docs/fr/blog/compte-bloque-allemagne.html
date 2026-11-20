@@ -367,7 +367,7 @@
 </div>
 </header>
 <div class="werbung-bar" role="note">
-<strong>⚑ Publicité :</strong> Cette page contient des liens d'affiliation. <a href="/affiliate-hinweis">Détails →</a>
+<strong>⚑ Publicité :</strong> Les liens vers les prestataires sur cette page sont des liens directs — nous ne percevons aucune commission. <a href="/affiliate-hinweis">Détails →</a>
 </div>
 <nav aria-label="Fil d'Ariane" class="breadcrumbs">
 <a href="/">Accueil</a> › <a href="/banking">Banque</a> › <span class="current">Compte bloqué 2026</span>
@@ -705,10 +705,10 @@
 <strong style="color:var(--emerald);">Notre recommandation</strong>
 <p style="margin:.5rem 0 1rem;font-size:.87rem;color:var(--text-secondary);">Pour la plupart des étudiants : Expatrio offre le meilleur rapport qualité-prix avec 119 € de frais de dossier, le traitement le plus rapide (3–5 jours) et un Girokonto allemand gratuit inclus. Fintiba est préférable si vous avez moins de 18 ans ou si vous avez spécifiquement besoin de l'assurance maladie DAK.</p>
 <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
-<a class="cta-btn cta-teal" href="#expatrio-affiliate" rel="noopener sponsored" target="_blank">Ouvrir un compte Expatrio →</a>
-<a class="cta-btn" href="#fintiba-affiliate" rel="noopener sponsored" target="_blank">Ouvrir un compte Fintiba →</a>
+<a class="cta-btn cta-teal" href="https://www.expatrio.com" rel="noopener" target="_blank">Ouvrir un compte Expatrio →</a>
+<a class="cta-btn" href="https://www.fintiba.com" rel="noopener" target="_blank">Ouvrir un compte Fintiba →</a>
 </div>
-<p style="font-size:.75rem;color:var(--text-muted);margin-top:.75rem;">⚑ Liens d'affiliation — nous recevons une commission sans frais supplémentaires pour vous.</p>
+<p style="font-size:.75rem;color:var(--text-muted);margin-top:.75rem;">Liens directs vers les sites des prestataires — nous ne percevons aucune commission.</p>
 </div>
 <section class="related-guides" style="margin:2.5rem auto;max-width:800px;padding:1.5rem 1.75rem;border:1px solid rgba(212,175,55,.25);border-radius:12px;background:rgba(255,255,255,.03);">
 <h2 style="margin:0 0 1rem;font-size:1.3rem;">Guides associés</h2>
@@ -731,7 +731,7 @@
 <a href="/affiliate-hinweis">Divulgation des affiliations</a>
 <a href="#" onclick="openModal('cookie-settings');return false;">Paramètres des cookies</a>
 </nav>
-<div class="footer-disclosure"><strong>⚑ Divulgation des affiliations :</strong> Cette page contient des liens partenaires. Nous recevons une commission lorsque vous ouvrez un compte. Aucun coût supplémentaire pour vous.</div>
+<div class="footer-disclosure"><strong>⚑ Divulgation des affiliations :</strong> Les liens vers les prestataires sur cette page mènent directement à leurs sites officiels. Nous ne percevons aucune commission. <a href="/affiliate-hinweis">Détails →</a></div>
 <p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
 </div>
 </footer>
@@ -778,7 +778,7 @@
       setupFee: 119,
       monthlyFee: 9,
       color: 'var(--emerald)',
-      url: '#expatrio-affiliate',
+      url: 'https://www.expatrio.com',
       cta: 'Ouvrir un compte Expatrio',
       features: [
         'Traitement le plus rapide : 3–5 jours',
@@ -794,7 +794,7 @@
       setupFee: 159,
       monthlyFee: 9.90,
       color: 'var(--gold)',
-      url: '#fintiba-affiliate',
+      url: 'https://www.fintiba.com',
       cta: 'Ouvrir un compte Fintiba',
       features: [
         'Idéal pour les étudiants de moins de 18 ans',
@@ -849,7 +849,7 @@
           <ul class="provider-features-list">
             ${p.features.slice(0,4).map(f => `<li>${f}</li>`).join('')}
           </ul>
-          <a href="${p.url}" class="cta-btn ${isCheapest ? 'cta-teal' : ''}" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;margin-top:.75rem;">${p.cta} →</a>
+          <a href="${p.url}" class="cta-btn ${isCheapest ? 'cta-teal' : ''}" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:.75rem;">${p.cta} →</a>
         </div>
       `;
     }).join('');

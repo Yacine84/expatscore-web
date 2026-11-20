@@ -368,7 +368,7 @@
 </div>
 </header>
 <div class="werbung-bar" role="note">
-<strong>⚑ Ad:</strong> This page contains affiliate links. <a href="/affiliate-hinweis">Details →</a>
+<strong>⚑ Ad:</strong> Provider links on this page are direct links — we earn no commission from them. <a href="/affiliate-hinweis">Details →</a>
 </div>
 <nav aria-label="Breadcrumb" class="breadcrumbs">
 <a href="/">Home</a> › <a href="/banking">Banking</a> › <span class="current">Blocked Account 2026</span>
@@ -706,10 +706,10 @@
 <strong style="color:var(--emerald);">Our Recommendation</strong>
 <p style="margin:.5rem 0 1rem;font-size:.87rem;color:var(--text-secondary);">For most students: Expatrio is the best value at €119 setup, fastest processing (3–5 days), and includes a free German Girokonto. Fintiba is better if you're under 18 or need DAK health insurance specifically.</p>
 <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
-<a class="cta-btn cta-teal" href="#expatrio-affiliate" rel="noopener sponsored" target="_blank">Open Expatrio Account →</a>
-<a class="cta-btn" href="#fintiba-affiliate" rel="noopener sponsored" target="_blank">Open Fintiba Account →</a>
+<a class="cta-btn cta-teal" href="https://www.expatrio.com" rel="noopener" target="_blank">Open Expatrio Account →</a>
+<a class="cta-btn" href="https://www.fintiba.com" rel="noopener" target="_blank">Open Fintiba Account →</a>
 </div>
-<p style="font-size:.75rem;color:var(--text-muted);margin-top:.75rem;">⚑ Affiliate links — we receive a commission at no extra cost to you.</p>
+<p style="font-size:.75rem;color:var(--text-muted);margin-top:.75rem;">Direct links to the providers' websites — we earn no commission from them.</p>
 </div>
 <section class="related-guides" style="margin:2.5rem auto;max-width:800px;padding:1.5rem 1.75rem;border:1px solid rgba(212,175,55,.25);border-radius:12px;background:rgba(255,255,255,.03);">
 <h2 style="margin:0 0 1rem;font-size:1.3rem;">Related guides</h2>
@@ -732,7 +732,7 @@
 <a href="/affiliate-hinweis">Affiliate Disclosure</a>
 <a href="#" onclick="openModal('cookie-settings');return false;">Cookie Settings</a>
 </nav>
-<div class="footer-disclosure"><strong>⚑ Affiliate Disclosure:</strong> This page contains partner links. We receive a commission when you open an account. No extra costs for you.</div>
+<div class="footer-disclosure"><strong>⚑ Affiliate Disclosure:</strong> Provider links on this page go directly to the providers' own websites. We earn no commission from them. <a href="/affiliate-hinweis">Details →</a></div>
 <p class="footer-copy">© 2026 Yassine Chaikhi · ExpatScore.de · <a href="mailto:kontakt@expatscore.de">kontakt@expatscore.de</a></p>
 </div>
 </footer>
@@ -779,7 +779,7 @@
       setupFee: 119,
       monthlyFee: 9,
       color: 'var(--emerald)',
-      url: '#expatrio-affiliate',
+      url: 'https://www.expatrio.com',
       cta: 'Open Expatrio Account',
       features: [
         'Fastest processing: 3–5 days',
@@ -795,7 +795,7 @@
       setupFee: 159,
       monthlyFee: 9.90,
       color: 'var(--gold)',
-      url: '#fintiba-affiliate',
+      url: 'https://www.fintiba.com',
       cta: 'Open Fintiba Account',
       features: [
         'Best for students under 18',
@@ -850,7 +850,7 @@
           <ul class="provider-features-list">
             ${p.features.slice(0,4).map(f => `<li>${f}</li>`).join('')}
           </ul>
-          <a href="${p.url}" class="cta-btn ${isCheapest ? 'cta-teal' : ''}" target="_blank" rel="noopener sponsored" style="display:block;text-align:center;margin-top:.75rem;">${p.cta} →</a>
+          <a href="${p.url}" class="cta-btn ${isCheapest ? 'cta-teal' : ''}" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:.75rem;">${p.cta} →</a>
         </div>
       `;
     }).join('');
