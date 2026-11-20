@@ -70,7 +70,7 @@ var QUESTIONS = [
 ];
 
 var BANKS = {
-  n26:         { name: 'N26 Standard',      tagline: 'Germany\'s most expat-friendly digital bank',                       url: 'https://n26.com/r/expatscore', cta: 'Open N26 free',       ctaStyle: 'teal-cta', fee: 'Free forever',          time: '8 min setup',         schufa: 'No SCHUFA score required',   features: ['No SCHUFA required','VideoIdent — fully online','English app interface','Free Mastercard','Instant account number'],                          why: 'The go-to first account for expats. Opens fully online with just your passport and a 5-minute video call — no German address required to apply.' },
+  n26:         { name: 'N26 Standard',      tagline: 'Germany\'s most expat-friendly digital bank',                       url: 'https://n26.com', cta: 'Open N26 free',       ctaStyle: 'teal-cta', fee: 'Free forever',          time: '8 min setup',         schufa: 'No SCHUFA score required',   features: ['No SCHUFA required','VideoIdent — fully online','English app interface','Free Mastercard','Instant account number'],                          why: 'The go-to first account for expats. Opens fully online with just your passport and a 5-minute video call — no German address required to apply.' },
   vivid:       { name: 'Vivid Money',        tagline: 'Multi-currency account for international professionals',            url: 'https://www.vivid.money',             cta: 'Open Vivid free',     ctaStyle: '',         fee: 'Free plan available',   time: '10 min setup',        schufa: 'No SCHUFA check',   features: ['No SCHUFA check','Multi-currency pockets','Cashback on purchases','English support','EU + non-EU accepted'],                                    why: 'Excellent as a second account for multi-currency management, cashback, and salary deposits from international employers.' },
   bunq:        { name: 'Bunq',               tagline: 'International-first bank built for people who move',               url: 'https://www.bunq.com',              cta: 'Try Bunq free',       ctaStyle: '',         fee: '30-day free trial',   time: '5 min setup',         schufa: 'No SCHUFA required',features: ['No SCHUFA check','100% online opening','No Anmeldung needed to apply','Dutch bank — EU deposit protection','Multi-language app'],          why: 'Dutch bank with a 30-day free trial. Ideal for those not yet registered in Germany — no Anmeldung required to open the account.' },
   dkb:         { name: 'DKB — Deutsche Kreditbank', tagline: 'Germany\'s most trusted online bank for settled expats',   url: 'https://www.dkb.de',               cta: 'Apply for DKB',       ctaStyle: 'teal-cta', fee: 'Free with conditions',  time: '3–5 day approval',    schufa: 'Soft SCHUFA check', features: ['Free with €700+/mo income','VISA card accepted worldwide','Excellent customer service','German IBAN instantly','PostIdent or VideoIdent'],    why: 'The expat community\'s favourite bank for a reason. Accepts newcomers with basic history and provides the most reliable full-service German banking experience.' },
@@ -374,7 +374,7 @@ function showResult(result) {
   var sbn = document.getElementById('stickyBankName');
   var scl = document.getElementById('stickyCTALink');
   if (sbn) sbn.textContent = topBank.name;
-  if (scl) { scl.href = topBank.url; scl.rel = topBank.url.indexOf('n26.com/r/') !== -1 ? 'noopener sponsored' : 'noopener'; scl.textContent = topBank.cta + ' \u2192'; }
+  if (scl) { scl.href = topBank.url; scl.rel = 'noopener'; scl.textContent = topBank.cta + ' \u2192'; }
 
   setTimeout(function() {
     var bar = document.getElementById('sticky-cta-bar');
@@ -460,7 +460,7 @@ function renderBanks(banks, profile, score) {
   if (rt) rt.textContent = score < 300 ? 'Best accounts for your situation \u2014 no SCHUFA required' : 'Top-rated accounts for your SCHUFA profile';
   if (rs) rs.textContent = score < 300
     ? 'These banks do not run a SCHUFA check and actively welcome newcomers. Open any of them today \u2014 it counts immediately towards building your history.'
-    : 'Ranked by fit with your current SCHUFA profile. Links go directly to the providers \u2014 we earn no commission, except a possible referral bonus via our N26 invite link.';
+    : 'Ranked by fit with your current SCHUFA profile. Links go directly to the providers \u2014 we earn no commission from them.';
 
   var container = document.getElementById('bankCards');
   if (!container) return;
@@ -485,7 +485,7 @@ function renderBanks(banks, profile, score) {
       '<div class="bank-why-box">' + bank.why + '</div>' +
       '<div class="bank-bottom">' +
         '<span style="font-size:.82rem;color:var(--text-muted)">' + bank.fee + ' &nbsp;&middot;&nbsp; ' + bank.schufa + ' &nbsp;&middot;&nbsp; ' + bank.time + '</span>' +
-        '<a href="' + bank.url + '" target="_blank" rel="noopener' + (bank.url.indexOf('n26.com/r/') !== -1 ? ' sponsored' : '') + '" class="bank-cta ' + bank.ctaStyle + '">' + bank.cta + ' &rarr;</a>' +
+        '<a href="' + bank.url + '" target="_blank" rel="noopener" class="bank-cta ' + bank.ctaStyle + '">' + bank.cta + ' &rarr;</a>' +
       '</div>';
 
     container.appendChild(card);

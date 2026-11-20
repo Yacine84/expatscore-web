@@ -84,7 +84,7 @@ var BANKS = {
   n26: {
     name: 'N26 Standard',
     tagline: 'Germany\'s most expat-friendly digital bank',
-    url: 'https://n26.com/r/expatscore', /* N26 invite link */
+    url: 'https://n26.com',
     cta: 'Open N26 free',
     ctaStyle: 'teal-cta',
     fee: 'Free forever',
@@ -796,7 +796,7 @@ function renderBankCards(recs) {
         <span class="bank-meta-item schufa-tag">🔍 ${bank.schufa}</span>
       </div>
       <ul class="bank-features">${featuresHTML}</ul>
-      <a href="${bank.url}" class="${ctaClass}" target="_blank" rel="noopener${bank.url.includes('n26.com/r/') ? ' sponsored' : ''}">${bank.cta} →</a>
+      <a href="${bank.url}" class="${ctaClass}" target="_blank" rel="noopener">${bank.cta} →</a>
     `;
     container.appendChild(card);
   });
@@ -833,7 +833,7 @@ function showStickyCTA(bank) {
   if (!bar || !nameEl || !linkEl) return;
   nameEl.textContent = bank.name;
   linkEl.href = bank.url;
-  linkEl.rel = bank.url.indexOf('n26.com/r/') !== -1 ? 'noopener sponsored' : 'noopener';
+  linkEl.rel = 'noopener';
   bar.classList.add('visible');
 }
 

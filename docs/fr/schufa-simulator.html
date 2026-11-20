@@ -254,7 +254,7 @@
 </div>
 </header>
 <div class="werbung-bar">
-<strong>⚑ Annonce :</strong> Les liens bancaires dans cet outil mènent directement aux sites des prestataires. Seul notre lien d'invitation N26 peut nous rapporter une prime de parrainage — sans frais supplémentaires pour vous.
+Les liens bancaires dans cet outil mènent directement aux sites des prestataires. Nous ne percevons aucune commission.
 </div>
 <main class="main-content">
 <div class="sim-wrap">
@@ -537,7 +537,7 @@ var BANKS = {
   n26: {
     name: 'N26 Standard',
     tagline: 'La banque numérique la plus accueillante pour les expatriés en Allemagne',
-    url: 'https://n26.com/r/expatscore', /* N26 invite link */
+    url: 'https://n26.com',
     cta: 'Ouvrir N26 gratuitement',
     ctaStyle: 'teal-cta',
     fee: 'Gratuit pour toujours',
@@ -915,7 +915,7 @@ function showResult(result) {
   var topBank = banks[0];
   document.getElementById('stickyBankName').textContent = topBank.name;
   document.getElementById('stickyCTALink').href = topBank.url;
-  document.getElementById('stickyCTALink').rel = topBank.url.indexOf('n26.com/r/') !== -1 ? 'noopener sponsored' : 'noopener';
+  document.getElementById('stickyCTALink').rel = 'noopener';
   document.getElementById('stickyCTALink').textContent = topBank.cta + ' \u2192';
   setTimeout(function() {
     document.getElementById('sticky-cta-bar').classList.add('visible');
@@ -998,7 +998,7 @@ function renderBanks(banks, profile, score) {
     : 'Les meilleurs comptes pour votre profil SCHUFA';
   document.getElementById('recoSub').textContent = score < 300
     ? 'Ces banques ne font pas de vérification SCHUFA et accueillent activement les nouveaux arrivants. Ouvrez-en un aujourd\'hui \u2014 cela compte immédiatement pour construire votre historique.'
-    : 'Classés selon l\'adéquation avec votre profil SCHUFA actuel. Les liens mènent directement aux sites des fournisseurs \u2014 nous ne percevons aucune commission, sauf une éventuelle prime de parrainage via notre lien d\'invitation N26.';
+    : 'Classés selon l\'adéquation avec votre profil SCHUFA actuel. Les liens mènent directement aux sites des fournisseurs \u2014 nous ne percevons aucune commission.';
 
   var container = document.getElementById('bankCards');
   container.innerHTML = '';
@@ -1022,7 +1022,7 @@ function renderBanks(banks, profile, score) {
       '<div class="bank-why-box">' + bank.why + '</div>' +
       '<div class="bank-bottom">' +
         '<span style="font-size:.82rem;color:var(--text-muted)">' + bank.fee + ' &nbsp;&middot;&nbsp; ' + bank.schufa + ' &nbsp;&middot;&nbsp; ' + bank.time + '</span>' +
-        '<a href="' + bank.url + '" target="_blank" rel="noopener' + (bank.url.indexOf('n26.com/r/') !== -1 ? ' sponsored' : '') + '" class="bank-cta ' + bank.ctaStyle + '">' + bank.cta + ' &rarr;</a>' +
+        '<a href="' + bank.url + '" target="_blank" rel="noopener" class="bank-cta ' + bank.ctaStyle + '">' + bank.cta + ' &rarr;</a>' +
       '</div>';
 
     container.appendChild(card);
