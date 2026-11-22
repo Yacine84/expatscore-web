@@ -55,7 +55,7 @@
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
   --space-xl: 4rem;
-  --space-2xl: 6rem;
+  --space-2xl: 4rem;
 
   /* Layout */
   --max-content: 780px;
@@ -569,7 +569,7 @@ img { max-width: 100%; display: block; }
 }
 .sim-section .inner { position: relative; z-index: 1; }
 
-.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header { text-align: center; margin-bottom: 2rem; }
 .section-eyebrow {
   font-family: var(--font-mono);
   font-size: 0.68rem;

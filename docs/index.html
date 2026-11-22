@@ -59,6 +59,20 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SCHUFA Score Simulator 2026","url":"https://expatscore.de/#schufa-simulator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is SCHUFA and why is it so important for expats?","acceptedAnswer":{"@type":"Answer","text":"SCHUFA is Germany's leading credit bureau. It stores bank accounts, credit cards, loans and payment behaviour. Almost every bank, landlord and many mobile providers check SCHUFA. For expats with no German credit history, \"no SCHUFA record\" means no approval from traditional banks. The first step is to use a no-SCHUFA bank to start building history."}},{"@type":"Question","name":"How long does it take to build a good SCHUFA score?","acceptedAnswer":{"@type":"Answer","text":"With the right strategy, a solid score is achievable in 12–18 months: Month 1 – open an account with N26 or similar. Months 3–6 – apply for a secured credit card and pay it off in full every month. Months 6–12 – pay all bills (rent, utilities, phone) on time. Months 12–18 – request your SCHUFA report; DKB and ING become accessible."}},{"@type":"Question","name":"Which bank is best for newcomers with no SCHUFA history?","acceptedAnswer":{"@type":"Answer","text":"For expats without SCHUFA, we recommend: N26 (VideoIdent, no SCHUFA score required, English app), Vivid Money (multi-account features, cashback, no SCHUFA score required) and Bunq (30-day trial, no Anmeldung needed to apply). N26 reports positive activity to SCHUFA and helps build a credit history; Vivid and Bunq do not report to SCHUFA."}},{"@type":"Question","name":"Can I open a German bank account without Anmeldung?","acceptedAnswer":{"@type":"Answer","text":"Some banks allow you to open an account without Anmeldung: Bunq does not require Anmeldung to apply. N26 initially accepts foreign addresses. Most German banks (DKB, ING, Commerzbank) strictly require Anmeldung. Important: you must register your Anmeldung at the Bürgeramt within 14 days of moving in — it is legally required."}},{"@type":"Question","name":"How do I get my official SCHUFA report for free?","acceptedAnswer":{"@type":"Answer","text":"Under Article 15 GDPR, everyone is entitled to a free data copy once a year. Visit meineSCHUFA.de → select \"Datenkopie nach Art. 15 DSGVO (kostenlos)\". The report is delivered by post (approx. 1–4 weeks). Check every entry carefully for errors — even small inaccuracies can lower your score significantly. Errors can be disputed with SCHUFA in writing."}}]}</script>
 <link href="/style.css" rel="stylesheet"/>
+<!-- Arabic fonts (Noto Kufi Arabic + Noto Naskh Arabic) — used by the #arabic section only -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ARABIC SECTION SCOPED STYLES — #arabic only, no interference with existing CSS */
+  #arabic .section-eyebrow { font-family: 'Noto Naskh Arabic', var(--font-mono); letter-spacing: 0; text-transform: none; }
+  #arabic .section-title { font-family: 'Noto Kufi Arabic', 'Playfair Display', Georgia, serif; }
+  #arabic .ar-sub { font-family: 'Noto Naskh Arabic', 'Outfit', sans-serif; }
+  #arabic .card { text-align: right; }
+  #arabic .card h2 { font-family: 'Noto Kufi Arabic', 'Playfair Display', Georgia, serif; }
+  #arabic .card-badge, #arabic .card-desc, #arabic .cta-btn { font-family: 'Noto Naskh Arabic', 'Outfit', sans-serif; }
+  #arabic .card-badge { letter-spacing: 0; text-transform: none; }
+</style>
 <!-- ═══════════════════════════════════════════════════════════════════════
        TAX TOOL SCOPED STYLES — Zero interference with existing site CSS
   ═══════════════════════════════════════════════════════════════════════ -->
@@ -619,7 +633,7 @@ Provider links on this page go directly to the providers' own websites. We earn 
 <div class="card-featured-inner">
 <div class="card-featured-text">
 <span class="card-badge card-badge-schufa" style="margin-bottom:.75rem;display:inline-flex;align-items:center;gap:.4rem;">
-            🇬🇧 New in English
+            SCHUFA Guide
           </span>
 <h2>
 <a href="/blog/how-to-get-schufa-germany">
@@ -652,7 +666,7 @@ Provider links on this page go directly to the providers' own websites. We earn 
 <div class="card card-featured">
 <div class="card-featured-inner">
 <div class="card-featured-text">
-<span class="card-badge card-badge-teal" style="margin-bottom:.75rem;display:inline-block;">✦ New Tool</span>
+<span class="card-badge card-badge-teal" style="margin-bottom:.75rem;display:inline-block;">SCHUFA Tool</span>
 <h2><a href="/schufa-simulator">Free SCHUFA Score Simulator 2026</a></h2>
 <div class="card-featured-meta">6 questions · Instant result · Personalised bank recommendations · 3 min.</div>
 <p class="card-desc" style="margin-top:.6rem;">Interactive simulator calculates your likely SCHUFA score — free, anonymous, no registration.</p>
@@ -699,6 +713,35 @@ Provider links on this page go directly to the providers' own websites. We earn 
 </div>
 </div>
 </main>
+<!-- ═══════════════════════ ARABIC GUIDES ═══════════════════════════════════ -->
+<section aria-label="Guides in Arabic" class="section" id="arabic">
+<div class="section-header">
+<span class="section-eyebrow">بالعربية</span>
+<h2 class="section-title" style="margin-top:.5rem;">Guides in Arabic — أدلة بالعربية</h2>
+<p class="section-sub-line">The same expert guides, in Arabic — for Moroccans and Arab expats preparing for Germany.</p>
+<p class="section-sub-line ar-sub" dir="rtl" lang="ar">نفس الأدلة المتخصصة، بالعربية — للمغاربة والمغتربين العرب الذين يستعدون للانتقال إلى ألمانيا.</p>
+</div>
+<div class="card-grid">
+<div class="card" dir="rtl" lang="ar">
+<span class="card-badge card-badge-teal">دليل</span>
+<h2><a href="/ar/blog/schufa-guide">كيف تحصل على نقاط SCHUFA في ألمانيا — الدليل الكامل 2026</a></h2>
+<p class="card-desc">كل ما تحتاجه عن نقاط SCHUFA: المعايير الاثنا عشر، إصلاح مارس 2026، وكيف تبني نقاطك من الصفر.</p>
+<a class="cta-btn" href="/ar/blog/schufa-guide">اقرأ الدليل ←</a>
+</div>
+<div class="card" dir="rtl" lang="ar">
+<span class="card-badge card-badge-teal">دليل</span>
+<h2><a href="/ar/blog/anmeldung-allemagne">تسجيل العنوان في ألمانيا — الدليل الكامل 2026</a></h2>
+<p class="card-desc">خطوة بخطوة: الوثائق، المكاتب، والمهلة القانونية — 14 يومًا من الانتقال. كل ما تحتاجه في أسبوعك الأول في ألمانيا.</p>
+<a class="cta-btn" href="/ar/blog/anmeldung-allemagne">اقرأ الدليل ←</a>
+</div>
+<div class="card" dir="rtl" lang="ar">
+<span class="card-badge card-badge-teal">دليل</span>
+<h2><a href="/ar/blog/compte-bloque-allemagne">الحساب المحظور في ألمانيا 2026 — المبلغ الدقيق</a></h2>
+<p class="card-desc">احسب المبلغ الدقيق لحسابك المحظور: 992 يورو شهريًا للطلاب و1,091 يورو لحاملي بطاقة Chancenkarte.</p>
+<a class="cta-btn" href="/ar/blog/compte-bloque-allemagne">اقرأ الدليل ←</a>
+</div>
+</div>
+</section>
 <!-- ═══════════════════════ PROVIDER TABLE ═══════════════════════════════════ -->
 <div class="section provider-section">
 <div class="section-header">
