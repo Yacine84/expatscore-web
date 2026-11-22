@@ -228,6 +228,11 @@ img { max-width: 100%; display: block; }
     linear-gradient(180deg, #0a0e17 0%, #080c14 100%);
   padding-bottom: var(--space-xl);
 }
+
+/* Homepage hero only — aria-label="Hero" exists only on index.html (the
+   tax-class-tool hero shares .hero-home but has no aria-label): lift the
+   hero → trust-strip gap from 64px to 76px to match the section rhythm. */
+.hero-home[aria-label="Hero"] { padding-bottom: calc(var(--space-xl) + 0.75rem); }
 .hero.hero-home::before {
   content: '';
   position: absolute; inset: 0; z-index: 0;
@@ -1311,6 +1316,10 @@ img { max-width: 100%; display: block; }
 /* Section wrapper — re-uses .section padding from §9 */
 .blocked-calc-section {
   position: relative;
+  /* Bottom breathing room before the footer (last section on the homepage):
+     the footer background starts 4rem below the provider cards, matching
+     the top-only 4rem rhythm used at every other section boundary. */
+  padding-bottom: var(--space-2xl);
 }
 .blocked-calc-section::before {
   content: '';
