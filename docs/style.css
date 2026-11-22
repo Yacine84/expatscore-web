@@ -217,7 +217,7 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--border);
 }
 .hero.hero-home {
-  min-height: 90vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,7 +226,7 @@ img { max-width: 100%; display: block; }
     radial-gradient(ellipse 60% 50% at 70% 30%, rgba(212,175,55,0.04) 0%, transparent 55%),
     radial-gradient(ellipse 45% 60% at 50% 85%, rgba(96,165,250,0.025) 0%, transparent 50%),
     linear-gradient(180deg, #0a0e17 0%, #080c14 100%);
-  padding-bottom: 5rem;
+  padding-bottom: var(--space-xl);
 }
 .hero.hero-home::before {
   content: '';
@@ -546,7 +546,7 @@ img { max-width: 100%; display: block; }
 /* --- 8. SIMULATOR SECTION --- */
 .sim-section {
   position: relative;
-  padding: var(--space-2xl) var(--space-md);
+  padding: var(--space-2xl) var(--space-md) 0;
 }
 .sim-section::before {
   content: '';
@@ -1193,7 +1193,7 @@ img { max-width: 100%; display: block; }
 
 /* --- 9. SECTIONS & CARDS --- */
 .section {
-  padding: var(--space-2xl) var(--space-md);
+  padding: var(--space-2xl) var(--space-md) 0;
   max-width: var(--max-wide);
   margin: 0 auto;
 }
@@ -1292,6 +1292,19 @@ img { max-width: 100%; display: block; }
   background: var(--emerald-glow);
   border-color: rgba(80,200,120,0.3);
 }
+
+/* Card CTAs pinned to the bottom so buttons align across a grid row.
+   Featured cards keep their own centered flex-row layout (excluded). */
+.card-grid .card:not(.card-featured),
+.tools-section .card { display: flex; flex-direction: column; }
+.card-grid .card:not(.card-featured) .card-badge,
+.tools-section .card .card-badge { align-self: flex-start; }
+.card-grid .card:not(.card-featured) .cta-btn,
+.tools-section .card .cta-btn { margin-top: auto; align-self: flex-start; }
+
+/* Wide tool cards: readable centered column instead of full-bleed emptiness */
+.tools-section .card { max-width: 860px; margin: 0 auto 0.75rem; }
+.tools-section .card:last-child { margin-bottom: 0; }
 
 /* --- 9b. BLOCKED ACCOUNT CALCULATOR --- */
 
@@ -1655,7 +1668,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* --- 10. PROVIDER TABLE --- */
-.provider-section { max-width: var(--max-wide); margin: 0 auto; padding: 0 var(--space-md) var(--space-2xl); }
+.provider-section { max-width: var(--max-wide); margin: 0 auto; padding: var(--space-2xl) var(--space-md) 0; }
 .premium-table-wrap {
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -1699,7 +1712,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* --- 11. FAQ --- */
-.faq-section { padding: var(--space-2xl) var(--space-md); }
+.faq-section { padding: var(--space-2xl) var(--space-md) 0; }
 .faq-list {
   list-style: none;
   display: grid;
